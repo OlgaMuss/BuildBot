@@ -1,5 +1,28 @@
 # Marty's Project: Building vs No-Building Effects on AI Literacy
 
+## Table of Contents
+
+### Project Foundation
+- [📋 Project Overview](#-project-overview) - Basic project information and parameters
+- [🎯 Research Questions](#-research-questions) - Primary and secondary research questions
+- [🔬 Research Hypothesis](#-research-hypothesis) - Main hypothesis and specific predictions
+
+### Research Design
+- [🧪 Experimental Design](#-experimental-design) - Study design, groups, and randomization
+- [📊 Measures and Assessments](#-measures-and-assessments) - All assessment tools and timing
+
+### Data Analysis and Outcomes
+- [📈 Data Analysis Plan](#-data-analysis-plan) - Quantitative and qualitative analysis methods
+- [🎯 Expected Outcomes and Predictions](#-expected-outcomes-and-predictions) - Predicted results for both groups
+
+### Research Context
+- [🔍 Research Significance](#-research-significance) - Theoretical, practical, and methodological contributions
+- [⚠️ Limitations and Considerations](#️-limitations-and-considerations) - Methodological, practical, and ethical limitations
+- [📅 Timeline and Milestones](#-timeline-and-milestones) - Project phases and key dates
+- [📚 References and Theoretical Framework](#-references-and-theoretical-framework) - Supporting literature and theories
+
+---
+
 ## 📋 Project Overview
 
 **Project Title:** Building vs No-Building Effects on AI Literacy Learning Support  

@@ -3,27 +3,28 @@
 ## 📚 Teaching Materials Links
 
 ### Week-by-Week Teaching Materials
-- **Week 1:** [Introduction to Social Robots - Teaching Materials](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit)
-- **Week 2:** [AI Literacy - Teaching Materials](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit)
-- **Week 3:** [AI Safety and Sustainability - Teaching Materials](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit)
-- **Week 4:** [Programming and Sensors - Teaching Materials](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) *[Link to be added]*
-- **Week 5:** [Make it Autonomous + Make it Safe - Teaching Materials](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) *[Link to be added]*
-- **Week 6:** [Design Use Cases + Test Learning - Teaching Materials](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) *[Link to be added]*
+- **Week 1:** Slides Presentations [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
+- **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) | Machine Learning Types Worksheet [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30) | Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30)
+- **Week 3:** Slides Presentations [Slides](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) | AI or not AI Worksheet [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
+- **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **Week 5:** Slides Presentations [Slides](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **Week 6:** Slides Presentations [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 
 ### Additional Resources
-- **AI or not AI Activity:** [Google Slides Presentation](https://docs.google.com/presentation/d/1fFixfj2H_PwcbxioGBL7Woc-P0K08j7-AQmuZ3k1v4Q/edit?slide=id.g382806a58ba_0_37#slide=id.g382806a58ba_0_37)
-- **The Human Machine Learning Lab - Guide:** [Complete Activity Guide](file:///Users/olga/Olga's%20workspace/ETHZ%20SBS/Marty%20project/Deployment/Material/Curricula%20Material/Developped%20curriculum/Teaching%20materials/The%20Human%20Machine%20Learning%20Lab%20-%20Guide)
-- **The Human Machine Learning Lab - Cards:** [Complete Card Sets](file:///Users/olga/Olga's%20workspace/ETHZ%20SBS/Marty%20project/Deployment/Material/Curricula%20Material/Developped%20curriculum/Teaching%20materials/The%20Human%20Machine%20Learning%20Lab%20-%20cards)
+
+- **Marty Building Instructions:** [Building Guide (to be updated)](BuildBot/Building-Marty/Marty-Robot-Building-Instructions.pdf)
+- **Marty Getting Started Guide:** [Robotical Quick Start](https://userguides.robotical.io/martyv2/quickstart)
+- **Marty Programming Web Resources:** [Marty Programming](Marty-programming/)
+- **Marty Online Coding App:** [Code Marty](https://codemarty.com)
 - **Robotical Learning Portal:** [Marty v2 Learning Resources](https://learn.robotical.io/lessons/martyVersions/2)
-- **Marty Building Guide:** [Link to be added]
 
 ---
 
 ## 📋 Table of Contents
 
 ### 📚 Curriculum Overview
-- [Curriculum Overview](#-curriculum-overview)
-- [Learning Objectives](#-learning-objectives)
+- [Curriculum Overview](#curriculum-overview)
+- [Learning Objectives](#learning-objectives)
 
 
 ### 📅 Weekly Curriculum Structure
@@ -33,18 +34,18 @@
 - [Week 4: Programming and Sensors + Make it Move + Make it Hear and Speak](#week-4-programming-and-sensors--make-it-move--make-it-hear-and-speak-2h15)
 - [Week 5: Make it Autonomous + Make it Safe](#week-5-make-it-autonomous--make-it-safe-2h15)
 - [Week 6: Design Use Cases + Test Learning](#week-6-design-use-cases--test-learning-2h15)
-- [Resources and Materials](#-resources-and-materials)
+- [Resources and Materials](#resources-and-materials)
 
 ### 🎯 Learning Outcomes & Resources
-- [Learning Outcomes](#-learning-outcomes)
-- [Standards Alignment](#-standards-alignment)
+- [Learning Outcomes](#learning-outcomes-1)
+- [Standards Alignment](#standards-alignment)
 
 ### 🏫 Implementation Guidelines
-- [Implementation Guidelines](#-implementation-guidelines)
-- [Assessment Framework](#-assessment-framework)
-- [Troubleshooting Guide](#️-troubleshooting-guide)
-- [Support and Resources](#-support-and-resources)
-- [Notes and Observations](#-notes-and-observations)
+- [Implementation Guidelines](#implementation-guidelines)
+- [Assessment Framework](#assessment-framework)
+- [Troubleshooting Guide](#troubleshooting-guide)
+- [Support and Resources](#support-and-resources)
+- [Notes and Observations](#notes-and-observations)
 
 ---
 
@@ -135,9 +136,10 @@ Social robots are physically embodied agents with some autonomy, able to engage 
 3. **Reflection:** Assessment and reflection on learning
 
 #### Teaching Materials
-- **Week 1 Teaching Materials:** [Canva Design Link](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit)
+- **Week 1 Teaching Materials:** [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
 - **AI or not AI Activity:** [Google Slides Presentation](https://docs.google.com/presentation/d/1fFixfj2H_PwcbxioGBL7Woc-P0K08j7-AQmuZ3k1v4Q/edit?slide=id.g382806a58ba_0_37#slide=id.g382806a58ba_0_37)
-- **Marty Building Guide:** [Link to be added]
+- **Marty Building Guide:** [Building Instructions (to be updated)](BuildBot/Building-Marty/Marty-Robot-Building-Instructions.pdf)
+- **Marty Getting Started Guide:** [Quick Start](https://userguides.robotical.io/martyv2/quickstart)
 
 #### Assessment
 - Pre-assessment administration (60 minutes)
@@ -232,7 +234,9 @@ A large language model (LLM) is a language model trained with self-supervised ma
 3. **Storyline Step 1 (continued) - Continue Assembling:** Continue Marty robot assembly (45 minutes)
 
 #### Teaching Materials
-- **Week 2 Teaching Materials:** [Canva Design Link](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit)
+- **Week 2 Teaching Materials:** [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit)
+- **Machine Learning Types Worksheet:** [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30)
+- **Classifier or Generator Worksheet:** [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30)
 - **The Human Machine Learning Lab - Guide:** [Complete Activity Guide](file:///Users/olga/Olga's%20workspace/ETHZ%20SBS/Marty%20project/Deployment/Material/Curricula%20Material/Developped%20curriculum/Teaching%20materials/The%20Human%20Machine%20Learning%20Lab%20-%20Guide)
 - **The Human Machine Learning Lab - Cards:** [Complete Card Sets](file:///Users/olga/Olga's%20workspace/ETHZ%20SBS/Marty%20project/Deployment/Material/Curricula%20Material/Developped%20curriculum/Teaching%20materials/The%20Human%20Machine%20Learning%20Lab%20-%20cards)
 
@@ -280,7 +284,8 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - **Storyline Step 1 (final) - Complete Assembly:** Finish Marty robot assembly
 
 #### Teaching Materials
-- **Week 3 Teaching Materials:** [Link to be added]
+- **Week 3 Teaching Materials:** [Slides](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit)
+- **AI or not AI Worksheet:** [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
 
 #### Assessment
 - Weekly assessment (T3) - 5 minutes
@@ -312,7 +317,8 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - **Storyline Step 3 - Make it Hear and Speak:** Connect to an API using an LLM in MartyBlocks
 
 #### Teaching Materials
-- **Week 4 Teaching Materials:** [Link to be added]
+- **Week 4 Teaching Materials:** [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **Marty Online Coding App:** [Code Marty](https://codemarty.com)
 
 #### Assessment
 - Weekly assessment (T4) - 5 minutes
@@ -346,7 +352,8 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - **Storyline Step 5 - Make it Safe:** Design safeguards and conditions for safe interaction
 
 #### Teaching Materials
-- **Week 5 Teaching Materials:** [Link to be added]
+- **Week 5 Teaching Materials:** [Slides](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **LLM Safeguards Slides:** [Safeguards Framework](https://www.canva.com/design/DAGyv90q0uA/TEQ9J5xEBm9JXcIeb_1tuw/edit)
 
 #### Assessment
 - Weekly assessment (T5) - 5 minutes
@@ -380,7 +387,7 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - **Storyline Step 6 - Design Use Cases:** Create and test real-world learning applications
 
 #### Teaching Materials
-- **Week 6 Teaching Materials:** [Link to be added]
+- **Week 6 Teaching Materials:** [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 
 #### Assessment
 - Weekly assessment (T6) - 5 minutes
@@ -402,9 +409,10 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - Laptops/tablets for students
 
 **Teaching Materials:**
-- Week 1 Teaching Materials: [Canva Design Link](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit)
+- Week 1 Teaching Materials: [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
 - AI or not AI Activity: [Google Slides Presentation](https://docs.google.com/presentation/d/1fFixfj2H_PwcbxioGBL7Woc-P0K08j7-AQmuZ3k1v4Q/edit?slide=id.g382806a58ba_0_37#slide=id.g382806a58ba_0_37)
-- Marty Building Guide: [Link to be added]
+- Marty Building Guide: [Building Instructions (to be updated)](BuildBot/Building-Marty/Marty-Robot-Building-Instructions.pdf)
+- Marty Getting Started: [Quick Start Guide](https://userguides.robotical.io/martyv2/quickstart)
 
 **Assessment Tools:**
 - Pre-assessment administration (AILQ)
@@ -422,7 +430,9 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - Internet connection for LLM platforms
 
 **Teaching Materials:**
-- Week 2 Teaching Materials: [Canva Design Link](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit)
+- Week 2 Teaching Materials: [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit)
+- Machine Learning Types Worksheet: [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30)
+- Classifier or Generator Worksheet: [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30)
 - The Human Machine Learning Lab - Guide: [Complete Activity Guide](file:///Users/olga/Olga's%20workspace/ETHZ%20SBS/Marty%20project/Deployment/Material/Curricula%20Material/Developped%20curriculum/Teaching%20materials/The%20Human%20Machine%20Learning%20Lab%20-%20Guide)
 - The Human Machine Learning Lab - Cards: [Complete Card Sets](file:///Users/olga/Olga's%20workspace/ETHZ%20SBS/Marty%20project/Deployment/Material/Curricula%20Material/Developped%20curriculum/Teaching%20materials/The%20Human%20Machine%20Learning%20Lab%20-%20cards)
 
@@ -442,7 +452,8 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - Internet connection for research
 
 **Teaching Materials:**
-- Week 3 Teaching Materials: [Link to be added]
+- Week 3 Teaching Materials: [Slides](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit)
+- AI or not AI Worksheet: [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
 - AI safety case studies
 - Bias detection prompts and activities
 
@@ -465,7 +476,8 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - MartyBlocks programming interface
 
 **Teaching Materials:**
-- Week 4 Teaching Materials: [Link to be added]
+- Week 4 Teaching Materials: [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- Marty Online Coding App: [Code Marty](https://codemarty.com)
 - Blockly programming exercises
 - Sensor connection guides
 
@@ -488,7 +500,8 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - LLM platforms for safety design
 
 **Teaching Materials:**
-- Week 5 Teaching Materials: [Link to be added]
+- Week 5 Teaching Materials: [Slides](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- LLM Safeguards Slides: [Safeguards Framework](https://www.canva.com/design/DAGyv90q0uA/TEQ9J5xEBm9JXcIeb_1tuw/edit)
 - Arduino programming guides
 - Safety protocol templates
 
@@ -510,7 +523,7 @@ A large language model (LLM) is a language model trained with self-supervised ma
 - Arduino IDE
 
 **Teaching Materials:**
-- Week 6 Teaching Materials: [Link to be added]
+- Week 6 Teaching Materials: [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 - Use case design templates
 - Testing protocols
 

@@ -1,0 +1,30 @@
+{
+  "user_input": "En fait, j'ai fini mon essai sur l'environnement. Maintenant je dois résoudre des équations du second degré pour demain.",
+  "conversation_history": [
+    {
+      "role": "user",
+      "content": "Je dois écrire un essai sur l'environnement pour demain."
+    },
+    {
+      "role": "assistant", 
+      "content": "C'est un sujet passionnant ! Sur quel aspect de l'environnement veux-tu te concentrer ?"
+    },
+    {
+      "role": "user",
+      "content": "Je pense écrire sur la pollution plastique dans les océans."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent choix ! La pollution plastique est un problème majeur. As-tu déjà des idées sur l'angle que tu veux prendre ?"
+    },
+    {
+      "role": "user",
+      "content": "En fait, j'ai fini mon essai sur l'environnement. Maintenant je dois résoudre des équations du second degré pour demain."
+    }
+  ],
+  "frame_memory": {
+    "student_interests": ["environnement", "océans"],
+    "current_task": "écrire un essai sur la pollution plastique dans les océans",
+    "task_history": []
+  }
+}

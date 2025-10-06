@@ -1,0 +1,9 @@
+{
+  "students": [
+    { "id": "student_a", "color": "Red", "turn_count": 1, "performance_history": [] },
+    { "id": "student_b", "color": "Blue", "turn_count": 1, "performance_history": ["incorrect"] },
+    { "id": "student_c", "color": "Green", "turn_count": 0, "performance_history": [] }
+  ],
+  "quiz_topic": "microcontrollers",
+  "current_turn_student_id": "student_c"
+}

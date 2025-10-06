@@ -1,0 +1,26 @@
+{
+  "user_input": "Blue: I know that one! It's the part that does all the calculations, like the brain.",
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "Alright class, let's begin. Red, what is the primary function of a CPU in a microcontroller?"
+    },
+    {
+      "role": "user",
+      "content": "Red: Uhm, I think it executes instructions from a program."
+    },
+    {
+      "role": "assistant",
+      "content": "Correct. Now, for you Blue, what is RAM?"
+    }
+  ],
+  "frame_memory": {
+    "students": [
+      { "id": "student_a", "color": "Red", "turn_count": 1, "performance_history": ["correct"] },
+      { "id": "student_b", "color": "Blue", "turn_count": 0, "performance_history": [] },
+      { "id": "student_c", "color": "Green", "turn_count": 0, "performance_history": [] }
+    ],
+    "quiz_topic": "microcontrollers",
+    "current_turn_student_id": "student_b"
+  }
+}

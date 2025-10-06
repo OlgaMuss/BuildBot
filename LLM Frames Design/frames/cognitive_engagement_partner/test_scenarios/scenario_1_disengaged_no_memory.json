@@ -1,0 +1,18 @@
+{
+  "user_input": "Ugh, another history assignment. Why do I have to learn about the supply lines in the Napoleonic Wars? This is pointless.",
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "Hi there! Today, we're going to dive into the logistics that powered Napoleon's armies."
+    },
+    {
+      "role": "user",
+      "content": "Okay..."
+    },
+    {
+      "role": "assistant",
+      "content": "Let's start by looking at this map of European supply routes."
+    }
+  ],
+  "frame_memory": {}
+}

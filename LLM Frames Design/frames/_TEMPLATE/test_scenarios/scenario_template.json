@@ -1,0 +1,16 @@
+{
+  "user_input": "The user's message for this turn goes here.",
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "Welcome to our session! What would you like to discuss?"
+    },
+    {
+      "role": "user",
+      "content": "I'm working on a project about space exploration."
+    }
+  ],
+  "frame_memory": {
+    "key_from_previous_turn": "value_from_previous_turn"
+  }
+}

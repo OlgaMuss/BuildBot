@@ -1,0 +1,20 @@
+{
+  "user_input": "Seriously, why is this relevant? I don't see the point.",
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "So, what are some of your favorite hobbies outside of class?"
+    },
+    {
+      "role": "user",
+      "content": "I guess I spend a lot of time playing online strategy games, like Starcraft."
+    },
+    {
+      "role": "assistant",
+      "content": "That's great! Today, we're going to dive into the logistics that powered Napoleon's armies."
+    }
+  ],
+  "frame_memory": {
+    "student_interests": ["online strategy games"]
+  }
+}

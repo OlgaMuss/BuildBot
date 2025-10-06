@@ -1,0 +1,1238 @@
+This paper is under review. Please do NOT cite without permission from the authors.
+
+Children’s anthropomorphism of inanimate agents
+Elizabeth J. Goldman* (ORCID: 0000-0002-9973-0649) & Diane Poulin- Dubois*
+(ORCID: 0000-0001-8966-875X)
+Department of Psychology, Concordia University, Montréal, Canada
+
+*Shared first authorship
+
+Corresponding author: Elizabeth J. Goldman
+elizabeth.goldman@concordia.ca
+Funding information: This work was supported by an Insight Grant from the Social Science and
+Humanities Research Council of Canada awarded to Diane Poulin-Dubois (#435- 2022-0805).
+Additional support comes from a Concordia University Horizon Postdoctoral Fellowship to
+Elizabeth Goldman.
+
+1
+
+Abstract
+This review paper examines the extant literature on animism and anthropomorphism in infants
+and young children. A substantial body of work indicates that both infants and young children
+have a broad concept of what constitutes a sentient agent and react to inanimate objects as they
+do to people in the same situations. The literature has also revealed a developmental pattern in
+which animism decreases with age, but social robots appear to be an exception to this pattern.
+Additionally, the review shows that children attribute psychological properties to social robots
+less so than people but still anthropomorphize them. Importantly, anthropomorphizing of social
+robots is dependent upon their morphology and human-like behaviors. The extent to which
+children anthropomorphize robots is dependent on their exposure to them and the presence of
+human-like features. Based on the existing literature, we conclude that in infancy, a large range
+of inanimate objects (e.g., boxes, geometric figures) that display animate motion patterns trigger
+the same behaviors observed in child-adult interactions. The review concludes that additional
+research is needed to understand what infants and children judge as social agents and how the
+perception of inanimate agents changes over the lifespan. As exposure to robots and virtual
+assistants increases, future research must focus to better understand the full impact that regular
+interactions with such partners will have on children’s anthropomorphizing.
+(Word count: 221)
+Keywords: anthropomorphism, animacy, social agents, social robots, mentalizing
+Word count: 8479
+Children’s anthropomorphism of inanimate agents
+The concepts of animacy and anthropomorphism, the tendency to perceive inanimate
+stimuli as animate and/or sentient, have been topics of study for many decades. In their seminal
+study, Heider and Simmel (1944) found that even adults perceive the contingent interactions of
+geometric figures as not only alive but also as possessing psychological attributes such as goaldirectedness (for a review, see Scholl & Gao, 2013). Thereafter, a large body of work has
+identified several visual cues that contribute to such effects in adults, including self-propulsion
+(e.g., Dasser, Ulbaek, & Premack, 1989; Pratt et al., 2010), defying physics (e.g., Gelman,
+Durgin, & Kaufman, 1995; Tremoulet & Feldman, 2000), and contingency (e.g., Gao, Newman,
+& Scholl, 2009; Gao & Scholl, 2011). Importantly, the perception of animacy seems to appear
+early in development and is universal (Barrett et al., 2005; Rutherford & Kuhlmeir, 2013), with
+
+2
+
+the exception of individuals with certain neuropsychological impairments, including autism
+spectrum disorder (e.g., Klin, 2000; Rutherford, Pennington, & Rogers, 2006 ) or damage to
+some areas of the brain, like the amygdala (e.g., Heberlein & Adolphs, 2004).
+It has been well-established that vision enables humans to detect agents and extract
+important information about their goals and intentions. A large body of work has been concerned
+with when and how children anthropomorphize inanimate objects at implicit and explicit levels.
+In a first wave of studies, researchers examined how children (and adults) differentiate the
+animates from the inanimates by conducting interviews with a series of images of animals,
+artifacts, and plants (Inagaki & Hatano, 1993; Ochiai, 1989; Opfer & Gelman, 2011; Piaget,
+1929; Poulin-Dubois & Heroux, 1994; Rakison & Poulin-Dubois, 2001; Tao, 2016). A more
+recent wave of studies on animism and anthropomorphism has developed innovative ways to
+address the development of anthropomorphism. First, researchers have tested
+anthropomorphizing by administering tasks that require implicit judgments in addition to
+complementing interview questions that require explicit reasoning. Second, many studies have
+created contexts where human agents have been interchanged with inanimate agents to examine
+if similar behaviors are observed (e.g., gaze following). Third, with the increasing availability of
+social robots, robots have been the focus of many studies, as they allow for the direct
+manipulation of predictive cues of animacy (e.g., contingency, human-like morphology). The
+present review intends to review this body of work by reporting studies that have examined when
+and how children perceive non-human agents (e.g., robots, puppets, animals, artifacts).
+Do young children initially perceive all non-human agents as alive and/or sentient? In
+other words, do they attribute life to artifacts and human-like properties to non-human agents? A
+prominent view argues that anthropomorphism is an acquired perspective that children learn over
+
+3
+
+time as they gain more experiences (Herman, Waxman, & Medin, 2010). Regarding animism, a
+dominant view is that it decreases with age (Carey, 1985; Opfer, 2002; Somanader et al., 2011).
+If it is the case, when and how does the dissociation between reasoning about life and
+psychological properties emerge (Jipson et al., 2016)? In a recent paper, Clark and Fisher (2022)
+argued that even adults anthropomorphize artifacts to some extent. In other words, adults
+recognize that artifacts are not alive yet treat them as depictions of social agents. When is such
+dissociation observed developmentally? Do children believe all agents are like them? In
+commentaries to Clark and Fisher's article, developmental psychologists have addressed the
+developmental origins of when children see non-human agents (e.g., robots) as depictions of
+social agents and as learning sources (Goldman, Baumann, & Poulin-Dubois, 2023b; Haber &
+Corriveau, 2023). Importantly, a body of work suggests that infants treat any non-human agent
+(e.g., boxes, geometric shapes) that displays animate motion patterns as human-like (Baillargeon,
+Scott, & Bian, 2016) but gradually understand what is alive and what is not. The present review
+expands upon this important question by attempting to address when and how children
+anthropomorphize inanimate objects, including ambiguous objects such as robots, and how
+children’s judgments of what constitutes a sentient agent change over time. We first review the
+empirical evidence that infants not only prefer and detect animacy cues but display the ability to
+associate them with animates. This is reflected in a sizeable body of studies showing that infants
+can categorize animates and inanimates by the end of the first year (for a review, see Rakison &
+Poulin-Dubois, 2001). Additionally, we demonstrate that both infants and older children
+anthropomorphize familiar and unfamiliar artifacts, including robots. Finally, we show that
+children gradually understand that artifacts are not alive but can be treated as depictions of social
+agents.
+
+4
+
+The animate-inanimate distinction
+Piaget was the first to observe children’s animism, which is the belief that inanimates are
+capable of sensations, emotions, and intentions (Piaget, 1929). Piaget put forward a stage theory
+that examined how children apply consciousness to and make life judgments about different
+entities. Piaget believed that children’s judgments of aliveness were based on motion,
+specifically whether the item in question could move autonomously. In the first stage, children
+apply consciousness broadly to all things, and in the second stage, consciousness is attributed to
+things that move. In the third stage, children reserve consciousness to things that can move on
+their own; and in the fourth and final stage, children further restrict consciousness to animals.
+Piaget believed children’s initial broad application of consciousness was revised as children
+gained more experiences. The consensus of recent research is that children are not as animistic as
+originally claimed by Piaget, who interviewed children about unfamiliar items (e.g., the wind
+and the moon) (Backscheider et al., 1993; Carey, 1985; Dolgin & Behrend, 1984; Opfer &
+Gelman, 2011).
+Infants’ concept of animacy
+One way researchers have studied animism is to examine when infants and children can
+correctly categorize both living and non-living things. Since infants and young children are
+unable to respond to interview questions or complete tasks with high demands, much of the
+research has been based on infants’ manipulation of replicas of animals and artifacts, as well as
+looking time measures. This body of work has revealed that by the end of the first year of life,
+infants can categorize both animals and vehicles (Mandler, 2003; Poulin-Dubois & Pauen, 2017).
+Such precocious categorization abilities are believed to be directed by dynamic information (e.g.,
+motion patterns) rather than morphology or color (Caramazza & Shelton, 1998; Leslie, 1994;
+
+5
+
+Mandler, 1992; Premack, 1990). This hypothesis is supported by existing work indicating that
+infants display an attentional bias toward social agents and toward the motion patterns
+characteristic of animate beings, including contingency, self-propulsion, and the ability to change
+direction and speed (Bardi, Regolin, & Simion, 2010; Di Giorgio, 2021; Hofrichter et al., 2021;
+Sifre et al., 2018).
+Research has shown that infants are biased to attend to humans and other animates early
+on in life. For example, newborns show a looking preference for face-like stimuli over other
+inanimate objects and process such stimuli using the same cortical pathways that adults do
+(Buiatti et al., 2019; Fantz,1963). When controlling for the familiarity of the stimuli, infants as
+young as 9 weeks smile and vocalize more towards a person than a doll (Legerstee et al.,1987).
+By the age of 3 months, infants show a looking time preference for a person over a monkey toy
+(Brazelton et al.,1974). Towards the end of the first year, infants, like adults, perceive the
+disappearance of animate objects in a visual image more easily than the disappearance of
+inanimate objects (Hofrichter et al., 2021).
+The sensitivity to animacy is also expressed in an attentional bias to the motion patterns
+that signal animacy (Baker, Pettigrew & Poulin-Dubois, 2014; Gelman, 1990; Mandler, 1992;
+Premack, 1990; Saxe, Tzelnic & Carey, 2007; Spelke, Phillips &Woodward, 1995; Surian
+&Caldi, 2010). Among the most impressive findings are those showing sensitivity to the motion
+patterns of animates within the first 6-months of life. For example, infants differentiate selfpropelled objects from inert ones by the middle of the first year (Leslie & Keeble, 1987; Pauen &
+Träuble, 2009). Even 3-month-olds understand that stationary objects will not move unless they
+are contacted by another moving object or through an internal mechanism that triggers selfpropelled movement (Luo & Baillargeon, 2005). Additionally, infants recognize self-propulsion
+
+6
+
+and expect different outcomes for physical events that involve self-propelled versus inert objects
+(Luo, Kaufman & Baillargeon, 2009). Even newborns can differentiate animate and inanimate
+motion (Di Giorgio et al., 2017, 2021), and infants prefer animate motion, such as contingency,
+over inanimate motion (Frankenhuis et al., 2013; Rochat et al., 1997). This early bias is not
+species-specific, as other mammals also show a preference for animate agents (Lorenzi et al.,
+2017; Rosa-Salva et al., 2018). Infants also show a sensitivity to self-propulsion and other
+animacy cues (Di Giorgio et al., 2017), presume animate agents will act in a rational way (Csibra
+et al., 1999), exhibit goal-directed behavior (Wagner & Carey, 2005), and to abide by the laws of
+physics (Arterberry & Bornstein, 2002; Spelke, Phillips, & Woodward, 1995).
+But does an early sensitivity to the dynamic features of animacy imply an association to
+animacy? Answers to this question have come from studies that exposed infants to inanimate
+objects that violate the expectations about how they should move. In one of the first experiments
+testing such a link, 8- and 9-month-olds showed surprise (looked longer) when a chair moved on
+its own (Golinkoff et al., 1984; Poulin-Dubois & Shultz, 1990) or when a small humanoid robot
+moved autonomously (Poulin-Dubois et al., 1996). In another experiment, seven-month-old
+infants acted surprised if a shadow that moved on its own and changed speed and direction was
+later revealed to be an inanimate object but were not surprised when it was revealed to be an
+animal (Träuble et al., 2014). Interestingly, 8-month-old infants identified a violation when it
+was revealed that agentive objects are capable of self-propulsion were hollow (Setoh et al.,
+2013). Furthermore, Poulin-Dubois et al. (2015) observed that 12-month-old infants who saw
+point-light displays of animate motion better categorized animates than those who saw random
+motion patterns. These results indicate that biological motion may be one of the motion cues that
+serve as the foundation for infants’ understanding of animacy. Taken together, prior work
+
+7
+
+suggests that during the first year of life, infants both prefer animate stimuli and have also
+developed a precocious knowledge about the agency characteristics associated with animacy.
+Young children’s concept of animacy
+A developmental pattern emerges when older children are tested in interviews with images
+of animals, people, artifacts, and plants. A review of this body of literature indicates that overall
+young children tend to accurately categorize animals as animate and artifacts as inanimate but
+struggle to classify plants as living. For example, Hatano et al. (1993) investigated cultural
+differences in children’s understanding of biology and how children classify something as living
+or non-living. The study included kindergarteners, second graders, and fourth graders from three
+countries (Japan, Israel, and the United States). Children were asked if plants, animals, and
+people were living or non-living. The results indicated that children, regardless of age and
+country, understood that inanimates, plants, animals, and people had different properties.
+Overall, children were least accurate about the properties of plants, the Israeli children tended to
+classify plants as non-living, and the Japanese children anthropomorphized inanimate objects the
+most. In a related study by researchers Richards and Siegler (1986), children responded to the
+question, “Can you tell me how things that are alive are different from things that are not alive?”
+The children thought that animals and plants had few properties in common, despite plants and
+animals both being alive. The researchers found that 5-year-olds almost never named
+characteristics that belonged to both animals and plants. Instead, children listed characteristics
+true of animals but not plants (e.g., movement). Interestingly, most of the 5-year-olds thought
+that plants were non-living, but all of them knew that animals were living.
+Similarly, Inagaki and Hatano (1996) asked children ranging from 4 to 11 years of age,
+“What is an X?” Children were shown pictures of plants, animals, and artifacts. Next, children
+
+8
+
+responded to questions like “Is X living?” and “Why do you think X is living or non-living?” A
+majority of 5-year-olds justified that plants and animals were living things using three criteria:
+the ability to grow, the need to eat/drink, and the idea that living things could become ill. When
+children were asked if plants had the same characteristics that animals do, the children said that
+plants grew, needed to eat/drink to survive, and died eventually,
+Work by Fouquet, Megalakaki, and Labrell (2017) examined the biological properties 3and 6-year-olds attribute to animals, plants, and artifacts. Children viewed pictures of animals,
+artifacts, and plants and were then asked about different biological properties (i.e., the ability to
+move, grow, eat, reproduce, become ill, die, and age). Although the 3-year-olds attributed more
+properties to animals compared to artifacts and plants, the attribution of biological properties to
+animals increased with age. Yet, the attribution of properties to plants remained constant with
+age. These findings suggest that animism is well developed by age 3 years except for plants and
+other ambiguous objects (e.g., robots). The literature review thus far has focused on research
+studies where children were requested to make judgments about the animacy of common things
+that children are likely familiar with (e.g., animals, clear inanimate objects) as well as ambiguous
+objects, like plants. This body of literature shows that children tend to deny life to plants as they
+lack animate cues (e.g., movement). More recent studies have focused on robots that though not
+alive, have animacy, as robots are the opposite of plants which are alive but lack some of the
+animacy characteristics we see in animals and humans. For example, in work by Saylor et al.
+(2010) 3- and 4-year-olds were asked to attribute properties of both living things and machines to
+different artifacts (e.g., a robot, a human girl, a camera). Children were presented with images of
+the artifacts and asked questions typically associated with living things (e.g., can see, think, is
+alive) and questions associated with machines (e.g., is a tool, has wires). Children provided
+
+9
+
+justifications for their responses. Justifications included five categories: kind (label), internal
+features (stuff on the inside), origin explanation (where it came from), external explanations
+(surface features visible to the eye), size, and function (what it was used for). Both age groups
+attributed properties of living things to the girl more than the robot or camera. Only the 4-yearolds classified the robot as a machine. Overall, older children were more accurate in their
+classification of both living and non-living things.
+Okanda and colleagues (2021) asked 3-year-olds, 5-year-olds, and adults to attribute
+different type of properties to a humanoid robot (Kirobo) before and after interacting with it. The
+properties included: Biological (e.g., eating), artifact (e.g., can this one break?), psychological
+(e.g., thinking,), and perceptual (e.g., seeing). Overall, the 3-year-olds performed poorer than the
+older groups on most of these properties. They found that after the interaction, both 5-year-olds
+and adults attributed more properties (psychological and perceptual) to the robot. In contrast,
+after the interaction with the robot, the 3-year-olds no longer attributed properties to the robot
+(biological, psychological, and perceptual). In other words, the youngest children were more
+likely to think the robot was an artifact. These results suggest that younger children could have
+limited understanding that a robot is an artifact but the ambiguity of the robot and the fact the
+human-like morphology of the robot (e.g., had a head, torso, and arms) may have contributed to
+the 3-year-old's uncertainty about whether the robot has biological properties. Similarly, Kim et
+al. (2019) demonstrated a transition between the ages of 3 and 4 years.
+Recent work has tested the concept of animacy in a more direct way with tasks like a
+naïve biology task (Gottfried & Gelman, 2005). Beyond interviews, Gottfried and Gelman
+(2005) used a naïve biology task to investigate if children assigned biological or mechanical
+internal parts to unfamiliar plants, animals, and artifacts. The 3-,4-, and 5- year-olds were asked
+
+10
+
+to decide if something biological (e.g., heart) or mechanical (e.g., battery) belonged inside
+unfamiliar plants, animals, or artifacts. They found that the younger children assigned fewer
+correct internal parts compared to the older children. These findings indicate that by 5 years of
+age, children are better at judging internal parts (mechanical or biological) of plants, animals,
+and artifacts.
+In a recent study, Goldman, Baumann, & Poulin-Dubois (2023a) adapted Gottfried and
+Gelman's (2005) task and asked children whether unfamiliar animals, artifacts, and robots had
+mechanical or biological insides. Both age groups (3- and 5-year-olds) knew animals had
+biological insides and artifacts had mechanical insides. However, only older children thought
+that robots had mechanical insides, whereas the younger children assigned both biological and
+mechanical insides to the robots equally. These results suggest that by 5 years of age, children
+understand the internal parts of different entities (i.e., robots, animals, and artifacts).
+Another task-based measure developed by Hermann, Waxman, and Medin (2010) used
+an inductive-reasoning task to determine whether young children anthropomorphize. Children
+were asked whether novel properties (e.g., “Do x’s have an omentum?”) could be found inside
+various objects, including humans, animals, plants, and artifacts. For each property, the
+experimenter asked whether the object in question had the property inside – two puppets
+responded (one puppet answered “Yes” while the other answered “No”). Then, the children
+indicated which puppet was correct. These findings indicate that 5-year-olds anthropomorphize
+but that younger children, the 3-year-olds, do not. This suggests that anthropomorphizing is
+something that children learn to do over time, particularly between the ages of 3 and 5 years.
+Kominsky, Shatto, and Bonawitz (2021) examined whether preschool children expected
+animate agents to have biological internal properties. Preschoolers were shown videos of two
+
+11
+
+different puppets. Although both puppets were covered in fur, only one puppet was selfpropelled. Preschoolers were also presented with images of familiar artifacts (i.e., a motorcycle)
+and a familiar animal (i.e., a sheep). Children selected whether something biological, something
+mechanical, or nothing at all belonged inside these puppets, artifacts, and animals. The children
+were less likely to think that the self-propelled puppet was empty compared to the puppet which
+was unable to move by itself. However, preschoolers had no biological expectations despite the
+fact that they knew animals had biological insides and artifacts had mechanical insides.
+Importantly, these results suggest that preschoolers lack specific biological expectations about
+animate agents, even though they know that agents should not be empty. In sum, prior work
+suggests that animism decreases as children grow older (Bullock, 1985; Carey, 1985; Jipson et
+al., 2016; Opfer, 2002; Somanader et al., 2011), although it may not disappear completely in the
+presence of certain powerful animacy cues (Opfer, 2002).
+Developmental changes in anthropomorphizing
+Beyond the judgment of animacy, more recent work has focused on anthropomorphizing
+using artificial stimuli (e.g., robots, geometric figures) that vary in their animate features. Using
+artificial stimuli provides many benefits. First, using stimuli that are not alive yet exhibit animate
+characteristics complements plants that are alive but lack some of the animacy characteristics
+seen in humans and animals (e.g., autonomous movement, speech, facial features). Second,
+plants and artificial stimuli are ambiguous as they possess both animate and inanimate
+characteristics. An important question to consider is how much anthropomorphizing young
+children do to these artificial stimuli that can, in some contexts and situations, serve as nonhuman social partners or agents. Although Piaget believed that infants anthropomorphize
+artifacts (e.g., non-human agents), recent work has yielded contradicting findings.
+
+12
+
+To better understand how and when, developmentally, infants and children
+anthropomorphize, researchers have exposed children to an ecologically valid context that
+involves non-human agents to examine whether children treat these agents as depictions of social
+agents. Additionally, these contexts can determine if and how children react to non-human
+agents as they would human agents. Our tendency to anthropomorphize, to see human-like traits
+such as intentions and beliefs, increases as the non-human entity takes on more animate
+characteristics (Broadbent, 2017). There are a number of cues that have been shown to trigger
+anthropomorphism and animate judgments toward non-human agents. Importantly, when nonhuman agents exhibit these cues, this can lead to a variety of different levels of
+anthropomorphism (e.g., intentions, goal-directedness, learning). Below, we explore these
+different levels with studies that examined infants' and children’s behaviors about non-human
+agents directly to human agents.
+Gaze following
+The ability to follow the gaze of others plays an important part in our ability to both
+communicate and interact with others (Argyle & Cook, 1976). Unlike other species, humans pay
+attention to other people’s gaze as a source of information, as gaze following can strongly
+indicate another’s intentions and future actions (Clifford & Palmer, 2018). Following the gaze of
+an agent is in itself low-level anthropomorphizing. The conditions which lead to gaze following
+in young children have been well-studied by researchers. Prior research has shown that 12- to 18month-olds follow the gaze of a person looking at targets but stop doing so when that person’s
+view of the targets is obscured (e.g., closed eyes, a blindfold, target covered by an opaque
+screen) (Brooks & Meltzoff, 2002; Butler, Caron, & Brooks, 2000; Dunphy-Lelii & Wellman,
+2004; Moll & Tomasello, 2004). In another study, 12-month-olds followed the gaze of an
+
+13
+
+asymmetrical object when the object had facial features and behaved in a contingent manner
+(Johnson, Slaughter, & Carey, 1998). Gaze following changes with age, specifically with the
+ability to follow the head developing before the ability to follow eyes (Brooks & Meltzoff, 2005;
+Carpenter, Nagell, & Tomasello, 1998; Moore & Povinelli, 2007; Mundy et al., 2007).
+Prior work has examined what conditions and situations lead to following the gaze of
+others (Akhtar & Gernsbacher, 2008; Beier & Spelke, 2012; Capparini, To, & Reid, 2023).
+Adults and older children pay attention to a person who adjusts their head in the direction of an
+object. Yet they fail to do so if a swivel chair spins or a teapot turns. How does one determine
+whether a gazer is worth following? How does an infant recognize a gazer’s importance? Is gaze
+following interpreted as referential when the agent is non-human? Many studies have tested
+adults to address these questions (for a review, see Admoni & Scassellati, 2017). For infants,
+interpreting robot gaze appears to be dependent upon whether the robot is judged to be a social
+agent. In the first study to investigate infants’ gaze following with robots, O’Connell et al. (2009)
+had a humanoid robot teach novel words to 18-month-olds. As the infant and robot held two
+different unfamiliar objects, the robot gazed at either the infant’s toy or at its own toy and labeled
+it (e.g., “That is a Dax”). Infants followed the robot’s gaze at the target object when it labeled the
+novel object in both conditions. Subsequent work reported that only when a long turn-taking
+interaction was observed by the infant between a humanoid robot and an experimenter did 18month-olds follow the robot’s gaze (Meltzoff et al., 2010). The fact that the robot in O’Connell's
+study displayed salient animacy cues (e.g., very large eyes and speech) might explain these
+conflicting findings. More recently, an eye-tracking study showed that the anticipatory eye gaze
+of 12-month-olds only shifts in response to the referential gaze of a human agent but not a robot
+agent (Okumura et al., 2013a). However, when infants are shown videos of human and robot
+
+14
+
+agents looking at objects, they can follow the gaze of both agents. Still, infants look longer at the
+objects the human gazed at (Okumura et al., 2013b). Similarly, researchers have shown that
+infants only imitate a robot’s actions if the robot engages in mutual gaze with a human (Itakura
+et al., 2008). These findings suggest that robot gaze is not as meaningful as human gaze, yet it
+can become more meaningful through social interaction. More recently, Manzi, Ishikawa, et al.
+(2020) showed 17-month-old infants videos that featured a human or a robot (Robovie)
+completing an action. The agents gazed at a cup, the target object (congruent), or an empty space
+(incongruent). The findings indicate that infants prioritized attending to the face of the agents
+and were attentive to initial eye contact from both agents. However, they were more engaged by
+the human agent’s gaze. Additionally, infants attended to the target more quickly when they
+watched the human agent. Although perceptive of some of the robot's human-like morphology
+(facial features, ability to make eye contact), the infants failed to recognize the robot’s referential
+gaze.
+Importantly, prior work has shown that even adults will follow the gaze of inanimate
+objects (e.g., a pointer) (Breil et al. 2019). Adults will follow the gaze of a face but will also do
+so for stimuli that have no eyes (e.g., arrows). These results suggest that adults act like the arrow
+is a pair of eyes, as they direct their gaze and attention to where the arrow is pointing. Thus, gaze
+following is an implicit form of anthropomorphizing and continues to be important in our
+evaluation of animacy across the lifespan.
+Goals and intentions
+Previous research has demonstrated that infants in the first year of life are capable of
+attributing goals to other people (Woodward, 1998). Importantly, the ability to attribute goals
+during infancy predicts better performance in mentalizing tasks at preschool age (Aschersleben
+
+15
+
+et al., 2008; Yamaguchi et al., 2009). The classic paradigm to test goal attribution is a novel
+preference task (e.g., Woodward 1998, 1999). In the standard task, 5- to 12-month-olds watch
+familiarization trials where an agent reaches for and grasps one of two objects (grasped object
+A). In test, the location of the objects is swapped, and the agent reaches for object A (old-object)
+or object B (new-object). Infants look longer when the agent reaches for the new object, object
+B. This suggests that infants attribute object A as the agent's goal or preferred object. Infants are
+also able to identify the goals of the agent in imitation tasks. For example, prior work has found
+that infants tend to imitate intentional actions (“There!”) more so than accidental ones
+(“Woops”) (e.g., Carpenter et al., 1998, Olineck & Poulin-Dubois, 2005). Additionally, infants
+will duplicate intended outcomes after observing an incomplete demonstration or a successful
+one at roughly equal rates (e.g., Meltzoff 1995, Olineck & Poulin-Dubois 2009); and they are
+sensitive to goal-relevant actions, reproducing them more than goal-irrelevant ones (e.g.,
+Brugger et al., 2007, Carpenter et al., 2005).
+What about goal attribution to non-human agents? Early research in the classic goal
+attribution paradigm reported that infants interpret the goals of a human hand and an inanimate
+claw differently (Woodward 1999). However, in subsequent work that modified the Woodward
+(1998) paradigm, Hofer et al. (2005), 9- and 12-month-olds observed a mechanical claw that
+performed an action. Only the 12-month-olds interpreted the mechanical claw’s action as being
+goal-directed. In a second study, the 9-month-olds received information that showed that a
+human had operated and controlled the mechanical claw. The results indicated that this
+additional information (a human controlled the claw) allowed the 9-month-olds to interpret the
+claw’s action as goal-directed (Hofer et al., 2005). In another study, Kamewari and colleagues
+(2005) investigated if 6.5-month-olds interpret goal-directed actions differently depending upon
+
+16
+
+the agent (human or non-human). The findings showed that infants attributed goals to humans
+but not to a box that moved autonomously. Furthermore, two studies have shown that infants
+view the actions of a self-propelled box as being goal-directed, suggesting that infants will
+attribute goals to anything they view as being an agent (Luo & Baillargeon, 2005; Luo & Choi,
+2013). This was extended to 3-month-olds in a subsequent set of experiments (Luo, 2010). There
+is also evidence that by 6 months, goal attribution is linked to biological motion (Schlottmann &
+Ray, 2010).
+The attribution of goals and intentions to non-human agents has also been examined
+using robots (Itakura et al., 2008; Kocher et al., 2020; Manzi et al., 2022; Somanader et al.,
+2011). In one study, researchers investigated whether toddlers would imitate the goal-directed
+actions of a robot (Itakura et al., 2008). Toddlers (ranging from 24 to 35 months) watched videos
+that featured a robot attempting to but failing to place beads into a cup. The researchers
+manipulated whether or not the robot made eye contact. The toddlers only imitated the robot’s
+actions when the robot made eye contact. These findings indicate that human-like gaze, rather
+than human-like morphology, could be a critical factor in children’s decision to imitate the goaldirected actions of a non-human agent.
+Prior work has shown that when evaluating whether something unfamiliar (i.e., a blob) is
+alive, young children and adults take into consideration the blob’s capacity for goal-directed
+movement (Opfer, 2002). In older children, research has not been about attributing goals but
+rather manipulating goal-directedness and observing its impact on anthropomorphizing. One way
+to do this is to have the agents demonstrate a goal-directed action (e.g., reaching for an object).
+Next, we zoom in on research that focuses on the importance of goal-directedness and intentions
+in interactions non-human social partners have with children. In fact, when a social partner
+
+17
+
+shows intentionality, children tend to attribute animate qualities. A study by Meltzoff (1995)
+examined whether young children would reproduce what the adult did over what the adult had
+intended. The children watched an adult who had tried but failed to complete specific actions.
+The findings revealed that even unsuccessful or failed attempts could help children infer the
+actions that were intended. In a follow-up that featured an inanimate object, children failed to
+produce the target actions. This suggests that children can follow the intentions and goals of a
+person more easily than they can inanimate objects.
+Non-human agents' intentionality can also be judged by other cues, like their ability to
+move autonomously. In a study by Somanader, Saylor, and Levin (2011), 4 and 5-year-olds
+interacted with an experimenter and a robot. The robot had eyes and one arm but otherwise
+lacked human features. Children were assigned to one of two conditions: Autonomous (robot
+moved autonomously) or controlled (a remote-controlled robot). Two balls were placed on the
+table, and the robot moved toward one of the balls and hit it. In the autonomous condition, the
+robot moved autonomously and independently, whereas, in the controlled condition, it looked
+like an experimenter directed the robot using a remote control. The 5-year-olds differentiated the
+remote-controlled robot from the autonomous robot, yet children a year younger were unable to
+make this distinction. Thus, children who see the robot moving autonomously may infer that the
+autonomous robot intended to hit that specific ball off the table. In comparison, children may be
+less likely to attribute goal-directedness to a robot that performed that same action, hitting the
+ball off the table, if the robot was controlled by a remote control.
+Additionally, researchers have examined whether children will help a non-human social
+partner. For example, will young children recognize a robot’s intentions and help the robot
+complete its task as infants complete an unfulfilled goal? Kocher et al. (2020) examined whether
+
+18
+
+children identified a robot’s failure and correct it. Working with a non-humanoid robot, children
+aged 3 to 7 years of age completed a collaborative building task. The findings indicated that the
+autonomous movement of the robot led to most of the children attempting to help the robot.
+Additionally, the researchers found that children engaged with the robot and treated it as a social
+partner.
+Mental states
+The spontaneous understanding of others’ beliefs, desires, emotions, and intentions is
+defined as Theory of Mind (Wellman, 2014). Agents are those we attribute mental states to, and
+agents can include people, animals, and even inanimate objects that display animacy cues. Some
+researchers believe that infants possess an innate concept of an agent that is like the hard-wired
+language-learning mechanism that is characteristic of our species (Luo & Choi, 2013). Of
+importance are true and false belief scenarios. A true belief is when one’s belief is in line with
+reality. A false belief is when one’s belief is not in line with reality (e.g., believing an object is
+one location when it is actually located in a different one). A widely used false belief task is the
+Sally-Anne task. In this task, children must decide where Sally will look for her marble after
+Anne moved it to a new location when Sally is not present (Baron-Cohen et al., 1985). This
+explicit task requires the participant to provide their response verbally. In contrast, implicit false
+belief tasks are measured via looking time (e.g., how long the participant looks at the scene). For
+example, Onishi and Baillargeon (2005) tested 15-month-old's false belief understanding using a
+violation-of-expectation paradigm (VOE). VOE tasks examine if infants look longer (i.e., find
+something surprising) when an agent’s behavior is inconsistent with their beliefs. In a
+familiarization phase, an agent played with a toy and then placed the toy inside a green box.
+Next, the toy changed location (e.g., moved from a green box to a yellow box) when the agent
+
+19
+
+was present or absent. In test, infants saw the agent reach into the green or the yellow box. If the
+infants anticipated that the agent would look for her toy based on her belief about its location
+(and not its actual location), then infants would look longer when that expectation was violated.
+The findings supported the predictions and suggested that infants could attribute both true and
+false beliefs. Baillargeon and colleagues (2010, p. 110) stated that “false-belief understanding
+provides evidence for a sophisticated (and possibly uniquely human) ability to consider the
+information available to an agent when interpreting and predicting the agent’s actions – even if
+this information is inaccurate and incompatible with one’s own.”
+The original false belief study was conducted with human agents. However, replications
+have been published with non-human agents that possess a variety of animacy characteristics.
+Prior research has shown that infants can ascribe beliefs to mechanical toy cranes (Burnside,
+Severdija, & Poulin-Dubois, 2019), geometric shapes (Surian & Geraci, 2012), and blobs that
+engage in turn-taking by emitting sounds and lights (Tauzin & Gergely, 2018). Another
+paradigm used to test false belief attribution, an anticipatory-looking task, has also been tested
+with cartoon animals (Southgate et al., 2007) and geometric figures (Surian & Franchin, 2020).
+Thus, the early mentalizing view argues that the ability to reason about mental states is not
+restricted to animate objects but to agents. Agents can display both mechanical (e.g., selfpropulsion) and actional properties (e.g., goal-directed behavior) (Carey, 2009; Csibra, 2008;
+Leslie, 1994; Scholl & Tremoulet, 2000; Surian & Caldi, 2010). In sum, while morphological
+features are often linked to animals (e.g., eyes, limbs, and biological motion) and can be used for
+the purpose of categorization, the early mentalizing view states that these features are not
+necessary or adequate to prompt mentalizing in infants. If infants understand the actions of
+inanimates (e.g., chasing shapes, communicating blobs) in line with their mental states, this is
+
+20
+
+evidence that infants mentalize about agents, even those without those animal-like features (see
+Kano et al., 2019 for related findings on apes).
+In older children and adults, anthropomorphizing of mental states has been studied using
+interviews. Some prior work conducted by Beran et al. (2011) investigated whether children (5to 16 -years old) attribute human qualities to a robotic arm. The robotic arm had eyes and a
+mouth; however, these facial features never changed during the interaction. Children observed
+the robotic arm attempt to complete a specific goal. The robotic arm in this study picked up and
+stacked six blocks. After stacking each block, the robot moved its “face” to look at the child.
+Children reported having a positive overall impression of the robot. However, most of the
+children believed the robot was incapable of having feelings or emotions. When asked to justify
+their responses, children attributed this to the lack of human-like features and facial expressions.
+More recently, research with older children has tended to focus on children’s interactions with a
+specific type of non-human agent, robots (for a review of Theory of Mind and robots, see
+Marchetti et al. (2018)). Understanding that someone can intentionally lie is part of Theory of
+Mind (ToM). For example, Peretti et al. (2023) examined whether 5-and 6-year-olds could
+differentiate between intentionally and unintentionally false statements that were made by a
+human and a humanoid robot. Children were less critical of the lies of a robot compared to those
+of a human. Zhang and colleagues (2019) used two task-based measures, the change-of-location
+false belief task (Wimmer & Perner, 1983) and the unexpected-contents false belief task (Perner
+et al., 1987), to investigate how children with autism spectrum disorder (ASD) and typically
+developing children attribute false beliefs to a robot. The results indicated that typically
+developing children attributed false beliefs to the robot more than children with ASD.
+
+21
+
+In work by Manzi et al. (2020), young children aged 5, 7, and 9 years were asked to
+attribute mental states to two robots (NAO and Robovie). The findings revealed that younger
+children (the 5-year-olds) anthropomorphized robots more than older children. Both 7- and 9year-olds attributed mental states to both robots. However, they attributed more mental states to
+the NAO robot. Manzi and colleagues (2020) concluded that children attributed more mental
+states to a humanoid robot (NAO) but attributed fewer mental states to both robots compared to
+humans.
+Di Dio et al. (2020) evaluated whether preschoolers would attribute mental states to a
+social partner (human or robot) after a social interaction. The researchers found that the older
+children, the 7-year-olds trusted the robot more than the human agent. Whereas 3-year-olds
+trusted the human more. Overall, fewer mental states were attributed to the robot compared to
+the human. However, children behaved the same way when they related to both agents. These
+results indicate that children can establish meaningful relationships with both human and robot
+agents. In recent work by Oranç & Küntay (2020), the more perceptual abilities children
+attributed to a robot (e.g., can the robot see or be tickled?), the more likely the children opted to
+learn novel information from the robot compared to an adult.
+More recently, a study by Goldman, Baumann, and Poulin-Dubois (2023a) examined
+children’s anthropomorphism of robots, animals, and artifacts by asking 3 and 5-year-olds to
+respond to interview questions (psychological questions: the ability to talk, think, and feel;
+biological question: is alive). To examine whether morphology plays a role in children's
+anthropomorphizing, both a non-humanoid robot (Dash) and a humanoid robot (NAO) were
+used. Regardless of the questions (psychological or biological), children responded similarly.
+Specifically, the younger children attributed animacy to the robots, animals, and artifacts at
+
+22
+
+chance level. In contrast, 5-year-olds knew that animals were animate, and that artifacts, and the
+non-humanoid robot (Dash) were inanimate. Crucially, the 5-year-olds were unsure about the
+animacy of the humanoid robot (NAO), performing at chance level. These results suggest that
+the 5-year-olds were uncertain of the psychological properties of a robot that is human-like in its
+morphology. Thus, morphology can play an important role in children’s judgments of animacy.
+These findings demonstrate that young children infer mental states to a greater extent to robots
+when they display animate qualities, and the number of mental states children attribute to
+different non-human agents can vary.
+Learning
+A large body of literature has explored whether children can learn from non-human social
+agents, as learning is evidence of anthropomorphism. Non-human agents can interact with people
+during their everyday experiences. Whom children learn from is an important question, and
+researchers have examined whether children will learn from non-human social partners. A large
+body of prior research has examined whether children can learn from tablets, computers, and
+social media (Danovitch & Alzahabi, 2012; Tong et al., 2022; Yan, 2006). In this review paper,
+we zoom in on children’s abilities to learn from robots. For a review of children’s trust in social
+robots as informants, see Stower et al. (2021). Learning has been assessed in many ways, for
+example, how non-verbal cues can impact a child’s ability to learn from non-human agents. In
+one of the first studies to investigate this question, O’Connell et al. (2009) showed18-month-olds
+a robot that provided a novel label for an object. Infants followed the robot’s gaze toward the
+object but failed to learn the novel labels, even when they observed a brief contingent interaction
+between a human experimenter and the robot.
+
+23
+
+In one study, researchers Kennedy, Baxter, and Belpaeme (2017) investigated whether
+robots’ nonverbal behaviors can provide social cues and aid in learning. Specifically, researchers
+were interested in whether adults and child participants perceived a difference in robots with
+high and low levels of nonverbal immediacy. Gestures, gazes, intonation, and body language
+were used to establish different levels of immediacy. Adult participants and children (M = 7.8
+years old) were assigned to a robot with high nonverbal behaviors, a robot with low nonverbal
+behaviors, or a human. Participants listened to a short story that was read by either the human or
+the robot agent, depending upon the condition. After the story, a recall test was administered.
+The findings demonstrated that both children and adults perceived the nonverbal behaviors of the
+robots. Importantly, children’s recall of the story improved when the story was read by the robot
+with high non-verbal behaviors. Thus, nonverbal behaviors such as eye gaze, body positioning,
+and vocal intonation should be considered when designing robots for both adults and children.
+In another study, children (4 to 6 years of age) played a game with a robot over the
+course of 2 months (Kory-Westlund & Breazeal, 2019). In the storytelling game, the story level
+was either matched or unmatched to the child’s language ability. The researchers found that as
+time went on, children emulated the robot more and that children who did emulate more scored
+higher on the vocabulary posttest. When the story level was matched to the child’s own language
+ability, children emulated more. Thus, young children can learn from a robot, particularly a robot
+that matches their skill and ability level. In a recent study, Oranç and Küntay (2020) found that
+the more 3- to 6-year-olds attributed perceptual abilities to the robot (e.g., can the robot see or be
+tickled?), the more likely they were to select the robot instead of a human for learning novel
+information.
+
+24
+
+Another way to look at whether children can learn from non-human social partners is to
+examine whether children will imitate or overimitate (copy unnecessary actions) them. In a
+recent paper, Schleihauf et al. (2020) examined if children would imitate the irrelevant actions
+completed by a human and a robot at similar rates. Children who were 5 to 6 years of age saw an
+agent (human or robot) open a puzzle box to obtain a reward. Children copied the demonstrated
+actions of both agents, suggesting that both human and non-human agents can lead to overimitation in children.
+Recent research has examined whether young children can learn from social robots.
+Some of this recent work has examined selective social learning, defined as the ability to know
+whom to learn from (Harris & Corriveau, 2011; Juteau et al., 2019; Poulin-Dubois & BrosseauLiard, 2016; Sobel & Finiasz, 2020). In these studies, informants, human or non-human, are
+pitted against each other to determine whom children will elect to learn from. For example,
+Breazeal and colleagues (2016) demonstrated that young children learned new words from robots
+that resembled stuffed animals. In a study by Moriguchi et al. (2011), preschoolers watched a
+video where either a human or a robot labeled novel objects. Children were then required to
+select the objects using the labels provided in the video. The results revealed that children who
+watched the video with the human agent selected more correct objects than those who saw the
+video with the robot. Nevertheless, the five-year-olds who saw the robot video performed above
+chance levels but the younger children, the 4-year-olds, did not. In another study, Kory-Westlund
+et al. (2017) had children aged 2 to 5 years view pictures of unfamiliar animals with either a
+robot or a human agent. Both agents named the unfamiliar animals shown in the pictures. On a
+recall test, children performed equally well regardless of which agent (human or robot) provided
+the names.
+
+25
+
+Building upon prior work, researchers have sought to vary the epistemic characteristics
+(e.g., accuracy, competency, confidence) of two social agents. In a recent paper, Baumann et al.
+(2023) presented children with an incompetent human agent and a competent humanoid robot,
+NAO. They found that 5-year-old children elected to learn the novel words from a robot that had
+demonstrated competency when the human agent had shown incompetency. In contrast, the
+younger children, 3-year-olds, opted to endorse the labels provided by both informants, the
+competent robot and the incompetent human, at equal rates. In a follow-up study, the researchers
+replaced the humanoid-looking robot, NAO, with a non-humanoid-looking robot, Cozmo. As the
+robot agent looked even less human-like, this was a conservative test of the importance of
+epistemic characteristics. The results mirrored those of Study 1, which featured the humanoid
+robot NAO. The 3-year-olds continued to be unsure about whom to learn from, whereas the 5year-olds prioritized competency and opted to learn new words from the robot.
+Some of this work presents children with two non-human agents rather than pit a human
+agent against a robot. Breazeal and colleagues (2016) had 3- and 5-year-olds interact with two
+"DragonBots" robots. Both robots had eyes, wings, and fur. One of the robots behaved
+contingently (was engaged, looked at the child), and the other robot exhibited non-contingent
+behavior (was disengaged, looked away from the child). First, the participants were greeted by
+both robots and encouraged to tell the robots about their favorite animal. Next, the robot told the
+child about their favorite animal (an animal that was likely unfamiliar to children at this age).
+Children recalled information provided by both robots and correctly indicated which of the novel
+animals were the robot's favorites. Crucially, children preferred to ask the contingent robot for
+additional information about the novel animal. Thus, it appears that children are more likely to
+treat a robot as knowledgeable if the robot behaves contingently.
+
+26
+
+In a study by Brink and Wellman (2020), young children (3 to 4 years of age) watched
+two humanoid robots (NAO) label familiar and unfamiliar objects. The two robots were identical
+except for their color; one had orange accents, the other purple. One of the robots provided the
+children with accurate labels (i.e., competent), whereas the other gave inaccurate labels (i.e.,
+incompetent). The findings revealed that children learned from and trusted information that had
+been supplied by the robots (i.e., names for novel items). However, children trusted information
+that had been provided by the accurate robot more than they trusted information from the
+inaccurate robot. In addition to word learning, a line of work has emerged that focuses on
+whether robots can help children learn a second language (Kanda et al., 2004; Kennedy et al.,
+2015). For a summary of word learning with robots, please see Vogt et al. (2017).
+Conclusion
+In conclusion, the extant research on animism and anthropomorphizing indicates that
+infants and young children have a broad concept of what constitutes a sentient agent. Although it
+is unknown whether preverbal infants believe that inanimate objects are alive or not, they react to
+them as they react to people in the same situations. We saw that some motion cues are
+particularly powerful in triggering anthropomorphic behaviors in infants, such as self-propulsion
+and goal-directedness. Findings from a large body of literature have revealed a developmental
+pattern in that animism decreases with age, even when unfamiliar stimuli are human-like in their
+morphology. Three-year-olds already attribute more biological properties to animals than
+artifacts but less so than 5-year-olds. This developmental pattern has been confirmed when
+children are asked about the insides of animals and artifacts. Children of that age are also
+accurate about the inside of artifacts and animals but uncertain about unfamiliar and ambiguous
+artifacts, like robots. Thus, robots are a more conservative test of animism because of their
+
+27
+
+salient agency properties, making them a form of hybrid artifacts. In comparison, 5-year-olds
+correctly infer that robots are artifacts, even if they have never had experience with robots.
+With regard to anthropomorphism, more specifically attributing psychological properties
+to inanimate but social agents, is present in infancy. This has been demonstrated in studies
+showing that they tend to behave with inanimate agents as if human as long as they display
+typical motion patterns of animates. At a later stage of development, children still
+anthropomorphize but tend to attribute psychological properties to robots less so than people.
+The extent to which children anthropomorphize robots is dependent upon both the robot’s
+behaviors and whether the robot has human-like morphology. However, much of the research on
+the attribution of sentience to artifacts, like robots, have been based on interviews that could over
+or underestimate children’s anthropomorphizing. Like in the case of animism, future research
+should make children reason about artifacts’ sentience by testing them in situations where they
+typically mentalize when humans are involved. In a first attempt with such a design, the Theory
+of Mind Scale (Wellman & Liu, 2004) was administered to 4-year-olds using figurines
+representing a humanoid robot (NAO) or a person as the protagonist. Children tended to attribute
+mental states more often in the human condition confirming previous research based on
+interviews (Goldman, Baumann, Beaudoin, & Poulin Dubois, 2023c).
+In conclusion, the present review has examined how children perceive inanimate objects,
+including social robots. In a recent article published in Behavioral and Brain Sciences, Clark and
+Fischer (2022) argued that adults treat social robots as depictions of social agents. In reaction to
+their paper, many commentators have argued that robots though not human are not merely
+depictions of social agents but are considered genuine social agents (Eng et al., 2023; Orgs &
+Cross, 2023). Others have argued that increased exposure to virtual assistants may lead both
+
+28
+
+children and adults to categorize robots as members of a unique ontological category (GirouardHallam & Danovitch, 2023; Kim et al., 2019). In another commentary, researchers have
+proposed that children and adults do not view robots as interactive toys; rather, they see robots as
+learning partners that can provide valuable information (Haber & Corriveau, 2023). Based on the
+existing literature, we conclude that in infancy, a large range of inanimate objects (e.g., boxes,
+geometric figures) that display animate motion patterns trigger the same behaviors observed in
+child-adult interactions. With age, the scope of social agents gradually narrows, except in the
+case of social robots. Thus, a gradual refinement of what constitutes a sentient agent occurs. Yet,
+additional research is needed to better understand what infants and children judge as social
+agents and how this ability changes over the lifespan. As exposure to robots and virtual assistants
+increases, moving forward, more studies must be done to understand the full impact that regular
+interactions with such partners will have on children’s anthropomorphizing.
+
+29
+
+References
+Admoni, H., & Scassellati, B. (2017). Social Eye Gaze in human-robot interaction: A Review.
+Journal of Human-Robot Interaction, 6(1), 25. https://doi.org/10.5898/jhri.6.1.admoni
+Akhtar, N., & Gernsbacher, M. A. (2008). On privileging the role of gaze in infant social
+cognition. Child Development Perspectives, 2(2), 59–65. https://doi.org/10.1111/j.17508606.2008.00044.x
+Argyle, M., & Cook, M. (1976). Gaze and mutual gaze. Cambridge University Press.
+Arterberry, M. E., & Bornstein, M. H. (2002). Infant perceptual and conceptual categorization:
+The roles of static and dynamic stimulus attributes. Cognition, 86(1), 1–
+24. https://doi.org/10.1016/S0010-0277(02)00108-7
+Aschersleben, G., Hofer, T., & Jovanovic, B. (2008). The link between infant attention to goaldirected action and later theory of mind abilities. Developmental Science, 11(6), 862–868.
+https://doi.org/10.1111/j.1467-7687.2008.00736.x
+Backscheider, A. G., Shatz, M., & Gelman, S. A. (1993). Preschoolers' ability to distinguish
+living kinds as a function of regrowth. Child Development, 64(4), 1242.
+https://doi.org/10.2307/1131337
+Baillargeon, R., Scott, R. M., & Bian, L. (2016). Psychological reasoning in infancy. Annual
+Review of Psychology, 67, 159–186. https://doi.org/10.1146/annurev-psych-010213115033
+Baillargeon, R., Scott, R. M., & He, Z. (2010). False-belief understanding in infants. Trends in
+Cognitive Sciences, 14(3), 110–118. https://doi.org/10.1016/j.tics.2009.12.006
+
+30
+
+Baker, R. K., Pettigrew, T. L., & Poulin-Dubois, D. (2014). Infants’ ability to associate motion
+paths with Object Kinds. Infant Behavior and Development, 37(1), 119–129.
+https://doi.org/10.1016/j.infbeh.2013.12.005
+Bardi, L., Regolin, L., & Simion, F. (2010). Biological motion preference in humans at birth:
+Role of dynamic and configural properties. Developmental Science, 14(2), 353–359.
+https://doi.org/10.1111/j.1467-7687.2010.00985.x
+Baron-Cohen, S., Leslie, A. M., & Frith, U. (1985). Does the autistic child have a “theory of
+mind” ? Cognition, 21(1), 37–46. https://doi.org/10.1016/0010-0277(85)90022-8
+Barrett, J. C., Fry, B., Maller, J., & Daly, M. J. (2005). Haploview: Analysis and visualization of
+LD and haplotype maps. Bioinformatics, 21(2), 263–265.
+https://doi.org/10.1093/bioinformatics/bth457
+Baumann, A.-E., Goldman, E. J., Meltzer, A., & Poulin-Dubois, D. (2023). People do not always
+know best: Preschoolers’ trust in Social Robots. Journal of Cognition and Development, 1–
+28. https://doi.org/10.1080/15248372.2023.2178435
+Beier, J. S., & Spelke, E. S. (2012). Infants’ developing understanding of Social Gaze. Child
+Development, 83(2), 486–496. https://doi.org/10.1111/j.1467-8624.2011.01702.x
+Beran, T. N., Ramirez-Serrano, A., Kuzyk, R., Fior, M., & Nugent, S. (2011). Understanding
+how children understand robots: Perceived animism in child–robot interaction.
+International Journal of Human-Computer Studies, 69(7-8), 539–550.
+https://doi.org/10.1016/j.ijhcs.2011.04.003
+Brazelton, T. B., Koslowski, B., & Main, M. (1974). The origins of reciprocity: The early
+mother-infant interaction. In M. Lewis & L. A. Rosenblum, The effect of the infant on its
+caregiver. Wiley-Interscience.
+
+31
+
+Breazeal, C., Harris, P. L., DeSteno, D., Kory Westlund, J. M., Dickens, L., & Jeong, S. (2016).
+Young Children Treat Robots as informants. Topics in Cognitive Science, 8(2), 481–491.
+https://doi.org/10.1111/tops.12192
+Breil, S. M., Osterholz, S., Nestler, S., & Back, M. D. (2019). Contributions of nonverbal cues to
+the accurate judgment of personality traits. The Oxford Handbook of Accurate Personality
+Judgment, 193–218. https://doi.org/10.1093/oxfordhb/9780190912529.013.13
+Brink, K. A., & Wellman, H. M. (2020). Robot teachers for children? Young children trust
+robots depending on their perceived accuracy and agency. Developmental Psychology,
+56(7), 1268–1277. https://doi.org/10.1037/dev0000884
+Broadbent, J. (2017). Comparing online and blended learner's self-regulated learning
+strategies and academic performance. The Internet and Higher Education, 33, 24–
+32. https://doi.org/10.1016/j.iheduc.2017.01.004
+Brooks, R., & Meltzoff, A. N. (2002). The importance of eyes: How infants interpret adult
+looking behavior. Developmental Psychology, 38(6), 958–
+966. https://doi.org/10.1037/0012-1649.38.6.958
+Brooks, R., & Meltzoff, A. N. (2005). The development of gaze following and its relation to
+language. Developmental Science, 8(6), 535–543. https://doi.org/10.1111/j.14677687.2005.00445.x
+Brugger, A., Lariviere, L. A., Mumme, D. L., & Bushnell, E. W. (2007). Doing the right thing:
+Infants' selection of actions to imitate from observed event sequences. Child Development,
+78(3), 806–824. https://doi.org/10.1111/j.1467-8624.2007.01034.x
+Buiatti, M., Di Giorgio, E., Piazza, M., Polloni, C., Menna, G., Taddei, F., Baldo, E., &
+Vallortigara, G. (2019). Cortical route for facelike pattern processing in human newborns.
+
+32
+
+Proceedings of the National Academy of Sciences, 116(10), 4625–4630.
+https://doi.org/10.1073/pnas.1812419116
+Bullock, R. J. (1985). Integrating ideas and interventions. The Journal of Applied Behavioral
+Science, 21(3), 347–350. https://doi.org/10.1177/002188638502100313
+Burnside, K., Severdija, V., & Poulin‐Dubois, D. (2019). Infants attribute false beliefs to a toy
+crane. Developmental Science, 23(2). https://doi.org/10.1111/desc.12887
+Butler, S. C., Caron, A. J., & Brooks, R. (2000). Infant understanding of the referential
+nature of looking. Journal of Cognition and Development, 1(4), 359–
+377. https://doi.org/10.1207/S15327647JCD0104_01
+Capparini, C., To, M. P. S., & Reid, V. M. (2023). Should I follow your virtual gaze? infants’
+gaze following over video call. Journal of Experimental Child Psychology, 226, 105554.
+https://doi.org/10.1016/j.jecp.2022.105554
+Caramazza, A., & Shelton, J. R. (1998). Domain-Specific Knowledge Systems in the Brain: The
+Animate-Inanimate Distinction. Journal of Cognitive Neuroscience, 10(1), 1–34.
+https://doi.org/10.1162/089892998563752
+Carey, S. (1985). Conceptual Change in Childhood. Mit Press.
+Carey, S. (2009). The origin of concepts. Oxford University
+Press https://doi.org/10.1093/acprof:oso/9780195367638.001.0001
+Carpenter, M., Call, J., & Tomasello, M. (2005). Twelve- and 18-month-olds copy actions in
+terms of goals. Developmental Science, 8(1). https://doi.org/10.1111/j.14677687.2004.00385.x
+Carpenter, M., Nagell, K., & Tomasello, M. (1998). Social cognition, joint attention, and
+communicative competence from 9 to 15 months of age. Monographs of the
+
+33
+
+Society for Research in Child Development, 63(4), 176.
+https://doi.org/10.2307/1166214
+Carpenter, M., Nagell, K., Tomasello, M., Butterworth, G., & Moore, C. (1998). Social
+Cognition, joint attention, and communicative competence from 9 to 15 months of age.
+Monographs of the Society for Research in Child Development, 63(4), i.
+https://doi.org/10.2307/1166214
+Clark, H. H., & Fischer, K. (2022). Social Robots as depictions of social agents. Behavioral and
+Brain Sciences, 1–33. https://doi.org/10.1017/s0140525x22000668
+Clifford, C. W. G., & Palmer, C. J. (2018). Adaptation to the direction of others’ gaze: A
+review. Frontiers in Psychology, 9, Article 2165. https://doi.org/10.3389/fpsyg.2018.02165
+Csibra, G. (2008). Goal attribution to inanimate agents by 6.5-month-old infants. Cognition,
+107(2), 705–717. https://doi.org/10.1016/j.cognition.2007.08.001
+Csibra, G., Gergely, G., Bıŕ ó Szilvia, Koós, O., & Brockbank, M. (1999). Goal attribution
+without agency cues: The perception of ‘pure reason’ in infancy. Cognition, 72(3), 237–
+267. https://doi.org/10.1016/s0010-0277(99)00039-6
+Danovitch, J. H., & Alzahabi, R. (2013). Children Show Selective Trust in Technological
+Informants. Journal of Cognition and Development, 14(3), 499–513.
+https://doi.org/10.1080/15248372.2012.689391
+Dasser, V., Ulbaek, I., & Premack, D. (1989). The perception of intention. Science, 243(4889),
+365–367. https://doi.org/10.1126/science.2911746
+Di Dio, C., Manzi, F., Peretti, G., Cangelosi, A., Harris, P. L., Massaro, D., & Marchetti, A.
+(2020). Shall I trust you? from Child–Robot Interaction to trusting relationships. Frontiers
+in Psychology, 11. https://doi.org/10.3389/fpsyg.2020.00469
+
+34
+
+Di Giorgio, E., Loveland, J. L., Mayer, U., Rosa-Salva, O., Versace, E., & Vallortigara, G.
+(2017). Filial responses as predisposed and learned preferences: Early attachment in chicks
+and babies. Behavioural Brain Research, 325, 90–104.
+https://doi.org/10.1016/j.bbr.2016.09.018
+Di Giorgio, E., Lunghi, M., Vallortigara, G., & Simion, F. (2021). Newborns’ sensitivity to
+speed changes as a building block for animacy perception. Scientific Reports, 11(1).
+https://doi.org/10.1038/s41598-020-79451-3
+Dolgin, K. G., & Behrend, D. A. (1984). Children's knowledge about animates and inanimates.
+Child Development, 55(4), 1646. https://doi.org/10.2307/1130034
+Dunphy-Lelii, S., & Wellman, H. M. (2004). Infants' understanding of occlusion
+of others' line-of-sight: Implications for an emerging theory of
+mind. European Journal of Developmental Psychology, 1(1), 49–
+66. https://doi.org/10.1080/17405620444000049
+Eng, A., Chi, Y., & Gray, K. (2023). People treat social robots as real social
+agents. Behavioral and Brain Sciences, 46, E28.
+https//:doi:10.1017/S0140525X22001534
+Fantz, R. L. (1963). Pattern vision in newborn infants. Science, 140(Whole No.
+3564), 296–297. https://doi.org/10.1126/science.140.3564.296
+Frankenhuis, W. E., House, B., Barrett, H. C., & Johnson, S. P. (2013). Infants’ perception of
+chasing. Cognition, 126, 224-233.Fouquet, N., Megalakaki, O., & Labrell, F. (2017).
+Children's understanding of animal, plant, and artifact properties between 3 and 6
+years. Infant and Child Development, 26(6), 1–13. https://doi.org/10.1002/icd.2032
+
+35
+
+Gao, T., & Scholl, B. J. (2011). Chasing vs. stalking: Interrupting the perception of animacy.
+Journal of Experimental Psychology: Human Perception and Performance, 37(3), 669–
+684. https://doi.org/10.1037/a0020735
+Gao, T., Newman, G. E., & Scholl, B. J. (2009). The psychophysics of chasing: A case study in
+the perception of animacy. Cognitive Psychology, 59(2), 154–179.
+https://doi.org/10.1016/j.cogpsych.2009.03.001
+Gelman, R. (1990). First principles organize attention to and learning about relevant data:
+Number and the animate-inanimate distinction as examples. Cognitive Science, 14(1), 79–
+106. https://doi.org/10.1207/s15516709cog1401_5
+Gelman, R., Durgin, F., & Kaufman, L. (1995). Distinguishing between animates and
+inanimates: Not by motion alone. In D. Sperber, D. Premack, & A. J. Premack
+(Eds.), Causal cognition: A multidisciplinary debate (pp. 150–184). Clarendon
+Press/Oxford University Press.
+Girouard-Hallam, L. N., & Danovitch, J. H. (2023). Children's interactions with virtual
+assistants: Moving beyond depictions of social agents. Behavioral and Brain Sciences, 46,
+e34.
+Goldman, E. J., Baumann, A. E., & Poulin-Dubois, D. (2023a). Preschoolers’
+anthropomorphizing of robots: Do human-like properties matter?. Frontiers in
+Psychology, 13, 8708. https://doi.org/10.3389/fpsyg.2022.1102370
+Goldman, E.J, Baumann, A.E, & Poulin-Dubois, D. (2023b). Of children and social
+robots. Behavioral and Brain Sciences, 46, E35.
+DOI: https://doi.org/10.1017/S0140525X22001583
+
+36
+
+Goldman, E. J., Baumann, A. E., Beaudoin, J. & Poulin-Dubois, D. (2023c). Testing children’s
+attribution of mental states to robots with the Theory of Mind Scale. [Manuscript in
+preparation]. Department of Psychology, Concordia University, Montreal, Canada.
+Golinkoff, R., Harding, C., Carlson, V. & Sexton, M. E. The infant’s perception of causal events:
+the distinction between animate and inanimate objects. In Advances in Infancy
+Research (eds Lipsitt, L. P. & Rovee-Collier, C.) 145–151 (Ablex, New York, 1984).
+Gottfried, G. M., & Gelman, S. A. (2005). Developing domain-specific causal-explanatory
+frameworks: The role of insides and immanence. Cognitive Development, 20(1), 137–
+158. https://doi.org/10.1016/j.cogdev.2004.07.003
+Haber, A., & Corriveau, K. H. (2023). Social Robots as Social Learning Partners: Exploring
+Children's early understanding and learning from Social Robots. Behavioral and Brain
+Sciences, 46. https://doi.org/10.1017/s0140525x22001601
+Hatano, G., Siegler, R. S., Richards, D. Dean., Inagaki, K., Stavy, R., & Wax, N. (1993). The
+development of biological knowledge: A multi-national study. Cognitive
+Development, 8(1), 47–62. https://doi.org/10.1016/0885-2014(93)90004-o
+
+Harris, P. L., & Corriveau, K. H. (2011). Young Children's Selective Trust in informants.
+Philosophical Transactions of the Royal Society B: Biological Sciences, 366(1567), 1179–
+1187. https://doi.org/10.1098/rstb.2010.0321
+Heberlein, A. S., & Adolphs, R. (2004). Impaired spontaneous anthropomorphizing despite intact
+perception and social knowledge. Proceedings of the National Academy of Sciences,
+101(19), 7487–7491. https://doi.org/10.1073/pnas.0308220101
+Heider, F., & Simmel, M. (1944). An Experimental Study of Apparent Behavior. The American
+Journal of Psychology, 57(2), 243. https://doi.org/10.2307/1416950
+37
+
+Herrmann, P., Waxman, S. R., & Medin, D. L. (2010). Anthropocentrism is not the first step in
+children’s reasoning about the natural world. Proceedings of the National Academy of
+Sciences, 107(22), 9979–9984. https://doi.org/10.1073/pnas.1004440107
+Hofer, T., Hauf, P., & Aschersleben, G. (2005). Infant's perception of goal-directed actions
+performed by a mechanical device. Infant Behavior and Development, 28(4), 466–480.
+https://doi.org/10.1016/j.infbeh.2005.04.002
+Hofrichter, R., Mueller, M. E., & Rutherford, M. D. (2021). Children’s perception of animacy:
+Social attributions to moving figures. Perception, 50(5), 387–398.
+https://doi.org/10.1177/03010066211010142
+Inagaki, K., & Hatano, G. (1993). Young children's understanding of the mind-body
+distinction. Child Development, 64(5), 1534–1549. https://doi.org/10.2307/1131551
+Inagaki, K., & Hatano, G. (1996). Young children's recognition of commonalities between
+animals and plants. Child Development, 67(6), 2823–
+2840. https://doi.org/10.2307/1131754
+Itakura, S., Okanda, M., & Moriguchi, Y. (2008). Discovering mind: Development of
+mentalizing in human children. In S. Itakura & K. Fujita (Eds.), Origins of the social mind:
+Evolutionary and developmental views (pp. 179–198). Springer Science + Business
+Media. https://doi.org/10.1007/978-4-431-75179-3_9
+Jipson, J. L., Gülgöz, S., & Gelman, S. A. (2016). Parent–child conversations regarding the
+ontological status of a robotic dog. Cognitive Development, 39, 21–35.
+https://doi.org/10.1016/j.cogdev.2016.03.001
+
+38
+
+Johnson, S., Slaughter, V., & Carey, S. (1998). Whose gaze will infants follow? The elicitation
+of gaze-following in 12-month-olds. Developmental Science, 1(2), 233–
+238. https://doi.org/10.1111/1467-7687.00036
+Juteau, A.-L., Cossette, I., Millette, M.-P., & Brosseau-Liard, P. (2019). Individual differences in
+children’s preference to learn from a confident informant. Frontiers in Psychology, 10.
+https://doi.org/10.3389/fpsyg.2019.02006
+Kamewari, K., Kato, M., Kanda, T., Ishiguro, H., & Hiraki, K. (2005). Six-and-a-half-month-old
+children positively attribute goals to human action and to humanoid-robot motion.
+Cognitive Development, 20(2), 303–320. https://doi.org/10.1016/j.cogdev.2005.04.004
+Kanda, T., Hirano, T., Eaton, D., & Ishiguro, H. (2004). Interactive robots as social partners and
+peer tutors for children: A field trial. Human-Computer Interaction, 19(1), 61–84.
+https://doi.org/10.1207/s15327051hci1901&2_4
+Kano, F., Krupenye, C., Hirata, S., Tomonaga, M., & Call, J. (2019). Great Apes use selfexperience to anticipate an agent’s action in a false-belief test. Proceedings of the National
+Academy of Sciences, 116(42), 20904–20909. https://doi.org/10.1073/pnas.1910095116
+Kennedy, J., Baxter, P., & Belpaeme, T. (2017). Nonverbal immediacy as a
+characterisation of social behaviour for human–robot interaction. International
+Journal of Social Robotics, 9(1), 109–128. https://doi.org/10.1007/s12369-0160378-3
+Kennedy, J., Baxter, P., Senft, E., & Belpaeme, T. (2015). Social robot tutoring for Child second
+language learning. 2016 11th ACM/IEEE International Conference on Human-Robot
+Interaction (HRI). https://doi.org/10.1109/hri.2016.7451757
+
+39
+
+Kim, M., Yi, S., & Lee, D. (2019). Between living and nonliving: Young children’s animacy
+judgments and reasoning about humanoid robots. PLOS ONE, 14(6), e0216869.
+https://doi.org/10.1371/journal.pone.0216869
+
+Kline, P. (2000). Handbook of Psychological Testing. London, United Kingdom: Routledge.
+Kocher, D., Kushnir, T., & Green, K. E. (2020, June). Better together: young children's
+tendencies to help a non-humanoid robot collaborator. In Proceedings of the Interaction
+Design and Children Conference (pp. 243-249).
+Kominsky, J. F., Shafto, P., & Bonawitz, E. (2021). “There’s something inside”: Children’s
+intuitions about animate agents. Plos one, 16(5), e0251081.
+https://doi.org/10.1371/journal.pone.0251081
+Kory-Westlund, J. M., & Breazeal, C. (2019). A long-term study of young children's rapport,
+social emulation, and Language Learning with a peer-like robot playmate in preschool.
+Frontiers in Robotics and AI, 6. https://doi.org/10.3389/frobt.2019.00081
+Kory-Westlund, J. M., Jeong, S., Park, H. W., Ronfard, S., Adhikari, A., Harris, P. L., DeSteno,
+D., & Breazeal, C. L. (2017). Flat vs. Expressive storytelling: Young children’s learning
+and retention of a social robot’s narrative. Frontiers in Human Neuroscience, 11.
+https://doi.org/10.3389/fnhum.2017.00295
+Legerstee, M., Pomerleau, A., Malcuit, G., & Feider, H. (1987). The development of infants'
+responses to people and a doll: Implications for research in Communication. Infant
+Behavior and Development, 10(1), 81–95. https://doi.org/10.1016/0163-6383(87)90008-7
+Leslie, A. M. (1994). Pretending and believing: Issues in the theory of
+ToMM. Cognition, 50(1-3), 211–238. https://doi.org/10.1016/00100277(94)90029-9
+
+40
+
+Leslie, A. M., & Keeble, S. (1987). Do six-month-old infants perceive causality? Cognition,
+25(3), 265–288. https://doi.org/10.1016/S0010-0277(87)80006-9
+Lorenzi, E., Mayer, U., Rosa-Salva, O., & Vallortigara, G. (2017). Dynamic features of animate
+motion activate septal and preoptic areas in visually naïve chicks (Gallus
+gallus). Neuroscience, 354, 54-68. https://doi.org/10.1016/j.neuroscience.2017.04.022
+Luo, Y. (2010). Three-month-old infants attribute goals to a non-human agent. Developmental
+Science, 14(2), 453–460. https://doi.org/10.1111/j.1467-7687.2010.00995.x
+Luo, Y., & Baillargeon, R. (2005). Can a self-propelled box have a goal? Psychological Science,
+16(8), 601–608. https://doi.org/10.1111/j.1467-9280.2005.01582.x
+Luo, Y., & Choi, Y. (2013). Infants attribute mental states to nonhuman agents. Social
+Perception, 259–282. https://doi.org/10.7551/mitpress/9780262019279.003.0011
+Luo, Y., Kaufman, L., & Baillargeon, R. (2009). Young infants’ reasoning about physical events
+involving inert and self-propelled objects. Cognitive Psychology, 58(4), 441–486.
+https://doi.org/10.1016/j.cogpsych.2008.11.001
+
+Mandler, J. M. (1992). How to build a baby: II. Conceptual primitives. Psychological Review,
+99(4), 587–604. https://doi.org/10.1037/0033-295X.99.4.587
+Mandler, J. M. (2003). Conceptual categorization. In D. H. Rakison & L. M. Oakes (Eds.), Early
+category and concept development: Making sense of the blooming, buzzing confusion (pp.
+103–131). Oxford University Press.
+Manzi, F., Ishikawa, M., Di Dio, C., Itakura, S., Kanda, T., Ishiguro, H., Massaro, D., &
+Marchetti, A. (2022). Infants’ prediction of humanoid robot’s goal-directed action.
+International Journal of Social Robotics. https://doi.org/10.1007/s12369-022-00941-7
+
+41
+
+Manzi, F., Peretti, G., Di Dio, C., Cangelosi, A., Itakura, S., Kanda, T., Ishiguro, H., Massaro,
+D., & Marchetti, A. (2020). A robot is not worth another: Exploring children’s mental state
+attribution to different humanoid robots. Frontiers in Psychology, 11.
+https://doi.org/10.3389/fpsyg.2020.02011
+Marchetti, A., Manzi, F., Itakura, S., & Massaro, D. (2018). Theory of mind and humanoid
+robots from a lifespan perspective. Zeitschrift Für Psychologie, 226(2), 98–109.
+https://doi.org/10.1027/2151-2604/a000326
+Meltzoff, A. N. (1995). Understanding the intentions of others: Re-enactment of intended acts by
+18-month-old children. Developmental Psychology, 31(5), 838–
+850. https://doi.org/10.1037/0012-1649.31.5.838
+Meltzoff, A. N., Brooks, R., Shon, A. P., & Rao, R. P. N. (2010). “social” robots are
+psychological agents for infants: A test of gaze following. Neural Networks, 23(8-9), 966–
+972. https://doi.org/10.1016/j.neunet.2010.09.005
+Moll, H., & Tomasello, M. (2004). 12- and 18-month-old infants follow gaze to spaces
+behind barriers. Developmental Science, 7(1), F1–F9.
+https://doi.org/10.1111/j.1467-7687.2004.00315.x
+Moore, C., & Povinelli, D. J. (2007). Differences in how 12- and 24-month-olds interpret the
+gaze of adults. Infancy, 11(3), 215–231. https://doi.org/10.1111/j.15327078.2007.tb00224.x
+Moriguchi, Y., & Hiraki, K. (2011). Longitudinal development of prefrontal function during
+early childhood. Developmental Cognitive Neuroscience, 1(2), 153–162.
+https://doi.org/10.1016/j.dcn.2010.12.004
+
+42
+
+Mundy, P., Block, J., Delgado, C., Pomares, Y., Van Hecke, A. V., & Parlade, M. V. (2007).
+Individual differences and the development of joint attention in infancy. Child
+Development, 78(3), 938–954. https://doi.org/10.1111/j.1467-8624.2007.01042.x
+O'Connell, L., Poulin-Dubois, D., Demke, T., & Guay, A. (2009). Can infants use a nonhuman
+agent's gaze direction to establish word-object relations? Infancy, 14(4), 414–438.
+https://doi.org/10.1080/15250000902994073
+Ochiai, M. (1989). The role of knowledge in the development of the life concept. Human
+Development, 32(2), 72–78. https://doi.org/10.1159/000276365
+Okanda, M., Taniguchi, K., Wang, Y., & Itakura, S. (2021). Preschoolers' and adults' animism
+tendencies toward a humanoid robot. Computers in Human Behavior, 118, 106688.
+https://doi.org/10.1016/j.chb.2021.106688
+Okumura, Y., Kanakogi, Y., Kanda, T., Ishiguro, H., & Itakura, S. (2013a). Infants understand
+the referential nature of human gaze but not robot gaze. Journal of Experimental Child
+Psychology, 116(1), 86–95. https://doi.org/10.1016/j.jecp.2013.02.007
+Okumura, Y., Kanakogi, Y., Kanda, T., Ishiguro, H., & Itakura, S. (2013b). The power of human
+gaze on Infant Learning. Cognition, 128(2), 127–133.
+https://doi.org/10.1016/j.cognition.2013.03.011
+Olineck, K. M., & Poulin-Dubois, D. (2005). Infants' Ability to Distinguish Between Intentional
+and Accidental Actions and Its Relation to Internal State Language. Infancy, 8(1), 91–
+100. https://doi.org/10.1207/s15327078in0801_6
+Olineck, K. M., & Poulin-Dubois, D. (2009). Infants’ understanding of intention from 10 to 14
+months: Interrelations among violation of expectancy and imitation tasks. Infant Behavior
+& Development, 32(4), 404–415. https://doi.org/10.1016/j.infbeh.2009.06.005
+
+43
+
+Onishi, K. H., & Baillargeon, R. (2005). Do 15-month-old infants understand false beliefs?
+Science, 308(5719), 255–258. https://doi.org/10.1126/science.1107621
+Opfer, J. E. (2002). Identifying living and sentient kinds from dynamic information: The case of
+goal-directed versus aimless autonomous movement in Conceptual Change. Cognition,
+86(2), 97–122. https://doi.org/10.1016/s0010-0277(02)00171-3
+Opfer, J. E., & Gelman, S. A. (2011). Development of the animate-inanimate distinction. In U.
+Goswami (Ed.), The Wiley-Blackwell handbook of childhood cognitive development (pp.
+213–238). Wiley Blackwell.
+Oranç, C., & Küntay, A. C. (2020). Children’s perception of social robots as a source of
+information across different domains of knowledge. Cognitive Development, 54, 100875.
+https://doi.org/10.1016/j.cogdev.2020.100875
+Orgs, G., & Cross, E. (2023). Dancing robots: Social interactions are performed, not
+depicted. Behavioral and Brain Sciences, 46, E40.
+https://doi.org/10.1016/j.cogdev.2020.100875
+Pauen, S., & Träuble, B. (2009). How 7-month-olds interpret ambiguous motion events:
+Category-based reasoning in infancy. Cognitive Psychology, 59(3), 275–295.
+https://doi.org/10.1016/j.cogpsych.2009.06.001
+Peretti, G., Manzi, F., Di Dio, C., Cangelosi, A., Harris, P. L., Massaro, D., & Marchetti, A.
+(2023). Can a robot lie? Young Children's understanding of intentionality beneath false
+statements. Infant and Child Development. https://doi.org/10.1002/icd.2398
+Perner, J., Leekam, S. R., & Wimmer, H. (1987). Three-year-olds' difficulty with false belief:
+The case for a conceptual deficit. British Journal of Developmental Psychology, 5(2), 125–
+137. https://doi.org/10.1111/j.2044-835x.1987.tb01048.x
+
+44
+
+Piaget, J. (1929). The child’s conception of the world. London: Kegan Paul, Trench & Trubner.
+Poulin-Dubois, D., & Brosseau-Liard, P. (2016). The developmental origins of selective social
+learning. Current Directions in Psychological Science, 25(1), 60–
+64. https://doi.org/10.1177/0963721415613962
+Poulin-Dubois, D., Crivello, C., & Wright, K. (2015). Biological motion primes the
+animate/inanimate distinction in infancy. PLOS ONE, 10(2).
+https://doi.org/10.1371/journal.pone.0116910
+Poulin-Dubois, D., & Héroux, G. (1994). Movement and children's attributions of life
+properties. International Journal of Behavioral Development, 17(2), 329–
+347. https://doi.org/10.1177/016502549401700206
+Poulin-Dubois, D., Lepage, A., & Ferland, D. (1996). Infants' concept of animacy. Cognitive
+Development, 11(1), 19-36. https://doi.org/10.1016/S0885-2014(96)90026-X
+Poulin-Dubois, D., & Pauen, S. (2017). The development of object categories. Handbook of
+Categorization in Cognitive Science, 653–671. https://doi.org/10.1016/b978-0-08-1011072.00027-0
+Poulin-Dubois, D., & Shultz, T. R. (1990). The infant's concept of agency: The distinction
+between social and nonsocial objects. The Journal of Genetic Psychology, 151(1), 77–90.
+https://doi.org/10.1080/00221325.1990.9914645
+Pratt, T. C., Cullen, F. T., Sellers, C. S., Thomas Winfree, L., Madensen, T. D., Daigle, L. E.,
+Fearn, N. E., & Gau, J. M. (2010). The empirical status of Social Learning Theory: A
+meta‐analysis. Justice Quarterly, 27(6), 765–802.
+https://doi.org/10.1080/07418820903379610
+Premack, D. (1990). The infant's theory of self-propelled objects. Cognition, 36(1), 1–
+
+45
+
+16. https://doi.org/10.1016/0010-0277(90)90051-K
+Rakison, D. H., & Poulin-Dubois, D. (2001). Developmental origin of the animate–inanimate
+distinction. Psychological Bulletin, 127(2), 209–228. https://doi.org/10.1037/00332909.127.2.209
+Richards, D. D., & Siegler, R. S. (1986). Children's understandings of the attributes of
+life. Journal of Experimental Child Psychology, 42(1), 1–22. https://doi.org/10.1016/00220965(86)90013-5
+Rochat, P., Morgan, R., & Carpenter, M. (1997). Young infants' sensitivity to movement
+information specifying social causality. Cognitive Development, 12(4), 537–561.
+https://doi.org/10.1016/s0885-2014(97)90022-8
+Rosa-Salva, O., Hernik, M., Broseghini, A., & Vallortigara, G. (2018). Visually-naïve chicks
+prefer agents that move as if constrained by a bilateral body-plan. Cognition, 173, 106–
+114. https://doi.org/10.1016/j.cognition.2018.01.004
+Rutherford, M. D. & Kuhlmeier, V. A., (2013). Social perception: Detection and interpretation
+of animacy, agency, and intention. MIT Press.
+Rutherford, M. D., Pennington, B. F., & Rogers, S. J. (2006). The perception of animacy in
+young children with autism. Journal of Autism and Developmental Disorders, 36(8), 983–
+992. https://doi.org/10.1007/s10803-006-0136-8
+Saxe, R., Tzelnic, T., & Carey, S. (2007). Knowing who Dunnit: Infants identify the causal agent
+in an unseen causal interaction. Developmental Psychology, 43(1), 149–158.
+https://doi.org/10.1037/0012-1649.43.1.149
+Saylor, M. M., Somanader, M., Levin, D. T., & Kawamura, K. (2010). How do young
+children deal with hybrids of living and non-living things: The case of humanoid
+
+46
+
+robots. British Journal of Developmental Psychology, 28(4), 835-851.
+https://doi.org/10.1348/026151009X481049
+Schleihauf, H., Hoehl, S., Tsvetkova, N., König, A., Mombaur, K., & Pauen, S. (2020).
+Preschoolers’ motivation to over‐imitate humans and Robots. Child Development, 92(1),
+222–238. https://doi.org/10.1111/cdev.13403
+Schlottmann, A., & Ray, E. (2010). Goal attribution to schematic animals: Do 6-month-olds
+perceive biological motion as animate? Developmental Science, 13(1), 1–
+10. https://doi.org/10.1111/j.1467-7687.2009.00854.x
+Scholl, B. J., & Gao, T. (2013). Perceiving animacy and intentionality: Visual processing or
+higher-level judgment? In M. D. Rutherford & V. A. Kuhlmeier (Eds.), Social perception:
+Detection and interpretation of animacy, agency, and intention (pp. 197–229). Boston
+Review. https://doi.org/10.7551/mitpress/9780262019279.003.0009
+Scholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in Cognitive
+Sciences, 4(8), 299–309. https://doi.org/10.1016/s1364-6613(00)01506-0
+Setoh, P., Wu, D., Baillargeon, R., & Gelman, R. (2013). Young infants have biological
+expectations about animals. Proceedings of the National Academy of Sciences, 110(40),
+15937–15942. https://doi.org/10.1073/pnas.1314075110
+Sifre, R., Olson, L., Gillespie, S., Klin, A., Jones, W., & Shultz, S. (2018). A longitudinal
+investigation of preferential attention to biological motion in 2- to 24-month-old infants.
+Scientific Reports, 8(1). https://doi.org/10.1038/s41598-018-20808-0
+Sobel, D. M., & Finiasz, Z. (2020). How children learn from others: An analysis of selective
+word learning. Child Development, 91(6). https://doi.org/10.1111/cdev.13415
+
+47
+
+Somanader, M. C., Saylor, M. M., & Levin, D. T. (2011). Remote control and children’s
+understanding of robots. Journal of Experimental Child Psychology, 109(2), 239–
+247. https://doi.org/10.1016/j.jecp.2011.01.005
+Southgate, V., Senju, A., & Csibra, G. (2007). Action anticipation through attribution of false
+belief by 2-year-olds. Psychological Science, 18(7), 587–592.
+https://doi.org/10.1111/j.1467-9280.2007.01944.x
+Spelke, E. S., Phillips, A., & Woodward, A. L. (1995). Infants' knowledge of object motion and
+human action. In D. Sperber, D. Premack, & A. J. Premack (Eds.), Causal cognition: A
+multidisciplinary debate (pp. 44–78). Clarendon Press/Oxford University Press.
+Stower, R., Calvo-Barajas, N., Castellano, G., & Kappas, A. (2021). A meta-analysis on
+children’s trust in Social Robots. International Journal of Social Robotics, 13(8), 1979–
+2001. https://doi.org/10.1007/s12369-020-00736-8
+Surian, L., & Caldi, S. (2010). Infants' individuation of agents and inert objects. Developmental
+Science, 13(1), 143–150. https://doi.org/10.1111/j.1467-7687.2009.00873.x
+Surian, L., & Franchin, L. (2020). On the domain specificity of the mechanisms underpinning
+spontaneous anticipatory looks in false‐belief tasks. Developmental Science, 23(6).
+https://doi.org/10.1111/desc.12955
+Surian, L., & Geraci, A. (2012). Where will the triangle look for it? attributing false beliefs to a
+geometric shape at 17 months. British Journal of Developmental Psychology, 30(1), 30–44.
+https://doi.org/10.1111/j.2044-835x.2011.02046.x
+Tao, Y. (2016). Young chinese children’s justifications of plants as living things. Early
+Education and Development, 27(8), 1159-1174. doi:
+http://dx.doi.org.oca.ucsc.edu/10.1080/10409289.2016.1210456
+
+48
+
+Tauzin, T., & Gergely, G. (2018). Communicative mind-reading in preverbal infants. Scientific
+Reports, 8(1). https://doi.org/10.1038/s41598-018-27804-4
+Tong, Y., Wang, F., Danovitch, J., & Wang, W. (2022). When the internet is wrong: Children’s
+trust in an inaccurate internet or human source. British Journal of Developmental
+Psychology, 40(2), 320–333. https://doi.org/10.1111/bjdp.12405
+Trauble, B., Pauen, S., & Poulin-Dubois, D. (2004). Speed and direction changes induce the
+perception of animacy in 7-month-old infants. Frontiers in Psychology, 5.
+https://doi.org/10.3389/fpsyg.2014.01141
+Tremoulet, P. D., & Feldman, J. (2000). Perception of animacy from the motion of a single
+object. Perception, 29(8), 943–951. https://doi.org/10.1068/p3101
+Vogt, P., de Haas, M., de Jong, C., Baxter, P., & Krahmer, E. (2017). Child-robot interactions for
+second language tutoring to preschool children. Frontiers in Human Neuroscience, 11.
+https://doi.org/10.3389/fnhum.2017.00073
+Wagner, L., & Carey, S. (2005). 12-month-old infants represent probable endings of motion
+events. Infancy, 7(1), 73–83. https://doi.org/10.1207/s15327078in0701_6
+Wellman, H. M. (2014). Making minds: How theory of mind develops. Oxford University Press.
+Wellman, H. M., & Liu, D. (2004). Scaling of theory-of-mind tasks. Child Development, 75(2),
+523–541. https://doi.org/10.1111/j.1467-8624.2004.00691.x
+Wimmer, H., & Perner, J. (1983). Beliefs about beliefs: Representation and constraining
+function of wrong beliefs in young children's understanding of
+deception. Cognition, 13(1), 103–128. https://doi.org/10.1016/00100277(83)90004-5
+
+49
+
+Woodward, A. L. (1998). Infants selectively encode the goal object of an actor's
+reach. Cognition, 69(1), 1–34. https://doi.org/10.1016/S0010-0277(98)00058-4
+Woodward, A. L. (1999). Infants' ability to distinguish between purposeful and non-purposeful
+behaviors. Infant Behavior & Development, 22(2), 145–
+160. https://doi.org/10.1016/S0163-6383(99)00007-7
+Yamaguchi, M., Kuhlmeier, V. A., Wynn, K., & van Marle, K. (2009). Continuity in social
+cognition from infancy to childhood. Developmental Science, 12(5), 746–752.
+https://doi.org/10.1111/j.1467-7687.2008.00813.x
+Yan, Z. (2006). What influences children's and adolescents' understanding of the complexity of
+the Internet? Developmental Psychology, 42(3), 418–428. https://doi.org/10.1037/00121649.42.3.418
+Zhang, Y., Song, W., Tan, Z., Wang, Y., Lam, C. M., Hoi, S. P., Xiong, Q., Chen, J., & Yi, L.
+(2019). Theory of robot mind: False belief attribution to social robots in children with
+and without autism. Frontiers in Psychology, 10.
+https://doi.org/10.3389/fpsyg.2019.01732
+
+50
+
+

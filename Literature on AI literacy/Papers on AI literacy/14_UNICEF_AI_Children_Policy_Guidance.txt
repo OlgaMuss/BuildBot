@@ -1,0 +1,3757 @@
+Policy
+guidance
+on AI for
+children
+2 . 0 | N OV E M B E R 2 0 2 1
+
+Policy guidance
+on AI for children
+2.0 | NOV EMB ER 2021
+
+UNICEF works in the world’s toughest places to reach the most disadvantaged children and
+adolescents – and to protect the rights of every child, everywhere. Across 190 countries and territories,
+we do whatever it takes to help children survive, thrive and fulfill their potential, from early childhood
+through adolescence. And we never give up.
+The Office of Global Insight and Policy serves as UNICEF's internal think-tank, investigating issues with
+implications for children, equipping the organization to more effectively shape the global discourse, and
+preparing it for the future by scanning the horizon for frontier issues and ways of working. With dedicated
+expertise in seven policy areas – digital technology, human capital, governance, the environment,
+society, markets, and finance – the Global Insight team assists the organization in interpreting, and
+engaging in, a rapidly changing world. Visit us online to learn more: unicef.org/globalinsight
+Office of Global Insight and Policy
+United Nations Children’s Fund
+3 United Nations Plaza, New York, NY, 10017, USA
+© United Nations Children's Fund (UNICEF), November 2021
+This is a working document. It has been prepared to facilitate the exchange of knowledge and to stimulate discussion. The text has not been edited to official publication standards and UNICEF accepts no
+responsibility for errors.
+The statements in this publication are the views of the author(s) and do not necessarily reflect the
+policies or the views of UNICEF. The designations in this publication do not imply an opinion on legal
+status of any country or territory, or of its authorities, or the delimitation of frontiers.
+Photo credits
+Cover: Photography by Damon Zaidmus/Unsplash; artwork by Grace Leong
+Page 11: Photography by Ratiu Bia/Unsplash; artwork by MacWell
+Page 17: © UNICEF/UN0225357/Brown
+Page 18: Photography by Ayo Ogunseinde/Unsplash; artwork by MacWell
+Page 19: © UNICEF/UNI96246/Mingfang
+Page 24, 27: Photography by Florian Klauer, Alex Knight, Sandy Millar, Photos Hobby, Nikhita S, Robin
+Schreiner/Unsplash; artwork by Gabrielle Mérite
+Page 25: Photography by Atlas Green, Yan Barthemy, Scott Web/Unsplash; artwork
+by Gabrielle Mérite
+Page 26: © UNICEF/Leandro Martins and Ricardo Matsukawa
+Page 29: Photography by Wadi Lissa/Unsplash; artwork by MacWell
+Page 33: © UNICEF/UN033826/Laban
+Page 35: © UNICEF/UNI341467/Rich
+Page 37: © UNICEF/UN0325562/Pancic
+Page 39: © UNICEF/UN0159305/Hahn
+Page 42: © UNICEF/UNI336271/Ma
+Page 46: Photography by Brent Ninaber/Unsplash; artwork by Grace Leong
+Page 52: Photography by Tong Nguyen van/Unsplash; artwork by MacWell
+
+This document is interactive and
+designed for digital viewing.
+
+Please consider the environment
+and refrain from printing.
+
+Contents
+
+Acknowledgements
+
+6
+
+Executive summary
+
+7
+
+What's new in version 2.0?
+
+10
+
+Introduction
+
+11
+
+1.0 /
+
+What do we mean by AI?
+
+15
+
+2.0 /
+
+Children’s rights and AI: Opportunities and risks
+
+19
+
+2.1 /
+
+What are children’s rights?
+
+20
+
+2.2 /
+
+How children are impacted by AI systems
+
+20
+
+2.3 /
+
+Key opportunities
+
+20
+
+2.4 /
+
+Key risks and concerns
+
+22
+
+2.5 /
+
+What do children think about AI?
+
+26
+
+3.0 /
+
+Requirements for child-centred AI
+
+30
+
+3.1 /
+
+Support children’s development and well-being
+
+32
+
+3.2 /
+
+Ensure inclusion of and for children
+
+33
+
+3.3 /
+
+Prioritize fairness and non-discrimination for children
+
+34
+
+3.4 /
+
+Protect children’s data and privacy
+
+35
+
+3.5 /
+
+Ensure safety for children
+
+36
+
+3.6 /
+
+Provide transparency, explainability and accountability for children
+
+38
+
+3.7 /
+
+Empower governments and businesses with knowledge of AI and 		
+children’s rights
+
+40
+
+3.8 /
+
+Prepare children for present and future developments in AI
+
+40
+
+3.9 /
+
+Create an enabling environment for child-centred AI
+
+42
+
+4.0 /
+
+Pilot case studies
+
+46
+
+Special sections
+Use cases: Opportunities or risks?
+
+24
+
+Gender equity: Fostering girls’ participation in AI
+
+27
+
+Child rights: Foundations for child-centred AI
+
+28
+
+Overview: Requirements and recommendations
+
+44
+
+Next steps: Implementing the guidance
+
+53
+
+References
+
+54
+
+Acknowledgements
+This policy guidance is the culmination of the work of numerous individuals and
+organizations. It was produced by UNICEF’s Office of Global Insight and Policy,
+under the guidance of Laurence Chandy (Director) and Jasmina Byrne (Chief,
+Policy Unit). Virginia Dignum (Umeå University), Klara Pigmans (ALLAI), Steven
+Vosloo and Melanie Penagos (UNICEF) authored the policy guidance.
+UNICEF is grateful to the members of the expert advisory board for their overall
+project support and inputs into the policy guidance: Baroness Beeban Kidron
+(5Rights Foundation); Sandra Cortesi and Urs Gasser (Berkman Klein Center
+for Internet & Society, Harvard University); Alpesh Shah, John C. Havens and
+Konstantinos Karachalios (IEEE Standards Association); Maria Luciana Axente
+(PricewaterhouseCoopers, United Kingdom); Jussi Kivipuro (UNICEF Finland); and
+Eddan Katz, Kay Firth-Butterfield and Seth Bergeson (World Economic Forum).
+We wish to thank the following colleagues and experts who provided valuable
+inputs during the consultation process and the first and/or second rounds of
+review: Manpreet Singh (5Rights Foundation); Angela Vigil, Jose Angelo Tiglao,
+Reena Mitra-Ventanilla, Selynn Alexis Co (Baker & McKenzie); Alexa Hasse and
+Ryan Budish (Berkman Klein Center for Internet & Society, Harvard University);
+Alexandre Barbosa, Fabio Senne and Luísa Adib Dino (Cetic.br); Office of the
+Commissioner for Children and Tech.mt (Government of Malta); Shafika Isaacs
+(independent consultant); Carla Licciardello, Preetam Maloor and Sadhvi Saran
+(ITU); Eileen Donahoe (Stanford University); Alexa Koenig (UC Berkeley); Cédric
+Wachholz, Dafna Feinholz, Maksim Karliuk, Prateek Sibal, Sasha Rubel and Tee
+Wee Ang (UNESCO); Josianne Galea Baron, Manel Stambouli, Manuel Garcia
+Herranz, Marina Komarecki, Miles Hastie, Sigrun Kaland, Vedran Sekara and
+Camila Teixeira (UNICEF); Irene Leino (formerly UNICEF Finland).
+Thank you to those who participated in the public consultation process and
+generously contributed their time and expertise to help strengthen the guidance.
+Additional thanks are owed to the many experts and children who participated
+in the policy guidance consultation workshops, those who helped organize the
+workshops, and the experts who took the survey. Special thanks to Katarzyna
+Pawelczyk and Maria Jose Ravalli (UNICEF) who developed the child consultation
+methodology and managed the child consultation process.
+This project is made possible by funding and technical support from the Ministry of
+Foreign of Affairs, Finland. We are grateful for their continued partnership and commitment to child rights, under the guidance of Ambassador Jarmo Sareva.
+
+> Art direction: Kathleen Edison
+> Design: Grace Leong
+> Copy editing: Eve Leckey
+
+6
+
+Policy Guidance on AI for Children
+
+Executive summary
+Artificial Intelligence (AI) systems are fundamentally changing the
+world and affecting present and future generations of children.
+According to the OECD, artificial
+Children are already interacting with AI technologies in many difintelligence (AI) refers to machinebased systems that, given a set
+ferent ways: they are embedded in toys, virtual assistants and video
+of human-defined objectives, can
+games, and are used to drive chatbots and adaptive learning softmake predictions, recommendations,
+ware. Algorithms provide recommendations to children on what
+or decisions that influence real or
+videos to watch next, what news to read, what music to listen to
+virtual environments.
+and who to be friends with. In addition to these direct interactions
+between children and AI, children’s lives and well-being are also indirectly impacted by automated decision-making systems that determine issues as varied as welfare subsidies, quality of health care and education access, and their
+families’ housing applications. This impact has implications for all children, including those from developing countries who may be equally impacted by lost
+opportunities as a result of not being able to enjoy the benefits of AI systems.
+As the world’s leading organization for children, UNICEF recognizes the potential that AI systems have for supporting every child’s development. We are
+leveraging AI systems to improve our programming, including mapping the
+digital connectivity of schools, predicting the spread of diseases and improving poverty estimation. While AI is a force for innovation and can support the
+achievement of the Sustainable Development Goals (SDGs), it also poses risks
+for children, such as to their privacy, safety and security. Since AI systems can
+work unnoticed and at great scale, the risk of widespread exclusion and discrimination is real. As more and more decisions are delegated to intelligent systems, we are also forced, in the words of a UN High Level Panel, to “rethink our
+understandings of human dignity and agency, as algorithms are increasingly
+sophisticated at manipulating our choices.”1 For children’s agency, this rethinking is critical. Due to the extensive social, economic and ethical implications of
+AI technologies, governments and many organizations are setting guidelines
+for its development and implementation. However, even though the rights of
+children need acute attention in the digital age,2 this is not being reflected in
+the global policy and implementation efforts to make AI systems serve society
+better. Simply put: children interact with or are impacted by AI systems that are
+not designed for them, and current policies do not address this. Furthermore,
+whatever is known about how children interact with and are impacted by AI is
+just the start. The disruptive effects of AI will transform children’s lives in ways
+we cannot yet understand, for better or for worse. Our collective actions on AI
+today are critical for shaping a future that children deserve.
+Efforts to democratize the benefits of AI systems for all children urgently need
+to be broadened. The first step is to recognize the unique opportunities and
+risks that AI systems represent for children, and then to act to leverage and
+mitigate them, respectively, in ways that recognize the different contexts of
+children, especially those from marginalized communities. Children’s varied
+characteristics, such as their developmental stages and different learning abilities, need to be considered in the design and implementation of AI systems.
+
+Executive summary
+
+7
+
+In partnership with the Government of Finland, UNICEF offers this draft policy
+guidance as a complement to efforts to promote human-centric AI, by introducing a child rights lens. The ultimate purpose of the guidance is to aid the
+protection and empowerment of children in interactions with AI systems and
+enable access to its benefits in all aspects of life.
+The guidance provides a brief description of what we mean by AI and AI systems. It then considers the range of ways in which AI systems impact children
+today, which are illustrated by use cases or examples that highlight the key
+opportunities, risks and concerns. Bearing in mind the need to uphold human
+rights, and drawing on the Convention on the Rights of the Child, the foundations for child-centred AI are presented. AI policies and systems should aim
+to protect children, provide equitably for their needs and rights, and empower
+them to participate in an AI world by contributing to the development and use of
+AI. Building on this foundation are nine requirements for child-centred AI, complementing key work already underway, but with a central focus on children.
+
+Foundation = { uphold children's rights }
+Through the lenses of protection, provision and participation
+Support children’s development and well-being
+Let AI help me develop to my full potential.
+2
+
+Ensure inclusion of and for children
+Include me and those around me.
+
+3
+
+Prioritize fairness and non-discrimination for children
+AI must be for all children.
+
+4
+
+Protect children’s data and privacy
+Ensure my privacy in an AI world.
+
+5
+
+Ensure safety for children
+I need to be safe in the AI world.
+
+6
+
+Provide transparency, explainability, and accountability for children
+I need to know how AI impacts me. You need to be accountable for that.
+
+7
+
+Empower governments and businesses with knowledge of AI and children’s rights
+You must know what my rights are and uphold them.
+
+8
+
+Prepare children for present and future developments in AI
+If I am well prepared now, I can contribute to responsible AI for the future.
+
+9
+
+Create an enabling environment
+Make it possible for all to contribute to child-centred AI.
+
+8
+
+Policy Guidance on AI for Children
+
+See all
+recommendations
+
+Roadmap for
+policymakers
+
+Each requirement has a number of recommendations to guide
+governments and the business sector. To further support implementation of the guidance, a list of complementary online resources and a set of practical implementation tools are provided, including:
+
+AI for children
+development
+canvas
+
+AI guide for
+parents
+
+AI guide for
+teens
+
+We invite and challenge governments and businesses to use this guidance
+in their work and to openly and collaboratively share their experiences. The
+guidance does not claim to have all the answers and we acknowledge the
+challenge of equally balancing indivisible child rights in the digital environment. Yet we know that it is not only possible, but also necessary, for children in an AI world.
+
+Acknowledgements
+
+9
+
+What’s new in version 2.0
+The draft policy guidance was launched in September 2020 and was put forth for
+public consultation from 16 September to 16 October 2020. During this time, we
+received 50 submissions from international organizations, governments, the private sector, academia and civil society. The responses were analysed, and the key
+takeaways were summarized on our project website in January 2021.3 The feedback was largely positive and in agreement with the content of the draft guidance.
+The respondents offered many thoughtful recommendations which have been incorporated into this version. While the updates to version 2.0 may seem subtle,
+they nonetheless include significant changes with regard to inclusion and diversity.
+Updates include new resources and examples, specific clarifications, more diverse
+viewpoints, and additional guidance for key stakeholders, including parents, teens
+and educators. Existing key points were also drawn out and made more visible to
+help readers better navigate the document. Overall, the consultation revealed that
+the draft policy guidance was a strong and relevant contribution to the fields of AI
+and children’s rights.
+Furthermore, we worked closely with organizations from around the world to pilot
+the draft guidance and develop case studies which illustrate how AI-based policies
+and systems could be designed to be more child-centred. The approaches and
+lessons learned in the field brought new insights and fresh perspectives to this
+guide. The full case study summary and individual cases can be accessed on our
+project website.4
+Since the publication of this guide, there has been an uptick in interest from governments, businesses and academia to apply these recommendations to their local contexts. For instance, in March 2021 the Government of Scotland launched
+its national AI strategy5 and announced its formal adoption of the policy guidance.
+It is the first country to do so and signals the validity and growing recognition of
+the guidance.
+
+10
+
+Policy Guidance on AI for Children
+
+Introduction
+“Most of the technologies that exist are
+not made with children in mind.”
+VOICES OF YOUTH, AI WORKSHOP, BRAZIL
+
+Why the guidance is needed
+In the last few years, over 60 countries have released a range of AI policy initiatives,6
+focusing largely on how to leverage AI systems for economic growth and national
+competitiveness.7 This is not surprising: AI systems will potentially deliver additional
+economic output of around US$13 trillion by 2030.8 Beyond economic growth, the
+use of AI systems will fundamentally enhance or disrupt many spheres of life, such
+as expediting health diagnostics, improving the management of traffic flows for
+safer cities, impacting how news and social information are received and supporting
+more targeted disaster response efforts. However, because AI systems can analyse
+huge amounts of data and make inferences at an unprecedented speed and scale,
+often in a way shaped by the commercial and political agendas of those who create
+and deploy them, the potential for widespread harm – such as exclusion and discrimination against certain groups and individuals – is real. Moreover, since expertise and resources on AI are concentrated within a few countries and organizations,
+asymmetries of power and knowledge affect how the benefits of AI can be widely
+shared.9 Such asymmetries especially affect developing countries, which are largely absent from, or not sufficiently represented in, most prominent forums on AI,
+despite having a significant opportunity to benefit from AI-powered technologies.10
+The concern for a world where AI systems are deployed unchecked has raised
+burning questions about the impact, governance and accountability of these technologies. In order to ensure that AI policies and systems serve humanity and are
+developed in an ethical way, governments, intergovernmental organizations, companies and advocacy groups have developed over 160 sets of AI principles.11 The
+promotion of human rights is central to most of these documents, which further
+converge around core themes including privacy, accountability, safety and security, transparency and explainability, fairness and non-discrimination, human control
+of technology and professional responsibility.12 While there is growing consensus
+about what the principles require, far less is known about how to effectively apply
+them. Even while the majority of national AI strategies mention human rights, very
+few seriously consider how AI systems actually impact those rights,13 and what can
+be done to address this.
+Though the AI principles are all valid when children are involved, the unique characteristics and rights of children require a much deeper reflection on the impact of AI
+and how the principles need to be applied differently for them. In UNICEF’s review
+of 20 national AI strategies we found that, in general, engagement on children’s issues is immature. There is little acknowledgement about how AI is likely to affect
+children and specific mentions of children’s rights tend to be limited to education,
+health and privacy. “Furthermore, even less is being said about the risks children
+may be exposed to from AI systems or mitigation efforts for certain services that
+utilize predictive analytics or other types of algorithmic modelling to make deter-
+
+Introduction
+
+11
+
+minations about children’s futures.”14 Children are less able to fully understand the
+implications of AI technology and often do not have the opportunities or the avenues to communicate their opinions, or the right advocates to support them, and
+often lack the resources to respond to instances of bias or to rectify any misconceptions or inaccuracies in their data.15
+While, overall, governments need additional capacity and expertise to engage on
+issues around AI and to bring national oversight or governance to the use of such
+technologies,16 the need for support to drive child-centred AI policies and systems
+is just as great. Children have unique physical and psychological attributes that require special attention in the application of AI systems that increasingly shape the
+information and services children receive and the opportunities they are afforded.
+It is crucial to recognize that their development and education will further be mediated and filtered by AI, and they will have an increasingly high level of exposure to
+AI systems over the course of their lives. National AI strategies, corporate codes
+of conduct and the implementation of AI systems must reflect the needs and
+potential of at least one-third of online users: children.17 The need for child-centred policies is important even in instances where children’s direct engagement
+with AI systems is limited (e.g. due to a lack of connectivity), given that indirect
+engagement through tools such as surveillance cameras and predictive modelling
+significantly impact children and their rights.
+
+Purpose and target audience
+of the guidance
+The purpose of the guidance is not to create another set of AI-related principles, but
+rather to complement existing work by:
+> Raising awareness of children’s rights and how AI systems can uphold or undermine those rights; and
+> Providing requirements and recommendations to uphold children’s rights in government and business AI policies and practices.
+Since most AI policies are designed and implemented by governments and the
+business sector, we have focused the guidance on these two groups:
+> Government policymakers at the national, regional or local level who create AI
+policies and strategies and governmental agencies that implement them; and
+> Business leaders who create AI systems’ guides and codes of conduct for their
+companies and software and hardware development teams that implement
+them. Specifically, we are targeting businesses that provide AI-enabled products
+and services, such as social media platforms and providers of educational technology and health diagnostic systems.
+We acknowledge that there are many other stakeholders in the AI policy and implementation ecosystem, including United Nations (UN) bodies, civil society organizations and academia. These groups should also find the policy guidance valuable. For
+example, civil society organizations may use it to monitor how other governments
+and businesses fare towards achieving child-centred AI.
+
+12
+
+Policy Guidance on AI for Children
+
+How the guidance was developed
+This guidance was co-developed through a broad consultative process with inputs
+from a variety of experts aiming to capture the local AI-related needs and realities
+of policymakers and businesses around the world, and included children’s voices in
+the process.
+Five consultation workshops were convened with experts on AI systems, children
+and digital rights in Africa, East Asia and the Pacific, Europe, Latin America and
+the Caribbean and North America. Over 200 participants from government, the
+private sector, academia, civil society and UN agencies representing 39 countries
+were involved.
+A survey was sent to policymakers and experts who could not attend the workshops. A total of 33 responses were received, including from non-traditional AI
+countries such as Cameroon, Jamaica and Nepal.
+Almost 250 children were consulted through nine workshops held in Brazil, Chile,
+South Africa, Sweden and the United States.
+More information can be found in the workshop reports, available on the project
+website.18 The inputs from the consultations (including the public consultation and
+subsequent webinars) are reflected in the policy guidance and key quotes from the
+child workshops are included to demonstrate their hopes, concerns and questions
+about AI systems.
+This guidance builds on and refers to key related resources, including the Memorandum on Artificial Intelligence and Child Rights by UC Berkeley and UNICEF,19 the
+Berkman Klein Center’s report on Youth and Artificial Intelligence,20 and UNICEF’s
+work on responsible data for children21 and its governance.22
+
+How to use the guidance
+The guidance should be used in a variety of contexts:
+> When creating, reviewing and/or updating AI policies, strategies or codes
+of conduct;
+> When developing and implementing AI systems that children interact with or
+may be impacted by; and
+> When driving change throughout the life cycle of policy and technology development, within governments and companies.
+While we have tried to be as practical as possible in the requirements and recommendations, the guidance must remain high-level so that it can be applied according
+to local contexts. To support implementation, four practical tools accompany the
+guidance: an operationalization roadmap for policymakers, a development canvas
+for AI software teams, and two brief guides: one for parents and one for teens.
+
+Introduction
+
+13
+
+1.0 /
+
+What do we
+mean by AI?
+
+“What excites me about AI? It is the future.
+To keep up I want to learn this now.”
+VOICES OF YOUTH, AI WORKSHOP, SWEDEN
+
+What do we mean by AI?
+
+15
+
+Data
+Facts, figures or information
+that are used to train AI about
+humans and the world.
+
+Machine learning
+A programming technique in
+which a software system is
+provided with thousands of
+examples of a concept and
+searches for patterns by itself.
+
+(Deep) neural networks
+A number of information
+processing units that send information between each other,
+similarly to the way neurons
+work in our brain. Combined
+with ever-powerful computers
+and large amounts of data,
+this technique enables more
+efficient machine learning.
+
+Predictive analytics
+Statistical techniques that
+analyse data to make predictions
+about unknown events or
+outcomes.
+
+Pattern recognition
+The automated identification
+of regularities in data used, for
+example, for image processing
+or computer vision.
+
+AI refers to machine-based systems that can, given a set of
+human-defined objectives, make predictions, recommendations,
+or decisions that influence real or virtual environments.23 AI systems interact with us and act on our environment, either directly
+or indirectly. Often, they appear to operate autonomously, and can
+adapt their behaviour by learning about the context.
+Simply speaking, AI systems function by following rules or by
+learning from examples (supervised or unsupervised), or by trial
+and error (reinforcement learning). Many AI applications currently
+in use – from recommendation systems to smart robots – rely
+heavily on machine learning techniques for pattern recognition. By
+discovering patterns in data, computers can process text, voice,
+images or videos and plan and act accordingly.
+
+{ Examples of most used techniques found in common AI applications }
+Chatbots
+
+Recommendation
+systems
+
+Robots
+
+Automated
+decision-making
+
+Natural language
+processing
+Computer vision
+Rule-based
+models
+Learning from
+examples
+Planning
+techniques
+Predictive
+analytics
+
+Natural language processing
+(NLP)
+Systems used, for example, by
+chatbots and voice assistants,
+are designed to understand
+and generate human language,
+either written or spoken.
+
+Computer vision techniques
+Techniques that provide
+computers with understanding
+of digital images or videos, such
+as for facial recognition.
+
+16
+
+Reinforcement
+learning
+
+These techniques employ statistical methods to process large
+amounts of data about us and the world. Both the algorithms and
+data are key influences on the results of the AI system. Data is
+always a limited representation of reality, and the results of the AI
+system depend on the data it uses. At the same time, the teams
+that develop the algorithms, decide on which algorithms to use,
+and determine how the results will be implemented, must also
+include a diversity of disciplines and backgrounds in order to minimize bias and undesirable impacts. To minimize bias in the results
+of AI systems, data needs to reflect the gender, race, cultural, and
+
+Policy Guidance on AI for Children
+
+other characteristics of the groups that use
+or are otherwise impacted by the system. It
+is also important to note that AI systems are
+mostly embedded within digital sysResponsible AI tems and hardware. For this reason,
+is about ensuring it is often said that AI is everywhere
+that AI systems and nowhere. Consequently, it
+are ethical, legal, can be difficult to focus only on
+AI-related aspects in a guidance
+beneficial and such as this without also discussing
+robust. related digital ecosystem issues.
+While explainability and accountability are principles specific to AI systems,
+the protection of user privacy and the concern
+for fairness and inclusion are relevant for the
+whole digital ecosystem.
+Efforts towards responsible, or trustworthy,
+AI are increasing around the world, through
+which governments and businesses recognize the need for safer and more ethical and
+
+What do we mean by AI?
+
+transparent approaches to AI policy and development.24 Responsible AI is about ensuring
+that AI systems are ethical, legal, beneficial
+and robust, that these properties are verifiable, and that organizations that deploy or use
+these systems are held accountable.25
+Finally, it is critical to understand that AI systems are not magic.26 People design, train and
+guide AI, from those that set AI policies and
+strategies, to the software programmers who
+build AI systems, to the people that collect and
+tag the data used by them, to the individuals
+who interact with them. This means that everyone in the AI development ecosystem needs to
+understand the key issues that require them to
+contribute to responsible AI. This could include
+being well informed about why and how an AI
+system has been designed, by whom and for
+what purpose.
+
+17
+
+2.0 /
+
+Children’s
+rights and AI:
+Opportunities
+and risks
+
+“I’m undecided. On one hand, I want privacy,
+but on another, I want to be protected and be
+given correct information that will help me
+as a child. I think a chatbot is a good idea but
+parents need to be involved in helping me
+make decisions about my life.”
+VOICES OF YOUTH, AI WORKSHOP, SOUTH AFRICA
+
+Children’s rights and AI: Opportunities and risks
+
+19
+
+<2.1>
+
+<2.2>
+
+What are children’s
+rights?
+
+How children are
+impacted by AI systems
+
+The basis for the guidance is the Convention
+on the Rights of the Child (CRC),27 which sets
+out the rights that must be realized for every
+child, that is every person under the age of
+18, to develop to her or his full potential. AI
+systems can uphold or undermine children’s
+rights, depending on how they are used. This
+impact should be central to how AI policies
+and systems are developed so as not only to
+respect but also to uphold all children’s rights,
+and can be viewed through the lenses of protection, provision and participation.
+
+Today’s children are the first generation that
+will never remember a time before smartphones. They are the first generation whose
+health care and education are increasingly
+mediated by AI-powered applications and
+devices, and some will be the first to regularly ride in self-driving cars. They are also the
+generation for which AI-related risks, such as
+an increasing digital divide, job automation
+and privacy infringements must be addressed
+before becoming even more entrenched in
+the future. Even while many governments and
+organizations are already seeking to develop
+human-centric AI policies and systems,
+child-specific considerations must equally
+be front and centre in AI development. This is especially important Today’s children
+as the impact that AI-based technolare the first
+ogies may have on children is not
+generation
+always clear.
+
+The lens of protection includes rights to protection against discrimination, abuse and all forms
+of exploitation, the right to privacy and, by
+extension, to the protection of children’s personal data. It also includes access to remedies
+ensuring that children have avenues for formal
+(including legal) complaint in cases where their
+rights have been breached. Provision includes
+rights to services, skills and resources that are
+necessary to ensure children's survival and
+development to their full potential, under the
+principle of equal opportunity so that every
+child has a fair chance. Examples are the right
+to health care, education, information, rest and
+leisure, and play. Lastly, participation includes
+the right of children to freely express their
+views in all matters affecting them, with those
+views being given due weight. In addition, a
+children’s rights-based approach rejects a traditional welfare approach to children’s needs and
+vulnerabilities and instead recognizes children
+as human beings with dignity, agency and a
+distinct set of rights and entitlements, rather
+than as passive objects of care and charity.
+Overall, the realization of children’s rights is
+guided by a particularly important article in the
+CRC: that in all actions concerning children, public and private stakeholders should always act in
+the best interests of the child. Building on the
+CRC and in recognition of the role of the private
+sector to also uphold child rights, the Children's
+Rights and Business Principles offer a comprehensive range of actions that all businesses
+should take to respect and support children's
+rights in everything they do – in the workplace,
+marketplace, community and environment.28
+
+20
+
+that will never
+remember a
+time before
+smartphones.
+
+It is also important to realize that different socioeconomic, geographic
+and cultural contexts, as well as
+developmental stages29 of children’s
+physical, cognitive, emotional and psychological capacities all influence the impact of AI on
+children. The interaction between AI systems
+and children is complex and not only limited to
+those systems designed for and used by children. In many cases, even when AI systems
+are not specifically meant for children, children
+are interacting with them. In other cases, AI
+systems that are not used by children may
+affect the child in direct or indirect ways. In
+general, it is important to ask the following
+questions:
+> Do children interact with the system?
+> Was the system designed for children?
+> Does the system impact children?
+
+<2.3>
+
+Key opportunities
+If any of the answers are “yes”, all of the requirements and recommendations described in this
+guidance should be implemented.
+
+Policy Guidance on AI for Children
+
+Below are some of the most relevant and
+often cited opportunities – followed by key
+risks – associated with AI systems; we also
+provide a few concrete examples of their direct
+or indirect impact on children. The opportunities, risks and use cases are not meant to be
+exhaustive; they are illustrative of key issues
+to consider around child-centred AI.
+
+Aid children’s education and
+development
+AI systems show promise in improving educational opportunities, from early learning to
+virtual mentoring to school management.30
+AI-enabled learning tools have been shown
+to help children learn how to collaborate and
+develop critical thinking and problem-solving
+skills.31 Adaptive learning platforms have the
+potential to provide personalized learning experiences to address each user’s unique needs.
+When combined with traditional teaching
+methods, such customization and one-on-one
+intelligent tutoring could be greatly beneficial
+to children with learning difficulties.32 Other
+types of AI-enabled educational tools can help
+teachers generate curricula without having to
+develop them from scratch.33
+Given these potential benefits, some national
+AI strategies have already begun to focus on
+ways to improve the delivery of educational
+services to young people, including in primary
+schooling.34 Additionally, AI-based interactive
+games, chatbots and robots introduce new
+outlets for children to express themselves
+and think creatively – much-needed skills in
+the era of AI. For instance, game activities
+with social robots could help young children learn to read and tell stories, increase
+their vocabulary and learn to draw images.35
+However, similar examples of AI use in the
+context of developing countries are still limited. Therefore, more studies, analysis and
+evidence are needed to ascertain how AI tools
+and applications can improve learning outcomes. Furthermore, implementation efforts
+should be grounded in benefit-risk analyses
+before being adopted at scale.36
+
+Children’s rights and AI: Opportunities and risks
+
+Contribute to better health
+outcomes for children
+AI-enabled systems are being deployed to
+diagnose illnesses,37 triage patients38 and recommend treatments. AI capabilities such as
+natural language processing (NLP) can help
+researchers process vast amounts of health
+data, read thousands of scholarly articles
+and generate summaries to facilitate further
+research and treatments.39 Within the field of
+health, AI is also being applied to better understand and combat the COVID-19 pandemic,
+even though human rights advocates caution
+against fast innovation and its unintended consequences. Efforts include contactless screening of symptoms and models to estimate the
+number of infections that go undetected.40
+Advances in AI technology can support children
+with hearing disabilities to navigate the world
+more easily.41 For example, researchers have
+developed an AI application that can isolate a
+singular voice from a crowd and other ambient noises. Such a breakthrough is thought
+to show promise for other uses including
+improved audio captioning on television and
+hearing aids.42
+AI systems are also showing capacity to contribute to emotional support, especially for
+children, although current methods of sensing
+affection and emotion are methodologically
+and, in many cases, ethically questionable.43
+However, in highly controlled settings and
+under the supervision of ethical and well-being
+assessment committees, there is increasingly
+scope to use emotional AI-enabled children’s
+products to detect moods and evolving mental health issues, assist family dynamics with
+parental support, and help with behaviour
+regulation through socio-emotional learning.44
+It should be noted that AI technologies should
+always ensure that children are directed to
+online and offline human support for sensitive
+scenarios, such as in seeking support on mental health related issues or bullying.
+
+21
+
+Support the achievement of the
+SDGs
+According to a recent report on the role of
+AI in achieving the SDGs, “AI can enable the
+accomplishment of 134 targets across all the
+goals“.45 There are several existing initiatives
+that explore how AI can serve as a force for
+good. The UN’s AI for Good Global Summit
+is one example that works to accelerate progress on the SDGs by convening policymakers
+and creators of AI applications in the hope that
+these might be scaled for global impact.46 The
+Oxford Initiative on AI×SDGs is also seeking
+to determine how AI can be used to support
+and advance the SDGs by conducting research
+and recommending tools and best practices
+for policymakers.47 Linking AI policies and
+strategies with the SDGs can greatly help to
+advance children’s development and wellbeing, and prioritize the equity and inclusion
+of children.48 However, in order to enable the
+positive impacts of AI, regulatory oversight for
+AI-based technologies is essential. Currently,
+there is little or no oversight of AI systems
+globally.49 A promising proposal on a ‘Digital
+Commons Architecture’ was put forth by the
+UN Secretary-General’s High-level Panel on
+Digital Cooperation with the “aim to synergize
+efforts by governments, civil society and businesses to ensure that digital technologies promote the SDGs and to address risks of social
+harm”. 50
+
+decisions throughout their lifetime. While data
+is a key component of AI systems, framing
+bias as purely a data problem is too narrow
+a view.52 Bias is also a result of the social
+context of AI development and use, including the organizations, people and institutions
+that create, develop, deploy, use and control
+AI systems, those who collect data, and
+the people who are affected by them. If the
+broader context, including regulations (or lack
+thereof), perpetuates or does not prevent discrimination, including against children, then
+this will negatively influence the development
+of AI-based systems.
+
+Limitations of children’s
+opportunities and development
+from AI-based predictive analytics
+and profiling
+
+Systemic and automated
+discrimination and exclusion
+through bias
+
+In many cases, predictive modelling applications are developed with the aim to improve
+the allocation of social welfare services and
+access to justice and health care, but are
+based on the statistical analysis of past cases
+and criteria sourced from different databases,
+including public welfare benefits, medical
+records, judicial information and more. This is
+also the main concern with this type of AI application.53 Studies from around the world show
+that input data into such systems are often not
+recorded in a systematic way across government agencies, criteria are applied differently
+and inconsistently, and often highly relevant
+aspects are missing or wrongly reported.54
+Moreover, training machine learning systems
+on past data and on data that has not been
+collected for the specific case, can reinforce, if
+not amplify, historical patterns of systemic bias
+and discrimination, if not validated by experts,55
+including those on child rights.
+
+Algorithmic bias is the systemic under- or
+over-prediction of probabilities for a specific
+population,51 such as children. Causes include
+unrepresentative, flawed or biased training
+data, context blindness, and the uninformed
+use of outcomes without human control. If
+the data used to train AI systems does not
+sufficiently reflect children’s varied characteristics, then the results may be biased against
+them. Such exclusion can have long-lasting
+effects for children, impacting a range of key
+
+AI-based systems are also used for profiling.
+Predictions made by AI systems use proxies
+for an individual, which bring the risk “to lock
+individuals into a user profile…” that does
+not sufficiently allow for differing contexts or
+“…confine them to a filtering bubble, which
+would restrict and confine their possibilities
+for personal development.”56 By aligning too
+closely with the user’s perceived preferences
+(such as their “likes”), the bubble these
+techniques create means the user only sees
+
+<2.4>
+
+Key risks and concerns
+
+22
+
+Policy Guidance on AI for Children
+
+what the system assumes she or he likes to
+see. The use of similar techniques to adapt
+a commercial or political message to the
+specific characteristics of a user is known
+as microtargeting and is used to influence
+user behaviour for effective advertising or by
+political parties to influence voters' opinions.
+These techniques, largely driven by business or
+government interests, can limit and/or heavily
+influence a child’s worldview, online experience
+and level of knowledge, and as such, the child’s
+right to freedom of expression and opinion.57
+For example, the AI system may not account
+for children from minority groups or children
+who differ substantially from their peers, or
+may not support alternative developmental
+trajectories that are not usually represented
+in data sets. As a result, such systems could
+potentially reinforce stereotypes for children
+and limit the full set of possibilities that should
+be made available to every child, including
+for girls and LGBT children. This can result in,
+or reinforce, negative self-perceptions, which
+can lead to self-harm or missed opportunities.
+Profiling is one form of digital surveillance
+that also threatens children’s freedoms and
+privacy.58 Ultimately, when children grow up
+under constant profiling and surveillance59, and
+their agency and autonomy are constrained by
+AI systems, their well-being and potential to
+fully develop will be limited.
+
+Infringement on data protection
+and privacy rights
+AI systems need data and, in many cases,
+the data involved is private: for example,
+location information, medical records and
+biometric data. As such, AI challenges traditional notions of consent, purpose and use
+limitation, as well as transparency
+It is important to and accountability – the pillars upon
+understand that which international data protection
+60
+young children standards rest. Children merit specific protection with regard to their
+may not grasp the
+personal data, as they may be “less
+concept of privacy. aware of the risks, consequences
+and safeguards concerned and their
+rights in relation to the processing of personal
+data”.61 Further, when considering the privacy
+of children, it is important to understand that
+
+Children’s rights and AI: Opportunities and risks
+
+young children may not grasp the concept of
+privacy and therefore may disclose too much
+information to AI systems they interact with.62
+Breaches of privacy can result in risks to the
+physical safety of the child – for example, by
+hackers – and their potential opportunities. At
+the same time, parents and legal guardians
+often do not have the information or capabilities to ensure their child’s safety and privacy.
+Nor may they be aware of future, unknown
+uses of their children’s data.
+
+Exacerbation of the digital divide
+Research shows that traditionally disadvantaged communities, including their children, are
+similarly disadvantaged in the digital world.63
+Emerging technologies, such as AI systems,
+bring risks of increasing inequalities due to
+unevenly distributed access to technology,
+limited digital skills and abilities to leverage its
+related benefits, and an inability to transform
+internet use into favourable offline outcomes.64
+The digital divide results in differential access
+to AI-enabled services and can prevent children
+from reaching their full potential and unlocking
+the opportunities they will need to succeed
+in an increasingly AI dependent world. As
+highlighted by the ITU, “from an impact perspective … areas with the most data and the
+most robust digital infrastructure will be the
+first to reap the benefits of these technologies, leaving under-resourced, less-connected
+communities even further behind than they
+are now. And from a development perspective,
+areas without strong technical capacities (both
+human and digital) may find it challenging to
+participate in the global governance dialogue,
+and to compete with more established market
+competitors.”65 Variances in technology access
+and education quality greatly influence the skill
+levels children will be able to attain and that
+will enable them to be active users and consumers of AI and digital content. For example,
+according to a recent report, North America
+and China stand to gain the most from developments in AI, while developing countries in
+Africa, Latin America and Asia will experience
+more modest gains.66
+
+23
+
+< use cases >
+
+Opportunities or risks?
+The use cases below illuminate how AI systems can present both opportunities and risks for
+children. We acknowledge that children around the world use and are impacted by AI systems differently. Some of the examples are more applicable in developed country settings
+and some are controversial due to their potential risks.
+
+AI-enabled toys
+
+Future of work
+AI systems will change the nature of work
+and affect the type and number of future
+jobs, with positive or negative implications.
+It has been predicted that many of the jobs
+the current education systems are preparing children for will be irrelevant by the
+time they are adults. At the same time, up
+to 65 per cent of children in primary school
+today will be working in jobs that do not
+even exist yet.67 A 2017 McKinsey & Company report estimates that AI and robotics
+could eliminate about 30 per cent of the
+world’s workforce by 2030,68 and the World
+Economic Forum predicts that technology could displace 75 million jobs by 2022.
+However, it also notes that 133 million new
+ones could be created.69 Preparing children
+for the future will require education systems
+to be aligned with the needs of the future
+workforce, which includes soft skills, such
+as creativity and communication; technical
+skills, such as coding; and a lifelong learning ecosystem that supports children into
+their full adulthood.
+
+24
+
+AI-enabled toys are physical toys that interact with children and utilize AI techniques
+such as NLP to listen and respond, computer vision to see or robotics to move. While
+the toy manufacturers purport to create
+playful and creative opportunities for
+children, with some claiming to enhance
+literacy, social skills and language development,70 these claims need further comparative study to substantiate their developmental impact. Overall, the devices raise
+serious questions about how children’s
+interactions with smart toys may influence
+their own perceptions of intelligence, cognitive development and social behaviour
+– especially during different developmental stages.71 Moreover, the use of smart
+toys poses risks around children’s security
+and privacy,72 especially as children’s data
+is in most cases owned and managed by
+the toy manufacturer. Smart toys are also
+often permanently connected to the web
+and are susceptible to hacking and other
+security breaches. Without adequate data
+protections, this data can be sold to third
+parties, and could forever be linked to the
+child, potentially influencing future opportunities related to higher education or jobs,
+for example. This has led some national
+governments, like Germany, to ban some
+connected, AI-enabled toys.73 In many cases, the data collected from children – such
+as conversations and photos – are sent to
+the toy makers and third parties for processing and storage.
+
+Policy Guidance on AI for Children
+
+AI-powered voice assistants and
+chatbots
+Virtual voice assistants and chatbots utilize NLP, automatic speech recognition and
+machine learning to recognize verbal commands, identify patterns, retrieve information and generate responses. While these
+systems have not always been built or tailored for children, millions of children are
+being shaped by them either emotionally
+or behaviourally.74,75 Proponents of these
+technologies have cited benefits that include support for children with visual impairments or limited mobility,76 and new
+ways of learning and stoking children’s curiosity and creativity.77 Additionally, some
+chatbots aim to make studying easier and
+more time-efficient for students.
+However, the use of chatbots can lead to
+additional risks for children, especially in
+mental health, when bots do not recognize appeals for help or provide inadequate
+advice. For instance, a 2018 testing of two
+mental health chatbots by the BBC revealed
+that the applications failed to properly
+handle children's reports of sexual abuse,
+even though both apps had been considered suitable for children.78 According to a
+UNICEF briefing, “when not designed carefully, chatbots can compound rather than
+dispel distress” which “is particularly risky
+in the case of young users who may not
+have the emotional resilience to cope with a
+negative or confusing chatbot response experience.”79 Moreover, chatbots may pose
+several security threats including spoofing
+(impersonating someone else), tampering
+with data, data theft and vulnerability to
+cyberattacks, and may enforce bias, given
+that they often select a predetermined reply
+based on the most matching keywords or
+similar wording pattern.
+Further concerns about chatbot and personal assistant technologies relate to privacy and data ownership. For instance, given
+that voice assistants typically rely on storing voice recordings to facilitate the system’s continuous learning, child rights advocates have raised questions over the lack
+of clarity in company data retention policies
+and child and parental consent.80
+
+Children's rights and AI: Opportunities or risks?
+
+Facial recognition systems for
+biometric identification
+Facial recognition systems employ computer vision techniques and machine
+learning algorithms to determine, process
+and analyse a person’s facial features with
+a wide range of aims, such as verifying an
+individual’s identity against an existing record. For identification purposes, it may
+be used in border management, crime
+analysis and prevention, and school surveillance for claimed reasons of improved
+security. Facial recognition is increasingly
+being used as a means of a digital identity
+“credential” for both legal and functional
+identification. While not a replacement for
+legal ID, which makes people visible to a
+state and is a recognized right, this technology may more quickly or easily validate
+an existing identity record.
+The associated human and child rights risks
+and limitations are great. Privacy advocates
+have warned against its use in government
+mass surveillance efforts and as a law enforcement investigative tool, particularly as
+it can be utilized to profile, track and suppress vulnerable communities. In some
+cases, these systems also raise issues of
+meaningful consent as people may not
+know who is collecting the biometric data
+or even that it is being collected, how it is
+being stored or how it could be applied.
+Furthermore, inaccuracies in facial recognition detection continue to persist, including
+less reliable matching for children’s faces81
+and other groups based on gender and ethnicity,82 such as women of colour. As a consequence, this could cement existing social
+biases and lead to discrimination or further
+marginalization of minority communities.83
+
+25
+
+<2.5>
+
+What do children
+think about AI?
+In our consultations with children – mainly 14
+to 16 years old – we explained AI systems and
+their impacts, with the aim of raising awareness of the key issues and then to get their
+views on AI. We listened to children’s perspectives on the ethics of certain AI systems, such
+as automated screening of university applications or health chatbots, and asked how they
+feel about how AI systems impact their lives.
+Across the nine workshops we saw similarities and differences amongst the children’s
+responses. The following are some of the key
+messages, as captured in the consultation
+report Adolescent Perspectives on Artificial
+Intelligence.84
+
+While there is much about AI that
+excites children, they don’t want AI
+to completely replace engagement
+with humans.
+The children recognize that interacting with AI
+systems has its benefits, but also that there
+is sometimes a clear need to talk to a human,
+be it a parent or an adult professional. On
+sensitive issues, such as tracking instances of
+bullying or providing health advice, children do
+not want or trust a machine in the loop.
+
+Parents or caregivers are seen
+as key stakeholders in children’s
+AI-powered lives.
+The children felt that since parents and caregivers are the ones who give them devices in
+the first place, they should educate children
+about the risks of AI systems and be more
+involved in their digital lives. Yet, some child
+participants acknowledged that most parents
+don’t have sufficient knowledge on these
+topics, and worried that parents don’t respect
+their children’s privacy.
+
+Children have high expectations of
+the AI technology industry.
+The child participants called for greater transparency from companies that develop AI
+technology and voiced the need for them to
+
+26
+
+educate people, especially children, about
+their products. They feel companies need to
+understand that children may use their products even if they aren’t the intended users
+and should engage children as primary users
+in the design or feedback process.
+
+AI child
+consultation
+workshop
+in São Paulo,
+Brazil
+
+Concerns about data privacy in the
+context of AI are a common theme.
+The children are worried that AI systems collect too much data and that their privacy may
+need to be balanced against their other rights,
+such as to health care or education. For some
+of the children, there is an acceptable level of
+data privacy loss as a matter of fact, or a reasonable trade-off for using AI-based systems.
+
+Local context influences children’s
+views on AI.
+While, overall, participants are concerned
+about AI-based automation potentially causing
+job losses, the children in Johannesburg are
+particularly worried about this aspect. This is
+not surprising given that South Africa has a
+very high youth unemployment rate.
+
+Policy Guidance on AI for Children
+
+< gender equity >
+
+Fostering girls’
+participation in AI
+“Technology was something I was always
+fascinated by...but I couldn’t really get my hands
+on it. It really starts when you’re young...we can
+make the changes when you’re about to go in
+the industry...about to get a job, but when you’re
+young...that’s really where these stigmas in societal
+norms really start to [come into] play.”
+ALISHA, 15
+
+In May 2021, UNICEF co-hosted a webinar with the ITU on ‘Developing girl’s
+digital and AI skills for more inclusive
+AI for all’.85 The webinar featured young
+female advocates who stressed the
+need to promote gender equality and
+greater societal representation in the
+AI sector. The webinar focused on key
+recommendations from this guidance, including the need to:
+> mitigate the exclusion of girls in AI
+policies and systems by prioritizing the
+most vulnerable children,
+> equip girls with the essential skills
+that are required to excel in the Fourth
+Industrial Revolution, and
+> support initiatives to address the digital
+and gender divides.
+Given that, globally, less than a quarter of
+all AI professionals are women,86 it is vital to ensure that policies, institutions and
+programmes support women and girls in
+their paths to becoming AI professionals,
+researchers, developers and entrepreneurs, and overall, in obtaining strong
+AI competencies. As the discussion highlights, this support can be most effective
+when it takes root in early childhood.
+
+Children's rights and AI: Opportunities or risks?
+
+“Youth – especially young women – are one
+of the most essential stakeholders in this AI
+conversation [and] are mostly overlooked. We
+need to engage, as youth, into this conversation,
+into the development and deployment of AI,
+and we need to help the youth get to that point.”
+ECEM, 18
+
+27
+
+< child rights >
+
+Foundations for
+child-centred AI
+Considering the variety of ways in which
+AI impacts children, and the related opportunities and risks, the CRC provides the
+foundation for AI policies and systems to
+uphold children’s rights.87 It not only takes
+a protective position, but also one of empowerment and agency for children. In
+addition to upholding human rights, we
+recommend that governments and businesses engage in all AI-related activities
+guided by these CRC perspectives:
+
+Protection = { do no harm }
+Children need to be protected from any
+harmful and discriminatory impacts of AI
+systems and interact with them in a safe
+way. AI systems should also be leveraged
+to actively protect children from harm and
+exploitation.
+
+Provision = { do good }
+The opportunities that AI systems bring
+to children of all ages and backgrounds –
+such as to support their education, health
+care and right to play – need to be fully leveraged when, and this is critical, it is appropriate to use AI systems.
+
+Participation = { include all children }
+Ensuring participation means that children
+are given agency and opportunity to shape
+AI systems, and make educated decisions
+on their use of AI and the impact that AI
+can have on their lives. All children should
+be empowered by AI and play a leading
+role in designing a
+responsible digital
+Reaching the age of
+future for all.
+
+digital consent, which
+begins at 13 years old
+in many countries,
+does not mean they
+should then be
+treated as adults.
+
+When applying this
+foundation to AI policies, systems design, development
+and deployment, it
+is critical to note that
+regardless of regulatory frameworks, children are entitled to the rights foreseen under the CRC until they reach the age of 18.
+Reaching the age of digital consent, which
+begins at 13 years old in many countries,
+does not mean they should then be treated
+as adults.
+
+“I worry that the tech we create will belong
+to the wrong people, or that it is easy to hack”
+VOICES OF YOUTH, AI WORKSHOP, USA
+
+28
+
+Policy Guidance on AI for Children
+
+3.0 /
+
+Requirements
+for child-centred
+AI
+
+“I'd like to see [AI] taught in schools, because
+it's something we use all the time and
+everywhere and we have no idea [about it].”
+VOICES OF YOUTH, AI WORKSHOP, CHILE
+
+To operationalize the foundations, we recommend that governments, policymakers
+and businesses that develop, implement
+or use AI systems meet the nine requirements for child-centred AI, listed in no order
+of prioritization:
+Support children’s development and
+well-being
+Let AI help me develop to my full potential.
+2
+
+Ensure inclusion of and for children
+Include me and those around me.
+
+3
+
+Prioritize fairness and non-discrimination
+for children
+AI must be for all children.
+
+4
+
+Protect children’s data and privacy
+Ensure my privacy in an AI world.
+
+5
+
+Ensure safety for children
+I need to be safe in the AI world.
+
+6
+
+Provide transparency, explainability, and
+accountability for children
+I need to know how AI impacts me. You need to
+be accountable for that.
+
+7
+
+Empower governments and businesses
+with knowledge of AI and children’s rights
+You must know what my rights are and uphold
+them.
+
+8
+
+Prepare children for present and future
+developments in AI
+If I am well prepared now, I can contribute to
+responsible AI for the future.
+
+9
+
+Apply requirements whenever AI systems interact with or impact children,
+regardless of whether the system was
+designed for or targeted at children. AI
+developers should acknowledge this reality
+and AI-related policies should require that a
+child-appropriate approach be applied in the
+design and development of AI systems. When
+relevant AI policies are being developed, they
+should cater for children as the default users
+of AI systems.
+
+Create an enabling environment
+Make it possible for all to contribute to childcentred AI.
+
+In this chapter we provide concrete recommendations to help fulfil these requirements.
+The clickable notes refer to useful resources,
+examples, reports and articles. At the end of
+the chapter, an overview of all the requirements and recommendations can be found.
+The following overarching recommendations apply in all contexts:
+
+Requirements for child-centred AI
+
+Develop and deploy AI systems in a way
+that simultaneously upholds children’s
+collective rights to protection, provision
+and participation. When moving from policy
+to practice it is necessary to acknowledge
+and, openly and collaboratively, try to address
+the potential tensions between these principles. Even as all child rights are indivisible,
+upholding them equally and simultaneously
+can demand striking a delicate balance. For
+example, how can children’s privacy and
+agency be best protected while collecting sufficient data on children for specific AI-based
+health interventions?
+Foster a multi-stakeholder approach both
+in government and in business. Since AI
+impacts many aspects of society, a multi-stakeholder approach is needed in the creation of AI
+policies and systems that cross organizational
+and departmental boundaries. Additionally,
+including children and child rights advocates
+as stakeholders will allow for coordinated AI
+guidelines, regulations and systems that are
+both realistic and ambitious, and can contribute to building trust in governments.88
+Adapt to the national or local context. We
+acknowledge that governments and companies are at different stages along the AI maturity spectrum: from exploratory to mature,
+from setting up a strategy to implementing it
+in a way that incorporates contextual awareness and is fully funded. The requirements
+and recommendations below should be considered by all stakeholders, regardless of the
+AI policy or system’s level of maturity, but
+should be adapted and implemented according to the local context. One strategic way
+to localize AI policies is to align them with
+national development plans, where possible.
+
+31
+
+Support children's development
+and well-being
+When applied appropriately, AI systems can support
+the realization of every child’s right to develop into
+adulthood and contribute to his or her well-being, which
+involves being healthy and flourishing across mental,
+physical, social and environmental spheres of life.
+
+Additional
+resources
+Age Appropriate Design
+A code of practice for online
+services including AI systems,
+provides practical guidelines for
+putting the child at the centre
+of many of the requirements
+outlined here, such as data
+protection, transparency and
+profiling of children.89
+
+Prioritize how AI systems can benefit children, in particular in
+AI policies and strategies. AI policies and strategies should be
+informed by a sound knowledge of the impacts of AI on children,
+including the unique developmental and well-being benefits and,
+more importantly, risks associated with AI systems for children.
+The benefits should be leveraged and given support in policies and
+strategies, along with actions to mitigate any risks.
+Develop and apply a design for a child rights approach. This
+may appear to be an obvious recommendation, but it requires a
+serious commitment to putting the child at the centre of AI policy
+and system design, development and deployment. To do this, AI
+technologies should be created and designed with a child rights
+approach, which could include privacy by design, safety by design
+and inclusion by design.
+Leverage AI systems to support and increase environmental sustainability. Children’s development opportunities and
+rights, to health, education, clean air, water and safety, for example, are severely impacted by climate change. The climate impact
+of AI, in terms of its use of natural resources, rare minerals and
+energy, and of the computational infrastructure required to store
+data, train and generate results, cannot be ignored and should be
+mitigated against. AI systems should not negatively impact the
+physical environment, in particular through their carbon footprint,
+so that children can live on a sustainable and healthy planet. On
+the positive side, AI systems can and should be used to help
+combat climate change – for example, through better modelling
+its impacts and mitigation strategies.90
+Integrate metrics and processes to support children’s
+well-being in the use of AI.91 Since children will increasingly
+spend a large part of their lives interacting with or being impacted
+by AI systems, developers of AI systems should tie their designs
+to well-being frameworks and metrics – ideally ones focused on
+and tested with children specifically 92 – and adopt some measure of improved child well-being as a primary success criterion
+for system quality. Such a framework must integrate a holistic
+understanding of children’s experiences, and should include
+material, physical, psychological and social factors, among others. Governments, policymakers, businesses and developers
+should work with child well-being experts to identify appropriate
+metrics and indicators, and design processes that account for the
+
+32
+
+Policy Guidance on AI for Children
+
+changes of children's well-being. This includes efforts towards
+increasing awareness of the importance of well-being, and developing processes for integrating well-being considerations into
+design parameters, data collection, decision-making, roles and
+responsibilities, and risk management.
+2
+
+Ensure inclusion of and for children
+When developing AI systems, design principles that
+address the widest possible range of users should be
+Additional
+resources
+applied so that all children can use the AI product or service, regardless of their age, gender identities, abilities
+or other characteristics. We recommend that the active participation of children be encouraged in the design, development and
+implementation of AI systems, and that children are considered
+in the context of the intended use, so that the benefits of AI systems will be available and appropriate for all potential child users.
+Working with, and supporting the establishment of youth digital
+ambassadors or champion programmes can be an effective way
+to promote youth perspectives on digital technology and AI issues.
+
+Workshop Manual: Child and
+Youth Consultations on AI
+A child consultation
+methodology with
+accompanying materials,
+developed by the Young and
+Resilient Research Centre at
+Western Sydney University, in
+partnership with UNICEF, used
+for the AI for Children project.
+The templates can be tailored to
+suit various local contexts.93
+
+Strive for diversity amongst those who design, develop, collect
+and process data, implement, research, regulate and oversee
+AI systems. With diverse teams, biases can be reduced and the perspectives of disadvantaged or minority groups are more likely to be
+considered and actively included. Diversity includes not only different
+voices, but also informed ones. In the same way that children should
+be AI literate, the creators of AI systems should be child-rights literate.
+
+Requirements for child-centred AI
+
+33
+
+Adopt an inclusive design approach when developing AI
+products that will be used by children or impact them. An
+inclusion by design approach96 ensures that all children can use
+AI products or services, regardless of their age, gender identities,
+abilities, and geographic and cultural diversity. An estimated 93
+million children worldwide live with disabilities;97 including them
+in AI design will create more accessible systems for all and help
+ensure relevance for and use by children that may otherwise be
+excluded through bias, discrimination or profiling. Include a broad
+range of stakeholders in design teams, such as parents, teachers,
+child psychologists, child rights experts, and, where appropriate,
+children themselves.
+
+Youth Participation in a
+Digital World
+A report by Harvard
+University's Berkman Klein
+Center for Internet & Society
+on designing and implementing
+spaces, programmes and
+methodologies that enable
+meaningful youth (ages 12–18)
+engagement in a digital world.
+Methods include setting up
+youth labs and youth boards.94
+
+Support meaningful child participation, both in AI policies
+and in the design and development processes. When an AI
+system is intended for children, or when children can be expected
+to use the system, or if the system impacts children even if they
+are not direct users, meaningful children’s participation in the
+design and development process is strongly recommended,98 in
+accordance with their right under article 12 of the CRC.
+Designing for Children Guide
+A collection of practical
+approaches to involve children
+at each step of a development
+process, including co-designing
+and prototype testing with
+children.95
+
+ACM Conference on
+Fairness, Accountability, and
+Transparency
+The ACM FAccT collects
+and promotes machine
+learning research on fairness,
+accountability and transparency.
+The focus is technical research
+on fairness, discrimination,
+bias and datasets. Several of
+the world’s largest technology
+companies have adopted this
+focus and jointly organize
+workshops to stimulate work on
+these important aspects.100
+
+34
+
+3
+
+Prioritize fairness and nondiscrimination for children
+AI systems should not lead to discrimination against children on any basis, including age, ethnicity, race, gender
+identities, disability, rural or urban contexts, socioeconomic status or location. The promotion of equal opportunities and fairness for every child should underpin the policies,
+development and intended benefits of AI systems.
+
+Additional
+resources
+
+Actively support the most marginalized children so that they
+may benefit from AI systems. Not all children face equal circumstances and therefore not all can benefit equally from AI systems.
+AI policies should prioritize the most vulnerable children, including girls, children from minority or marginalized groups, children
+with disabilities and those in refugee contexts, in order to mitigate
+against further exclusion of such children through AI-related policies and systems. Part of achieving this shared benefit requires
+attention to the differences in cultural, social and regional contexts
+of AI-related policies and activities. Further, efforts may include
+capacity-building projects by governments and other stakeholders
+for developers of AI policies and systems in order to effectively
+promote the inclusion of marginalized groups to benefit from AI.
+Develop datasets so that a diversity of children’s data are
+included. Data equity and representation of all relevant children
+for a particular AI system, including children from different regions
+(including rural communities), ages, socioeconomic conditions and
+ethnicities, is essential to protect and benefit children. For example, in the case of data-driven health care, children’s treatment or
+medication should not be based on adults’ data since this could
+
+Policy Guidance on AI for Children
+
+cause unknown risks to children’s health. Any prejudicial bias
+against children, or certain groups of children, that leads to discrimination and exclusion should be reduced. Dataset descriptions
+should be explicit about any limitations regarding the representation of children and other relevant demographics. Aside from
+testing data for representativeness and equitability of different
+groups of children, data also need to be tested for accuracy, consistency, validity and quality. In addition, algorithms need to be
+programmed, continuously tested and adjusted as needed, to
+seek fairness in results. Since there is no one optimal technical
+definition of fairness to prevent bias, developers need to consider the trade-off of multiple fairness definitions. Meanwhile,
+they should recognize how measures of fairness affect
+children differently.
+
+4
+
+Responsible Data for Children
+The project by UNICEF and
+New York University provides
+tools and key principles,
+including purpose-driven
+data use to benefit children,
+protection of children’s rights,
+proportional data collection,
+professional accountability
+and prevention of harms in all
+stages of the data life cycle.103
+
+Protect children's data and privacy
+AI policies and systems should recognize the value and
+unique vulnerability of children’s data and their privacy
+Additional
+in a protective and empowering way. Children’s data
+resources
+includes the content they create, information collected
+about them and what is inferred through algorithms. Beyond child
+data protection regulations, special protections are needed for
+marginalized groups and for particularly sensitive data, including
+ethnicity and biometric data.101
+Follow a responsible data approach for the handling of data
+for and about children. Given that children are considered a vulnerable group, their data should be handled with the highest level
+of protection. Further, the use and governance of children’s data
+must be proportional to help address the inherent tension between
+the need to use sufficient data about children so that AI systems
+can best benefit them, while minimizing data collection to ensure
+fewer risks to privacy and security.102
+
+Requirements for child-centred AI
+
+35
+
+Promote children’s data agency. Support children’s ability to
+maintain agency over their personal data, with the capacity to
+access, securely share, understand the use of, control and delete
+their data, in accordance with their age and maturity. Given that
+the responsibility for data protection can never be left entirely to
+children, this must include their wider social ecosystem, such as
+parents and caregivers – who need to provide consent for the
+use of younger children’s data – as well as educators and social
+workers, in some cases. Moreover, as children’s understanding
+of consent changes, the process of giving consent should be
+revisited at key developmental stages in the life of a child.
+
+The Case for Better
+Governance of Children’s Data:
+A Manifesto by UNICEF
+The Manifesto includes key
+action points and a call for a
+governance model purposefully
+designed to deliver on the
+needs and rights of children in
+the 21st century. The broader
+data governance initiative also
+has a number of papers on
+emerging AI and data-related
+issues, such as child rights and
+data protection by design, state
+surveillance and responsible
+group data for children.106
+
+Adopt a privacy-by-design approach. Governments and businesses should explicitly address children’s privacy in AI policies
+and apply it in the design and implementation of AI systems. For
+instance, decision-makers and developers should make sure to
+adhere to the principles of purpose-specific and minimal data processing. Children should not be asked to provide more information
+than is absolutely needed. Similarly, ‘invisible’ data processing
+(such as web tracking, data harvesting from public sources, data
+shared for secondary purposes, etc.) should be transparent and
+kept to a minimum. Children’s data should also be kept for the
+shortest period feasible. It is not fair that data collected from/about
+a child may follow them into adulthood. The protection of children's
+privacy and data is intricately interwoven with their right to freedom of expression, access to diverse information and protection
+from economic exploitation, including through profiling and digital
+marketing.104
+Consider protections at the group level. Profiling is no longer
+only tied to an individual, but to collections of individuals based
+on a wide range of characteristics, such as their ethnicity, locations, online behaviours and ages. There is a need to not only
+protect an individual's right to privacy – the default regulatory and
+practice position – but to also take a collective view so that group
+characteristics, such as cultural diversity, are protected. Profiling
+and responsible data practices should thus also apply to data of
+collective groups through the establishment of clear policies,
+procedures, and responsibilities for mitigating group data risks.105
+5
+
+Ensure safety for children
+Children’s safety within AI systems should be assured,
+both in the short and in the long term. Children are bioAdditional
+logically and psychologically distinct from adults and will
+resources
+be impacted differently by AI systems. Further, children
+use digital services and apps in unanticipated ways, have different
+perspectives on privacy and security and often develop creative
+techniques to engage with the digital world. As such, the specificities of children need to be considered sufficiently in every context
+in which the technology is used.107
+
+36
+
+Policy Guidance on AI for Children
+
+Call for mechanisms for assessing and continually monitoring the impact of AI systems on children in AI policies and
+strategies. AI policies and strategies should call for child rights
+impact assessments (even when AI systems are being considered
+for procurement108), mitigation strategies following a risk-based,
+safety-by-design approach,109 and be backed up by top-level commitment to halt harmful AI practices. For governments, taking a
+risk-based approach to impact assessments helps to ensure that
+AI regulatory interventions are proportionate.110
+Continuously assess and monitor AI’s impact on children
+throughout the entire AI development life cycle. Ensure and
+develop a means to address potential risks, opportunities and
+overall impact in the planning, development and implementation
+phases of AI systems.111 This includes identifying the impact of AI
+systems on social systems and structures, and on the development of children and their cognitive skills.112 Measures also need
+to be put in place to set thresholds for impacts and political will
+is needed to halt harmful AI practices for children, even while the
+same AI systems may be beneficial to other groups.
+
+Consequence Scanning tool
+An agile practice for responsible
+innovators who want their
+products or services to be
+aligned with their organization’s
+values and culture. The tool also
+provides means to mitigate
+or address potential harms or
+disasters before they happen.115
+
+Require testing of AI systems for safety, security and robustness. AI systems need to be constantly tested to ensure they
+are safe, secure and robust. This may include requirements for a
+human-in-the-loop where automated decision-making for children
+is concerned, and extra checks on the system’s resilience against
+hacking and cyberattacks. Safety and ethical certification for AI systems that target, or impact, children is one way to measure and,
+for organizations, to demonstrate commitment to child-centred AI.
+
+Requirements for child-centred AI
+
+37
+
+Leverage the use of AI systems to promote children’s safety.
+Where relevant, ensure that AI technologies are used to safeguard
+children. This includes developing dedicated services and products
+to protect children and their environment; for example, to identify
+abducted children,113 to detect known child sexual abuse material
+(CSAM),114 and to detect and block the creation of new, previously
+uncategorized CSAM and livestreamed abuse, through use of AI.
+
+6
+
+Children’s rights in relation to
+the digital environment
+A General Comment (No. 25)
+from the Committee on the
+Rights of the Child that unpacks
+how the rights of every child
+must be respected, protected
+and fulfilled in today's digital
+world, covering the impact of AI
+systems, robotics, automated
+systems, algorithms and data
+analytics.116
+
+Provide transparency, explainability
+and accountability for children
+The purpose and potential impact of AI systems should
+Additional be understandable by a range of stakeholders, including
+resources child users and their parents or caregivers, to empower
+them to decide whether or not to use such platforms.
+However, it is not sufficient to simplify the language used to
+explain how and why a system made a particular decision, or
+in the case of a robot, acted the way it did. Transparency about
+the aims and motivations underlying AI policy and system development processes is also valuable as a means to better inform
+parents and caregivers who provide consent for their children
+to use the systems, as well as a way to hold policymakers, regulators, designers, developers, implementers and procurers of AI
+policies and systems accountable for the actions and impacts of
+such products.
+Strive to explicitly address children when promoting explainability and transparency of AI systems. Even though the requirements of explainability and transparency are included in most
+recommendations for ethical and trustworthy AI, it is important
+that they are aligned with children’s needs and capacities.
+
+General Data Protection
+Regulation (GDPR)
+Children living in the European
+Union are entitled to specific
+protection of their personal
+data, according to the European
+Union’s GDPR.117
+
+Use age-appropriate language to describe AI. A child who
+interacts directly with an AI system (e.g. a toy, chatbot or online
+system) has the right for explanation at an age-appropriate level
+and inclusive manner, including through the use of animations, to
+understand how the system works and how it uses and maintains
+data about them. Requirements of explanation, transparency and
+redress also apply to AI systems that impact children indirectly.
+Make AI systems transparent to the extent that children
+and their caregivers can understand the interaction. Children
+should be notified in a forthright manner when they interact directly
+with an AI system, to avoid a situation where they think they are
+interacting with a human. In addition, AI should not be used as
+the only input to determine key life decisions that impact children,
+for example medical diagnoses, welfare decisions or processing
+school applications, without a human-in-the-loop to make the final
+decision. Children and their caregivers should be notified that AI
+systems have been used to guide such important decisions.
+
+38
+
+Policy Guidance on AI for Children
+
+Develop AI systems so that they protect and empower child
+users according to legal and policy frameworks, regardless
+of children’s understandings of the system. This implies that
+the development of AI systems cannot ignore or exploit any child’s
+lack of understanding or vulnerability. This accountability can be
+bolstered by encouraging the reporting of potentially harmful features of the AI system.
+
+Review, update and develop AI-related regulatory frameworks
+to integrate child rights. Governance frameworks, including
+ethical guidelines, laws, standards and regulatory bodies, should
+be established and adjusted to oversee processes which ensure
+that the application of AI systems does not infringe child rights.
+Where needed, governments should develop new regulatory
+frameworks, since not all countries may have laws specifically
+addressing the risks associated with children’s data, digital rights
+and AI.
+Establish AI oversight bodies compliant with principles and
+regulations and set up support mechanisms for redress.
+Processes should be established for the timely redress of any
+discriminatory outputs, and oversight bodies – populated by a
+multifaceted and interdisciplinary range of stakeholders – should
+be created to receive appeals and continually monitor children’s
+safety and protection. This requires audits to check for child rights
+infringements and to include child rights experts in the design,
+implementation and evaluation of the audits, based on existing
+functional and legal mechanisms.
+
+Requirements for child-centred AI
+
+Children and the GDPR
+The United Kingdom’s
+Information Commissioner's
+Office provides detailed,
+practical guidance for
+organizations that are
+processing children’s personal
+data under the GDPR.118
+
+39
+
+7
+
+Empower governments and
+businesses with knowledge of
+AI and children’s rights
+In order to develop and ensure child-centred AI, knowledge of how children and AI systems intersect is a necAdditional
+resources essary starting place – but is not enough on its own.
+Equally, it is not adequate to simply mention human or
+child rights in the ethics chapters of AI documents (a common
+occurrence in national AI strategies).119 Both must be supported
+by a commitment to put children first, since this can create a
+competitive advantage and long-term sustainable value.
+Ensure capacity-building on AI and child rights for policymakers, top management and AI system developers. They should
+have awareness and sufficient knowledge of child rights, AI-related
+opportunities for children's development, and, where appropriate,
+on the use of AI for the achievement of the SDGs, either for their
+policies or their products or services.
+Capitalize on customers’ demand for trusted and transparent
+AI solutions for children. Businesses that invest in safe, responsible and ethical AI designed for children can strengthen their
+existing corporate sustainability initiatives, while ensuring benefits
+for their business by integrating respect and support for children’s
+rights into the core strategies and operations.120 As consumers and
+the wider public make greater demands for technology services
+to have the right safeguards in place, business should capitalize
+on this market opportunity121 and thereby also mitigate against
+corporate reputational risks for AI-related harms.122
+Commit to child-centred AI and put in place mechanisms to
+realize this in practice. Knowledge of the opportunities and risks
+around AI and children must be translated into action. The aim is
+for organization-wide awareness of child rights issues around AI
+that is supported by a commitment to child-centred AI from top
+leadership,123 so that when ethics or development teams raise red
+flags, they are taken seriously. For policymakers, national AI strategies should not be led by economic incentives but should first be
+based on upholding child and human rights.
+
+8
+
+Prepare children for present and
+future developments in AI
+The promotion of AI-related skills as a part of education
+curricula beginning at an early age can empower chilAdditional
+dren to understand the AI systems and devices that are
+resources
+increasingly in their lives. Further, this will help to prepare them as future users and potential developers of AI and will
+support their engagement with the changing job market.
+
+40
+
+Policy Guidance on AI for Children
+
+Develop and update formal and informal education programmes globally to include the technical and soft skills needed
+to flourish in an AI world, including in the future workplace.124
+Digital literacy refers to the knowledge, skills and attitudes that
+allow children to flourish and thrive in an increasingly global
+digital world, and to be safe and empowered, in ways that are
+appropriate to their age and local cultures and contexts.125 In an AI
+context, knowledge includes basic AI concepts and data literacy,
+skills such as basic AI programming, and attitudes and values to
+understand the ethics of AI.126 AI literacy, which is currently not
+very common in digital curricula,127 should also involve educating
+children on their rights as users, so that they can become conscious users of AI-based systems. Children also need to develop
+critical thinking and emotional intelligence skills, which current AI
+systems are not capable of, within a lifelong learning approach
+to support their resilience to thrive in and adapt to a changing
+world.128 Special attention should be given to ensure girls are
+included in AI literacy programmes, given their underrepresentation in digital literacy programmes in general.
+Consider a national self-assessment for teachers to assess and
+then develop their AI awareness and skills. To improve children’s
+digital literacy and the awareness of the impact that AI systems
+can have on their lives, their teachers need to have these skills
+as well. Therefore, the curricula of teacher education programmes
+should increase awareness of the societal and personal impacts
+of AI systems on children.129 Simultaneously, in-service teachers
+should be actively encouraged to take courses to acquire AI system awareness and know-how.
+Leverage the use of AI systems in education, when it is
+appropriate. When evidence demonstrates the benefits of AI
+systems in education without risks, such opportunities should be
+leveraged. This is particularly relevant for marginalized children,
+children with special needs and for personalized education for
+minorities – all groups that are often underserved by current
+educational offerings and stand to benefit from proven new
+approaches.
+Facilitate and encourage collaboration between businesses
+and educational institutions. This includes encouraging summer
+camps and field visits, and inspirational talks from AI developers
+at schools, and the inclusion of educational institutions in the
+development of AI tools for basic education and teacher training.
+Forecasting of relevant job skills to inform curriculum updates can
+help prepare children for the future workplace.
+Develop and promote awareness campaigns for parents,
+caregivers and society as a whole. These campaigns could
+focus on AI literacy,135 digital safety, privacy and the importance
+of setting rules at home about the use of AI systems. The efforts
+should help families, caregivers and children to reflect on what
+data children are allowed to share, why, with whom and where,
+
+Requirements for child-centred AI
+
+A Guide to Using Artificial
+Intelligence in the Public
+Sector
+Developed by the United
+Kingdom’s Government Digital
+Service (GDS) and Office for
+Artificial Intelligence (OAI), this
+provides guidance on building,
+using and assessing ethical and
+safe AI in the public sector.130
+
+Algorithmic accountability
+policy toolkit
+Developed by the AI Now
+Institute at New York University,
+it provides a basic understanding
+of government use of algorithms
+for legal and policy advocates.131
+
+Procurement in a Box
+Developed by the World
+Economic Forum, includes
+hands-on tools to assess and
+guide AI procurement within
+the public sector.132
+
+Examining the Black Box
+Developed by the Ada Lovelace
+Institute, it includes a clear onepage overview of who should
+assess what, when and how
+regarding algorithmic systems.133
+
+Ethics and algorithms toolkit
+Developed by GovEx, the
+City and County of San
+Francisco, Harvard DataSmart
+and Data Community DC, it
+presents tools to assess and
+manage algorithm risks.134
+
+41
+
+and what AI systems children can use.136 It is important to acknowledge that not all parents may have the time and resources to learn
+about the technologies their children use, and to support them
+appropriately. Schools and out-of-school learning institutions play a
+key role in providing additional support.
+AI4ALL
+A non-profit organization that
+offers free AI curricula for high
+school teachers, extracurricular
+AI education programmes
+for high school and college
+students, and ongoing AI skill
+development and mentorship
+opportunities for young people.
+The programmes prepare
+students to be responsible AI
+leaders and informed AI users,
+and aim to open doors to the AI
+industry for emerging talent.137
+
+9
+
+Create an enabling environment
+for child-centred AI
+AI-related policies, strategies and systems exist within a
+Additional broad ecosystem. Focusing on policy and practice alone
+resources is not enough. The enabling environment for child-centred AI includes developing digital infrastructure, funding
+child-centred AI and supporting ongoing research on the impacts
+of AI systems on children, as well as a multi-stakeholder approach
+to digital cooperation.
+Support infrastructure development to address the digital
+divide and aim for equitable sharing of the benefits of AI.
+In general, children who have more digital opportunities, including
+reliable internet access at home and at school, stand to benefit
+more from AI systems. This emerging “AI divide”138 must shift as
+the benefits of AI systems cannot be limited to a few, while all
+share the risks. In order to reduce digital inequalities, AI policies
+and systems need to be supported by investment in digital infrastructure and the broader digital ecosystem of child-appropriate
+skills, content and services, as well as ongoing efforts to address
+social barriers that prevent children, and especially girls, from using
+digital technology.
+
+42
+
+Policy Guidance on AI for Children
+
+Provide funding and incentives for child-centred AI policies
+and strategies. Policymakers and corporate leaders need to
+understand that developing and implementing child-centred AI
+policies will require dedicated funding, particularly in the Global
+South. Creating an enabling environment can include actively
+engaging in the development of international regulations (which
+encourage governments and companies to comply), and providing
+incentives to private sector and government agencies to develop
+more child-centred AI policies and systems.139 These could include
+supporting national, regional and international level competitions
+and awards that recognize best practices in innovative and ethical
+AI systems for children.140
+Support research on AI for and with children across the
+system’s life cycle. There is a need for sound definitions, case
+studies and rigorous research on the impact of AI on children and
+their personal development in the short and long term.141 Studies
+should include children from a range of contexts, such as various
+developmental stages, those who live in rural and urban areas, are
+living with disabilities, or are particularly vulnerable for any other
+reason. A key element is to undertake participatory research, not
+only on children, but also with them.
+
+Generation Unlimited
+A global initiative to modernize
+education to improve job
+opportunities through services
+such as digital connectivity,
+remote learning and work and
+job-matching platforms.143
+
+Engage in digital cooperation. While digital technologies –
+including AI-based systems – cut uniquely across international
+boundaries, policy silos and professional domains, the current
+means and levels of international cooperation are sorely lacking.
+Consequently, the UN Secretary-General’s High-level Panel on
+Digital Cooperation recommends enhanced efforts on AI cooperation, including by investment in the creation of digital public goods:
+open source software, open data, open AI models, open standards and open content.142 Increased child-centred AI would benefit
+greatly from the support of governments and private sector in such
+cooperation and from the sharing of resources and approaches.
+
+Requirements for child-centred AI
+
+43
+
+< overview >
+
+Requirements
+and recommendations
+Overarching recommendations
+>
+>
+>
+>
+
+1. Support children's development
+and well-being
+
+3. Prioritize fairness and
+non-discrimination for children
+
+>
+
+>
+
+>
+>
+
+Prioritize how AI systems can benefit
+children, in particular in AI policies and
+strategies.
+Develop and apply a design for a child
+rights approach.
+Leverage AI systems to support and
+increase children’s well-being and environmental sustainability.
+
+>
+>
+
+Actively support the most marginalized
+children so that they may benefit from
+AI systems.
+Develop datasets so that a diversity of
+children’s data are included.
+Seek to eliminate any prejudicial bias
+against children, or against certain
+groups of children, that leads to discrimination and exclusion.
+
+2. Ensure inclusion of and for
+children
+
+4. Protect children's data and
+privacy
+
+>
+
+>
+
+>
+
+>
+
+44
+
+Apply requirements whenever AI systems interact with or impact children, regardless of
+whether the system was designed for or aimed at children.
+Develop and deploy AI systems in a way that simultaneously upholds children’s collective rights to protection, provision and participation.
+Foster a multi-stakeholder approach both in government and in business.
+Adapt to the national or local context to reflect and meet local needs.
+
+Strive for diversity amongst those who
+design, develop, collect and process
+data, implement, research, regulate and
+oversee AI systems.
+Adopt an inclusive design approach
+when developing AI products that will
+be used by children or impact them.
+Support meaningful child participation, both in AI policies and in the design and development processes.
+
+>
+>
+>
+
+Follow a responsible data approach for
+the handling of data for and about children.
+Promote children’s data agency.
+Adopt a privacy-by-design approach.
+Consider protections at the group level.
+
+Policy Guidance on AI for Children
+
+5. Ensure safety for children
+>
+
+>
+
+>
+>
+
+Call for mechanisms for assessing and
+continually monitoring the impact of
+AI systems on children in AI policies
+and strategies.
+Continuously assess and monitor AI’s
+impact on children throughout the entire AI development life cycle.
+Require testing of AI systems for safety,
+security and robustness.
+Leverage the use of AI systems to promote children’s safety.
+
+6. Provide transparency,
+explainability and
+accountability for children
+
+7. Empower governments and
+businesses with knowledge of
+AI and children’s rights
+>
+
+>
+
+>
+
+8. Prepare children for present and
+future developments in AI
+>
+
+>
+
+>
+>
+
+>
+
+>
+
+>
+
+Strive to explicitly address children
+when promoting explainability and
+transparency of AI systems.
+Use age-appropriate language to describe AI.
+Make AI systems transparent to the extent that children and their caregivers
+can understand the interaction.
+Develop AI systems so that they protect and empower child users according to legal and policy frameworks, regardless of children’s understanding of
+the system.
+Review, update and develop AI-related regulatory frameworks to integrate
+child rights.
+Establish AI oversight bodies compliant with principles and regulations and
+set up mechanisms for redress.
+
+Ensure capacity-building on AI and
+child rights for policymakers, top management and AI system developers.
+Capitalize on customers’ demand for
+trusted and transparent AI solutions
+for children.
+Commit to child-centred AI and put
+in place mechanisms to realize this
+in practice.
+
+>
+
+>
+>
+
+>
+
+Develop and update formal and informal education programmes globally to
+include technical and soft skills needed
+to flourish in an AI world, including in
+the future workplace.
+Consider a national self-assessment for
+teachers to assess and then develop
+their AI awareness and skills.
+Leverage the use of AI systems in education, when it is appropriate.
+Facilitate and encourage collaboration
+between businesses and educational
+institutions.
+Develop and promote awareness campaigns for parents, caregivers and society as a whole.
+
+9. Create an enabling environment
+for child-centred AI
+>
+
+>
+>
+>
+
+Requirements
+
+Support infrastructure development to
+address the digital divide and aim for
+equitable sharing of the benefits of AI.
+Provide funding and incentives for
+child-centred AI policies and strategies.
+Support research on AI for and with
+children across the system’s life cycle.
+Engage in digital cooperation.
+
+45
+
+4.0 /
+
+Pilot case
+studies
+
+“...existing approaches to adopting child rights
+legislation in practice, particularly in fast-evolving
+technological contexts, do not always adequately
+foster inclusion of children’s perspectives, needs
+and conditions. Meanwhile, critical challenges
+around interdisciplinarity, knowledge-sharing, and
+ownership of responsible technological development
+remain due to the cross-cutting nature of AI and
+digital technologies. ”
+AI SWEDEN CASE STUDY
+
+Pilot case studies
+
+47
+
+< summary >
+
+Pilot case studies
+The full case studies can
+be found on the UNICEF
+project website.
+
+To help translate policy into practice, UNICEF worked with governments, companies and academia to pilot the guidance, which they adapted to their local
+contexts. The organizations featured here have all applied the requirements for
+child-centred AI to their distinct initiatives. Each case study fulfils one or more of
+the nine key requirements listed here.
+
+{ Nine requirements for child-centred AI }
+Support children’s development and well-being
+Let AI help me develop to my full potential.
+2
+
+Ensure inclusion of and for children
+Include me and those around me.
+
+3
+
+Prioritize fairness and non-discrimination for children
+AI must be for all children.
+
+4
+
+Protect children’s data and privacy
+Ensure my privacy in an AI world.
+
+5
+
+Ensure safety for children
+I need to be safe in the AI world.
+
+6
+
+Provide transparency, explainability, and accountability for children
+I need to know how AI impacts me. You need to be accountable for that.
+
+7
+
+Empower governments and businesses with knowledge of AI and children’s rights
+You must know what my rights are and uphold them.
+
+8
+
+Prepare children for present and future developments in AI
+If I am well prepared now, I can contribute to responsible AI for the future.
+
+9
+
+Create an enabling environment
+Make it possible for all to contribute to child-centred AI.
+
+48
+
+Policy Guidance on AI for Children
+
+Organization:
+
+SomeBuddy
+Product:
+
+CrimeDetector
+
+Location:
+
+Finland and Sweden
+Key requirements:
+2
+
+4
+
+5
+
+6
+
+The CrimeDetector system helps support children and
+adolescents who have potentially experienced online
+harassment. When children report incidents, such as
+cyberbullying, the system automatically analyses the case
+using natural language processing and prepares a ‘first aid
+kit’ to provide legal and psychological advice. SomeBuddy
+stresses that its legal experts thoroughly review the cases
+to prevent false positives or false negatives. The start-up
+demonstrates how its system can empower and protect
+children from online harassment with AI techniques, while
+enabling the safety and child-friendliness of the digital
+service through a human-in-the-loop.
+Read the full case study
+
+Organization:
+
+Allegheny County
+Department of Human
+Services
+
+Product:
+
+Hello Baby
+
+Location:
+
+United States
+Key requirements:
+3
+
+4
+
+5
+
+6
+
+Hello Baby’s prevention initiative provides high-quality,
+targeted social interventions to families with newborns. It
+offers a differentiated approach, with flexible service delivery based on families’ individual needs. In addition to
+self- and community-referral pathways, Hello Baby uses
+a predictive risk model (PRM) that uses integrated data to
+identify eligibility for services. Several safeguards are offered to protect children’s data and privacy in the use, storage and access to the model score. For instance, families
+are given the option to opt out of having their data used to
+determine service eligibility. If a family chooses to opt in,
+the information generated by the algorithm will not be kept
+on file either electronically or in hard copy. Furthermore,
+since there are many pathways by which families access
+these services, there will be nothing to indicate that they
+were identified through the PRM.
+Read the full case study
+
+Organization:
+
+Helsinki University
+Hospital
+
+Product:
+
+Milli, the Chatbot
+
+Location:
+
+Finland
+Key requirements:
+2
+
+4
+
+5
+
+6
+
+Milli is an AI-powered chatbot, which uses natural language
+processing to help adolescents in Finland open up and learn
+about mental health issues. This application is the result of
+collective research between interdisciplinary experts and
+practitioners, including psychologists, mental health experts, nurses and AI and design engineers. The design process also included adolescent end-users. For instance, a
+design course was held at Aalto University where students
+played the role of 'experience specialists'. As a result of this
+consultation, Milli's avatar was redesigned to appear as an
+unmistakably virtual character, which increased the users'
+believability and trust when engaging with the chatbot.
+Read the full case study
+
+Pilot case studies
+
+49
+
+Organization:
+
+H&M Group
+
+Product:
+
+Responsible AI
+Framework
+
+Location:
+
+Sweden and Global
+Key requirements:
+3
+
+6
+
+The Responsible AI Team uses a Responsible AI framework with the aim of designing and deploying internal AI
+applications in an ethical and sustainable way. The team is
+currently reviewing the framework through a child rights
+lens, recognizing that the uniqueness of children has not
+been made explicit in their current structure and accompanying tools. Key to the evolution of the framework is providing transparency in their use of AI, data and analytics
+and using child-friendly language in cases where products
+have been designed for children. The Responsible AI Team
+will review their products through regular discussions with
+stakeholders and design teams, and amend them if necessary to better protect children’s rights.
+Read the full case study
+
+Organization:
+
+AI Sweden
+
+Product:
+
+Three Cities (Sweden)
+
+Location:
+
+Sweden
+Key requirements:
+2
+
+3
+
+7
+
+9
+
+Organization:
+
+Honda Research
+Institute Japan and
+European Commission’s
+Joint Research Centre
+
+Product:
+
+The Haru Robot
+
+Location:
+
+Japan, Europe
+and Global
+Key requirements:
+3
+
+50
+
+AI Sweden, Lund University and Mobile Heights joined
+forces with the Swedish municipalities of Helsingborg,
+Lund and Malmö, to evaluate UNICEF’s policy guidance
+against AI-related projects in these three cities. The results
+of this work shaped a pre-study to define the initial components required to set the foundation for a supportive
+national framework. Such a framework would provide public and private sector actors with the capacity, expertise
+and opportunity to promote and develop child-centred AI.
+Read the full case study
+
+Haru is a prototype robot that aims to stimulate children’s
+cognitive development, creativity, problem-solving and
+collaborative skills. Once fully developed, it is intended to
+be used in the home, as well as in educational settings by
+children from different cultural backgrounds. As part of the
+robot’s design phase, children in Japan and Uganda were
+consulted to assess how they viewed concepts of fairness
+and explainability, which varied widely. The children’s
+participation helped raise awareness of emerging ethical
+considerations and build the technical requirements and
+conceptual framework that will guide the integration of
+children’s rights in social robotics and embodied AI.
+Read the full case study
+
+6
+
+Policy Guidance on AI for Children
+
+Organization:
+
+The Alan Turing
+Institute
+
+Product:
+
+Understanding AI
+Ethics and Safety for
+Children
+Location:
+
+United Kingdom
+Key requirements:
+2
+
+7
+
+Read the full case study
+
+8
+
+Organization:
+
+Imìsí 3D
+
+Product:
+
+AutismVR
+
+Location:
+
+Nigeria
+Key requirements:
+2
+
+The Alan Turing Institute is expanding its public policy
+guide Understanding artificial intelligence ethics and safety, to provide public sector employees with a better practical understanding of how to design responsible AI for
+children. The Institute consulted with public sector organizations about the impact of strategic policy and legal initiatives such as UNICEF’s policy guidance and the European
+Union’s General Data Protection Regulation. The aim was
+to formulate ethical considerations to support the development of AI policies that are non-discriminatory and inclusive of and for children.
+
+3
+
+AutismVR is a virtual reality and AI-based game that helps
+young users and adults simulate interactions with children
+affected by autism spectrum disorder (ASD). The objective
+of the game is for users to better understand how to communicate effectively with autistic children, and ultimately
+improve methods to support their needs and development.
+The interactive and communication skills taught through
+AutismVR are intended to allow non-autistic young users
+and adults, notably siblings and caregivers, to better engage with children with ASD, and therefore nurture them
+more effectively. Ideally, this increase in awareness and
+communication should reduce the stigma that children
+with ASD face, and so also reduce discrimination.
+Read the full case study
+
+Pilot case studies
+
+51
+
+< next steps >
+
+Implementing
+the guidance
+AI technology and its uses are evolving rapidly, as are the lived experiences
+and contexts of children around the world who interact with AI systems. This
+guidance outlines how children are impacted by AI by discussing key risks and
+opportunities and presenting illustrative use cases. In order to ensure continued alignment of AI systems with the rights and situations of children, policy
+guidance needs to be updated regularly. This document should thus be seen
+as an early contribution to child-centred AI. We hope that similar guides continue to be adapted and enriched over time with practical insights.
+
+Sharing experiences from the field
+In order for the policy guidance to address the many implementation complexities, it needs to be applied consistently by policymakers, public organizations
+and businesses for validation and local adaptation. As with the first draft, we
+invite governments and the business sector to pilot this guidance in their field
+and openly share their findings.
+The following steps are proposed:
+1. Use the guidance practically, such as when creating or updating AI policies,
+or developing AI systems.
+2. Document the experience, including the purpose of the AI policy or system,
+the target audience and which of the guidance requirements and recommendations were implemented. Document what worked, what was challenging and what recommendations can be suggested for improvements.
+3. Publicly share the findings in any way, such as through blogs, project
+reports or conference presentations.
+4. Let us know by sending a link to the findings at ai4children@unicef.org.
+
+Implementing the guidance
+
+53
+
+References
+1
+
+UN Secretary-General’s High-level Panel on
+Digital Cooperation (2019). ‘The Age of Digital
+Interdependence: Report of the UN SecretaryGeneral’s High-level Panel on Digital Cooperation’,
+https://www.un.org/en/pdfs/DigitalCooperationreport-for%20web.pdf, accessed 6 August 2020.
+
+2
+
+Ibid.
+
+3
+
+https://www.unicef.org/globalinsight/stories/aipolicy-guidance-how-world-responded.
+
+4
+
+See UNICEF case studies https://www.unicef.org/
+globalinsight/stories/policy-guidance-ai-children-pilottesting-and-case-studies.
+
+5
+
+Digital Scotland (2021). ‘Scotland’s Artificial
+Intelligence Strategy: Trustworthy, Ethical and
+Inclusive’, https://static1.squarespace.com/
+static/5dc00e9e32cd095744be7634/t/605ba7a20
+253f160b4a98e7a/1616619440823/Scotlands_AI_
+Strategy_Web_updated.pdf, accessed 28 July 2021.
+
+6
+
+Organisation for Economic Co-operation and
+Development, ‘OECD AI Policy Observatory:
+Countries & initiatives overview’, https://oecd.ai/
+countries-and-initiatives, accessed 6 August 2020.
+
+7
+
+Dutton, T., et al. (2018). ‘Building an AI World: Report
+on National and Regional AI Strategies’, CIFAR,
+https://www.cifar.ca/docs/default-source/ai-society/
+buildinganaiworld_eng.pdf, accessed 6 August 2020.
+
+8
+
+Bughin, J., et al. (2018). ‘Notes from the AI
+Frontier: Modeling the Impact of AI on the World
+Economy’, https://www.mckinsey.com/~/media/
+McKinsey/Featured%20Insights/Artificial%20
+Intelligence/Notes%20from%20the%20frontier%20
+Modeling%20the%20impact%20of%20AI%20
+on%20the%20world%20economy/MGI-Notes-fromthe-AI-frontier-Modeling-the-impact-of-AI-on-theworld-economy-September-2018.ashx, accessed 6
+August 2020.
+
+9
+
+10
+
+ITU (2018). ‘Module on Setting the Stage for
+AI Governance: Interfaces, Infrastructures, and
+Institutions for Policymakers and Regulators’,
+https:// www.itu.int/en/ITU-D/Conferences/GSR/
+Documents/ GSR2018/documents/AISeries_
+GovernanceModule_ GSR18.pdf, accessed 6 August
+2020.
+United Nations (2020). ‘Report of the SecretaryGeneral – Roadmap for Digital Cooperation’, https://
+www.un.org/en/content/digital-cooperation-roadmap/
+assets/pdf/Roadmap_for_Digital_Cooperation_
+EN.pdf, accessed 6 August 2020.
+
+11
+
+Ibid.
+
+12
+
+For an overview and visualization of the main AI
+principles and documents see the Berkman Klein
+Center for Internet & Society, ‘Principled Artificial
+Intelligence: Mapping Consensus in Ethical and
+Rights-Based Approaches to Principles for AI’,
+https:// cyber.harvard.edu/publication/2020/
+principled-ai, accessed 4 August 2020.
+
+13
+
+54
+
+Global Partners Digital and the Global Digital Policy
+Incubator at the Stanford Cyber Policy Center (2020).
+
+‘National Artificial Intelligence Strategies and Human
+Rights: A Review’, https://cyber.fsi.stanford.edu/gdpi/
+content/national-artificial-intelligence-strategies-andhuman-rights-review, accessed 6 August 2020.
+14
+
+Penagos, M., Kassir, S. and Vosloo, S. (2020).
+‘Policy Brief on National AI Strategies and Children:
+Reviewing the Landscape and Identifying Windows
+of Opportunity’, UNICEF, https://www.unicef.org/
+globalinsight/media/1156/file, accessed July 2020.
+
+15
+
+UNICEF and GovLab (2019). ‘Responsible Data for
+Children: Synthesis Report’, https://rd4c.org/assets/
+rd4c-synthesis-report.pdf, accessed 6 August 2020.
+
+16
+
+United Nations (2020). ‘Report of the SecretaryGeneral – Roadmap for Digital Cooperation’, https://
+www.un.org/en/content/digital-cooperation-roadmap/
+assets/pdf/Roadmap_for_Digital_Cooperation_
+EN.pdf, accessed 6 August 2020.
+
+17
+
+Livingstone, S., Carr, J. and Byrne, J. (2016). ‘One
+in Three: Internet Governance and Children’s
+Rights’, UNICEF Office of Research – Innocenti,
+Discussion Paper 2016-01, https://www.unicef-irc.
+org/publications/pdf/idp_2016_01.pdf, accessed 6
+August 2020.
+
+18
+
+See the UNICEF AI for Children project website:
+https://www.unicef.org/globalinsight/featuredprojects/ai-children. Regarding the limitations
+to the guidance, it is important to note that all
+regional workshops were held in English, which
+may have been a constraint for the participation of
+some experts, and the child consultations are not a
+representative sample. Furthermore, desk reviews
+were limited to documents in English, Dutch, Spanish
+or Portuguese, representing the languages spoken by
+the authors.
+
+19
+
+UC Berkeley and UNICEF (2019). ‘Memorandum on
+Artificial Intelligence and Child Rights’, https://www.
+unicef.org/innovation/reports/memoAIchildrights,
+accessed 6 August 2020.
+
+20
+
+Hasse, A., Cortesi, S. Lombana Bermudez, A. and
+Gasser, U. (2019). ‘Youth and Artificial Intelligence:
+Where We Stand’, Berkman Klein Center for Internet
+& Society at Harvard University, https://cyber.harvard.
+edu/publication/2019/youth-and-artificial-intelligence/
+where-we-stand, accessed 6 August 2020.
+
+21
+
+See UNICEF and GovLab’s Responsible Data for
+Children initiative: https://rd4c.org.
+
+22
+
+See UNICEF’s Good Governance of Children’s Data
+initiative: https://www.unicef.org/globalinsight/datagovernance-children.
+
+23
+
+Organisation for Economic Co-operation and
+Development (2019). ‘Recommendation of
+the Council on Artificial Intelligence’, https://
+legalinstruments.oecd.org/en/instruments/OECDLEGAL-0449, accessed 6 August 2020.
+
+24
+
+For an overview and analyses of several approaches
+to responsible AI see the Berkman Klein Center for
+Internet & Society, ‘Principled Artificial Intelligence:
+Mapping Consensus in Ethical and Rights-Based
+Approaches to Principles for AI’, https://cyber.
+
+Policy Guidance on AI for Children
+
+harvard.edu/publication/2020/principled-ai, accessed
+4 August 2020.
+
+38
+
+Hao, K. (2020). ‘Doctors Are Using AI to
+Triage Covid-19 Patients. The Tools May Be
+Here to Stay’, https://www.technologyreview.
+com/2020/04/23/1000410/ai-triage-covid-19patients-health-care/, accessed 6 August 2020.
+
+39
+
+Fung, P. (2020). ‘How Cutting-edge AI Is Helping
+Scientists Tackle COVID-19’, https://www.weforum.
+org/agenda/2020/06/this-is-how-ai-can-help-us-fightcovid-19/, accessed 6 August 2020.
+
+40
+
+Sivasubramanian, S. (2020). ‘How AI and Machine
+Learning Are Helping to Fight COVID-19’, https://
+www.weforum.org/agenda/2020/05/how-ai-andmachine-learning-are-helping-to-fight-covid-19/,
+accessed 6 August 2020.
+
+41
+
+Utermohlen, K. (2018). ‘4 Applications of Artificial
+Intelligence for Hearing Loss’, https://medium.
+com/@karl.utermohlen/4-applications-of-artificialintelligence-for-hearing-loss-64f3e189847e,
+accessed 30 July 2021.
+
+25
+
+Dignum, V. (2019). Responsible Artificial Intelligence:
+How to Develop and Use AI in a Responsible Way.
+Springer.
+
+26
+
+Elish, M.C. and Boyd, D. (2020). ‘Situating Methods
+in the Magic of Big Data and Artificial Intelligence’.
+Communication Monographs, https://ssrn.com/
+abstract=3040201.
+
+27
+
+United Nations General Assembly (1989).
+‘Convention on the Rights of the Child’, https://www.
+refworld.org/ docid/3ae6b38f0.html, accessed 6
+August 2020.
+
+28
+
+See ‘Children’s Rights and Business Principles’,
+https://www.unicef.org/csr/theprinciples.html.
+
+29
+
+Developmental stages cover early childhood (up
+to 5 years), mid childhood (5–10 years), younger
+adolescence (10–15 years) and older adolescence
+(15–18 years).
+
+42
+
+30
+
+Pedró, F. et al. (2019). ‘Artificial Intelligence in
+Education: Challenges and Opportunities for
+Sustainable Development’, https://unesdoc.unesco.
+org/ark:/48223/pf0000366994, accessed 6 August
+2020.
+
+Kiger, P. (2018). ‘Artificial Intelligence Can Help Pick
+Voices Out of a Crowd’, https://www.aarp.org/
+health/conditions-treatments/info-2018/hearing-lossgoogle-artificial-intelligence.html, accessed 30 July
+2021.
+
+43
+
+31
+
+Tuomi, I. (2018). ‘The Impact of Artificial Intelligence
+on Learning, Teaching, and Education’, https://
+publications.jrc.ec.europa.eu/repository/bitstream/
+JRC113226/jrc113226_jrcb4_the_impact_of_
+artificial_ intelligence_on_learning_final_2.pdf,
+accessed 6 August 2020.
+
+32
+
+Ramachandran, A. and Scassellati, B. (2014).
+‘Adapting Difficulty Levels in Personalized RobotChild Tutoring Interactions’, https://scazlab.yale.
+edu/sites/ default/files/files/Ramachandran_
+AAAI14Workshop.pdf, accessed 6 August 2020.
+
+For a deeper overview of challenges and
+opportunities in AI for emotional support, see
+Barrett, L.F.,Adolphs, R., Marsella, S., Martinez,
+A.M. and Pollak,S.D. (2019). 'Emotional Expressions
+Reconsidered: Challenges to Inferring Emotion from
+Human Facial Movements.' Psychological Science
+in the Public Interest 20(1): 1–68, https://journals.
+sagepub.com/eprint/SAUES8UM69EN8TSMUGF9/
+full; and McStay, A. (2019). 'Emotional AI and
+EdTech: Serving the Public Good?', Learning, Media
+& Technology, https://www.tandfonline.com/doi/full/
+10.1080/17439884.2020.1686016.
+
+44
+
+33
+
+Kuprenko, V. (2020). ‘Artificial Intelligence in
+Education: Benefits, Challenges, and Use Cases’,
+https://medium.com/towards-artificial-intelligence/
+artificial-intelligence-in-education-benefitschallenges- and-use-cases-db52d8921f7a, accessed
+6 August 2020.
+
+A recent paper has also noted that parents are
+very ambivalent about the use of emotional AI,
+see McStay,A. and Rosner, G. (2020). ‘Emotional
+AI and Children: Ethics, Parents, Governance,
+Emotional AI Lab’, https://drive.google.com/file/
+d/1Iswo39rukxdtL7E8- 4GHMAq1ykiYR-bw/view.
+
+45
+
+34
+
+Penagos, M., Kassir, S. and Vosloo, S. (2020).
+‘Policy Brief on National AI Strategies and Children:
+Reviewing the Landscape and Identifying Windows
+of Opportunity’, UNICEF, https://www.unicef.org/
+globalinsight/media/1156/file, accessed July 2020.
+
+Vinuesa, R., et al. (2020). ‘The Role of Artificial
+Intelligence in Achieving the Sustainable
+Development Goals’, https://www.nature.com/
+articles/s41467-019-14108-y.
+
+46
+
+See AI for Good Global Summit 2020 website:
+https://aiforgood.itu.int/.
+
+35
+
+See MIT and Georgia State University’s research
+project on Robotic Literacy Games: https://learningwith-social-robots.media.mit.edu/.
+
+47
+
+See Oxford Initiative on AI×SDGs website: https://
+www.sbs.ox.ac.uk/research/centres-and-initiatives/
+oxford-initiative-aisdgs.
+
+36
+
+UNESCO (2021). ‘AI and education: guidance
+for policymakers’, https://tinyurl.com/72aka2at,
+accessed 30 July 2021.
+
+48
+
+37
+
+Whyte, C. (2019). ‘AI Can Diagnose Childhood
+Illnesses Better Than Some Doctors’, https://
+www.newscientist.com/article/2193361-ai-candiagnose-childhood-illnesses-better-than-somedoctors/#ixzz6UMrfLql2, accessed 6 August 2020.
+
+UNICEF Data, ‘UNICEF Is the Custodian or Cocustodian for 19 SDG Indicators’, https://data.
+unicef.org/children-sustainable-development-goals/,
+accessed 6 August 2020.
+
+49
+
+Vinuesa, R. et al. (2020). ‘The Role of Artificial
+Intelligence in Achieving the Sustainable
+Development Goals’, https://www.nature.com/
+articles/s41467-019-14108-y, accessed 6 August
+2020.
+
+References
+
+55
+
+50
+
+51
+
+UN Secretary-General’s High-level Panel on
+Digital Cooperation (2019). ‘The Age of Digital
+Interdependence: Report of the UN SecretaryGeneral’s High-level Panel on Digital Cooperation’,
+https://www.un.org/en/pdfs/DigitalCooperationreport-for%20web.pdf, accessed 6 August 2020.
+For an overview and analyses of several approaches
+to responsible AI see the Berkman Klein Center for
+Internet & Society, ‘Principled Artificial Intelligence:
+Mapping Consensus in Ethical and Rights-Based
+Approaches to Principles for AI’, https://cyber.
+harvard.edu/publication/2020/principled-ai, accessed
+4 August 2020.
+
+52
+
+Ibid.
+
+53
+
+See, for an in-depth analysis of the use of AI in child
+welfare: https://www.turing.ac.uk/sites/default/
+files/2020-02/wwcsc_ethics_of_machine_learning_
+in_csc_jan2020.pdf.
+
+54
+
+Eubanks, V. (2018). Automating Inequality: How HighTech Tools Profile, Police, and Punish the Poor, New
+York: St. Martin’s Press.
+
+55
+
+Ibid.
+
+56
+
+Abrassart, C., et al. (2018). ‘Montreal
+Declaration for a Responsible Development
+of Artificial Intelligence’, http://dcfa4bd-f73a4de5-94d8-c010ee777609.filesusr.com/ugd/
+ebc3a3_506ea08298cd4f8196635545a16b071d.pdf,
+accessed 6 August 2020.
+
+57
+
+58
+
+See also Promotion and Protection of the Right
+to Freedom of Opinion and Expression: Note by
+the Secretary-General, https://digitallibrary.un.org/
+record/1643488?ln=en&record-files-collapse-header.
+Byrne, S., Day, E., & Raftree, L. (2021). UNICEF ‘The
+Case for Better Governance of Children’s Data: A
+Manifesto’, https://www.unicef.org/globalinsight/
+media/1741/file/UNICEF%20Global%20Insight%20
+Data%20Governance%20Manifesto.pdf, accessed
+29 September 2021.
+
+59
+
+Zuboff, S. (2019). The Age of Surveillance Capitalism,
+Public Affairs.
+
+60
+
+See paragraph 10 of the Human Rights Committee’s
+Policy Guidance on AI for Children General Comment
+No. 16: Article 17 (1988) on the right to privacy,
+https://www.refworld.org/docid/453883f922.html.
+
+61
+
+General Data Protection Regulation, ‘Special
+Protection of Children’s Personal Data’, https://gdprinfo.eu/recitals/no-38/, accessed 6 August 2020.
+
+62
+
+See also: Rafferty, L., Hung, P.C., Fantinato, M.,
+Peres, S.M., Iqbal, F., Kuo, S.Y. and Huang, S.C.
+(2017). ‘Towards a Privacy Rule Conceptual Model
+for Smart Toys’. In Computing in Smart Toys (pp.
+85–102), Springer, Cham.
+
+63
+
+UNICEF (2017). ‘The State of the World’s Children
+2017: Children in a Digital World’, https://www.
+unicef.org/media/48581/file/SOWC_2017_ENG.pdf,
+accessed 6 August 2020.
+
+64
+
+Lutz, C. (2019). ‘Digital Inequalities in the Age of
+
+56
+
+Artificial Intelligence and Big Data’, Human Behavior
+and Emerging Technologies, 1: 141–148, https://
+onlinelibrary.wiley.com/doi/full/10.1002/hbe2.140.
+65
+
+ITU (2018). ‘Module on Setting the Stage for
+AI Governance: Interfaces, Infrastructures, and
+Institutions for Policymakers and Regulators’, https://
+www.itu.int/en/ITU-D/Conferences/GSR/Documents/
+GSR2018/documents/AISeries_GovernanceModule_
+GSR18.pdf, accessed 6 August 2020.
+
+66
+
+Chainey, R. (2017). ‘The Global Economy Will be
+$16 Trillion Bigger by 2030 Thanks to AI’, https://
+www.weforum.org/agenda/2017/06/the-globaleconomy-will-be-14-bigger-in-2030-because-of-ai/;
+PwC (2020), 'Sizing the Prize. What’s the real value
+of AI for your business and how can you capitalise?’,
+http:// preview.thenewsmarket.com/Previews/PWC/
+DocumentAssets/476830.pdf, accessed 6 August
+2020.
+
+67
+
+Tse, T., Esposito, M. and Goh, D. (2019). The AI
+Republic: Building the Nexus Between Humans and
+Intelligent Automation, Lioncrest Publishing.
+
+68
+
+Manyika, J., et al (2017). 'Jobs Lost, Jobs Gained:
+What the Future of Work Will Mean for Jobs, Skills,
+and Wages', McKinsey Global Institute, https://www.
+mckinsey.com/featured-insights/future-of-work/jobslost-jobs-gained-what-the-future-of-work-will-meanfor-jobs-skills-and-wages, accessed 16 August 2020.
+
+69
+
+Dobrusin, B. (2019). ‘Automation Will Change the
+World of Work – But Probably for the Better, World
+Economic Forum, https://www.weforum.org/
+agenda/2019/01/rewriting-the-future-of-work.
+
+70
+
+Hasse, A., Cortesi, S. Lombana Bermudez, A. and
+Gasser, U. (2019). ‘Youth and Artificial Intelligence:
+Where We Stand’, Berkman Klein Center for Internet
+& Society at Harvard University, https://cyber.harvard.
+edu/publication/2019/youth-and-artificial-intelligence/
+where-we-stand, accessed 6 August 2020.
+
+71
+
+Evans, M. (2017). ‘Kids, AI Devices, and Intelligent
+Toys’, https://www.media.mit.edu/posts/kids-aidevices/, accessed 6 August 2020.
+
+72
+
+Day, E (2020). ‘Children’s Rights and Technology:
+Robotic Toys’, https://www.youtube.com/
+watch?v=E_wPZSM0vRQ&feature=youtu.be.
+
+73
+
+Maras, M. (2018). ‘4 Ways ‘Internet of Things’
+Toys Endanger Children’, https://theconversation.
+com/4-ways-internet-of-things-toys-endangerchildren-94092, accessed 6 August 2020.
+
+74
+
+Rosenwald, M. (2017). ‘How Millions of Kids Are
+Being Shaped by Know-it-all Voice Assistants’,
+https://www.washingtonpost.com/local/howmillions-of-kids-are-being-shaped-by-know-it-allvoice-assistants/2017/03/01/c0a644c4-ef1c-11e6b4ff-ac2cf509efe5_story.html, accessed 6 August
+2020.
+
+75
+
+van der Zwaan, J., Dignum, V. and Jonker, C. (2012).
+‘A Conversation Model Enabling Intelligent Agents
+to Give Emotional Support’, https://core.ac.uk/
+display/79314333.
+
+76
+
+Pradhan, A., Mehta, K. and Findlater, L. (2018).
+
+Policy Guidance on AI for Children
+
+‘“Accessibility Came by Accident”: Use of VoiceControlled Intelligent Personal Assistants by People
+with Disabilities’, https://faculty.washington.edu/
+leahkf/pubs/CHI2018-IPAsAccessibility.pdf, accessed
+6 August 2020.
+77
+
+Winkler, R. and Söllner, M. (2018). ‘Unleashing the
+Potential of Chatbots in Education: A State-Of-TheArt Analysis’, In: Academy of Management Annual
+Meeting (AOM), https://www.alexandria.unisg.
+ch/254848/1/JML_699.pdf, accessed 6 August
+2020.
+
+78
+
+White, G. (2018). ‘Child Advice Chatbots Fail to
+Spot Sexual Abuse’, https://www.bbc.com/news/
+technology-46507900, accessed 6 August 2020.
+
+79
+
+UNICEF, ‘Safeguarding Girls and Boys: When
+Chatbots Answer Their Private Questions’,
+https://www.unicef.org/eap/sites/unicef.org.eap/
+files/2020-04/UNICEF%20EAPRO_Learning%20
+Brief_Digital%20SexEd_Chatbots_Safeguarding_
+final.pdf, accessed 6 August 2020.
+
+80
+
+See for example, ‘Advocates Demand FTC
+Investigation of Echo Dot Kids Edition’, https://
+commercialfreechildhood.org/advocates-demand-ftcinvestigation-echo-dot-kids-edition/.
+
+81
+
+Berman, G., Carter, K., García-Herranz, M. and
+Sekara, V. (2020). ‘Digital Contact Tracing and
+Surveillance during COVID-19: General and Childspecific Ethical Issues’, https://www.unicef-irc.org/
+publications/pdf/WP2020-01.pdf, accessed 6 August
+2020.
+
+82
+
+83
+
+84
+
+See UNICEF report on ‘Faces, Fingerprints and
+Feet: Guidance on Assessing the Value of Including
+Biometric Technologies in UNICEF-supported
+Programmes’, https://data.unicef.org/resources/
+biometrics/.
+Burt, C. (2020). ‘UN Sets Signposts at Good
+Digital ID and Ethical Use of Facial Recognition on
+Digital Roadmap’, Biometric Update, https://www.
+biometricupdate.com/202006/un-sets-signposts-atgood-digital-id-and-ethical-use-of-facial-recognitionon-digital-roadmap, accessed 6 August 2020.
+See Isaacs, S. (2021). UNICEF, ‘Adolescent
+Perspectives on Artificial Intelligence’, http://
+www.unicef.org/globalinsight/sites/unicef.
+org.globalinsight/files/2021-02/UNICEF_AI_
+AdolescentPerspectives_20210222.pdf.
+
+85
+
+See the webinar recording at https://www.unicef.org/
+globalinsight/stories/developing-girls-digital-and-aiskills-more-inclusive-ai-all.
+
+86
+
+UNICEF (2021). ‘The climate crisis is a child rights
+crisis’, https://www.unicef.org/media/105376/
+file/UNICEF-climate-crisis-child-rights-crisis.pdf,
+accessed 8 September 2021.
+
+87
+
+For a list of articles from the Convention on the
+Rights of the Child that have relevance to AI
+systems see: https://drive.google.com/file/d/1
+n8Z84tRPzrnSE7ExLdR3Wlp1n388tHvY/view
+(adapted from Livingstone, S., Carr, J. and Byrne,
+J. (2015). One in Three: Internet Governance and
+Children’s Rights, https://www.cigionline.org/
+
+References
+
+sites/ default/files/no22_2.pdf). The Committee
+on the Rights of the Child is currently drafting a
+General Comment on children’s rights in relation to
+the digital environment. For more information see:
+https://www.ohchr.org/EN/HRBodies/CRC/Pages/
+GCChildrensRightsRelationDigitalEnvironment.aspx.
+88
+
+An example of multi-stakeholder cooperation on
+a global scale is the ‘We Protect Global Alliance’
+initiative that aims to stop the crime of online child
+sexual abuse and exploitation, http://weprotect.org/.
+
+89
+
+For more information on age appropriate design see,
+‘Age Appropriate Design: A Code of Practice for
+Online Services’, Information Commissioner’s Office,
+https://ico.org.uk/for-organisations/guide-to-dataprotection/ico-codes-of-practice/age-appropriatedesign-code/.
+
+90
+
+UNICEF (2021). ‘The climate crisis is a child rights
+crisis’, https://www.unicef.org/media/105376/
+file/UNICEF-climate-crisis-child-rights-crisis.pdf,
+accessed 8 September 2021.
+
+91
+
+While it does not reference children specifically, the
+European Commission’s High-Level Expert Group
+on Artificial Intelligence notes that AI systems can
+contribute to well-being of citizens: https://ec.europa.
+eu/newsroom/dae/document.cfm?doc_id=60419.
+
+92
+
+See IEEE’s Ethically Aligned Design report and
+7010- 2020 - IEEE Recommended Practice for
+Assessing the Impact of Autonomous and Intelligent
+Systems on Human Well-Being for widely accepted
+well-being metrics. The EU’s 8+1 Quality of Life
+Framework, OECD’s child well-being measurement
+framework, and UNICEF’s six dimensions of wellbeing of children in rich countries offer holistic
+conceptualizations of well-being.
+
+93
+
+See UNICEF’s ‘Workshop Manual: Child and Youth
+Consultations on AI’, https://drive.google.com/drive/
+lders/1IVh4DTNnFpNeLTLY1c3dX0LmAuO3y6Tu.
+
+94
+
+See Cortesi, S., Hasse, A., & Gasser, U. (2021).
+‘Youth participation in a digital world: Designing and
+implementing spaces, programs, and methodologies’,
+Youth and Media, Berkman Klein Center for Internet
+& Society, https://cyber.harvard.edu/publication/2021/
+youth-participation-in-a-digital-world.
+
+95
+
+For more information on the initiative ‘Designing for
+Children Guide’ see, https://childrensdesignguide.org/
+methods-practices/.
+
+96
+
+For further readings on AI and inclusion see
+https://aiandinclusion.org edited by the Ethics and
+Governance of Artificial Intelligence Initiative at the
+Berkman Klein Center for Internet & Society.
+
+97
+
+UNICEF (2019). ‘Inclusive education’, https://www.
+unicef.org/education/inclusive-education, accessed
+28 July 2021.
+
+98
+
+Ways for engagement include establishing youth
+labs, undertaking participatory research with children,
+following a co-design approach, and setting up a
+youth shadow board in a company, as explained
+by the Berkman Klein Center. While not strictly AI
+related, UNICEF also has a guidance note on Child
+Participation in Local Governance and related case
+studies.
+
+57
+
+100 For more information on the ‘ACM Conference on
+Fairness, Accountability, and Transparency (ACM
+FAccT)’ see, https://facctconference.org/.
+101 European Commission for the Efficiency of Justice
+Report (2018). ‘European Ethical Charter on the Use
+of Artificial Intelligence in Judicial Systems and Their
+Environment’, https://rm.coe.int/ethical-charter-en-forpublication-4-december-2018/16808f699c.
+102 Where appropriate, and in particular within the
+European Union, this includes provisions to ensure
+the right to be forgotten, since the cumulative
+collection of data about children, from early childhood
+to adolescence, can create a variety of unforeseen
+risks and challenges. See also, https://ec.europa.eu/
+newsroom/dae/document.cfm?doc_id=60343.
+103 For more information about the ‘Responsible Data for
+Children’ initiative, see https://rd4c.org/.
+104 See UNICEF’s discussion papers on Children and
+Digital Marketing: Rights, Risks and Responsibilities,
+https://www.unicef.org/csr/css/Children_and_Digital_
+Marketing_-_Rights_Risks_and_Responsibilities.
+pdf and Montgomery, K.C., Chester, J. and Kopp,K.
+(2020). UNICEF, ‘Data Governance for Young
+People in the Commercialized Digital Environment’,
+https://www.unicef.org/globalinsight/reports/datagovernance-young-people-commercialized-digitalenvironment.
+105 For more recommendations on children’s group data
+see Young, A, Responsible Group Data for Children,
+forthcoming at https://www.unicef.org/globalinsight/
+good-governance-childrens-data.
+
+112
+
+See point 21 of the Independent High-level Expert
+Group on Artificial Intelligence, set up by the
+European Commission, ‘Policy and investment
+recommendations for trustworthy AI’, https://
+ec.europa.eu/newsroom/dae/document.cfm?doc_
+id=60343.
+
+113
+
+Guidelines for industry on Child Online Protection,
+https://8a8e3fff-ace4-4a3a- a495-4ea51c5b4a3c.
+filesusr.com/d/24bbaa_967b2ded811f48c6b57c7c5f6
+8e58a02.pdf.
+
+114
+
+See, for example, Thorn, ‘Safer: Built by Thorn to
+Eliminate Child Sexual Abuse Material from the
+Internet’, https://www.thorn.org/.
+
+115
+
+For more information about ‘The Consequence
+Scanning tool’ see, https://www.doteveryone.org.uk/
+project/consequence-scanning/.
+
+116
+
+Committee on the Rights of the Child (2021). 'General
+comment No. 25 (2021) on children’s rights in relation
+to the digital environment', https://tbinternet.ohchr.
+org/_layouts/15/treatybodyexternal/Download.
+aspx?symbolno=CRC%2fC%2fGC%2f25&Lang=en,
+accessed 28 July 2021.
+
+117
+
+For more information on ‘General Data Protection
+Regulation (GDPR)’ see, https://gdpr-info.eu/.
+
+118
+
+For more information on the detailed, practical
+guidance for UK organizations that are processing
+children’s personal data under the GDPR see, https://
+ico.org.uk/for-organisations/guide-to-data-protection/
+guide-to-the-general-data-protection-regulation-gdpr/
+children-and-the-gdpr/.
+
+119
+
+See Global Partners Digital and Stanford’s Global
+Digital Policy Incubator, ‘National Artificial Intelligence
+Strategies and Human Rights: A Review’, https://
+cyber.fsi.stanford.edu/gdpi/content/national-artificialintelligence-strategies-and-human-rights-review.
+
+106 For more information on UNICEF’s ‘Good Governance
+of Children’s Data’, see https://www.unicef.org/
+globalinsight/good-governance-childrens-data.
+107 UNICEF has produced a number of papers
+and tools for businesses for the protection of
+children online, see, https://www.unicef.org/csr/
+childrensrightsandinternet.htm. The ITU’s recently
+released Child Online Protection Guidelines for
+policymakers, businesses, parents and educators
+have been updated to include AI technologies: https://
+www.itu-cop-guidelines.com/.
+108 See World Economic Forum, ‘Procurement in a Box’,
+https://www.weforum.org/reports/ai-procurement-ina-box.
+109 See Australia’s National eSafety Commissioner,
+‘Safety by Design’, https://www.esafety.gov.au/sites/
+default/files/2019-10/LOG%207%20-Document8b.
+pdf, accessed 7 August 2020.
+110
+
+111
+
+58
+
+See European Commission, white paper on ‘Artificial
+Intelligence – A European Approach to Excellence
+and Trust, https://ec.europa.eu/info/sites/info/files/
+commission-white-paper-artificial-intelligencefeb2020_en.pdf.
+Examples of tools to execute AI impact assessments
+have been collected in a crowdsourced effort: https://
+docs.google.com/spreadsheets/d/1mtqsCBQ_
+Z0m91Jq_wcQlWWlzHuT24DfLH_kKAm9aOjQ/
+edit#gid=0.
+
+120 See Save the Children, the UN Global Compact and
+UNICEF (2012). ‘Children’s Rights and Business
+Principles’, https://www.unicef.org/csr/css/
+PRINCIPLES_23_02_12_FINAL_FOR_PRINTER.pdf.
+121
+
+See UNICEF’s brief ‘Why Businesses Should Invest in
+Digital Child Safety’, https://www.unicef.org/csr/files/
+Brief-on-Investing-in-Digital-Child-Safety.pdf.
+
+122 See Capgemini, ‘Why Addressing Ethical Questions
+in AI Will Benefit Organizations’, https://www.
+capgemini.com/us-en/research/why-addressingethical-questions-in-ai-will-benefit-organizations/.
+123 See Metcalf, J., Moss, E. and Boyd, D. (2019).
+‘Owning Ethics: Corporate Logics, Silicon Valley, and
+the Institutionalization of Ethics’, Social Research:
+An International Quarterly, 82:2, pp. 449–476),
+https:// datasociety.net/wp-content/uploads/2019/09/
+Owning-Ethics-PDF-version-2.pdf.
+124
+
+See the UNESCO Beijing Consensus on Artificial
+Intelligence and Education for guidelines on AI in
+education specifically: https://unesdoc.unesco.
+org/%20ark:/48223/pf0000368303, accessed 7
+August 2020.
+
+Policy Guidance on AI for Children
+
+125 See UNICEF, ‘Digital Literacy for Children:
+10 Things to Know’ https://www.unicef.org/
+globalinsight/ documents/digital-literacy-children10-things-know, accessed 7 August 2020.
+126 See OECD, ‘Future of Education and Skills 2030:
+Conceptual Learning Framework’, https://www.
+oecd. org/education/2030/Education-and-AIpreparing-for- the-future-AI-Attitudes-and-Values.
+pdf, accessed 7 August 2020.
+127 See Berkman Klein Center, ‘Youth and Digital
+Citizenship+ (Plus) Understanding Skills for a Digital
+World’, https://cyber.harvard.edu/publication/2020/
+youth-and-digital-citizenship-plus, accessed 7
+August 2020.
+128 Examples of AI literacy and development courses
+for children include AI4ALL Open Learning, https://
+ai-4-all.org/open-learning/, and MIT’s curriculum
+to prepare school students to be ethical designers
+and conscientious users of AI, https://raise.mit.edu/
+aiethics.html.
+129 For example, in Brazil, a self-assessment during
+pre-service training is used to assess more general
+digital skills, which gives each pre-service teacher a
+personal score on a matrix of 12 competencies and
+provides schools with dashboards with an overview
+of the levels of digital skills of their teachers. This
+approach can be extended to include AI-specific
+assessment topics.
+130 For more information about the UK guide to using
+artificial intelligence in the public sector see, https://
+www.gov.uk/government/collections/a-guide-tousing-artificial-intelligence-in-the-public-sector.
+
+136 Based on many caregivers’ requests, MIT
+developed a guide to help structure conversations
+around potentially controversial topics that relate
+to technology and AI. See https://raise.mit.edu/
+debateai.html.
+137 For more information about ‘AI4ALL Open
+Learning’ see, https://ai-4-all.org/open-learning/.
+138 Ibid.
+139 See CIFAR, ‘Building an AI World: Report on
+National and Regional AI Strategies’, https://cifar.ca/
+cifarnews/2018/12/06/building-an-ai-world-reporton-national-and-regional-ai-strategies/.
+140 For example, the forthcoming World Economic
+Forum Smart Toy Awards’s Generation AI project:
+https://www.weforum.org/projects/generation-ai.
+141
+
+See the Memorandum on Artificial Intelligence
+and Child Rights by UC Berkeley and UNICEF for
+suggestions, https://www.unicef.org/innovation/
+reports/memoAIchildrights, accessed 20
+September 2020.
+
+142 See Secretary-General’s High-level Panel on Digital
+Cooperation, ‘Recommended Actions’, https://
+www.un.org/en/digital-cooperation-panel/ and the
+Roadmap: https://www.un.org/en/content/digitalcooperation-roadmap/.
+143 For more information about the ‘GenU’ initiative
+see, https://www.generationunlimited.org/.
+
+131 For more information about the ‘Algorithmic
+Accountability Policy Toolkit’ from the AInow
+Institute, see, https://ainowinstitute.org/aap-toolkit.
+pdf.
+132 For more information about the World Economic
+Forum’s ‘Procurement in a Box’ see, https://www.
+weforum.org/reports/ai-procurement-in-a-box/aigovernment-procurement-guidelines#report-nav.
+133 For more information about ‘Examine the Black
+Box’ from the Ada Lovelace Institute see, https://
+www.adalovelaceinstitute.org/wp-content/
+uploads/2020/04/Ada-Lovelace-Institute-DataKindUK-Examining-the-Black-Box-Report-2020.pdf.
+134 For more information about the ethics and
+algorithms toolkit see, https://ethicstoolkit.ai/.
+135 For example, the Government of Finland has
+set a goal to have 10% of the entire population
+complete the introductory course ‘Elements of AI’.
+See https://www.elementsofai.com/. Additional
+resources are from MIT: https://aieducation.mit.
+edu/, as well as the Berkman Klein Center’s Youth
+and Media team, which has released a set of
+creative educational activities related to the digital
+world – including AI – that family members can
+engage in. See https://dcrp.berkman. harvard.edu/,
+all accessed 20 September 2020.
+
+References
+
+59
+
+Office of Global Insight and Policy
+United Nations Children’s Fund
+3 United Nations Plaza, New York, NY, 10017, USA
+© United Nations Children's Fund (UNICEF), November 2021
+
+

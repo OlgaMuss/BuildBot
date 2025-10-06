@@ -38,7 +38,10 @@
 - [Week 1-6 Detailed Curricula (to be added)]
 
 
-### 🎯 For LLM Framework (to be added)
+### 🎯 For LLM Framework
+- [LLM Safeguards Slides](https://www.canva.com/design/DAGyv90q0uA/TEQ9J5xEBm9JXcIeb_1tuw/edit)
+- [LLM Frames Design](https://github.com/OlgaMuss/BuildBot/tree/main/LLM%20Frames%20Design)
+
 
 
 ---
@@ -55,72 +58,18 @@
 
 
 - 📖 AI Literacy Research **[Review of  Literature on AI literacy - to be added]** - Academic papers and research
--🛡️ LLM Safety Research **[LLM Safeguards Slides](https://www.canva.com/design/DAGyv90q0uA/TEQ9J5xEBm9JXcIeb_1tuw/edit)** | **[Review of Literature on LLM safety - to be added]** - Safety and ethical considerations
- 
-
-### 
+- 🛡️ LLM Safety Research **[LLM Safeguards Slides](https://www.canva.com/design/DAGyv90q0uA/TEQ9J5xEBm9JXcIeb_1tuw/edit)** | **[Review of Literature on LLM safety - to be added]** - Safety and ethical considerations
 - 🤖 Social Robots Research **[Review of Literature on Social robots - to be added]** - 25 research papers on social robotics
 
 ---
 
 
-### 🔧 Utility Scripts
+### 🔧 Utility Scripts (lost)
 - [extract_pdf.py](extract_pdf.py) - PDF extraction utility
 - [extract_pdf_ocr.py](extract_pdf_ocr.py) - OCR PDF extraction
 - [extract_pptx.py](extract_pptx.py) - PowerPoint extraction
 
 ---
 
-## 📋 Ethics & Compliance
+*Last Updated: Oct 6th 2025*  
 
-### 📄 Ethics Documentation
-- **[Ethics/](Ethics/)** - Ethics approval and documentation
-  - [ETHZ Ethics Application](Ethics/ETHZ_Ethics_Application_BuildBots2_Leisten_10072025.pdf)
-  - [Ethics Response](Ethics/Response_ETHICS247.pdf)
-  - [CVs](Ethics/CVs.pdf) - Researcher credentials
-
----
-
-## 📊 Measurements & Assessment
-
-### 📈 Assessment Tools
-- **[Measurements/](Measurements/)** - Assessment and measurement tools (5 files)
-
----
-
-## 🚀 Deployment
-
-### 🌐 Deployment Resources
-- **[Deployment/](Deployment/)** - Deployment and presentation materials
-  - [Project Draft](Deployment/projectdraft_20062025.html)
-
----
-
-## 📁 File Statistics
-
-| Category | File Count | Description |
-|----------|------------|-------------|
-| **LLM Platform** | 333 files | Main development platform |
-| **ENARIS roteco** | 978 files | EPFL curriculum materials |
-| **Georgia Curriculum** | 110 files | Georgia AI4GA materials |
-| **aiEDU Materials** | 71 files | aiEDU curriculum resources |
-| **Marty Production** | 1,087 files | Production scripts and tools |
-| **Literature Papers** | 67+ files | Research papers and analysis |
-| **Curriculum Development** | 43+ files | Developed teaching materials |
-
----
-
-## 🔗 External Resources
-
-### 🌐 Online Platforms
-- **[Robotical Learning Portal](https://learn.robotical.io/)** - Official Marty learning platform
-- **[Marty v2 Learning Resources](https://learn.robotical.io/lessons/martyVersions/2)** - Version-specific resources
-
-### 📚 Research Databases
-- **[Elicit Research](https://elicit.org/)** - AI research tool used for literature review
-- **[ArXiv](https://arxiv.org/)** - Research paper repository
-
----
-
-*Last Updated: January 2025*  
-*Total Project Files: 2,000+ files across 15+ major categories*

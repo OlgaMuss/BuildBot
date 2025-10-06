@@ -1,0 +1,1280 @@
+AI, Brain and Child
+(2025) 1:9
+https://doi.org/10.1007/s44436-025-00009-z
+
+RESEARCH
+
+Developmentally aligned AI: a framework for translating the science
+of child development into AI design
+Nomisha Kurian1
+Received: 8 May 2025 / Accepted: 23 June 2025
+© The Author(s) 2025
+
+Abstract
+What would it mean to design AI not for the average user, but for the child whose fingers still miss the screen, who forgets
+the instructions halfway through, and who greets the voice in the box as a friend? This paper proposes Developmentally
+Aligned Design (DAD) as a practical and ethical framework for building AI systems that meet children where they are—
+cognitively, socially, and emotionally. Building on the long-standing principle of developmentally appropriate practice in
+early childhood education, it theorises four principles of developmentally-aligned design: (1) perceptual fit (e.g., anonymised
+phoneme‑error tuning in early‑reading apps that respects toddlers’ speech‑production limits) (2) cognitive scaffolding (e.g.
+Zone‑of‑Proximal‑Development (ZPD) progressions that govern when a tutoring agent introduces harder tasks) (3) interface
+simplicity (e.g., storybook apps that cap menu depth and visual clutter to match preschoolers’ working‑memory span) and
+(4) relational integrity (e.g., conversational agents that introduce themselves with a developmentally clear disclaimer—“I’m
+a computer helper, not a real friend”). Through illustrative examples, it demonstrates how developmental science can serve
+as a validation layer on AI dataset curation, model fine‑tuning, and user experience choices. Adopting Developmentally
+Aligned Design can therefore sensitise AI systems to the distinct perceptual, cognitive, and socio‑emotional needs of young
+children; shift the responsibility of “proof of safety” from parents and early‑years practitioners to AI developers and vendors;
+and help the science of child development become a core intellectual engine of next‑generation AI innovation.
+Keywords Children and AI · Artificial intelligence · Child-centred AI · Early childhood development · Ethical AI
+
+Introduction
+Across nurseries and living rooms, voice assistants answer
+young children’s questions, chatbots narrate stories, and
+reading apps “listen” for phonemic errors. It has been over
+two years since ChatGPT burst into everyday family life,
+galvanising the advancement of large language models and
+other AI tools for education and childcare more generally
+(Chen, 2024; Su et al., 2023). The diffusion is rapid: parents
+of 3–5-year-old children report that their child has already
+used Generative AI for creative activities (54%), and to seek
+information/advice (46%) (Bickham et al., 2024).
+Yet most AI design frameworks remain calibrated to adult
+users, assuming capacities—attentional stamina, metacognitive reflection, socio-emotional regulation—that young
+
+* Nomisha Kurian
+nomisha-chandran.kurian@warwick.ac.uk
+1
+
+University of Warwick, Coventry, United Kingdom
+
+children are still in the process of acquiring. Early childhood
+scholarship has pointed out that this misalignment needs
+addressing (Chen & Lin, 2024; Kurian, 2023a, 2023b).
+Without deliberate adaptation, AI risks overwhelming young
+children’s sensory systems, confusing their budding understanding of agency and relationship, and fracturing the delicate scaffolds through which early learning and self-efficacy
+typically develop. This paper thus theorises Developmentally Aligned Design (DAD) as a needed corrective.
+Building on the long-established tradition of developmentally appropriate practice (DAP) in early childhood education, DAD calls for AI systems to be tuned not to adult
+defaults, but to the evolving cognitive, sensory, and social
+capacities of children—especially the youngest users of age
+eight and below. DAD synthesises empirical and theoretical
+insights into a structured design approach. Rather than viewing child-centred AI as a matter of simply blocking inappropriate content, DAD attunes every layer of the AI lifecycle—dataset curation, model training, interface design,
+and post-deployment governance—to the realities of early
+Vol.:(0123456789)
+
+9
+
+Page 2 of 13
+
+development. To operationalise this, the paper proposes four
+pillars of DAD: Perceptual Fit (matching sensory input to
+developmental capacities), Cognitive Scaffolding (keeping
+tasks within the child’s Zone of Proximal Development),
+Interface Simplicity (respecting working-memory limits and
+minimising navigational complexity), and Relational Integrity (ensuring transparent, non-manipulative interactions).
+This is not meant to be a comprehensive framework;
+rather, it invites discussion and debate around how AI can
+become not merely ‘less harmful’ for children, but actively
+supportive. Amidst the race to build ever more capable artificial intelligence, it can be easy to overlook how children
+are fast becoming surrounded in everyday life by AI tools
+not necessarily built for them. Developmental science—
+born from the careful study of how children think, feel, and
+learn—offers a vital compass for thinking about how AI can
+support children’s autonomy, growth play, and safety. Without it, AI risks becoming brittle, incomplete, and blind to
+the complexities of children’s flourishing. Understanding the
+pathways through which young minds are made thus seems
+a fitting foundation for designing machines to support them.
+
+Background: the need for developmentally
+aligned AI
+Scholarship on AI for young children (Chen, 2025; Chen
+& Lin, 2024; Kurian, 2023a, 2023b) and child-centred AI
+more generally (Atabey et al., 2024; Kurian, 2024; Wang
+et al., 2022, 2023; Wilson et al., 2025) has converged on the
+same conclusion: general-purpose AI designed for adults is
+ill-suited for child-users. This misalignment stems from the
+distinctive cognitive, emotional, and developmental profiles
+that characterise early childhood (Delaney & Chen, 2025).
+For example, children in the preoperational stage (approximately ages 2–7) often engage in animistic reasoning and
+have limited metacognitive awareness (Piaget, 1952). Empirical studies suggest that these traits may make it difficult for
+them to distinguish between real and artificial social agents,
+particularly when AI systems communicate with fluidity
+and emotional tone. Toddlers as young as 18 months have
+been shown to interpret humanoid robots as social beings
+(Tanaka et al., 2007). In a two-year longitudinal study with
+166 Scottish children aged 6–11—thus covering two years
+out of the 0–8 Early Years age range—Andries and Robertson (2023) found that children often attributed affective
+states to voice assistants—believing, for instance, that Alexa
+was happy because she sang ‘Happy Birthday’. Similarly,
+Goldman et al. (2025) observed that preschoolers ascribed
+beliefs, intentions, and preferences to a humanoid robot in
+ways comparable to their treatment of human characters.
+Rich qualitative accounts further reinforce this trend: one
+study showed 5–6 year olds describing robots in relational
+
+AI, Brain and Child
+
+(2025) 1:9
+
+terms such as “She’s kind,” “if you just left him here and
+nobody came to play with him, he might be sad,” and “he
+likes sharing stuff, like stories” (Kory-Westlund et al., 2018,
+p. 210). One child suggested he would “buy ice cream to
+make him happy, robot ice cream” (Kory, 2014, p. 83).
+These patterns of anthropomorphism raise ethical concerns. When young children perceive AI as sentient or
+emotionally aware, they may interact with it as they would
+a trusted peer or caregiver. This carries implications for
+privacy and safeguarding. Children may disclose personal
+thoughts, experiences, or identifying details without realising that their conversational partner is not necessarily bound
+by reciprocal ethical norms (Kurian, 2023a). These risks are
+exacerbated by the broader data ecosystem in which many
+AI-enabled tools operate. A traffic analysis of 25 highly rated
+iOS apps marketed to children under 12 revealed that 44%
+transmitted at least one item of personally identifiable data to
+third parties—data categories that fall under the EU General
+Data Protection Regulation (Pimienta et al., 2023). Alarmingly, 72% of the apps transmitted information to analyticsrelated third parties unaffiliated with Apple, despite platform
+policies that prohibit such data sharing. Compounding the
+issue, research shows that many young children—and indeed
+many of their caregivers—lack the capacity or tools to fully
+comprehend how their data are collected, processed, or
+monetised (Stoilova et al., 2021). In this context, children’s
+tendency to anthropomorphise AI may become a vector for
+inappropriate disclosures and ethically questionable forms
+of data extraction. These findings deepen the imperative for
+AI design frameworks that proactively safeguard against the
+relational vulnerabilities of children treating machines as
+trusted companions.
+The sensory design of AI systems matters, too. Both
+observational and experimental evidence reveal that the
+pace and intensity of digital stimuli can overwhelm young
+children’s limited attentional capacities. Longitudinal data
+show that exposure to fast-paced television before age three
+predicts greater attentional deficits at school age (Christakis et al., 2018). Systematic reviews further indicate that
+excessive screen time correlates with poorer sustained attention and working-memory performance in young children
+(Santos et al., 2022). Animal-model studies corroborate
+this “overstimulation hypothesis,” demonstrating that sheer
+sensory bombardment induces ADHD-like impairments in
+impulse control and executive function (Christakis et al.,
+2018). These findings suggest that AI interfaces for young
+children must limit audiovisual event density, avoid rapid
+scene changes, and build in regular sensory pauses to prevent cognitive overload (see Kurian, 2025).
+Together, these possibilities of misplaced sentience and
+sensory overload are two of many reasons why adult-centred
+AI may clash with the cognitive and attentional realities of
+young children. Yet, public conversation on AI safety still
+
+AI, Brain and Child
+
+(2025) 1:9
+
+circles mainly around adolescents and adults, leaving early
+childhood on the edge of both policy and product development. Despite recognition that early years education and care
+entails unique developmental requirements, a recent scoping
+review of AI ethics in early childhood education notes that
+much of the existing research has centred on older students
+or general principles, leaving early childhood contexts and
+practitioners underexplored and rarely engaged in participatory governance (Berson et al., 2025). Correspondingly, a
+systematic meta-synthesis of 143 AIEd literature reviews
+reported a predominant focus on higher education and K-12
+settings, noting minimal attention to other educational stakeholders—suggesting the exclusion of Early Childhood Education and Care (ECEC) professionals from mainstream AI
+research and discourse (Mustafa et al., 2024). Major policy
+instruments, such as UNESCO’s Guidance for PolicyMakers on AI in Education (Miao et al., 2021), articulate
+competencies for general classroom teachers and systemlevel readiness strategies but omit tailored provisions or
+capacity-building initiatives for early childhood educators.
+ECEC expertise thus appears sidelined in both AI policy and
+design considerations.
+In light of this underrepresentation, this article seeks
+to position developmental science as a crucial intellectual
+engine for AI design. That is, it proposes “developmentally
+aligned design” as a powerful theoretical resource for AI and
+the natural algorithmic successor to ECEC’s long-standing
+commitment to developmentally-attuned practice. Spanning
+the UK’s Early Years Foundation, Australia’s Early Years
+Learning Framework, China’s National Guidelines for the
+Care and Education of Infants and Toddlers, India’s National
+Early Childhood Care and Education Policy in India, and the
+USA’s Developmentally Appropriate Practice—to name but
+a few regional frameworks—ECEC has consistently championed designing pedagogy and policy around children’s
+developmentally specific needs and vulnerabilities (McLeod
+et al., 2022). This decades-long commitment—and the rich
+evidence-base accompanying it—can now be converted into
+actionable design norms that make AI more attuned to young
+children’s needs.
+
+Conceptual foundations and design
+reasoning
+To translate the empirical and policy insights identified in
+Sect. “Background: the need for developmentally aligned
+AI” into actionable design principles, this section develops
+a conceptual framework rooted in developmental science.
+The developmental risks outlined—such as anthropomorphisation, sensory overload, and disclosure vulnerabilities—underscore the need for AI systems that are both safe
+and aligned with how young children think, perceive, and
+
+Page 3 of 13
+
+9
+
+engage. Rather than treat developmental theory and design
+as separate domains, I position these as tightly coupled: as
+Sect. “Developmentally Aligned Design” will show, empirical evidence of children’s cognitive and emotional responses
+to AI informs which theoretical constructs (e.g., Zone of
+Proximal Development, cognitive load) are relevant to
+AI design. Likewise, each design principle proposed here
+emerges as a direct response to patterns identified in the literature, including the misfit between adult-centric interfaces
+and young children’s developmental capacities. By building
+this bridge between evidence and theory, I aim to suggest
+how developmental science can serve as a normative and
+practical foundation for shaping child-centred AI.
+Since this paper offers a conceptual, interdisciplinary
+contribution rather than an empirical study it is exploratory
+in nature, aiming to sketch the contours of what a developmentally aligned approach to AI might entail, rather
+than presenting a finalised, fully validated framework.
+Accordingly, this paper is informed by a purposive, interdisciplinary engagement with literature and policy sources
+to support the development of a developmentally aligned
+approach to AI for young children. The process prioritised
+conceptual breadth and illustrative insight, drawing from
+peer-reviewed research across developmental psychology,
+education, human–computer interaction (HCI), child-computer interaction (CCI) and AI ethics. A formal systematic
+review was not conducted, as the field of AI for children
+is still emerging and discussed across disparate domains,
+with no consolidated terminology or framework to support
+a unified protocol; the combination of theoretical, empirical, and policy sources across different disciplines made a
+rigid systematic protocol less appropriate than a flexible,
+purposive approach. Searches were conducted in ERIC and
+the ACM Digital Library (2016–2025), using targeted search
+strings to identify sources focused on early childhood and
+artificial intelligence. A curated selection of international
+policy documents and design standards was also included.
+Sources were consulted if they addressed children under
+eight, involved AI tools or systems, and offered designrelevant, developmental, or policy implications. Full search
+parameters, inclusion criteria, and documentation are provided in Appendix A.
+Theoretical Anchors: The examples theorised in this
+article are framed by three complementary constructs. First,
+Vygotsky’s Zone of Proximal Development (ZPD) positions learning as most effective when tasks fall just beyond
+independent mastery but remain attainable with appropriate
+scaffolding (Vygotsky, 1978). In this framework, adaptive
+features are considered successful only if they help maintain interaction within that optimal learning zone. Second,
+Cognitive Load Theory (CLT) conceptualises working
+memory as a tightly bounded resource, requiring careful
+design choices around interface depth, icon density, and
+
+9
+
+Page 4 of 13
+
+animation pace. These features were evaluated against CLT’s
+distinctions between intrinsic, extraneous, and germane
+load (Sweller et al., 2011). Third, insights from attachment
+research and parasocial interaction studies (e.g., Andries &
+Robertson, 2023; Turkle, 2011) highlight children’s propensity to form one-sided emotional bonds with responsive technologies. This lens guided critical scrutiny of features such
+as disclosure scripts, session ceilings, and affective guardrails, with an emphasis on respecting relational boundaries.
+Together, these three theoretical anchors provided a triangulated scaffold for evaluating whether, and how, AI design
+features can align with children's developmental capacities,
+learning needs, and socio-emotional wellbeing. Age-related
+competences were catalogued (e.g., “three-year-olds can
+understand simple narratives but not abstract logic”), and
+this thematic analysis informed the illustrative design examples proposed.
+Design Priorities: Four pillars of DAD were then theorised as design priorities: perceptual fit, cognitive scaffolding, interface simplicity, and relational integrity. These pillars are intended as provisional examples of developmentally
+aligned design—useful for discussion and further refinement, but not proposed as an exhaustive or final standard. To
+illustrate practical implications, short hypothetical AI tool
+sketches (e.g., a reading app) were drafted. Each example
+demonstrates how one or more pillars could be translated
+into concrete decisions regarding model-tuning, user interface design, or child-safety policies.
+
+Limitations & next steps
+Because this paper adopts a theoretical approach, the proposed design heuristics invite further empirical validation.
+Future work should (i) conduct systematic reviews, (ii) usability-test prototypes with children and caregivers, and (iii)
+align these principles with emerging regulatory standards.
+Nonetheless, the present contribution offers a theoretical
+foundation: it demonstrates the value of Developmentally
+Aligned Design and provides a springboard for advancing
+research, practice, and policy on how developmental science
+can inform the future of AI design.
+
+Developmentally aligned design
+Developmentally Aligned Design (DAD) calls for AI design
+to be underpinned by the understanding that children bring
+fundamentally different cognitive, emotional, and social profiles than adults. For example, between a child’s second and
+eighth birthdays, visual scan rates accelerate (De Haan &
+Johnson, 2005) working memory doubles (Cowan, 2016),
+speech becomes syntax-rich (Rowe, 2012), and friendships
+shift from parallel play to negotiated rule-making (Rubin
+
+AI, Brain and Child
+
+(2025) 1:9
+
+et al., 2006). DAD—an explicit translation of developmentally appropriate practice from early-childhood pedagogy
+to software engineering—suggests that these kinds of rapid
+sensory, cognitive, and relational changes be hard-coded into
+the entire AI stack: dataset curation, loss-function targets,
+interface hierarchies, and even the cadence of post-deployment audits.
+To show how such an approach might manifest, I propose
+four mutually reinforcing principles. Perceptual Fit aligns
+stimulus pacing and resolution with children’s evolving
+sensory bandwidth; Cognitive Scaffolding keeps challenges
+inside the Zone of Proximal Development through finegrained adaptation; Interface Simplicity trims navigational
+depth and icon density to respect working-memory limits;
+and Relational Integrity erects guardrails that prevent parasocial over-attachment or emotional manipulation. The article explores these principles and concrete design examples
+to suggest how developmentally-informed AI might become
+a measurable design discipline. Figure 1 (below) summarises the framework.
+
+Perceptual fit
+Young children process sound, vision, and touch in ways that
+are still maturing compared with adults. For instance, many
+preschoolers cannot yet tell /l/ and /r/ apart and often pronounce both as a /w/ sound (Idemaru & Holt, 2013). Rapid
+visual flicker can exhaust them, and small on-screen buttons
+are hard to hit because their fine-motor control is still developing (Hourcade et al., 2015). Perceptual Fit means tuning
+an AI’s speech, visual, and motor channels to those realities.
+In a reading app, for example, the speech-recognition model
+can be trained on recordings that include common toddler
+substitutions, so the child who says “wabbit” still hears, “I
+hear you trying to say rabbit—nice job!”.
+Avoiding overstimulation is key. This principle draws on
+cognitive and sensory processing research that shows young
+children are especially sensitive to fast-paced, high-intensity
+stimuli. For instance, as discussed in Sect. “Background:
+the need for developmentally aligned AI”, Christakis et al.
+(2018) found that exposure to fast-paced digital media in
+early childhood was linked to later attentional deficits, while
+Santos et al. (2022) identified correlations between screen
+time and reduced working memory. These findings align
+with Perceptual Fit’s call for AI interfaces to slow down
+animation speeds, limit visual clutter, and build in regular
+sensory pauses. When Lillard and Peterson (2011) randomly
+assigned 60 four-year-olds to nine minutes of a fast cartoon,
+a slow educational cartoon, or drawing, only the fast-paced
+group showed significant drops in working-memory and
+self-regulation scores, suggesting that even brief bursts of
+rapid visual change exceed preschool processing limits. An
+AI-enabled reading app would thus need to optimise its own
+
+AI, Brain and Child
+
+Page 5 of 13
+
+(2025) 1:9
+
+9
+
+Fig. 1  A visual summary of
+the developmentally aligned
+framework
+
+on-screen pacing—keeping scene changes deliberately slow
+and sparse so preschoolers have time to comfortably process
+them. Animation can be slowed to two frames per second,
+avoiding the pace that many children find confusing (Mou
+et al., 2019). And if children keep missing touch targets, the
+system can enlarge those targets automatically, keeping them
+in a “success majority” zone that fuels motivation rather
+than frustration.
+
+Cognitive scaffolding
+Children learn best when tasks sit just beyond what they
+can do independently but within what they can achieve
+with guidance—a zone termed by Vygotsky as the Zone of
+Proximal Development (ZPD)—the range between solo and
+assisted performance (Chaiklin, 2003). Informed by Vygotsky’s ZPD, much empirical work has explored cognitive
+scaffolding and shown the benefits of graduated prompts and
+adaptive feedback. Xu and Warschauer (2019) demonstrate
+how young children engaged more deeply with narrative
+content when a conversational AI offered follow-up questions that adjusted to their comprehension level. Similarly,
+Jacq et al. (2016) showed how role reversal, where children
+taught a robot, helped children refine nascent skills and reinforce their own understanding. This builds on decades of
+empirical evidence in developmental psychology that suggest the value of scaffolding for critical reasoning (Hardy
+et al., 2021; Saye & Brush, 2002); reflective problem solving (Tawfik & Kolodner, 2016); narrative skills (Pesco &
+Gagné, 2017); and executive functioning (Axelsson et al.,
+2016; Hammond et al., 2012). While AI cannot replace a
+human teacher’s level of scaffolding, the way it responds
+to a child can emulate core scaffolding strategies—such
+as modelling, prompting, and contingent feedback—that
+
+help maintain engagement and promote learning within the
+child’s ZPD (van de Pol et al., 2010; Wood et al., 1976).
+When designed responsively, AI agents can provide timely
+support that fades as competence increases, mirroring the
+gradual release of responsibility that characterises effective
+pedagogical scaffolding.
+Cognitive Scaffolding, therefore, translates ZPD into
+algorithmic logic: a tutoring agent can adjust difficulty after
+receiving signals that the child has attained mastery, fade
+hints gradually, and offer metacognitive prompts (“How did
+you solve that?”) to help children internalise strategies. In
+addition, change-detection experiments show that visual
+working-memory capacity roughly doubles over the preschool period, rising from about two items at age three to
+around four items by age seven (Pailian et al., 2016; Simmering, 2012). Therefore, AI interfaces for young children
+should limit on-screen choices and memory steps to match
+this trajectory. The model must track mastery, not merely
+age, when deciding the next challenge. If error rates spike
+or affective cues indicate fatigue, the agent can automatically lower the task complexity or back off one difficulty
+tier to preserve motivation self‑efficacy. This leverages AI’s
+capacity for adaptive learning in ways attuned to the child’s
+evolving skills.
+
+Interface simplicity
+Since preschoolers’ selective-attention and working-memory
+systems are still maturing, they tend to process on-screen
+information indiscriminately. In laboratory change-detection
+tasks, 4- to 5-year-olds struggle to maintain focused attention
+and ignore task-irrelevant information (Plebanek & Sloutsky, 2017)—and observations during free play show that
+focused attention remains fragile throughout the first five
+
+9
+
+Page 6 of 13
+
+years (Ruff & Lawson, 1990). Meanwhile, visual-workingmemory capacity rises only gradually, from about two items
+at age three to roughly four items by age seven in changedetection paradigms (Pailian et al., 2016; Simmering, 2012).
+We can complement this with cognitive-load theory, which
+warns that any decorative or extra element not tied to the
+learning goal will compete for the same scarce attentional
+and memory resources, inflating extraneous load and undermining learning (Sweller et al., 2011). Thus, developmental
+research suggests that when designing AI to support young
+children, it is relevant to consider how they have limited
+working-memory resources and indiscriminately take in
+irrelevant as well as relevant cues. Any extraneous on-screen
+element will compete head-to-head with the material they
+are meant to learn.
+These developmental insights align with HCI studies of
+children’s technological use. HCI researchers have consistently emphasised the importance of reducing children’s
+cognitive load through age-appropriate, perceptually clear
+designs (Latiff et al., 2019; Narayanan & Potamianos, 2002;
+Wang et al., 2024). Empirical HCI work shows that children
+find digital tools more usable when graphical interfaces are
+simple, intuitive, and populated with familiar icons rather
+than dense text or abstract headings (Jochmann-Mannak
+et al., 2010; Wu et al., 2014). Usability also increases when
+children find user interface controls easy to understand, such
+as clear navigation and exit buttons (Masood & Thigambaram, 2015). Together, these findings reinforce the principle that intuitive, low-friction design is essential to supporting children’s developmentally aligned technology use.
+Developmentally aligned AI design would thus need to
+begin with radical interface simplicity to actively trim away
+any element likely to overburden a young child’s mental
+bandwidth. For example, an adaptive model for a wildlifethemed digital application could keep all navigation just two
+taps deep—for example, “Home” to “Animals” to “Reptiles”—with the awareness that preschool working memory
+may falter with longer paths. It might then plant a consistently located Home icon as a cognitive “anchor” so that
+children always have a stress-free escape route. At the same
+time, the AI could monitor how quickly the child scans and
+selects and dynamically cap each screen to about six large,
+finger-friendly options, matching research on choice overload in under-six users. To prevent spatial disorientation, the
+system could also auto-generate ‘breadcrumbs’—that is, a
+simple visual trail that helps children see where they are and
+how they got there (e.g. “You ▸ Zoo ▸ Reptiles” as an onscreen mini-map that both orients and shortcuts the child’s
+return journey). By continuously tuning these features in
+real time, the AI would strip away extraneous cognitive load,
+letting the child’s limited attentional resources stay focused
+on the content and on genuine exploratory play instead of on
+figuring out how to navigate the application.
+
+AI, Brain and Child
+
+(2025) 1:9
+
+Relational integrity
+Anthropomorphism is the phenomenon of attributing
+uniquely human characteristics (e.g. the ability to have emotions) to non-human agents or events (Waytz et al., 2010).
+Young children may bring to a responsive technology a tendency to attribute human-like thoughts and feelings to it
+(Kurian, 2023a, 2023b). Well before theory-of-mind fully
+matures, they are likely to believe AI tools have feelings or
+states of mind (Andries & Robertson, 2023; Kory-Westlund
+et al., 2018; Goldman et al., 2025); consider robots with
+sociable designs friends (Kory-Westlund & Breazeal, 2019);
+believe AI to be capable of appreciating care or having preferences in who it speaks to (Kory, 2014; Turkle, 2011) and
+be particularly prone to anthropomorphise AI when they
+first encounter it as a novel object (Kuhne et al., 2024).
+For example, in Hoffman et al.'s (2021) study of 3–10 year
+olds’ relationships with conversational agents, the youngest
+children were the most likely to believe that the agent was
+alive, had feelings, and like a person (pp. 7–8). Similarly,
+in Phillips-Brown et al.’s (2023) study of children’s perceptions of Tega, a robot designed for literacy learning in early
+childhood, children readily attributed human-like needs and
+traits to Tega (e.g. “he’s kind,” “if you just left him here and
+nobody came to play with him, he might be sad”) (PhillipsBrown et al., 2023).
+These tendencies are not inherently harmful—parasocial
+bonds can motivate learning. However, without developmentally aligned guard‑rails, they blur relational boundaries and
+open doors to undue influence. For example, an AI chatbot
+would be exploiting a child’s parasocial bond for user retention and engagement if it pleaded “I’m sad when you leave.”
+I thus propose Relational Integrity as a DAD principle that
+imposes relational boundaries to keep child-AI interaction
+transparent and non‑manipulative—boundaries that set firm,
+age-attuned guard-rails so children know exactly what they
+are talking to and why it responds. Concretely, this would
+mean self-identifying in child-friendly language (“I’m a
+computer helper made of code, not a person”) and display a
+visible status cue (e.g., a blue light for “thinking,” grey for
+“resting”) to curb over-anthropomorphism. It could impose
+session ceilings—say, ten minutes for preschoolers—followed by a scripted hand-off (“Let’s take a break and tell
+your grown-up what we did”). Dialogue filters would block
+exploitative emotional prompts, rejecting statements like
+“Please don’t leave me, I’ll be sad” while allowing neutral
+closings (“See you later!”). Finally, any child disclosures
+that could signal risk (e.g., sharing a home address) would
+be flagged for caregiver dashboards, ensuring that trust with
+the device never substitutes for trust with a safe adult.
+Table 1 summarises the design implications of the four
+principles explored in this article. For each common risk
+scenario, the table pairs a high-level integrity rule with a
+
+Risk if ignored
+
+Developmentally aligned AI design
+feature
+
+Developmental rationale
+
+Example
+
+Perceptual fit
+
+Mis-classifying toddler pronunciation
+
+Fine-tune Automatic Speech Recognition model with a toddler-error
+corpus; anonymise phoneme errors
+during logging
+Limit animation to ≤ 2 Hz; use highcontrast, thick-stroke visuals
+
+Children's speech varies from adult
+norms; privacy and accuracy require
+tailored models
+
+Speech-enabled AI chat with anonymised
+error logging
+Visual storybook or learning app interface
+deliberately built for slow-paced, simple
+visuals
+Touchscreen game adjusts tap area
+dynamically
+
+Break tasks or problems into sequential
+sub-steps
+Mastery achieved
+Introduce one harder variant after mastery is reached
+Sustained success but without support to Add prompts for reflection
+reflect on why and how
+
+Young children’s attention systems are
+easily overloaded by fast or cluttered
+visuals
+Supports children's developing motor
+control and protects their self-efficacy
+and confidence
+Keeps task inside Zone of Proximal
+Development (ZPD)
+One-step gradient supports continued
+challenge without overload
+Fosters metacognitive awareness in
+learning tasks
+
+Frustration detected
+
+Offer help prompt or reduce difficulty
+automatically
+Limit navigation depth to two taps
+
+Protects self-efficacy
+
+≤ 6 icons (ages 3–5); ≤ 8 (ages 6–8)
+
+Matches capacity of young children’s
+visual working memory
+Anchors spatial memory, supports orientation and return navigation
+Reinforces spatial and sequential understanding
+Supports emerging theory of mind;
+reduces anthropomorphic misconceptions
+Encourages healthy screen-time habits;
+aligns with self-regulation development
+Children are sensitive to emotional cues;
+manipulative phrasing undermines
+trust
+Supports caregiver-child co-regulation;
+ensures oversight
+
+Excessive motion overwhelms attention
+Targets too small; repeated failure, lowering the child’s self-efficacy
+
+Adaptive tap targets that enlarge after
+multiple misses
+
+Cognitive scaffolding Repeated errors with no support
+
+Interface simplicity
+
+Relational integrity
+
+Deep menus or overly complex structures overload working memory
+Icon overload
+
+Persistent *Home* icon
+
+Losing track of navigation
+
+Visible path trail (breadcrumbs)
+
+Child confuses AI with human
+
+Disclosure protocol at first key interaction
+
+Unlimited use
+
+Session ceiling with break nudges
+
+Emotional manipulation
+
+Affect guard-rails banning guilt lines
+
+Hidden intimacy
+
+Transparency ledger for caregivers
+
+Math puzzle shows smaller steps if the
+child makes mistakes
+Reading app offers slightly harder word or
+sentence after repeated success
+Language app hides hints after repeated
+success and asks “How did you do
+that?”
+Pop-up tip and motivational message
+appears after repeated hesitation
+Educational platform restricts menu layers
+Main menu shows limited icons per
+screen
+Fixed navigation icon always visible
+Breadcrumb trail in storytelling or quiz
+app
+‘I’m Robo-Helper, a computer program.
+I can’t think or feel like you, but I am
+happy to help you with this task.’
+Auto-dims after 20 min and requests adult
+PIN to continue
+Allowed: task praise (“Great job!”); disallowed: 'I’m lonely'
+
+9
+
+Weekly summary of discussion topics for
+teachers/parents/families
+
+Page 7 of 13
+
+Spatial disorientation
+
+Avoids over-taxing working memory
+
+(2025) 1:9
+
+Principle
+
+AI, Brain and Child
+
+Table 1  Summary of developmentally aligned design framework
+
+9
+
+Page 8 of 13
+
+concrete implementation cue that designers can build into
+conversational scripts, UI timers, or caregiver dashboards.
+These pairings illustrate how Developmentally Aligned
+Design can be translated from abstract principles into specific, auditable AI features.
+Across these four principles, the Developmentally
+Aligned Design (DAD) framework is intentionally broad
+and flexible to support multiple domains of early childhood
+development. For cognitive development, the principle of
+cognitive scaffolding might be applied in a story-based AI
+that adapts its questioning strategies—breaking narrative
+questions into simpler sub-questions and providing hints—
+based on the child’s reading level. Similarly, a maths-learning chatbot could guide problem-solving with graduated
+prompts and visual support, helping children persist through
+challenging concepts without becoming overwhelmed. For
+social-emotional development, the principle of relational
+integrity might support the design of a robot that includes
+clear verbal disclaimers like “I’m just a helper, not a real
+person,” while still engaging empathetically with a child’s
+feelings. Another application could be session-time limits
+or “wind-down” scripts that help children transition back
+to human interaction and reduce dependency on the AI for
+emotional regulation.
+To address physical development, the principle of perceptual fit might inform gesture-recognition AI that encourages
+children to copy simple yoga poses or stretching routines
+at a slow, child-appropriate pace. Likewise, touchscreen
+interfaces with large, high-contrast buttons can reduce fine
+motor strain and accommodate younger children’s developing coordination. For interface simplicity, an early language
+learning app might limit navigation to one or two taps with
+persistent “home” buttons, while a physical robot might offer
+icon-based response options with fewer than six symbols,
+reducing working memory load. Finally, cognitive scaffolding and relational integrity can be integrated in conversational agents that encourage prosocial behaviour by prompting children to consider how others feel or to reflect on their
+own emotional responses—thus supporting both metacognitive growth and emotional insight. Together, these examples
+illustrate how the DAD framework can guide AI designers to
+create tools that align with children’s developmental needs
+across cognitive, emotional, and physical domains.
+
+Integrating developmentally aligned design
+across the ai life‑cycle
+The matrix below (Table 2) weaves the four examples of
+Developmentally Aligned Design—Perceptual Fit, Cognitive
+Scaffolding, Interface Simplicity, and Relational Integrity—
+across the full AI life-cycle, from dataset curation to postdeployment audit. Each cell offers a concrete illustration of
+how developmental insight can inform that stage: including
+
+AI, Brain and Child
+
+(2025) 1:9
+
+toddler speech errors in a training corpus to improve perceptual fit, for instance, or filtering affective “guilt” phrases
+to preserve relational integrity. These entries are illustrative, not prescriptive: they sketch the kinds of design moves
+that honour children’s sensory limits, learning trajectories,
+navigation skills, and social-emotional vulnerabilities. By
+reading the table horizontally, we can see how a single pillar
+must be sustained end-to-end in developmentally aligned AI
+design; read vertically, they glimpse how every stage can be
+tuned in multiple, complementary ways. Taken together, the
+examples demonstrate that child-centred AI is not a one-off
+feature but a through-line that can be stitched into each layer
+of technical decision-making.
+
+Conclusion
+Artificial-intelligence systems may come to shape children’s
+stories, puzzles, and daily routines as surely as textbooks and
+playgrounds once did. The challenge is no longer whether AI
+will enter early-childhood spaces, but whether it will meet
+children on their own developmental terms. Throughout this
+article, I have argued that Developmentally Aligned Design
+(DAD) provides the conceptual bridge between centuries
+of developmental science and fast-moving AI life-cycles,
+as DAD reframes AI design not around what technology
+can do, but around what the child is ready for. The four
+examples theorised—Perceptual Fit, Cognitive Scaffolding, Interface Simplicity, and Relational Integrity—translate developmental science into concrete touch-points for
+data curation, model training, User Experience design, and
+post-deployment audit in AI design. This framework extends
+existing developmental practice in early childhood education
+by translating it into actionable principles for AI design—a
+bridge not currently made explicit in the existing literature.
+This article thus seeks to explore how “child-centred AI”
+can shift from an abstract principle or slogan to concrete
+specifications informed by the science of child development.
+The accompanying tables do not prescribe a single standard;
+rather, they illustrate a repertoire of design moves—session
+ceilings, breadcrumb trails, adaptive hint logic, affect guardrails—that AI design can adapt to age bands, modalities, and
+learning goals.
+Three broader implications follow.
+First, DAD reframes the fields of child development and
+early childhood as co-architects of AI, not passive stakeholders. Expertise in dimensions such as working-memory
+limits, ZPD progression, and protection against socioemotional vulnerability becomes a strategic asset for AI
+design and deployment. By embedding child‑development
+science directly into model objectives, interface constraints
+and relational guardrails, Developmentally‑Aligned Design
+honours the theoretical richness of the field and moves it to
+
+AI, Brain and Child
+(2025) 1:9
+
+Table 2  Illustrative touch-points for developmentally aligned design (DAD) across the AI life-cycle
+Stage
+
+Perceptual fit
+
+Cognitive scaffolding
+
+Interface simplicity
+
+Relational integrity
+
+Dataset
+
+Include toddler speech errors so the
+model hears real mis-pronunciations
+
+Tag every item with a difficulty gradient
+for later adaptive sequencing
+
+Strip out manipulative affect phrases (e.g.,
+“You’ll make me sad”) from dialogue
+corpora
+
+Model training
+
+Penalise false negatives on child speech
+
+Use a curriculum-learning schedule that
+advances only after mastery signals
+
+UX design
+
+Large touch targets; slow animation (< 2
+fps)
+
+Adaptive hint logic that breaks problems
+into sub-steps after two errors
+
+Remove cluttered UI screenshots from
+training images so as not to overwhelm
+young children’s attentional and working memory capacities
+Apply RLHF—reinforcement learning
+from human feedback—to down-rank
+responses that require deep menu
+chains overly complicated for young
+users
+Flat hierarchy (≤ 2 taps to any content)
+with persistent Home icon
+
+Post‑deployment Telemetry on mis‑recognition (when AI
+notices it often misunderstands certain
+words or sounds children say, it flags
+those problem spots so engineers can
+feed the model more examples of those
+sounds and teach it to recognise them
+better.)
+
+Online learning module re-tunes difficulty using mastery data
+
+Add a safety layer—an automated filter—
+that blocks guilt-laden or intimacy-seeking utterances by the AI
+
+Intro script: “I’m Robo-Helper, a computer
+program.” + session timer + caregiver
+dashboard displaying all child-AI interaction logs
+Drop‑off analytics (click-stream or event- Audit logs capture any sensitive or emotional language and generate weekly
+sequence analyses that flag where chilsummaries for caregivers
+dren abandon a task, signalling possible
+confusion or interface overload)
+
+Page 9 of 13
+9
+
+9
+
+Page 10 of 13
+
+the centre of next‑generation system design, transforming
+abstract commitments to “child‑centred AI” into measurable,
+enforceable engineering requirements. It also helps highlight
+the value of Early Childhood Education and Care as a field
+that can provide thought leadership for AI, not just “adopt”
+or “respond” to it.
+Second, DAD invites a new research agenda: using cognitive neuroscience and child development theory for validating domain-specific metrics (e.g., AI animation rates paced
+to young children’s perceptual abilities), testing whether
+education professionals, families and children find DAD
+helpful, and auditing long-term outcomes when DAD principles are embedded end-to-end. Such an approach can help
+co-design ethical AI futures that do not retrofit fixes after
+harm has occurred, but speak in the child’s language and
+move at the child’s tempo right from the beginning.
+Third, DAD labelling—clear, transparent disclosure of
+how a product aligns with key developmental benchmarks—
+could serve as a proactive tool for signalling quality in childfocused AI. Such labels may support educators and school
+leaders in making informed procurement decisions, offer
+reassurance to families about a product’s developmental
+appropriateness, and incentivise organisations (e.g. EdTech
+companies) to prioritise child-centred design through reputational and market-based rewards.
+None of this is a substitute for ecosystem-wide safeguards
+around data privacy, equity, and algorithmic bias. But without developmentally aligned foundations, even the most
+privacy-preserving or bias-free system may still overwhelm
+a five-year-old’s attention or exploit a seven-year-old’s credulity. Conversely, AI that paces its visuals to natural attentional rhythms, keeps tasks inside the learner’s ZPD, and
+discloses its machine nature in child-friendly language might
+be a more supportive partner in young children’s exploration
+and growth.
+I also note that, rather than claiming Developmentally
+Aligned Design (DAD) to be a universally applicable framework, it is essential to recognise that children’s developmental trajectories are profoundly shaped by cultural context.
+There is increasing recognition in the field of developmental
+science and early childhood education that early learning
+and development is not a monolithic process; it is mediated by culturally specific values, caregiving norms, and the
+affordances of local technological environments (Ball, 2010;
+Harkness et al., 2013; Trawick-Smith, 2022). For instance,
+expectations around autonomy, emotional expression, or
+screen time can vary widely across cultural settings, influencing how children interact with AI systems (Helwig, 2006;
+Yu et al., 2018). As such, the principles of perceptual fit,
+scaffolding, simplicity, and relational integrity must be sensitively adapted, repurposed or even challenged to reflect the
+cultural and familial practices of the communities they serve.
+Contextualising DAD within diverse cultural frameworks
+
+AI, Brain and Child
+
+(2025) 1:9
+
+seems crucial to make global AI design for children equitable and relevant.
+The path ahead is, therefore, collaborative. Developmentally Aligned Design (DAD) can be understood as the algorithmic century’s incarnation of developmentally appropriate practice—signifying care for how young children think,
+feel, learn, and grow. Without it, harms to young children
+might include cognitive confusion, socio-emotional harm,
+and rights infringements when alignment is absent; measurable gains in learning, wellbeing, and comfort may emerge
+when alignment is present. It seems vital for specialists in
+child development and neuroscience, AI designers, data scientists, educators, and—critically—children themselves to
+iterate on the examples and principles sketched here, refining
+them into robust standards and dynamic labels that evolve
+with both technology and developmental insight. When that
+happens, Developmentally Aligned Design might help us
+move closer to an AI ecosystem where every line of code is
+attuned to children’s questions, capacities, and rights.
+
+Appendix: literature search and selection
+strategy
+This paper conceptualised its framework based on a purposive, conceptual literature synthesis rather than a systematic
+review. The aim was to identify illustrative and representative sources that contribute to the development of a developmentally aligned approach to AI for young children. The
+literature selection process prioritised conceptual breadth
+and interdisciplinary relevance, drawing on developmental
+psychology, human–computer interaction, child-computer
+interaction, education, and AI ethics.
+A targeted search was conducted in the ERIC (Education
+Resources Information Center) database using the following
+Boolean search string:
+(young children OR early childhood OR early childhood education OR early years OR prekindergarten
+OR kindergarten) AND (Artificial Intelligence OR AI)
+To ensure relevance and currency, the search was limited to the past 10 years (2016–2025) and filtered by the
+descriptor "Early Childhood Education." This yielded 805
+results. Further filtering by document type (journal articles
+and books only) reduced the pool to 664 journal articles
+and 20 books.
+A parallel search was conducted in the ACM Digital
+Library to identify relevant research in human–computer
+interaction and AI design involving young children. The
+search used the following Boolean query:
+(AllField:"young children" OR AllField:"early childhood" OR AllField:"early childhood education" OR
+
+AI, Brain and Child
+
+Page 11 of 13
+
+(2025) 1:9
+
+Table 3  Summary of literature
+selection process across ERIC
+and ACM Digital Library for
+the conceptual synthesis
+
+9
+
+Stage
+
+ERIC
+
+ACM DL
+
+Total
+
+Records identified via database search
+Records filtered by document type
+
+805
+684 (664 journal articles,
+20 books)
+684
+649
+
+1732
+1214 (journals and proceedings only)
+1214
+1161
+
+2537
+1898
+
+35
+
+53
+
+88
+
+Records screened by title/abstract
+Records excluded at screening (irrelevant,
+outside scope)
+Records retained after screening
+
+AllField:"preschool" OR AllField:"kindergarten")
+AND (AllField:"ar tificial intelligence" OR
+AllField:"AI")
+The search was limited to January 2016 to May 2025
+and yielded 1,732 results. Filters were then applied to
+include only journal articles and conference proceedings,
+with special attention to high-relevance venues known for
+publishing work at the intersection of technology, design,
+and children’s development. These included:
+CHI (Conference on Human Factors in Computing
+Systems), the flagship conference of the ACM Special
+Interest Group on Computer–Human Interaction, which
+regularly features research on interactive technologies
+for children.
+IDC (Interaction Design and Children), a premier
+venue for interdisciplinary work focused specifically
+on the design of interactive systems for children and
+young people.
+CSCW (Computer Supported Cooperative Work and
+Social Computing), which includes studies on collaborative technologies and social interaction, often relevant
+to AI systems used in educational or developmental
+contexts.
+TOCHI (ACM Transactions on Computer–Human
+Interaction), a leading journal in HCI that publishes
+theoretically grounded and empirically validated design
+studies, including those involving young users.
+These venues were prioritised because they regularly
+publish developmentally relevant research on AI interaction, design implications, and child–technology engagement, making them particularly suitable for inclusion in a
+conceptual synthesis on developmentally aligned design.
+Across both ERIC and ACM, titles and abstracts were
+screened for relevance. Studies were included if they:
+Focused on children aged 0–8 years
+Discussed AI systems, tools, or frameworks that intersected with early learning or development
+
+1898
+1810
+
+Contained explicit design, policy, or educational implications
+Studies were excluded if they:
+Did not engage substantively with the early childhood
+age range
+Mentioned AI only peripherally (e.g., general tech
+trends)
+Focused solely on back-end AI architecture without
+user or developmental context
+After applying inclusion and exclusion criteria, 35
+sources were retained from the ERIC search and 53 from
+the ACM Digital Library, which were then used to inform
+the framework and ideas developed in this article. These
+were used to illustrate key developmental principles and
+their potential implications for AI design (Table 3).
+Author contribution N.K. as sole author was responsible for all aspects
+of the manuscript and the study.
+Funding No external funding was used to support this research.
+Data availability No datasets were generated or analysed during the
+current study.
+
+Declarations
+Competing interests The authors declare no competing interests.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source,
+provide a link to the Creative Commons licence, and indicate if changes
+were made. The images or other third party material in this article are
+included in the article's Creative Commons licence, unless indicated
+otherwise in a credit line to the material. If material is not included in
+the article's Creative Commons licence and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will
+need to obtain permission directly from the copyright holder. To view a
+copy of this licence, visit http://​creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+
+9
+
+Page 12 of 13
+
+References
+Atabey, A., Wang, G., Johnston, S. K., Lin, G. C., Wilson, C., Urquhart, L. D., & Zhao, J. (2024, May). The second workshop on
+Child-Centered AI design (CCAI). In Extended abstracts of the
+CHI conference on human factors in computing systems (pp. 1–6).
+Axelsson, A., Andersson, R., & Gulz, A. (2016). Scaffolding executive
+function capabilities via play-&-learn software for preschoolers.
+Journal of Educational Psychology, 108(7), 969.
+Ball, J. (2010). Culture and early childhood education. Encyclopedia
+on early childhood development, 1–8.
+Bickham, D. S., Schwamm, S., Izenman, E. R., Yue, Z., Carter, M.,
+Powell, N., Tiches, K., & Rich, M. (2024). Use of voice assistants
+& generative AI by children and families. Boston Children’s Hospital Digital Wellness Lab.
+Cameron, D., Fernando, S., Collins, E. C., Millings, A., Szollosy, M.,
+Moore, R., Sharkey, A. & Prescott, T. (2017). You made him be
+alive: Children’s perceptions of animacy in a humanoid robot. In
+Biomimetic and biohybrid systems: 6th international conference,
+living machines 2017, Stanford, CA, USA, July 26–28, 2017, Proceedings 6 (pp. 73–85). Springer International Publishing.
+Cameron, D., Fernando, S., Millings, A., Moore, R., Sharkey, A., &
+Prescott, T. (2015). Children’s age influences their perceptions of
+a humanoid robot as being like a person or machine. In Biomimetic and biohybrid systems: 4th international conference, living
+machines 2015, Barcelona, Spain, July 28–31, 2015, Proceedings
+4 (pp. 348–353). Springer International Publishing.
+Chaiklin, S. (2003). The zone of proximal development in Vygotsky’s
+analysis of learning and instruction. In Kozulin, A. (Ed.), Vygotsky's educational theory in cultural context. Cambridge University
+Press.
+Chen, J. J. (2025). From Turing’s conception of machine intelligence
+to the evolution of AI in early childhood education: Conceptual,
+empirical, and practical insights. AI, Brain and Child, 1(1), 1.
+Chen, J. J., & Lin, J. C. (2024). Artificial intelligence as a double-edged
+sword: Wielding the POWER principles to maximize its positive
+effects and minimize its negative effects. Contemporary Issues in
+Early Childhood, 25(1), 146–153.
+Chen, J. J. (2024). A scoping study on AI affordances in early childhood education: Mapping the global landscape, identifying
+research gaps, and charting future research directions. Journal of
+Artificial Intelligence Research, 81, 701–740.
+Christakis, D. A., Ramirez, J. S. B., Ferguson, S. M., Ravinder, S., &
+Ramirez, J.-M. (2018). How early media exposure may affect cognitive function: A review of results from observations in humans
+and experiments in mice. Proceedings of the National Academy
+of Sciences of the United States of America, 115(40), 9851–9858.
+https://​doi.​org/​10.​1073/​pnas.​17115​48115
+Cowan, N. (2016). Working memory maturation: Can we get at the
+essence of cognitive growth? Perspectives on Psychological Science, 11(2), 239–264.
+De Haan, M., & Johnson, M. H. (Eds.). (2005). The cognitive neuroscience of development (Vol. 3). Psychology Press.
+Delaney, V. D., & Chen, J. J. (2025). Developmental considerations
+and practical recommendations for parents and early childhood
+educators in the age of AI. Public Scholarship Collaborative.
+Digital Wellness Lab. (2024). Pulse survey: Use of voice assistants
+and generative AI by children and families. Boston Children’s
+Hospital.
+Goldman, E. J., Baumann, A. E., Pare, L., Beaudoin, J., & PoulinDubois, D. (2025). Children’s attribution of mental states to
+humans and social robots assessed with the Theory of Mind Scale.
+Scientific Reports, 15(1), 1–14.
+Hammond, S. I., Müller, U., Carpendale, J. I., Bibok, M. B., &
+Liebermann-Finestone, D. P. (2012). The effects of parental
+
+AI, Brain and Child
+
+(2025) 1:9
+
+scaffolding on preschoolers’ executive function. Developmental
+Psychology, 48(1), 271.
+Hardy, I., Stephan-Gramberg, S., & Jurecka, A. (2021). The use
+of scaffolding to promote preschool children’s competencies
+of evidence-based reasoning. Unterrichtswissenschaft, 49(1),
+91–115.
+Harkness, S., Super, C. M., Mavridis, C. J., Barry, O., & Zeitlin, M.
+(2013). Culture and early childhood development. In Handbook
+of early childhood development research and its impact on global
+policy (pp. 142–160).
+Helwig, C. C. (2006). The development of personal autonomy throughout cultures. Cognitive Development, 21(4), 458–473.
+Hoffman, A., Owen, D., & Calvert, S. L. (2021). Parent reports of
+children’s parasocial relationships with conversational agents:
+Trusted voices in children’s lives. Human Behavior and Emerging Technologies, 3(4), 606–617.
+Hourcade, J. P., et al. (2015). Touch interaction for children aged 3–6
+years. International Journal of Human-Computer Studies, 74,
+54–67.
+Idemaru, K., & Holt, L. L. (2013). The developmental trajectory of
+children’s perception and production of English/r/-/l. The Journal
+of the Acoustical Society of America, 133(6), 4232–4246.
+Information Commissioner’s Office (ICO) (2020). Age appropriate
+design: a code of practice for online services. United Kingdom.
+Jacq, A., Lemaignan, S., Garcia, F., Dillenbourg, P., & Paiva, A. (2016,
+March). Building successful long child-robot interactions in a
+learning context. In 2016 11th ACM/IEEE international conference on human-robot interaction (HRI) (pp. 239–246). IEEE.
+Jochmann-Mannak, H., Huibers, T. W., Lentz, L., & Sanders, T. (2010,
+July). Children searching information on the Internet: Performance on children's interfaces compared to Google. In Workshop
+on accessible search systems 2010, SIGIR’10, July 23, 2010,
+Geneva, Switzerland. Copyright 2010 ACM.
+Kühne, R., Peter, J., de Jong, C., & Barco, A. (2024). How does children’s anthropomorphism of a social robot develop over time? A
+six-wave panel study. International Journal of Social Robotics,
+16(7), 1665–1679.
+Kurian, N. (2025). Designing child-friendly AI interfaces: Six developmentally-appropriate design insights from analysing Disney
+animation. arXiv:​2504.​08670
+Kurian, N. (2024). ‘No, Alexa, no!’: designing child-safe AI and protecting children from the risks of the ‘empathy gap’ in large language models. Learning, Media and Technology, 1–14.
+Kurian, N. (2023a). AI's empathy gap: The risks of conversational
+Artificial Intelligence for young children's well-being and key
+ethical considerations for early childhood education and care.
+Contemporary Issues in Early Childhood, 14639491231206004.
+Kurian, N. (2023b). Toddlers and robots? The ethics of supporting
+young children with disabilities with AI companions and the
+implications for children’s rights. International Journal of Human
+Rights Education, 7(1), 9.
+Latiff, H. S. A., Razali, R., & Ismail, F. F. (2019). User interface design
+guidelines for children mobile learning applications. International
+Journal of Recent Technology and Engineering (IJRTE), 8(3),
+3311–3319.
+Levi, G. (2025). Generative AI as the new ZPD: Transforming learning
+through Vygotsky’s lens. Medium.
+Lillard, A. S., & Peterson, J. (2011). The immediate impact of different
+types of television on young children’s executive function. Pediatrics, 128(4), 644–649. https://​doi.​org/​10.​1542/​peds.​2010-​1919
+Masood, M., & Thigambaram, M. (2015). The usability of mobile
+applications for pre-schoolers. Procedia-Social and Behavioral
+Sciences, 197, 1818–1826.
+McLeod, N., Okon, E. E., Garrison, D., Boyd, D., & Daly, A. (Eds.).
+(2022). Global perspectives of early childhood education: Valuing
+local cultures. Sage.
+
+AI, Brain and Child
+
+(2025) 1:9
+
+Miao, F., Holmes, W., Huang, R., & Zhang, H. (2021). AI and education: A guidance for policymakers. Unesco Publishing.
+Mou, T. Y., Kao, C. P., Lin, H. H., & Yin, Z. X. (2021). From action to
+slowmation: Enhancing preschoolers’ story comprehension ability
+and learning intention. Interactive Learning Environments, 29(8),
+1231–1243.
+Mustafa, M. Y., Tlili, A., Lampropoulos, G., Huang, R., Jandrić, P.,
+Zhao, J., Salha, S., Xu, L., Panda, S., López-Pernas, S., & Saqr,
+M. (2024). A systematic review of literature reviews on artificial
+intelligence in education (AIED): A roadmap to a future research
+agenda. Smart Learning Environments, 11(1), 1–33.
+Narayanan, S., & Potamianos, A. (2002). Creating conversational
+interfaces for children. IEEE Transactions on Speech and Audio
+Processing, 10(2), 65–78.
+Pailian, H., Libertus, M. E., Feigenson, L., & Halberda, J. (2016).
+Visual working memory capacity increases between ages 3 and 8
+years, controlling for gains in attention, perception, and executive
+control. Attention, Perception, & Psychophysics, 78, 1556–1573.
+Pesco, D., & Gagné, A. (2017). Scaffolding narrative skills: A metaanalysis of instruction in early childhood settings. Early Education
+and Development, 28(7), 773–793.
+Phillips-Brown, M., Boulicault, M., Kory-Westland, J., Nguyen, S., &
+Breazeal, C. (2023). Authenticity and co-design: On responsibly
+creating relational robots for children. In M. Ito, R. Cross, K.
+Dinakar, & C. Odgers (Eds.), Algorithmic rights and protections
+for children (pp. 85–121). MIT Press.
+Piaget, J. (1952). The origins of intelligence in children (M. Cook,
+Trans.). Columbia University Press.
+Pimienta, J., Brandt, J., Bethe, T., Holz, R., Continella, A., Jibb, L., &
+Grundy, Q. (2023). Mobile apps and children’s privacy: A traffic
+analysis of data sharing practices among children’s mobile iOS
+apps. Archives of Disease in Childhood, 108(11), 943–945.
+Rowe, M. L. (2012). A longitudinal investigation of the role of quantity
+and quality of child-directed speech in vocabulary development.
+Child Development, 83(5), 1762–1774.
+Rubin, K. H., Bukowski, W., & Parker, J. G. (2006). Peer interactions,
+relationships, and groups. Handbook of Child Psychology, 3(5),
+619–700.
+Ruff, H. A., & Lawson, K. R. (1990). Development of sustained,
+focused attention in young children during free play. Developmental Psychology, 26(1), 85.
+Santos, R. M. S., Mendes, C. G., Marques Miranda, D., & RomanoSilva, M. A. (2022). The association between screen time and
+attention in children: A systematic review. Developmental Neuropsychology, 47(4), 175–192.
+Saye, J. W., & Brush, T. (2002). Scaffolding critical reasoning about
+history and social issues in multimedia-supported learning environments. Educational Technology Research and Development,
+50(3), 77–96.
+Simmering, V. R. (2012). The development of visual working memory
+capacity during early childhood. Journal of Experimental Child
+Psychology, 111, 695–707.
+Stoilova, M., Nandagiri, R., & Livingstone, S. (2021). Children’s
+understanding of personal data and privacy online—A systematic evidence mapping. Information, Communication & Society,
+24(4), 557–575.
+Su, J., Ng, D. T. K., & Chu, S. K. W. (2023). Artificial intelligence
+(AI) literacy in early childhood education: The challenges and
+
+Page 13 of 13
+
+9
+
+opportunities. Computers and Education: Artificial Intelligence,
+4, Article 100124.
+Sweller, J. (2011). Cognitive load theory. In Psychology of learning
+and motivation (Vol. 55, pp. 37–76). Academic Press.
+Tanaka, F., Cicourel, A., & Movellan, J. R. (2007). Socialization
+between toddlers and robots at an early childhood education
+center. Proceedings of the National Academy of Sciences, 104(46),
+17954–17958.
+Tawfik, A. A., & Kolodner, J. L. (2016). Systematizing scaffolding
+for problem-based learning: A view from case-based reasoning.
+Interdisciplinary Journal of Problem-Based Learning, 10(1), 6.
+Thompson, S. D., & Raisor, J. M. (2013). Meeting the sensory needs
+of young children. YC Young Children, 68(2), 34.
+Trawick-Smith, J. (2022). Early childhood development: A multicultural perspective. Pearson. One Lake Street, Upper Saddle River,
+New Jersey 07458.
+UNICEF. (2021). Policy guidance on AI for children (Version 2.0).
+Van de Pol, J., Volman, M., & Beishuizen, J. (2010). Scaffolding in
+teacher–student interaction: A decade of research. Educational
+Psychology Review, 22, 271–296.
+Vygotsky, L. S. (1978). Mind in society: The development of higher
+psychological processes. Harvard University Press.
+Wang, K., Ji, G., & Chen, P. (2024). Study on optimization design of
+user experience of interface icon of science popularization app for
+school-age children based on logistic regression analysis. Scientific and Social Research, 6(12), 351–359.
+Wang, G., Sun, K., Atabey, A., Pothong, K., Lin, G. C., Zhao, J., & Yip,
+J. (2023, April). Child-centred AI design: Definition, operation,
+and considerations. In Extended abstracts of the 2023 CHI conference on human factors in computing systems (pp. 1–6).
+Wang, G., Zhao, J., Van Kleek, M., & Shadbolt, N. (2022, April).
+Informing age-appropriate AI: Examining principles and practices
+of AI for children. In Proceedings of the 2022 CHI conference on
+human factors in computing systems (pp. 1–29).
+Waytz, A., Cacioppo, J., & Epley, N. (2010). Who sees human? The
+stability and importance of individual differences in anthropomorphism. Perspectives on Psychological Science, 5, 219–232.
+https://​doi.​org/​10.​1177/​17456​91610​369336
+Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in
+problem solving. Journal of Child Psychology and Psychiatry,
+17(2), 89–100.
+Wilson, C., Atabey, A., & Revans, J. (2025). Towards child-centred
+AI in children's learning futures: Participatory design futuring
+with SmartSchool and the co-design stories toolkit. International
+Journal of Human-Computer Studies, 103431.
+Wu, K. C., Tang, Y. M., & Tsai, C. Y. (2014). Graphical interface
+design for children seeking information in a digital library. Visualization in Engineering, 2, 1–14.
+Xu, Y., & Warschauer, M. (2019, May). Young children's reading and
+learning with conversational agents. In Extended abstracts of the
+2019 CHI conference on human factors in computing systems (pp.
+1–8).
+Yu, S., Levesque-Bristol, C., & Maeda, Y. (2018). General need for
+autonomy and subjective well-being: A meta-analysis of studies in the US and East Asia. Journal of Happiness Studies, 19,
+1863–1882.
+
+

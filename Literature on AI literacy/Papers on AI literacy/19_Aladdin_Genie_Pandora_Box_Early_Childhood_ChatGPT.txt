@@ -1,0 +1,1020 @@
+Early Education and Development
+
+ISSN: (Print) (Online) Journal homepage: https://www.tandfonline.com/loi/heed20
+
+Aladdin’s Genie or Pandora’s Box for Early
+Childhood Education? Experts Chat on the Roles,
+Challenges, and Developments of ChatGPT
+Wenwei Luo, Huihua He, Jin Liu, Ilene R. Berson, Michael J. Berson, Yisu Zhou
+& Hui Li
+To cite this article: Wenwei Luo, Huihua He, Jin Liu, Ilene R. Berson, Michael J. Berson, Yisu
+Zhou & Hui Li (15 May 2023): Aladdin’s Genie or Pandora’s Box for Early Childhood Education?
+Experts Chat on the Roles, Challenges, and Developments of ChatGPT, Early Education and
+Development, DOI: 10.1080/10409289.2023.2214181
+To link to this article: https://doi.org/10.1080/10409289.2023.2214181
+
+Published online: 15 May 2023.
+
+Submit your article to this journal
+
+Article views: 946
+
+View related articles
+
+View Crossmark data
+
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=heed20
+
+EARLY EDUCATION AND DEVELOPMENT
+https://doi.org/10.1080/10409289.2023.2214181
+
+Aladdin’s Genie or Pandora’s Box for Early Childhood Education?
+Experts Chat on the Roles, Challenges, and Developments of
+ChatGPT
+Wenwei Luoa, Huihua Hea, Jin Liub, Ilene R. Bersonc, Michael J. Bersonc, Yisu Zhoud,
+and Hui Li a,e
+a
+
+Shanghai Institute of Early Childhood Education, Shanghai Normal University; bCollege of Information Engineering,
+Shanghai Maritime University; cCollege of Education, University of South Florida; dFaculty of Education, University of
+Macau; eSchool of Education, Macquarie University
+ABSTRACT
+
+Research Findings: This study aims to explore the optimal roles, pressing
+challenges, and future developments of ChatGPT in early childhood educa­
+tion (ECE) by interviewing six expert professors from China and the United
+States. A content analysis approach that combined inductive and deductive
+coding was employed to analyze the transcribed interviews. The findings of
+this study revealed two primary roles of ChatGPT in ECE: (1) conversational
+agent for young children and (2) on-call facilitator for educators and care­
+givers. The challenges and risks associated with ChatGPT were categorized
+using the ”3A2S” framework, which includes Accessibility, Affordability,
+Accountability, Sustainability, and Social Justice. The participants suggest
+that as knowledge, information retrieval, and integration skills become less
+critical, human agency and inquiry ability become more important. As a
+result, they predict that ChatGPT's future trajectory should be as a resource
+for Intelligence Augmentation (IA) rather than as a replacement for the
+actions of educators and caregivers. Furthermore, AI opens new domains in
+ECE, such as AI literacy and AI social interaction, paving the way for novel
+opportunities and challenges in the field. Practice or Policy: This study con­
+tributes to the ongoing discourse on integrating AI technologies in ECE and
+offers valuable suggestions for policymakers, educators, and caregivers.
+
+The launch of ChatGPT in early 2023 changed the world overnight and dramatically provoked public
+interest and global concerns about the application of artificial intelligence (AI) in the education sector
+(Chen & Lin, 2023; Dwivedi et al., 2021; Su & Yang, 2023). This “ChatGPT Tsunami” has ignited our
+hope for better education assisted by AI and awakened our fear of its uncertain impact on teachers and
+learners. Optimists would underscore the fact that ChatGPT excels in tasks such as answering
+questions and composing text and demonstrates a powerful capacity for intelligent conversation in
+educational contexts (Dowling & Lucey, 2023; Mhlanga, 2023; Tate et al., 2023; Warr et al., 2023). This
+is because ChatGPT could thoroughly enhance human education by offering personalized and
+responsive AI support to learners and teachers (Atlas, 2023; Baidoo-Anu & Ansah, 2023; Opara
+et al., 2023) such as providing instant feedback, answering questions, and supplying resources
+(Opara et al., 2023), marking assignments, and planning lessons (Cooper, 2023; Kasneci et al.,
+2023). In contrast, pessimists tend to highlight its negative impacts on learning and teaching at all
+levels, such as the proliferation of false information and biased viewpoints, violations of academic
+integrity, loss of jobs, and further disparities in access that expand the digital divide (Communication
+CONTACT Hui Li
+philip.li@shnu.edu.cn; philip.li@mq.edu.au
+Shanghai Institute of Early Childhood Education, Shanghai
+Normal University, Room 512, Jiaoyuan Building, 100 Guilin Road, Shanghai 200234, China
+© 2023 Taylor & Francis Group, LLC
+
+2
+
+W. LUO ET AL.
+
+with Bing’s ChatGPT 4, April 25, 2023). To inform the following steps, empirical evidence is necessary.
+This study draws on in-depth interviews with six experts to understand the optimal roles, pressing
+challenges, and future developments of ChatGPT in early childhood education.
+The Benefits of Integrating ChatGPT in Education
+ChatGPT presents tremendous opportunities in the field of education (Kasneci et al., 2023; Su & Yang,
+2023; Yan, 2023) that could be seized and capitalized to facilitate learning and teaching, respectively.
+First, ChatGPT offers a wealth of opportunities for learning enhancement across all education levels,
+catering to unique individual preferences, abilities, and needs (Kasneci et al., 2023; Su & Yang, 2023). It
+may facilitate personalized learning experiences, supporting students in various aspects, such as
+developing reading, writing, and critical thinking skills (Atlas, 2023; Baidoo-Anu & Ansah, 2023;
+Opara et al., 2023). Its large language models (LLMs) can aid in developing reading and writing skills
+in primary school students; benefit secondary school students by tailoring practice problems, quizzes,
+and problem-solving exercises; and leverage university students with better research and writing tasks
+(Kasneci et al., 2023). Moreover, LLMs can empower learners with disabilities through speech-to-text
+and text-to-speech integrations, providing inclusive learning strategies with appropriate support
+(Kasneci et al., 2023). This has empowered ChatGPT to provide personalized support for students
+of different ages and backgrounds. As Mhlanga (2023) points out, ChatGPT can design educational
+plans and resources based on students’ language levels and subject characteristics, offering tailored
+learning support. In addition, ChatGPT can adjust learning plans and course content according to
+students’ learning history and performance, further assisting their learning journey (Qadir, 2022).
+Second, ChatGPT also presents remarkable instruction opportunities, potentially revolutionizing
+teaching practices and pedagogic approaches (Opara et al., 2023). For instance, by enabling the
+creation of personalized learning experiences and tailored feedback, ChatGPT can alleviate teachers’
+burdens and provide timely guidance for students to better grasp concepts and skills (Rospigliosi,
+2023). Additionally, LLMs can automatically create teaching materials such as exercises, presentations,
+and courseware, leading to increased efficiency in the teaching process (Rospigliosi, 2023).
+Furthermore, ChatGPT can also generate study notes and knowledge summaries, offering students
+a more comprehensive and diverse range of learning resources (Warr et al., 2023). Regarding
+assessment, ChatGPT can automatically evaluate student work and responses, providing feedback
+and suggestions that reduce teachers’ workload (Opara et al., 2023). This real-time feedback and
+guidance not only help students grasp key concepts and skills more effectively but also enable teachers
+to focus on other aspects of instruction that require their expertise (Baidoo-Anu & Ansah, 2023).
+Overall, applying ChatGPT in teaching practices can lead to more efficient and effective educational
+experiences, strengthening teachers’ capacity and professionalism when used responsibly and sensibly.
+The Challenges of Integrating ChatGPT in Education
+Applying ChatGPT will challenge educational settings in the following domains: ethical and social
+concerns, technical limitations and reliability, and human involvement and oversight. First, every
+adoption of new technology is accompanied by ethical and social concerns, and ChatGPT is no
+exception (Kasneci et al., 2023; Mhlanga, 2023). Recent studies have reported its ethical and social
+challenges in educational contexts (Berson & Berson, 2023; Halaweh, 2023; Su & Yang, 2023; Tate
+et al., 2023). The necessity for a significant amount of training data to ensure precise outputs (Yan,
+2023) has brought about questions regarding the quality and inclusiveness of the data. This has
+resulted in ethical concerns regarding potential biases in the training data and their impact on the
+accuracy of the resulting outputs (Mhlanga, 2023; Su & Yang, 2023). In addition, many universities
+have expressed their concerns about plagiarism and academic integrity issues, as students might
+misuse these tools to complete assignments or assessments without fully understanding the concepts
+(Rudolph et al., 2023). Furthermore, accessibility and the digital divide pose a challenge, as not all
+
+EARLY EDUCATION & DEVELOPMENT
+
+3
+
+students may have equal access to advanced AI technology, exacerbating existing inequalities in
+education (Iskender, 2023; Kasneci et al., 2023).
+Moreover, the technical limitations and reliability issues also present significant challenges for
+ChatGPT in education. Ensuring the accuracy and dependability of AI-generated responses is essen­
+tial, particularly as ChatGPT may struggle to understand students’ questions (Iskender, 2023) or may
+inadvertently learn incorrect information (Rudolph et al., 2023). Privacy and data security are also
+paramount, as sensitive student information must be safeguarded from potential breaches (BaidooAnu & Ansah, 2023). Additionally, the growing dependence on technology in education raises
+concerns about students’ ability to develop problem-solving skills and critical thinking without over­
+reliance on AI assistance (Kasneci et al., 2023).
+Last but not least, the need for continuous human involvement and oversight remains a critical
+challenge in implementing ChatGPT in educational settings. For instance, teachers must monitor and
+guide the AI tool to ensure it continuously learns and adapts to different subjects and educational
+scenarios (Iskender, 2023) while possessing sufficient language understanding and knowledge storage
+to handle various questions and situations (Kasneci et al., 2023). This emphasizes the importance of
+not replacing human educators with AI tools but instead integrating these technologies as
+a supplement to enhance and support the educational experience. The balanced and responsible use
+of ChatGPT and similar AI tools can lead to more effective and inclusive learning environments while
+mitigating potential drawbacks (Chen & Lin, 2023).
+The Objectives of This Study
+Currently, there is limited evidence about the roles and functions of ChatGPT in the education field,
+with most studies being conceptual and lacking empirical research. Among the few existing empirical
+studies, some have investigated its application in various subjects and grade levels. Although current
+ChatGPT studies, such as Cooper (2023) on science education and Atlas (2023) on higher education,
+have explored the application of LLMs from both student learning and educator teaching perspectives,
+there remains a scarcity of research on their use in early childhood education (ECE). However, prior
+research on AI integration in early childhood education has demonstrated its usefulness and potential
+benefits in various aspects (Chen & Lin, 2023; Su et al., 2023). AI enables tailored learning by utilizing
+algorithms that analyze each child’s performance, capabilities, learning preferences, requirements, and
+pace, providing customized learning experiences that address the child’s unique developmental needs
+(Devi et al., 2022; Su & Yang, 2022). Furthermore, AI facilitates individualized, interactive support
+through intelligent toys designed to recognize and respond to the child’s speech or inquiries, fostering
+learning opportunities not available in conventional education (Kewalramani et al., 2021; Williams
+et al., 2019). AI also enhances access to a broader range of learning experiences, as AI-powered
+assistive technologies, such as speech-to-text, text-to-speech, and automatic speech recognition, offer
+educational support for children with special needs or learning difficulties (Chen & Lin, 2023; Slavuj
+et al., 2015). These findings imply that AI technologies, like ChatGPT, could be promising in the realm
+of early childhood education. In addition, ECE has unique characteristics compared to other age
+groups, including, but not limited to, the integration of learning content within a preschooler’s daily
+life without clear subject boundaries; learning predominantly through play; and teaching encompass­
+ing not only formal schooling but also a significant portion of family education (Li & Chen, 2023).
+Exploring ChatGPT’s potential in this distinct age group is undoubtedly a valuable avenue for further
+research. Therefore, this study is dedicated to exploring the optimal roles and functions of ChatGPT in
+ECE, addressing its associated challenges and risks, and anticipating its future development. In
+particular, the following research questions guided this study:
+(1) What are the optimal roles and functions of ChatGPT in the ECE sector?
+(2) What are the main challenges and risks of ChatGPT for ECE?
+(3) What are the likely developmental trajectories for ChatGPT in ECE?
+
+4
+
+W. LUO ET AL.
+
+Methods
+Expert Interview Method
+A qualitative approach, the expert interview method, was employed to address the posed research
+questions in this study. The expert interview method is a widely adopted research technique and is
+capable of exploring or acquiring knowledge about specific areas of action (Döringer, 2021). This is
+because an expert possesses technical, procedural, and interpretive knowledge in a specialized field
+(Littig & Pöchhacker, 2014). Consequently, experts, as individuals engaged in the societal and political
+aspects of life, often possess unique insights into particular issues or events (Littig, 2011). Moreover,
+leveraging their expertise enables tackling fundamental challenges encountered in social science
+research (von Soest, 2023). Therefore, the present study interviewed renowned experts from diverse
+institutions, countries, and regions to explore the practical perspectives on ChatGPT and ECE
+development from various standpoints.
+Participants
+To ensure the selection of representative cases, this study employed a purposive sampling method
+(Suri, 2011) to choose participants who are education and technology professors working in China and
+the United States and have used ChatGPT for more than two months. Accordingly, a convenience
+sampling approach (Tracy, 2019) was utilized to select six experts (see Table 1) for individual inter­
+views from four universities in China and USA by leveraging the researchers’ interpersonal network.
+Expert participants were chosen based on their expertise in ECE and their knowledge of artificial
+intelligence, which facilitated a more comprehensive exploration of the intersectional role of ChatGPT
+in early childhood development. All six experts were informed of the purpose and nature of the study
+before the interview and voluntarily agreed to participate. Since the experts reside in various countries
+and regions, one-on-one online interviews were conducted with each of them at different times to
+accommodate their schedules. This approach not only ensured the diversity of perspectives but also
+allowed for a thorough examination of the potential and challenges of ChatGPT in the context of early
+childhood education.
+Interview Protocol
+This study conducted semi-structured interviews focusing on the overarching question: “How can the
+roles and functions of ChatGPT in early childhood education be optimized while addressing potential
+challenges, risks, and future developments to ensure its effectiveness?” The interview protocol was
+Table 1. Basic information about the experts.
+Name
+Professor
+P
+
+Title
+Dean & Chair
+Professor
+
+Professor
+H
+Professor
+J
+Professor
+Y
+Professor
+I
+
+Vice Dean
+
+Professor
+M
+
+Research field
+Digital Transformation in Early Childhood Education; Educational Policy; Early
+Childhood Education; Curriculum Theory; Pragmatics; Psycholinguistics; Cognitive
+Psychology
+Digital Parenting; Digital Pedagogy; Early Childhood Mathematics Education
+
+Location
+Shanghai,
+China
+
+Shanghai,
+China
+Secretary
+Computer Science and Technology; Communication and Information Engineering
+Shanghai,
+General
+China
+Course Director Sociology of Education; Education Policy; Teacher Education; Comparative Education Macau,
+China
+Chair Professor Technological Innovation in the Early Years; Global Child Advocacy; Visual Research Florida,
+Methods in Education; Digital Cybersecurity in Schools
+United
+States
+Chair Professor Social Studies Education; Civic Education; Technological Innovation; Digital
+Florida,
+Citizenship/Cybersecurity in Schools; Teacher Education
+United
+States
+
+EARLY EDUCATION & DEVELOPMENT
+
+5
+
+emailed to each participant one week before the interview so they could be prepared for the interview.
+Then, the first author individually conducted web-based interviews using video conferencing software
+with six participants. These interviews ranged from 45 to 79 minutes, with an average length of 65
+minutes.
+Interviews with the four Chinese participants were conducted in their native language –
+Mandarin, while interviews with the two American participants were conducted in English.
+Following the interviews, all six conversations were recorded and transcribed verbatim. Since the
+participants and the authors were proficient in Mandarin and English, the initial coding process
+was carried out separately for each language, closely adhering to the data (van Nes et al., 2010).
+Subsequently, the Mandarin data were translated into English by four native Chinese speakers, and
+an external translator verified the translations to enhance rigor. This research received ethical
+approval from the first author’s university, and all participants’ names are pseudonyms to protect
+their identities.
+Data Analysis
+The research team employed a content analysis approach (Saldaña, 2021) to analyze the inter­
+view data, incorporating inductive and deductive coding methods. MAXQDA 2022 software was
+used to facilitate a four-phase data coding approach, enhancing the analysis process’s accuracy
+and reliability. In the first phase, the authors thoroughly read and reread the text data to
+familiarize themselves with the content. During the second phase, key themes emerging from
+the data were identified, and the third phase involved highlighting representative units of
+information that best exemplified the identified themes. The fourth and final phase saw the
+authors generating, selecting, or grouping categories using similar codes derived from the textbased data. The first author completed the four-phase data coding and the second author went
+through the coding results thoroughly and independently. They discussed the discrepancies,
+refined the codes accordingly, confirmed the final version with 100% agreement, indicating
+a satisfactory inter-coder reliability.
+Initially, the data were organized based on inductive analysis. In the interview, one participant
+adopted the “3A2S” (Accessibility, Affordability, Accountability, Sustainability, and Social Justice)
+framework (Xie & Li, 2020) to analyze the theme of ChatGPT’s challenges in early childhood
+education. During the data analysis period, the first and second authors found that this framework
+fitted the theme perfectly. Therefore, the research team decided to employ the “3A2S” framework to
+deductively sort and align the codes accordingly. This comprehensive and rigorous approach to data
+analysis ensured that the research findings were grounded in empirical data while also making
+connections to frameworks (Mayring, 2014). Table 2 outlines the sorting and coding stages, showcas­
+ing the culmination of the coding process, which resulted in the final coding scheme based on an
+integration of inductive and deductive analyses (Saldaña, 2021).
+A peer debriefing approach was employed to guarantee the reliability and credibility of the analysis
+of coding results (Creswell & Creswell, 2017; Lincoln & Guba, 1985). In addition, four scholars,
+including the two authors and two external researchers, collaborated to ensure the accuracy of the
+analysis and verify the translation into English. Subsequently, the last author conducted an inquiry
+audit (Creswell & Creswell, 2017) to provide an additional review, further confirming the trustworthi­
+ness of the results.
+
+Findings and Discussion
+In response to the three research questions, our study presents the findings based on expert opinions
+in a comprehensive manner, divided into three sections: (1) Multiple Roles and Functions; (2)
+Potential Challenges and Risks based on the “3A2S” framework; and (3) Perspectives on the Future:
+AI or IA?
+
+6
+
+W. LUO ET AL.
+
+Table 2. Coding scheme.
+First level code
+Multiple Roles and Functions
+
+Potential Challenges and Risks based on
+“3A2S”
+
+Perspectives on the Future: AI or IA?
+
+Second level code
+Third level code
+Conversational Agent to young children Contextual language development
+Conversational social skills
+On-call Facilitator to Educators and
+Constantly on-call assistant for teachers
+Caregivers
+Constantly at-the-ready consultant for
+parents
+Accessibility
+Access permission
+Young children’s access
+Affordability
+Business profitability
+User affordability
+Accountability
+Human becomes filters
+Change in assessment
+Sustainability
+Learning motivation
+Problem-solving range in limit
+Social justice
+ChatGPT divide
+Ethical concerns
+Less important knowledge and skills
+Factual knowledge.
+Basic information retrieval and integration
+skills
+More important knowledge and skills
+Human agency
+Inquiry ability
+Opening of new domains
+AI literacy
+Al social interaction
+Rebuilding digital ecology
+
+The Multiple Roles and Functions of ChatGPT
+This section delves into ChatGPT’s roles and functions for young children and educators or caregivers,
+providing insights into its impact on early childhood education.
+Conversational Agent for Young Children
+All experts emphasized the role of ChatGPT in fostering contextual language development and
+enhancing conversational social skills for young children from various angles, acting as
+a conversational agent with several key functions.
+To begin with, ChatGPT can provide age-appropriate conversations for young children. As
+Professor I mentioned, “ChatGPT can explain concepts or words to children in a way they can
+understand, adjusting explanations for different ages, such as a five-year-old, an eight-year-old,
+and a twelve-year-old.” Meanwhile, ChatGPT can offer suitable conversation formats for young
+children. For instance, Professor M described how ChatGPT could create a story in the style of
+a famous children’s author, like Dr. Seuss, to help a child overcome their fear of a first airplane
+trip.
+Moreover, ChatGPT tirelessly answers children’s questions, catering to their curiosity. As Professor
+P explained, “Children are natural questioners. Unlike parents or teachers who might become
+frustrated after answering numerous questions, ChatGPT never gets tired or annoyed. Instead, it
+greatly satisfies children’s curiosity, encouraging their love for asking questions, especially with the
+development of voice-input interactions.” In addition, as Professor H pointed out, “ChatGPT can
+provide children with necessary feedback and assistance anytime, anywhere. This real-time feedback is
+akin to having an adult (agent) by the child’s side, ready to answer questions, engage in discussions, or
+even participate in debates at any moment.”
+Furthermore, ChatGPT contributes to the enhancement of conversational social skills. Through
+interactive conversations, children can learn social cues, etiquette, and empathy, which are essential
+for effective communication in real-life situations. As Professor I mentioned, “When discussing
+ChatGPT’s role in social-emotional learning, we have seen opportunities to develop ‘social stories.’
+These stories, generated by ChatGPT, help teach children social skills. Sometimes, we even use them to
+create individual storybooks for children, which serve as reminders for self-regulation development.”
+
+EARLY EDUCATION & DEVELOPMENT
+
+7
+
+On-Call Facilitator for Educators and Caregivers
+All experts emphasized the “facilitator” role of ChatGPT for educators and caregivers, noting that
+while ChatGPT serves as a conversational partner and agent for young children, it acts as a 24-hour
+on-call facilitator for early childhood educators and caregivers. For educators, such as teachers,
+ChatGPT functions as an intelligent assistant. For caregivers, like parents, it acts as a constantly atthe-ready consultant.
+Constantly On-Call Assistant for Educators. For educators such as preschool teachers, experts
+discussed the various functions of ChatGPT as an intelligent assistant. One of the primary uses they
+highlighted was that ChatGPT can act as a helpful assistant that is always available to teachers. For
+example, ChatGPT can provide additional content knowledge to supplement teachers’ knowledge. As
+Professor M mentioned:
+One of the biggest concerns I’ve had ever since I started is that my students (pre-service teachers) don’t know
+much about content knowledge to teach children, like history or geography. So, I’d rather have them go to
+ChatGPT to help double-check what they’re thinking instead of making up something on their own and getting it
+wrong. I’m not saying that ChatGPT is always right. But it might help them with their content knowledge.
+
+Professor Y highlighted, “ChatGPT’s three main features are automation, search, and humancomputer interaction. However, the greatest innovation for school education in the short term is its
+ability to produce diverse content, as the biggest need for many early childhood teachers is knowl­
+edge.” He further explained, “Teachers may have studied professional subjects but may lack in-depth
+knowledge to handle daily issues. ChatGPT can provide great convenience.” He also emphasized the
+benefits of ChatGPT’s speed in consolidating information, saying, “Its ability to generate content faster
+and create diverse content is impressive, something an individual teacher might struggle with.” As
+Professor P succinctly put it:
+ChatGPT allows every early childhood teacher to stand on the shoulders of experts, turning each one into an
+expert themselves. You can ask it any question; although its knowledge is limited to 2021, it possesses a wealth of
+information on early childhood education up to that point.
+
+Additionally, ChatGPT can help reduce daily workload and increase teaching efficiency. Professor
+P emphasized its role in assisting with lesson preparation, saying, “It can save teachers time by
+providing them with valuable resources and information.” Professor I provided a detailed example
+of how ChatGPT can generate lists of common misconceptions for teachers to address, explaining that
+it can “save them time and allow them to focus more on planning their instruction.” Then, ChatGPT
+can support teaching by generating new ideas and strategies. Professor Y suggested that it can “serve as
+a heuristic method for teachers in the classroom,” while Professor M envisioned it playing a role in the
+form of a generative AI device like an Echo Dot, used under teacher supervision, asserting that it
+“could be a valuable addition to the classroom for classroom management and guidance.” Professor
+I highlighted that ChatGPT could help teachers with predictive grouping, stating, “Imagine collecting
+data on students, and you want to identify those who enjoy soccer in a class of 20. ChatGPT can
+quickly analyze the data, allowing for preplanning and related activities. We haven’t done enough
+experimentation with this yet.” This suggests that there is considerable potential for further explora­
+tion of ChatGPT’s assistance in teaching. In addition, ChatGPT can help with administrative tasks.
+Professor J mentioned how it can assist with mundane tasks like organizing and summarizing
+materials, stating, “It can help teachers keep track of their resources and make better use of them.”
+Professor H noted that it can also help managerial staff with tasks such as generating notices and
+regulations, asserting that “ChatGPT can streamline many administrative processes.”
+Moreover, ChatGPT can help teachers provide personalized and individualized guidance to young
+children. For example, it can deliver tailored teaching based on a child’s interests, as Professor
+I illustrated: “Suppose you met a little boy in class who was really excited about airplanes but had
+a hard time keeping their attention. ChatGPT can create an engaging airplane adventure story to help
+
+8
+
+W. LUO ET AL.
+
+teach the child self-control.” Furthermore, ChatGPT can address the conversational needs of children
+from families with special requirements, such as multilingual households, and facilitate dialogue
+between homes and schools. As Professor M mentioned, “We find that ChatGPT allows teachers to
+translate content into home languages, making it more accessible, which is relevant in our context.”
+Professor I also highlighted this potential, stating, “If a preschool class in Shanghai connects with
+a class in Florida, and a teacher wanted to teach the children to say ‘good morning,’ ChatGPT could be
+used to generate the phrases and language needed, working in a translational space.”
+Lastly, by relieving some of the pressures early childhood teachers face, ChatGPT enables them to
+devote more time to enhancing their soft skills. Professors I and M saw ChatGPT as an assistant that
+could help teachers focus on what really matters in their classrooms. Professor I explained how
+ChatGPT can allow teachers to spend more time considering differentiating learning, saying that “it
+frees up time for teachers to develop more effective learning strategies.” Professor M likened it to
+having a teacher’s assistant with “superpowers,” adding that “it can help teachers manage their
+workload more effectively.”
+Constantly At-The-Ready Consultant for Caregivers. For caregivers such as parents, ChatGPT serves
+as a constantly available consultant, offering a personal touch for parents to support their children’s
+learning at home. Professor H said, “ChatGPT can help parents support their children’s learning at
+home by providing resources, answering questions, and offering guidance on various educational
+topics, fostering a supportive home learning environment.”
+ChatGPT can be a valuable tool in helping parents communicate with their young children,
+especially for those who may struggle with this task. As Professor I elaborated:
+There are many parents who struggle with talking to their kids, even though they may excel in their own
+professions. They might not know how to engage with their four or five-year-old child. ChatGPT, acting as an AI
+agent, can help facilitate conversations between parents and children, similar to how family counselors teach
+parents how to communicate with their kids. When used appropriately, it can be a powerful resource for parental
+training and fostering meaningful conversations between parents and children.
+
+Professor P believed ChatGPT to be a valuable assistant for parents, providing expert advice at their
+fingertips. “ChatGPT offers on-demand expertise, giving parents answers to their questions, even if
+they may not be able to judge the authenticity of the responses.” Professor P also suggested that
+caregivers could benefit from a guidebook of prompts for using ChatGPT with children aged zero
+to six.
+In summary, whether it is helping children, teachers, or parents, ChatGPT essentially promotes
+a shift in the educational model, adapting to digital transformation and moving from the traditional
+“adult-child” binary structure to an “adult-child-AI” tripartite structure. This technology-empowered
+tripartite structure has the potential to enhance the effectiveness and efficiency of early childhood
+education.
+The “3A2S” Challenges and Risks
+As mentioned earlier, the potential challenges and risks of ChatGPT could be framed into the “3A2S”
+framework, which encompasses five key aspects.
+Accessibility
+Access Permission. Professors P, H, and J all mentioned the issue of access permission. Professor
+J pointed out that “the impact on China is relatively small for now because, for various reasons, we
+cannot use this product; we don’t have access permission.” Professor H added, “China is blocked as
+a whole, but some universities, regions, and countries have chosen to ban its use within certain scopes
+due to concerns about its effects on students’ performance or other factors.” Professor P further
+explained, “Because accessibility divides the world into two groups: those who can use ChatGPT and
+
+EARLY EDUCATION & DEVELOPMENT
+
+9
+
+those who cannot. Those who can are the successful group, while those who can’t are the losers.
+Revolutionary technologies create this divide, and whether or not one can access them is a challenge
+and issue.”
+Young Children’s Access. For those who can access the technology, experts shared concerns about
+young children using ChatGPT due to their age. To begin with, at its current stage, GPT requires
+precise input while young children are still developing their language skills. As Professor I explained:
+This is an interesting point concerning children, as we don’t see ChatGPT as a technological tool that is
+necessarily appropriate for young children at this time. It is a language tool and resource that relies on the
+precision of the prompts you input, so you have to be quite skillful. Even adults sometimes struggle to
+communicate with ChatGPT to obtain the information they hope for. So, for children whose language might
+not be their best modality for communication, they are still developing their language skills.
+
+Moreover, young children need to develop their imagination before using technology. Professor
+M asserted, “We all think that before children necessarily begin utilizing generative forms of artificial
+intelligence, like ChatGPT, they themselves should be having opportunities to learn how to develop
+their creative potential and their own sense of imagination.” Additionally, young children should not
+become overly reliant on AI and should establish critical thinking skills. As Professor I explained, “We
+don’t want children at a very young age to become overly trusting of the technology of the artificial
+intelligence. . . because young children don’t yet have the capacity to do those things without guidance
+and support.” Lastly, children may lack the background knowledge needed for high-quality interac­
+tions with ChatGPT. Professor M mentioned, “The more contextual knowledge you have, the better
+the responses you’re going to have from ChatGPT, so there’s an expectation.”
+In summary, the potential challenges and risks associated with ChatGPT’s accessibility are multi­
+faceted, particularly when considering its use among young children who are still developing their
+language skills and facing other obstacles.
+Affordability
+Business Profitability. It is essential to balance the costs associated with AI development and
+implementation with the need to maintain affordable access to AI tools for educational institutions
+and users. As Professor J explained:
+Technically, it is possible to achieve high computational power and fast response times. However, doing so would
+require a significant financial investment. The challenge for businesses is to strike a balance between the necessary
+computational power and the financial resources required to provide it. Therefore, it is fundamentally a question
+of affordability.
+
+In this quote, Professor J highlighted the importance of considering affordability when dealing with
+the costs associated with AI development and implementation, emphasizing that businesses must find
+the right balance between investing in computational power and ensuring accessibility for users.
+User Affordability. Ensuring that the cost of using ChatGPT does not create a barrier for schools,
+educators, and families who wish to integrate it into their early childhood education programs is
+essential. Professor P stated, “It is important to ensure that the cost of using ChatGPT does not create
+a barrier for schools, educators, and families.” Similarly, Professor Y emphasized, “We need to
+consider the economic barriers that may prevent some families or schools from accessing AI tools
+and develop strategies to ensure that cost does not limit access to quality education.”
+Accountability
+Human as Filters. Professor M emphasized the importance of human intervention and high­
+lighted that, under the aspect of accountability, adults are the responsible parties for ChatGPT in
+ECE. He stated, “Human beings should be the filter for ChatGPT, particularly when it comes to
+young children.” He explained that although children are born skeptics, the power of new
+
+10
+
+W. LUO ET AL.
+
+technologies like generative AI can make it difficult for them to maintain skepticism. Professor
+M emphasized the need for teachers to exercise common sense when using such tools and
+highlighted the importance of teaching children early on how to interact with these technologies
+appropriately.
+ChatGPT is known for generating fabricated answers, fake references, and nonexistent names.
+Moreover, it has been criticized for generating biased and discriminatory content. Professor
+I expressed this concern, saying,
+One of the issues with ChatGPT and other generative AI is that they produce content that perpetuates certain
+biases and prejudices. These AI models learn from the content available on the Internet, which can be proble­
+matic due to the inherent biases and perspectives it contains. There is a need to find ways to safeguard children
+from such content and prevent its dissemination.
+
+Professors J and Y both acknowledged that the issue of falsehood in ChatGPT-generated content
+could not be fundamentally resolved with recent technological innovations. Professor
+J explained,
+ChatGPT is a generative model, meaning that it predicts and generates answers based on the vast amounts of
+language data it has been trained on. It does not have a mechanism for checking the truthfulness or accuracy of its
+output, so it is not really a matter of whether it is fabricating information or not. To address the issue of veracity,
+another model would be needed to evaluate the authenticity and accuracy of ChatGPT’s output, which is
+a separate task.
+
+Both Professor J and Professor Y highlighted the limitations of ChatGPT’s technology at this time.
+Professor Y elaborated, “There is a contradiction in the current state of technology where
+a language model must be both creative and precise in citing sources. It cannot achieve both
+simultaneously.” To address these concerns, adults should progressively assist young children in
+devising tactics for determining when AI is being deceptive. Professor H emphasized this point,
+asserting, “It’s vital for adults to mentor children in creating methods to detect AI-generated
+inaccuracies.”
+Change in Assessment. Regarding accountability in evaluating quality, ChatGPT has emerged as
+a critical factor in transforming the educational landscape. Considering the need for change in
+assessment due to ChatGPT’s emergence, Professor I explained, “As the ‘genie is out of the bottle,’
+we must recognize ChatGPT as a resource for students, just like calculators and the Internet, and adapt
+our educational contexts accordingly.” The negative consequences of ChatGPT’s emergence, such as
+students cheating or finding shortcuts, are concerns raised by Professor Y. However, Professor
+H suggested, “The appearance of negative issues, like students using ChatGPT for assignments and
+exams, should not cause excessive panic. On the contrary, the occurrence of such situations is an
+excellent opportunity for us to reflect on, improve evaluation methods, and strengthen educational
+management.”
+Experts believed there might be three potential strategies for addressing the changes in assessment
+methods brought about by ChatGPT. One approach, as described by Professor Y, is to completely
+isolate AI by returning to traditional pen-and-paper exams. Professor J concurred, asserting that
+“ChatGPT is like a very smart tutor, but it can’t help you during the exam.”
+Another tactic entails concentrating on areas where current AI technology falls short, such as
+answering context-specific questions, as mentioned by Professor Y. Professor H also advocated for
+examining “human strengths through machine weaknesses.” What is more, Professor P proposed
+a “reverse evaluation” approach. He suggested:
+I even had a whimsical idea to ban ChatGPT, like some universities or as if taming a ferocious beast. Some
+teachers worry about how to assess with ChatGPT, but if you ask me, I’d create an exam with a single question:
+‘Please ask ChatGPT three questions.’ I don’t need the answers; I just want you to present the questions and
+explain why you chose them. We could even base future assessments on ChatGPT’s responses and ask students to
+consider what follow-up questions they should ask.
+
+EARLY EDUCATION & DEVELOPMENT
+
+11
+
+Lastly, Professor Y proposed a human-AI collaboration, where students interact with AI to answer
+questions and solve problems. He mentioned, “This method, somewhat similar to computerized
+testing, has been employed in the assessment field for quite some time.”
+While experts have yet to determine a definitive direction for the future of assessment reform, it is
+clear that from an accountability standpoint, the emergence of ChatGPT will expedite the transforma­
+tion of the current assessment system, gradually shifting the focus from knowledge-based evaluation to
+a more comprehensive system.
+Sustainability
+Sustainability is an important aspect to consider when discussing ChatGPT. There are concerns about
+whether it can sustainably support all countries and regions. Professor P mentioned, “With our large
+population if ChatGPT were accessible to 1.4 billion people in China, its supercomputing capabilities
+might collapse due to overload.” Sustainability also manifests in two other aspects: maintaining
+children’s learning motivation and the boundaries of ChatGPT’s problem-solving capabilities in
+early childhood education.
+Learning Motivation Problem. Professor Y raised concerns about students losing motivation if they
+can easily find answers: “If students can easily find answers, their motivation to attend classes might be
+affected.” He further explained that ChatGPT is a powerful summary machine for acquiring knowl­
+edge. Professor H agreed, stating, “ChatGPT’s precise answers may diminish children’s self-initiative
+and weaken their learning motivation.”
+However, Professor J had an opposing view, believing that the decline in learning enthu­
+siasm is unrelated to ChatGPT. Instead, if properly guided, it may maintain and stimulate
+learning enthusiasm. He explained, “I personally think that with a good AI tutor, learning
+enthusiasm might not necessarily decrease. It depends on the teacher and their ability to
+provide engaging tasks and methods, which may even increase young children’s learning
+motivation.”
+Problem-Solving Range in Limit. Regarding problem-solving depth, experts commented that
+ChatGPT’s current content depth could provide a solid foundation but could not exceed that. As
+Professor P explained:
+It offers answers, ensuring teachers and some experts are on the similar level. This raises the baseline, elevating
+everyone to a higher normal level. However, it cannot excel, as surpassing the level of these individuals is not
+possible. AI brings benefits to early childhood curriculum, teaching, and teacher competence. When asked about
+enhancing preschool teachers’ competence, ChatGPT delivers professional answers, but not highly creative or
+high-end. To attain a top expert level, creativity and distinctive insights are necessary. My perspectives differ from
+the mainstream, which is something ChatGPT can’t achieve. It can guarantee a baseline but cannot excel.
+Dialectical thinking is another aspect, and though it’s worth exploring, its limitations stem from its database.
+Reaching top expert level is impossible for it, but it can create, catch up, and learn, leading to rapid development.
+
+From a sustainability perspective, the boundary of AI is that it can only assist humans and cannot
+replace them. For young children, AI should not directly impact them but can only operate through
+adult intermediaries. Technically, Professor J believed that technology would not be able to achieve full
+interactivity in the short term, nor could it replace direct interactions such as parent-child and teacherchild interactions. He stated:
+ChatGPT4 is multimodal but has limitations due to our innate human interactions. It’s challenging for machines
+to learn and replicate human senses, as they perceive the world differently. Current models don’t account for
+factors like hormones, making it difficult for them to mimic humans. Advancements in technology and under­
+standing human cognition could help, but this generation of conversational robots isn’t there yet. The next
+generation may achieve this, but the timeline is uncertain.
+
+Regarding interactions between young children, Professor J said:
+
+12
+
+W. LUO ET AL.
+
+It can simulate a peer, but a very dull, monotonous, and cold one. Even if it can say something that seems humanlike, it lacks other interactions, only offering natural language exchanges. I think the impact on children’s
+development is significant, and I strongly advise against using such robots for excessive communication with
+children. It’s like putting a human child among wolves – it’s not a good idea. AI can assist humans but cannot
+replace human work.
+
+In summary, from a sustainable education perspective, ChatGPT is far from matching human
+intelligence and cannot compete with human teachers. On the one hand, human teachers possess
+irreplaceable qualities. Education is a long-term interactive process that necessitates enduring highquality, sustainable interactions, with face-to-face conversations, emotional connections, and intellec­
+tual exchanges between teachers and students being indispensable. On the other hand, in terms of
+technological development, ChatGPT remains at a relatively low level. While the current ChatGPT can
+integrate knowledge in specific areas or aspects, providing a baseline guarantee, there is still consider­
+able room for improvement in processing unstructured information intelligently. This aligns with
+experts’ opinion that ChatGPT can “only guarantee a baseline but cannot excel.”
+Social Justice
+ChatGpt Divide. Addressing social justice, Professor P highlighted the ChatGPT divide, saying,
+“Accessibility creates two groups: those who can use ChatGPT, the ‘successful,’ and those who cannot,
+the ‘losers.’ This divide raises concerns for social justice.” Additionally, Professor P elaborated on the
+historical link between revolutions and class divisions, emphasizing that ChatGPT, a significant AI
+product, will lead to industrial shifts and new class divisions. He compared the divide to an apocalyptic
+Earth scenario, saying, “When the end comes, some can board ‘spaceship ChatGPT’ and leave Earth,
+while many cannot, facing a different fate.” Professor J also observed, “Individuals who can use
+ChatGPT effectively and avoid its pitfalls may gain a competitive edge in knowledge acquisition,
+potentially learning faster and better.”
+Ethical Concerns. ChatGPT’s ethical concerns also impact social justice. First, ChatGPT does not
+disclose its data sources. As Professor I mentioned, “One of the issues with ChatGPT is that it does not
+provide the sources from which it gathers information.” This creates three problems: uncertainty
+about information accuracy, lack of credit to data providers, and automatic data collection on users,
+including children.
+Professor M explained, “ChatGPT doesn’t provide citations, so we can’t check the correctness of the
+information or its source.” Furthermore, Professor I added, “People’s ideas and information are being
+used by ChatGPT without giving them credit, and they don’t earn money for their creative content.”
+This data collection on children also raises concerns, as Professor H noted, “It’s unclear how ChatGPT
+stores and processes user interactions, leading to concerns about privacy, data security, and ethics.”
+However, Professors M and I also mentioned that AI’s data collection on students could help adults
+discover previously unnoticed issues and intervene promptly. Professor M said, “As data is collected
+on children, AI could guide individualized learning or interventions children might need.” Professor
+I added, “AI can sometimes pick up potential delays in children’s skill development before adults
+notice due to its ability to collect vast amounts of data over time.”
+Moreover, ChatGPT’s ethics primarily reflect Western cultural values, raising questions about
+fairness for users in other regions. Professor Y said, “ChatGPT is ethically neutral, but its ethical
+guidelines are imposed by its trainers, mainly from the US or white populations, which may not be
+appropriate for other countries.” Professor I also mentioned cultural distinctions between countries
+that could lead to limitations and concerns.
+In conclusion, several participants emphasized that technology might act as a social accel­
+erator, highlighting the importance of carefully utilizing it to reduce disparities and foster fairer
+social development rather than exacerbating existing gaps between individuals and
+communities.
+
+EARLY EDUCATION & DEVELOPMENT
+
+13
+
+Perspectives on the Future: AI (Artificial Intelligence) or IA (Intelligence Augmentation)?
+Historically, the introduction of calculators sparked concerns about students’ weakening computa­
+tional abilities. However, in retrospect, calculators have revolutionized math education by making
+certain knowledge less critical (e.g., basic arithmetic), emphasizing other areas as more important (e.g.,
+statistics), and opening up new knowledge domains (e.g., complex geometry). This perspective can be
+applied to ChatGPT as well.
+Less Important Knowledge and Skills
+In expert interviews, some knowledge and skills were thought to be important but turned out to be
+less significant. Professor M mentioned, “With the advent of ChatGPT, people aren’t becoming
+more ignorant, but rather less willing to spend time and energy on lifeless, cold factual knowl­
+edge.” Professor H added, “Some knowledge and skills may become relatively less important after
+the emergence of ChatGPT and other AI technologies, such as fact-finding, which involves using
+search engines to locate factual information, since AI can provide fast, accurate answers.”
+Professor J noted, “Basic information retrieval and integration skills are also less important now,
+as the speed of acquiring information increases, making assessments of students’ information
+retrieval skills less meaningful.”
+More Important Knowledge and Skills
+Certain knowledge and skills, such as critical thinking, data literacy, creativity, lifelong learning, and
+interdisciplinary knowledge, have become more valuable. This study highlights two main points
+mentioned by nearly every expert:
+Human Agency. The experts emphasized the importance of human decision-making and responsibility
+when using AI tools like ChatGPT to ensure that technology is used ethically and effectively in early
+childhood education. More importantly, they highlighted the emotional aspect of interactions with young
+children, whether in parent-child, teacher-child, or peer interactions. This emotional aspect is a crucial and
+irreplaceable part of human agency in early childhood, becoming increasingly important. As Professor
+I explained, “We should always prioritize early childhood relationships and ensure that AI technologies like
+ChatGPT are used to optimize and focus on our human interactions and engagement with children, rather
+than replacing them.”
+Inquiry Ability. As previously mentioned by Professor P, the reform in assessment methods may shift
+toward reverse questioning, making the ability to ask questions a vital skill. Professor I stated, “You
+know, everything is about the prompt; ChatGPT only responds based on the way you ask the
+question.” Professor Y added, “ChatGPT’s output depends on human prompts; it requires contextua­
+lized, need-specific input. Using varied commands elicits diverse responses, honing inquiry and
+description skills, and saving time.” Professor H noted,
+Now, Prompt Engineering has become a hot new profession with annual salaries exceeding one million dollars.
+How to ask questions, how to provide concise instructions, and how to cooperate with AI like chatbots will
+become crucial skills that offer a significant advantage.
+
+Professor P took it a step further, suggesting a shift from inquiry skills to planning skills:
+Or, going even further, one should develop planning abilities, contemplating the next scenario, analyzing,
+deconstructing, and then issuing commands to ChatGPT. This presents a challenge to a teacher’s intellect and
+wisdom since our counterpart is ChatGPT, which is very smart. Thus, you need to improve your intelligence,
+analytical planning, and guidance abilities, as well as your ability to ask well-planned and analytical questions. In
+this way, you’ll be able to ask excellent questions.
+
+14
+
+W. LUO ET AL.
+
+Opening of New Domains
+AI Literacy. Experts like Professors P and I stressed the importance of AI literacy. Professor
+P introduced the concept of AI literacy, stating, “AI Literacy involves understanding AI, knowing
+how to interact with it, discerning when to seek its help, and importantly, recognizing when it’s not
+needed, especially for interpersonal communication and emotional aspects.” Professor I also empha­
+sized its importance, “Really, what we’re finding with ChatGPT is that it almost requires a different set
+of literacy skills.” Professor P further suggested, “We must enhance AI literacy for young children,
+parents, and teachers alike. They must properly recognize and understand AI.” This emphasis on AI
+literacy in early childhood education aligns with the findings of recent studies, such as Su et al. (2023)
+and Su and Yang (2023), which also highlight the importance of developing AI literacy in ECE settings.
+As the integration of AI technologies becomes more prevalent in education, fostering AI literacy
+should be considered a priority area for future research and practice.
+Al Social Interaction. All experts mentioned the concept of AI social interaction and human-machine
+communication. The new generation must learn to communicate with robots. Professor Y said,
+I can show you a screenshot of my conversation with a chatbot. It can discuss philosophical questions like ‘Why
+are we alive?’ and ‘Are you living in a matrix?’ This is a human-machine interaction model. Our children may
+need to learn new ways to communicate with machines.
+
+Professor M mentioned AI-embedded toys, saying,
+In the next few years, we’ll see AI-embedded dolls and toys that interact with children, helping develop both
+cognitive and socioemotional skills. We might have AI-embedded dolls in classrooms, teaching socioemotional
+skills as an example. Over time, as costs go down, more AI-embedded toys, games, and activities will be found in
+unexpected places.
+
+Professor P discussed AI social norms, saying, “With AI, we need to establish new AI ethics for
+interactions and social rules between humans and AI. Parents and teachers should cultivate AI ethics
+in children. We need to create a protocol of AI social norms.”
+Rebuilding Digital Ecology. The impact of ChatGPT on education can be divided into superficial and
+profound effects. This article mainly discusses the superficial impact, which revolves around the
+transformation of knowledge production. For example, ChatGPT assists with knowledge acquisition
+and information integration, leveraging its exceptional conversational and content generation cap­
+abilities. This can be applied to intelligent tutoring systems and teacher assistance to enhance the
+quality and efficiency of education.
+However, the profound impact challenges the entire education system and is a more pressing issue
+for future discussions. For instance, as ChatGPT can replace many entry-level knowledge tasks, what
+knowledge and skills will future talents need? How should educational systems adapt regarding
+curriculum design, teaching methods, and course offerings? This is what Professor P referred to as
+“Rebuilding Digital Ecology.”
+In conclusion, Professor I stated, “It would be better to refer to ChatGPT as intelligence augmentation
+(IA), augmenting our human intelligence, as opposed to the technology becoming intelligent.” AI can serve
+as an assistant to teachers, administrators, and parents but cannot replace human educators. AI can only act
+according to human-set objectives and obey human commands, replacing humans in knowledge manage­
+ment tasks. The initiation of these tasks comes from humans and can be stopped at any time according to
+human will. Therefore, it is a resource for Intelligence Augmentation (IA), not a replacement for educators’
+and caregivers’ actions.
+
+Limitations and Implications
+This study has some limitations that should be considered when interpreting the findings. The first
+limitation is that the expert interviews were conducted between late March and early April, which
+
+EARLY EDUCATION & DEVELOPMENT
+
+15
+
+coincided with the release of GPT-4. As a result, the entire ChatGPT discussion was based on the
+ChatGPT Mar 23 Version and did not include any discussions about potential subsequent technolo­
+gical iterations. This limitation may affect the findings by not capturing the latest advancements in
+ChatGPT technology. The second limitation relates to the choice of the expert interview methodology.
+Although expert interviews are considered an effective empirical method for revealing internal
+practical knowledge (Bogner et al., 2009; Döringer, 2021; von Soest, 2023), a primary weakness of
+this approach is that the opinions expressed by the experts may not be neutral, leading to potential
+biases. Further research could strengthen these findings by incorporating more data sources to address
+these limitations. The third limitation of this study is the inherent subjectivity in qualitative data
+analysis. To address this, multiple researchers were involved in coding and analysis, followed by
+consensus-building. However, future research may consider methodological triangulation for greater
+trustworthiness.
+Considering the implications of ChatGPT in early childhood education, it is crucial to provide
+valuable suggestions for policymakers, educators, and caregivers in the field to maximize the benefits
+and minimize the risks associated with this technology. First and foremost, policymakers, educators,
+and caregivers in the field should adopt an open-minded attitude and accurately recognize the value
+and risks of AI. Education is known for its unique challenges, and countless new issues arise whenever
+new technologies are introduced into educational practices. Facing the emerging contradictions
+brought by ChatGPT in teaching, it is crucial not to resort to simple and crude blocking measures.
+The relationship between humans and ChatGPT is not adversarial but rather one of mutual achieve­
+ment. An open, rational, and positive attitude should be upheld in education. The Chinese proverb
+says, “The wise are good at utilizing things and tools.” The future belongs to those who are open and
+skillful in using technology and tools. To facilitate this, educational institutions could provide training
+programs for educators to learn about AI applications, including ChatGPT, and their potential use in
+teaching practices. In addition, workshops and seminars could be organized for educators to share
+their experiences and best practices in implementing AI tools in the classroom.
+Secondly, as educators, we should have complete confidence that AI will not replace teachers,
+especially early childhood educators. Education involves emotions, imagination, respect, and indivi­
+duality. Many times, education does not require scientific precision but instead pursues humanistic
+ambiguity. For example, ChatGPT excels in solving problems like ”1 coin +1 coin = 2 coins‘ but is
+powerless in answering whether ’1 life +1 life can equal 2 lives.” To illustrate this, schools can create
+curricula that emphasize the unique skills of educators, such as AI literacy and Al Social Interaction,
+while integrating AI as a complementary tool.
+Thirdly, education cannot rely solely on the “input-output” approach to solve problems. As
+previously mentioned, the unique skills and qualities that early childhood educators bring to the
+classroom and children’s experiences make teachers invaluable and irreplaceable. Nonetheless, AI
+does offer the benefit of an intelligence augmentation tool to further enhance instruction, and future
+development in the field of early childhood will be influenced by trends in human-technology
+collaboration. Early childhood educators who develop proficiency in utilizing AI technology and
+skillfully integrate it into their teaching practices will be able to unlock new levels of effectiveness and
+efficiency in their work. The benefits of AI in the field of early childhood education are numerous, and
+practitioners who embrace this technology will be well-positioned to help their students thrive in
+a rapidly evolving world.
+Last but not least, to address the challenges and risks associated with ChatGPT in early
+childhood education, policymakers should consider the following integrated approach: Improve
+accessibility by focusing on the popularization and application of ChatGPT, especially in early
+childhood education, and develop related policies that ensure children of all age groups fully
+benefit from this technology. This includes strengthening support for children with special needs
+and reducing the technical barriers they face. We could ensure affordability by paying attention to
+the commercial sustainability and user affordability of ChatGPT in the education sector. We
+should also encourage companies to offer reasonably priced products and services and establish
+
+16
+
+W. LUO ET AL.
+
+funding programs to make the technology accessible to all families. We should strengthen
+accountability by establishing clear responsibility and obligation regulations, ensuring educators
+play a crucial role in using ChatGPT, such as acting as content filters and assessment reformers. In
+addition, we could encourage schools and educational institutions to establish enhanced assess­
+ment systems, ensuring students truly master knowledge and skills when using ChatGPT. In this
+way, we can maintain sustainability by focusing on the impact of ChatGPT on learning motivation
+and problem-solving ability and developing corresponding guidelines to ensure educators still
+prioritize students’ active learning and critical thinking skills while using AI-assisted teaching.
+Socially, we should promote social equity by considering the impact of ChatGPT applications in
+education on social equity and developing policies to reduce the digital divide, ensuring all
+students enjoy the benefits of AI technology. Meanwhile, we should pay attention to related
+ethical issues and establish clear ethical and legal frameworks to guide and regulate the rational
+application of ChatGPT in education.
+
+Conclusion: Aladdin’s Genie or Pandora’s Box?
+Whether ChatGPT is a “magic lamp” or a “Pandora’s box” for ECE depends on its implementation and
+the extent to which educators, caregivers, and other stakeholders consider the potential benefits,
+challenges, and risks. If used responsibly, ChatGPT could serve as a valuable tool to support learning
+and teaching processes. However, if not properly managed, it would pose ethical, social, and technical
+challenges. Therefore, striking a balance between leveraging its benefits and addressing potential
+concerns is crucial for maximizing the positive impact of ChatGPT on ECE. To optimists, it might
+be “Aladdin’s Genie;” to pessimists, it could be “Pandora’s Box.” Angel or Demon? Depends on how
+you view and handle it.
+
+Disclosure Statement
+No potential conflict of interest was reported by the author(s).
+
+ORCID
+Hui Li
+
+http://orcid.org/0000-0001-9355-1116
+
+References
+Atlas, S. (2023). ChatGPT for higher education and professional development: A guide to conversational AI. https://
+digitalcommons.uri.edu/cba_facpubs/548
+Baidoo-Anu, D., & Ansah, L. O. (2023). Education in the era of generative artificial intelligence (AI): Understanding the
+potential benefits of ChatGPT in promoting teaching and learning. SSRN Electronic Journal. https://doi.org/10.2139/
+ssrn.4337484
+Berson, I. R., & Berson, M. J. (2023). The democratization of AI and its transformative potential in social studies
+education. Social Education, 87(2), 114–118.
+Bogner, A., Littig, B., & Menz, W. (2009). Introduction: Expert interviews — an introduction to a new methodological
+debate. In A. Bogner, B. Littig, & W. Menz (Eds.), Interviewing experts (pp. 1–13). Palgrave Macmillan UK. https://
+doi.org/10.1057/9780230244276_1
+Chen, J. J., & Lin, J. C. (2023). Artificial intelligence as a double-edged sword: Wielding the POWER principles to
+maximize its positive effects and minimize its negative effects. Contemporary Issues in Early Childhood,
+146394912311698. https://doi.org/10.1177/14639491231169813
+Cooper, G. (2023). Examining science education in ChatGPT: An exploratory study of generative artificial intelligence.
+Journal of Science Education and Technology, 32(3), 444–452. https://doi.org/10.1007/s10956-023-10039-y
+Creswell, J. W., & Creswell, J. D. (2017). Research design: Qualitative, quantitative, and mixed methods approaches. SAGE
+Publications.
+
+EARLY EDUCATION & DEVELOPMENT
+
+17
+
+Devi, J. S., Sreedhar, M. B., Arulprakash, P., Kazi, K., & Radhakrishnan, R. (2022). A path towards child-centric artificial
+intelligence based education. International Journal of Early Childhood, 14(3), 2022. https://doi.org/10.9756/INTJECSE/V14I3.1145
+Döringer, S. (2021). ‘The problem-centred expert interview’. Combining qualitative interviewing approaches for
+investigating implicit expert knowledge. International Journal of Social Research Methodology, 24(3), 265–278.
+https://doi.org/10.1080/13645579.2020.1766777
+Dowling, M., & Lucey, B. (2023). ChatGPT for (Finance) research: The Bananarama conjecture. Finance Research
+Letters, 53, 103662. https://doi.org/10.1016/j.frl.2023.103662
+Dwivedi, Y. K., Hughes, L., Ismagilova, E., Aarts, G., Coombs, C., Crick, T., Duan, Y., Dwivedi, R., Edwards, J., Eirug, A.,
+Galanos, V., Ilavarasan, P. V., Janssen, M., Jones, P., Kar, A. K., Kizgin, H., Kronemann, B., Lal, B., Lucini, B., . . .
+Williams, M. D. (2021). Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportu­
+nities, and agenda for research, practice and policy. International Journal of Information Management, 57, 101994.
+https://doi.org/10.1016/j.ijinfomgt.2019.08.002
+Halaweh, M. (2023). ChatGPT in education: Strategies for responsible implementation. Contemporary Educational
+Technology, 15(2), ep421. https://doi.org/10.30935/cedtech/13036
+Iskender, A. (2023). Holy or unholy? Interview with open AI’s ChatGPT. European Journal of Tourism Research, 34,
+3414. https://doi.org/10.54055/ejtr.v34i.3169
+Kasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D., Fischer, F., Gasser, U., Groh, G., Günnemann, S.,
+Hüllermeier, E., Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J., Poquet, O., Sailer, M., Schmidt, A.,
+Seidel, T., . . . Kasneci, G. (2023). ChatGPT for good? On opportunities and challenges of large language models for
+education. Learning & Individual Differences, 103, 102274. https://doi.org/10.1016/j.lindif.2023.102274
+Kewalramani, S., Kidman, G., & Palaiologou, I. (2021). Using Artificial Intelligence (AI)-interfaced robotic toys in early
+childhood settings: A case for children’s inquiry literacy. European Early Childhood Education Research Journal, 29
+(5), 652–668. https://doi.org/10.1080/1350293X.2021.1968458
+Li, P. H., & Chen, J.J. -L. (2023). The glocalization of early childhood curriculum: Global childhoods, local curricula.
+Routledge.
+Lincoln, Y. S., & Guba, E. G. (1985). Naturalistic inquiry. SAGE Publications.
+Littig, B. (2011). Expert interviews. In B. Badie, D. Berg-Schlosser, & L. Morlino (Eds.), International encyclopedia of
+political science (Vol. 5, pp. 1343–1346). Sage. https://irihs.ihs.ac.at/id/eprint/2443/
+Littig, B., & Pöchhacker, F. (2014). Socio-translational collaboration in qualitative inquiry: The case of expert interviews.
+Qualitative Inquiry, 20(9), 1085–1095. https://doi.org/10.1177/1077800414543696
+Mayring, P. (2014). Qualitative content analysis: Theoretical foundation, basic procedures and software solution. SAGE
+Publications.
+Mhlanga, D. (2023). Open AI in education, the responsible and ethical use of ChatGPT towards lifelong learning. SSRN
+Electronic Journal. https://doi.org/10.2139/ssrn.4354422
+Opara, E., Theresa, A.M. -E., & Aduke, T. C. (2023). ChatGPT for teaching, learning and research: Prospects and
+challenges. Global Academic Journal of Humanities and Social Sciences, 5(2), 33–40. https://doi.org/10.36348/gajhss.
+2023.v05i02.001
+Qadir, J. (2022). Engineering education in the era of ChatGPT: Promise and pitfalls of generative AI for education.
+TechRxiv. Preprint. https://doi.org/10.36227/techrxiv.21789434.v1.
+Rospigliosi, P. A. (2023). Artificial intelligence in teaching and learning: What questions should we ask of ChatGPT?
+Interactive Learning Environments, 31(1), 1–3.
+Rudolph, J., Tan, S., & Tan, S. (2023). ChatGPT: Bullshit spewer or the end of traditional assessments in higher
+education? Journal of Applied Learning & Teaching, 6(1). https://doi.org/10.37074/jalt.2023.6.1.9
+Saldaña, J. (2021). The coding manual for qualitative researchers (4th ed.). SAGE Publications.
+Slavuj, V., Kovačić, B., & Jugo, I. (2015). Intelligent tutoring systems for language learning. 2015 38th International
+Convention on Information and Communication Technology, Electronics and Microelectronics (MIPRO) (pp.
+814–819). https://doi.org/10.1109/MIPRO.2015.7160383
+Su, J., Ng, D., & Chu, S. (2023). Artificial Intelligence (AI) literacy in early childhood education: The challenges and
+opportunities. Computers and Education: Artificial Intelligence, 4, 100124. https://doi.org/10.1016/j.caeai.2023.100124
+Suri, H. (2011). Purposeful sampling in qualitative research synthesis. Qualitative Research Journal, 11(2), 63–75. https://
+doi.org/10.3316/QRJ1102063
+Su, J., & Yang, W. (2022). Artificial intelligence in early childhood education: A scoping review. Computers and
+Education: Artificial Intelligence, 3, 100049. https://doi.org/10.1016/j.caeai.2022.100049
+Su, J., & Yang, W. (2023). Unlocking the power of ChatGPT: A framework for applying generative AI in education.
+ECNU Review of Education. https://doi.org/10.1177/20965311231168423
+Tate, T., Doroudi, S., Ritchie, D., Xu, Y., & Uci, M. W. (2023). Educational research and AI-generated writing:
+Confronting the coming tsunami. Edarxiv. Preprint. https://doi.org/10.35542/osf.io/4mec3
+Tracy, S. J. (2019). Qualitative research methods: Collecting evidence, crafting analysis, communicating impact. John
+Wiley & Sons.
+
+18
+
+W. LUO ET AL.
+
+van Nes, F., Abma, T., Jonsson, H., & Deeg, D. (2010). Language differences in qualitative research: Is meaning lost in
+translation? European Journal of Ageing, 7(4), 313–316. https://doi.org/10.1007/s10433-010-0168-y
+von Soest, C. (2023). Why do we speak to experts? Reviving the strength of the expert interview method. Perspectives on
+Politics, 21(1), 277–287. https://doi.org/10.1017/S1537592722001116
+Warr, M., Mishra, P., Henriksen, D., & Woo, L. J. (2023). A chat about GPT3 (and other forms of alien intelligence) with
+Chris Dede. TechTrends. https://doi.org/10.1007/s11528-023-00843-z
+Williams, R., Park, H. W., Oh, L., & Breazeal, C. (2019). Popbots: Designing an artificial intelligence curriculum for early
+childhood education. Proceedings of the AAAI Conference on Artificial Intelligence, 33(1), 9729–9736. https://doi.org/
+10.1609/aaai.v33i01.33019729
+Xie, S., & Li, H. (2020). Accessibility, affordability, accountability, sustainability and social justice of early childhood
+education in China: A case study of Shenzhen. Children & Youth Services Review, 118, 118. https://doi.org/10.1016/j.
+childyouth.2020.105359
+Yan, D. (2023). Impact of ChatGPT on learners in a L2 writing practicum: An exploratory investigation. Education and
+Information Technologies. https://doi.org/10.1007/s10639-023-11742-4
+
+

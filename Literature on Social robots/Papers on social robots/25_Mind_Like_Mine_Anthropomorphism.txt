@@ -1,0 +1,575 @@
+THE SCIENCE OF EXTRAORDINARY BELIEFS
+
+A Mind like Mine: The Exceptionally Ordinary
+Underpinnings of Anthropomorphism
+NICHOLAS EPLEY
+
+AB STR ACT From computers to cars to cell phones, consumers interact with inanimate objects on a daily basis. Despite being mindless machines, consumers nevertheless routinely attribute humanlike mental capacities of intentions,
+beliefs, attitudes, and knowledge to them. This process of anthropomorphism has historically been treated as an exceptional belief, explained away as simply an inevitable outcome of human nature or as an occasional product of human
+stupidity. Recent scientiﬁc advances, however, have revealed the very ordinary processes of social cognition underlying
+anthropomorphism. These processes enable psychologists to predict variability in the magnitude of anthropomorphism
+across contexts and also connect it to the inverse phenomena of dehumanization whereby people treat other human beings
+as if they lack a humanlike mind. Consumer behavior researchers are uniquely equipped to study these processes, to
+identify the precise situational features that give rise to anthropomorphism, to understand implications for consumer
+welfare, and to predict important consequences for how people treat everything from machines to animals to other
+human beings.
+
+E
+
+veryone seems to love the “extraordinary.” Its synonyms include remarkable, exceptional, amazing, astonishing, and astounding. Extraordinary events defy
+explanation. Extraordinary people defy comparison. And extraordinary beliefs presumably defy both explanation and
+comparisons with other types of beliefs. Love of the extraordinary therefore puts psychological scientists of all stripes
+in the unpleasant company of the world’s greatest spoilers.
+As a broad ﬁeld, psychologists are in the very business of
+taking extraordinary activities of the human mind and providing perfectly ordinary and understandable explanations for
+them. From attraction to culture to—as this special issue of
+JACR attests—anthropomorphism, effects that defy explanation become linked to very ordinary processes of repeated
+exposure (Zajonc 1980), means of production (Talhelm et al.
+2014), and social cognition (Epley, Waytz, and Cacioppo 2007).
+Psychologists’ greatest strength, at least from my perspective, is the ability to lift the curtain on some of the human
+brain’s most extraordinary feats and reveal their ordinary
+workings, giving all of us a little better understanding of both
+ourselves and our fellow human beings.
+For me, the seemingly extraordinary nature of anthropomorphism is precisely what makes it such an interesting
+topic of psychological study. Deﬁning anthropomorphism
+is relatively straightforward: it is simply perceiving human-
+
+like traits in nonhuman agents. Although it is not always
+clear what should count as a humanlike trait, the broad parameters of the phenomenon are not in question. Explaining why it occurs, however, has proven just as tricky as saying the term repeatedly in conversation (go ahead and try it
+now).
+For centuries, anthropomorphism was explained as a sort
+of extraordinary phenomenon that eluded explanation. Philosophers as far back as the sixth century BC (Lesher 1992)
+lumped anthropomorphism together with a rather large collection of human foibles, presuming that it represented one
+of the many different forms of human stupidity that could
+only be overcome by rigorous learning and thinking. Hume
+(1757/1957, xix) simply took anthropomorphism to be an
+invariable human trait: “there is a universal tendency among
+mankind to conceive all beings like themselves.” Piaget (1929)
+offered a less extreme assessment, noting that this tendency
+was especially prominent in young children, who tended to
+see humanlike agents almost everywhere they looked. Anthropomorphism on Piaget’s account was only a passing phase
+that would be left behind in development alongside bottles
+and bed-wetting. Any lasting remnants in adulthood were
+only isolated vestiges of infancy. Even more recent treatments keep the precise inner works of anthropomorphic
+thinking behind a black curtain by presuming it exists be-
+
+Nicholas Epley (epley@chicagobooth.edu) is the John Templeton Keller Professor of Behavioral Science at the University of Chicago Booth School of Business.
+JACR, volume 3, number 4. Published online August 22, 2018. http://dx.doi.org/10.1086/699516
+© 2018 the Association for Consumer Research. All rights reserved. 2378-1815/2018/0304-0071$10.00
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+000
+
+A Mind like Mine
+
+Epley
+
+cause of an evolutionary ﬁtness advantage (Guthrie 1993).
+These accounts continue to relegate anthropomorphism to
+the category of extraordinary because they do not provide
+clear explanations of how such thinking actually works. You
+can see this because none of these accounts explain what we
+often want to understand most: variability. Why do people
+anthropomorphize some agents more than others? Why are
+some contexts especially likely to elicit anthropomorphism?
+And why do the same people engage in anthropomorphic
+thinking at some times more than at others? To really understand this variability, researchers have to stop thinking
+of anthropomorphism as an extraordinary set of beliefs that
+differ from others, and instead connect it with the ordinary
+workings of the human mind.
+M EC HA N I SM S O F M I N D PE RC EP T IO N
+
+One important insight is that effects similar to anthropomorphism arise when people think about other human beings, too. For instance, people can be egocentric when evaluating other people, presuming that others share somewhat
+similar beliefs, attitudes, experiences, and preferences (Ames
+2004; Epley et al. 2004). Such egocentric biases are exacerbated when the precise contents of another person’s mind
+are vague or ambiguous (Gilovich 1990). Because the minds
+of some nonhuman agents, such as a god, are even more ambiguous, people are especially prone to egocentrism when attributing beliefs to a god (Epley et al. 2009). Egocentric biases
+in judgment are also stronger in kids than in adults, as Piaget had observed, but this result comes because adults get
+better at deliberately correcting an immediate egocentric interpretation rather than outgrowing their initial egocentric
+tendencies altogether (Gilbert and Gill 2000; Epley, Morewedge, and Keysar 2004). Is anthropomorphism produced
+by the same mechanisms that produce egocentric biases in
+interpersonal judgment?
+In addition, thinking about another person’s most humanlike attributes—their inner mental states of intentions,
+desires, beliefs, attitudes, and emotions—is not completely
+spontaneous but instead can require some deliberate attention. Without sufﬁcient motivation to attend to another’s
+mind, people can remain indifferent to each other. Attention is guided by a person’s motivation, meaning that people are more likely to engage with the minds of others when
+they have some goal-directed reason to do so (Zaki 2014).
+Might engaging with the mind of a nonhuman agent also
+be guided by motivations to engage with the mind of that
+agent?
+
+These were the insights that got Adam Waytz, John Cacioppo, and I thinking that we might have the beginnings
+of a theory that would move anthropomorphism into the
+realm of ordinary cognitive processes (Epley et al. 2007). In
+particular, we theorized that anthropomorphism is guided
+by the same social cognitive mechanisms that enable people
+to think about the minds of other people. If anthropomorphism is the process of attributing humanlike traits to nonhuman agents, then it is essential to be precise about what
+counts as a “humanlike trait.” If you ask the average person what makes human beings unique, they will tend to say
+something related to a person’s mind (Haslam et al. 2005,
+2008; Park, Haslam, and Kashima 2012). In particular, they
+will tend to note that human beings are uniquely able to
+think (capacities related to cognition) and to feel (capacities related to emotional experience; Gray, Gray, and Wegner
+2007; Waytz et al. 2010). Processes that enable us to think
+about the mind of another person should therefore be central to the process of anthropomorphism as well.
+Based on this insight, along with existing supportive evidence, we suggested that anthropomorphism was triggered
+by two fundamental motivations that would increase engagement with the mind of a nonhuman agent. The ﬁrst motivation is the desire for social connection (Baumeister and
+Leary 1995). Human beings are the most social primates on
+the planet, who are made happier and healthier by connecting with other people (Cacioppo and Patrick 2008). A motivation to form a social bond with a nonhuman agent, such
+as a god or a pet, might then increase attention to the mind
+of these nonhuman agents, thereby increasing the likelihood
+of perceiving humanlike traits in them. Several experiments
+have supported this hypothesis involving nonhuman animals and religious agents (Epley et al. 2008; Aydin, Fischer,
+and Frey 2010; Powers et al. 2014; Bartz, Tchalova, and
+Fenerci 2016) and also consumer products (Mourey, Olson,
+and Yoon 2017; Chen, Sengupta, and Adaval 2018). The second motivation is a desire to explain, predict, and therefore potentially control another agent. This motive is typically referred to as effectance motivation in the psychological
+literature (White 1959). Perhaps due to the evolutionary
+pressures produced by living in large social groups (Dunbar
+1993), human beings have evolved a uniquely sophisticated
+system of social cognition that is used to explain and predict other people’s behavior (Herrmann et al. 2007), usually
+referred to as a “theory of mind.” Instead of treating other
+people like objects, we instead attribute a mind to another
+person, complete with concepts like intentions, desires, at-
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+Volume 3
+
+titudes, and beliefs that can be used to explain his or her behavior. A mind is the concept that people use to explain the
+behavior of almost any independently acting agent, whether
+it is a person or a even a geometric shape that moves in either an independent or interdependent way (Heider and
+Simmel 1944; Scholl and Tremoulet 2000). When an agent’s
+behavior needs to be explained, whether human or not, an
+onlooker’s theory of mind is likely to be triggered. Consistent with this hypotheses, people in one series of experiments were more likely to attribute a humanlike mind to a
+gadget when it behaved unpredictably and hence needed
+to be explained (Waytz et al. 2010). Anthropomorphism may
+therefore be triggered by the same motivational mechanisms that cause us to think about the minds of other people.
+Of course, sometimes a person’s mind just pops up in
+front of us whether we are motivated to attend to it or
+not. A person may speak to us and reveal her intentions or
+desires. A clear facial expression might spontaneously trigger us to recognize a man’s mood. A familiar movement
+might reveal an intention that allows us to understand another person’s motivations, desires, or intentions. The third
+theoretical factor we believe guides anthropomorphism is
+the perceived similarity of an agent to a human based on
+its observable features, what we called “elicited agent knowledge.” In contrast to the top-down motivational processes
+of connection and effectance, these are bottom-up triggers
+that come from the agent itself and suggest human similarity. This includes humanlike facial features, humanlike movement, and a human voice (Guthrie 1993; Morewedge, Preston, and Wegner 2007; Schroeder, Kardas, and Epley 2017).
+Due to the associative nature of the human brain, these features are likely to activate associated concepts related to the
+presence of a humanlike mind. In one experiment, for instance, an autonomous vehicle was anthropomorphized more
+when it was given a gender, spoke to the user, and anticipated
+what was happening around it—all cues to the presence of
+a humanlike mind (Waytz, Haefner, and Epley 2014).
+One of the major scientiﬁc beneﬁts of moving a concept
+out of the “extraordinary category” is that its connection to
+other ordinary processes is now easier to see. If anthropomorphism is at least partly a process of attributing a humanlike mind to a nonhuman agent, then it starts to look suspiciously similar to the inverse process of failing to attribute
+a humanlike mind to another person. Just as there are times
+when phones are treated somewhat like people, so too are
+there times when other people are treated like mindless ob-
+
+Number 4
+
+2018
+
+000
+
+jects or nonhuman animals. This is the essence of dehumanization (Haslam 2006; Fiske 2009; Waytz, Schroeder, and
+Epley 2013). Anthropomorphism and dehumanization may
+then be the same underlying psychological process of mind
+perception, applied to different targets. If a motivation to
+connect to a nonhuman agent increases the tendency to perceive it as humanlike, then lacking the motivation to connect with another person might lead someone to perceive
+the person as less humanlike (i.e., as less mindful). Consistent with this possibility, participants in a series of experiments tended to dehumanize an outgroup member more
+when they were made to feel more connected to an ingroup
+member (Waytz and Epley 2012). And if bottom-up cues that
+suggest the presence of a humanlike mind can lead to anthropomorphism, then the absence of them when evaluating
+other people might lead people to see someone as relatively
+less humanlike. Consistent with this possibility, removing a
+person’s voice from their speech makes the person seem less
+humanlike than when their voice is present (Schroeder and
+Epley 2015; Schroeder et al. 2017). Text-based media, in this
+way, may be relatively dehumanizing. Adding a humanlike
+voice to computer-generated text, in contrast, increases the
+likelihood of believing that the text was created by a real person, consistent with anthropomorphism (Schroeder and Epley
+2016).
+Given that consumers are typically in the business of
+consuming objects, either by purchasing or using them, it is
+not surprising that consumer behavior researchers are increasingly interested in understanding anthropomorphism.
+Triggered by the seminal work in consumer behavior by Aggarwal and McGill (2007), along with some of the work described above as well, consumer behavior researchers have
+been making important advances in this literature. Any tendency to humanize an object represents an obvious mistake. A car, no matter how much it looks to be smiling at
+you, does not actually like you in the same way as a person
+who smiles at you. Any consequence of anthropomorphism
+also represents a potential opportunity for marketers to
+affect consumption, or to affect a consumer’s positive experience with an object and hence affect the consumer’s
+well-being. A car is made of completely lifeless steel, but anthropomorphizing it as if it were alive may make consumers reluctant to replace it for a newer model (Chandler and
+Schwarz 2010). Crushing lifeless steel is one thing. Crushing an old reliable friend is quite another.
+This special issue includes four unique contributions related to anthropomorphism, each of which represents an in-
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+000
+
+A Mind like Mine
+
+Epley
+
+teresting contribution to the ﬁeld. Given the ease of orthogonally manipulating product features, consumer behavior
+researchers are in a unique position to investigate both the
+underlying causes of anthropomorphism, as well as a broad
+range of its consequences. I believe the ﬁeld is also poised
+to expand into new territory by examining the inverse process of dehumanization, an increasingly important topic
+in the consumer landscape as ever-present access to data
+turns individual people into “clicks” and “eyeballs.” The articles in this special issue, coupled with existing research,
+therefore raises several important questions about the future direction of research in this area. I will focus on just
+four that I think are especially relevant for consumer researchers.
+QU ESTI ON 1: WHAT IS I T ?
+
+Although deﬁning anthropomorphism is easier than explaining it, there is still an undesirable amount of confusion
+about how, exactly, one should deﬁne the concept. This is a
+common problem in the social sciences that use language
+rather than mathematics to express ideas, because language
+creates concepts with fuzzy edges. If anthropomorphism is
+the attribution of humanlike traits, then should we restrict
+it to only the traits that are presumed by the average person
+to be unique to humans? Focusing on this deﬁnition is what
+led my coauthors and I to focus most exclusively on perceptions of mind, because speciﬁc mental states are those presumed to be most uniquely human.
+However, perusing the literature reveals a much more
+promiscuous use of the term that includes having a face, bipedal bodies, individual identity, being part of a family, and
+even the shape of a Pom drink bottle (Wan 2018). In Newman’s article on animism and narratives (2018), anthropomorphism was sometimes equated with being perceived as
+alive (see also Chandler and Schwarz 2010). Items from the
+Signiﬁcant Objects project, for instance, were coded as “animistic” if they took the form of a person, animal, plant, or
+imaginary creature. The heading for this section, however,
+is titled “anthropomorphism,” even though only one of these
+four agents is a human. This fuzziness in concept use can be
+seen throughout the literature.
+For consumer behavior in particular, and psychological
+science more broadly, the semantics of anthropomorphism
+matter nothing compared to its empirical consequences. But
+precision in term use is critical for understanding the effects
+we’re documenting. Does perceiving something to be alive
+have the same consequences as perceiving it to be human-
+
+like, or does perceiving life trigger the theory of mind processes that lead to anthropomorphism? Any nonhuman animal could be described in terms of an individual identity,
+and so does individuation produce the same kinds of consequences as perceiving uniquely human traits in nonhuman
+agents? And many nonhuman animals have eyes. Does putting eyes on a juice bottle count as anthropomorphism, or
+does it trigger consumers to perceive it as having a mind
+behind those eyes that can think and feel? My hope is that
+consumer behavior researchers will help in the coming years
+to provide more precise boundaries on these currently fuzzy
+concepts.
+Q U E ST IO N 2 : W H A T’ S C A U S I N G I T ?
+
+An automechanic can ﬁx your car by knowing exactly how
+a car engine works. A good automechanic understands automechanisms. Likewise, psychological scientists truly understand behavior and how to change or “ﬁx” it, when they
+understand the precise psychological mechanisms guiding
+it. Psychologists have to have a precise understanding of
+psychomechanics. We (Epley et al. 2007) have suggested the
+combination of motivational and cognitive mechanisms that
+guide anthropomorphism described earlier, treating each as
+essentially independent of each other, and not meaningfully differentiating between different types of cues that
+might signal the presence of a humanlike mind in a nonhuman agent. All of the articles related to anthropomorphism
+in this special issue, however, demonstrate an important
+interaction between the motivation of the consumer and
+the speciﬁc features of the object being evaluated. In Chen
+et al. (2018), the match between a person’s motivation to
+connect and the nature of the product being evaluated
+(whether it was social or functional) was essential for predicting consumer preferences. In Newman (2018), a narrative that presumably enabled some anthropomorphism of
+an object by implying mental states of intentions, emotions,
+attitudes, and so on, affected the perceived value and willingness to pay for an object only when the object itself
+was animistic (and presumably more capable of being anthropomorphized). Likewise, in Awad and Youn (2018), narcissists liked the narcissistic brand more only when it was
+presented with easily anthropomorphized features of eyes
+and an arrogant personiﬁed attitude. And in Wan (2018),
+money versus time priming only affected participants’ evaluations when they were evaluating a product they had
+anthropomorphized. These results suggest that more sophisticated theorizing is necessary to understand how mo-
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+Volume 3
+
+tivations of a perceiver interact with features of the agent
+being perceived in order to enable important consequences
+of anthropomorphism.
+In addition, studying consumer products enables a careful study of a product’s attributes in order to understand
+which are truly important and which are not. For instance,
+in Awad and Youn (2018), consumer products were given
+identities, facial features, and a narrative that included a
+statement of beliefs and evaluations. Which of these were
+responsible for the increased liking among narcissists? Similarly, in Wan (2018), experiment 1 participants evaluated
+a backpack (described using ﬁrst-person language) that included a smiley face; they also labeled the backpack with three
+personality traits that they thought it might have. Some
+of these are bottom-up features elicited by the object itself
+(ﬁrst-person language), whereas others are top-down reasoning processes provided by participants themselves (thinking of personality traits). Which of these led time-primed
+participants to like the backpack more? In another experiment by my colleagues and me (Waytz et al. 2014), we encouraged participants to anthropomorphize a simulated autonomous vehicle by giving it a name (Iris), a human voice,
+a gender (female), and spoken content implying the ability
+to sense its surroundings and plan for the future. Which of
+these really mattered?
+My hypothesis is that the effects observed in these experiments are mediated by inferences about the humanlike
+mental states implied in the experimental manipulations;
+hence, factors that contribute most to the perception of
+a humanlike mind (such as voice and statements related to
+mental states) are most essential. Factors that are less
+uniquely tied to the presence of a humanlike mind, such as
+a face, personal identity, or gender, are less effective. However, additional research is obviously necessary to document
+these mechanisms more precisely. The beneﬁt of studying
+consumer products is that each anthropomorphic attribute
+can be manipulated orthogonally in order to identify which
+are important and which are not, which is what makes consumer behavior researchers uniquely equipped to advance
+theory in this area.
+QU ESTI ON 3: W HAT AR E I T S C O N S E Q U E N C E S ?
+
+Understanding these mechanisms underlying anthropomorphism is essential for predicting its consequences accurately. Although anthropomorphism is interesting to understand for its own sake, understanding its consequences
+for judgment and behavior is what matters most. A psy-
+
+Number 4
+
+2018
+
+000
+
+chological process that has no demonstrable consequences
+is not worth studying.
+Three of the articles included in this special issue track
+the consequences of anthropomorphism (or animism) on
+product valuation. This is of obvious importance to consumer behavior, but there are many other consequences
+that consumer behavior researchers are uniquely able to
+assess if they broaden their research scope beyond consuming objects. How does anthropomorphism, for instance,
+affect consumer well-being, animal rights, or pro- and antienvironmental behavior? This wide range of additional consequences provides many interesting opportunities for future research.
+Chen et al. (2018) begins doing some of this work by
+examining the consequences of anthropomorphism on consumer well-being. Or, at least on a consumer’s sense of vitality. This is an especially encouraging development from
+my perspective because it tests an important theoretical
+prediction about the consequences of motivated reasoning.
+In particular, any motivated psychological process should
+show at least two hallmarks consistent with goal-directed
+behavior: (1) that increasing pursuit of the goal should activate the proposed motivational process and (2) that engaging in the motivated process should produce some measurable effect on goal satisfaction. Prior work has tested how
+triggering the goal affects anthropomorphism, but very little has examined how engaging in anthropomorphism affects the perceiver’s own experience by satisfying the goal
+they are pursuing. This is an exciting development that requires dramatically more research attention than it has gotten in the past.
+Studying consumer well-being in these contexts also raises
+important research questions about consumer welfare. Although marketing an object as if it has a humanlike mind
+is deceptive, can encouraging anthropomorphism of some
+objects provide meaningful boosts in one’s sense of social
+connection or competence that could systematically improve
+well-being for at least some consumers? In these cases, would
+consumers even recognize that anthropomorphic depictions
+are inaccurate and potentially deceptive from marketers?
+Would consumers be upset with misrepresentation of a product if it were seen as serving prosocial ends (Levine and
+Schweitzer 2014, 2015)?
+Thinking more broadly about anthropomorphism also
+highlights the broad range of nonhuman agents that consumers interact with. All four articles related to anthropomorphism in this special issue focus on inanimate objects
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+000
+
+A Mind like Mine
+
+Epley
+
+that clearly lack either life or a humanlike mind, but consumers also interact with nonhuman animals whose mental
+lives are open to serious debate, or with a planet whose actions can be easily imbued with conscious intent. One important consequence of anthropomorphizing—or humanizing—
+an agent is that it also becomes more of a moral agent worthy
+of care and concern. There is a small but growing literature
+on how anthropomorphism affects the perception of animal rights (Loughnan, Bastian, and Haslam 2014), but consumer behavior researchers should be contributing directly
+to this by understanding how these processes affect actual
+consumption. Likewise, our planet is routinely referred to as
+“Mother Earth,” with natural events often interpreted as being produced by a supernatural mind. How does anthropomorphizing our natural world affect environmental behavior? Does stripping away the tendency to imbue natural
+forces with mindful intent encourage overconsumption of
+the planet’s resources and encourage environmental degradation? The answers to these questions are of deepest importance, and they are all questions ﬁrmly focused on consumption.
+QU ESTI ON 4: W HAT ABO UT IT S I N VER SE ?
+
+As easy at it might be for people to attribute aspects of a
+humanlike mind to something that is obviously mindless,
+so too is it easy for people to fail to attribute a fully humanlike mind to another completely mindful person. As the outcomes of ordinary social cognition simply applied to different targets, anthropomorphism and dehumanization are two
+sides of the same coin. Recognizing the same underlying psychological processes opens up a wide array of fundamental
+research questions for consumer behavior researchers. Just
+as consumers interact with brands, consumer products, and
+other inanimate objects, they also interact with wait staff
+at restaurants, customer service agents over phone calls, and
+migrant workers who are responsible for bringing the food
+we eat to our dinner tables. The fully human minds of these
+service workers should never be in question, but their status as a means to a consumer’s end puts them in a precarious position of being treated as relatively mindless—more
+like an object or nonhuman animal than as a mindful human being (Schroeder and Fishbach 2015). Ray Lewis, a retired National Football League (NFL) player known for his
+ferocious hits, noted the ease with which players can be dehumanized by team owners. In his response to the possibility of extending an already-grueling 16-game season to
+18 games, he said, “[I know] the things you have to go
+
+through to keep your body [functioning]. We’re not automobiles. We’re not machines. We’re humans.” Aaron Rodgers, currently an NFL quarterback, likewise suggested that
+NFL fans can sometimes treat them as unfeeling objects:
+“fans sometimes forget we’re human . . . we are people,
+and we have feelings.” As a former college football player
+myself, I can no longer watch the game as an avid consumer given what science suggests the game can do to a professional player’s brain.
+Consumers do not simply use objects; they also use people to achieve their consumption goals. From pornography
+that can objectify women (Gray et al. 2011), to sports that
+may make athletes seem like animals (Hoberman 1992), to
+work that turns human beings into a machine-like means
+of production (Waytz and Norton 2014), other people are
+often central to a consumer’s everyday behavior. How does
+the mind attributed to these real people affect how consumers treat others in a market-based context (Falk and Szech
+2013)? How would humanizing these real people in consumer settings affect consumers’ behaviors toward them?
+Consumer behavior researchers should be driving our understanding of not just how people treat brands and consumer goods but also how people treat each other. Understanding the processes underlying dehumanization, and
+its consequences, should become central to the study of
+consumer behavior. It is currently overlooked almost completely.
+CONCLUSION
+
+Human beings are the most social of all primates, with
+brains uniquely equipped to understand the sophisticated
+minds of other people. This social sense makes human being uniquely intelligent in the social world compared to our
+nearest primate relatives (Herrmann et al. 2007), easily able
+to reason quickly and easily about another person’s thoughts,
+beliefs, attitudes, and opinions. Being able to recognize the
+mind of another person gives rise to what might otherwise
+seem like an extraordinary belief: the belief that a pet, a god,
+or a gadget has a mind just like yours and mine. Understanding these ordinary processes that give rise to what looks
+like an extraordinary belief is essential for understanding
+when anthropomorphism occurs, for understanding why it
+occurs, understanding its consequences, and also for understanding the inverse process of dehumanization and objectiﬁcation. Consumer behavior researchers are uniquely equipped
+to understand these processes because of the wide array of
+products and agents that consumers interact with on an ev-
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+Volume 3
+
+eryday basis, and also increasing opportunities for consumers to either dehumanize or objectify others, or to be dehumanized themselves. Topics in consumer behavior come and
+go. As the articles in this special issue make clear, this topic
+is deﬁnitely coming.
+
+REF ERE NCES
+Aggarwal, Pankaj, and Ann L. McGill (2007), “Is That Car Smiling at Me?
+Schema Congruity as a Basis for Evaluating Anthropomophized Products,” Journal of Consumer Research, 34 (December), 468–79.
+Ames, Daniel R. (2004), “Inside the Mind-Reader’s Toolkit: Projection and
+Stereotyping in Mental State Inference,” Journal of Personality and Social Psychology, 87 (3), 340–53.
+Awad, Norah, and Nara Youn (2018), “You Reﬂect Me: Narcissistic Consumers Prefer Anthropomorphized Arrogant Brands,” Journal of the
+Association for Consumer Research, 3 (4), in this issue.
+Aydin, Nilüfer, Peter Fischer, and Dieter Frey (2010), “Turning to God in
+the Face of Ostracism: Effects of Social Exclusion on Religiousness,”
+Personality and Social Psychology Bulletin, 36 (6), 742–53.
+Bartz, Jennifer A., Kristina Tchalova, and Can Fenerci (2016), “Reminders
+of Social Connection Can Attenuate Anthropomorphism: A Replication
+and Extension of Epley, Akalis, Waytz, and Cacioppo (2008),” Psychological Science, 27 (12), 1644–50.
+Baumeister, Roy F., and Mark R. Leary (1995), “The Need to Belong: Desire
+for Interpersonal Attachments as a Fundamental Human Motivation,”
+Psychological Bulletin, 117 (3), 497–529.
+Cacioppo, John T., and William Patrick (2008), Loneliness: Human Nature
+and the Need for Social Connection, New York: Norton.
+Chandler, Jesse, and Norbert Schwarz (2010), “Use Does Not Wear Ragged
+the Fabric of Friendship: Thinking of Objects as Alive Makes People
+Less Willing to Replace Them,” Journal of Consumer Psychology, 20 (2),
+138–45.
+Chen, Fangyuan, Jaideep Sengupta, and Rashmi Adaval (2018), “Does Endowing a Product with Life Make One Feel More Alive? The Effect of
+Product Anthropomorphism on Consumer Vitality,” Journal of the Association for Consumer Research, 3 (4), in this issue.
+Dunbar, Robin I. M. (1993), “Coevolution of Neocortical Size, Group Size
+and Language in Humans,” Behavioral and Brain Sciences, 16 (4), 681–
+735.
+Epley, Nicholas, Scott Akalis, Adam Waytz, and John T. Cacioppo (2008),
+“Creating Social Connection through Inferential Reproduction: Loneliness and Perceived Agency in Gadgets, Gods, and Greyhounds,” Psychological Science, 19 (2), 114–20.
+Epley, Nicholas, Benjamin A. Converse, Alexa Delbosc, George A. Monteleone, and John T. Cacioppo (2009), “Believers’ Estimates of God’s Beliefs Are More Egocentric than Estimates of Other People’s Beliefs,”
+Proceedings of the National Academy of Sciences of the USA, 106 (51),
+21533–38.
+Epley, Nicholas, Boaz Keysar, Leaf Van Boven, and Thomas Gilovich (2004),
+“Perspective Taking as Egocentric Anchoring and Adjustment,” Journal
+of Personality and Social Psychology, 87 (3), 327–39.
+Epley, Nicholas, Carey K. Morewedge, and Boaz Keysar (2004), “Perspective Taking in Children and Adults: Equivalent Egocentrism but Differential Correction,” Journal of Experimental Social Psychology, 40 (6),
+760–68.
+
+Number 4
+
+2018
+
+000
+
+Epley, Nicholas, Adam Waytz, and John Cacioppo (2007), “On Seeing Human: A Three-Factor Theory of Anthropomorphism,” Psychological Review, 114 (4), 864–86.
+Falk, Armin, and Nora Szech (2013), “Morals and Markets,” Science, 340
+(6133), 707–11.
+Fiske, Susan T. (2009), “From Dehumanization and Objectiﬁcation, to
+Rehumanization: Neuroimaging Studies on the Building Blocks of Empathy,” Annals of the New York Academy of Sciences, 1167 (1), 31–34.
+Gilbert, Daniel T., and Michael J. Gill (2000), “The Momentary Realist,”
+Psychological Science, 11 (5), 394–98.
+Gilovich, Thomas (1990), “Differential Construal and the False Consensus
+Effect,” Journal of Personality and Social Psychology, 59 (4), 623–34.
+Gray, Heather M., Kurt Gray, and Daniel Wegner (2007), “Dimensions of
+Mind Perception,” Science, 315 (5812), 619.
+Gray, Kurt, Joshua Knobe, Mark Sheskin, Paul Bloom, and Lisa Feldman
+Barrett (2011), “More than a Body: Mind Perception and the Surprising Nature of Objectiﬁcation,” Journal of Personality and Social Psychology, 101 (6), 1207–20.
+Guthrie, Stewart Elliott (1993), Faces in the Clouds: A New Theory of Religion, New York: Oxford University Press.
+Haslam, Nick (2006), “Dehumanization: An Integrative Review,” Personality and Social Psychology Review, 10 (3), 252–64.
+Haslam, Nick, Paul Bain, Lauren Douge, Max Lee, and Brock Bastian
+(2005), “More Human than You: Attributing Humanness to Self and
+Others,” Journal of Personality and Social Psychology, 89 (6), 937–50.
+Haslam, Nick, Yoshihisa Kashima, Stephen Loughnan, Junqi Shi, and Caterina Suitner (2008). “Subhuman, Inhuman, and Superhuman: Contrasting Humans with Non-Humans in Three Cultures,” Social Cognition, 26
+(2), 248–58.
+Heider, Fritz, and Marianne Simmel (1944), “An Experimental Study of
+Apparent Behavior,” American Journal of Psychology, 57 (2), 243–49.
+Herrmann, Esther, Josep Call, María Victoria Hernandez-Lloreda, Brian
+Hare, and Michael Tomasello (2007), “Humans Have Evolved Specialized Skills of Social Cognition: The Cultural Intelligence Hypothesis,”
+Science, 317 (5843), 1360–66.
+Hoberman, John M. (1992), Mortal Engines: The Science of Performance and
+the Dehumanization of Sport, New York: Free Press.
+Hume, David (1757/1957), The Natural History of Religion, Stanford, CA:
+Stanford University Press.
+Lesher, James H. (1992), Xenophanes of Colophon: Fragments, Toronto: University of Toronto Press.
+Levine, Emma E., and Maurice E. Schweitzer (2014), “Are Liars Ethical? On
+the Tension between Benevolence and Honesty,” Journal of Experimental Social Psychology, 53 (1), 107–17.
+——— (2015), “Prosocial Lies: When Deception Breeds Trust,” Organizational Behavior and Human Decision Processes, 126 (1), 88 –106.
+Loughnan, Steve, Brock Bastian, and Nick Hasla (2014), “The Psychology
+of Eating Animals,” Current Directions in Psychological Science, 23 (2),
+104 –8.
+Morewedge, Carey K., Jesse Preston, and Daniel M. Wegner (2007), “Timescale Bias in the Attribution of Mind,” Journal of Personality and Social
+Psychology, 93 (1), 1–11.
+Mourey, James A., Jenny G. Olson, and Carolyn Yoon (2017), “Products as Pals: Engaging with Anthropomorphic Products Mitigates Effects of Social Exclusion,” Journal of Consumer Research, 44 (2), 414–31.
+Newman, George E. (2018), “Bringing Narratives to Life: Animism, Totems, and Intangible Value,” Journal of the Association for Consumer Research, 3 (4), in this issue.
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+000
+
+A Mind like Mine
+
+Epley
+
+Park, Joonha, Nick Haslam, and Yoshihisa Kashima (2012), “Relational to
+the Core: Lay Theories of Humanness in Australia, Japan, and Korea,”
+Journal of Cross-Cultural Psychology, 43 (5), 774–83.
+Piaget, Jean (1929), The Child’s Conception of the World, New York: Harcourt.
+Powers, Katherine E., Andrea Worsham, Jonathan B. Freeman, Thalia
+Wheatley, and Todd F. Heatherton (2014), “Social Connection Modulates Perceptions of Animacy,” Psychological Science, 25 (10), 1943–48.
+Scholl, Brian J., and Patrice D. Tremoulet (2000), “Perceptual Causality
+and Animacy,” Trends in Cognitive Sciences, 4 (8), 299–309.
+Schroeder, Juliana, and Nicholas Epley (2015), “The Sound of Intellect:
+Speech Reveals a Thoughtful Mind, Increasing a Job Candidate’s Appeal,” Psychological Science, 26 (6), 877–91.
+——— (2016), “Mistaking Minds and Machines: How Speech Affects Dehumanization and Anthropomorphism,” Journal of Experimental Psychology, 145 (11), 1427–37.
+Schroeder, Juliana, and Ayelet Fishbach (2015), “The ‘Empty Vessel’ Physician: Physicians’ Instrumentality Makes Them Seem Personally Empty,”
+Social Psychological and Personality Science, 6 (8), 940–49.
+Schroeder, Juliana, Michael Kardas, and Nicholas Epley (2017), “The Humanizing Voice: Speech Reveals, and Text Conceals, a More Thoughtful Mind
+in the Midst of Disagreement,” Psychological Science, 28 (12), 1745–62.
+Talhelm, Thomas, X. Zhang, Shigehiro Oishi, Chen Shimin, D. Duan,
+Xuezhao Lan, and Shinobu Kitayama (2014), “Discovery of Large-Scale
+Psychological Differences within China Explained by Rice versus Wheat
+Agriculture,” Science, 344 (6184), 603–8.
+
+Wan, Jeep (2018), “Paying the Doughboy: The Effect of Time and Money
+Mind-sets on Preference for Anthropomorphized Products,” Journal
+of the Association for Consumer Research, 3 (4), in this issue.
+Waytz, Adam, and Nicholas Epley (2012), “Social Connection Enables Dehumanization,” Journal of Experimental Social Psychology, 48 (1), 70–77
+Waytz, Adam, Joy Haeffner, and Nicholas Epley (2014), “The Mind in
+the Machine: Anthropomorphism Increases Trust in an Autonomous
+Vehicle,” Journal of Experimental Social Psychology, 52 (May), 113–17.
+Waytz, Adam, Carey K. Morewedge, Nicholas Epley, George Monteleone,
+Jia-Hong Gao, and John T. Cacioppo (2010), “Making Sense by Making
+Sentient: Effectance Motivation Increases Anthropomorphism,” Journal of Personality and Social Psychology, 99 (3), 410–35.
+Waytz, Adam, and Michael I. Norton (2014), “Botsourcing and Outsourcing: Robot, British, Chinese, and German Workers Are for Thinking—
+Not Feeling—Jobs,” Emotion, 14 (2), 434–44.
+Waytz, Adam, Juliana Schroeder, and Nicholas Epley (2013), “The Lesser
+Minds Problem,” in Are We All Human? Advances in Understanding Humanness and Dehumanization, ed. Paul G. Bain, Jeroen Vaes, and JacquesPhilippe Leyens, New York: Psychology, 49–67.
+White, Robert W. (1959), “Motivation Reconsidered: The Concept of Competence,” Psychological Review, 66 (5), 297–331.
+Zajonc, Robert Bolesław (1980), “Feeling and Thinking: Preferences Need
+No Inferences,” American Psychologist, 35 (2), 151–75.
+Zaki, Jamil (2014), “Empathy: A Motivated Account,” Psychological Bulletin, 140 (6), 1608–47.
+
+Journal of the Association for Consumer Research
+Downloaded from www.journals.uchicago.edu by University of Winnipeg on 08/24/18. For personal use only.
+
+

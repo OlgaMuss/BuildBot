@@ -1,0 +1,508 @@
+AI, Brain and Child
+(2025) 1:3
+https://doi.org/10.1007/s44436-025-00004-4
+
+EDITORIAL
+
+AI, Brain, and Child: navigating the intersection of artificial
+intelligence, neuroscience, and child development
+Philip Hui Li1,2 · John Chi‑Kin Lee1
+
+© The Author(s) 2025
+
+Abstract
+In an era marked by rapid advancements in artificial intelligence (AI) and cognitive neuroscience, the intersection of these
+fields holds transformative potential for child development and educational practices. This launch editorial introduces AI,
+Brain and Child (ABC), an open-access journal dedicated to exploring the dynamic interplay between AI, neuroscience, and
+child education. By fostering an interdisciplinary dialogue among educators, researchers, clinicians, and policymakers, ABC
+aims to examine the multifaceted roles of AI and neuroscience in shaping cognitive, social, and emotional growth among
+children. The journal seeks to democratize access to high-quality research, addressing both the beneficial applications and
+ethical challenges posed by AI and neuroscience technologies. Through this platform, ABC aspires to promote evidencebased practices, enhance educational outcomes, and tackle pressing developmental and educational issues. By welcoming
+diverse contributions—from empirical research to policy analysis—ABC endeavors to bridge the gaps between theory and
+practice, equipping stakeholders with the insights needed to navigate the complexities of educating children within a technologically enriched landscape. This new scholarly endeavor marks a new era of global community to partake in the crucial
+conversation surrounding the opportunities and responsibilities inherent in integrating AI and neuroscience into education.
+
+Introduction
+Rapid advancements in artificial intelligence (AI) and cognitive neuroscience are transforming the landscape of learning, education, and child development. This intersection
+demands an interdisciplinary platform for rigorous examination of AI’s profound implications, particularly its impact
+on children’s cognitive, social, and emotional growth and the
+ethical considerations surrounding its use. Therefore, we are
+launching AI, Brain and Child (ABC), an open-access journal dedicated to fostering collaboration among educators,
+researchers, clinicians, and policymakers. By democratizing access to high-quality research and promoting ethical
+scholarship, ABC will empower practitioners with evidencebased approaches, ensuring they remain at the forefront of
+integrating AI and neuroscience into educational practices
+for the benefit of all children.
+* Philip Hui Li
+huili@eduhk.hk
+1
+
+The Education University of Hong Kong, Hong Kong SAR,
+China
+
+2
+
+Chair Professor, The University of Hong Kong, 10 Lo Ping
+Road, N.T., Hong Kong SAR, China
+
+AI, Brain and Child: the new ABCs for educators
+in the AI era
+As the Co-EiCs, we are thrilled to introduce AI, Brain,
+and Child, a pioneering open-access journal committed
+to exploring the intersection of artificial intelligence (AI),
+cognitive neuroscience, developmental sciences, and educational practices. In a rapidly evolving landscape marked by
+unprecedented technological advancements and a growing
+understanding of the human brain, ABC emerges as a vital
+platform for fostering interdisciplinary dialogue and enhancing our knowledge of learning, teaching, and educational
+outcomes in the digital age. Therefore, the genesis of ABC is
+not only timely but also essential in navigating the complexities of a world where AI is increasingly woven into the fabric
+of our daily lives. As AI technologies become increasingly
+embedded in educational design and frameworks, there is a
+pressing need to understand their multifaceted roles in shaping children’s learning experiences. This inquiry extends to
+both the positive contributions of AI—such as personalized
+learning and adaptive educational tools—and its potential
+drawbacks, including ethical concerns and implications
+for educational and social equity. Thus, ABC is driven by
+the necessity for empirical rigor and ethical foresight in
+Vol.:(0123456789)
+
+3
+
+Page 2 of 6
+
+evaluating the implications and outcomes of emergent educational technologies.
+ABC aims to engage in rigorous discourse about how
+AI and neuroscience intersect with educational practices to
+inform and improve how educators can teach and individuals learn. The journal is designed to connect scholars, educators, policymakers, and practitioners, fostering a robust
+network that promotes dialogue, research collaboration,
+and the sharing of innovative practices. Our mission is to
+facilitate the synthesis of knowledge and insights, ultimately
+leading to transformative changes in educational approaches
+and frameworks. Central to our mission is a commitment to
+dismantling the silos that have historically segmented various fields of study. The convergence of AI and neuroscience
+offers unprecedented opportunities to transform education
+across all stages of life, encompassing early childhood education, K-12, higher education, and lifelong learning. By
+providing a platform for interdisciplinary collaboration,
+ABC facilitates the exchange of ideas that can contribute to
+developing practical educational tools, strategies, and policies that cater to diverse learners.
+Recent research underscores the profound impact of
+early experiences on children’s brain development, shaping
+cognitive, emotional, and social trajectories (Center on the
+Developing Child at Harvard University, 2016). Key findings highlight the rapid synaptic formation and pruning in
+early childhood, with enriched environments and sensitive
+caregiving promoting executive function skills such as working memory and cognitive flexibility. Conversely, adverse
+childhood experiences can negatively alter brain architecture
+and function, increasing vulnerability to later mental health
+challenges (Shonkoff et al., 2012). Future research directions
+include examining the long-term effects of early interventions, the influence of technology and cultural contexts on
+brain development, and further exploration of neuroplasticity to inform targeted interventions. Interdisciplinary
+approaches integrating neuroscience, psychology, AI, and
+education are crucial for advancing our understanding of
+child development and optimizing children’s outcomes. The
+growing interdisciplinary research trend necessitates collaborative platforms supporting emerging transdisciplinary
+work. Therefore, open-access, interdisciplinary journals like
+ABC are urgently needed.
+Accordingly, the scope of ABC is deliberately broad,
+encouraging a diverse range of contributions that reflect the
+myriad ways in which AI and neuroscience intersect with
+education. We welcome empirical research studies, theoretical perspectives, methodological advancements, case studies, and policy analyses. This inclusivity not only enriches
+the content of the journal but also ensures that it remains
+relevant to educators, researchers, and practitioners actively
+engaged at the forefront of educational technology and child
+development.
+
+AI, Brain and Child
+
+(2025) 1:3
+
+Our commitment to open access is a fundamental aspect
+of ABC. By making research freely available to all—educators, parents, policymakers, researchers, and the general
+public—we promote transparency, democratize knowledge,
+and enhance active engagement with the scientific community. This accessibility facilitates the application of research
+findings to educational practice, ensuring that innovations in
+AI and neuroscience can be effectively harnessed by those
+who will benefit from them most.
+In addition, we are dedicated to establishing a distinguished editorial board of leading experts in AI, education,
+psychology, neuroscience, computer science, and ethics.
+This board exemplifies our commitment to fostering international collaboration and incorporating diverse scholarly perspectives. By assembling a community of thought leaders,
+ABC is strategically positioned to address pressing questions
+surrounding the nexus of AI, brain science, and education,
+and to contribute to pioneering research that actively shapes
+the future landscape of educational practices.
+Consequently, ABC stands at the forefront of a new scholarly wave that seeks to understand and harness the powerful intersection of AI and neuroscience for the benefit of
+children and educational outcomes. Through thoughtful
+inquiry, an unwavering commitment to accessibility, and an
+emphasis on ethical considerations, we aim to make significant contributions that empower educational practices,
+promote inclusivity, and enhance developmental trajectories
+for young learners.
+
+Generative AI and its revolutionary impact
+on education
+Generative AI’s transformative influence on learning and
+teaching has profound implications for children, teachers,
+parents, and schools, significantly shaping educational experiences and cognitive development. This multifaceted shift
+necessitates empirical research and theoretical exploration
+and underscores the importance of large-scale, open-access
+platforms like ABC to disseminate such findings. This section will address the impact of generative AI across various
+stakeholders in education.
+The impact of generative AI on children
+Recent generative AI (GenAI) advancements have ushered
+in revolutionary educational changes that deeply affect child
+development and cognitive processes. These technologies,
+utilizing sophisticated algorithms to analyze data and customize content, are reshaping how children learn and interact
+with educational material. Understanding GenAI’s impact
+on children’s development is crucial as it raises essential
+questions about the academic, psychological, and neurological effects on young minds.
+
+AI, Brain and Child
+
+Page 3 of 6
+
+(2025) 1:3
+
+The rise of personalized learning
+At the forefront of GenAI’s impact is its capacity to create personalized learning experiences tailored to the unique
+needs of individual students. Intelligent tutoring systems
+(ITS), powered by GenAI, assess student performance and
+adapt instructional content accordingly. This personalization allows the creation of quizzes, assignments, and study
+materials that align with each learner’s pace and style (Luo
+et al., 2024; Gligorea et al., 2023) Targeted approaches can
+enhance engagement, making learning more relevant and
+accessible. When students encounter materials that match
+their skill levels, it boosts their motivation and encourages
+them to embrace challenges, driving cognitive growth.
+Research indicates that nearly 50% of educators incorporate
+AI technologies in their classrooms, showing a significant
+trend toward personalized education. Real-time responsiveness of AI tools helps ensure that learners are neither underchallenged nor overwhelmed, fostering a supportive learning
+environment conducive to developmental success (Luo et al.,
+2024).
+Enhancing cognitive engagement
+GenAI is pivotal in fostering engagement. Children thrive
+in environments that cater to their individual preferences
+and learning styles. Personalized experiences boost students’
+emotional investment in their education and contribute to
+improved cognitive retention. AI-driven methods allow
+educators to identify and address specific knowledge gaps,
+creating structured learning paths that optimize engagement
+and retention. Furthermore, AI technologies provide immediate feedback on assessments, allowing students to learn
+from mistakes in real time. Studies demonstrate that timely
+feedback enhances self-reflection, a critical skill for effective learning. Traditional educational models often suffer
+from delayed feedback, leading to repeated mistakes without understanding; GenAI changes this dynamic by enabling
+students to correct errors and comprehend material more
+deeply.
+The role of AI in social learning and development
+AI is transforming collaborative learning. AI-enhanced
+platforms enable students to participate in group projects,
+automatically organizing teams based on skills and interests.
+This collaborative approach promotes social skills such as
+communication and teamwork, which are essential for child
+development (Gkintoni et al., 2025). Immersive learning
+experiences facilitated by AI can simulate real-world scenarios, connecting academic concepts to practical applications
+and encouraging active exploration of complex problems.
+Integrating AI in collaborative settings fosters a niche where
+
+3
+
+children can develop critical thinking and problem-solving
+abilities essential for their future academic and professional
+endeavors.
+Neurodevelopmental considerations
+As researchers and educators incorporate AI into educational systems, understanding its implications for developing brains becomes essential. Children’s brains exhibit neuroplasticity—the ability to reorganize synaptic connections
+in response to learning experiences (Rose & Meyer, 2020).
+AI personalization promotes the formation of new neural
+pathways linked to specific knowledge and skills. However,
+concerns regarding over-reliance on technology may lead to
+cognitive overload and attention deficits (Wu et al., 2024).
+Children today are bombarded with information from various sources, which could inhibit deep learning. It is imperative that AI tools cultivate essential cognitive functions—
+such as critical thinking, creativity, and analytical skills
+(Stewart, 2023). Balancing AI integration with traditional
+pedagogical practices that promote collaboration and debate
+will be vital for optimal educational outcomes. A scoping
+review by Wu et al. (2024) shows that early digital experiences affect brain development positively and negatively,
+requiring mindful guidance and evidence-based policies to
+ensure children’s digital well-being.
+Ethical considerations in AI implementation
+The educational applications of generative AI raise significant ethical implications, particularly regarding child development (UNESCO, 2024a, 2024b). Key ethical dimensions,
+as highlighted in the AI Competency Framework for Teachers and the AI Competency Framework for Students, warrant
+careful consideration in our discourse at ABC.
+Data privacy is a major concern, as educational institutions collect vast amounts of student data for personalized
+learning experiences. It is crucial to navigate these parameters responsibly, ensuring the security and confidentiality
+of this information (Ismail & Aloshi, 2025). Algorithmic
+bias poses another critical issue; unmonitored AI systems may reinforce existing stereotypes or inequalities.
+Therefore, educators and policymakers must ensure that
+AI applications are developed and implemented ethically,
+prioritizing equity and inclusivity in educational settings
+(Baracas et al., 2023). Failure to do so could exacerbate
+existing educational disparities, leaving marginalized or
+underrepresented student populations at a disadvantage.
+
+3
+
+Page 4 of 6
+
+AI, Brain and Child
+
+Bridging the digital divide
+
+This section examines the multifaceted interplay between
+AI and neuroscience, highlighting both the transformative
+potential and the ethical considerations that demand careful
+attention.
+
+The digital divide is an associated challenge that raises
+critical questions about access to technology in education. As AI-enhanced education becomes more prevalent,
+assessing whether all children have equal opportunities
+to benefit from these innovations is vital. Socioeconomic
+disparities in access to technology can widen achievement
+gaps, particularly among vulnerable populations. Strategies for providing access to high-quality resources and
+training for educators in low-income areas are necessary
+to bridge this divide (Roshanaei et al., 2023).
+The future of learning in the age of AI
+As AI technologies continue to advance rapidly, their influence on the future of education will expand. Advocates suggest that personalized learning environments will emerge as
+essential cornerstones of contemporary education, supporting diverse needs and fostering adaptive learning strategies.
+Future research must understand the implications of AI integration into educational curricula, investigating how best to
+equip educators with the training to leverage AI responsibly
+(Luo et al., 2024). Moreover, the potential for AI to enhance
+lifelong learning initiatives is significant. As the job market
+evolves, critical skills such as problem-solving, creativity,
+and collaboration will increasingly be valued. Evolving educational practices that utilize AI strategically can prepare
+students for these demands, ensuring they possess essential
+skills for success in an interconnected landscape.
+AI is rapidly transforming education and making a lasting
+impact on child development and cognitive processes. From
+fostering personalized learning experiences that engage and
+motivate to pioneering collaborative environments that nurture essential social skills, the benefits of AI are significant.
+However, addressing the ethical challenges associated with
+its implementation is crucial to ensuring that education
+remains equitable and inclusive while protecting students’
+digital well-being. As we embrace the future of learning,
+stakeholders must remain committed to balancing innovation
+with responsibility and cultivating an educational environment where AI enhances, rather than detracts from, developmental goals. By harnessing the transformative potential
+of generative AI, we can elevate educational outcomes and
+foster a brighter future for all children.
+
+The interplay of artificial intelligence
+and neuroscience
+The rapid evolution of AI has profound implications for
+neuroscience, impacting research methodologies, therapeutic interventions, and our understanding of the human brain.
+
+(2025) 1:3
+
+AI‑driven advancements in brain research
+AI is revolutionizing brain research by enhancing the accuracy and precision of data analysis. Researchers leverage
+machine learning algorithms to analyze vast datasets from
+neuroimaging techniques such as fMRI and EEG. These
+advanced analytical tools excel at identifying subtle patterns
+and correlations within complex neurological data, exceeding the capabilities of traditional methods. This enhanced
+capacity is contributing to earlier and more accurate diagnoses of neurological conditions such as Alzheimer’s and Parkinson’s disease. Furthermore, AI’s predictive capabilities
+are being integrated into diagnostic processes. By modeling
+neural activities and cognitive processes, machine learning
+can assist practitioners in predicting health outcomes, paving the way for personalized medicine tailored to individual
+neurobiological profiles (Zeb et al., 2024).
+Brain–computer interfaces: a new frontier
+Brain–computer interfaces (BCIs) represent a groundbreaking application of AI, creating direct communication pathways between the brain and external devices. BCIs enable
+individuals to control prosthetics or digital interfaces using
+neural signals, offering transformative possibilities for those
+with mobility impairments or severe disabilities. AI plays a
+critical role in enhancing BCI effectiveness by improving the
+decoding of brain activity patterns and translating neural signals into actionable commands. However, the development
+and implementation of BCIs present ongoing challenges.
+Ensuring user comfort and safety, accurately interpreting
+complex neural data, and addressing ethical considerations
+related to privacy and consent are crucial for responsible
+advancement in this field.
+AI’s influence on cognitive function and development
+Beyond technological applications, AI’s influence extends to
+cognitive functions and child development. AI-powered educational tools offer personalized and adaptive learning experiences, potentially enhancing engagement and knowledge
+acquisition. However, concerns remain regarding the longterm cognitive effects of extensive reliance on AI for learning. Studies suggest that prolonged interaction with AI technologies may impact memory retention and attention spans,
+potentially fostering dependence on AI systems for information retrieval (Loka & Sabila, 2024). Therefore, striking a
+balance between leveraging AI’s educational potential and
+
+AI, Brain and Child
+
+(2025) 1:3
+
+fostering essential cognitive skills such as critical thinking and
+problem-solving is crucial. Integrating pedagogical approaches
+like gamification can promote active learning while harnessing
+AI’s personalized learning capabilities.
+Ethical implications of AI in neuroscience
+The integration of AI in neuroscience raises complex ethical considerations. The collection and use of sensitive brain
+data necessitate robust safeguards for privacy, consent, and
+security (Huang, 2023). Furthermore, algorithmic bias in AI
+systems significantly threatens equity and fairness. Biased
+datasets can lead to inaccurate or discriminatory outcomes,
+potentially exacerbating existing inequalities in healthcare
+and education (Baracas et al., 2023). Thus, ethical frameworks and guidelines are essential to ensure responsible AI
+development and deployment, prioritizing inclusivity and
+equitable access. Open discussions involving researchers,
+ethicists, policymakers, educators, and families are crucial to
+navigating these complex ethical challenges and establishing
+boundaries that promote healthy interactions with AI.
+Fostering interdisciplinary collaboration
+Realizing the transformative potential of AI in neuroscience
+requires interdisciplinary collaboration. Bringing together
+neuroscientists, computer scientists, educators, psychologists, ethicists, and other stakeholders is essential to navigate
+the complexities of AI integration and maximize its benefits while mitigating risks. Collaborative research efforts
+can address critical questions about AI’s impact on cognitive development, brain health, and ethical considerations,
+leading to the development of responsible guidelines and
+best practices for AI application in neuroscience and education. This interdisciplinary approach will be instrumental in
+shaping a future where AI enhances human well-being and
+fosters a deeper understanding of the human brain.
+
+Bridging AI, neuroscience, and education: ABC’s call
+for research
+The rapid integration of AI and neuroscience into education presents transformative opportunities and necessitates rigorous investigation into their combined impact
+on learning, teaching, and child development. AI, Brain
+and Child (ABC) seeks to publish high-quality research
+that explores this dynamic landscape, focusing on the following key areas:
+1. Neurocognitively informed personalized learning: ABC encourages submissions that examine how AI,
+informed by neuroscientific principles, can facilitate personalized learning experiences. This includes research on:
+
+Page 5 of 6
+
+3
+
+(1) Adaptive learning technologies and intelligent tutoring systems that consider individual neurocognitive profiles
+(Luo et al., 2024; Gligorea et al., 2023);
+(2) AI-driven tools that support learners with specific
+neurodevelopmental needs;
+(3) The impact of AI-powered personalization on brain
+function and cognitive development.
+2. AI-enhanced assessment and feedback, aligned with
+neuroscience: ABC welcomes studies that investigate how
+AI can transform assessment practices by incorporating neuroscientific insights:
+(1) Development of neurocognitive assessments using
+AI-powered tools;
+(2) Real-time analytics that tracks student progress and
+identifies neurocognitive strengths and weaknesses;
+(3) AI-driven feedback mechanisms that are tailored
+to individual learning styles and neurocognitive profiles
+(Halkiopoulos & Gkintoni, 2024).
+3. Ethical and responsible AI integration, considering
+neuroethical implications: recognizing the ethical complexities of AI in education, ABC prioritizes research that
+addresses:
+(1) Ethical considerations specific to the use of AI in
+neuroscience research and educational applications (Huang,
+2023);
+(2) Neuroethical implications of data privacy and security
+in AI-driven educational contexts (Roshanaei et al., 2023).
+(3) The potential impact of AI on brain development and
+the importance of responsible implementation (Stewart,
+2023).
+Neuroscience‑informed AI for learning and cognition
+ABC is interested in research that explores the intersection
+of AI and neuroscience in human learning and cognitive
+development:
+(1) The interplay between AI systems and human cognitive processes, informed by neuroscientific findings;
+(2) Leveraging AI to understand and enhance neuroplasticity for improved learning outcomes;
+(3) The impact of AI on different neurocognitive functions, such as attention, memory, and executive function
+(Loka & Sabila, 2024);
+(4) Neuroscience-backed AI tools for fostering creativity,
+critical thinking, and problem-solving skills
+5. Collaborative frameworks for AI and neuroscience in
+education: ABC encourages research exploring collaborative
+approaches to integrate AI and neuroscience in education:
+(1) Interdisciplinary partnerships between educators, neuroscientists, technologists, and policymakers;
+
+3
+
+Page 6 of 6
+
+(2) Development of frameworks for integrating neuroscientific principles into designing and implementing AI in
+educational settings (Gkintoni et al., 2025).
+ABC believes that rigorous, interdisciplinary research in
+these areas is essential to harnessing the combined potential of AI and neuroscience to create more effective, equitable, and enriching learning experiences for all students. We
+invite contributions from scholars and practitioners across
+disciplines to join us in this critical endeavor.
+Welcome to join ABC in shaping the future of learning
+and child development in the age of AI. We invite scholars and practitioners to contribute research that bridges the
+gap between theory and practice, exploring the intersection of AI, neuroscience, and education to empower every
+child. ABC is committed to fostering a global community
+dedicated to ethical, inclusive, and impactful research
+that addresses the complexities of personalized learning,
+classroom integration, and the long-term implications of
+AI. Together, let us unlock the transformative potential of
+these fields to create a more equitable and enriching educational landscape for all learners, now and into the future.
+Please submit your work to ABC or join us as an editorial
+board member and reviewer, becoming a part of this vital
+conversation.
+Acknowledgements The views in this launching editorial are personal
+only, do not necessarily represent those of the Education University
+of Hong Kong and UNESCO, and do not comment on the respective
+organizations.
+Data availability The author confirms that all data generated or analyzed during this study are included in this published article.
+
+Declarations
+Conflict of interest The authors claimed no conflicts of interest or
+funding support for this work.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source,
+provide a link to the Creative Commons licence, and indicate if changes
+were made. The images or other third party material in this article are
+included in the article's Creative Commons licence, unless indicated
+otherwise in a credit line to the material. If material is not included in
+the article's Creative Commons licence and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will
+need to obtain permission directly from the copyright holder. To view a
+copy of this licence, visit http://​creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+
+References
+Baracas, S., Hardt, M., & Narayanan, A. (2023). Fairness and machine
+learning: Limitations and opportunities. In: Proceedings of the
+
+AI, Brain and Child
+
+(2025) 1:3
+
+2019 Conference on Fairness, Accountability, and Transparency
+(pp. 206–215). ACM. https://​doi.​org/​10.​1145/​32875​60.​32875​98
+Center on the Developing Child at Harvard University. (2016). Enhancing and protecting brain development from birth through early
+childhood. Retrieved January 18, 2025 from https://​devel​oping​
+child.​harva​rd.​edu/
+Gkintoni, E., Antonopoulou, H., Sortwell, A., & Halkiopoulos, C.
+(2025). Challenging cognitive load theory: The role of educational neuroscience and artificial intelligence in redefining learning efficacy. Brain Sciences, 15(2), 203. https://​doi.​org/​10.​3390/​
+brain​sci15​020203
+Gligorea, I., Cioca, M., Oancea, R., Gorski, A. T., Gorski, H., & Tudorache, P. (2023). Adaptive learning using artificial intelligence
+in e-learning: A literature review. Education Sciences, 13(12),
+30–40. https://​doi.​org/​10.​3390/​educs​ci131​21216
+Ismail, I. A., & Aloshi, J. M. R. (2025). Data privacy in ai-driven education: An in-depth exploration into the data privacy concerns and
+potential solutions. In AI Applications and Strategies in Teacher
+Education (pp. 223-252). IGI Global
+Halkiopoulos, C., & Gkintoni, E. (2024). Leveraging AI in e-learning:
+Personalized learning and adaptive assessment through cognitive
+neuropsychology—A systematic analysis. Electronics, 13(18),
+3762. https://​doi.​org/​10.​3390/​elect​ronic​s1318​3762
+Huang, L. (2023). Ethics of artificial intelligence in education: Student
+privacy and data protection. Science Insights Education Frontiers,
+16(2), 2577–2587. https://​doi.​org/​10.​15354/​sief.​23.​re202
+Loka, N., & Sabila, R. T. (2024). Balancing challenges and opportunities: Enhancing early childhood cognitive skills through digital
+tools. GENIUS: Indonesian Journal of Early Childhood Education, 5(2), 105–118. https://​doi.​org/​10.​35719/​gns.​v5i2.​187
+Luo, W., He, H., Liu, J., Berson, I. R., Berson, M. J., Zhou, Y., & Li, H.
+(2024). Aladdin’s Genie or Pandora’s Box for early childhood education? Experts chat on the roles, challenges, and developments
+of ChatGPT. Early Education and Development, 35(1), 96–113
+Rose, D. H., & Meyer, A. (2020). Universal design for learning: Theory and practice. CAST
+Roshanaei, M., Olivares, H., & Lopez, R. R. (2023). Harnessing AI
+to foster equity in education: Opportunities, challenges, and
+emerging strategies. Journal of Intelligent Learning Systems and
+Applications, 15(4), 123–143. https://​doi.​org/​10.​4236/​jilsa.​2023.​
+154009
+Shonkoff, J. P., Garner, A. S., Siegel, B. S., Dobbins, M. I., Earls, M.
+B., McGuinn, L., & Committee on Policy and Practice. (2012).
+The lifelong effects of early childhood adversity and toxic stress.
+Pediatrics, 129(1), e232–e246
+Stewart, I. (2023). The evolving role of AI in education: Trends and
+implications for learning. Learning Sciences International Journal, 14(2), 15–29. https://​doi.​org/​10.​1515/​linsi.​2023.​2105
+UNESCO. (2024a). AI competency framework for teachers. Retrieved
+January 18, 2025 from https://​unesd​oc.​unesco.​org/​ark:/​48223/​
+pf000​03911​04
+UNESCO. (2024b). AI competency framework for students. Retrieved
+January 18, 2025 from https://​unesd​oc.​unesco.​org/​ark:/​48223/​
+pf000​03911​05
+Wu, D., Dong, X., Liu, D., & Li, H. (2024). How early digital experience shapes young brains during 0–12 years: A scoping review.
+Early Education and Development, 35(7), 1395–1431
+Zeb, S., Nizamullah, F. N. U., Abbasi, N., & Fahad, M. (2024). AI in
+healthcare: revolutionizing diagnosis and therapy. International
+Journal of Multidisciplinary Sciences and Arts, 3(3), 118–128.
+https://​doi.​org/​10.​47709/​ijmdsa.​v3i3.​4546
+
+

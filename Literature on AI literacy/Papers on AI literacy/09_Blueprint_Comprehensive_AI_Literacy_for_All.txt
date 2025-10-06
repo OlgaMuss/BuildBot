@@ -1,0 +1,826 @@
+The Blueprint for Action:
+Comprehensive AI Literacy for All
+
+TABLE OF CONTENTS
+
+Executive Summary
+
+1
+
+State of AI In Education
+
+4
+
+Learning Experience Considerations for AI Literacy
+
+7
+
+Social and Ethical Considerations for AI Literacy
+
+11
+
+Economic and Civic Considerations for AI Literacy
+
+14
+
+Conclusion
+
+16
+
+Acknowledgements
+
+17
+
+Sources and Resources
+
+18
+
+www.edsafeai.org
+
+EXECUTIVE SUMMARY
+The future of education demands more than catching up with trends—it requires leadership. As artificial intelligence
+(AI) transforms how we learn, work, communicate, and govern, education systems must act with urgency and clarity
+to prepare all learners in an increasingly AI-influenced world. Developed for education policymakers, school, state,
+and system leaders, higher education institutions, industry partners, and community-based organizations, and
+responding to the 2025 Executive Order, this Blueprint presents concrete recommendations to equip every learner
+with the knowledge, critical thinking, and civic agency needed to flourish in a rapidly evolving world.
+More than 50 leaders from education, technology, philanthropy, and research gathered in Washington, D.C., in June
+2025 to co-create a shared vision for advancing AI literacy nationwide. Co-Creating a Comprehensive Blueprint: AI
+Literacy for an Action-Oriented Future was hosted by the EDSAFE AI Alliance, aiEDU, Data Science 4 Everyone, the
+Global Science of Learning Education Network, and the Mary Lou Fulton College for Teaching and Learning
+Innovation at Arizona State University. Together, participants examined the learning, social, ethical, economic, and
+civic imperatives of AI literacy, contributing to a blueprint for national action.
+A consensus on its core principles defines the landscape of AI literacy, yet a diverse and growing range of
+frameworks for its implementation exists. Generally, definitions of AI literacy converge on a set of key competencies:
+the ability to understand the fundamental concepts of AI, utilize AI tools effectively, critically evaluate AI systems
+and their societal consequences, and engage with them ethically and responsibly. These foundational pillars
+emphasize not just the "how-to" of using AI but also the critical thinking skills necessary to question, interpret, and
+shape its role in society.
+This conceptual agreement gives way to a myriad of frameworks designed to impart these competencies to various
+audiences. For instance, the AILit Framework, a joint initiative by the European Commission and the Organisation for
+Economic Co-operation and Development (OECD), provides a comprehensive structure for primary and secondary
+education, focusing on engaging with, creating with, managing, and designing AI. Other notable frameworks, such as
+those developed by the United Nations Educational, Scientific, and Cultural Organization (UNESCO), Digital Promise,
+and various universities, offer different lenses and strategies tailored to their specific contexts, from higher
+education to professional development. This proliferation of frameworks, each with its unique emphasis and
+approach, highlights the global effort to cultivate a society that is not only technologically proficient but also
+critically aware and ethically grounded in its engagement with AI.
+We are currently navigating a seismic shift in education and early career
+opportunities, fundamentally altering the landscape for the emerging
+workforce. Traditional, linear career paths are dissolving, replaced by a
+demand for adaptable individuals with a hybrid of technical and durable skills,
+priorities that educators have long championed, even while constrained by
+conditions that emphasize standardized testing and rote memorization. The
+emphasis is shifting towards lifelong learning, with micro-credentials, boot
+camps, and online learning platforms, as well as just-in-time training tailored
+to specific industry needs. Internships and apprenticeships are also seen as
+gateways to employment. Employers recognize this change, increasingly
+recruiting and hiring talent with special AI skills.
+
+www.edsafeai.org
+
+"We believe that AI literacy
+is critical throughout all
+domains and is as
+important in an English
+class as it is in a Computer
+Science class. That level of
+foundational literacy is
+what our students, our
+educators, our
+communities, and our
+parents are demanding
+now." —Erin Mote, EDSAFE
+AI Alliance
+1
+
+EXECUTIVE SUMMARY
+“Lifelong learning will also bolster agency, ensuring that we are not passive
+consumers of AI–or passive learners, employees, employers, and citizens.”
+Murphy and Logan, Human Skills in the Age of AI: Why Essential Competencies Matter More Than Ever, LearnerStudio
+and High Resolves, July 2025.
+
+This Blueprint reflects a collective call to treat AI literacy—the knowledge and skill set that enables people to
+understand, evaluate, and use AI systems and tools—as a foundation for the future and as essential for our
+workforce, democratic participation, ethical agency, human flourishing, and economic competitiveness. It emerges
+amid a wave of global investment in AI infrastructure, unleashing an international competition to develop the best AI
+models and cultivate the next generation of students and workers. China, Singapore, South Korea, and the U.K. have
+launched sweeping national initiatives that embed AI literacy into education and educator preparation with clear
+national strategies for empowering students and educators. To stay competitive globally, the United States must
+match this ambition with strategic investments in educator training, public infrastructure, and the responsible use of
+trusted AI to advance national strength and the well-being of future generations.
+While the global push for AI literacy in education is still in its nascent stages, it is characterized by pivotal
+collaborations between the public and private sectors, as exemplified by the UK's testbed initiatives that bring
+together government, schools, and technology firms to explore and evaluate the use of AI in the classroom. These
+pioneering efforts underscore a worldwide trend toward fostering partnerships that unite governmental policy,
+educational practice, and industry innovation to prepare students for an increasingly AI-driven future.
+Across the globe, nations are recognizing the imperative to equip their citizens with the skills to understand, interact
+with, and critically evaluate AI. Initiatives in countries like Singapore, with its "Smart Nation" strategy, and the United
+States, through presidential challenges and task forces, reflect a growing commitment to integrating AI into
+educational frameworks. These programs, much like those in the UK, often rely on a collaborative ecosystem where
+government funding and strategic direction enable schools to partner with technology companies and academic
+researchers.
+The UK's edtech impact testbed pilot serves as a prime example of this collaborative model. By providing a
+structured environment for schools to experiment with AI tools from various firms, the government is facilitating a
+direct line of communication and feedback between educators and developers. This synergy aims to ensure that AI
+solutions are not only technologically sound but also pedagogically effective and aligned with the real-world needs
+of teachers and students. The insights gleaned from such testbeds are invaluable, informing national policy and
+guiding the scalable and ethical implementation of AI in education.
+These early yet crucial partnerships between government bodies, private technology companies, and educational
+institutions are laying the groundwork for a future where AI literacy is a fundamental component of learning,
+ensuring that the next generation is prepared for the complexities and opportunities of the 21st century.
+
+www.edsafeai.org
+
+2
+
+EXECUTIVE SUMMARY
+China is mandating AI instruction in all primary and secondary schools by the
+fall of 2025. Singapore will train every teacher in AI by 2026. South Korea is
+introducing AI-powered textbooks and a national AI curriculum, while the U.K.
+is investing in high-quality educational resources to drive AI development.
+The Blueprint is organized around three core domains:
+Learning Experience Considerations for AI Literacy call for hands-on, developmentally aligned learning that
+integrates AI across disciplines, centers on student identity and experiences, and is grounded in the Science of
+Learning and Development (SoLD).
+Social and Ethical Considerations for AI Literacy emphasizes the importance of integrating ethics and student
+voices into the teaching and governance of AI. We emphasize the importance of building trust through
+transparency, community engagement, and responsible design.
+Finally, the Economic and Civic Considerations for AI Literacy explores how AI is reshaping labor markets,
+information systems, media, and civic engagement. We outline strategies to prepare current and future students
+for economic resilience and democratic participation in an AI-assisted society.
+The Blueprint provides guidance and practical considerations for the implementation of AI literacy within the
+education sector, along with recommendations in each area, to help policymakers move toward a future where every
+student is equipped to understand, shape, and succeed in an AI-powered world. It is built on the core idea that
+earning public trust is essential to making AI literacy a foundational part of learning, ethical understanding, and
+preparation for meaningful participation in economic and civic life.
+To build strong, nationwide AI literacy, a transparent and collaborative strategy is essential—one that defines the
+roles of federal and system leaders and increases their capacity to lead this work. The federal government should
+focus on establishing a national vision, providing strategic guidance, and allocating critical funding to states and
+institutions to support their efforts. This support enables local governments, school systems, and educators to focus
+on the direct implementation of these initiatives. Their job is to translate national goals into classroom action, build
+tailored curricula, design flexible learning environments, and address the unique needs of their students. Most
+importantly, they must ensure that AI education reflects local priorities and values. Our policy recommendations aim
+to support this alignment, ensuring that federal support drives real innovation at the local level.
+This moment of uncertainty and rapid change requires more than just frameworks—it requires investment,
+infrastructure, and action. Just as the United States led the world by building highways and railways, landing on the
+moon, and pioneering the internet, we must now build the educational foundation required to lead in the age of AI.
+
+www.edsafeai.org
+
+3
+
+STATE OF AI IN EDUCATION
+AI is actively transforming the way students learn, teachers educate, and society functions. Generative tools are
+affecting how and what students learn, how educators are trained and create learning materials, and reshaping our
+workforce. While education is among the fastest-growing sectors for AI adoption, it remains one of the least guided
+by policy or regulation.
+
+67% of educators and 70% of students reported that they use generative
+AI for personal and/or school reasons in the 2023-2024 school year.
+Teachers are now using a range of tools for creating teaching materials, grading tests, brainstorming and generating
+ideas, writing communications, lesson planning, translations, and data analysis. Students across all educational levels
+are engaging with AI tools for both personal and academic purposes. Higher education students are utilizing AI for
+school-related purposes, such as researching information, checking grammar and writing, summarizing tests, and
+explaining complex concepts, while also exploring creative applications like creating content (images, videos, or
+music). Similarly, K-12 students use AI for school-related tasks but are increasingly drawn to its personal
+applications, such as creating content or interacting with chatbot companions.
+Despite widespread use, policy guidance has not kept pace. Only 30 states and 40% of schools or districts have
+released AI-related education guidance, with Title I schools and rural districts being the least likely to have any
+guidance on AI. 57% of schools and districts have not provided any training on how to use or monitor AI use in
+schools. These disparities between usage, guidance, and training demonstrate an urgent risk of deepening disparities
+and misapplication of technology in schools.
+This Blueprint is not a call to abandon ongoing efforts to expand access to computer science, computational
+thinking, data science, and digital literacy education for all students. Instead, it recognizes the urgent need to
+integrate emerging technologies—especially AI—into these efforts and all learning domains. It’s essential to recognize
+that a fundamental principle of AI literacy is that it extends beyond STEM domains and will impact all subjects and
+disciplines. This holistic focus on AI literacy as a foundational literacy ensures that students not only develop
+foundational skills in computer science and data fluency but also build the critical digital literacy competencies
+essential for navigating and shaping an AI-driven world.
+
+Guidelines for Generative AI Use
+
+Survey responses from 645 school district education technology leaders,
+2025 State of EdTech District Leadership, CoSN, May 2025
+
+www.edsafeai.org
+
+4
+
+STATE OF AI IN EDUCATION
+The United States' approach to AI literacy has evolved through a complementary, multi-phase progression at the
+federal policy level. The Trump administration initiated efforts by focusing on building an AI-ready workforce to
+ensure economic competitiveness, primarily through its "American AI Initiative." Building upon this foundation, the
+Biden administration expanded the national focus to include societal safety and ethics, establishing governance
+frameworks such as the "Blueprint for an AI Bill of Rights" and a 2023 Executive Order to ensure the responsible and
+equitable integration of technology into society.
+In April, the Trump Administration continued these efforts and issued the Executive Order “Advancing Artificial
+Intelligence Education for American Youth,” marking a significant federal commitment to establishing AI literacy as
+foundational in K-12 education. The core logic was that a technically proficient workforce is the necessary first step
+to harnessing AI's power.
+The order establishes an inter-agency White House Task Force on AI Education to implement the order’s goals,
+including launching the Presidential Artificial Intelligence Challenge, forging public-private partnerships, creating AI
+literacy resources for students, expanding AI educator training and preparation programs, and prioritizing the
+development of apprenticeships in AI-related fields.
+To succeed, this initiative must be supported by sufficient knowledge, capacity, expertise, and funding to enable
+states and districts to implement it effectively. Federal policy should clarify that existing K-12 formula and
+competitive grant funds can and should be used to support AI literacy. Key funding streams include:
+Title I, Part A (Improving Basic Programs Operated by Local Educational Agencies): These foundational funds,
+aimed at supporting disadvantaged students, can be used to provide AI-powered educational tools, targeted AI
+literacy instruction, and equitable access to the technology necessary to bridge the digital divide in the age of AI.
+Title II, Part A (Supporting Effective Instruction): A significant portion of these funds should be directed toward
+robust professional development for educators. This includes training teachers, principals, and other school
+leaders on how to effectively integrate AI literacy into their curriculum and instruction, ensuring they are
+prepared to guide students ethically and effectively.
+Title IV, Part A (Student Support and Academic Enrichment Grants): This block grant is ideally suited for AI
+literacy initiatives. Its focus on providing a "well-rounded education," improving school conditions, and increasing
+the use of technology for "digital literacy" directly aligns with the goals of creating AI-literate students. States
+and districts should be encouraged to prioritize AI literacy within their Title IV-A spending plans.
+Individuals with Disabilities Education Act (IDEA): IDEA funds can be used to explore and implement AIpowered assistive technologies, as well as to ensure that AI literacy curricula are accessible and beneficial for
+students with disabilities.
+National Science Foundation (NSF) Grants: The NSF should continue and expand its competitive grant programs
+that support the research and development of innovative AI literacy curricula, assessment tools, and educational
+models.
+
+www.edsafeai.org
+
+5
+
+STATE OF AI IN EDUCATION
+To prepare the current and future workforce, federal programs focused on job training and adult education should
+incorporate AI literacy as a core component:
+Workforce Innovation and Opportunity Act (WIOA): State and local workforce development boards should be
+directed to include AI literacy and skills training in their strategic plans. WIOA funds can be used for a wide range
+of upskilling and reskilling programs that prepare job seekers for an economy driven by AI.
+Strengthening Career and Technical Education for the 21st Century Act (Perkins V): AI literacy should be
+explicitly integrated into Career and Technical Education (CTE) programs of study. Perkins V funds can be used to
+update CTE curricula, purchase AI-related equipment, and provide professional development for CTE educators.
+Department of Labor Grants: Competitive grants from the Department of Labor, such as the Strengthening
+Community Colleges Training Grants, should prioritize programs that build partnerships between employers,
+community colleges, and other training providers to develop a workforce with in-demand AI skills.
+Funding for agencies such as the Department of Education's Institute of Education Sciences (IES) and the National
+Science Foundation is necessary to support the operational costs of a coordinated inter-agency task force. This
+includes funding for robust, independent evaluations of the effectiveness of various AI literacy initiatives, as well as
+for longitudinal studies on the long-term effects of AI on society and the workforce. By strategically leveraging
+existing federal funding streams, the government can empower its citizens, foster innovation, and secure a
+prosperous and equitable future for all without the need for massive new spending initiatives. In alignment with the
+Trump Administration’s "gold standard" of science, AI literacy efforts should focus on developing a workforce
+capable of leveraging artificial intelligence to secure American technological leadership and deliver tangible
+economic and national security advantages.
+The current landscape of AI in U.S. education is fragmented, leaving educators and students to navigate powerful
+tools without consistent guidance, training, or support. Educators and students engage with AI tools daily, often
+without the foundational understanding, instructional guidance, or institutional support necessary to use them
+effectively, responsibly, and safely. AI literacy is a foundational and essential skill for civic participation, workforce
+readiness, and informed engagement with technology. Meeting this moment requires a holistic and coordinated
+response that equips all educators and students with the understanding and capacity to use AI effectively, ethically,
+and with confidence.
+
+Case Study 1: University of North Florida
+The University of North Florida is dismantling academic siloes by embedding AI literacy
+across its academic programs and pillars (Academic, Research, Operational, and
+Workforce and Community Excellence) through a university-wide approach that
+cultivates student agency and curiosity. They are also embedding activities that enable
+students to create AI tools tailored to their community’s needs. For example, students
+developed a tool for police officers to automatically fill out mandatory forms in various
+languages, a tool to help students find scholarships, and another to assist students in
+mapping out their desired career paths.
+www.edsafeai.org
+
+6
+
+LEARNING EXPERIENCE
+CONSIDERATIONS FOR AI LITERACY
+Our education system must move beyond traditional teaching and learning methods to design meaningful and
+evidence-based learning experiences that foster deep understanding and agency. AI literacy should be hands-on,
+metacognitive, and cross-curricular, rather than siloed and dependent on elective courses or limited career
+pathways. These learning experiences should be aligned with established research from the Learning Sciences. For
+example, multiple efforts such as the GSoLEN and the SoLD alliance have been consolidating key findings from the
+Science of Learning and Development (SoLD). The Science of Learning and Development (SoLD) is fundamentally
+aligned with the concept of human flourishing because it provides an evidence-based roadmap for cultivating the
+very conditions and capacities that flourishing requires. Human flourishing, a focus of the Trump Administration, is
+understood as a state of complete well-being, encompassing purpose, positive relationships, personal growth, and
+health. SoLD, in turn, explains how these outcomes can be nurtured. This evidence-based framework for building
+supportive, personalized learning environments that consider the whole person can unlock the talent and innovation
+needed for a strong and prosperous society.
+
+The Science of Learning and Development (SoLD) is a body of research from neuroscience,
+psychology, and related fields showing that all students can grow and thrive, with brain
+development nurtured by relationships, environments, and experiences. More broadly, the
+Learning Sciences is an interdisciplinary field that investigates learning in real-world
+settings and how learning may be facilitated with and without technology.
+AI literacy is not only about technology or computer science fluency—it is about designing learning experiences that
+help students navigate the age of AI. This includes understanding how AI functions, questioning its role, deciding
+when and how to use it, and exploring its possibilities in both their education and personal lives. With thoughtful
+design and investment, AI can be a tool for more profound, personalized, and meaningful learning.
+The rapid integration of AI into every facet of society necessitates a fundamental shift in education. It is no longer
+enough to teach students what AI is or how to use a specific tool; they must also understand the broader
+implications of AI. To prepare a generation of critical thinkers, responsible digital citizens, and adaptive learners, we
+must move beyond basic digital skills and toward deep, authentic AI literacy. Simply layering AI instruction onto
+existing models risks creating passive users who can follow commands but cannot critically evaluate, ethically
+reason, or creatively innovate with these powerful tools. The Science of Learning and Development teaches us that
+durable, transferable knowledge is not passively received; it is actively constructed.
+Without an evidence-based approach, we risk:
+Cognitive Offloading: Students who merely delegate assignments to AI tools might inadvertently bypass critical
+thinking and problem-solving, hindering the development of essential cognitive skills.
+Ethical Omissions: An exclusively technical focus overlooks the development of empathy and ethical reasoning
+necessary to address issues such as algorithmic bias and misinformation.
+Developmental Mismatch: Presenting abstract AI-related concepts without age-appropriate scaffolding can lead
+to confusion or disengagement.
+www.edsafeai.org
+
+7
+
+LEARNING EXPERIENCE
+CONSIDERATIONS FOR AI LITERACY
+Integrating AI literacy with the Science of Learning and Development ensures that we are teaching
+in a way that aligns with how the human brain learns, develops, and makes meaning. AI literacy
+within education should be grounded in the following principles:
+1.Prioritize Human Cognition over Tool Functionality: The goal is not to train students on the features of a
+specific app but to develop their capacity for critical inquiry, metacognition, and creative problemsolving in a world where AI is prevalent.
+2.Embed Learning in Relationships and Community: Research emphasizes that learning is shaped by
+relationships, environments, and experiences. AI tools should be used to augment, not replace, the vital
+interactions between teachers and students, as well as among peers.
+3.Embrace Developmentally Appropriate Instruction: The way a 1st-grader learns about AI (e.g., as a
+"helper" in a game) is fundamentally different from how a 12th-grader should (e.g., by investigating the
+societal consequences of recommendation algorithms).
+
+Recommendations for Policymakers
+Invest in Teacher Preparation and Professional Learning: Equip incoming educators with foundational skills in
+effective, responsible AI integration, while helping experienced teachers enrich their instructional methods
+through ongoing professional learning. Pre-service programs should incorporate the Science of Learning and
+Development (SoLD), digital literacy, and student-centered pedagogies. Leverage Title II, Part A grants to fund
+comprehensive educator training and support credentials in AI and related fields. Strategically leveraging
+established federal funding streams, such as the Teacher Quality Partnership (TQP) and Supporting Effective
+Educator Development (SEED) grant programs, provides a critical and efficient pathway to develop and scale
+high-quality AI literacy training for educators nationwide.
+Expand Department of Education and NSF AI Literacy Investments: Update discretionary grant programs,
+including EducateAI, to prioritize proposals that incorporate AI into hands-on, problem-based learning. Provide
+clear guidance and targeted funding to help states introduce age-appropriate AI content across all core subjects,
+covering basic AI concepts, computational thinking, data skills, and ethics.
+Mobilize the Departments of Labor, Commerce, and Education: Incentivize and support the creation of regional
+"AI Learning Hubs" that connect K-12 schools, community colleges, universities, industry partners, and
+community-based organizations. These hubs should facilitate mentorships, internships, and apprenticeship
+programs in AI-related fields, as mandated by the recent Executive Order.
+
+Case Study 2: Peninsula School District, WA
+In 2022, the Peninsula School District established an AI Action Research Team comprising
+educators from various departments to explore and shape the use of AI in supporting
+authentic learning. The team developed a formal process for vetting AI tools. It launched
+an open-access website that serves as a hub for district leaders and educators, featuring
+the district’s AI Guidance, classroom use cases, a catalog of approved tools, and emerging
+research on AI and education.
+www.edsafeai.org
+
+8
+
+LEARNING EXPERIENCE
+CONSIDERATIONS FOR AI LITERACY
+Recommendations for School and System Leaders
+Integrate the Science of Learning and Development and Related Research in Service of Human Flourishing: AI
+can be thoughtfully utilized to enhance pedagogy aligned with how each student learns and thrives. This
+includes instructional approaches that incorporate learner variability and opportunities for collaborative or
+community-based learning.
+Embrace AI Across the Curriculum: Integrate AI meaningfully across all subjects rather than isolating it, such as
+examining bias in AI-generated texts in English, analyzing surveillance ethics in History, creating media in Art, or
+exploring mental health in Health, reinforcing AI's broad relevance. Embedding AI across subjects and courses
+reinforces its relevance across all aspects of our lives.
+Cultivate AI Literacy Across the K-12 Learning Continuum:
+Elementary (K-5): Focus on Awareness and Tangible Concepts. Introduce AI through familiar, tangible
+experiences that spark curiosity and enhance creativity. Help students understand the differences between
+humans and AI, identify AI tools or systems in their lives (e.g., YouTube recommendations, voice assistants),
+and begin simple "unplugged" activities that develop skills like pattern recognition, collaboration, hands-on
+exploration, and communication.
+Middle School (6-8): Foster Inquiry and Critical Questioning. Shift from awareness to deeper inquiry. Engage
+students in project-based learning that promotes questioning AI outputs, explains how algorithms influence
+their digital experiences, investigates the effects of biases, and debates real-world dilemmas. Emphasize
+collaboration, research, and presentation skills to support the development of critical thinking,
+communication, and perspective-taking skills.
+High School (9-12): Emphasize Societal Effects and Ethical Design. Equip students with skills that allow
+them to critically analyze the role of AI in institutions, like journalism, justice, and the economy. Students can
+collaborate on projects that require them to design, evaluate, or advocate for ethical AI applications.
+Emphasize leadership, systems thinking, and solution-oriented design to cultivate civic engagement, digital
+citizenship, and preparedness for an AI-infused future.
+Prioritize Educator Preparation and Professional Learning: Professional learning cannot be a one-off tech
+training session—it must be an ongoing, collaborative process where educators and administrators learn the core
+principles of both AI and the science of learning and are given the time and resources to co-design
+developmentally appropriate curricula for their students. Lastly, education leaders play a crucial role in creating
+conditions that facilitate AI exploration and effective implementation.
+The design of learning experiences will determine whether AI becomes a catalyst for reimagining education—making
+it more personalized, engaging, and learner-centered—or reinforcing outdated models in new forms. Many of these
+recommendations align with priorities outlined in the President’s Executive Order, including early exposure to AI,
+expanded educator preparation, and the student-centered integration of AI across subject areas. Further, they
+emphasize AI literacy as a foundational element of education, including and extending beyond computer science,
+and grounded in research-based approaches to teaching and learning.
+
+www.edsafeai.org
+
+9
+
+SOCIAL AND ETHICAL
+CONSIDERATIONS FOR AI LITERACY
+As students increasingly engage with AI tools—often without fully understanding their functions or consequences—
+it’s critical to embed ethics, agency, and inclusion into AI literacy. Since AI systems shape students' beliefs,
+relationships, mental health, and opportunities, AI literacy must extend beyond digital proficiency to encompass
+privacy, security, consent, identity, and social-emotional awareness in a digitally connected world.
+AI has the potential to enhance education, but it also poses significant risks. If misused, it can repeat past mistakes,
+reduce face-to-face learning, and deepen divides among students. That's why AI literacy must go beyond teaching
+students how to use these tools—it must also help learners determine when and if they should be used at all.
+Trust is essential. In a world of easily manipulated information, students must learn to critically evaluate AIgenerated content. Educators, families, and communities play a vital role in guiding students, requiring a systematic
+investment in stakeholder communication, training, and engagement to foster collective trust in AI systems. Effective
+AI literacy extends beyond understanding how AI tools work to questioning why they function as they do and
+exploring their usefulness and implications across various contexts. Preparing students for an AI-influenced world
+requires embedding strong ethical principles into education, cultivating critical awareness, and fostering civic
+responsibility to actively shape AI's role in society.
+AI literacy frameworks must address core societal issues—including bias, privacy, misinformation, and accessibility—
+by integrating these critical topics into digital literacy and core subject curricula. This educational approach should
+align with evidence-based strategies, such as the Science of Learning and Development (SoLD), Universal Design for
+Learning (UDL), and related research from the Learning Sciences to create accessible and supportive experiences for
+all learners. Crucially, this ethical pedagogy must be reflected in the technology itself, demanding that AI tools used
+in classrooms prioritize transparency, accountability, and inclusive representation in their development, evaluation,
+and application. To truly affect the societal consequences of artificial intelligence, AI literacy must be intrinsically tied
+to action through project-based learning that challenges students to apply their knowledge toward solving tangible,
+real-world problems.
+Given that the societal implications of artificial intelligence affect every citizen, a comprehensive understanding of AI
+cannot be confined to classrooms or corporate boardrooms. Therefore, AI literacy initiatives must actively extend
+into the public square, equipping all community members with a foundational knowledge of how these powerful
+technologies work and shape their lives. This broad-based education focused on lifelong learning is the essential
+groundwork for enabling meaningful civic participation, ensuring the public has a genuine voice in the ongoing
+development and governance of AI.
+True AI literacy extends beyond technical proficiency; it is the capacity to critically analyze, ethically evaluate, and
+actively shape the role of AI in our lives and society. As these systems influence education, work, and civic life, we
+must build public confidence through responsible design and meaningful engagement. Empowering educators,
+students, and communities with ethical understanding and agency ensures AI serves as a tool for learning,
+leadership, and national strength, not just innovation.
+
+www.edsafeai.org
+
+10
+
+SOCIAL AND ETHICAL
+CONSIDERATIONS FOR AI LITERACY
+Recommendations for Policymakers
+Fund R&D Through the Department of Education's Institute of Education Sciences (IES) and NSF: Support the
+development of adaptive AI literacy curricula and tools aligned with Universal Design for Learning (UDL) and
+other relevant research-based principles, for example, to adapt to learner variation, including rural students and
+students with disabilities. Ensure that AI policies and tools protect civil rights, encourage transparency, promote
+collaboration, and are regularly reviewed for usability and effectiveness. Develop and strengthen national
+capacity to evaluate the efficacy and scalability of programs that use public funding to deliver AI Literacy
+instruction.
+Prioritize Responsible AI Across All Federal Agencies Funding AI Education: Federally funded AI literacy
+programs should include a strong focus on ethics, fairness, and real-world effects. Students should be taught to
+think critically, reflect on their learning, evaluate the implications of AI, and explain their reasoning clearly.
+Evaluation methodologies should be strengthened so that these goals can be measured with validity and
+reliability.
+
+Case Study 3: Colorado Education Initiative
+The Colorado Education Initiative offers a compelling model for building trust,
+transparency, and shared responsibility in AI integration. Through a collaborative
+process with over 100 diverse stakeholders, including educators, students, industry
+leaders, policymakers, and higher education instructors, and the Colorado Department
+of Education, they developed Colorado’s Roadmap for AI in K-12 Education. The
+roadmap provides guidance for district administrators and educators on integrating AI
+literacy across subject areas, aligning with state standards while centering student voice
+and ethical AI use. To complement the roadmap, they also launched ElevateAI, an
+initiative that empowers district leaders and teachers to experiment with AI tools
+through a system-wide approach, leading to reports of reduced stress and increased job
+satisfaction among educators.
+
+www.edsafeai.org
+
+11
+
+SOCIAL AND ETHICAL
+CONSIDERATIONS FOR AI LITERACY
+Recommendations for School and System Leaders
+Analyze AI Outputs Critically: Engage students in auditing AI outputs. Students might examine AI-generated
+news for bias, assess demographic inaccuracies in facial recognition systems, or critique recommendation
+algorithms for their potential to create filter bubbles.
+Foster Systems Thinking: Guide students to map the ecosystem of AI technologies—exploring data sources,
+creators, deploying organizations, and affected communities—to deepen their understanding of AI’s
+interconnected effects.
+Educator Foundational Ethics: Teach core ethical frameworks through AI-focused case studies, such as
+evaluating self-driving car dilemmas or balancing personalized AI convenience with privacy rights.
+Prioritize Scenario-Based Learning: Utilize role-playing, applied research projects, and debates to place students
+in the shoes of different stakeholders, allowing them to analyze an ethical challenge from multiple perspectives.
+Engage AI Safeguards: Guide students to explore AI safeguards by analyzing legislation, advocating to officials,
+or drafting an "AI Bill of Rights" for their school or community, cultivating informed civic participation.
+Elevate Youth Voice in AI Governance: Empower student voices by engaging youth directly in shaping AI-use
+policies, reviewing AI tools, and addressing concerns, fostering student agency and leadership.
+Translate Complexity for Public Audiences: Equip students to communicate AI concepts and their ethical
+implications to non-experts through projects such as informational videos, newspaper articles, or community
+town halls.
+Engage Families and Communities: Offer multilingual, inclusive resources that explain AI and its classroom
+integration, reflecting the diverse lived experiences of students. Provide avenues for families and communities to
+provide feedback and actively participate in shaping the responsible use of AI in schools.
+
+Case Study 4: Empowering AI Literacy for Families
+Common Sense Media and Day of AI released an AI Literacy Toolkit for Families, featuring free,
+family-friendly, and translated materials for families and educators. The toolkit includes conversation
+topics, activities, and videos for families, as well as an implementation guide and communication
+templates for educators. These resources are meant to support families and educators in exploring
+AI together.
+www.edsafeai.org
+
+12
+
+ECONOMIC AND CIVIC
+CONSIDERATIONS FOR AI LITERACY
+AI is rapidly transforming our economic and democratic systems, from how we work to how information is shared.
+As these tools become increasingly integral to hiring, productivity, communication, and governance, students must
+be equipped to use them to understand and influence their development and consequences. This requires AI literacy
+to be integrated across the curriculum, linking technical skills and understanding with civic engagement and
+economic participation. Without deliberate education, AI technologies may only exacerbate existing economic and
+civic inequities.
+A shared purpose is needed to advance AI literacy, rather than creating more frameworks. The risk of “framework
+fatigue” remains high if efforts are uncoordinated or disconnected from the real-world experiences of our students
+and future workers. Instead, we need federal and state leadership to support collaboration, sustainable funding, and
+alignment between workforce demands and civic learning. AI fluency is both an economic survival skill and a civic
+responsibility.
+The economic transformations driven by AI are reshaping industries, redefining jobs, and creating new sources of
+value and wealth. To navigate this new landscape, AI literacy must encompass a deep understanding of these
+economic forces. Equipping individuals with economic AI literacy is crucial not only for personal career resilience but
+also for fostering broad-based prosperity, innovation, and a competitive and equitable future economy. The
+following recommendations envision utilizing AI literacy to empower individuals and communities to thrive in the era
+of AI.
+
+Case Study 5: California Community Colleges Chancellor's Office
+The California Community Colleges Chancellor's Office (CCCCO), which
+provides direction and leadership for California’s 116 community colleges,
+has made the “Future of Learning” and Generative AI a strategic priority for
+its Vision 2030 Framework. To operationalize this effort, the CCCCO
+launched a multi-pronged effort: establishing an AI Council and developing
+the HUMANS Framework to guide responsible AI use; designing professional
+development plans to build AI literacy among faculty and staff; engaging
+communities through eight regional consortia, and funding K–12 districts to
+embed AI literacy into existing CTE Pathways. To scale this work systemwide,
+the office appointed 13 AI Fellows and 110 AI Changemakers to lead efforts
+across assessment, teaching and learning, student support, technical
+integration, research, workforce development, and professional learning.
+
+www.edsafeai.org
+
+13
+
+ECONOMIC AND CIVIC
+CONSIDERATIONS FOR AI LITERACY
+Recommendations for Policymakers
+Expand Funding Opportunities: Direct Title IV, Part A grants toward AI Across the Curriculum initiatives,
+including career exploration, digital citizenship, media literacy, and STEM programming.
+Target Funding to Underserved Communities: A meaningful share of federal funding for AI education should be
+directed to students in both rural and urban areas who lack access to strong educational resources, as well as to
+institutions that serve high-need communities. This approach will help close the AI skills gap and ensure the
+future workforce is equipped to meet national priorities.
+Promote a Holistic View of AI Skills: Federal messaging and program design should emphasize that the AI
+workforce requires a wide range of skills, not just coding and data science. This includes highlighting the
+importance of skills such as critical thinking, creativity, ethical reasoning, communication, and collaboration,
+which are essential for developing and managing AI systems responsibly.
+Support After-School and Informal AI Learning: The Department of Education and the NSF should provide
+grants to non-profit organizations, libraries, and museums to create engaging after-school and summer programs
+that expose young people to AI in a hands-on, inquiry-driven environment.
+Expand AI-Focused Apprenticeships and Internships Rapidly: The Department of Labor, in collaboration with
+the Department of Commerce, should provide significant incentives for companies to create registered
+apprenticeships and paid internships for high school and community college students in AI-related roles. This
+should include a focus on non-traditional tech pathways and roles that require a blend of technical and "human"
+skills.
+Establish a National Network of "AI Workforce Hubs”: The federal government should support the development
+of regional “AI workforce hubs” that unite K–12 schools, higher education institutions, workforce boards,
+industry partners, and community-based organizations to strengthen coordination and support. These hubs
+would collaborate to design curricula, offer work-based learning opportunities, and align education with the
+changing demands of the industry. Emphasis should be placed on building state and community-driven models
+and expanding support for regional hubs that encourage public-private partnerships among school districts,
+employers, industry leaders, and colleges. These partnerships can co-create AI learning experiences that reflect
+local economic priorities and values.
+Leverage Workforce Pell: New "Workforce Pell" programs, created by the July 2025 budget reconciliation bill,
+can be strategically used to fund short-term AI literacy training for workers. By designing certificate programs in
+high-demand AI skills that align with the new 8-to-15-week eligibility window, educational institutions can
+leverage this new federal aid to create a more AI-proficient workforce.
+
+www.edsafeai.org
+
+14
+
+ECONOMIC AND CIVIC
+CONSIDERATIONS FOR AI LITERACY
+Recommendations for School and System Leaders
+Align Workforce Pathways: Embed AI literacy into career and technical education (CTE), dual enrollment, workbased learning, and apprenticeships, connecting students to local labor markets and exposing them to
+challenges in industry-specific AI applications.
+Strengthen Civic Infrastructure: Integrate AI competencies into civics, economics, government, and history
+courses, helping students understand AI’s effects on institutions, elections, policy, civil rights, and media, and
+preparing them to be informed, engaged citizens ready for a transforming workforce.
+Prioritize Lifelong Learning: Embed continuous upskilling and reskilling across education and professional
+development, equipping learners to adopt emerging technologies and assess evolving market-demanded skills.
+Build Human-in-the-Loop Skills: Train students and educators to effectively collaborate with AI by supervising
+autonomous systems, refining AI outputs, and navigating AI-driven tasks.
+Democratize Access to AI Tools: Promote low-code and no-code AI platforms that enable individuals without
+advanced technical skills to create, test, and launch AI-driven applications and ideas.
+
+These efforts should be rooted in transparency and tailored to the economic needs and civic values of each
+community. By focusing strategically on AI literacy through practical skills, economic opportunity, entrepreneurship,
+and readiness for future jobs, we can equip individuals not only to succeed in an AI-driven economy but also to help
+shape it. This approach builds resilience, fuels innovation, and ensures that technological progress leads to long-term
+prosperity for more Americans.
+
+Case Study 6: The Urban Assembly
+The Urban Assembly is a nonprofit organization that partners with New York
+City schools to design and scale solutions that advance students’ economic
+and social mobility. One of their most innovative tools is Counselor GPT, an AI
+tool that equips school guidance counselors with on-demand, real-time labor
+market and return-on-investment information for various postsecondary
+pathways. This information is then relayed to the counselor’s students,
+improving their access to actionable guidance and information to inform their
+postsecondary decisions, like whether to enter the workforce, continue their
+education, or pursue an apprenticeship.
+
+www.edsafeai.org
+
+15
+
+CONCLUSION
+This Blueprint delivers a focused path to make AI literacy a foundational part of every student’s education, linking
+classroom innovation with job readiness, moral judgment, and civic duty. It includes actionable lessons, guiding
+principles, case examples, and policy recommendations at every level of government to turn vision into tangible
+results. Effective AI literacy models must be designed to empower Americans with the critical skills to direct and
+collaborate with artificial intelligence, ensuring it serves as a tool that augments human capability rather than a force
+that supplants the nation's workforce.
+By anchoring AI literacy in critical thinking, ethical decision-making, real-world application, and responsible
+citizenship, we do more than prepare learners for an AI-driven economy—we equip them to lead it. When individuals
+understand how AI works, they can shape its use to serve our nation’s values, rather than undermining them.
+But vision alone is not enough. Progress demands a national strategy, durable public-private partnerships, and
+steady investment. Across the country, leaders in states, school districts, and institutions are already building
+practical tools that reflect local initiative and resolve. If we fail to act with urgency, others will move ahead, leaving
+America behind in education, innovation, and workforce readiness.
+The time to act is now. With firm leadership, responsible AI policies, and a commitment to building conditions
+where Americans can thrive, we can ensure every student is prepared to succeed and lead in a future shaped by AI.
+
+www.edsafeai.org
+
+16
+
+ACKNOWLEDGEMENTS
+Supported by EDSAFE AI Alliance, aiEDU, Data Science 4 Everyone, the Global Science of Learning Education
+Network, and Mary Lou Fulton College for Teaching and Learning Innovation at Arizona State University, this
+Blueprint was made possible by the diverse perspectives and expertise shared at the June 12th event, Co-Creating a
+Comprehensive Blueprint: AI Literacy for an Action-Oriented Future. We would like to acknowledge the invaluable
+contributions of the educators, higher education and school administrators, disability rights and parent advocates,
+researchers, and industry, who participated in this convening and provided subsequent revisions.
+Please note that views expressed in this Blueprint are not endorsements made by organizations.
+
+Contributors:
+aiEDU
+
+Learning Heroes
+
+Alliance for Learning Innovation (ALI)
+
+Lemnis
+
+Carnegie Learning
+
+Mary Lou Fulton College for Teaching and
+Learning Innovation, Arizona State University
+
+CAST
+Milken Institute
+Center for Curriculum Redesign, Inc.
+National Digital Inclusion Alliance
+Children and Screens: Institute of Digital Media and
+Child Development
+
+National Education Association
+
+Data Science 4 Everyone
+
+National Parents Union
+
+DayofAI.org
+
+Peninsula School District
+
+Department of Computer Science, Chicago Public
+Schools
+
+Public Interest Privacy Center
+Relentless Feather
+
+Digital Promise
+Scottsdale Unified School District
+EducationCounsel
+SETDA
+EDSAFE AI Alliance
+Stanford University
+Global Science of Learning Education Network
+The Colorado Education Initiative
+Gwinnett County Public Schools
+The Study Group
+Johns Hopkins Center for Talented Youth
+The Urban Assembly
+Latinos for Education
+Washington Leadership Academy
+LearnerStudio
+
+www.edsafeai.org
+
+17
+
+SOURCES AND RESOURCES
+Citation for the Blueprint:
+EDSAFE AI Alliance, aiEDU, Data Science 4 Everyone, Global Science of Learning Education Network, and Mary Lou
+Fulton College for Teaching and Learning Innovation. The Blueprint for Action: Comprehensive AI Literacy for All.
+EDSAFE AI Alliance. July 16, 2025.
+Biden Jr., Joseph R. Executive Order 14141: “Advancing United States Leadership in
+Artificial Intelligence Infrastructure.” January 14, 2025. https://bidenwhitehouse.archives.gov/briefingroom/presidential-actions/2025/01/14/executive-order-on-advancing-united-states-leadership-in-artificialintelligence-infrastructure.
+California Community Colleges. The HUMANS Framework and Guiding Principles. 2024.
+https://www.cccco.edu/About-Us/Vision-2030/strategic-directions/GenAI-and-the-future-of-learning.
+California Community Colleges. Vision 2030: A Roadmap for California Community
+Colleges. 2023. https://www.cccco.edu/-/media/CCCCO-Website/docs/report/Vision-2030-A-Roadmap-forCalifornia-Community-Colleges.pdf.
+Carnegie Learning. The State of AI in Education 2025. 2025.
+https://discover.carnegielearning.com/hubfs/PDFs/Whitepaper%20and%20Guide%20PDFs/2025-AI-in-EdReport.pdf?hsLang=en.
+CAST. Universal Design for Learning. https://www.cast.org/what-we-do/universal-design-for-learning/.
+Cordon, Miguel. “China to Use AI in Education to Improve Student Skills.” Tech in Asia,
+April 17, 2025. https://www.techinasia.com/news/china-to-use-ai-in-education-to-improve-student-skills.
+Day of AI and Common Sense Media. AI Literacy Toolkit: Empowering Families To Explore AI! Day of AI.
+https://dayofai.org/families/.
+Digital Promise. Artificial Intelligence in Education.
+https://digitalpromise.org/initiative/artificial-intelligence-in-education/.
+Educating All Learners Alliance and New America. Prioritizing Students with Disabilities in AI Policy. Educating All
+Learners, 2024. https://drive.google.com/file/d/1iaY6s466mlvzo-9SmcuKbohxVF1Pc274/view.
+Fittes, Emma Kate. “British Government Launching ‘Content Store’ Designed to Nurture Better AI Classroom
+Resources.” EdWeek Market Brief, September 12, 2024. https://marketbrief.edweek.org/regulation-policy/britishgovernment-launching-content-store-designed-to-nurture-better-ai-classroom-resources/2024/09.
+Grand View Research. AI In Education Market Size, 2025–2030. 2024.
+https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report.
+
+www.edsafeai.org
+
+18
+
+SOURCES AND RESOURCES
+International Society of the Learning Sciences. ISLS: International Society of the Learning Sciences.
+https://www.isls.org/.
+International Trade Administration. South Korea Artificial Intelligence in Public Schools. 2024.
+https://www.trade.gov/market-intelligence/south-korea-artificial-intelligence-public-schools.
+Jobs for the Future (JFF). “Budget Bill Expands Pell Eligibility: What's Next for Students and Providers?” 2025.
+https://www.jff.org/budget-bill-expands-pell-eligibility-whats-next-for-students-and-providers/.
+Kai, Ng Wei. “NIE to Train Teachers in Using AI in Classroom, Invest in Research.” The Straits Times, May 25, 2022.
+https://www.straitstimes.com/singapore/parenting-education/nie-to-train-teachers-in-using-ai-in-classroom-investin-research.
+Laird, Elizabeth, Maddy Dwyer, and Kristin Woelfel. Students, Teachers in Stride with EdTech Threats While Parents Are
+Left Behind. Center for Democracy & Technology, January 2, 2025.
+https://cdt.org/wp-content/uploads/2024/12/CDT-Out-of-Step-010225.pdf.
+Lee, Keun-Woo, Kelly Mills, Pati Ruiz, Merijke Coenraad, Judi Fusco, and Jeremy Roschelle. AI Literacy: A Framework
+to Understand, Evaluate, and Use Emerging Technology. Digital Promise, 2024.
+https://digitalpromise.org/2024/06/18/ai-literacy-a-framework-to-understand-evaluate-and-use-emergingtechnology/.
+Mulford, David. AI in Higher Education: A Meta Summary of Recent Surveys of Students and Faculty. Campbell Academic
+Technology Services, 2025. https://sites.campbell.edu/academictechnology/2025/03/06/ai-in-higher-education-asummary-of-recent-surveys-of-students-and-faculty/.
+Murphy, Karen L., and Alex Logan. Human Skills in the Age of AI: Why Essential Competencies Matter More Than Ever.
+LearnerStudio and High Resolves, July 10, 2025.
+https://drive.google.com/file/d/1elp4Zz8QEqjATr3WRu_7NW8YaPxuXBGT/view
+Organisation for Economic Co-operation and Development (OECD). “Empowering Learners for the Age of AI: An AI
+Literacy Framework for Primary and Secondary Education (Review Draft).” OECD, 2025.
+https://ailiteracyframework.org/wp-content/uploads/2025/05/AILitFramework_ReviewDraft.pdf.
+Peninsula School District. Artificial Intelligence in PSD. https://psd401.ai/.
+SETDA. “Integrating the Five EdTech Quality Indicators into State Procurement Processes.” 2025.
+https://www.dropbox.com/scl/fi/iangoseh5o76ly0g0w911/SETDA-s-EdTech-Quality-Indicators-Guide_2025.pdf.
+Science of Learning and Development Alliance. Our Work. https://soldalliance.org/work/.
+
+www.edsafeai.org
+
+19
+
+SOURCES AND RESOURCES
+Smart Nation and Digital Government Office. Smart Nation Singapore. 2025. https://www.smartnation.gov.sg/.
+TeachAI. AI in Education Guidance and Policy Tracker. https://www.teachai.org/policy-tracker.
+Trump, Donald J. Executive Order 14277: “Advancing Artificial Intelligence Education
+for American Youth.” April 23, 2025. https://www.whitehouse.gov/presidential-actions/2025/04/advancing-artificialintelligence-education-for-american-youth/.
+Trump, Donald J. Executive Order 14303: “Restoring Gold Standard Science.” May 23, 2025
+https://www.whitehouse.gov/presidential-actions/2025/05/restoring-gold-standard-science.
+U.S. Department of Education. Student Support and Academic Enrichment Program (Title
+IV, Part A). https://www.ed.gov/grants-and-programs/formula-grants/school-improvement/student-support-andacademic-enrichment-program.
+U.S. Department of Education. Supporting Effective Educator Development Grant Program. https://www.ed.gov/grantsand-programs/teacher-prep/supporting-effective-educator-development-grant-program.
+U.S. Department of Education. Supporting Effective Instruction State Grants (Title II, Part A).
+https://www.ed.gov/grants-and-programs/formula-grants/school-improvement/supporting-effective-instructionstate-grantstitle-ii-part-a.
+U.S. Department of Education. Teacher Quality Partnership Program.
+https://www.ed.gov/grants-and-programs/teacher-prep/teacher-quality-partnership-program.
+U.S. House of Representatives. H.R.1, 119th Congress: One Big Beautiful Bill Act, signed July 4, 2025.
+https://www.congress.gov/bill/119th-congress/house-bill/1.
+U.S. National Science Foundation. “NSF Launches EducateAI Initiative.” 2023.
+https://www.nsf.gov/news/nsf-launches-educateai-initiative.
+United Nations Educational, Scientific, and Cultural Organization. “Artificial Intelligence Publications.”
+https://www.unesco.org/en/search?
+category=UNESCO&query=Artificial+Intelligence&fq%5Bss_unesco_type%5D%5B%5D=report&op=Search.
+Vosloo, Steven, and Cecile Aptel. Beyond Algorithms: Three Signals of Changing AI-Child Interaction. United Nations
+Children's Fund. 2025. https://www.unicef.org/innocenti/stories/beyond-algorithms-three-signals-changing-ai-childinteraction.
+
+www.edsafeai.org
+
+20
+
+SOURCES AND RESOURCES
+White House, Office of Science and Technology Policy. Blueprint for an AI Bill of Rights. Biden White House Archives,
+November 22, 2023. https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/.
+World Economic Forum. The Future of Jobs Report 2025. 2025.
+https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf.
+
+www.edsafeai.org
+
+21
+
+

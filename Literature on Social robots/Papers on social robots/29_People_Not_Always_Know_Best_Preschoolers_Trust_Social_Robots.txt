@@ -1,0 +1,1593 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/369126695
+
+People Do Not Always Know Best: Preschoolers’ Trust in Social Robots
+Article in Journal of Cognition and Development · March 2023
+DOI: 10.1080/15248372.2023.2178435
+
+CITATIONS
+
+READS
+
+7
+
+409
+
+4 authors, including:
+Anna-Elisabeth Baumann
+
+Elizabeth Jessica Goldman
+
+Concordia University Montreal
+
+Yeshiva University
+
+6 PUBLICATIONS 14 CITATIONS
+
+17 PUBLICATIONS 46 CITATIONS
+
+SEE PROFILE
+
+Diane Poulin-Dubois
+Concordia University Montreal
+208 PUBLICATIONS 5,338 CITATIONS
+SEE PROFILE
+
+All content following this page was uploaded by Diane Poulin-Dubois on 13 March 2023.
+The user has requested enhancement of the downloaded file.
+
+SEE PROFILE
+
+Journal of Cognition and Development
+
+ISSN: (Print) (Online) Journal homepage: https://www.tandfonline.com/loi/hjcd20
+
+People Do Not Always Know Best: Preschoolers’
+Trust in Social Robots
+Anna-Elisabeth Baumann, Elizabeth J. Goldman, Alexandra Meltzer & Diane
+Poulin-Dubois
+To cite this article: Anna-Elisabeth Baumann, Elizabeth J. Goldman, Alexandra Meltzer & Diane
+Poulin-Dubois (2023): People Do Not Always Know Best: Preschoolers’ Trust in Social Robots,
+Journal of Cognition and Development, DOI: 10.1080/15248372.2023.2178435
+To link to this article: https://doi.org/10.1080/15248372.2023.2178435
+
+Published online: 09 Mar 2023.
+
+Submit your article to this journal
+
+Article views: 19
+
+View related articles
+
+View Crossmark data
+
+This article has been awarded the Centre
+for Open Science 'Open Data' badge.
+This article has been awarded the Centre
+for Open Science 'Open Materials' badge.
+This article has been awarded the Centre
+for Open Science 'Preregistered' badge.
+
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=hjcd20
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+https://doi.org/10.1080/15248372.2023.2178435
+
+People Do Not Always Know Best: Preschoolers’ Trust in Social
+Robots
+Anna-Elisabeth Baumann
+and Diane Poulin-Dubois
+
+, Elizabeth J. Goldman
+
+, Alexandra Meltzer
+
+,
+
+Department of Psychology, Concordia University, Montréal, Quebec, Canada
+ABSTRACT
+
+In this paper, we investigated whether Canadian preschoolers prefer to
+learn from a competent robot over an incompetent human using the
+classic trust paradigm. An adapted Naive Biology task was also admi­
+nistered to assess children’s perception of robots. In Study 1, 3-yearolds and 5-year-olds were presented with two informants; A social,
+humanoid robot (Nao) who labeled familiar objects correctly, while
+a human informant labeled them incorrectly. Both informants then
+labeled unfamiliar objects with novel labels. It was found that 3-yearold children equally endorsed the labels provided by the robot and the
+human, but 5-year-old children learned significantly more from the
+competent robot. Interestingly, 5-year-olds endorsed Nao’s labels even
+though they accurately categorized the robot as having mechanical
+insides. In contrast, 3-year-old children associated Nao with biological
+or mechanical insides equally. In Study 2, new samples of 3-year-olds
+and 5-year-olds were tested to determine whether the human-like
+appearance of the robot informant impacted children’s trust judg­
+ments. The procedure was identical to that of Study 1, except that
+a non-humanoid robot, Cozmo, replaced Nao. It was found that 3-yearold children still trusted the robot and the human equally and that
+5-year-olds preferred to learn new labels from the robot, suggesting
+that the robot’s morphology does not play a key role in their selective
+trust strategies. It is concluded that by 5 years of age, preschoolers
+show a robust sensitivity to epistemic characteristics (e.g., compe­
+tency), but that younger children’s decisions are equally driven by
+the animacy of the informant.
+
+Introduction
+Selective trust, also known as epistemic trust, is the ability to select from whom to learn new
+information (Harris & Corriveau, 2011; Mills, 2013; Poulin-Dubois & Brosseau-Liard, 2016;
+Sobel & Finiasz, 2020). Not all the information we receive from others is accurate, as
+informants can be unreliable and purposefully or unintentionally provide inaccurate infor­
+mation (Harris, Koenig, Corriveau, & Jaswal, 2018; Koenig & Harris, 2005b). However,
+people can filter the information provided by considering the informant’s past evidence of
+reliability and accuracy. Thus, humans can select the information they deem to be accurate
+and ignore incorrect and/or outdated information (Koenig & Harris, 2005a). Once devel­
+oped, this ability allows humans to efficiently acquire novel knowledge from human and
+CONTACT Anna-Elisabeth Baumann
+anna-elisabeth.baumann@mail.concordia.ca
+Concordia University, 7141 Sherbrooke St W Montréal, QC H4B 1R6, Canada
+© 2023 Taylor & Francis
+
+Department of Psychology,
+
+2
+
+A.-E. BAUMANN ET AL.
+
+non-human informants (Tong, Wang, & Danovitch, 2019). Although selective trust might
+be emerging early, it appears to be primarily guided by the social characteristics of the
+informant. For example, infants as young as 14 months can selectively learn from various
+informants based on the conventionality of their behaviors and/or emotional displays
+(Poulin-Dubois & Brosseau-Liard, 2016).
+
+Developmental shift
+A decade of research on selective trust has revealed that 4 years of age appears to be the
+critical transition period at which children begin to display epistemic trust, that is, favor
+epistemic (e.g., competency, accuracy, reliability, expertise) over social characteristics
+(e.g., gender, familiarity, benevolence, ingroup status) of the informant when deciding
+whom to learn from (Henrich & Broesch, 2011; Tong et al., 2019). For example,
+numerous studies have revealed that 3-year-olds appear to consider both social and
+epistemic characteristics when deciding which informant to endorse, whereas older
+children are predominantly guided by epistemic characteristics when both characteristics
+are present (Tong et al., 2019). The developmental trajectory from relying on social
+characteristics to epistemic characteristics supports Henrich and Broesch’s two-stage
+theory of transmission (Tong et al., 2019). According to this theory, children rely most
+on familiarity, showing a preference to learn from close relatives and parents early in
+childhood (Henrich & Broesch, 2011; Lucas et al., 2017). When children are novice
+learners, prioritizing social characteristics helps them adapt to social interactions.
+However, as children grow older and have more experiences interacting with others,
+their reliance on familiarity lessens. By 5 years of age, children instead elect to prefer­
+entially learn from knowledgeable informants (Lucas et al., 2017).
+A variety of skills may contribute to the development of epistemic trust (Heyes, 2016;
+Poulin-Dubois & Brosseau-Liard, 2016; Sobel & Kushnir, 2013). A transition from
+social to epistemic characteristics appears to be guided by the development of
+a theory of mind (ToM), the ability to attribute mental states to oneself and to others
+(Poulin-Dubois, Azar, Elkaim, & Burnside, 2020; Wellman, 2014). A large body of work
+has revealed a link between ToM skills and performance in the selective trust task
+(Brosseau-Liard, Penney, & Poulin-Dubois, 2015; Crivello, Phillips, & Poulin-Dubois,
+2017; DiYanni & Kelemen, 2008; Fusaro & Harris, 2008; Lucas et al., 2017; Palmquist &
+Fierro, 2018; Resendes, Benchimol-Elkaim, Delisle, René, & Poulin-Dubois, 2021).
+However, a few studies have failed to find such a link (Pasquini, Corriveau, Koenig,
+& Harris, 2007; Souza et al, 2021). A secondary, more exploratory goal of the present
+study was to examine the role of ToM when a robot informant is paired with a human
+informant in a selective trust task. To examine whether there is a link between
+children’s ToM and selective trust, parents in the present studies filled out a parental
+measure of ToM, the Children’s Social Understanding Scale (Tahiroglu et al, 2014). Due
+to younger children’s reliance on social characteristics in selecting an informant, one
+would expect that individual differences in social affiliation would be negatively linked
+to epistemic trust. Therefore, another exploratory parental survey was administered, the
+Children’s Prosocial Behavior Questionnaire (CPBQ) (Brazzelli, Farina, Grazzani, &
+Pepe, 2018).
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+3
+
+Robots as informants
+Interestingly, prior work has revealed that children can learn from non-human informants,
+specifically technological informants (e.g., computers, the internet) (Danovitch & Alzahabi,
+2013; Noles, Danovitch, & Shafto, 2015; Wang, Tong, & Danovitch, 2019). For example,
+Danovitch and Alzahabi (2013) found that 3-, 4- and 5-year-olds relied on information
+from a computer informant who had previously displayed accuracy to identify novel objects
+and answer questions about unfamiliar facts. One unique way to examine what is driving
+the developmental shift from reliance on social versus epistemic characteristics would be to
+use social robots. A recent meta-analysis has shown that children interact with and learn
+from social robots (Stower, Calvo-Barajas, Castellano, & Kappas, 2021). However, much of
+the prior work either presented children with a single robot informant (Di Dio et al., 2020;
+Kory & Breazeal, 2014; O’Connell, Poulin-Dubois, Demke, & Guay, 2009; Oranç & Küntay,
+2020) or pitted two robot informants against one another (Breazeal et al., 2016; Brink &
+Wellman, 2020; Geiskkovitch et al., 2019). To our knowledge, no previous study has used
+a human speaker and a social robot in a selective trust paradigm. By doing so, we can
+examine whether younger children prioritize social affiliation and/or in-group membership
+or the competency of the robot informant (epistemic characteristic) as more important
+when selecting whom to learn from. Notably, the present study aimed to provide
+a conservative test of 5-year-olds’ reliance on epistemic characteristics in selective trust. If
+the epistemic bias is robust, children should prefer to learn from a competent inanimate
+informant.
+Only a few studies have examined children’s epistemic trust in social robots. Breazeal
+et al. (2016) introduced children between the ages of 3 and 5 years to two non-humanoid
+robots (Nao) that provided information about unfamiliar animals. Both informants were
+deemed reliable, yet sociability was manipulated. The socially sensitive robot looked at the
+experimenter when talking and looked down at the objects while they were being discussed.
+The socially insensitive robot appeared to be disengaged when the experimenter and child
+were talking (i.e., the robot looked at the experimenter and children when it was speaking
+but looked away for the rest of the time). The researchers found that the children treated the
+two robots as informants from whom they could learn. However, the children preferred to
+seek and endorse the information provided by the socially engaged robot compared to the
+socially disengaged robot.
+Brink and Wellman (2020) also presented 3- to 4-year-old children with a selective wordlearning task. The children were provided with labels for familiar and novel objects by two
+humanoid robots (Nao). The two robots were identical except for their color; one had
+orange accents, the other purple. During the selective word-learning task, one of the robots
+provided the children with accurate labels (i.e., competent), whereas the other gave inaccu­
+rate labels (i.e., incompetent). The researchers found that children learned from, and trusted
+information provided by both robots (i.e., names for novel items), similarly to the way they
+trust humans. Children trusted information from the accurate social robot more than the
+inaccurate social robot.
+Similarly, Westlund et al. (2017), have shown that children aged 4 to 6 can learn new
+words from both a human, a tablet, and a robot. In their study, children were exposed to one
+informant at a time and learned six new words from each. However, Westlund did not pit
+a human and a robot directly against one another to see whom they would choose to learn
+
+4
+
+A.-E. BAUMANN ET AL.
+
+novel words from after both had demonstrated accuracy. Children even reported that they
+preferred to learn from the robot informant, perhaps due to its novelty. Thus, prior work
+has converged to show that children prefer to learn from knowledgeable robots as they do
+knowledgeable humans. However, further research is needed to understand how children
+can learn words from social robots, especially in direct comparison to human informants.
+The present studies
+Although there is evidence that children can trust robots, what has not yet been studied is
+whom children will learn from when forced to choose between a robot or a human
+informant. Importantly, the present work examined whether children prioritize social or
+competency characteristics when asked to select between a human or robot informant. Such
+contrast allows for a conservative test of epistemic trust, as it requires children to focus on
+competence despite the lack of animacy of the informant. The classic trust paradigm
+developed by Koenig and colleagues (2004), was administered to Canadian 3- and 5-yearold children to contrast a competent social humanoid robot (Nao) with an incompetent
+human (Study 1). In Study 2, the same tasks were administered using a non-humanoid
+robot, Cozmo. By manipulating the physical appearance of the robot, we examined what
+role, if any, human-like morphology plays in selective trust and how its importance might
+change with age. How does the human-like appearance of the robot impact children’s
+conceptualization and learning from robots? One would expect that physical appearance
+would be irrelevant to older children if epistemic characteristics dominate decision-making
+in the selective trust context. We hypothesized that the 3-year-olds would prioritize social
+affiliation over competency and elect to learn from the incompetent human. In contrast, we
+predicted the 5-year-olds would prioritize competency and learn more from the competent
+robot Nao.
+To test if children are willing to learn from a social robot, despite the robot being an
+inanimate object, we needed to assess children’s animacy judgment of the robot. Adults see
+robots as depictions of social agents, agents that can be interacted with but are not, in
+themselves, alive (Clark & Fischer, 2022). Yet, one might ask, how do children perceive
+robots? To date, studies have reported that children tend to classify humanoid robots as
+artifacts by 4 or 5 years of age when tested using an interview format (e.g., Is this alive? Does
+it have wires inside?) (Kim, Yi, & Lee, 2019; Okita et al., 2006; Somanader, Saylor, & Levin,
+2011). Something lacking in the field so far are more interactive, child-friendly tasks meant
+to measure children’s animacy judgment of robots.We elected to administer a task that
+directly measures children’s conceptualization of robots instead of using an interview.
+A recent study using a Naïve Biology task has found that by 5 years of age, children attribute
+mechanical, rather than biological insides to robots (Goldman, Baumann, & Poulin-Dubois,
+2023). Specifically, we used a modified version of Gottfried and Gelman’s (2005) naïve
+biology task. The Naïve Biology task examined children’s thoughts on the internal proper­
+ties of unfamiliar animals, mechanical objects, and robots. Specifically, the naïve biology
+task provided insight into whether children would categorize the robot as a mechanical or
+biological entity. This task also served as a manipulation check. If children learn from
+a robot while still recognizing it as mechanical, the conservative nature of our test is
+confirmed. Based on previous research with artifacts, we predicted that 5-year-old children
+would correctly associate the robot with a mechanical inside, but that 3-year-olds would be
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+5
+
+confused about what should go inside robots. We administered the robot naïve biology trial
+both before and after the epistemic trust task. This allowed testing for a possible shift
+towards more attribution of biological insides after children see the robot behave in
+a competent, social manner. Additionally, two parent-report measures, the CSUS and the
+CPBQ, were used to assess children’s ToM skills and prosocial behavior. We predicted that
+children who scored higher on ToM (the CSUS) would opt to learn the novel words from
+the robot (i.e., score higher on the trust task). We expected that those who displayed better
+prosocial skills (the CPBQ) would perform worse on the trust task (i.e., choosing the
+incompetent informant), as children who are more prosocial might demonstrate stronger
+in-group bias when it comes to learning from informants.
+
+Study 1
+Method
+Participants
+The sample consisted of 3-year-old Canadian children (N = 50, Mage = 3.52 years, SD = 1.86,
+Nmale = 27) and 5-year-old children (N = 45, Mage = 5.41 years, SD = 1.82, Nmale = 23) who
+were recruited from an existing database of participants and from birth lists provided by
+a governmental health agency. An a priori G*Power 3.1 analysis (Faul, Erdfelder, Lang, &
+Buchner, 2007) was run to determine the appropriate sample size for a 2 × 3 repeated
+measures analysis of variance. Our goal was to obtain .80 power to detect a medium effect
+size of .25 at the standard .05 alpha error probability. The analysis revealed a minimum sample
+size of 43, per group. Therefore, our current sample of 50 3-year-olds and 45 5-year-olds
+exceeds the minimum needed sample size. Due to COVID-19, children were tested virtually
+over the Zoom video platform. Parents were given the choice to have their child tested in
+either English or French as the experiment took place in a large metropolitan city in which
+most residents speak either English, French, or both languages. Most of the children in our
+sample were tested in English (N = 78). Prior to their participation, parents filled out a consent
+form. As compensation, parents received a $20 gift card to a local bookstore, and children
+received a certificate of merit for their participation. A total of 17 additional participants were
+tested but excluded; due to parental or sibling interference (n = 8), experimenter error (n = 2),
+prior robot exposure (n = 1), completing the study on a screen deemed too small (under
+10 inches) (n = 2), and fussiness (n = 4). Parents also completed a demographic form.
+Approximately half of our sample was Caucasian (56.84%), a quarter of the sample was
+mixed race (25.26%), and the remainder of the sample (17.9%) consisted of various other
+ethnic groups (i.e., African, Asian, South American). In terms of socioeconomic status (SES),
+57.89% of our participants identified as high SES families (>$100,000), 26.32% belonged to
+middle SES households ($50,000–$100,000), and 15.79% came from low SES households (<
+$50,000). All videos were re-coded by a second coder blind to the hypotheses to check the
+child’s responses and attentiveness. Only two disagreements occurred (i.e., disagreement
+about which label the child endorsed). In these cases, an additional coder broke the tie.
+Naïve biology task
+The naïve biology task was adapted from Gottfried and Gelman (2005). The study began
+with two training trials. Each training trial featured an image of a familiar furniture item
+
+6
+
+A.-E. BAUMANN ET AL.
+
+(i.e., a fridge or closet) that was missing a center piece. The missing piece was denoted with
+a white rectangle. Next to the familiar item were two options children could choose from.
+The correct option was something that would be likely to go inside that item (i.e., food, the
+correct option for the fridge training trial), and the other option had something that would
+not normally be placed inside the familiar item (i.e., clothing, something that would not be
+appropriate to place in the fridge). During the first training trial, the experimenter demon­
+strated which inside was correct. During the second training trial, the child had to pick
+between the two options independently. Whether the fridge or closet was presented first was
+counterbalanced.
+During the test trials, children were shown four unfamiliar animals (i.e., ibek, pacarana,
+tapir, cavy), four unfamiliar artifacts (i.e., intercom, espresso maker, voice recorder, electric
+razor), and a picture of the robot Nao. All these images were also missing a piece in their
+center. As in the training trials, the missing piece was indicated by a white rectangle. The
+unfamiliar images (i.e., animals, artifacts, Nao) were presented one at a time. For every trial,
+one of four biological insides (i.e., muscle, lungs, heart, bone) and one of four mechanical
+insides (i.e., gears, circuit, batteries, wires) was presented for pairing to the child (see
+Figure 1). The experimenter asked the child which of the two unfamiliar options (i.e., one
+biological option and one mechanical option) should go inside. Children were asked to
+respond verbally and indicate which of the options they thought belonged inside. However,
+if the child did not respond after a few attempts due to shyness or other reasons, then the
+experimenter asked the child to point to their chosen image, and the parent was asked to
+indicate which option the child was pointing at (i.e., the top or bottom). Once the child
+picked an option, the experimenter moved the selected option into the missing “inside” and
+confirmed the child’s choice. The internal insides paired with each unfamiliar image, the
+order of the unfamiliar images, and whether the biological or mechanical inside was on the
+
+Figure 1. Robot trial from the naïve biology task. Note. Children selected whether the biological or
+mechanical option belonged inside the target robot image (i.e., seen on the left). Nao Robot: copyright ©
+Aldebaran, part of United Robotics Group.
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+7
+
+top or the bottom of the screen was counterbalanced. The counterbalancing resulted in four
+conditions.
+In their study, Gottfried and Gelman (2005) verified that the mechanical and biological
+objects featured in the task are novel to children. To make sure the robot was also novel to
+children, a parental-report demographic form asked parents if their child(ren) had any
+regular exposure to robots. Overall, parents reported very low robot exposure, with only one
+parent reporting regular exposure. As a result of reporting regular exposure to a robot, this
+participant was excluded. Parents who reported their children watched robots occasionally
+on TV or had a conversational voice interface device (e.g., Google Home, Amazon Alexa) in
+their home were not excluded.
+Scoring
+Children received a point each time they properly assigned the correct inside to the target
+picture (i.e., mechanical inside to the artifacts and the robot, and a biological inside to the
+animals).
+Selective trust task
+The standard selective trust task originally designed by Koenig et al. (2004) was also
+administered. To introduce the selective trust task, the child was told that they would
+now meet the experimenter’s robot and human friends and that these friends had toys they
+wanted to show the child. If the child’s attention lapsed, the experimenter kindly asked the
+child to return their attention to the screen. The experimenter referred to both Nao and Ina
+by their names and introduced both informants as being the experimenter’s friends. The
+experimenter also labeled Nao as a robot and Ina as a human throughout the selective trust
+task while asking the questions. All videos were pre-recorded and played to the child over
+Zoom.
+Introductory video. To introduce the two informants, a video of the robot and human was
+played, in which they both pointed toward themselves and said, “Hi! My name is [Ina/Nao],
+I am excited to play a game with you today” (see Figure 2).
+Familiarization trials. There were three familiarization trials. In each familiarization trial,
+Nao and Ina each labeled a familiar object. These objects included a toy car, a ball, and
+a cup. Nao always labeled the objects correctly, whereas Ina, the human informant, always
+labeled them incorrectly (e.g., Nao labeled the toy car as a car, while Ina labeled the toy car
+as a book; see Table 1 for the complete list of labels). The child was then asked to endorse
+one of the object labels provided by the informants (i.e., “can you tell me what this is
+called?,” endorse trials). Following the three familiarization trials, the child was asked to
+identify whether Nao or Ina had provided them with correct or incorrect information (i.e.,
+“my friends just told you a lot of things, did either of them say something [right/wrong]?,”
+judgment trials). The familiarization trial judgment question served as an explicit judgment
+of the informants’ reliability and thus allowed the children to verbally express which
+informant they deemed to be reliable. We anticipated that children would answer this
+question correctly since the items presented were familiar items.
+
+8
+
+A.-E. BAUMANN ET AL.
+
+Figure 2. Still frame of the video setup for the selective trust task. Nao Robot: copyright © Aldebaran, part
+of United Robotics Group.
+
+Test trials. There were three test trials. In each test trial, Nao and Ina labeled an unfamiliar
+object. The novel objects included a blue cylinder (blue twine), a white rubber bulb (top of
+a Turkey baster), and a red silicone mold (resembled a muffin tin). Prior to playing the
+videos of Nao and Ina labeling the novel objects, the children were asked if they knew what
+the object was called. If a child said that they knew what the object was called and
+subsequently labeled it, the experimenter would state, “That’s a good guess, but I don’t
+think that’s what this is called. Let’s see if our friends can help us figure it out.” Please note
+there was no difference in performance between the children who offered a name for at least
+one object vs those who did not, on any of the trials across both studies (t(182) < −1.66,
+p > .10). The child was then prompted to tell the experimenter which informant they wished
+to ask for the label of the novel object (i.e., ask questions). The ask questions were used to
+identify previous biases that may exist and to examine if the familiarization trials rendered
+Nao reliable. Nao and Ina labeled the objects using different nonsense labels such as
+a “toma” and a “mido” (see Table 1 for the complete list of labels). Since the novel objects
+were likely unfamiliar to the child, they had to rely on one of the informants to learn the
+labels. The experimenter then asked the child to endorse one of the informant’s labels by
+asking the child to name the object (i.e., endorse questions). Correct responses for this task
+required children to endorse the label that was provided by Nao, as Nao was the informant
+who consistently labeled the familiar objects correctly in the familiarization trials. After
+completing the test trials, the children were again asked to indicate which informant
+provided correct or incorrect labels (i.e., test trial judgment question).
+
+Ask Trials
+
+Object
+
+Show Child Object,
+“Who do you want to
+“Do you Know what
+ask what this is
+this is?” If yes, “I
+called?”
+don’t think that’s
+what this is called,
+but let’s see what
+my friends have to
+say.”
+
+Knowledge Check
+
+“Let’s see what my
+friends think this is
+called.”
+
+Familiarization Trials
+
+Dog
+
+Cup
+
+“Let’s see
+what my
+friends think
+this is called.”
+
+Object
+
+Shoe
+
+Ball
+
+Test
+Trials
+
+Book
+
+Car
+
+Robot Label Human Label
+
+Mido
+
+Dax
+
+Dawnoo
+
+Fep
+
+Bosa
+
+Human Label
+
+Toma
+
+Robot Label
+
+“CHILD, what do you think this is called?”
+
+Endorse Trials
+
+Table 1. The selective trust task procedure, per trial, for both the familiarization and test trials.
+
+Explicit judgment Trials
+“CHILD, what “Now my friends again told you
+do you
+a lot of things. Did either of
+think this is
+my friends say something
+called?”
+[right/wrong]?”
+
+Endorse Trials
+
+“Now my friends just told you a lot of things. Did
+either of my friends say something [right/
+wrong]?”
+
+Explicit judgment Trials
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+9
+
+10
+
+A.-E. BAUMANN ET AL.
+
+There were four versions of the selective trust task. Each child was shown the same
+familiar and unfamiliar objects in the same order; however, who spoke first (i.e., Nao or Ina)
+and the position of the first speaker (i.e., on the right or the left) was counterbalanced across
+the conditions. Furthermore, the explicit judgment question was also counterbalanced; half
+of the participants were asked to identify the accurate speaker (i.e., who said something
+right?), while the other half were asked to identify the inaccurate speaker (i.e., who said
+something wrong?). Counterbalancing helped to ensure internal validity and controlled for
+any possible confounds that could have been created by sequence or order effects (e.g., the
+child always endorsing the label they heard last or always selecting the informant on the
+left).
+Scoring. For both the familiarization and test trials of the selective trust task, children
+received a score out of three for the ask questions (i.e., whom they asked for help),
+a score out of three for the endorse questions (i.e., whose label they used), and a score
+out of two points for the judgment question (i.e., who said something right or wrong).
+Children received a point each time they asked Nao for the label for the ask trials. For
+the endorse trials, children received a point when they endorsed the label that was
+provided by Nao. When asked who said something right, children who selected Nao
+received a point, and when asked who said something wrong, children who selected Ina
+received a point.
+Children’s social understanding scale (CSUS)
+In addition to the two tasks, parents filled out two forms. Parents filled the forms out either
+before or after the testing session. The CSUS is a parental report measure of children’s social
+understanding, or theory of mind, between the ages of 2 and 7 years. The survey included 42
+questions or statements, which parents responded to on a 4-point Likert scale ranging from
+“definitely untrue (1)” to “definitely true (4).” There was also a “don’t know” option parents
+could select if they could not accurately judge their child’s behavior for that item. The questions
+fall into six domains, with seven questions in each: emotion, intention, desire, perception,
+knowledge, and belief. An average score per child was determined combining all domain
+(Tahiroglu et al., 2014). The French version of the CSUS has been validated by BrosseauLiard et al. (2019).
+Child prosocial behavior questionnaire (CPBQ)
+To our knowledge, there is no parental report measure that assesses all facets of social
+affiliation. As an informed choice, we selected the CPBQ, an instrument for detecting and
+measuring different aspects of prosocial behaviors in children, which have been found to
+relate to social affiliation (Sparks, Schinkel, & Moore, 2017). The CPBQ is a parental report
+measure of children’s prosocial behavior towards adults and children that is validated for
+ages 1 to 4 years. It consisted of 10 questions, which parents responded to on a 5-point
+Likert scale which ranged from “Never (1)” to “Always (5).” The questions fall into three
+domains: comforting (3 questions), helping (3 questions), and sharing (4 questions). An
+average score per child was determined combining all domain (Brazzelli et al., 2018). The
+CPBQ was translated into French for the purpose of the current study.
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+11
+
+Procedure
+As the study took place online, the parent and their child joined a Zoom meeting for the
+testing session. The Zoom session lasted between 15 and 30 minutes, and the children were
+seated in front of or beside their parents. Parents were informed that the study could only be
+completed on a tablet or computer, not a phone. A minimum screen size of 10 inches was
+required to properly view the videos and other stimuli. Prior to the study, the parent(s) were
+briefed on the study’s goals and filled out a consent form. The two forms (CSUS and CPBQ)
+and the demographics form were completed either before or after the Zoom session.
+Participants first completed the naïve biology task, then the selective trust task, and finally
+were shown the Nao (robot) naïve biology trial again. Parents were then debriefed,
+informed of the study’s purpose, and given a chance to ask any questions.
+Materials
+Materials included the robot Nao, developed by Softbank robotics. Nao is an autonomous,
+programmable, humanoid robot standing at 23 inches in height. A laptop with the Zoom
+application installed was used to administer the study. The images and videos for both tasks
+were presented over Zoom using Microsoft PowerPoint.
+Results
+Data cleaning and transformation
+Participants who selected neither option, both options, or made a conflicting choice (i.e.,
+said they wanted to endorse the robot’s label but then picked the human’s label) on the tasks
+(selective trust, naïve biology) received a score of 0 on that trial for failing to make a clear
+choice (n = 11 trials).
+All data was checked for normality. If a deviation from normality was found, appropriate
+corrections were applied, and nonparametric tests were run. If a given analysis changed in
+significance (i.e., became insignificant or trending), that change is reported below. Analyses
+were checked for interactions between gender (male or female) and testing language
+(French or English) on both tasks (selective trust, naïve biology), but no significant inter­
+actions with the tasks were found. Therefore, gender and language were collapsed across all
+subsequent analyses. Due to the selective trust task and the naïve biology task having
+a different number of trials, the raw scores were transformed into proportions for the
+purposes of cross-trial or cross-task analyses.
+
+Table 2. Mean scores and chance analyses per age group for the selective trust task.
+Selective Trust Trial
+Ask
+Ask
+Endorse
+Endorse
+judgment
+judgment
+
+n
+50
+45
+50
+45
+50
+45
+
+Age
+3
+5
+3
+5
+3
+5
+
+Mean
+2.44
+2.31
+1.46
+2.07
+1.36
+1.62
+
+SD
+0.86
+0.73
+0.95
+0.99
+0.72
+0.49
+
+Chance Analysis
+t(49) = 7.72, p < .001, d = 1.09***
+t(44) = 7.42, p < .001, d = 1.11***
+t(49) = −0.30, p = .77, d = −0.04
+t(44) = 3.85, p < .001, d = 0.58***
+t(49) = 3.53, p < .001, d = 0.50***
+t(44) = 8.51, p < .001, d = 1.27***
+
+The ask and endorse trials were scored out of /3. The judgment trial was scored out of /2. *** Indicates significance below
+p < .001.
+
+12
+
+A.-E. BAUMANN ET AL.
+
+Selective trust
+Accuracy trials. After each of the three familiar items were labeled, children responded to
+the question, “what do you think this is called?” Children responded with the correct label,
+presented by Nao, 99.97% of the time. Therefore, children endorsed the robot Nao’s correct
+labels (over Ina’s incorrect labels) when presented with items that were likely already
+familiar to them.
+Chance analyses (out of 4 trials) revealed that all children performed well on all trials,
+that is, chose the competent speaker, except for the 3-year-olds on the endorse trials (see
+Table 2). A 2 (age) x 3 (trial type) repeated-measures analysis of variance (ANOVA) test
+compared the proportion of correct trials (ask, endorse, and judgment trials) with age as
+a between-subjects factor. The ANOVA revealed a main effect of trial (F(2, 186) = 20.23,
+p < .001, ηp2 = 0.18). This main effect was driven by children performing better on the
+endorse trials, compared to the ask (t(93) = 6.06, Pholm < .001) and judgment trials (t
+(93) = −4.69, Pholm < .001). A main effect of age was also significant (F(1, 93) = 4.02, p = .048,
+ηp2 = 0.04), with 5-year-olds performing better on selective trust overall when compared to
+3-year-olds (t(93) = −2.01, Pholm = .048). A significant interaction was found between trial
+and age (3 and 5 year-olds) (F(2, 186) = 7.98, p = .001, ηp2 = 0.07). This relationship was
+further investigated with independent t-tests for each trial type (ask, endorse, and judg­
+ment), split by age. The 5-year-old children outperformed the 3-year-olds on the endorse
+trials (t(93) = −3.05, p = .003, d = .16). There was no age difference in performance on the
+ask trials (t(93) = 0.78, p = .44, d = −.63). Finally, the 5-year-olds were trending towards
+better performance on the judgment trials after normality corrections (t(93) = −2.05,
+p = .04, d = −.42; Mann-Whitney = 928.00, p = .096, d = −.18).
+It is important to note that there was no difference in children’s performance between the
+first and third endorse trials. Therefore these results are not simply due to children
+“forgetting” the robot’s accuracy as the test is administered (First trial (twine): M = .58,
+SD = .50, Third trial (funnel): M = .60, SD = .49; t(94) = −0.45, p = .66, d = −0.05).
+Naïve biology task
+The number of trials with a correct part chosen (biological for animals, mechanical for
+robots, and artifacts) was the dependent variable. Chance analyses (out of 4 trials) revealed
+that all children performed well on all trials except for the robot trials at age 3 (see Table 3).
+A repeated-measures analysis of variance (ANOVA) test compared the proportion of
+correct trials (animal, artifact, and robot) with age as a between-subjects factor. Mauchly’s
+test of sphericity indicated that the assumption of sphericity was violated (p > .05).
+Therefore, a Greenhouse-Geisser correction was applied to this analysis. The ANOVA
+Table 3. Mean scores and chance analyses per age for the naïve biology task.
+Naïve Biology Domain
+Animal
+Animal
+Artifact
+Artifact
+Robot
+Robot
+
+n
+50
+45
+50
+45
+50
+45
+
+Age
+3
+5
+3
+5
+3
+5
+
+Mean
+2.50
+3.56
+2.40
+3.58
+1.14
+1.82
+
+SD
+1.11
+0.87
+1.13
+0.69
+0.83
+0.44
+
+Chance Analysis
+t(49) = 3.18, p = .003, d = 0.45**
+t(44) = 19.76, p < .001, d = 2.95***
+t(49) = 2.51, p = .02, d = 0.36*
+t(44) = 25.04, p < .001, d = 3.73***
+t(49) = 1.19, p = .24, d = 0.17
+t(44) = 12.49, p < .001, d = 1.86***
+
+The animal and artifact trials were scored out of /4. The robot trials were scored out of /2. *** Indicates significance below
+p < .001. ** Indicates significance below p < .01. * Indicates significance below p < .05.
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+13
+
+revealed a main effect of trial (F(1.88, 174.47) = 110.59, p < .001, ηp2 = 0.54), with animals
+being rated as less mechanical than both artifacts (t(93) = −12.96, Pholm < .001) and the
+robot (t(93) = −12.79, Pholm < .001). A main effect of age was also found (F(1, 93) = 12.13,
+p < .001, ηp2 = 0.16), with older children outperforming younger ones (t(93) = −3.48, Pholm
+< .001). The interaction between trial and age was also significant (F(1.88, 174.47) = 37.47,
+p < .001, ηp2 = 0.29), with 5-year-olds outperforming 3-year-olds on the animal (t
+(93) = 5.12, p < .001, d = 1.05), artifact (t(93) = −6.07, p < .001, d = −1.25), and robot (t
+(93) = −4.91, p < .001, d = −1.01) trials.
+There was no significant difference between children’s judgments of the robot before
+compared to after the selective trust task for either age group (t(49) = 0.77, p = .44, d = 0.11
+for 3-year-olds, t(44) = −1.67, p = .10, d = −0.25 for 5-year-olds). The scores on the robot
+trials were not significantly correlated with the endorse trials at ages 3 or 5 years.
+Importantly, when the two samples were combined, only the endorse trials were found to
+weakly correlate with the combined naïve biology robot score (r(93) = .21, p = .04). Finally,
+the robot trials were not correlated with the ask trials or the judgment trials at either age or
+when both age groups were combined.
+CPBQ questionnaire
+In total, 91 parents filled out the CPBQ parental questionnaire (the CPBQ data for four
+children was missing). The 3-year-old children’s average CPBQ score was 3.69 out of 5
+(SD = 0.53). The 5-year-old children’s average CPBQ score was 2.94 out of 5 (SD = 0.25).
+This is in line with a previous study that used this assessment tool with 1- to 4-year-olds
+(16–42 months, M = 3.23, SD = 1.08; Brazzelli, 2018). No correlational links were found
+between any selective trust trials (ask, endorse, or judgment) and the CPBQ score (all
+analyses, r(89) < .10, p > .34).
+CSUS questionnaire
+Four children were missing CSUS parental report responses (n = 91 parental
+responses). The 3-year-old children’s average CSUS score was 3.05 out of 4
+(SD = 0.41), and the 5-year-old children’s average CSUS score was 3.38 out of 4
+(SD = 0.32). These average scores are in line with the prior work (28–84 months,
+M = 3.08, SD = 0.45; Tahiroglu et al., 2014). When the sample was split by age, no
+significant correlations were found between the CSUS score and selective trust perfor­
+mance. However, when the 3- and 5-year-old samples were combined, a moderate
+positive correlation emerged only between the score on the endorse trials and the
+combined CSUS score (r(89) = .22, p = .04), with greater Theory of Mind predicting
+greater endorsement of Nao, the competent robot informant.
+Overall linear regression
+The CSUS correlations above revealed a potential link between ToM and selective
+trust, specifically the endorsement trials. However, the effects were weak. To investi­
+gate overall trends and to examine if this link would emerge in a complete study
+model, a stepwise linear regression was run with the endorse trials as the outcome
+measure. Age was entered into model 1, overall Naïve Biology score in model 2, and
+scores from both questionnaires (CPBQ and CSUS) were entered in model 3. The first
+model was significant (F(1, 86) = 8.71, p = .004), with age accounting for 9% of the
+
+14
+
+A.-E. BAUMANN ET AL.
+
+variance in the endorse scores (R2 = .092). Model 2, including the overall Naïve
+Biology score, proved insignificant (F(1, 85) = 0.06, p = .81), explaining only a further
+.001% of the variance (R2 = .093). Model 3 (including the CSUS and CPBQ overall
+scores) was removed from the regression due to insignificance, not meeting the
+criterion for inclusion.
+Discussion
+The main goal of this study was to examine whether children aged 3 and 5 years
+would prefer to learn new words from a competent robot over an incompetent human.
+As such, the main contribution of the present work was to provide a highly con­
+servative test of this developmental shift in comparison to previous studies contrasting
+two human or robot informants. Importantly, the informant that children endorsed in
+the test trials differed by age group. As expected, older children in our sample (the
+5-year-olds) endorsed the labels of the competent robot over the incompetent human.
+This finding mirrors prior work that used two human informants (Tong et al., 2019)
+and significantly extends upon it since the competent inanimate social informant was
+pitted directly against an incompetent human social informant. The inanimate status
+of the robot was confirmed through the naïve biology task, where 5-year-olds assigned
+a mechanical inside to Nao. Thus, 5-year-olds knew Nao was inanimate (i.e., had
+mechanical insides) yet still elected to learn from Nao.
+In contrast, 3-year-olds were ambivalent regarding the animacy status of the robot and
+whom to endorse during the test trials. For the animal and artifact trials, our findings
+replicate and extend previous work on the knowledge of insides of artifacts and animals
+(Gottfried & Gelman, 2005). The ambivalence of the younger children was unexpected as
+we had predicted that most of the younger children would endorse the human informant as
+she belonged to the “same group” as the child (e.g., a shared social affiliation). The results
+do, however, align with the Tong et al. (2019) meta-analysis, which found that 3-year-old
+children consider both social and epistemic characteristics when they are pitted against one
+another. Thus, given that both informants displayed social characteristics (e.g., human-like
+morphology, speech, goal-directedness), young children’s lack of preference suggests a bias
+towards social characteristics over epistemic ones. While the 3-year-olds may consider the
+competency of the informant, their sensitivity to epistemic characteristics appears to be
+insufficient to trump social characteristics.
+The fact that 3-year-olds showed no clear preference could be explained by having
+missed the critical information during the familiarization phase. This is unlikely as
+both 3- and 5-year-olds in our sample were equally competent at judging who gave
+the right or wrong information. Furthermore, both the 3- and 5-year-old children
+knew to ask the robot for the label. Although we cannot identify the motivational
+differences across the age groups, we speculate that the 3-year-olds were motivated to
+interact socially with the robot during the ask questions, showing that the ask and
+endorse questions rely on different underlying information. Specifically, one could
+ask someone for more information without wanting to endorse or use the informa­
+tion that was provided. This also further emphasizes the validity of the task, as even
+3-year-old children knew who was right (the robot) and asked the robot for the label,
+yet still did not always choose to learn from (i.e., endorse) the robot. This pattern of
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+15
+
+results confirms the meta-analysis by Tong et al. (2019), showing that age is
+a moderator for the endorse but not the ask questions. Matching their performance
+on the selective trust task, the 3-year-old children associated Nao equally with
+a biological or mechanical inside, whereas 5-year-old children correctly categorized
+the robot as mechanical. Thus, the 5-year-old children endorsed Nao’s labels, even
+though they knew Nao was mechanical, confirming the conservative nature of this
+test of epistemic characteristics.
+An exploratory goal was to examine what skills may drive the developmental shift toward
+a greater reliance on epistemic characteristics by 5 years of age. Among the two skills tested,
+prosociality (CPBQ) and ToM (CSUS), only ToM correlated to the endorse selective trust
+trials. As expected, children with more ToM skills performed better on the endorse trials.
+We speculate that, as children develop an understanding of others’ mental states, it becomes
+easier not to rely solely on “like me” social characteristics but to also consider other
+characteristics, such as competency, even in non-human informants. Important to note,
+however, is that this correlational effect is rather weak and did not survive in the overall
+linear regression.
+One potential explanation for the ambivalence of the 3-year-olds is that the robot
+informant was humanoid in appearance, resulting in social characteristics that were judged
+equivalent to a human speaker at that age. Thus, it is possible that a robot with a less
+human-like appearance would shed light on what is driving 3-year-old’s trust choices. To
+clarify this issue, we ran a follow-up study with the same procedure, except that we pitted
+the incompetent human against Cozmo, a competent non-human-looking robot. Cozmo
+lacked almost all the human characteristics of Nao, as Cozmo was small in size, had wheels/
+treads and a mechanical lift rather than feet and hands but still possessed eyes, spoke, and
+moved autonomously. If human appearance is critical when evaluating which informant to
+trust, we predicted that the 3-year-olds would show a preference for the incompetent
+human informant in Study 2.
+
+Study 2
+Method
+Participants
+The sample consisted of 43 Canadian 3-year-old children (M age = 3.34 years,
+SD = 1.31, Nmale = 26) and 46 Canadian 5-year-old children (Mage = 5.50 years,
+SD = 1.70, Nmale = 24) who were recruited from an existing database of participants.
+See Study 1 for a justification of our sample size. As in Study 1, a majority of our
+sample was Caucasian (60.92%), roughly a quarter of our sample (22.99%) identified
+as mixed race, and the remainder of our sample (16.09%) belonged to other ethnic
+groups (African, Asian, South American). In terms of the socioeconomic status
+(SES), 69.05% of our participants belonged to high SES families (>$100,000),
+28.57% were from middle SES households ($50,000–$100,000), and 2.38% came
+from low SES households (<$50,000). The study was conducted online in either
+English (n = 55) or French (n = 34) on the video conference application Zoom.
+Prior to participation, parents signed a consent form on behalf of their child. The
+compensation received and the exclusion criteria were identical to Study 1. Out of
+
+16
+
+A.-E. BAUMANN ET AL.
+
+Figure 3. Still frame of the selective trust video setup in Study 2. Cozmo Robot: copyright © Digital Dream
+Labs.
+
+the 105 total children tested, 16 participants had to be excluded due to: parental or
+sibling interference (n = 10), familiarity with the robot (n = 1), technical difficulties
+(n = 1), or fussiness (n = 4).
+The tasks, methods, procedures, and materials of Study 2 were identical to those of Study
+1, with one significant change. The human-looking robot Nao was replaced with the nonhuman-looking Cozmo (see Figure 3). Cozmo is a non-humanoid toy robot that had
+wheels, treads, and a mechanical lift and is produced by Digital Dream Labs. Cozmo is
+2.5 inches tall. To confirm that Cozmo was less human-looking than Nao, undergraduate
+students (N = 23) were asked to rate a variety of robots, including Nao and Cozmo. Students
+were asked how human looking the robots were using a 5-point Likert scale; the higher the
+score, the more human looking the robot was rated. Nao (M = 4.09, SD = 0.90) was rated
+significantly more human-looking than Cozmo (M = 1.91, SD = 0.95; t(22) = −13.41,
+p < .001, d = −2.80). Therefore, Cozmo was selected since it was rated as significantly less
+human-looking in appearance than Nao. On the demographic form, parents were asked to
+report their child’s exposure to robots. All parents rated their children as unfamiliar with
+robots.
+
+Results
+Data cleaning and transformations
+As in Study 1, participants who selected neither option, both options, or made a conflicting
+choice (i.e., said they wanted to endorse the robot’s label but then picked the human’s label)
+on the tasks (selective trust, naïve biology) received a score of 0 on that particular trial for
+failing to make a choice (n = 7 trials).
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+17
+
+All analyses were checked for normality. If a deviation from normality was found,
+appropriate corrections were applied, and nonparametric tests were run. If a given
+analysis changed in significance (i.e., become insignificant or trending), that change
+is reported below. Analyses were checked for interactions between gender (male or
+female) and testing language (French or English) on both tasks (selective trust, naïve
+biology). The only significant interaction was between the naïve biology task and
+testing language. The interaction between the overall naïve biology task (scored as
+the proportion of correct trials /10) and testing language was significant (F(1.84,
+158.32) = 3.60, p = .03, ηp2 = 0.04), with the French children (n = 34, M = 5.44,
+SD = 1.24) outperforming the English children (n = 55, M = 5.13, SD = 1.02). Due to
+the unequal sample sizes between the two language groups, this finding is most likely
+spurious. Gender and testing language were collapsed across all other analyses.
+Selective trust
+Accuracy trials. In the familiarization trials, the children responded to the endorse
+question (i.e., “what do you think this is called?”) with the correct label, presented by
+Cozmo, 96.25% of the time. Children trusted Cozmo’s labels when presented with
+familiar items.
+Chance analyses (out of 4 trials) revealed that all children performed well on all
+trials, except the 3-year-olds on the endorse and judgment trials (see Table 4). A 2
+(age) x 3 (trials) repeated-measures analysis of variance (ANOVA) test compared the
+proportion of correct selective trust trial types (ask, endorse, and judgment trials) with
+age as a between-subjects factor; the ANOVA revealed main effects of trial types (F(2,
+174) = 10.58, p < .001, ηp2 = 0.11), with children performing better on the ask (t
+(87) = 4.19, Pholm < .001) and judgment (t(87) = −3.75, Pholm < .001) trials when
+compared to the endorse trials. A main effect for age was also significant (F(1,
+87) = 20.36, p < .001, ηp2 = 0.19), with 5-year-olds outperforming 3-year-olds (t
+(87) = −4.51, Pholm < .001). The interaction between selective trust and age (3 and
+5 year-olds) was not significant (F(2, 174) = 1.31, p = .27, ηp2 = 0.02). Independent
+t-tests revealed that 5-year-olds outperformed 3-year-olds on the ask (t(87) = −2.66,
+p = .009, d = −.57; Mann-Whitney = 751.00, p = .03, d = −.24), endorse (t(87) = −3.25,
+p = .002, d = −.69), and judgment (t(87) = −3.94, p < .001, d = −.84) trials. As in Study
+1, there was no difference in children’s endorsement ratings of the robot from test
+endorse trial number 1 to 3 (First trial (twine): M = .61, SD = .49, Third trial (funnel):
+M = .56, SD = .50; t(88) = 0.78, p = .44, d = 0.08).
+
+Table 4. Mean scores and chance analyses per age for the selective trust task.
+Selective Trust Trial
+Ask
+Ask
+Endorse
+Endorse
+judgment
+judgment
+
+n
+43
+46
+43
+46
+43
+46
+
+Age
+3
+5
+3
+5
+3
+5
+
+Mean
+2.05
+2.54
+1.51
+2.11
+1.21
+1.78
+
+SD
+1.07
+0.66
+0.83
+0.90
+0.89
+0.42
+
+Chance Analysis
+t(42) = 0.93, p = .002, d = 1.92**
+t(45) = 10.78, p < .001, d = 1.59***
+t(42) = 0.09, p = .93, d = 1.83
+t(45) = 4.59, p < .001, d = 0.68***
+t(42) = 1.55, p = .13, d = 0.22
+t(45) = 12.73, p < .001, d = 1.88***
+
+The ask and endorse trials were scored out of /3. The judgment trial was scored out of /2. *** Indicates significance below
+p < .001. ** Indicates significance below p < .01.
+
+18
+
+A.-E. BAUMANN ET AL.
+
+Table 5. Mean scores and chance analyses per age for the naïve biology task.
+Naïve Biology Domain
+Animal
+Animal
+Artifact
+Artifact
+Robot
+Robot
+
+n
+43
+46
+43
+46
+43
+46
+
+Age
+3
+5
+3
+5
+3
+5
+
+Mean
+2.42
+3.83
+2.05
+3.59
+1.23
+1.81
+
+SD
+0.91
+0.08
+0.93
+0.10
+0.81
+0.47
+
+Chance Analysis
+t(42) = 3.03, p = .004, d = 0.46**
+t(45) = 21.74, p < .001, d = 3.21***
+t(42) = 0.33, p = .74, d = 0.05
+t(45) = 16.50, p < .001, d = 2.43***
+t(42) = 1.88, p = .07, d = 1.52
+t(45) = 12.24, p < .001, d = 1.80***
+
+The animal and artifact trials were scored out of /4. The robot trials were scored out of /2. *** Indicates significance below
+p < .001. ** Indicates significance below p < .01.
+
+Naïve biology
+Chance analyses (out of 4 trials) revealed that all children performed well on all trials, except
+the 3-year-olds on the artifact and robot trials (see Table 5). A repeated-measures analysis of
+variance (ANOVA) test compared the proportion of correct trials (animal, artifact, and
+robot) with age as a between-subjects factor and testing language entered as a covariate.
+Mauchly’s test of sphericity indicated that the assumption of sphericity was violated
+(p > .05). Therefore, a Greenhouse-Geisser correction was applied to this analysis. The
+ANOVA revealed a main effect of trial (F(1.84, 158.32) = 41.61, p < .001, ηp2 = 0.33), with
+artifacts (t(87) = −12.41, Pholm < .001) and robots (t(87) = −14.10, Pholm < .001) being rated
+as more mechanical than animals. A main effect of age (F(1, 86) = 17.71, p < .001, ηp2 = 0.17)
+and an interaction between trial and age (F(1.84, 158.32) = 52.41, p < .001, ηp2 = 0.38) were
+also found, with 5-year-olds outperforming 3-year-olds on the animal (t(87) = 8.84,
+p < .001, d = 1.87), artifact (t(87) = −9.13, p < .001, d = −1.94), and robot (t(87) = −4.41,
+p < .001, d = −0.94) trials.
+There was no significant difference between children’s ratings of the robot before or after
+the selective trust task (t(42) = −0.27, p = .79, d = −0.04 for 3-year-olds, t(45) = −1.77,
+p = .08, d = −0.26 for 5-year-olds). Finally, the robot trials were not significantly correlated
+with the endorse, ask, or judgment trials (all correlations r(87) < .12, p > .18).
+Child prosocial behavior questionnaire (CPBQ)
+Five parents failed to fill out the CPBQ form (n = 84 parental responses). The 3-year-old
+children’s average score on the CPBQ was 3.63 (SD = 0.55). The 5-year-old children’s
+average score on the CPBQ was 3.72 (SD = 0.41). For 3-year-olds, no significant correlations
+were found for any of the selective trust trials (ask, endorse, or judgment) and the CPBQ
+score. For 5-year-olds, only the judgment trials positively correlated with the CPBQ score (r
+(42) = .40, p = .007). When the 3- and 5-year-old samples from Study 2 were combined, no
+significant correlations emerged.
+Children’s social understanding scale (CSUS)
+A total of two parents did not complete the CSUS (n = 87 parental responses). The 3-yearold children’s average overall CSUS score was 2.99 out of 5 (SD = 0.36). The 5-year-old
+children’s average overall CSUS score was 3.47 out of 5 (SD = 0.25). As expected, Theory of
+Mind improved with age. For 3-year-olds, no correlational links were found between any
+selective trust trials (ask, endorse, or judgment) and the CSUS score. The same was found
+for the 5-year-olds. When the 3- and 5-year-old samples were merged, however, the ask
+score was trending towards positive significance with the CSUS score (r(85) = .21, p = .06).
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+19
+
+Cross-robot comparisons
+Children’s naïve biology and selective trust scores were compared for the humanoid robot
+Nao versus the non-humanoid robot Cozmo across the two studies. A repeated measures
+ANOVA examined children’s selective trust performance (endorse, ask, and judgment)
+with robot type (Cozmo or Nao) entered as a between-subjects factor and found no main
+effect of robot type (F(1, 182) = 0.01, p = .93, ηp2 = 0.00) and no significant interaction
+between selective trust trials and robot type (F(2, 364) = 0.49, p = .62, ηp2 = 0.003). Another
+repeated measures ANOVA was also run to examine children’s naïve biology performance
+(animal, artifact, and robot) with robot type (Cozmo or Nao) entered as a covariate.
+Mauchly’s test of sphericity indicated that the assumption of sphericity was violated
+(p > .05). Therefore, a Greenhouse-Geisser correction was applied to this analysis. This
+ANOVA also found no main effect of robot type (F(1, 182) = 0.09, p = .76, ηp2 = 0.00) and
+no significant interaction between naïve biology and robot type (F(1.74, 315.70) = 0.87,
+p = .41, ηp2 = 0.01). When both samples of the two studies are combined, the correlation
+between the robot score (both robot naïve biology trials) with the endorse selective trust
+trial became significant (r(182) = .18, p < .02). This effect is likely driven by age.
+Importantly, the ask and judgment trials still do not significantly correlate with the robot
+trials. No significant correlations between CPBQ and selective trust emerged either when
+the two samples were grouped together by age or when all four samples were combined
+together (r(173) < .09, p > .24). When the 3-year-old samples from both studies were
+merged for the CSUS analyses, no significance was found. However, the analysis of the two
+merged 5-year-old samples revealed a marginally positive correlation between the ask score
+and the CSUS (r(84) = .20, p = .06). When both studies and both ages are combined for
+analyses, weak correlations emerged between both the endorse (r(176) = .19, p = .01) and
+the judgment (r(176) = .18, p = .02) trials and the CSUS scores.
+Overall model. To investigate if any ToM or prosociality effects survive in an overall study
+model, a stepwise linear regression was run with the endorse trials as the outcome measure
+on the combined Studies 1 and 2 datasets. Age was entered into model 1, overall naïve
+biology score in model 2, and both questionnaires (CPBQ and CSUS) in model 3. The first
+model was significant (F(1, 170) = 17.21, p < .001), with age accounting for 9% of the
+variance in the endorse scores (R2 = .092). Naïve biology, as entered into Model 2, proved
+insignificant (F(1, 169) = .58, p = .45), explaining only a further .003% of the variance
+(R2 = .095). Model 3 was not run due to the non-significant effects of both the CSUS and
+CPBQ in explaining any variance. Therefore, the variance in the endorse score in our
+sample is mostly explained by age.
+Structural equation modeling (SEM) using Mplus (Muthén & Muthén, 1998–2017) was
+run after the Linear Regression to investigate any potential indirect effects of the variables
+mediating the association between age and the trust scores. Results showed a significant
+direct association between age and endorse (β = .30, p < .001) and judgment (β = .21,
+p < .001) but not on the ask trials (β = .09, p = .17). Additionally, age was significantly
+associated with the CSUS (β = .20, p < .001), but not robot type (β = −.02, p = .56) or the
+CPBQ (β = −.02, p = .67). All mediation analyses were observed to be not statistically
+significant (all p > .21).
+
+20
+
+A.-E. BAUMANN ET AL.
+
+Discussion
+This second study investigated whether human morphology plays a role in 3- and 5-yearolds’ choice of an informant in the selective trust paradigm. Despite manipulating human
+morphology by using a non-human-looking robot, the findings of Study 2 mirror those of
+Study 1. Children competently knew to ask the robot for help in learning novel object labels,
+and they responded correctly (knew who was right versus wrong) on the familiarization
+judgment trials. Despite Cozmo’s lack of human appearance, the 3-year-old children in our
+sample still readily endorsed Cozmo’s labels during half of the test trials. This suggests that
+the agency characteristics of the robot (speech, goal-directness), not its human appearance,
+were most likely the key characteristics guiding 3-year-olds evaluations of the informants.
+Importantly, the 5-year-olds, like in Study 1, continued to endorse the accurate agent,
+providing an even more conservative test of epistemic trust.
+The 3-year-olds were not accurate at categorizing Cozmo’s internal properties,
+although they tended towards assigning more mechanical insides than biological insides
+to Cozmo. However, as this result is only trending and the scores do not differ
+significantly from those for a humanoid robot, Nao, human morphology does not
+seem to be a main criterion guiding children’s decision-making on whether a robot is
+either mechanical or biological. In contrast, the 5-year-olds correctly assigned
+a mechanical inside to Cozmo, like they did with Nao in Study 1. Interestingly, naïve
+biology was found to predict selective trust performance, specifically on the endorse
+trial, when the samples of Study 1 and Study 2 were combined. So, while small in effect,
+there does seem to be a connection between the performance on the two tasks. Better
+categorization of robots as mechanical artifacts seems to slightly better predict learning
+from a competent robot. However, this effect is most likely driven by age, as competence
+increases on both tasks from 3 to 5 years.
+Regarding the parental report measures, the CPBQ was again found to have little effect
+on children’s selective trust performance. Even with a large, combined sample, only
+correlations between the judgment trials and prosociality were observed. Important to
+note is that this effect did not hold in either of the general models. A stronger correlation
+was found between the selective trust trials (ask, endorse, and, judgment) and the CSUS.
+However, this relationship does not survive in the SEM model. Therefore, only a very weak
+positive correlation can be claimed, with greater ToM skills related to better learning from
+the robot.
+
+General discussion
+A recent meta-analysis based on a large body of studies on selective trust has found that the
+effects of informants’ epistemic characteristics are moderated by children’s age, with
+children beginning to prioritize epistemic (e.g., expertise, accuracy) over social (e.g., speech,
+familiarity) characteristics around the age of 4 years (Tong et al., 2019). The main goal of the
+current set of studies was to examine the robustness of epistemic trust by pitting
+a competent robot informant against an incompetent human informant. By doing so, we
+tested Canadian children’s reliance on a key social characteristic (in-group membership,
+“like me” status) against competency.
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+21
+
+Trust and informants’ characteristics
+To our knowledge, this is the first study to directly compare a human informant to a robot
+informant using the trust paradigm. As predicted, 5-year-old children chose to learn from
+a competent robot over an incompetent human. In contrast, our results showed that the
+3-year-old children trusted both informants (human and robot) equally. This pattern of
+results held whether the robot informant was morphologically similar to a human or not. Of
+note, the human informant was Caucasian, making it an in-group member for most of our
+sample. As such, the current design provided a conservative test of the ability to attend to
+epistemic cues in the trust paradigm. In the present work, whom children chose to trust may
+be explained by the fact that the robot displayed characteristics of a social agent in both
+studies. For example, both Cozmo and Nao spoke with intonation, pointed to the objects as
+they were being labeled, engaged in turn-taking, and moved autonomously. In addition,
+Nao also stood upright and possessed human-like features (e.g., eyes, head). A recent study
+demonstrated that 3-year-olds consider Nao a psychological agent (e.g., Nao can think for
+itself) when displaying the same agency characteristics as in the present work (Brink &
+Wellman, 2020). Thus, for 5-year-olds, the competent informant displayed both epistemic
+and social characteristics, so the decision of whom to trust was straightforward. In contrast,
+because younger children are unable to prioritize epistemic characteristics, their decision
+was challenging as both informants possessed social characteristics that children consider
+when making such a determination (e.g., in group membership for the person and agency
+characteristics for the robot).
+The finding that the absence of human morphology did not affect 3-year-old children’s
+trust judgments was unexpected, given previous work that shows that children prefer to
+interact with agents similar to themselves, including robots (van Straten, Peter, & Kühne,
+2020) and that morphology affects children’s perceptions of robots (Fong, Nourbakhsh, &
+Dautenhahn, 2003). However, in the context of word learning, goal-directedness and speech
+may be the most important characteristics for 3-year-olds to consider when deciding which
+informant to trust. This finding becomes especially salient when one considers that the
+present studies were conducted online with pre-recorded videos. The fact that the two
+robots, Nao and Cozmo, greatly differed in size and appearance further validates our test of
+epistemic trust as conservative. Interestingly, previous research on ToM has shown that
+agency cues are powerful in guiding the attribution of mental states in children as well as in
+adults (Klin, 2000). For example, infants react similarly to a human agent and a mechanical
+crane in tests of false belief understanding (Burnside, Severdija, & Poulin-Dubois, 2019).
+It is not possible to conclude with certainty whether children selected the robot because it
+was a novel and unusual informant or because they truly judged the robot as being more
+competent. We believe the first interpretation is unlikely for several reasons. First, if novelty
+was driving young children’s responses, 3-year-olds would have overwhelmingly endorsed
+the robot, given their reported limited exposure to robots. Second, we believe that the
+variable performance on the ask versus endorse trials suggests that novelty is an unlikely
+strategy in this context. Both age groups performed well on the ask trials, but only the
+5-year-olds endorsed the competent robot informant. Thus, it’s possible that the ask trials
+may reflect a novelty bias for the robot, whereas the endorse trials are targeting learning and
+trust judgment. Specifically, the ask questions (“who do you want to ask what this is
+called?”) is not measuring any learning from the informants. In fact, children could have
+
+22
+
+A.-E. BAUMANN ET AL.
+
+interpreted this question as simply selecting which informant they want to ask for more
+information or which informant they wanted to interact with. This could be driven by
+curiosity or novelty rather than competency or accuracy. In contrast, the endorse questions
+clearly ask the child to endorse the competent informant (“what do you think this is
+called?”). In other words, there is less ambiguity and fewer ways to interpret the endorse
+question.
+The present findings confirm that children can learn from inanimate social agents like
+robots. Robots occupy an interesting intermediate position between biological and mechan­
+ical entities (van Straten et al., 2020). Specifically, though not alive (i.e., a biological entity),
+robots have characteristics of both biological and mechanical objects. Like in the present
+studies, robots often look and act like social agents (e.g., speaking, gesturing), so they are
+conceptualized as depictions of social agents (Clark & Fischer, 2022). This appears to be the
+case regardless of the appearance of the robot, as shown by the fact that the 3-year-olds
+treated both robots as equally trustworthy. One novel way to measure children’s concep­
+tualizing of robots was to administer a naïve biology task that requires children to infer the
+inside of novel animals and artifacts. When shown a static picture of the robot, children
+were asked whether something biological (e.g., heart) or mechanical (e.g., gears) belonged
+inside. This naïve biology task has revealed a progression with age in inferring the parts that
+belong to unfamiliar artifacts and animals (Gottfried & Gelman, 2005). Important to note is
+the fact that we replicate the results of Gottfried and Gelman (2005) for animals and
+artifacts, confirming the validity of the task in this study. With age, we predicted that
+children would become better at categorizing the robot as mechanical, and the results
+support this prediction. Although the 3-year-olds associated both Nao and Cozmo with
+mechanical or biological insides equally, 5-year-olds overwhelmingly associated both robots
+with mechanical insides. It is worth noting that in both experiments, 5-year-olds classified
+the robot as mechanical but still chose to learn from it over an incompetent human. This
+finding confirms the robustness of the bias for epistemic characteristics at 5 years of age, as
+outlined in Heinrich and Broesch (2011), and provides evidence that children at this age
+perceive the robot as a depiction of a social agent, much like adults do (Clark & Fischer,
+2022). Furthermore, children’s ratings of the robot as mechanical correlated positively with
+children’s performance on the selective trust task. With age, children got more competent at
+both tasks, and children’s categorization of the robot weakly predicted better selective trust
+performance. Interesting to note, however, is the fact that age still only accounts for 9% of
+our variance, as shown by the linear regressions. Therefore, factors we did not measure,
+such as parenting style or school/daycare attendance, may further explain this shift from
+social to epistemic trust. This is an area to explore in future research. What, besides age,
+contributes to this shift?
+Exploratory analyses
+For our exploratory goals, we aimed to identify individual differences in socio-cognitive
+skills that could predict epistemic trust. Specifically, we investigated prosocial and ToM
+skills using parental report measures, the CPBQ and CSUS, respectively. We expected that
+individual variability in the tendency to choose the incompetent human informant would
+be explained by stronger social affiliation whereas ToM skills would contribute to the
+successful identification of the competent informant. Across both studies, however, only
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+23
+
+weak, and inconclusive, correlational links were found. Due to the inconsistency and lack of
+statistical strength found in the correlations, we ran two overall models: a linear regression
+and a structural equation model. We ran these models in the hope of clarifying our
+correlational findings and investigating the strength of the effects found through correla­
+tions between the selective trust task and the CSUS or CPBQ. No links survived in the
+overall models run. One reason for these null results might be the use of parental reports.
+Although a well validated measure of theory of mind, the CSUS has so far yielded only
+a weak or no link with performance in the selective trust paradigm (Brosseau-Liard et al.,
+2015; Dutemple, Hakimi, & Poulin-Dubois, 2022; Resendes et al., 2021). A replication of the
+present study with a direct measure of theory of mind would be beneficial. With regard to
+the measure of social affiliation, the CPBQ may not have been the best measure to use, as it
+is validated for age 3, but not for age 5. While the CPBQ is a reliable measure of prosociality,
+it lacks questions broadly measuring social affiliation, which may have been helpful in
+explaining children’s trust decisions in the above-described studies. For example, a child
+might display low prosociality but still prefer interacting with agents more like them
+(people), as opposed to robots or other technological devices. Future studies will be needed
+to explore this issue more directly, including direct measures of in-group biases as well.
+Given the absence of link between theory of mind and epistemic trust, one might wonder
+if children who preferred to learn from the robots perceived it as sentient. We believe so.
+There is ample evidence to support children’s attributing mental states to robots. For
+example, Manzi et al. (2020) found that 5-year-olds attribute mental states (i.e., emotions,
+perceptions) to the Nao robot. Therefore, we are confident that 5-year-old children learned
+from the robot because they were guided by epistemic trust, and, in turn, the children
+viewed this robot informant as a depiction of a social agent.
+Limitations and future directions
+The present work has several further limitations that future research can address. One of the
+limitations was that online testing sometimes made it more difficult to control for inter­
+ferences and distractions in the testing environment. To control for this potential con­
+founding variable, distracted children were excluded from our sample. One way to address
+this limitation would be to conduct future work in the laboratory to maximize attentiveness
+and minimize technical difficulties. Replicating the present work in the laboratory would
+also increase the ecological validity. Most of the time, children interact with social robots
+like Cozmo or Nao in person and not through online videos and computer screens. The
+morphological features of the robots would also be more visible in person. Nonetheless,
+there are also some advantages to online testing, such as a faster data collection process, the
+ability to reach a greater range of families resulting in a more diverse sample, and making it
+easier for families to participate in research. Using pre-recorded videos ensured internal
+consistency as each child saw the exact same videos, and the informants behaved in the
+exact same way, reducing experimenter error. However, if administered live, it is possible
+the 3-year-olds would have learned more from the human speaker Ina rather than the robot.
+As the present work featured a competent robot and an incompetent human, an interesting
+follow-up study would be to examine children’s trust judgments when both the human and
+the robot behave accurately. We would predict that younger children would learn more
+from the human due to its familiarity and the impact of in-group bias in previous research
+
+24
+
+A.-E. BAUMANN ET AL.
+
+on selective trust, whereas older children would be expected to learn equally from both
+informants if epistemic cues guide their decision-making.
+Future research should focus on manipulating the types of social cues informants display
+during social interactions. In the present set of studies, except for animacy, the two
+informants exhibited the same types of agency characteristics. Both the human informant
+Ina and the robot informants (Nao in Study 1, Cozmo in Study 2) spoke with intonation,
+pointed to the objects as they labeled them, and engaged in turn-taking (i.e., not speaking
+over one another). Having one informant display many agency characteristics while the
+other displays fewer could help tease out what role they play in younger children’s decisions
+about whom to learn from. For example, future work could eliminate speech, which is
+a powerful agency characteristic, by having the robot informant show competence in
+performing actions (e.g., building a tower) or by showing more reliability in
+a communicative context (e.g., pointing to the correct location in a hiding game). Future
+work could also administer an interview to older children, comparing their choice of agent
+or inside with their verbal description and categorization of the robots. This would allow us
+to contrast two tasks of categorization (naïve biology task and interviews).
+In conclusion, the present work contributes to the current literature by being the first
+study to compare a human to a robot informant, as most prior work has only tested
+selective trust with two robots (Breazeal et al., 2016; Brink & Wellman, 2020) or two
+human informants (Tong et al., 2019). Moreover, the present study examined trust with
+two different robots that varied in their human appearance. These findings demonstrate
+that young children can identify the competence of both human and non-human
+informants by 5 years of age. These findings have important implications for the use
+of robots in educational settings. As children’s exposure to robots is increasing (de Jong,
+Peter, Kühne, & Barco, 2021), it is beneficial to examine how children learn from robots
+and understand what characteristics children prioritize when choosing the best
+informant.
+
+Acknowledgments
+We would like to thank all members of the Cognitive and Language Development Laboratory,
+especially Fanny Laurin and Gal Zohar for their help with recruitment, Aymée Bray Le Métayer for
+her help testing, and Seleste Beaulieu for her help with filming stimuli. We would also like to thank all
+the families that participated in this research.
+
+Disclosure statement
+No potential conflict of interest was reported by the author(s).
+
+Funding
+This work was supported by an Insight grant from the Social Sciences and Humanity Research
+Council of Canada to Diane Poulin-Dubois (# 435-2017-0564)
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+25
+
+ORCID
+Anna-Elisabeth Baumann
+http://orcid.org/0000-0001-9355-5387
+http://orcid.org/0000-0002-9973-0649
+Elizabeth J. Goldman
+Alexandra Meltzer
+http://orcid.org/0000-0002-0724-947X
+http://orcid.org/0000-0001-8966-875X
+Diane Poulin-Dubois
+
+Data availability statement
+Both studies were pre-registered. The pre-registrations can be found here:
+Study 1: https://osf.io/u7nma
+Study 2: https://osf.io/5cgp3
+The combined dataset for both studies can be found here:
+https://osf.io/nt785/files/osfstorage/63e6a9fecb544b012c9e6dda
+The materials for both studies can be found here:
+Study 1: https://osf.io/nt785/files/osfstorage
+Study 2: https://osf.io/2mq87/files/osfstorage
+
+Open Scholarship
+
+This article has earned the Center for Open Science badges for Open Data, Open Materials and
+Preregistered. The data and materials are openly accessible at https://osf.io/nt785/files/osfstorage/
+63e6a9fecb544b012c9e6dda, Study 1: https://osf.io/nt785/files/osfstorage, Study 2: https://osf.io/
+2mq87/files/osfstorage and Study 1: https://osf.io/u7nma, Study 2: https://osf.io/5cgp3
+
+Ethics approval statement
+Ethical approval to conduct the studies was granted by Concordia University’s Human Research
+Ethics Committee (#10000548). Written informed consent to participate in this study was provided
+by the participant’s legal guardian before the study began.
+
+References
+Brazzelli, E. (2018). Measurement and promotion of prosocial behavior in early childhood
+(Unpublished doctoral dissertation). Università degli Studi di Milano.
+Brazzelli, E., Farina, E., Grazzani, I., & Pepe, A. (2018). Measuring prosocial behaviors in early
+childhood: A validation study of the CPBQ. Psicologia clinica dello sviluppo, Rivista quadrimestrale,
+581–596. doi:10.1449/91522
+Breazeal, C., Harris, P. L., DeSteno, D., Kory Westlund, J. M., Dickens, L., & Jeong, S. (2016). Young
+children treat robots as informants. Topics in Cognitive Science, 8(2), 481–491. doi:10.1111/tops.
+12192
+Brink, K. A., & Wellman, H. M. (2020). Robot teachers for children? Young children trust robots
+depending on their perceived accuracy and agency. Developmental Psychology, 56(7), 1268–1277.
+doi:10.1037/dev0000884
+Brosseau-Liard, P., Penney, D., & Poulin-Dubois, D. (2015). Theory of mind selectively predicts
+preschoolers’ knowledge-based selective word learning. British Journal of Developmental
+Psychology, 33(4), 464–475. doi:10.1111/bjdp.12107
+
+26
+
+A.-E. BAUMANN ET AL.
+
+Brosseau-Liard, P., & Poulin-Dubois, D. (2019). Fiabilité et validité de l’échelle de compréhension
+sociale des Enfants. Psychologie Française, 64(4), 331–341. doi:10.1016/j.psfr.2018.01.003
+Burnside, K., Severdija, V., & Poulin-Dubois, D. (2019). Infants attribute false beliefs to a toy crane.
+Developmental Science, 23, 2. doi:10.1111/desc.12887
+Clark, H. H., & Fischer, K. (2022). Social Robots as depictions of social agents. Behavioral and Brain
+Sciences, 1–33. doi:10.1017/s0140525x22000668
+Crivello, C., Phillips, S., & Poulin-Dubois, D. (2017). Selective trust in infancy: Looking for
+mechanisms. Developmental Science, 21(3), Article 1259. doi:10.1111/desc.12592
+Danovitch, J. H., & Alzahabi, R. (2013). Children show selective trust in technological informants.
+Journal of Cognition and Development, 14(3), 499–513. doi:10.1080/15248372.2012.689391
+de Jong, C., Peter, J., Kühne, R., & Barco, A. (2021). Children’s intention to adopt social robots:
+A model of its distal and proximal predictors. International Journal of Social Robotics, 14(875–891).
+doi:10.1007/s12369-021-00835-0
+De, Suárez, S. D., & Koenig, M. A. (2021). Selective trust and theory of mind in Brazilian children:
+Effects of socioeconomic background. Journal of Cognition and Development, 22(2), 169–184.
+doi:10.1080/15248372.2020.1867553
+Di Dio, C., Manzi, F., Peretti, G., Cangelosi, A., Harris, P. L., Massaro, D., & Marchetti, A. (2020).
+Shall I trust you? From child-robot interaction to trusting relationships. Frontiers in Psychology, 11,
+469. doi:10.3389/fpsyg.2020.00469
+DiYanni, C., & Kelemen, D. (2008). Using a bad tool with good intention: Young children’s imitation
+of adults’ questionable choices. Journal of Experimental Child Psychology, 101(4), 241–261. doi:10.
+1016/j.jecp.2008.05.002
+Dutemple, E., Hakimi, H., & Poulin-Dubois, D. (2022). Do I know what they know? Linking
+metacognition, theory of mind, and selective social learning. Journal of Experimental Child
+Psychology, 227, 105572. Advance online publication. doi:10.1016/j.jecp.2022.105572.
+Faul, F., Erdfelder, E., Lang, A. G., & Buchner, A. (2007). G*Power 3: A flexible statistical power
+analysis program for the social, behavioral, and biomedical sciences. Behavior Research Methods,
+39(2), 175–191. doi:10.3758/bf03193146
+Fong, T., Nourbakhsh, I., & Dautenhahn, K. (2003). A survey of socially interactive robots. Robotics
+and Autonomous Systems, 42(3–4), 143–166. doi:10.1016/s0921-8890(02)00372-x
+Fusaro, M., & Harris, P. L. (2008). Children assess informant reliability using bystanders’ non-verbal
+characteristics. Developmental Science, 11(5), 771–777. doi:10.1111/j.1467-7687.2008.00728.x
+Geiskkovitch, D. Y., Thiessen, R., Young, J. E., & Glenwright, M. R. (2019, March). What? That’s not
+a Chair!: How robot informational errors affect children’s trust towards robots. 2019 14th ACM/
+IEEE International Conference on Human-Robot Interaction (HRI), Daegu, Korea: IEEE. 48–56.
+Goldman, E. J., Baumann, A.-E., & Poulin-Dubois, D. (2023). Preschoolers anthropomorphizing of
+robots: Do human-like properties matter? Frontiers in Psychology, 13. doi:10.3389/fpsyg.2022.
+1102370
+Gottfried, G. M., & Gelman, S. A. (2005). Developing domain-specific causal-explanatory frame­
+works: The role of insides and immanence. Cognitive Development, 20(1), 137–158. doi:10.1016/j.
+cogdev.2004.07.003
+Harris, P. L., & Corriveau, K. H. (2011). Young children’s selective trust in informants. Philosophical
+Transactions of the Royal Society B: Biological Sciences, 366(1567), 1179–1187. doi:10.1098/rstb.
+2010.0321
+Harris, P. L., Koenig, M. A., Corriveau, K. H., & Jaswal, V. K. (2018). Cognitive foundations of
+learning from testimony. Annual Review of Psychology, 69(1), 251–273. doi:10.1146/annurev-psych
+-122216-011710
+Henrich, J., & Broesch, J. (2011). On the nature of cultural transmission networks: Evidence from
+Fijian villages for adaptive learning biases. Philosophical Transactions of the Royal Society B, 366
+(1567), 1139–1148. doi:10.1098/rstb.2010.0323
+Heyes, C. (2016). Who knows? Metacognitive social learning strategies. Trends in Cognitive Sciences,
+20(3), 204–213. doi:10.1016/j.tics.2015.12.007
+
+JOURNAL OF COGNITION AND DEVELOPMENT
+
+27
+
+Kim, M., Yi, S., & Lee, D. (2019). Between living and nonliving: Young children’s animacy judgments
+and reasoning about humanoid robots. PLOS ONE, 14(6), e0216869. doi:10.1371/journal.pone.
+0216869
+Klin, A. (2000). Attributing social meaning to ambiguous visual stimuli in higher-functioning autism
+and Asperger syndrome: The social attribution task. The Journal of Child Psychology and Psychiatry
+and Allied Disciplines, 41(7), 831–846. doi:10.1111/1469-7610.00671
+Koenig, M. A., Clément, F., & Harris, P. L. (2004). Trust in testimony: Children’s use of true and false
+statements. Psychological Science, 15(10), 694–698. doi:10.1111/j.0956-7976.2004.00742.x
+Koenig, M. A., & Harris, P. L. (2005a). Preschoolers mistrust ignorant and inaccurate speakers. Child
+Development, 76(6), 1261–1277. doi:10.1111/j.1467-8624.2005.00849.x
+Koenig, M. A., & Harris, P. L. (2005b). The role of social cognition in early trust. Trends in Cognitive
+Sciences, 9(10), 457–459. doi:10.1016/j.tics.2005.08.006
+Kory, J., & Breazeal, C. (2014). Storytelling with robots: Learning companions for preschool children’s
+language development. The 23rd IEEE International Symposium on Robot and Human Interactive
+Communication, Edinburgh, Scotland, 643–648. doi:10.1109/ROMAN.2014.6926325
+Lucas, A. J., Burdett, E., Burgess, V., Wood, L. A., McGuigan, N., Harris, P. L., & Whiten, A. (2017).
+The development of selective copying: Children’s learning from an expert versus their mother.
+Child Development, 88(6), 2026–2042. doi:10.1111/cdev.12711
+Manzi, F., Peretti, G., Di Dio, C., Cangelosi, A., Itakura, S., Kanda, T., . . . Marchetti, A. (2020).
+A robot is not worth another: Exploring children’s mental state attribution to different humanoid
+robots. Frontiers in Psychology, 11. doi:10.3389/fpsyg.2020.02011
+Mills, C. M. (2013). Knowing when to doubt: Developing a critical stance when learning from others.
+Developmental Psychology, 49(3), 404–418. doi:10.1037/a0029500
+Muthén, L. K., & Muthén, B. O. (1998-2017). Mplus user’s guide (8th ed.). Los Angeles, CA: Muthén &
+Muthén.
+Noles, N. S., Danovitch, J. H., & Shafto, P. (2015, July). Children’s trust in technological and human
+informants. Proceedings of the 37th Annual Conference of the Cognitive Science Society,
+Pasadena, CA.
+O’Connell, L., Poulin-Dubois, D., Demke, T., & Guay, A. (2009). Can infants use a nonhuman agent’s
+gaze direction to establish word-object relations? Infancy: the Official Journal of the International
+Society on Infant Studies, 14(4), 414–438. doi:10.1080/15250000902994073
+Okita, S. Y., & Schwartz, D. L. (2006). Young children’s understanding of animacy and entertainment
+robots. International Journal of Humanoid Robotics, 3(3), 393–412. doi:10.1142/
+S0219843606000795
+Oranç, C., & Küntay, A. C. (2020). Children’s perception of social robots as a source of information
+across different domains of knowledge. Cognitive development, 54, 100875. doi:10.1016/j.cogdev.
+2020.100875
+Palmquist, C. M., & Fierro, M. G. (2018). The right stuff: Preschoolers generalize reliability across
+communicative domains when informants show semantic (not episodic) knowledge. Journal of
+Cognition and Development, 19(5), 552–567. doi:10.1080/15248372.2018.1526174
+Pasquini, E. S., Corriveau, K. H., Koenig, M., & Harris, P. L. (2007). Preschoolers monitor the relative
+accuracy of informants. Developmental Psychology, 43(5), 1216–1226. doi:10.1037/0012-1649.43.5.
+1216
+Poulin-Dubois, D., Azar, N., Elkaim, B., & Burnside, K. (2020). Testing the stability of theory of mind:
+A longitudinal approach. PLoS ONE, 15(11), e0241721. doi:10.1371/journal.pone.0241721
+Poulin-Dubois, D., & Brosseau-Liard, P. (2016). The developmental origins of selective social
+learning. Current Directions in Psychological Science, 25(1), 60–64. doi:10.1177/0963721415613962
+Resendes, T., Benchimol-Elkaim, B., Delisle, C., René, J.-L., & Poulin-Dubois, D. (2021). What I know
+and what you know: The role of metacognitive strategies in preschoolers’ selective trust. Cognitive
+Development, 60, 101117. doi:10.1016/j.cogdev.2021.101117
+Sobel, D. M., & Finiasz, Z. (2020). How children learn from others: An analysis of selective word
+learning. Child Development, 91(6), 1134–1161. doi:10.1111/cdev.13415
+
+28
+
+A.-E. BAUMANN ET AL.
+
+Sobel, D. M., & Kushnir, T. (2013). Knowledge matters: How children evaluate the reliability of
+testimony as a process of rational inference. Psychological Review, 120(4), 779–797. doi:10.1037/
+a0034191
+Somanader, M. C., Saylor, M. M., & Levin, D. T. (2011). Remote control and children’s understanding
+of robots. Journal of Experimental Child Psychology, 109(2), 239–247. doi:10.1016/j.jecp.2011.01.
+005
+Sparks, E., Schinkel, M. G., & Moore, C. (2017). Affiliation affects generosity in young children: The
+roles of minimal group membership and shared interests. Journal of Experimental Child
+Psychology, 159, 242–262. doi:10.1016/j.jecp.2017.02.007
+Stower, R., Calvo-Barajas, N., Castellano, G., & Kappas, A. (2021). A meta-analysis on children’s trust
+in social robots. International Journal of Social Robotics, 13(8), 1979–2001. doi:10.1007/s12369020-00736-8
+Tahiroglu, D., Moses, L. J., Carlson, S. M., Mahy, C. E., Olofson, E. L., & Sabbagh, M. A. (2014). The
+children’s social understanding scale: Construction and validation of a parent-report measure for
+assessing individual differences in children’s theories of mind. Developmental Psychology, 50(11),
+2485–2497. doi:10.1037/a0037914
+Tong, Y., Wang, F., & Danovitch, J. (2019). The role of epistemic and social characteristics in
+children’s selective trust: Three meta-analyses. Developmental Science, 23(2), Article 12895.
+doi:10.1111/desc.12895
+van Straten, C. L., Peter, J., & Kühne, R. (2020). Child–robot relationship formation. A Narrative
+Review of Empirical Research. International Journal of Social Robotics, 12, 325–344. doi:10.1007/
+s12369-019-00569-0
+Wang, F., Tong, Y., & Danovitch, J. H. (2019). Who do I believe? Children’s epistemic trust in
+internet, teacher, and peer informants. Cognitive Development, 50(1), 248–260. doi:10.1016/j.
+cogdev.2019.05.006
+Wellman, H. M. (2014). Making minds: How theory of mind develops. New York, NY: Oxford
+University Press.
+Westlund, J. K., Dickens, L. R., Jeong, S., Harris, P. L., DeSteno, D., & Breazeal, C. (2017). Children
+use non-verbal characteristics to learn new words from robots as well as people. International
+Journal of Child-Computer Interaction, 13, 1–9. doi:10.1016/j.ijcci.2017.04.001
+
+View publication stats
+
+

@@ -1,0 +1,1082 @@
+Robots and Children that Learn Together :
+Improving Knowledge Retention by Teaching Peer-Like Interactive Robots
+Imene Taraklia,, Samuele Vinanzia , Richard Mooreb , Alessandro Di Nuovoa
+a Department of Computing, Sheffield Hallam University, Sheffield, United Kingdom
+
+arXiv:2506.18365v1 [cs.RO] 23 Jun 2025
+
+b LOHA Health Ltd, London, United Kingdom
+
+Abstract
+Despite growing interest in Learning-by-Teaching (LbT), few studies have explored how this paradigm can be
+implemented with autonomous, peer-like social robots in real classrooms. Most prior work has relied on scripted
+or Wizard-of-Oz behaviours, limiting our understanding of how real-time, interactive learning can be supported by
+artificial agents. This study addresses this gap by introducing Interactive Reinforcement Learning (RL) as a cognitive
+model for teachable social robots. We conducted two between-subject experiments with 58 primary school children,
+who either taught a robot or practised independently on a tablet while learning French vocabulary (memorisation) and
+grammatical rules (inference). The robot, powered by Interactive RL, learned from the child’s evaluative feedback.
+Children in the LbT condition achieved significantly higher retention gains compared to those in the self-practice condition, especially on the grammar task. Learners with lower prior knowledge benefited most from teaching the robot.
+Behavioural metrics revealed that children adapted their teaching strategies over time and engaged more deeply during
+inference tasks. This work makes two contributions: (1) it introduces Interactive RL as a pedagogically effective and
+scalable model for peer-robot learning, and (2) it demonstrates, for the first time, the feasibility of deploying multiple
+autonomous robots simultaneously in real classrooms. These findings extend theoretical understanding of LbT by
+showing that social robots can function not only as passive tutees but as adaptive partners that enhance meta-cognitive
+engagement and long-term learning outcomes.
+Keywords: Learning-by-Teaching, Social Robots in Education, Child-Robot Interaction, Interactive Reinforcement
+Learning
+
+1. Introduction
+Recent advances in Artificial Intelligence (AI) and robotics are reshaping the landscape of education by enabling
+new forms of interactive and personalised learning. These technologies provide platforms for delivering engaging,
+student-centred activities tailored to the specific needs and learning paces of children (Wang et al., 2024). Importantly,
+this technological shift holds the potential to address one of the most pressing challenges in global education: equitable
+learning opportunities (Henkel et al., 2025). By adapting content to individual learners, AI-driven educational tools
+can support cognitively and academically appropriate curricula, ensuring that children, regardless of their socioeconomic background, have access to high-quality education (Tu et al., 2025; Almousa and Alghowinem, 2023).
+Among emerging technologies, social robotics has gained significant attention in educational contexts. Social
+robots, characterised by their physical presence and capacity for social interaction, have demonstrated promising affective and cognitive benefits for children (Belpaeme et al., 2018). This includes enhanced motivation (Donnermann
+and Lugrin, 2024; Song et al., 2024), sustained attention (Chiang et al., 2023), and increased engagement in learning activities (Nasir et al., 2024; Bruzzo et al., 2024). These benefits are particularly salient when considering that
+learning is inherently a social endeavour, as emphasised by sociocultural theories of education. Vygotsky (1978)
+concept of the Zone of Proximal Development underscores the importance of social interaction in cognitive development, suggesting that learners achieve higher levels of understanding through collaborative activities with more
+Email address: i.tarakli@shu.ac.uk (Imene Tarakli )
+Preprint submitted to arXiv
+
+June 24, 2025
+
+Figure 1: A child interacting with the robot in the Learning-by-Teaching condition. The child provides feedback on the robot’s responses, guiding
+its learning through evaluative feedback.
+
+capable peers or guides. In this context, social robots can serve as interactive partners that scaffold children’s learning
+experiences, providing immediate feedback and adapting to individual needs, thereby facilitating deeper engagement
+with the learning materials.
+One effective way to integrate robots into classrooms is to introduce them as peers, encouraging children to step
+into the role of a teacher. This method builds on the learning-by-teaching (LbT) paradigm, an educational framework
+rooted in sociocognitive theories that view learning as a socially mediated process. When children take on the role of
+a teacher, they engage in deeper cognitive processing by organising, articulating, and evaluating the learning material
+for a tutee. This promotes meta-cognitive engagement, requiring the tutor to assess the learner’s knowledge and
+adjust explanations accordingly (Duran, 2017). A central mechanism behind this effect is the Protégé Effect, which
+suggests that learners put more effort into mastering material when they are responsible for teaching it to someone
+else (Chase et al., 2009). This increased sense of responsibility enhances motivation and fosters deeper learning and
+reflection (Bjork et al., 2011). However, the success of LbT relies not only on the child acting as a tutor, but also
+on the design of the tutee (Serholt et al., 2022). Research shows that for LbT to be effective, the tutee must behave
+like a novice learner, providing the tutor with opportunities to explain, correct, and reflect (Roscoe and Chi, 2008).
+The tutee’s behaviour should be carefully calibrated: it must show enough struggle to elicit tutoring behaviours, but
+also demonstrate gradual improvement, reinforcing the child’s perception of being an effective teacher and sustaining
+engagement. Initial implementations of LbT relied on virtual agents and teachable software. These systems allowed
+children to guide artificial agents by providing examples, demonstrations, or feedback (Biswas et al., 2005; Obayashi
+et al., 2000). While effective in controlled settings, these approaches often lacked social presence, limiting their
+ability to replicate the richness of peer-to-peer learning found in classrooms. To address this, researchers introduced
+social robots as peer-like tutees. Compared to virtual agents, robots provide embodied interaction, enabling richer
+communication through gaze, gestures, and physical presence; all of which are critical to the social dynamics of
+teaching (Demir-Lira et al., 2020; Alimardani et al., 2022). Robots presented as novice peers seeking the child’s
+help can elicit spontaneous teaching behaviours (Tanaka et al., 2007), reduce performance anxiety (Lemaignan et al.,
+2016), and foster more natural, bi-directional interaction (Pareto et al., 2022; Okazaki et al., 2015). By engaging with
+a robot peer, children feel less pressure, as they are not being evaluated but instead are offering support; a shift that
+can be particularly valuable in inclusive or mixed-ability classrooms.
+Several systems have explored how social robots can embody the tutee role in LbT contexts across a range of domains.
+Early work by Tanaka and Matsuzoe (2012) showed that children spontaneously adopted the teacher role when guiding
+a robot through vocabulary tasks. Lemaignan et al. (2016) demonstrated how children improved a robot’s handwriting
+through corrective feedback, triggering meta-cognitive engagement. Yadollahi et al. (2018) applied the LbT paradigm
+to reading, where children helped the robot overcome errors in word pronunciation. Expanding to group settings,
+2
+
+El Hamamsy et al. (2019) investigated collaborative teaching of a robot in a handwriting task, showing that group-level
+reflection supported meta-cognitive engagement, regardless of the engagement prompt used. Similarly, Verhoeven
+et al. (2018) developed a story-driven language learning activity in which children taught a robot new vocabulary
+through playful storytelling interactions. Pareto et al. (2022) explored how children teach a robot or a younger peer
+using a structured tutoring system (SPARk), showing that robot tutees can elicit similar teaching behaviours to those
+seen in peer-to-peer interactions. More recently, Chen and Liu (2024) implemented an LbT approach using an AIpowered robot for image recognition in biology lessons. Students who taught the robot to recognise cell division
+stages showed significantly higher conceptual understanding and motivation compared to textbook learners.
+To support such interactions, various models have been developed to simulate novice-like behaviour in social
+robots. These models aim to present the robot as a peer who is learning from the child, thereby encouraging tutoring
+behaviours and cognitive engagement. Across the literature, three primary approaches can be identified. Wizard-ofOz (WoZ) models rely on a hidden human operator to control the robot’s responses, allowing for smooth interaction
+but offering no real autonomy or scalability (Das and Pon-Barry, 2018; Verhoeven et al., 2019). Rule-based models
+script the robot’s behaviour in advance, enabling it to simulate learning progression, but these are rigid and cannot
+adapt to individual learners or dynamic learning conditions (Serholt et al., 2022; Lee et al., 2021; El Hamamsy et al.,
+2019). Learning-based models offer a more promising alternative by allowing the robot to update its behaviour over
+time, better emulating a genuine learning process (Chen and Liu, 2024; Pareto et al., 2022; Chandra et al., 2020).
+However, most of these systems are highly task-specific or depend on pretraining rather than real-time adaptation. For
+a robot to truly act as a peer learner, it must not only behave like a novice but also improve in ways that reflect the
+child’s input, reinforcing the child’s sense of responsibility and sustaining engagement over time. This requires the
+robot to follow an emergent learning trajectory that evolves throughout the interaction.
+To meet this need, we propose the use of teachable robots; robots that can learn directly from the child’s guidance.
+In particular, we focus on Interactive Reinforcement Learning, a paradigm in which the robot receives evaluative
+feedback from the user (e.g., whether an answer was correct or wrong) and updates its policy accordingly. Unlike
+traditional RL, Interactive RL is designed to work with non-expert users and is thus well suited to classroom environments, enabling the robot to learn in real time while also encouraging the child to reflect on and monitor the robot’s
+learning process. Pedagogically, this approach offers several advantages aligned with current trends in computersupported education: it provides a form of adaptive scaffolding, where the robot’s learning path is shaped by the
+student’s input; it reinforces formative assessment, as the child continually evaluates and corrects the robot’s performance; and it promotes metacognitive development by prompting learners to reflect not only on what they know,
+but on how to teach and explain it. By integrating Interactive RL into the robot’s cognitive model, we aim to create a socially engaging and pedagogically meaningful tutee; one that supports personalisation, deepens learning, and
+encourages active knowledge construction in line with contemporary educational goals.
+Building on these foundations, our work investigates how children can teach a social robot in real time using
+evaluative feedback, and how this interaction affects their learning and engagement. By integrating Interactive RL
+into a teachable peer robot, we aim to examine not only the technical feasibility of such systems, but also their
+pedagogical potential in classroom settings. Specifically, we address the following research questions:
+• RQ1: Can primary school children effectively guide a social robot’s learning using Interactive Reinforcement Learning in a real classroom environment?
+This question explores the feasibility of integrating Interactive RL in naturalistic educational settings, assessing
+whether children are capable of providing accurate, meaningful feedback that helps the robot learn.
+• RQ2: Does teaching a robot improve children’s long-term knowledge retention compared to independent
+practice?
+Here, we examine whether learning-by-teaching a robot leads to better consolidation of knowledge than more
+traditional self-practice methods, reflecting pedagogical goals related to memory, transfer, and depth of processing.
+• RQ3: Do children with lower prior knowledge benefit more from the learning-by-teaching interaction
+than their higher-achieving peers?
+This question addresses issues of educational equity and personalization by investigating whether teachable
+robots can provide greater scaffolding for learners who might otherwise struggle in traditional environments.
+3
+
+• RQ4: How does the nature of the learning task influence the effectiveness of teaching a robot?
+This question explores how different types of cognitive processing—recall versus conceptual reasoning—shape
+the outcomes of robot-based LbT interactions, with implications for task design and adaptive learning systems.
+The remainder of the paper is structured as follows. We first describe the methodology, detailing the design of
+the cognitive model, the learning tasks, and the experimental setup implemented in a real classroom setting. We
+then present the results, examining the effects of the LbT interaction on children’s performance, engagement, and
+retention across different tasks and learner profiles. This is followed by a discussion of the findings in relation to
+existing literature, highlighting both pedagogical implications and design considerations for teachable robots. Finally,
+we conclude by summarising our contributions, discussing limitations, and outlining directions for future research.
+2. Method
+To investigate the research questions, we conducted a classroom-based study in which primary school children
+taught a social robot using evaluative feedback. This section describes the cognitive model underlying the robot’s behaviour, the learning tasks implemented, the experimental design, and the evaluation measures used to assess learning
+outcomes and interaction quality.
+2.1. Research Model and Procedure
+We designed a cognitive framework that allows the peer robot to emulate a child’s learning trajectory using Interactive RL. This approach was implemented within a game-based educational activity, where the robot begins as a
+novice learner, selecting answers at random. As the child tutor provides evaluative feedback, the robot incrementally
+refines its policy, progressively improving its performance across the learning session. Figure 2 illustrates the overall
+structure of the learning-by-teaching framework.
+Robot Peer
+
+Child Peer
+
+Policy
+Exploitation
+
+Review Material
+
+Evaluation
+
+3. Child provides feedback
+
+1. Question appears
+
+4. Robot uses feedback to
+updates its policy
+
+2. Robot provide answer
+
+Policy Update
+
+Reflection
+
+Game Interface
+
+Figure 2: Overview of the Learning-by-Teaching framework with Interactive Reinforcement Learning. (1) A question is displayed with multiple
+choice options.(2) Policy Exploitation: The robot peer uses its current policy to select an answer. (3) The child peer reflects on the robot’s answer
+(Reflection), optionally reviews the material, and decides whether the robot’s response is correct or incorrect (Evaluation).(4) The robot updates
+its policy (Policy Update) based on the child’s feedback. This loop continues as the robot progressively refines its knowledge, while the child
+simultaneously reinforces their own understanding through active teaching.
+
+4
+
+2.1.1. Task game and policy formulation
+Game-based learning has been widely recognised for its positive impact on children’s learning outcomes (Magpusao, 2024). Building on this, we designed an educational quiz game in which the robot, acting as a learner, selects
+answers from multiple options and receives evaluative feedback from the child. Unlike traditional quiz formats, the
+child does not answer directly but instead assumes the role of a tutor, guiding the robot’s learning by indicating
+whether its responses are correct or incorrect.
+We formalise this interaction using a Markov Decision Process (MDP), where each question represents a state
+S = {question1 , . . . , questionn }, and the available answer options define the action space A = {option1 , . . . , optionm }.
+The robot’s policy reflects its evolving knowledge representation; an optimal policy maps each question to the correct
+answer, representing the desired learning outcome.
+To ensure the pedagogical relevance of the game, the learning tasks were selected in collaboration with primary
+school teachers. The chosen activities had to involve content not previously covered in class, minimise ceiling effects,
+and present an appropriate cognitive challenge. Tasks that are too simple may result in disengagement (Tanaka and
+Matsuzoe, 2012), while more conceptually demanding activities are known to stimulate learning and reflection (Authors, 2023; Chen et al., 2020). Based on these criteria, we implemented two tasks: a vocabulary memorisation task
+on French body parts and a grammar rule inference task on French determiners.
+Body Parts Game. This task focuses on teaching French vocabulary by matching English body part names (hand,
+head, foot, belly, and eye) to their French equivalents. Each round displays one English word and three possible
+translations, from which the robot selects an answer. This task leverages prior findings on the effectiveness of social
+robots in language learning, particularly when iconic gestures are used to ground word meanings (de Wit et al., 2018).
+During the interaction, the robot reinforces feedback by pointing to the relevant body part. This task is modelled as
+an MDP with a state space of five (targeted words) and an action space of three (translation options).
+Grammar Game. This task targets rule inference by asking the robot to classify a French word into one of three grammatical categories (feminine, masculine, or plural) based on its determiner (La, Le, Un, Une, Les, or Des). The child
+assesses the robot’s choice, reinforcing or correcting it. Prior work suggests that learning-by-teaching is especially
+effective in tasks that involve conceptual reasoning and meta-cognitive engagement (Biswas et al., 2005). This task is
+modelled as an MDP with a state space of six (determiners) and an action space of three (grammatical categories).
+The quiz game was developed as a web-based interface using Flask and deployed on touchscreen tablets. Each
+game question corresponded to a state in the MDP, and each answer choice mapped to a possible action. This interface
+served as the medium for both the robot’s decision-making and the child’s feedback, enabling real-time interaction
+and policy updates.
+2.1.2. Interactive Reinforcement Learning Peer Model
+RL is a computational approach used to solve MDPs by enabling an agent to learn optimal decision-making
+strategies through trial and error. A reward function R : S × A → R assigns a numerical value to each state-action
+pair, reflecting the immediate benefit of taking a specific action in a given state. The agent aims to discover an optimal
+policy π∗ that maximises the expected cumulative reward over time by selecting actions that maximise the Q-value,
+an estimate of the long-term return:
+∞
+
+X t
+
+
+Q(s, a) = Eπ  γ R(st , at ) .
+(1)
+t=0
+
+Interactive RL extends this framework by allowing non-expert users to guide the agent through evaluative feedback
+rather than relying on a predefined reward function (Najar and Chetouani, 2021). This human-in-the-loop approach is
+particularly well suited to LbT scenarios, where children serve as the source of feedback, shaping the robot’s learning
+trajectory in real time.
+In our setup, the peer robot uses the TAMER framework (Knox and Stone, 2009), which interprets binary feedback
+as immediate evaluative input. After each action, the robot receives a signal from the child indicating whether the
+response was correct (+1) or incorrect (-1). The Q-value is updated accordingly using the following rule:
+Q′ (s, a) = Q(s, a) + α · (h − Q(s, a))
+5
+
+(2)
+
+where Q′ (s, a) is the updated value of the state-action pair, Q(s, a) is the previous estimate, h is the feedback signal,
+and α is the learning rate.
+This interactive feedback loop enables the robot to progressively refine its policy based on the child’s input,
+allowing it to emulate a meaningful and adaptive learning trajectory. In doing so, the robot not only improves its own
+performance but also fosters reflective thinking and engagement in the child acting as the tutor.
+2.1.3. Robot-Child Interaction and Experimental Setup
+The learning scenario was deployed using a hybrid system comprising three components: (1) the JD social robot,
+(2) a touchscreen tablet running the learning game, and (3) a central computer hub that controlled the robot’s cognitive
+model and managed synchronisation via MQTT communication. This setup enabled real-time interaction between the
+child and the robot, allowing the robot to receive feedback and update its behaviour accordingly.
+The robot used in this study, JD1 , is a compact humanoid platform with articulated limbs and LED-animated eyes,
+designed to be visually engaging and accessible for young learners. To make the robot more appealing to children, its
+default voice was replaced with a natural, child-like voice generated using ElevenLabs2 . Although primarily intended
+for programming education, JD was repurposed as a peer-like tutee for this study, with custom behaviours developed
+to support naturalistic interaction, including speech-aligned head movements and gestures.
+Interaction took place via a touchscreen tablet, which served as the primary medium for presenting questions and
+recording child feedback. Each screen displayed a question and answer choices, along with a progress tracker and
+hint button. After the robot selected an answer, feedback buttons appeared, enabling the child to indicate whether the
+response was correct or incorrect.
+Each game round followed a structured interaction sequence. The robot introduced itself and the learning task,
+then attempted to answer each question. It waited for the child’s feedback, prompting if no response was given within
+ten seconds. If no feedback was received within the next fifteen seconds, the robot invited the child to use the hint
+button. Feedback was acknowledged both verbally and visually, with eye colour changes (green for correct, red for
+incorrect). When incorrect, the robot and child reviewed the correct answer together. In the vocabulary task, the robot
+also used iconic gestures, such as pointing to the relevant body part, to reinforce the association. At the end of the
+session, the robot thanked the child and simulated “going to sleep” to signal the conclusion of the activity.
+To preserve ecological validity, the experiment was conducted in a real classroom setting, with children remaining
+in their regular groups. Multiple one-on-one child-robot interactions were carried out simultaneously within the
+same classroom to reflect a natural learning environment. This setup also minimised direct experimenter interaction,
+reducing the risk of social desirability bias and suggestibility effect often observed in child studies (Zaga et al., 2015).
+Maintaining the peer group context was especially important given the study’s focus on peer-like robot interaction and
+collaborative learning dynamics.
+2.2. Research Context and Sample
+The study was conducted in collaboration with a UK primary school to evaluate the effectiveness of LbT interaction in a real-world classroom environment. In what follows, we describe the participant group and outline the study
+protocol followed.
+2.2.1. Participants
+A total of 58 children aged 8–9 years (Year 4, UK) participated in the study. All children attended the same
+primary school in the UK, were distributed across two classes, and studied French as an additional language. Parental
+consent was obtained prior to the study, along with verbal assent from the children on the day of participation. To
+ensure data privacy, we pseudonymised the data using a system that combined each child’s classroom number with
+the first letter of their teacher’s name. This approach allowed us to match retention scores with data collected during
+the study while maintaining confidentiality. Since LbT is intended for knowledge consolidation rather than acquiring
+new knowledge, we excluded one participant who scored 0 on the pre-test. Additionally, due to data logging errors,
+technical issues, and instances where children entered incorrect pseudonymisation IDs, the final dataset included 53
+participants (33 boys, 16 girls, and 4 who preferred not to specify their gender).
+1 https://www.ez-robot.com
+2 https://elevenlabs.io/
+
+6
+
+Familiarisation
+Phase
+
+Teaching
+Session
+
+Intervention
+Session
+
+Retention
+Tests
+
+DAY -7
+
+DAY -2
+
+DAY 0
+
+DAY + 14
+
+Figure 3: Study timeline. Familiarisation Phase (Day -7) to introduce children to the social robot, the Teaching Session (Day -2) where students
+learn the material, the Intervention Session (Day 0) where they engage in either Learning-by-Teaching or Self-Practice, and the Retention Test (Day
++14) to assess long-term knowledge retention.
+
+2.2.2. Study Protocol
+The study was conducted over a three-week period and consisted of four phases: (1) a familiarisation session, (2)
+a classroom teaching session led by the teacher, (3) the main intervention session involving the robot or tablet activity,
+and (4) a delayed retention test conducted two weeks later, as illustrated in Figure 3.
+Familiarisation Session. To reduce novelty effects and ensure children were comfortable interacting with the robot,
+a familiarisation session was conducted one week prior to the intervention. The JD robot was introduced in the
+classroom, where it greeted the children, demonstrated basic movements, and performed a short dance. To help
+children practice providing feedback, a short group activity was carried out on the classroom touchboard, where
+children took turns teaching the robot the names of fruits in French using the same feedback buttons they would
+later use during the study. The session concluded with a Q&A where children could ask questions about the robot’s
+capabilities.
+Teaching Session. Two days before the intervention, teachers conducted standardised lessons on French body parts
+and determiners using materials provided by the researchers. This session ensured that all children had a basic level
+of prior knowledge and positioned the robot as a learning companion rather than a replacement for instruction. The
+timing of this session was chosen to balance memory retention and prevent ceiling effects during pre-testing.
+Intervention Session. The study was structured as two separate between-subject experiments; one for each learning
+task (Body Parts and Grammar). This decision was made to avoid potential carryover effects and ensure that learning
+gains could be attributed to the specific learning condition rather than task repetition or familiarity. A within-subject
+design was not feasible, as it would have required children to complete both conditions on the same task, which could
+confound learning effects and increase the risk of ceiling effects in post-tests. Moreover, to prevent social exclusion
+and maintain classroom cohesion, we ensured that all children experienced both robot and tablet conditions, but on
+different tasks. Each class was divided into three groups: one group interacted with the robot, another completed the
+same task independently on a tablet (control condition), and the third group participated in an unrelated computer
+science activity. Groups rotated through the activities to ensure all children experienced both learning conditions,
+but on different tasks. Specifically, children who taught the robot in the Body Parts game used the tablet for the
+Grammar game, and vice versa. Each session lasted approximately 20 minutes and began with pre-tests to assess
+prior knowledge. Children then engaged in the learning game for 15 iterations, followed by immediate post-tests and
+a brief questionnaire. The robot sessions took place in the classroom, while tablet sessions were held in an adjacent
+communal space. This structure preserved a naturalistic learning environment while enabling controlled comparisons.
+Figure 4 illustrates the floor setting of the study.
+Retention Test. Two weeks after the intervention, children completed the same learning tests again to assess long-term
+retention. These tests were conducted on tablets during regular class hours. Children who had participated in both the
+robot and tablet conditions were tested on both tasks. As a gesture of appreciation, children received certificates of
+participation, and the JD robot performed a dance at the end of the session.
+2.3. Instrument Used and Their Validation
+To assess the effects of the learning-by-teaching interaction, we employed three types of instruments: (1) knowledge tests, (2) in-game performance metrics, and (3) perception questionnaires. These instruments were designed to
+evaluate learning outcomes, engagement, and interaction quality across conditions.
+7
+
+Door
+
+Door
+
+Door
+
+Door
+
+Door
+
+Teacher’s Desk
+
+(a)
+
+(b)
+Tablet
+
+Robot
+
+Figure 4: Floor plan of the study setup for both conditions. (a) Learning by Teaching condition: Children interacted with the robot in a classroom
+setting, with robots and tablets distributed around the room. (b) Self-Practice condition: Children worked independently on tablets in a communal
+area.
+
+8
+
+Knowledge Tests. Children completed three touchscreen-based tests for each task: a pre-test (to assess prior knowledge), a post-test (immediately after the intervention), and a delayed retention test (two weeks later). All tests were
+implemented on tablets using the same interface as the learning game to ensure consistency. Each test included three
+rounds of activities to reduce random guessing.
+For the Body Parts task, tests included: (1) matching English body part names to their French equivalents, (2)
+matching French words to English equivalents, and (3) matching French words to images. These tasks assessed
+memorisation.
+For the Grammar task, the test required children to classify nouns as masculine, feminine, or plural based on their
+determiners. To ensure the test measured rule generalisation rather than memorisation, the test items differed from
+those used during the learning session.
+We calculated knowledge gain and retention gain by subtracting the pre-test score from the post-test and retention
+test scores, respectively.
+In-Game Performance Metrics. During the learning activity, we recorded app-based behavioural data to assess realtime engagement and learning strategy use. Logged metrics included:
+• Feedback Accuracy: Whether the child correctly identified the robot’s answers as correct or incorrect.
+• Time per Iteration: The time spent on each question, from the robot’s answer to the child’s feedback.
+• Hint Usage: Whether and how often the child used the hint button to review content before giving feedback.
+These measures were used to infer help-seeking behaviour, reflection, and temporal engagement across conditions.
+Perception Questionnaire. Children completed a brief post-intervention questionnaire to report their perceptions of
+the learning experience. Items measured task enjoyment, perceived competence, and engagement, and were adapted
+from the Intrinsic Motivation Inventory (IMI) (Ryan et al., 1983) to suit the age group and study context. Additionally,
+a single-item question was included to assess perceived task difficulty.
+To ensure accessibility and reduce cognitive load, all items used a 5-point Likert scale presented as a visual starrating system. Items were displayed one at a time in random order, and children selected their response by tapping the
+appropriate number of stars. The adaptation was informed by prior work on child-friendly self-report instruments and
+was previously tested in a classroom setting to ensure clarity and usability (Chandra et al., 2020). Internal consistency
+coefficients (Cronbach’s alpha) for each subscale are reported in the supplementary material.
+2.4. Data Analysis
+Quantitative data from knowledge tests, in-game interaction logs, and questionnaires were analysed using a combination of parametric and non-parametric tests, depending on data distribution. Normality was assessed using
+Shapiro–Wilk tests, and appropriate comparisons were made using independent-samples t-tests or Mann–Whitney
+U tests, with effect sizes reported as Cohen’s d or rank-based r.
+Learning Outcomes. Knowledge gain and retention gain were calculated as the difference between post-test or retention test scores and pre-test scores. Between-condition comparisons were conducted for each task, and median-split
+analyses were performed to explore the impact of prior knowledge (low- vs. high-baseline groups).
+In-Game Performance Metrics. Metrics including iteration time, hint usage, and feedback accuracy were analysed
+to assess engagement and reflection. Within-condition progress over time (e.g., first vs. last five iterations) was
+evaluated using Wilcoxon signed-rank tests, and between-condition differences were assessed using Mann–Whitney
+U tests. Spearman’s rank correlations were computed to explore relationships between behavioural metrics, learning
+outcomes, and perceived engagement.
+Questionnaire Responses. Post-intervention questionnaire scores were compared across conditions using Mann–Whitney
+U tests. Exploratory correlations were run with behavioural and performance data. Cronbach’s alpha coefficients for
+each scale are reported in the supplementary material to confirm reliability of the adapted measures.
+9
+
+3. Results
+3.1. Effectiveness of Teaching Through Feedback
+We evaluated the feasibility of using Interactive RL as a cognitive model for LbT a social robot, examining
+whether children could effectively use it to improve their learning and engage in meta-cognitive processes that support
+knowledge retention.
+Children successfully assumed the role of a teacher, providing feedback throughout the game. The accuracy of the
+feedback was 0.89 ± 0.13 for the Body Parts Game and 0.74 ± 0.29 for the Grammar Game, indicating that children
+were generally able to guide the robot’s learning process effectively.
+Additionally, Figure 5a shows that children demonstrated adaptation to their role as a teacher by progressively
+reducing their response time per iteration. This decrease was significant in the Body Parts Game, where children spent
+less time per iteration in the final five rounds (Mdn = 9289.20ms) compared to the first five (Mdn = 12596.52ms),
+U = 607.00, z = 2.90, p < 0.01, r = 0.38.
+Furthermore, as seen in Figure 5b, children in the Body Parts Game also spent less time on the help panel towards
+the end of the game (Mdn = 0.00ms) compared to the beginning (Mdn = 1142.40ms), U = 563.50, z = −2.61, p <
+0.05, r = −0.34. However, this change was not significant for the Grammar Game.
+**
+
+Time Spent in the Help Panel per Iteration
+
+Time Spent per Iteration
+
+*
+
+Body Parts
+Grammar
+
+18000
+
+4000
+
+5
+st
+
+Fir
+s
+
+La
+
+5
+st
+La
+
+Fir
+st
+
+5
+st
+La
+
+Fir
+st
+
+(a)
+
+Fir
+s
+
+0
+
+t5
+
+8000
+
+5
+
+1000
+
+5
+
+10000
+
+t5
+
+2000
+
+5
+
+12000
+
+3000
+
+st
+
+14000
+
+La
+
+Time (ms)
+
+16000
+Time (ms)
+
+Body Parts
+Grammar
+
+5000
+
+(b)
+
+Figure 5: Comparison of time spent during the game between the first and last five iterations. (a) Boxplots showing the time spent per iteration. (b)
+Boxplots illustrating the time spent on the help panel per iteration.
+
+These findings suggest that children were not only able to provide feedback but also demonstrated learning by
+adjusting their interaction patterns, particularly in the Body Parts Game.
+3.2. Learning by Teaching Vs Self-practice
+We compared the learning outcomes of learning-by-teaching a social robot with the self-practice condition, while
+also examining whether the perception of the task differed between the two approaches.
+Figure 6 shows that, on average, participants in the LbT condition achieved higher post- and retention gains
+compared to those in the Self-Practice condition. This difference was significant in the Body Parts Game, where
+participants in the LbT condition (M = 0.90, S E = 3.89) demonstrated a higher retention gain than those in the
+Self-Practice condition (M = −1.70, S E = 4.78), t(50) = 2.16, p < 0.05, r = 0.29.
+Additionally, participants in the Learning-by-Teaching condition spent significantly more time per iteration compared to those in the Self-Practice condition, as depicted in Figure 7a. Specifically, in the Body Parts Game, children
+in the LbT condition (Mdn = 3431.66ms) spent more than twice the time per iteration compared to those in the
+Self-Practice condition (Mdn = 1476.40ms), U = 571.0, z = 0.88, p < 0.0001, r = 0.12. Similarly, in the Grammar
+Game, children in the LbT condition (Mdn = 5127.50ms) spent significantly more time per iteration than those in the
+Self-Practice condition (Mdn = 1916.03ms), U = 535.0, z = 0.76, p < 0.001, r = 0.11. These results indicate that
+children were more engaged with the learning material in the LbT condition.
+
+10
+
+Gain Scores in the Body Parts Game
+
+Gain Scores in the Grammar Game
+
+8
+
+8
+
+Learning by Teaching
+Self-Practice
+
+*
+
+6
+
+6
+
+4
+
+4
+Score
+
+Score
+
+2
+0
+
+2
+0
+
+2
+4
+
+2
+
+Learning by Teaching
+Self-practice
+
+6
+
+4
+
+Post Gain
+
+Retention Gain
+
+Post Gain
+
+(a)
+
+Retention Gain
+(b)
+
+Figure 6: Comparison of learning gains between the Learning-by-Teaching and Self-Practice conditions for the Body Parts Game and Grammar
+Game. (a) Body Parts Game: Participants in the LbT condition showed significantly higher retention gains compared to the Self-Practice condition
+(p < 0.05). (b) Grammar Game: No significant difference was observed between the two conditions.
+
+Moreover, Figure 7b shows that children in the LbT condition also spent more time using the help panel than those
+in the Self-Practice condition. This effect was significant in the Grammar Game, where children in the Learning-byteaching condition (Mdn = 1417.13ms) spent four times more time reviewing the material compared to those in the
+Self-Practice condition (Mdn = 312.80ms), U = 468.0, z = 2.56, p < 0.01, r = 0.35.
+Time spent on the help panel in the LbT condition was significantly correlated with retention gain (r = 0.30, p <
+0.05), whereas no such relationship was observed in the Self-Practice condition (r = −0.01, p > 0.05). This suggests
+that children in the LbT condition engaged more actively in self-reflection and material review, which may have
+contributed to their higher retention gain.
+Time Spent per Iteration
+16000
+
+Learning by Teaching
+Self-practice
+
+Time Spent in Help Panel per Iteration
+**
+
+6000
+
+14000
+
+Time (ms)
+
+Time (ms)
+
+***
+
+8000
+6000
+
+Body Parts Game
+
+Grammar Game
+
+4000
+3000
+2000
+
+4000
+
+1000
+
+2000
+0
+
+**
+
+5000
+
+12000
+10000
+
+Learning by Teaching
+Self-practice
+
+0
+Body Parts Game
+
+Grammar Game
+(a)
+
+(b)
+
+Figure 7: Comparison of time spent during the game between the Learning by Teaching and Self-Practice conditions for the Body Parts Game and
+Grammar Game. (a) Time spent per iteration: Children in the LbT condition spent significantly more time per iteration across both tasks (p < 0.01).
+(b) Time spent in the help panel: A significant difference was observed in the Body Parts Game (p < 0.01), while no significant difference was
+found for the Grammar Game.
+
+Table 1 presents the comparison of perceived engagement, competence, enjoyment, and task difficulty between the
+LbT and Self-Practice conditions for both learning tasks. Across all measures, no significant differences were found
+except for engagement in the Grammar Game, where children in the LbT condition reported significantly higher
+engagement than those in the Self-Practice condition (p < 0.05).
+11
+
+An exploratory analysis revealed a significant correlation between the time spent per iteration and perceived engagement in the LbT condition (r = 0.365, p < 0.05), whereas this effect was not observed in the Self-Practice
+condition (r = −0.01, p > 0.05). Additionally, task difficulty was rated as moderate in both conditions, indicating that
+LbT was not perceived as more difficult than Self-Practice.
+Variable
+
+Body Part Game
+
+Grammar Game
+
+Learning by Teaching
+
+Self-Practice
+
+p-value
+
+Learning by Teaching
+
+Self-Practice
+
+p-value
+
+4.3 (0.83)
+4.0 (0.81)
+3.7 (1.07)
+2.3 (0.94)
+
+4.2 (0.81)
+4.3 (0.81)
+4.1 (0.99)
+2.3 (1.06)
+
+0.92
+0.41
+0.11
+0.96
+
+4.2 (0.97)
+4.3 (1.07)
+4.2 (0.99)
+2.6 (1.26)
+
+4.2 (1.07)
+4.4 (1.07)
+3.3 (1.46)
+2.6 (1.46)
+
+0.99
+0.95
+0.03
+0.73
+
+Task Enjoyment
+Perceived Competence
+Engagement
+Difficulty
+
+Table 1: Comparison of Learning by Teaching and Self-Practice conditions across engagement, competence, enjoyment, and difficulty for both
+learning tasks. Significant differences are in bold.
+
+3.3. Influence of Prior Knowledge
+We investigated whether students’ prior knowledge influenced their learning gains in each condition. To do this, we
+split the data for each task and condition based on the median pre-test score. This resulted in two groups per task and
+condition: Low-Baseline (students with a pre-test score at or below the median) and High-Baseline (students scoring
+above the median). The median scores for each group, along with demographic information (gender distribution and
+pre-test scores), are provided in the supplementary material
+Figure 8 shows that Low-Baseline students achieved significantly higher post-gain compared to High-Baseline
+students in the Learning-by-Teaching condition, whereas this effect was not observed in the Self-Practice condition.
+Specifically, in the Body Parts Game, Low-Baseline students (Mdn = 4.00) demonstrated significantly greater
+improvement after the intervention compared to High-Baseline students (Mdn = 0.00), U = 52.00, z = −2.86, p <
+0.05, r = −0.51. A similar pattern was observed in the Grammar Game, where Low-Baseline students (Mdn = 5.00)
+showed significantly higher learning gains than High-Baseline students (Mdn = 0.00), U = 29.00, z = −2.07, p <
+0.05, r = −0.44.
+Post Gain Score in the Body Parts Game
+15
+
+*
+
+Post Gain Score in the Grammar Game
+
+High-Baseline
+Low-Baseline
+
+15
+
+High-Baseline
+Low-Baseline
+
+10
+
+5
+
+Score
+
+Score
+
+10
+
+*
+
+0
+
+5
+0
+
+5
+5
+Leanrning-by-Teaching
+
+Self-Practice
+
+Leanrning-by-Teaching
+
+(a)
+
+Self-Practice
+
+(b)
+
+Figure 8: Post-test learning gains for Low-Baseline and High-Baseline students, comparing the Learning-by-Teaching and Self-Practice conditions.
+(a) Body Part Game. (b) Grammar Game. Low-Baseline students in the Learning-by-Teaching condition showed significantly greater improvements
+than their High-Baseline peers, while this effect was not observed in the Self-Practice condition.
+
+Figure 9 shows that this effect also extended to Retention Gain, where Low-Baseline students demonstrated greater
+knowledge retention compared to their High-Baseline peers. This improvement was significant in the Body Parts
+12
+
+Game, where Low-Baseline students (Mdn = 2.00) retained more knowledge compared to High-Baseline students
+(Mdn = −1.00), U = 51.00, z = −3.37, r = −0.59. A similar trend was observed in the Grammar Game, where LowBaseline students (Mdn = 2.00) outperformed High-Baseline students (Mdn = 0.00) in retention gain. However,
+while this difference was not statistically significant (U = 40.00, p > 0.05), it did represent a medium effect size
+(r = −0.44).
+These results suggest that the Learning-by-Teaching condition was particularly beneficial for students with lower
+initial knowledge, enabling them to make greater learning gains compared to their higher-performing peers, which
+was not observed in the Self-Practice condition.
+10
+
+Retention Gain Score in the Body Parts Game
+
+Retention Gain Score in the Grammar Game
+
+*
+
+10.0
+7.5
+5.0
+2.5
+
+0
+
+Score
+
+Score
+
+5
+
+0.0
+2.5
+
+5
+
+5.0
+
+10
+
+High-Baseline
+Low-Baseline
+
+7.5
+
+Leanrning-by-Teaching
+
+Self-Practice
+
+High-Baseline
+Low-Baseline
+Leanrning-by-Teaching
+
+(a)
+
+Self-Practice
+
+(b)
+
+Figure 9: Retention gain scores for the Learning-by-Teaching and Self-Practice conditions, separated by baseline knowledge groups. (a) Body Part
+Game: Low-Baseline students demonstrated significantly higher retention gains compared to High-Baseline students. (b) Grammar Game: While
+Low-Baseline students showed higher retention gains than their High-Baseline peers, the difference was not statistically significant but represented
+a medium effect size.
+
+3.4. Influence of the nature of the task
+We examined whether the nature of the task influenced children’s interaction and perception of the learning activity in the Learning-by-Teaching condition. Regarding task enjoyment and perceived competence, no significant
+differences were found between the two tasks, with consistently high ratings across both, suggesting a potential ceiling effect. However, children in the Grammar Game (Mdn = 4.67) reported significantly higher engagement than
+those in the Body Part Game (Mdn = 4.00), U = 209.50, z = −2.08, r = −0.29. This suggest that tasks requiring rule
+inference, such as the Grammar Game, may promote deeper engagement and effortful learning, leading to stronger
+associations between time spent on the activity and perceived engagement.
+For interaction-related measures, no significant differences were found in the time spent per iteration or on the help
+panel between the two tasks. However, in the Grammar Game, time spent per iteration was strongly correlated with
+perceived task enjoyment (r = 0.56, p < 0.01), perceived competence (r = 0.41, p = 0.05), and perceived engagement
+(r = 0.46, p < 0.05), whereas no such correlations were observed in the Body Part Game. Additionally, the time spent
+on the help button in the Grammar Game was significantly correlated with retention gain (r = 0.61, p < 0.01), a
+relationship that was not observed in the Body Part Game (r = 0.02, p > 0.05). This could indicate the role of selfreflection and review in reinforcing learning outcomes in rule-inference games, a pattern not seen in the memorisationbased Body Part Game.
+4. Discussion
+4.1. Interactive RL as a Cognitive Model for Peer-Learning Robots
+Our results indicate that children successfully assumed the tutor role by continuously providing accurate feedback
+to the robot, demonstrating their attentiveness and ability to evaluate its responses. These findings align with prior
+13
+
+research showing that children can effectively guide a robot’s learning using evaluative feedback (Lemaignan et al.,
+2016; Yadollahi et al., 2018). Furthermore, in the Body Part Game, children became more efficient tutors over time,
+as reflected in the progressive decrease in time spent per iteration. This adaptation aligns with research on LbT, where
+tutors refine their understanding through repeated explanations and assessments (Duran, 2017; Roscoe and Chi, 2007).
+The reduction in help panel usage further suggests that children gradually relied less on external resources, reinforcing
+Interactive RL as an effective cognitive model for peer learning. However, in the Grammar Game, no significant
+reduction in help panel usage was observed. This suggests that grammar-related tasks require more complex cognitive
+processing, making it harder for children to rely solely on their prior knowledge (Biswas et al., 2005; Roscoe and Chi,
+2007). Overall, these findings validate H1, as children successfully assumed the tutor role, provided consistent and
+accurate feedback, and demonstrated adaptive learning strategies—particularly in the Body Part Game.
+4.2. Learning-by-Teaching Enhances Engagement and Retention
+Our study examined the impact of LbT a social robot compared to self-practice, focusing on both learning outcomes and engagement. While there was a trend toward higher learning gains in the Learning-by-Teaching condition,
+the difference was not statistically significant. One possible explanation is that children were informed in both the
+familiarisation and lesson phases that they would be teaching the robot. Prior research on LbT has demonstrated that
+even preparing to teach enhances learning outcomes, regardless of whether actual teaching occurs (Biswas et al., 2005;
+Koh et al., 2018). As a result, by the time children engaged in the intervention session, they may have already consolidated knowledge during the lesson phase, reducing the measurable difference between the Learning-by-Teaching
+and Self-Practice conditions. This observation suggests that the act of preparing to teach, even before engaging in the
+actual teaching process, may itself serve as a valuable cognitive activity, promoting initial consolidation and reducing
+the margin for additional gains during the intervention phase.
+Despite this, the retention gain in the Body Part Game was significantly higher in the LbT condition, suggesting
+that the social component of tutoring may support long-term knowledge retention. The social presence of the robot in
+the LbT condition may have contributed to higher engagement and cognitive effort, which aligns with prior research
+showing that embodied social agents enhance learning compared to virtual representations or traditional learning
+support (Leyzberg et al., 2012; Kennedy et al., 2015; Li, 2015). The physical presence of a robot, combined with its
+ability to use gestures and verbal interaction, fosters stronger social and cognitive engagement (Vrins et al., 2022).
+Additionally, social robots in educational settings have been shown to elicit caretaking behaviours and sustained
+attention (Tanaka and Matsuzoe, 2012). This social bonding effect may explain why children in our study spent
+significantly more time per iteration in the LbT condition compared to the Self-Practice condition. This aligns with
+the Protégé Effect , where learners invest more effort when they feel responsible for their tutee’s learning (Chase et al.,
+2009). Furthermore, children in the LbT condition spent more time using the help panel, particularly in the Grammar
+Game, where help panel usage was positively correlated with higher retention gain. This suggests that interacting with
+the robot encouraged deeper reflection and cognitive effort, reinforcing the idea that tutoring a social agent promotes
+active learning strategies (Roscoe and Chi, 2007; Biswas et al., 2005). In terms of self-reported engagement, children
+rated the Grammar Game as more engaging in the LbT condition compared to the Self-Practice condition. However,
+no significant differences were found in task enjoyment or perceived competence. This is likely due to ceiling effects,
+a common challenge in studies with young children, where self-reported measures tend to cluster at the higher end of
+the scale, making it difficult to detect differences (Donnermann et al., 2022). Overall, our findings partially support
+H2, as children in the LbT condition showed higher engagement and better retention. However, we did not find
+sufficient evidence to conclude that this condition led to a more positive perception of the learning activity.
+4.3. Children with lower prior knowledge benefit more from Learning-by-Teaching
+Our results suggest that prior knowledge significantly influenced learning outcomes, particularly in the LbT condition. In both the Body Part Game and Grammar Game, Low-Baseline students (those with lower pre-test scores)
+demonstrated greater learning gains compared to High-Baseline students. This effect was statistically significant in
+the Body Part Game for both post-test and retention gain, while a similar trend was observed in the Grammar Game,
+though it did not reach significance. These findings align with previous research indicating that students with lower
+prior knowledge benefit more from LbT, as they engage more actively in self-explanation and error correction processes (Biswas et al., 2005; Roscoe and Chi, 2007). Teaching a robot likely provided these students with structured
+14
+
+opportunities to reflect on their understanding, helping them identify misconceptions and strengthen their grasp of
+the material. Interestingly, the Self-Practice condition did not yield a significant difference between Low- and HighBaseline students. This suggests that students with lower prior knowledge may not have engaged as deeply with the
+material when practicing independently. In contrast, the social and interactive nature of the LbT condition may have
+provided scaffolding that supported deeper learning, particularly for those with weaker initial knowledge. However,
+it is important to consider that High-Baseline students had less room for improvement, as their initial knowledge
+levels were already relatively high. This ceiling effect may partially explain the lower learning gains observed in this
+group. These findings partially support H3, showing that LbT is particularly beneficial for students with lower prior
+knowledge, enabling them to achieve greater learning gains compared to self-practice.
+4.4. Rule-Inference Tasks Are More Effective for Learning-by-Teaching
+Our results indicate that the nature of the learning task influenced children’s interaction and perception of the
+activity in the LbT condition. Specifically, children in the Grammar Game reported significantly higher engagement
+compared to those in the Body Part Game, suggesting that the cognitive demands of the task may have led to greater
+immersion in the learning process. This aligns with research suggesting that effortful learning can enhance engagement and satisfaction when learners perceive progress (Bjork et al., 2011). However, no significant differences were
+found in task enjoyment or perceived competence between the two tasks. This is likely due to ceiling effects as explained in the previous section. Regarding interaction patterns, we found no significant difference in time spent per
+iteration or on the help panel between the two tasks. However, correlational analyses revealed notable differences
+in how children engaged with the learning activity. In the Grammar Game, time spent per iteration was positively
+correlated with task enjoyment, perceived competence, and engagement, while no such relationships were observed
+in the Body Part Game. Additionally, time spent on the help panel in the Grammar Game was strongly correlated with
+retention gain, suggesting that children who spent more time reviewing material during the activity retained knowledge more effectively. This was not observed in the Body Part Game. These findings suggest that the Grammar Game
+elicited deeper cognitive engagement, possibly because it required rule-based reasoning rather than simple memorisation. Prior research has highlighted that LbT is particularly effective for tasks that involve higher-order thinking,
+such as conceptual reasoning and problem-solving (Biswas et al., 2005; Roscoe and Chi, 2007). The reduced time
+on the help panel usage for the Body Part Game further supports the idea that this task relied more on rote learning,
+reducing the need for active review during the game. Overall, our results partially support H4, demonstrating that the
+Grammar Game elicited higher engagement and deeper cognitive processing, particularly in relation to time spent on
+the help panel and retention gain. However, the ceiling effects in self-reported measures of enjoyment and competence
+prevented us from fully validating the hypothesis.
+5. Conclusion, Limitation & Future Work
+Limitations. While our study provides valuable insights into the effectiveness of Learning-by-Teaching a social robot,
+several limitations should be acknowledged. First, study was conducted in a single primary school, which may limit
+the generalisability of the findings to other educational contexts or diverse student populations. Future studies should
+aim to replicate the experiment in multiple schools, including those with different socio-economic backgrounds, to
+assess the robustness and generalisability of the results. Moreover, self-reported measures of engagement, enjoyment,
+and competence exhibited ceiling effects, which is common in studies involving young children (Donnermann et al.,
+2022). This may have masked potential differences between conditions. To address this, future work should incorporate alternative assessment methods, such as behavioural engagement metrics (e.g., gaze tracking, facial expressions,
+or speech analysis), to provide a more nuanced understanding of children’s experiences (Aitsam et al., 2024).
+Ethical Considerations and Well-Being. While educational technologies offer novel ways to engage learners, recent
+research highlights concerns about their potential negative effects on children’s physical, cognitive, emotional, and
+social well-being (Melo et al., 2020). Excessive screen time, overstimulation, and addictive design elements in gamified learning environments have been associated with sleep problems, attention difficulties, and increased stress. In
+response to this growing concern, scholars have called for more responsible integration of digital tools in classrooms,
+with an emphasis on sustainable use and long-term learner welfare. Our study contributes to this conversation by
+15
+
+exploring an alternative approach: the use of a physically embodied social robot designed to emulate peer-like behaviour. Unlike traditional screen-based platforms, social robots provide a form of embodied interaction that can
+encourage more balanced, socially grounded experiences. The robot’s physical presence, gesture use, and adaptive
+responsiveness may help counteract some of the isolation or overstimulation associated with purely screen-based systems. Furthermore, the LbT paradigm promotes child agency, responsibility, and reflection; all of which are linked
+to healthy cognitive and emotional development. Nevertheless, we recognise that the inclusion of robot peers does
+not automatically resolve all concerns. As gamification and interaction design increasingly shape educational experiences, future research should systematically investigate how robot-mediated learning affects children’s well-being
+over time. This includes assessing not only learning outcomes, but also emotional resilience, social connection, and
+behavioural regulation, particularly in relation to screen-based alternatives.
+Conclusion. This study introduces Interactive RL as a cognitive model for peer-learning robots in real classroom environments. By enabling the robot to update its behaviour in response to children’s evaluative feedback, our approach
+supports a bi-directional, learning-by-teaching dynamic that goes beyond scripted or pre-trained robot responses.
+Children were able to effectively tutor the robot, offering accurate and consistent feedback while adapting their strategies over time; supporting the feasibility of Interactive RL-powered peer robots in classroom contexts. Compared
+to traditional self-practice, the learning-by-teaching condition led to significantly higher retention gains, particularly
+in the Grammar Game. This suggests that tutoring a robot promotes deeper processing and long-term consolidation
+of knowledge. Our analysis also showed that children with lower prior knowledge benefited the most from teaching
+the robot, highlighting the potential of teachable robots to act as personalised scaffolding tools that support equity
+in learning. Furthermore, the task type influenced outcomes: rule-inference tasks like the Grammar Game fostered
+greater engagement and stronger retention than memorisation-based tasks, reinforcing the role of cognitive depth in
+LbT scenarios. This work also demonstrates the practical feasibility of deploying multiple autonomous robots simultaneously in classrooms, offering both ecological validity and insights into scalable implementation. These findings
+suggest that Interactive RL can transform social robots from passive learners into active, adaptive partners, opening
+promising directions for future AI-powered, collaborative learning environments.
+Data Availability
+The data supporting the findings of this study are available from the corresponding author upon reasonable request.
+References
+Aitsam, M., Lacroix, D., Goyal, G., Bartolozzi, C., Di Nuovo, A., 2024. Measuring cognitive load through event camera based human-pose
+estimation, in: International Workshop on Human-Friendly Robotics, Springer. pp. 229–239.
+Alimardani, M., Harinandansingh, J., Ravin, L., De Haas, M., 2022. Motivational gestures in robot-assisted language learning: a study of cognitive
+engagement using eeg brain activity, in: 2022 31st IEEE International Conference on Robot and Human Interactive Communication (RO-MAN),
+IEEE. pp. 1393–1398.
+Almousa, O., Alghowinem, S., 2023. Conceptualization and development of an autonomous and personalized early literacy content and robot tutor
+behavior for preschool children. User Modeling and User-Adapted Interaction 33, 261–291.
+Authors, 2023. To be added following double-blind review.
+Belpaeme, T., Kennedy, J., Ramachandran, A., Scassellati, B., Tanaka, F., 2018. Social robots for education: A review. Science robotics 3,
+eaat5954.
+Biswas, G., Leelawong, K., Schwartz, D., Vye, N., at Vanderbilt, T.T.A.G., 2005. Learning by teaching: A new agent paradigm for educational
+software. Applied Artificial Intelligence 19, 363–392.
+Bjork, E.L., Bjork, R.A., et al., 2011. Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning.
+Psychology and the real world: Essays illustrating fundamental contributions to society 2.
+Bruzzo, D., Matarese, M., Sciutti, A., Rea, F., 2024. Charm or harm? how social robotic tutors influence people’s learning with correct and
+incorrect guidance, in: International Conference on Social Robotics, Springer. pp. 475–487.
+Chandra, S., Dillenbourg, P., Paiva, A., 2020. Children teach handwriting to a social robot with different learning competencies. International
+Journal of Social Robotics 12, 721–748.
+Chase, C.C., Chin, D.B., Oppezzo, M.A., Schwartz, D.L., 2009. Teachable agents and the protégé effect: Increasing the effort towards learning.
+Journal of science education and technology 18, 334–352.
+Chen, H., Park, H.W., Breazeal, C., 2020. Teaching and learning with children: Impact of reciprocal peer learning with a social robot on children’s
+learning and emotive engagement. Computers & Education 150, 103836.
+Chen, P.Y., Liu, Y.C., 2024. Impact of ai robot image recognition technology on improving students’ conceptual understanding of cell division and
+science learning motivation. Journal of Baltic Science Education 23, 208–220.
+
+16
+
+Chiang, Y.h.V., Cheng, Y.W., Chen, N.S., 2023. Improving language learning activity design through identifying learning difficulties in a platform
+using educational robots and iot-based tangible objects. Educational Technology & Society 26, 84–100.
+Das, R., Pon-Barry, H., 2018. Turn-taking strategies for human-robot peer-learning dialogue, in: Komatani, K., Litman, D., Yu, K., Papangelis, A.,
+Cavedon, L., Nakano, M. (Eds.), Proceedings of the 19th Annual SIGdial Meeting on Discourse and Dialogue, Association for Computational
+Linguistics, Melbourne, Australia. pp. 119–129. URL: https://aclanthology.org/W18-5013/, doi:10.18653/v1/W18-5013.
+Demir-Lira, Ö.E., Kanero, J., Oranç, C., Koşkulu, S., Franko, I., Göksun, T., Küntay, A.C., 2020. L2 vocabulary teaching by social robots: The
+role of gestures and on-screen cues as scaffolds, in: Frontiers in education, Frontiers Media SA. p. 599636.
+Donnermann, M., Lugrin, B., 2024. Integration of robot-supported tutoring in higher education-an empirically based concept, in: Proceedings of
+the 2024 the 16th International Conference on Education Technology and Computers, pp. 1–7.
+Donnermann, M., Schaper, P., Lugrin, B., 2022. Social robots in applied settings: A long-term study on adaptive robotic tutors in higher education.
+Frontiers in Robotics and AI 9, 831633.
+Duran, D., 2017. Learning-by-teaching. evidence and implications as a pedagogical mechanism. Innovations in education and teaching international
+54, 476–484.
+El Hamamsy, L., Johal, W., Asselborn, T., Nasir, J., Dillenbourg, P., 2019. Learning by collaborative teaching: an engaging multi-party cowriter
+activity, in: 2019 28th IEEE international conference on robot and human interactive communication (RO-MAN), IEEE. pp. 1–8.
+Henkel, O., Horne-Robinson, H., Hills, L., Roberts, B., McGrane, J., 2025. Supporting literacy assessment in west africa: Using state-of-the-art
+speech models to assess oral reading fluency. International Journal of Artificial Intelligence in Education , 1–22.
+Kennedy, J., Baxter, P., Belpaeme, T., 2015. The robot who tried too hard: Social behaviour of a robot tutor can negatively affect child learning, in:
+Proceedings of the tenth annual ACM/IEEE international conference on human-robot interaction, pp. 67–74.
+Knox, W.B., Stone, P., 2009. Interactively shaping agents via human reinforcement: The tamer framework, in: Proceedings of the fifth international
+conference on Knowledge capture, pp. 9–16.
+Koh, A.W.L., Lee, S.C., Lim, S.W.H., 2018. The learning benefits of teaching: A retrieval practice hypothesis. Applied Cognitive Psychology 32,
+401–410.
+Lee, K.J., Chauhan, A., Goh, J., Nilsen, E., Law, E., 2021. Curiosity notebook: the design of a research platform for learning by teaching.
+Proceedings of the ACM on Human-Computer Interaction 5, 1–26.
+Lemaignan, S., Jacq, A., Hood, D., Garcia, F., Paiva, A., Dillenbourg, P., 2016. Learning by teaching a robot: The case of handwriting. IEEE
+Robotics & Automation Magazine 23, 56–66.
+Leyzberg, D., Spaulding, S., Toneva, M., Scassellati, B., 2012. The physical presence of a robot tutor increases cognitive learning gains, in:
+Proceedings of the annual meeting of the cognitive science society.
+Li, J., 2015. The benefit of being physically present: A survey of experimental works comparing copresent robots, telepresent robots and virtual
+agents. International Journal of Human-Computer Studies 77, 23–37.
+Magpusao, J., 2024. Gamification and game-based learning in primary education: A bibliometric analysis. Computers and Children 3.
+Melo, C., Madariaga, L., Nussbaum, M., Heller, R., Bennett, S., Tsai, C.C., van Braak, J., 2020. Educational technology and addictions.
+Najar, A., Chetouani, M., 2021. Reinforcement learning with human advice: a survey. Frontiers in Robotics and AI 8, 584075.
+Nasir, J., Bruno, B., Dillenbourg, P., 2024. Social robots as skilled ignorant peers for supporting learning. Frontiers in Robotics and AI 11,
+1385780.
+Obayashi, F., Shimoda, H., Yoshikawa, H., 2000. Construction and evaluation of cai system based on learning by teaching to virtual student, in:
+Proceedings of the World Multiconference on Systemics, Cybernetics and Informatics, pp. 94–99.
+Okazaki, H., Kanai, Y., Ogata, M., Hasegawa, K., Ishii, K., Imai, M., 2015. Building pedagogical relationships between humans and robots in
+natural interactions, in: Proceedings of the 3rd International Conference on Human-Agent Interaction, pp. 115–120.
+Pareto, L., Ekström, S., Serholt, S., 2022. Children’s learning-by-teaching with a social robot versus a younger child: Comparing interactions and
+tutoring styles. Frontiers in Robotics and AI 9, 875704.
+Roscoe, R.D., Chi, M.T., 2007. Understanding tutor learning: Knowledge-building and knowledge-telling in peer tutors’ explanations and questions. Review of educational research 77, 534–574.
+Roscoe, R.D., Chi, M.T., 2008. Tutor learning: The role of explaining and responding to questions. Instructional science 36, 321–350.
+Ryan, R.M., Mims, V., Koestner, R., 1983. Relation of reward contingency and interpersonal context to intrinsic motivation: A review and test
+using cognitive evaluation theory. Journal of personality and Social Psychology 45, 736.
+Serholt, S., Ekström, S., Küster, D., Ljungblad, S., Pareto, L., 2022. Comparing a robot tutee to a human tutee in a learning-by-teaching scenario
+with children. Frontiers in Robotics and AI 9, 836462.
+Song, H., Barakova, E.I., Ham, J., Markopoulos, P., 2024. The impact of social robots’ presence and roles on children’s performance in musical
+instrument practice. British Journal of Educational Technology 55, 1041–1059.
+Tanaka, F., Cicourel, A., Movellan, J.R., 2007. Socialization between toddlers and robots at an early childhood education center. Proceedings of
+the National Academy of Sciences 104, 17954–17958.
+Tanaka, F., Matsuzoe, S., 2012. Children teach a care-receiving robot to promote their learning: Field experiments in a classroom for vocabulary
+learning. Journal of Human-Robot Interaction 1, 78–95.
+Tu, Y., Chen, J., Huang, C., 2025. Empowering personalized learning with generative artificial intelligence: Mechanisms, challenges and pathways.
+Frontiers of Digital Education 2, 1–18.
+Verhoeven, G., Catala, A., Theune, M., 2018. Designing a playful robot application for second language learning, in: International Conference on
+ArtsIT, Interactivity and Game Creation, Springer. pp. 385–394.
+Verhoeven, G., Catala, A., Theune, M., 2019. Designing a playful robot application for second language learning, in: Brooks, A.L., Brooks, E.,
+Sylla, C. (Eds.), Interactivity, Game Creation, Design, Learning, and Innovation, Springer International Publishing, Cham. pp. 385–394.
+Vrins, A., Pruss, E., Prinsen, J., Ceccato, C., Alimardani, M., 2022. Are you paying attention? the effect of embodied interaction with an adaptive
+robot tutor on user engagement and learning performance, in: International Conference on Social Robotics, Springer. pp. 135–145.
+Vygotsky, L.S., 1978. Mind in society: The development of higher psychological processes. volume 86. Harvard university press.
+Wang, X., Yukiko, M., Chang, H.H., 2024. Development and techniques in learner model in adaptive e-learning system: A systematic review.
+
+17
+
+Computers & Education , 105184.
+de Wit, J., Schodde, T., Willemsen, B., Bergmann, K., De Haas, M., Kopp, S., Krahmer, E., Vogt, P., 2018. The effect of a robot’s gestures and
+adaptive tutoring on children’s acquisition of second language vocabularies, in: Proceedings of the 2018 ACM/IEEE international conference
+on human-robot interaction, pp. 50–58.
+Yadollahi, E., Johal, W., Paiva, A., Dillenbourg, P., 2018. When deictic gestures in a robot can harm child-robot collaboration, in: Proceedings of
+the 17th ACM conference on interaction design and children, pp. 195–206.
+Zaga, C., Lohse, M., Truong, K.P., Evers, V., 2015. The effect of a robot’s social character on children’s task engagement: Peer versus tutor, in:
+Social Robotics: 7th International Conference, ICSR 2015, Paris, France, October 26-30, 2015, Proceedings 7, Springer. pp. 704–713.
+
+18
+
+

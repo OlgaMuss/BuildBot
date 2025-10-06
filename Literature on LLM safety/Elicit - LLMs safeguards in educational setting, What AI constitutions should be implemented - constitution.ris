@@ -1,0 +1,707 @@
+﻿TY  - JOUR
+AB  - Large Language Models (LLMs) have revolutionized natural language proc
+essing, offering significant advancements in educational software thro
+ugh applications like personalized learning and virtual tutoring. This
+ position paper investigates the ethical considerations for companies 
+integrating LLMs into educational tools. Key issues include data priva
+cy, with a focus on safeguarding sensitive student information against
+ breaches while ensuring transparency and consent. The paper highlight
+s the risk of misinformation, as LLMs might generate incorrect or misl
+eading content that could affect students’ learning. It also addresses
+ concerns about algorithmic bias, which can lead to unfair treatment o
+f students from diverse backgrounds, and the potential over-reliance o
+n AI, which may undermine critical thinking and human oversight. Addit
+ionally, the paper explores the challenge of equitable access to LLM- 
+based technologies, particularly in underserved communities. The analy
+sis concludes with practical recommendations for companies, including 
+robust data protection measures, balanced AI integration with human ov
+ersight, and strategies to enhance access for all students. By emphasi
+zing these ethical challenges, the paper aims to guide responsible AI 
+implementation in education, ensuring that technological advancements 
+benefit all learners fairly and effectively.
+AU  - Kontche Steve, Mekam
+DA  - 2024/9/7/
+PY  - 2024
+DB  - Crossref
+DO  - 10.38124/ijisrt/ijisrt24aug1297
+ID  - temp_id_391114379491
+J2  - International Journal of Innovative Science and Research Technology (I
+JISRT)
+LA  - en
+SN  - 2456-2165
+SP  - 1856-1861
+T2  - International Journal of Innovative Science and Research Technology (I
+JISRT)
+TI  - Ethical Considerations for Companies Implementing LLMs in Education So
+ftware
+UR  - http://dx.doi.org/10.38124/ijisrt/ijisrt24aug1297
+ER  - 
+TY  - JOUR
+AB  - This viewpoint article first explores the ethical challenges associate
+d with the future application of large language models (LLMs) in the c
+ontext of medical education. These challenges include not only ethical
+ concerns related to the development of LLMs, such as artificial intel
+ligence (AI) hallucinations, information bias, privacy and data risks,
+ and deficiencies in terms of transparency and interpretability but al
+so issues concerning the application of LLMs, including deficiencies i
+n emotional intelligence, educational inequities, problems with academ
+ic integrity, and questions of responsibility and copyright ownership.
+ This paper then analyzes existing AI-related legal and ethical framew
+orks and highlights their limitations with regard to the application o
+f LLMs in the context of medical education. To ensure that LLMs are in
+tegrated in a responsible and safe manner, the authors recommend the d
+evelopment of a unified ethical framework that is specifically tailore
+d for LLMs in this field. This framework should be based on 8 fundamen
+tal principles: quality control and supervision mechanisms; privacy an
+d data protection; transparency and interpretability; fairness and equ
+al treatment; academic integrity and moral norms; accountability and t
+raceability; protection and respect for intellectual property; and the
+ promotion of educational research and innovation. The authors further
+ discuss specific measures that can be taken to implement these princi
+ples, thereby laying a solid foundation for the development of a compr
+ehensive and actionable ethical framework. Such a unified ethical fram
+ework based on these 8 fundamental principles can provide clear guidan
+ce and support for the application of LLMs in the context of medical e
+ducation. This approach can help establish a balance between technolog
+ical advancement and ethical safeguards, thereby ensuring that medical
+ education can progress without compromising the principles of fairnes
+s, justice, or patient safety and establishing a more equitable, safer
+, and more efficient environment for medical education.
+AU  - Zhui, Li
+AU  - Fenghe, Li
+AU  - Xuehu, Wang
+AU  - Qining, Fu
+AU  - Wei, Ren
+DA  - 2024/8/1/
+PY  - 2024
+DB  - Crossref
+DO  - 10.2196/60083
+ID  - temp_id_048582492494
+J2  - J Med Internet Res
+LA  - en
+SN  - 1438-8871
+SP  - e60083
+T2  - Journal of Medical Internet Research
+TI  - Ethical Considerations and Fundamental Principles of Large Language Mo
+dels in Medical Education: Viewpoint
+UR  - http://dx.doi.org/10.2196/60083
+VL  - 26
+ER  - 
+TY  - JOUR
+AB  - The integration of large language models (LLMs) in medical education o
+ffers both opportunities and challenges. While these AI-driven tools c
+an enhance access to information and support critical thinking, they a
+lso pose risks like potential overreliance and ethical concerns. To en
+sure ethical use, students and instructors must recognize the limitati
+ons of LLMs, maintain academic integrity, handle data cautiously, and 
+instructors should prioritize content quality over AI detection method
+s. LLMs can be used as supplementary aids rather than primary educatio
+nal resources, with a focus on enhancing accessibility, equity, and fo
+stering a culture of feedback and AI literacy among students and instr
+uctors. Institutions should create guidelines that align with their un
+ique educational values, providing clear frameworks that support respo
+nsible LLM usage while addressing risks associated with AI in educatio
+n. Such guidelines should reflect the institution's pedagogical missio
+n, whether centered on clinical practice, research, or a mix of both, 
+and should be adaptable to evolving educational technologies.
+AU  - Mondal, Himel
+DA  - 2025/3/1/
+PY  - 2025
+DB  - Crossref
+DO  - 10.1152/advan.00188.2024
+ID  - temp_id_625171312254
+IS  - 1
+J2  - Advances in Physiology Education
+LA  - en
+SN  - 1043-4046
+SP  - 163-165
+T2  - Advances in Physiology Education
+TI  - Ethical engagement with artificial intelligence in medical education
+UR  - http://dx.doi.org/10.1152/advan.00188.2024
+VL  - 49
+ER  - 
+TY  - JOUR
+AB  - The increasing integration of artificial intelligence (AI) into educat
+ional environments necessitates a structured framework to ensure its s
+afe and ethical use. A manifesto outlining seven core principles for s
+afe AI in education has been proposed, emphasizing the protection of s
+tudent data, alignment with institutional strategies, adherence to did
+actic practices, minimization of errors, comprehensive user interfaces
+, human oversight, and ethical transparency. These principles are desi
+gned to guide the deployment of AI technologies in educational setting
+s, addressing potential risks such as privacy violations, misuse, and 
+over-reliance on technology. Smart Learning Applications (SLApps) are 
+also introduced, integrating AI into the existing institutional techno
+logical ecosystem, with special attention to the learning management s
+ystems, enabling secure, role-adaptive, and course-specific learning e
+xperiences. While large language models like GPT offer transformative 
+potential in education, they also present challenges related to accura
+cy, ethical use, and pedagogical alignment. To navigate these complexi
+ties, a checklist based on the Safe AI in Education principles is reco
+mmended, providing educators and institutions with a framework to eval
+uate AI tools, ensuring they support academic integrity, enhance learn
+ing experiences, and uphold ethical standards.
+AU  - García Peñalvo, Francisco José
+AU  - Alier, Marc
+AU  - Pereira, Juanan
+AU  - Casany, Maria Jose
+DA  - 2024/12/3/
+PY  - 2024
+DB  - Crossref
+DO  - 10.46661/ijeri.11036
+ID  - temp_id_483617324655
+IS  - 22
+J2  - ijeri
+SN  - 2386-4303
+SP  - 1-21
+T2  - IJERI: International Journal of Educational Research and Innovation
+TI  - Safe, Transparent, and Ethical Artificial Intelligence
+UR  - http://dx.doi.org/10.46661/ijeri.11036
+ER  - 
+TY  - CONF
+AB  - Artificial Intelligence (AI) and Large Language Models (LLMs) signific
+antly have changed educational paradigms, enabling a significant reinv
+ention in how teaching and learning happens today. Through this system
+atic literature review, the paper aims to offer a deep understanding o
+f how AI and LLMs are implemented in educational settings today, provi
+ding examples of where these tools were used for personalization (both
+ targeting students’ academic performance and choosing content that al
+igns best with learner’s aspirations), accessibility enhancements as w
+ell as their potential applications related to resource management aut
+omation. The central themes probed include the application of AI to he
+lp deploy appropriate learning strategies according to individual lear
+ner profiles. LLMs for improved responsive and interactive education t
+ools, and the potential for autonomous assessment machines with associ
+ated feedback mechanisms.The opportunities for the aid of AI and LLMs 
+to improve teaching and learning are vast, but this review will also q
+uestion some associated challenges such as ethical issues[1], data pri
+vacy concerns and risks of algorithmic bias[2]. It is concluded by sug
+gesting future research and application directions for the ethical dev
+elopment of inclusive technologies, which are secure from a privacy po
+int of view too. This is followed by a reflection on the strategic imp
+lications of such technologies for those in charge of education policy
+ and development hoping ideas related to how AI-LLMs rejoice more effi
+cacious learning experiences could be born out.
+AU  - Xu, Qiang
+AU  - Gu, Jiacheng
+AU  - Lu, Joan
+C3  - 2024 13th International Conference on Computer Technologies and Develo
+pment (TechDev)
+DA  - 2024/10/9/
+C2  - 2024
+DB  - Crossref
+DO  - 10.1109/techdev64369.2024.00021
+ID  - temp_id_391454779643
+PB  - IEEE
+SP  - 73-77
+TI  - Leveraging Artificial Intelligence and Large Language Models for Enhan
+ced Teaching and Learning: A Systematic Literature Review
+UR  - http://dx.doi.org/10.1109/TechDev64369.2024.00021
+ER  - 
+TY  - JOUR
+AB  - The integration of large language models (LLMs) into educational setti
+ngs represents a significant technological breakthrough, offering subs
+tantial opportunities alongside profound ethical challenges. Higher ed
+ucation institutions face the widespread use of these tools by student
+s, requiring them to navigate complex decisions regarding their adopti
+on. This includes determining whether to allow the use of LLMs, defini
+ng their appropriate scope, and establishing guidelines for their resp
+onsible and ethical application. In the context of computer science ed
+ucation, these challenges are particularly acute. On the one hand, the
+ capabilities of LLMs significantly enhance the tools available to dev
+elopers and software engineers. On the other hand, students’ over-reli
+ance on LLMs risks hindering their development of foundational skills.
+ This study examines these challenges and proposes strategies to regul
+ate the use of LLMs while upholding academic integrity. It focuses on 
+the specific impact of LLMs in programming education, where dependence
+ on AI-generated solutions may erode active learning and essential ski
+ll acquisition. Through a comprehensive literature review and drawing 
+on teaching experience and guidelines from global institutions, this s
+tudy contributes to the broader discourse on the integration of these 
+advanced technologies into educational environments. The goal is to en
+hance learning outcomes while ensuring the development of competent, e
+thical software professionals.
+AU  - Azoulay, Rina
+AU  - Hirst, Tirza
+AU  - Reches, Shulamit
+DA  - 2025/2/10/
+PY  - 2025
+DB  - Crossref
+DO  - 10.3390/app15041793
+ID  - temp_id_381184241187
+IS  - 4
+J2  - Applied Sciences
+LA  - en
+SN  - 2076-3417
+SP  - 1793
+T2  - Applied Sciences
+TI  - Large Language Models in Computer Science Classrooms: Ethical Challeng
+es and Strategic Solutions
+UR  - http://dx.doi.org/10.3390/app15041793
+VL  - 15
+ER  - 
+TY  - JOUR
+AB  - Large language models (LLMs) are increasingly adopted in educational c
+ontexts to provide personalized support to students and teachers. The 
+unprecedented capacity of LLM‐based applications to understand and gen
+erate natural language can potentially improve instructional effective
+ness and learning outcomes, but the integration of LLMs in education t
+echnology has renewed concerns over algorithmic bias, which may exacer
+bate educational inequalities. Building on prior work that mapped the 
+traditional machine learning life cycle, we provide a framework of the
+ LLM life cycle from the initial development of LLMs to customizing pr
+e‐trained models for various applications in educational settings. We 
+explain each step in the LLM life cycle and identify potential sources
+ of bias that may arise in the context of education. We discuss why cu
+rrent measures of bias from traditional machine learning fail to trans
+fer to LLM‐generated text (eg, tutoring conversations) because text en
+codings are high‐dimensional, there can be multiple correct responses,
+ and tailoring responses may be pedagogically desirable rather than un
+fair. The proposed framework clarifies the complex nature of bias in L
+LM applications and provides practical guidance for their evaluation t
+o promote educational equity.
+What is already known about this topic
+
+The life cycle of traditional machine learning (ML) applications which
+ focus on predicting labels is well understood.
+Biases are known to enter in traditional ML applications at various po
+ints in the life cycle, and methods to measure and mitigate these bias
+es have been developed and tested.
+Large language models (LLMs) and other forms of generative artificial 
+intelligence (GenAI) are increasingly adopted in education technologie
+s (EdTech), but current evaluation approaches are not specific to the 
+domain of education.
+What this paper adds
+
+A holistic perspective of the LLM life cycle with domain‐specific exam
+ples in education to highlight opportunities and challenges for incorp
+orating natural language understanding (NLU) and natural language gene
+ration (NLG) into EdTech.
+Potential sources of bias are identified in each step of the LLM life 
+cycle and discussed in the context of education.
+A framework for understanding where to expect potential harms of LLMs 
+for students, teachers, and other users of GenAI technology in educati
+on, which can guide approaches to bias measurement and mitigation.
+Implications for practice and/or policy
+
+Education practitioners and policymakers should be aware that biases c
+an originate from a multitude of steps in the LLM life cycle, and the 
+life cycle perspective offers them a heuristic for asking technology d
+evelopers to explain each step to assess the risk of bias.
+Measuring the biases of systems that use LLMs in education is more com
+plex than with traditional ML, in large part because the evaluation of
+ natural language generation is highly context‐dependent (eg, what cou
+nts as good feedback on an assignment varies).
+EdTech developers can play an important role in collecting and curatin
+g datasets for the evaluation and benchmarking of LLM applications mov
+ing forward.
+
+
+AU  - Lee, Jinsook
+AU  - Hicke, Yann
+AU  - Yu, Renzhe
+AU  - Brooks, Christopher
+AU  - Kizilcec, René F.
+DA  - 2024/7/12/
+PY  - 2024
+DB  - Crossref
+DO  - 10.1111/bjet.13505
+ID  - temp_id_055801431384
+IS  - 5
+J2  - Brit J Educational Tech
+LA  - en
+SN  - 0007-1013
+SP  - 1982-2002
+T2  - British Journal of Educational Technology
+TI  - The life cycle of large language models in education: A framework for 
+understanding sources of bias
+UR  - http://dx.doi.org/10.1111/bjet.13505
+VL  - 55
+ER  - 
+TY  - JOUR
+AB  - The utilization of Artificial Intelligence (AI) in educational institu
+tions has the potential to bring about a significant transformation in
+ current educational systems. As more educational establishments incor
+porate AI tools into their teaching and learning practices, there is a
+ growing adoption of Large Language Model (LLM) technologies, includin
+g within the field of education. This adoption is driven by the ever-i
+ncreasing volume of data and evolving educational requirements. Howeve
+r, despite the advantages offered by these technologies, there remains
+ a consistent lack of clarity surrounding the ethical guidelines, tech
+nical standards, and best practices that are vital for their effective
+ implementation. This paper primarily focuses on two key areas of rese
+arch. Firstly, it seeks to investigate the potential benefits, risks, 
+and outcomes associated with the use of LLM technologies in education.
+ Secondly, it delves into the ethical considerations that should guide
+ the utilization of LLM technologies within this domain. The findings 
+underscore the significance of affording students access to LLM techno
+logies in order to enhance the learning environment, with an emphasis 
+on the necessity of transparent and reliable data collection in resear
+ch. Moreover, given the considerable potential for the dissemination o
+f misinformation and harmful content through LLM technologies, it is i
+mperative to integrate ethical considerations throughout the field of 
+education. This necessitates educating users and reinforcing measures 
+to control the content in order to mitigate associated risks.
+DA  - 2024/7/6/
+PY  - 2024
+DB  - Crossref
+DO  - 10.53797/jthkkss.v5i1.3.2024
+ID  - temp_id_904514292734
+IS  - 5
+J2  - J TECHNOL HUM
+SN  - 2805-4431
+SP  - 24-31
+T2  - Journal of Technology and Humanities
+TI  - The Ethics of AI Creativity: Emerging Challenges
+UR  - http://dx.doi.org/10.53797/jthkkss.v5i1.3.2024
+ER  - 
+TY  - JOUR
+AB  - This paper reviews the theoretical background and potential applicatio
+ns of Large Language Models (LLMs) in educational processes and academ
+ic research. Utilizing a novel digital ethnographic approach, we engag
+ed in iterative research with OpenAI’s ChatGPT-4 and Google’s Gemini U
+ltra—two advanced commercial LLMs. The methodology treated LLMs as res
+earch participants, emphasizing the AI-guided perspectives and their e
+nvisioned roles in educational settings. Our findings identified the p
+otential LLM roles in educational and research processes and we discus
+sed the AI challenges, which included potential biases in decision-mak
+ing and AI as a potential source of discrimination and conflict of int
+erest. In addition to practical implications, we used the qualitative 
+research results to advise on the relevant topics for future research.
+
+AU  - Alfirević, Nikša
+AU  - Rendulić, Darko
+AU  - Fošner, Maja
+AU  - Fošner, Ajda
+DA  - 2024/10/29/
+PY  - 2024
+DB  - Crossref
+DO  - 10.3390/informatics11040078
+ID  - temp_id_892731298942
+IS  - 4
+J2  - Informatics
+LA  - en
+SN  - 2227-9709
+SP  - 78
+T2  - Informatics
+TI  - Educational Roles and Scenarios for Large Language Models: An Ethnogra
+phic Research Study of Artificial Intelligence
+UR  - http://dx.doi.org/10.3390/informatics11040078
+VL  - 11
+ER  - 
+TY  - JOUR
+AB  - This study examines the growing use of Large Language Models (LLMs) in
+ child-centered applications, highlighting safety and ethical concerns
+ such as bias, harmful content, and cultural insensitivity. Despite th
+eir potential to enhance learning, there is a lack of standardized fra
+meworks to mitigate these risks. Through a systematic literature revie
+w, we identify key parental and empirical concerns, including toxicity
+ and ethical breaches in AI outputs. Moreover, to address these issues
+, this paper proposes a protection framework for safe Child-LLM intera
+ction, incorporating metrics for content safety, behavioral ethics, an
+d cultural sensitivity. The framework provides practical tools for eva
+luating LLM safety, offering guidance for developers, policymakers, an
+d educators to ensure responsible AI deployment for children.
+AU  - Jiao, Junfeng
+AU  - Afroogh, Saleh
+AU  - Chen, Kevin
+AU  - Murali, Abhejay
+AU  - Atkinson, David
+AU  - Dhurandhar, Amit
+DA  - 2025///
+PY  - 2025
+DO  - 10.48550/ARXIV.2502.11242
+ID  - https://doi.org/10.4
+T2  - arXiv.org
+TI  - LLMs and Childhood Safety: Identifying Risks and Proposing a Protectio
+n Framework for Safe Child-LLM Interaction
+UR  - https://arxiv.org/abs/2502.11242
+ER  - 
+TY  - JOUR
+AB  - Large Language Models (LLMs) are increasingly adopted in educational c
+ontexts to provide personalized support to students and teachers. The 
+unprecedented capacity of LLM-based applications to understand and gen
+erate natural language can potentially improve instructional effective
+ness and learning outcomes, but the integration of LLMs in education t
+echnology has renewed concerns over algorithmic bias which may exacerb
+ate educational inequities. In this review, building on prior work on 
+mapping the traditional machine learning life cycle, we provide a holi
+stic map of the LLM life cycle from the initial development of LLMs to
+ customizing pre-trained models for various applications in educationa
+l settings. We explain each step in the LLM life cycle and identify po
+tential sources of bias that may arise in the context of education. We
+ discuss why current measures of bias from traditional machine learnin
+g fail to transfer to LLM-generated content in education, such as tuto
+ring conversations because the text is high-dimensional, there can be 
+multiple correct responses, and tailoring responses may be pedagogical
+ly desirable rather than unfair. This review aims to clarify the compl
+ex nature of bias in LLM applications and provide practical guidance f
+or their evaluation to promote educational equity.
+AU  - Lee, Jinsook
+AU  - Hicke, Yann
+AU  - Yu, Renzhe
+AU  - Brooks, Christopher
+AU  - Kizilcec, René F.
+DA  - 2024///
+PY  - 2024
+DO  - 10.48550/ARXIV.2407.11203
+ID  - https://doi.org/10.4
+T2  - arXiv.org
+TI  - The Life Cycle of Large Language Models: A Review of Biases in Educati
+on
+UR  - https://arxiv.org/abs/2407.11203
+ER  - 
+TY  - JOUR
+AB  - This paper explores recent advancements and implications of artificial
+ intelligence (AI) technology, with a specific focus on Large Language
+ Models (LLMs) like ChatGPT 3.5, within the realm of higher education.
+ Through a review of the academic literature, this paper highlights th
+e unprecedented growth of these models and their wide-reaching impact 
+across various sectors. The discussion sheds light on the complex issu
+es and potential benefits presented by LLMs, providing a overview of t
+he field's current state.
+In the context of higher education, the paper explores the challenges 
+and opportunities posed by LLMs. These include issues related to educa
+tional assessment, potential threats to academic integrity, privacy co
+ncerns, the propagation of misinformation, EDI aspects, copyright conc
+erns and inherent biases within the models. While these challenges are
+ multifaceted and significant, the paper emphasizes the availability o
+f strategies to address them effectively and facilitate the successful
+ adoption of LLMs in educational settings.
+Furthermore, the paper recognises the potential opportunities to trans
+form higher education. It emphasises the need to update assessment pol
+icies, develop guidelines for staff and students, scaffold AI skills d
+evelopment, and find ways to leverage technology in the classroom. By 
+proactively pursuing these steps, higher education institutions (HEIs)
+ can harness the full potential of LLMs while managing their adoption 
+responsibly.
+In conclusion, the paper urges HEIs to allocate resources to handle th
+e adoption of LLMs effectively. This includes ensuring staff AI readin
+ess and taking steps to modify their study programmes to align with th
+e evolving educational landscape influenced by emerging technologies.
+AU  - Bobula, Michal
+DA  - 2024/3/27/
+PY  - 2024
+DB  - Crossref
+DO  - 10.47408/jldhe.vi30.1137
+ID  - temp_id_237743579107
+IS  - 30
+J2  - JLDHE
+SN  - 1759-667X
+T2  - Journal of Learning Development in Higher Education
+TI  - Generative artificial intelligence (AI) in higher education: a compreh
+ensive review of challenges, opportunities, and implications
+UR  - http://dx.doi.org/10.47408/jldhe.vi30.1137
+ER  - 
+TY  - JOUR
+AB  - Large language models (LLMs) have emerged as a powerful tool in educat
+ion, offering novel approaches to analyzing educational data and enhan
+cing learning experiences. However, they also present new challenges, 
+such as finding ways to effectively implement LLMs into educational en
+vironments to aid, rather than detract, students from learning and ens
+uring that no toxic or irrelevant content is presented to students. Th
+ey also present a new host of ethical questions regarding the degree t
+o which LLMs can go in aiding and providing feedback to students. This
+ workshop aims to bring together researchers, educators, and practitio
+ners to discuss these opportunities and challenges in leveraging LLMs 
+for education.
+AU  - Heffernan, Neil T.
+AU  - Wang, Rose
+AU  - MacLellan, Christopher
+AU  - Hellas, Arto
+AU  - Li, Chenglu
+AU  - Walkington, Candace A.
+AU  - Littenberg-Tobias, Joshua
+AU  - Joyner, David
+AU  - Moore, Steven
+AU  - Singla, A.
+AU  - Pardos, Zach
+AU  - Pankiewicz, Maciej
+AU  - Kim, Juho
+AU  - Sonkar, Shashank
+AU  - Cohn, Clayton
+AU  - Botelho, Anthony F.
+AU  - Lan, Andrew
+AU  - Jiang, Lan
+AU  - Feng, Mingyu
+AU  - Käser, Tanja
+AU  - Worden, Eamon
+DA  - 2024///
+PY  - 2024
+ID  - temp_id_726363928754
+T2  - Educational Data Mining
+TI  - Leveraging Large Language Models for Next-Generation Educational Techn
+ologies
+ER  - 
+TY  - JOUR
+AB  - Large language models (LLMs) have become increasingly ingrained in aca
+demic research and education. As a result, leveraging open-access publ
+ications and publicly available educational materials through LLMs is 
+emerging as a promising strategy to broaden knowledge discovery and en
+hance teaching and learning. This review surveys global and domestic t
+rends in the application of LLMs within science and education, highlig
+hting notable implementations including Meta’s Galactica, KISTI’s KONI
+ model, and the opensource CleverBee system. These examples showcase t
+he substantial potential of generative AI when applied to openly avail
+able knowledge resources, while also revealing important limitations. 
+In this context, we identify six key ethical challenges associated wit
+h LLM use—covering issues of copyright and licensing, personal data pr
+ivacy, hallucinated content, algorithmic bias, plagiarism, and account
+ability—and examine evolving legal and regulatory responses in the Uni
+ted States, European Union, and South Korea. Additionally, we propose 
+seven practical recommendations for researchers (such as checking data
+ licenses, removing personal identifiers, verifying model outputs, and
+ transparently reporting AI assistance) to foster responsible use of L
+LMs. Drawing on up-to-date guidelines from organizations like the Comm
+ittee on Publication Ethics (COPE) and the International Committee of 
+Medical Journal Editors (ICMJE) as well as recent national policy dire
+ctives, this review offers comprehensive guidance for scholars across 
+disciplines including neuroscience, linguistics, learning sciences, an
+d artificial intelligence. Our aim is to support the responsible and e
+ffective integration of LLM technologies into academic practice—advanc
+ing innovation in research and education while maintaining high ethica
+l and legal standards.
+AU  - Yi, Kuyng Sik
+AU  - Choi, Chi-Hoon
+DA  - 2025/6/30/
+PY  - 2025
+DB  - Crossref
+DO  - 10.31216/bdl.2025.15.2.6
+ID  - temp_id_894491347207
+IS  - 2
+J2  - Brain, Digital, &amp; Learning
+SN  - 2384-2474
+SP  - 205-216
+T2  - Brain, Digital, &amp; Learning
+TI  - Utilizing Open Access Publications and Educational Content in LLM-Base
+d Research: Global Trends and Ethical–Policy Considerations
+UR  - http://dx.doi.org/10.31216/bdl.2025.15.2.6
+VL  - 15
+ER  - 
+TY  - CONF
+AB  - Recent advanced AI technologies, especially large language models (LLM
+s) like GPTs, have significantly advanced the field of data mining and
+ led to the development of various LLM-based applications. AI for educ
+ation (AI4EDU) is a vibrant multi-disciplinary field of data mining, m
+achine learning, and education, with increasing importance and extraor
+dinary potential. In this field, LLM and adaptive learning-based model
+s can be utilized as interfaces in human-in-the-loop education systems
+, where the model serves as a mediator among the teacher, students, an
+d machine capabilities, including its own. This perspective has severa
+l benefits, including the ability to personalize interactions, allow u
+nprecedented flexibility and adaptivity for human-AI collaboration and
+ improve the user experience. However, several challenges still exist,
+ including the need for more robust and efficient algorithms, designin
+g effective user interfaces, and ensuring ethical considerations are a
+ddressed. This workshop aims to bring together researchers and practit
+ioners from academia and industry to explore cutting-edge AI technolog
+ies for personalized education, especially the potential of LLMs and a
+daptive learning technologies.
+AU  - Wen, Qingsong
+AU  - Liang, Jing
+AU  - Sierra, Carles
+AU  - Luckin, Rose
+AU  - Tong, Richard
+AU  - Liu, Zitao
+AU  - Cui, Peng
+AU  - Tang, Jiliang
+C3  - Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery a
+nd Data Mining
+DA  - 2024/8/24/
+C2  - 2024
+DB  - Crossref
+DO  - 10.1145/3637528.3671498
+ID  - temp_id_238722571212
+PB  - ACM
+SP  - 6743-6744
+TI  - AI for Education (AI4EDU): Advancing Personalized Education with LLM a
+nd Adaptive Learning
+UR  - http://dx.doi.org/10.1145/3637528.3671498
+ER  - 
+TY  - JOUR
+AB  - Educational technology innovations leveraging large language models (L
+LMs) have shown the potential to automate the laborious process of gen
+erating and analysing textual content. While various innovations have 
+been developed to automate a range of educational tasks (eg, question 
+generation, feedback provision, and essay grading), there are concerns
+ regarding the practicality and ethicality of these innovations. Such 
+concerns may hinder future research and the adoption of LLMs‐based inn
+ovations in authentic educational contexts. To address this, we conduc
+ted a systematic scoping review of 118 peer‐reviewed papers published 
+since 2017 to pinpoint the current state of research on using LLMs to 
+automate and support educational tasks. The findings revealed 53 use c
+ases for LLMs in automating education tasks, categorised into nine mai
+n categories: profiling/labelling, detection, grading, teaching suppor
+t, prediction, knowledge representation, feedback, content generation,
+ and recommendation. Additionally, we also identified several practica
+l and ethical challenges, including low technological readiness, lack 
+of replicability and transparency and insufficient privacy and benefic
+ence considerations. The findings were summarised into three recommend
+ations for future studies, including updating existing innovations wit
+h state‐of‐the‐art models (eg, GPT‐3/4), embracing the initiative of o
+pen‐sourcing models/systems, and adopting a human‐centred approach thr
+oughout the developmental process. As the intersection of AI and educa
+tion is continuously evolving, the findings of this study can serve as
+ an essential reference point for researchers, allowing them to levera
+ge the strengths, learn from the limitations, and uncover potential re
+search opportunities enabled by ChatGPT and other generative AI models
+.
+What is currently known about this topic
+
+Generating and analysing text‐based content are time‐consuming and lab
+orious tasks.
+Large language models are capable of efficiently analysing an unpreced
+ented amount of textual content and completing complex natural languag
+e processing and generation tasks.
+Large language models have been increasingly used to develop education
+al technologies that aim to automate the generation and analysis of te
+xtual content, such as automated question generation and essay scoring
+.
+What this paper adds
+
+A comprehensive list of different educational tasks that could potenti
+ally benefit from LLMs‐based innovations through automation.
+A structured assessment of the practicality and ethicality of existing
+ LLMs‐based innovations from seven important aspects using established
+ frameworks.
+Three recommendations that could potentially support future studies to
+ develop LLMs‐based innovations that are practical and ethical to impl
+ement in authentic educational contexts.
+Implications for practice and/or policy
+
+Updating existing innovations with state‐of‐the‐art models may further
+ reduce the amount of manual effort required for adapting existing mod
+els to different educational tasks.
+The reporting standards of empirical research that aims to develop edu
+cational technologies using large language models need to be improved.
+
+Adopting a human‐centred approach throughout the developmental process
+ could contribute to resolving the practical and ethical challenges of
+ large language models in education.
+
+
+AU  - Yan, Lixiang
+AU  - Sha, Lele
+AU  - Zhao, Linxuan
+AU  - Li, Yuheng
+AU  - Martinez‐Maldonado, Roberto
+AU  - Chen, Guanliang
+AU  - Li, Xinyu
+AU  - Jin, Yueqiao
+AU  - Gašević, Dragan
+DA  - 2023/8/6/
+PY  - 2023
+DB  - Crossref
+DO  - 10.1111/bjet.13370
+ID  - temp_id_005696404309
+IS  - 1
+J2  - Brit J Educational Tech
+LA  - en
+SN  - 0007-1013
+SP  - 90-112
+T2  - British Journal of Educational Technology
+TI  - Practical and ethical challenges of large language models in education
+: A systematic scoping review
+UR  - http://dx.doi.org/10.1111/bjet.13370
+VL  - 55
+ER  - 

@@ -1,0 +1,2497 @@
+Received: 2 September 2019
+
+Revised: 6 August 2020
+
+Accepted: 17 August 2020
+
+DOI: 10.1111/jcal.12497
+
+ARTICLE
+
+A toy or a friend? Children's anthropomorphic beliefs about
+robots and how these relate to second-language word learning
+Rianne van den Berghe1 | Mirjam de Haas2
+| Ora Oudgenoeg-Paz1 |
+Emiel Krahmer3 | Josje Verhagen4 | Paul Vogt2 | Bram Willemsen3 |
+Jan de Wit3
+
+|
+
+Paul Leseman1
+
+1
+Department of Special Education, Utrecht
+University, Utrecht, The Netherlands
+2
+
+Department of Cognitive Science and
+Artificial Intelligence, Tilburg University,
+Tilburg, The Netherlands
+3
+Department of Communication and
+Cognition, Tilburg University, Tilburg, The
+Netherlands
+4
+
+Amsterdam Center for Language and
+Communication, University of Amsterdam,
+Amsterdam, The Netherlands
+
+Abstract
+This study investigates the degree to which children anthropomorphize a robot tutor
+and whether this anthropomorphism relates to their vocabulary learning in a secondlanguage (L2) tutoring intervention. With this aim, an anthropomorphism questionnaire
+was administered to 5-year-old children (N = 104) twice: prior to and following a sevensession L2 vocabulary training with a humanoid robot. On average, children tended to
+anthropomorphize the robot prior to and after the lessons to a similar degree, but many
+children changed their attributed anthropomorphic features. Boys anthropomorphized
+
+Correspondence
+Mirjam de Haas, Department of Cognitive
+Science and Artificial Intelligence, Tilburg
+University, Tilburg, The Netherlands.
+Email: mirjam.dehaas@uvt.nl
+
+the robot less after the lessons than girls. Moreover, there was a weak but significant
+
+Funding information
+Horizon 2020 Framework Programme, Grant/
+Award Number: 688014
+
+morphism over time and scores on a word-knowledge post-test administered approxi-
+
+positive correlation between anthropomorphism as measured before the lessons and
+scores on a word-knowledge post-test administered the day after the last lesson. There
+was also a weak but significant positive correlation between the change in anthropomately 2 weeks after the last lesson. Our results underscore the need to manage
+children's expectations in robot-assisted education. Also, future research could explore
+adaptations to individual children's expectations in child-robot interactions.
+KEYWORDS
+
+anthropomorphism, child-robot interaction, educational robots, robot tutoring, secondlanguage learning
+
+1
+
+I N T RO DU CT I O N
+
+|
+
+Croft, & Zoghbi, 2009). People do not only anthropomorphize robots,
+but also many other non-human entities, such as animals, toys, and
+
+1.1
+
+|
+
+Anthropomorphism
+
+machines (Caporael, 1986), and presumably this helps them to understand and gain control over their environment (Duffy, 2003; Waytz
+
+When interacting with a social robot, people have a tendency to attri-
+
+et al., 2010). Anthropomorphism can be a useful mechanism in
+
+bute human forms, characteristics and/or behaviours to the robot.
+
+human-robot interaction (Duffy, 2003; Fink, 2012), because people
+
+This phenomenon is called anthropomorphism (Bartneck, Kulic,
+
+evaluate robots more positively, collaborate better with them, and
+empathize more with robots that are more human-like or display more
+
+Rianne van den Berghe and Mirjam de Haas had equal contributions.
+
+human-like behaviour than with robots that are less human-like
+
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium,
+provided the original work is properly cited.
+© 2020 The Authors. Journal of Computer Assisted Learning published by John Wiley & Sons Ltd
+396
+
+wileyonlinelibrary.com/journal/jcal
+
+J Comput Assist Learn. 2021;37:396–410.
+
+(Breazeal,
+
+Kidd,
+
+Thomaz,
+
+Hoffman,
+
+&
+
+Berlin,
+
+2005;
+
+Eyssel,
+
+1.2
+
+|
+
+Changes in anthropomorphism
+
+Kuchenbrandt, Hegel, & Ruiter, 2012; Hegel, Krach, Kircher, Wrede, &
+Sagerer, 2008; Moon et al., 2014; Riek, Rabinowitch, Chakrabarti, &
+
+Previous research indicates that children's perceptions or expectations
+
+Robinson, 2009). In this article, we set out to study the degree to
+
+of robots can change over time. Children value a robot's properties
+
+which children anthropomorphize a humanoid robot, how children's
+
+differently depending on their experience with robots (Obaid,
+
+anthropomorphic beliefs about the robot may change after multiple
+
+Barendregt, Alves-Oliveira, Paiva, & Fjeld, 2015; Sciutti, Rea, &
+
+interactions with the robot, and whether children's anthropomorphistic
+
+Sandini, 2014). Before interacting with a robot, children attribute
+
+perception of the robot and word knowledge after a second-language
+
+more importance to a robot's shape (e.g., having a head or arms) than
+
+(L2) vocabulary training are related.
+
+its sensory and motor properties (e.g., the ability to feel or move).
+
+The degree to which people anthropomorphize a robot is affected
+
+After having interacted with a robot, they value its sensory and motor
+
+by the robot's appearance and behaviours (DiSalvo, Gemperle,
+
+properties more and its shape less than before (Sciutti et al., 2014).
+
+Forlizzi, & Kiesler, 2002; Phillips, Zhao, Ullman, & Malle, 2018;
+
+While this study did not specifically investigate anthropomorphism, it
+
+Tung, 2016). For example, people are more likely to anthropomorphize
+
+does suggest that sensory and motor properties, which can be linked
+
+robots that have a torso, a skin, or appear to have gender (Phillips
+
+to anthropomorphism, may become more important over time when
+
+et al., 2018). Robot movement in general has also been found to
+
+children's experience with robots increases.
+
+increase human-likeness ratings (Tung, 2016). More specifically, using
+
+Bernstein and Crowley (2008) asked children between four and
+
+co-speech gestures has been found to increase anthropomorphism, and
+
+seven to evaluate different entities (including two robots) on living-
+
+the use of social gaze to increase life-likeness (Salem, Eyssel, Rohlfing,
+
+ness and intelligence. Children who had had little experience with
+
+Kopp, & Joublin, 2013; Zaga, de Vries, Li, Truong, & Evers, 2017).
+
+robots, judged the robot more often as living than children who had
+
+However, people do not all anthropomorphize robots to the same
+
+had more experience with robots. Moreover, children who had had
+
+degree. One of the reasons for these individual differences is that
+
+experience with robots were more likely to distinguish robots from
+
+people use their own experiences in rationalizing the actions of an
+
+other entities that they already knew (e.g., things that are living) and
+
+object and in reasoning about its mental states (Epley, Waytz, Akalis, &
+
+consider robots as intelligent, albeit in a unique ‘robot intelligence’
+
+Cacioppo, 2008; Epley, Waytz, & Cacioppo, 2007; Lemaignan, Fink, &
+
+manner.
+
+Dillenbourg, 2014), and may thus ascribe different mental states to
+
+In contrast, a study by Kory-Westlund, Martinez, Archie, Das, and
+
+objects depending on their own experiences. Thus, in human-robot
+
+Breazeal (2016) did not find changes in anthropomorphism. A robot
+
+interaction, the degree to which people anthropomorphize robots
+
+was framed either as a social agent or a machine by using either inclu-
+
+likely does not only depend on the type of robot used and the behav-
+
+sive language and second-person pronouns or third-person pronouns
+
+iour the robot displays, but also on the specific characteristics and
+
+and the word ‘robot’. In this study, children between ages three and
+
+experiences of the person interacting with the robot.
+
+seven played a sorting game with the robot. The degree to which they
+
+While most robot research on anthropomorphism has focused on
+
+anthropomorphised the robot was assessed through a questionnaire
+
+adults (see Fink, 2012 for a review), children of all ages have been
+
+administered both before and after the game. The study did not show
+
+found to anthropomorphize robots as well (Beran, Ramirez-Serrano,
+
+an effect of framing on children's anthropomorphism, and there was
+
+Kuzyk, Fior, & Nugent, 2011; Kahn, Gary, & Shen, 2013; Lemaignan,
+
+no difference in the degree to which children anthropomorphized the
+
+Fink, Mondada, & Dillenbourg, 2015; Monaco, Mich, Ceol, &
+
+robot before or after the game.
+
+Potrich, 2018). Younger children (up to 12 years old) are more likely
+
+It is not clear from this study whether children's anthropomor-
+
+than older children to anthropomorphize robots (Beran et al., 2011;
+
+phism is indeed unaffected by their interaction with the robot, or
+
+Kahn et al., 2012; van Straten, Peter, & Kühne, 2019). They experi-
+
+whether one interaction session was not enough to change their
+
+ence more enjoyment and are less sensitive to the robot's style of
+
+degree of anthropomorphism. On the one hand, people might attri-
+
+interaction than older children (van Straten et al., 2019), which may
+
+bute cognitive and social abilities to robots that robots cannot meet
+
+relate to a higher degree of anthropomorphism. In particular, younger
+
+(Dautenhahn, 2004), which is particularly a problem for repeated
+
+children are more likely to assign cognitive and affective beliefs to
+
+interactions (Leite, Martinho, & Paiva, 2013). On this idea, the longer
+
+robots than older children, such as the ability to remember people and
+
+people would interact with robots, the more likely it should be that
+
+understand people's feelings (Beran et al., 2011). However, even pre-
+
+the robot falls short of these expectations, which would negatively
+
+school children attribute few biological properties to robots (Jipson &
+
+affect people's tendency to anthropomorphize the robot. Evidence for
+
+Gelman, 2007) and already understand that robots are something in
+
+this idea comes from a previous study with children in which explicitly
+
+between living beings and mechanical artifacts (Kory-Westlund &
+
+informing children on the robot's lack of psychological abilities
+
+Breazeal, 2019). In a meta-analysis by Van Straten et al. (2019), a
+
+(e.g., self-consciousness, social cognition) led to lower anthropomor-
+
+robot's responsiveness and role were the strongest predictor of chil-
+
+phism and trust (van Straten, Peter, Kühne, & Barco, 2020). It
+
+dren's closeness to a robot but the predictors for trust were not con-
+
+is also in line with a proposed model on the dynamics of anthropo-
+
+sistent. Also, this meta-analysis showed that boys feel more close to a
+
+morphism (Lemaignan, Fink, & Dillenbourg, 2014; Lemaignan, Fink,
+
+robot with the same gender but girls are not affected by the gender of
+
+Dillenbourg, & Braboszcz, 2014). In this model, people are most likely
+
+the robot.
+
+to anthropomorphize a robot when first encountering it, because of
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+397
+
+van den BERGHE ET AL.
+
+van den BERGHE ET AL.
+
+their expectations about the robot and because the robot's behaviour
+
+environment that they share with the learner. For example, robots
+
+may seem unpredictable and complex. Upon getting acquainted with
+
+can point to the objects they are naming or act out the meaning of
+
+a robot, people build a mental model to predict the robot's behaviour,
+
+a word. This embedding is known to be important for language
+
+and as the accuracy of this model increases, the robot is considered
+
+learning (Barsalou, 2008; Hockema & Smith, 2009; Iverson, 2010;
+
+more machine-like than human-like, and anthropomorphic tendencies
+
+Oudgenoeg-Paz,
+
+decrease.
+
+Pexman, 2014). As a result, (second) language learning has often
+
+Leseman,
+
+&
+
+Volman,
+
+2015;
+
+Wellsby
+
+&
+
+On the other hand, studies have found that children attributed
+
+been studied in robot-assisted learning research (see Van den
+
+more anthropomorphic or more positive judgments after having
+
+Berghe, Verhagen, Oudgenoeg-Paz, van der Ven, & Leseman, 2019,
+
+repeated interactions with a robot (Leite, Pereira, & Lehman, 2017;
+
+Kanero et al., 2018 for reviews). So far, results on the effectiveness
+
+Michaelis & Mutlu, 2018). Michaelis and Mutlu (2018) had 10- to
+
+of robots for language learning are mixed, however. In this paper,
+
+12-year-old children participate in in-home guided reading activities
+
+we further explore one of the factors that may, at least in part,
+
+with a robot, and found that more children attributed feelings, emo-
+
+explain the mixed findings in earlier work, but has received relatively
+
+tions and a personality to the robot after the 2-week study than
+
+little attention to date: anthropomorphism.
+
+before. Though not measuring anthropomorphism directly, Leite
+
+As discussed earlier, anthropomorphizing robots seems advanta-
+
+et al. (2017) focused on likeability and found that four- to ten-year-
+
+geous for human–robot interactions (Duffy, 2003; Fink, 2012), but it
+
+old children liked the robot more after having multiple conversations
+
+is not clear if and how anthropomorphism can affect robot-assisted
+
+with it. The current study is aimed at further investigating changes in
+
+(language) learning. Yet, the degree to which learners anthropomor-
+
+children's evaluations of a robot in terms of anthropomorphism after
+
+phize robots may play an important role in learning situations too, as
+
+multiple interactions with this robot, and relating these evaluations to
+
+learning is first and foremost a social process (Vygotsky, 1978). Chil-
+
+their learning outcomes in a vocabulary training.
+
+dren who anthropomorphize the robot to a greater degree might
+interact with the robot in ways similar to how they would interact
+with peers. Peer learning has been shown to be beneficial to learning
+
+1.3
+
+|
+
+Anthropomorphism and learning
+
+(see Topping, 2005 for a review), either directly through helping each
+other, or indirectly through enhancing motivation, confidence and
+
+Education is one of the most widely used domains in which social
+
+enjoyment.
+
+robots are used. Robots can be used to support children's learning,
+
+Anthropomorphism is related to social presence: ‘the degree to
+
+and as such, complement teachers. One of the most often used appli-
+
+which a user feels access to the intelligence, intentions, and sensory
+
+cations is the use of a robot as a tutor, such that the robot and child
+
+impressions of another’ (Biocca, 1997, section 7.2). It reflects paying
+
+together work through educational materials and the robot provides
+
+attention to each other, understanding each other, and adapting
+
+individual support to the child (Belpaeme, Kennedy, Ramachandran,
+
+behaviour and emotions towards each other. It is no surprise that such
+
+Scassellati, & Tanaka, 2018). A robot can interact with the children in
+
+values are also crucial to successful vocabulary training programmes
+
+their physical, referential world. The robot's embodiment and its
+
+(Marulis & Neuman, 2010), and may thus apply to the robot-assisted
+
+potential for social interactions to establish common ground is one of
+
+vocabulary training in the current study. It may be worthwhile to
+
+the advantages social robots in theory have over other forms of tech-
+
+design robots in such a way that they make learners feel as if it has a
+
+nology such as tablets (Belpaeme, Kennedy, et al., 2018). Physical
+
+social presence, but the learner's perception of the robot and its social
+
+robots indeed have generally been found to be more enjoyable and a
+
+presence may be just as important. It is possible that a robot's benefits
+
+preferred social partner compared to their virtual counterparts
+
+as a peer learner or tutor depend on the degree to which the learners
+
+(Kidd, 2003; Pereira, Martinho, Leite, & Paiva, 2008). It is assumed
+
+anthropomorphize it. In other words, it is possible that a robot per-
+
+that such robots are more natural conversational partners, and robot-
+
+ceived as more human-like is more effective when learning an L2 than
+
+assisted learning interactions may benefit from similar social behav-
+
+a robot that is perceived as a machine. This begs the question if and
+
+iours as humans use in learning interactions, such as the use of ges-
+
+how anthropomorphism and learning are related to each other, which
+
+tures (de Nooijer, van Gog, Paas, & Zwaan, 2013; de Wit et al., 2018;
+
+is the central research question of the current study.
+
+Kelly, McDevitt, & Esch, 2009; Macedonia, Müller, & Friederici, 2011;
+
+Research that comes closest to answering this question is that of
+
+Tellier, 2008; Verhagen, van den Berghe, Oudgenoeg-Paz, Küntay, &
+
+Chandra et al. (2018). This study did not directly focus on anthropo-
+
+Leseman, 2019). Furthermore, children have been shown to be less
+
+morphism, but the researchers did measure children's perception of a
+
+anxious and more motivated when learning with a robot than without
+
+robot in terms of intelligence, likeability and friendliness, and whether
+
+a robot (Alemi, Meghdari, Basiri, & Taheri, 2015). Finally, an advantage
+
+this affected their learning in a learning-by-teaching paradigm. In this
+
+of a robot is that it can endlessly repeat tasks with individual children
+
+study, 25 seven- to nine-year-old children taught a NAO robot to
+
+where a teacher has to pay attention to other children.
+
+write over the course of four sessions as a way to improve their own
+
+These advantages of robots in education may particularly bene-
+
+writing. There were two conditions: (a) the robot improved its hand-
+
+fit robot-assisted language learning, which is studied in this article.
+
+writing for half of the children, and (b) the robot did not improve its
+
+Robots can gesture, move around and manipulate objects, and by
+
+writing for the other half of the children. Children in the first condition
+
+doing so, embed the language that they are teaching in the physical
+
+were able to perceive the robot's improvement by the last session,
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+398
+
+but this as such did not change how they perceived the robot's intelli-
+
+In the current study, we only included the experimental robot
+
+gence, likeability, and friendliness. However, children's own improve-
+
+conditions (i.e., Conditions 1 and 2) to investigate the degree to
+
+ment in writing was positively correlated with the likeability of the
+
+which children anthropomorphized the robot and the way in which
+
+robot. In the condition in which the robot did not improve, children's
+
+this relates to their word knowledge. In our analyses, we did not
+
+perceptions of the robot's intelligence, likeability, and friendliness did
+
+include the tablet-only and control conditions because, children in
+
+not change either, but in this condition, children's own learning was
+
+these conditions either did not interact with the robot (tablet condi-
+
+correlated with the perceived friendliness of the robot. These findings
+
+tion) or were not taught any English words by the robot (control con-
+
+need to be interpreted with caution because of the small sample size
+
+dition). We addressed the following research questions and
+
+and because they did not measure anthropomorphism, but they sug-
+
+hypotheses:
+
+gest that children's perception of the robot may indeed be related to
+their learning.
+
+1. Are there individual differences in the degree to which children
+
+Our study expands on this previous work. It includes an L2 vocab-
+
+anthropomorphize the robot? We expect children to differ in the
+
+ulary training of multiple sessions, thus enabling us to study children's
+
+degree to which they anthropomorphize the robot, in line with
+
+anthropomorphism of a robot and changes therein over a longer
+
+previous research on individual differences in anthropomorphism
+(Epley et al., 2007, 2008).
+
+period of time. This increases ecological validity, as robot-based interventions aimed at teaching children a particular topic usually span a
+
+2. How does the degree to which children anthropomorphize the
+
+few weeks, causing novelty effects of the robot that wear off after
+
+robot change through multiple L2 tutoring sessions with the robot?
+
+multiple interactions (e.g., Kanda, Hirano, Eaton, & Ishiguro, 2004).
+
+Although the evidence is mixed (e.g., Bernstein & Crowley, 2008;
+
+We assess the degree to which children anthropomorphize the robot
+
+Kory-Westlund et al., 2016; Michaelis & Mutlu, 2018), we expect
+
+both before and after having interacted intensively with it, allowing to
+
+that anthropomorphism will change over time in different ways,
+
+observe changes in anthropomorphism, and examine how children's
+
+due to the multiple interactions children have with the robot. On
+
+anthropomorphism and changes therein relate to language-learning
+
+the one hand, children may come to perceive the robot more as a
+
+performance.
+
+friend after repeated interactions, thus perceive the robot as more
+human-like. On the other hand, it is also possible that children initially have high expectations of the robot's interactive qualities,
+
+1.4
+
+|
+
+This study
+
+which the robot, however, cannot meet. In that case, their perception will change over time towards considering the robot as less
+human-like.
+
+The current study was part of the L2TOR project, which evaluated
+the effectiveness of a multiple-session L2 learning intervention for
+
+3. How are children's anthropomorphistic perceptions of the robot
+
+young children using a social robot in a large-scale randomized control
+
+and their knowledge of L2 words related? We expect word knowl-
+
+trial (Vogt et al., 2019). This long-term control study was pre-
+
+edge and attributing human-like cognitive, emotional and biological
+
+registered on AsPredicted1 and included four conditions: (a) an L2
+
+qualities to the robot to be positively related to each other. Specif-
+
+vocabulary training with a tablet and a robot that performed iconic
+
+ically, we anticipate that children who anthropomorphize the robot
+
+and deictic gestures to support word learning (gestures that visualize
+
+more will treat the robot as a peer that has social presence, and, as
+
+target words and pointing gestures), (b) an L2 vocabulary training with
+
+such, benefit more from its presence in terms of increased motiva-
+
+a tablet and a robot without iconic gestures (only pointing gestures),
+
+tion and engagement, that, in turn, will foster word learning. It
+
+(c) an L2 vocabulary training with a tablet only (no robot involved) and
+
+should be noted that while this design does not enable us to study
+
+(d) a control condition in which children only played dancing games
+
+causal relations between anthropomorphism and word knowledge,
+
+with the robot.
+
+we study whether the two are related and therefore provide evidence pertinent to the possible role anthropomorphism can play in
+
+Word knowledge was tested on three occasions, during a pre-
+
+the effectiveness of robot-based educational interventions.
+
+test, an immediate post-test and a delayed post-test (administered
+between 2 and 4 weeks after the training). The results of this preregistered study regarding children's word knowledge are reported in
+Vogt et al. (2019) and showed that, irrespective of condition, children
+
+2
+
+METHOD
+
+|
+
+knew significantly more words after the tutoring sessions than before.
+Moreover, children in the experimental conditions (robot with iconic
+
+2.1
+
+|
+
+Participants
+
+gestures, robot without iconic gestures, and tablet-only) scored significantly higher than children in the control condition on word-
+
+This study reports on a part of the sample described in Vogt
+
+knowledge tests during the immediate and delayed post-tests. There
+
+et al. (2019), that is, the children in the two experimental robot condi-
+
+were no differences between the experimental conditions, such that
+
+tions. Data were used from 104 monolingual Dutch children (50 girls)
+
+children who had taken the tutoring sessions with the robot (with or
+
+with an average age of 5 years and 8 months (SD = 5 months) who
+
+without iconic gestures) did not know more words than children who
+
+followed the vocabulary training in one of the two robot-assisted con-
+
+had taken the sessions with the tablet only.
+
+ditions (with or without iconic gestures). These children were
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+399
+
+van den BERGHE ET AL.
+
+recruited from the kindergartens of nine primary schools in the Neth-
+
+van den BERGHE ET AL.
+
+2.2
+
+|
+
+L2 tutoring sessions
+
+erlands. Within schools, children were randomly assigned to one of
+the conditions, while ensuring a similar gender distribution over the
+
+The aim of the L2 tutoring sessions was to teach each child 34 English
+
+conditions. There were 53 children (23 girls) in the iconic-gesture con-
+
+words in the domains of mathematical and spatial language. Each child
+
+dition (M age = 5 years and 8 months, SD = 4.8 months) and 51 chil-
+
+received seven tutoring sessions involving the robot and a tablet. Dur-
+
+dren (26 girls) in the no-iconic-gesture condition (M age = 5 years and
+
+ing each of the sessions children were introduced to five or six new
+
+8 months, SD = 4.6 months). Sixteen additional children were
+
+target words. The Softbank Robotics NAO robot was used, which was
+
+excluded because they: (a) knew more than half of the target words in
+
+sitting in a 90 angle next to the child (see Figure 1).
+
+the pre-test (n = 3), (b) did not complete the experiment due to techni-
+
+A three-dimensional game was developed for the tablet, in which
+
+cal issues (n = 2), (c) did not want to participate anymore (n = 8), or
+
+a particular scenario was displayed (e.g., animals in the zoo that had
+
+(d) did not complete the anthropomorphism questionnaire during the
+
+escaped their cages). This served as the context in which the L2 words
+
+pre-test (n = 3). All children's parents signed an informed-consent
+
+were introduced (see Figure 2). For each word, the child and the robot
+
+form to allow their children to participate in this study. Children
+
+had to perform different tasks on the tablet (e.g., selecting or dragging
+
+received a small gift at the end of the study to thank them for partici-
+
+objects on the screen, repeating target words out loud or acting out
+
+pation. The project in which the study was embedded, the L2TOR
+
+target words). For instance, the robot would ask the child to drag
+
+project, received ethical approval from Utrecht University's Ethics
+
+three escaped animals back into their cage on the tablet. While drag-
+
+Committee under protocol number FETC16-039.
+
+ging, the robot would count in English the number of animals in
+the cage.
+During these tasks, the robot acted as a slightly more knowledgeable peer who was also being taught English words, but could provide
+feedback on the child's actions when needed. For example, when a
+child dragged the wrong animal to a cage on the tablet, the robot
+could ask the child to drag the correct animal to the cage. See Table 1
+for an example of the child and robot interaction.
+The lessons were designed without relying on children's speech
+because speech recognition is currently still unreliable with children
+(Kennedy et al., 2017). For the few times children had to repeat a
+word, a Wizard of Oz was used where the researcher pressed a button on a control panel after the child had repeated after the robot.
+The rest of the interaction was carried out autonomously. The interaction was one-on-one in a separate room, but the experimenter stayed
+in the same room to intervene when necessary and to control the
+Wizard.
+
+F I G U R E 1 A child playing with the robot [Colour figure can be
+viewed at wileyonlinelibrary.com]
+
+2.3
+
+|
+
+Robot behaviour
+
+During the sessions, the robot was in breathing-mode (moving with its
+arms) to appear more lively. As the robot motors can be quite loud
+when the robot moves, the breathing-mode also reduced the initial
+sound shock when the robot was going to make a gesture and moved
+up its arms. In both conditions, the robot used deictic gestures, such
+as pointing, to draw the child's attention to the tablet, and head movements to look at the child when the child was asked to perform a certain task on the tablet. The only addition to the iconic + deictic
+gesture condition on top of the deictic gesture condition was the
+robot's use of iconic gestures. Specifically, an iconic gesture was
+designed for each of the included target words, and the robot would
+perform this gesture whenever it produced that word in the L2.
+Gestures were designed using key framing (Pot, Monceaux,
+F I G U R E 2 Example of one of the virtual environments that was
+used as a context for the language-learning interaction [Colour figure
+can be viewed at wileyonlinelibrary.com]
+
+Gelin, & Maisonnier, 2009), an animation technique where the
+designer defines a number of key positions of a character's limbs, and
+smooth transitions between these points are automatically generated.
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+400
+
+TABLE 1
+
+An example of an interaction between robot and child
+
+Robot
+
+Drags giraffe into
+cage
+
+Drags giraffe into
+cage
+
+Anthropomorphism questionnaire
+
+This anthropomorphism questionnaire was constructed for the purposes of the present study and administered by an experimenter in a
+10 min to complete. It consisted of 12 questions (for an overview, see
+Table 2 in Section 3) and assessed the degree to which children
+ties: biological (e.g., feeling pain, need for food and ability to grow),
+cognitive (e.g., thinking, remembering), and emotional (e.g., being
+
+Drags giraffe into
+cage
+
+happy, being sad). Each question could be answered with ‘yes’/‘no’/‘I
+don't know’ and was followed by an open-ended query asking children
+why they gave this response. The items were based on Jipson and
+Gelman (2007), who investigated to what extent children make a distinction between living and non-living items. The questionnaire was
+
+Well done!
+Please touch the cage with the three
+animals, so we can hear what three is in
+English
+
+|
+
+anthropomorphized the robot with regard to various types of proper-
+
+Well done!
+We had to <add one giraffe> and now
+there are <two giraffes> in the cage.
+There are <more giraffes> inside the cage
+than outside the cage. Can you add <one
+giraffe>?
+
+2.4.1
+
+one-on-one session with the child. The questionnaire took about
+
+Well done!
+There are still <two giraffes> outside of the
+cage. There are <more giraffes> outside
+of the cage than inside the cage. Can you
+<add one> giraffe?
+
+Materials and measurements
+
+|
+
+Child's action
+
+Tablet shows an environment with three cages, and three giraffes outside
+of the cages
+Let us put the <giraffe> in its cage!
+
+2.4
+
+Touches cage with the
+three giraffes
+
+adapted to fit the present study by adding several items to more thoroughly assess anthropomorphism (e.g., rather than measuring the
+robot's emotional abilities by only asking whether the robot could feel
+
+Tablet says < three>
+
+happy, an item was added on whether the robot could feel sad). The
+
+Repeat after me: <three>
+
+children's closed-ended answers were compared with the open-ended
+Says three
+
+answers to find out whether the children understood the question.
+
+Well done! < …….. >
+
+Two of the included questions (i.e., ‘Can the robot break?’ and ‘Is the
+
+Tablet display adds three trees to the tablet environment
+
+robot made by humans?’) proved unreliable as children's answers to
+the open-ended query did not correspond to their answers on the
+
+Cool! The last thing we need to do is to put
+food in the cage with the giraffes. This
+cage has the <most> animals so they
+need the <most> trees. Put the trees in
+the cage so the giraffes can eat from
+them. We have <three> giraffes, so we
+need <three> trees. Put the trees in the
+cage. Count them while dragging
+
+Drags first tree
+
+Let's do one more
+
+Drags second tree
+
+case for one child at the pre-test (four of the twelve questions were
+
+And the last one
+
+Drags third tree
+
+not administered) and for five children at the post-test (for each of
+
+close-ended questions. Therefore, we removed these items from our
+analysis. The children were awarded one point for each ‘yes’-answer,
+which indicated that they attributed human-like properties to the
+robot, and their anthropomorphism score was the proportion of ‘yes’answers. We used proportions rather than total scores because there
+were missing values on some items for some children. This was the
+
+Well done!
+
+whom one question was not administered). Thus, the maximum score
+
+Great! Now each giraffe has their own tree
+because there are <three> trees
+and <three> giraffes. The cage is pretty
+full because <most> animals are in the
+giraffe cage with the <most> food. You
+did very well! Let's do something else!
+
+was 1, with a score closer to 1 denoting a child's tendency to consider
+
+Note: The whole interaction was in Dutch, except for the words between
+brackets<>.
+
+the robot as human-like. Cronbach's alpha indicated that the internal
+consistency of the questionnaire was satisfactory, α = .72 at the pretest and α = .75 at the post-test.
+
+2.4.2
+
+|
+
+Comprehension test
+
+The comprehension test was a picture-selection task. In this test, chilThe design was based on human-performed gestures, which were
+
+dren were presented with a prerecorded target word and asked to
+
+recorded by means of a gesture-elicitation procedure where partici-
+
+choose which one out of three pictures or short video clips matched
+
+pants were asked to come up with a gesture depicting each of the tar-
+
+this word best (‘Where do you see: [heavy]?’). Each target word was
+
+get words. The resulting robot gestures were recreated based on the
+
+presented three times with different target and distractor stimuli in
+
+recorded examples, while taking into account the robot's physical limi-
+
+random order to decrease the chance of children guessing the correct
+
+tations (such as its inability to move individual fingers) and the fact
+
+answer. Only half of the 34 target words that were presented in the
+
+that the robot would be sitting down rather than standing, as the
+
+vocabulary training were included, as a test including all target words
+
+human performers were. Figure 3 shows examples of the robot ges-
+
+would have taken too long for these young children. The same test
+
+tures for the target words running and behind.2
+
+was used in both post-tests. The internal consistency of the
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+401
+
+van den BERGHE ET AL.
+
+van den BERGHE ET AL.
+
+F I G U R E 3 Examples of iconic gestures used in this study, photographed from a position where the child would sit. (a) Running is gestured by
+moving both arms back and forth as if the robot is running. (b) The word behind is gestured by moving the right hand up and down behind the left
+hand. Figures taken from Vogt et al. 2019 [Colour figure can be viewed at wileyonlinelibrary.com]
+
+comprehension test was good, with Cronbach's alpha α = .84 at the
+
+variability in children's scores. Thus, in the current paper, we only
+
+first post-test and α = .87 at the second post-test.
+
+include the comprehension test as a measure of children's word
+knowledge.
+
+2.4.3
+
+|
+
+Additional measures
+2.5
+
+|
+
+Procedure
+
+In addition to the anthropomorphism questionnaire and comprehension task, we administered several tasks assessing general cognitive
+
+Prior to the experiment, all children participated in a group introduc-
+
+skills. These tasks are beyond the scope of this study as they did not
+
+tion with the robot to familiarize the children with the robot, build
+
+assess anthropomorphism (see Vogt et al., 2019). They were: (a) a
+
+trust, and explain the basic similarities and dissimilarities between the
+
+Dutch receptive vocabulary test (Peabody Picture Vocabulary Test;
+
+robot and humans (e.g., the robot speaks without moving its mouth,
+
+Dunn & Dunn, 2005), (b) a selective-attention task (visual-search task;
+
+but looks at us while speaking in the same way as humans do;
+
+Mulder, Hoofs, Verhagen, van der Veen, & Leseman, 2014) and (c) a
+
+Belpaeme et al., 2018). These explanations were deemed necessary to
+
+phonological-memory test (quasi-universal nonword-repetition test,
+
+make sure that children would know how to interact with the robot in
+
+Boerma et al., 2015).
+
+the subsequent lessons. During the introduction, participants danced
+
+Moreover, we administered two translation tests to measure chil-
+
+together with the robot, were allowed to shake the robot's hand, and
+
+dren's knowledge of the English words, in which children listened to
+
+played a brief gesture imitation game. The robot was not explicitly
+
+the target words in L2 and were asked for their Dutch translations, or
+
+framed as either a human or a machine, by avoiding pronouns and by
+
+vice versa. The English-to-Dutch translation test was used as a pre-
+
+being called ‘Robin the robot’ (i.e., a combination of a gender-neutral
+
+test. Note that the main purpose of this translation test during the
+
+human name and the label ‘robot’).
+
+pre-test was to enable us to exclude any children who knew many
+
+After the introduction, a pre-test was administered including the
+
+words prior to the lesson series, although it also allowed us to com-
+
+anthropomorphism questionnaire and several tests measuring general
+
+pare pre- and post-test scores (see Vogt et al. 2019 for these ana-
+
+cognitive skills as well as children's knowledge of the English words. In
+
+lyses). We chose not to include a comprehension test as a pre-test, as
+
+the weeks thereafter, the children received seven one-on-one
+
+children may learn from such tests, given that, unlike in the translation
+
+tutoring lessons with the robot. Each lesson took approximately
+
+task where no answer is provided, a word is presented with pictures,
+
+17 min to complete. One or 2 days after the last lesson, an immediate
+
+one of which depicts the word's meaning. Moreover, in this article, we
+
+post-test was administered including the anthropomorphism ques-
+
+did not include the translation tests in the analyses, as there was low
+
+tionnaire for the second time, the comprehension test, and other tasks
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+402
+
+measuring children's knowledge of the English words. Finally, a del-
+
+3
+
+RE SU LT S
+
+|
+
+ayed post-test was administered in which the comprehension test and
+other English vocabulary tasks were repeated, between 2 and 4 weeks
+
+3.1
+
+Anthropomorphism before tutoring sessions
+
+|
+
+after the tutoring lessons.
+We investigated our first research question: Are there individual differences in the degree that children anthropomorphize the robot?
+
+2.6
+
+|
+
+Analyses
+
+Table 2 displays the questions of the questionnaire and the proportions of children that answered the question with ‘yes’.
+
+In Section 3, each research question is addressed in a separate para-
+
+As a group, children tended to attribute more human-like proper-
+
+graph. First, we examined whether there were individual differences
+
+ties to the robot than machine-like properties as is reflected in the
+
+in the degree to which children anthropomorphized the robot
+
+overall proportions being higher than 0.50 both before and after the
+
+before the tutoring sessions (RQ1). We used independent-samples
+
+tutoring sessions, but the scores varied strongly between the ques-
+
+t-tests to explore effects of gender and condition, and a linear-
+
+tions. Children highly agreed that the robot ‘can enjoy something’,
+
+regression analysis for age. We used age as a continuous variable in
+
+‘can be happy’, and ‘can think’. They disagreed more often on various
+
+our analyses, but reported means for a ‘younger’ and an ‘older’ age
+
+biological properties, such as ‘Do you think Robin the robot feels it
+
+group in Table 3 in Section 3, calculated through a median split
+
+when you tickle Robin the robot?’ and ‘Do you think that Robin the
+
+(at 68.2 months).
+
+robot can feel pain?’
+
+Second, we investigated how the degree to which children
+
+We explored whether there were effects of gender, age, and con-
+
+anthropomorphized the robot changed through multiple L2 tutoring
+
+dition. The mean anthropomorphism scores, separated for gender, age
+
+sessions with the robot (RQ2). We used a paired-samples t-test to
+
+and condition, are displayed in Table 3. An independent-samples
+
+compare anthropomorphism scores before and after the tutoring
+
+t-test showed no effect of gender, t(102) = −0.30, p = .768, d = 0.06,
+
+sessions. We also explored effects of gender, condition, and age,
+
+and
+
+a linear-regression
+
+analysis showed no
+
+effect
+
+of
+
+age,
+
+using a mixed-design ANOVA with gender or condition as a
+
+F(1,102) = 2.24, p = 0.138. With respect to condition, we explored
+
+between-subject variable and time as a within-subject variable, and
+
+whether children perceived the robot differently in the iconic-gesture
+
+a linear-regression analysis for age and change in anthropomorphism
+
+condition compared to the condition without iconic gestures as mea-
+
+scores.
+
+sured before the robot interaction, using an independent-samples
+
+Third, we used Pearson's correlations to investigate how anthro-
+
+t-test. There were no differences between the two conditions in the
+
+pomorphism and knowledge of L2 words were related (RQ3). We cor-
+
+degree
+
+related children's scores on the anthropomorphism questionnaire
+
+t(102) = −0.36, p = .722, d = 0.07.
+
+to
+
+which
+
+children
+
+anthropomorphized
+
+the
+
+robot,
+
+before and after the tutoring sessions, change in scores on the anthropomorphism questionnaire, and scores on the comprehension test on
+
+3.2 | Change in anthropomorphism after tutoring
+sessions
+
+each post-test (i.e., immediate and delayed).
+
+T A B L E 2 Proportions of children answering ‘yes’ on the
+questionnaire before and after the tutoring sessions
+
+Then, we investigated our second research question: How does the
+degree to which children's anthropomorphize the robot change
+
+Do you think that Robin the robot…
+
+Before
+
+After
+
+… can see things?
+
+0.79 (82)
+
+0.81 (84)
+
+… can be sad?
+
+0.66 (69)
+
+0.41 (43)
+
+… remember something?
+
+0.64 (67)
+
+0.69 (72)
+
+… can feel it when you tickle Robin the
+robot?
+
+0.45 (47)
+
+0.33 (34)
+
+… can think?
+
+0.78 (81)
+
+0.65 (68)
+
+… has to eat?
+
+0.27 (28)
+
+0.17 (18)
+
+Gender
+
+… understands when you say something?
+
+0.66 (69)
+
+0.74 (77)
+
+… can feel pain?
+
+0.46 (48)
+
+0.29 (30)
+
+through multiple L2 tutoring sessions with the robot? There was a
+
+T A B L E 3 Children's mean anthropomorphism scores (SD) before
+and after the tutoring sessions, separated for gender, age and
+condition
+Before
+
+After
+
+Male
+
+0.60 (0.20)
+
+0.53 (0.22)
+
+Female
+
+0.61 (0.19)
+
+0.62 (0.17)
+
+Age
+
+… can enjoy something?
+
+0.92 (96)
+
+0.92 (96)
+
+… grows?
+
+0.15 (16)
+
+0.12 (12)
+
+Younger
+
+0.62 (0.19)
+
+0.56 (0.20)
+
+0.59 (0.20)
+
+0.59 (0.20)
+
+No iconic gestures
+
+0.60 (0.19)
+
+0.59 (0.20)
+
+Iconic gestures
+
+0.61 (0.20)
+
+0.57 (0.20)
+
+… can be happy?
+
+0.94 (98)
+
+0.87 (90)
+
+Older
+
+… can recognize you?
+
+0.49 (51)
+
+0.89 (92)
+
+Condition
+
+Overall scores
+
+0.60 (60)
+
+0.57 (60)
+
+Note: The total number of children can be found between brackets.
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+403
+
+van den BERGHE ET AL.
+
+van den BERGHE ET AL.
+
+F I G U R E 4 Anthropomorphism scores
+as a function of gender before and after
+the tutoring sessions [Colour figure can be
+viewed at wileyonlinelibrary.com]
+
+positive and moderately strong correlation between scores before the
+tutoring sessions and after the tutoring sessions on the anthropomorphism questionnaire, r(104) = 0.505, p < .001, indicating moderate
+overall stability of anthropomorphism. However, there was also large
+variability among the children in whether and how the degree to
+which they anthropomorphized the robot changed before and after
+the tutoring sessions. Most children were consistent in the degree to
+which they anthropomorphized the robot (45 children), that is, their
+anthropomorphism scores during the two test moments were the
+same or differed by a maximum of one question. However, a relatively
+large number of children anthropomorphized the robot less after having interacted with it in the tutoring sessions (35 children). An increase
+in anthropomorphism also occurred, but was least common
+(24 children).
+We compared children's answers on the anthropomorphism questionnaire after the tutoring sessions to their answers before the
+tutoring sessions. Table 2 shows that children changed their opinion
+drastically on a number of questions. Fewer children believed after
+the tutoring sessions that the robot could feel it when being tickled,
+that it could feel pain, or that it could be sad. More children believed
+after the tutoring sessions that the robot could understand what they
+said, and that the robot could recognize them. However, a paired samples t-test did not show significant differences between children's
+overall scores before and after the tutoring sessions on the anthropomorphism questionnaire, t(103) = 1.53, p = .130, d = 0.15.
+
+F I G U R E 5 Age and the difference in anthropomorphism scores
+[Colour figure can be viewed at wileyonlinelibrary.com]
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+404
+
+TABLE 4
+
+Children's mean scores (SD) on the comprehension test
+
+Condition
+
+Immediate post-test
+
+Delayed post-test
+
+Iconic gestures
+
+29.47 (5.85)
+
+30.43 (6.22)
+
+No iconic gestures
+
+29.39 (6.08)
+
+29.75 (6.44)
+
+L2 words related? As already mentioned, we only included the children's comprehension-test scores to look at the relation with anthropomorphism. Table 4 displays children's scores on the comprehension
+test during both post-tests.
+Pearson's correlations showed that anthropomorphism before the
+
+Note: The maximum score on the comprehension test was 54.
+
+tutoring sessions was weakly related to the comprehension scores on
+
+T A B L E 5 Correlations between the anthropomorphism scores
+and the L2 comprehension scores
+
+relation was negative, suggesting that children who anthropomor-
+
+the immediate post-test, r(104) = −.208, p = .034 (see Table 5). The
+
+during the immediate post-test than children who anthropomorphized
+
+Comprehension
+
+the robot less. Anthropomorphism after the tutoring sessions was not
+
+Immediate
+post-test
+
+Delayed
+post-test
+
+Before tutoring
+sessions
+
+−0.208*
+
+−0.137
+
+After tutoring sessions
+
+−0.167
+
+0.074
+
+Change
+
+0.036
+
+0.212*
+
+Anthropomorphism
+
+phized the robot more prior to the lesson series knew fewer words
+
+related to comprehension scores on either post-test, both ps > .090.
+Children's change in anthropomorphism was weakly but significantly and positively related to the comprehension scores on the delayed post-test, r(104) = .212, p = .031. Thus, the larger the change
+towards anthropomorphism of the robot over time, the higher the
+performance on the delayed post-test and vice versa.
+
+Note: *p < .05.
+
+4
+
+DI SCU SSION
+
+|
+
+We then explored whether there were effects of gender, age, and
+condition (see Table 3 for the means). A mixed-design ANOVA with
+
+In the present study, we investigated (a) the degree to which 5-year-
+
+gender as a between-subject variable and test moment (before and
+
+old children anthropomorphized a social robot, (b) whether the degree
+
+after the tutoring sessions) as a within-subject variable showed an
+
+of their anthropomorphism changed after intensive experience with
+
+interaction between gender and test moment, F(1,102) = 4.35,
+
+the robot acting as a peer tutor in an L2 word learning intervention
+
+p = .039, ηp2 = 0.04. Boys assigned more human-like qualities to the
+
+and (c) whether anthropomorphism and the change therein were
+
+robot before interacting with the robot than after the tutoring ses-
+
+related to children's word knowledge.
+
+sions, t(54) = 2.28, p = .027, d = 0.32, while there was no difference in
+girls' anthropomorphism scores between the two test moments, t
+(48) = −0.54, p = .592, d = 0.07. The interaction is displayed in
+
+4.1
+
+|
+
+Anthropomorphism before tutoring sessions
+
+Figure 4. Moreover, an interaction effect with age was found. A
+linear-regression analysis was used to predict the difference score in
+
+We investigated the way children perceived the robot after a group-
+
+anthropomorphism from age. Age significantly predicted the change
+
+wise introduction session and prior to the tutoring sessions. Overall,
+
+in anthropomorphism over time, F(1,102) = 5.56, p = .020, with an R2
+
+children slightly more often agreed than disagreed with statements
+
+of .05. Children's predicted changed anthropomorphism score is equal
+
+attributing human-like properties to the robot, but there were large
+
+to −0.68 + 0.01 *(age in months). Figure 5 shows that a younger age
+
+differences between children in the degree to which they anthropo-
+
+was associated with a larger decrease in anthropomorphism over the
+
+morphized the robot, in line with research on individual differences in
+
+tutoring sessions. Participants' change in anthropomorphism increased
+
+the tendency to anthropomorphize objects (Epley et al., 2007, 2008).
+
+0.01 for each month of age.
+
+Moreover, children agreed more often with statements that attributed
+
+To explore whether children perceived the robot differently in the
+
+cognitive and, to some extent, also positive emotional states to the
+
+iconic-gesture condition compared to the condition without iconic
+
+robot than biological properties and negative emotional states, in line
+
+gestures over time, a mixed-design ANOVA with condition as a
+
+with previous work that also found that young children are likely to
+
+between-subject variable and test moment as a within-subject variable
+
+ascribe cognitive mental states to robots (Beran et al., 2011).
+
+revealed that condition did not interact with time, F(1,102) = 0.64,
+
+As this was not the scope of the current study, we did not present
+
+p = .434, ηp2 = 0.01. Thus, the use of iconic gestures apparently was not
+
+and analyse children's answers to the open-ended questions, which
+
+associated with a different change of children's anthropomorphizing of
+
+asked them to motivate why they perceived the robot as more or less
+
+the robot.
+
+human-like. However, we noticed that there were large differences
+between the children, similar to their overall anthropomorphism
+scores, in the way they explained why they perceived the robot in the
+
+3.3
+
+|
+
+Anthropomorphism and word knowledge
+
+way they did. For example, some children thought that the robot
+would be sad if children did not want to play with it, while other chil-
+
+Last, we investigated our third research question: How are children's
+
+dren thought the robot would be sad if it was in pain. Some children
+
+anthropomorphistic perceptions of the robot and their knowledge of
+
+thought that the robot could not be sad because it had no feelings,
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+405
+
+van den BERGHE ET AL.
+
+van den BERGHE ET AL.
+
+while other children thought the robot could not be sad because it
+
+suggest that the robot looked at them. The open-ended answers con-
+
+could not handle water and, thus, could not cry.
+
+firmed that possibility as their explanations for ‘Do you think Robin
+
+Contrary to our expectation that gestures would make the
+
+the robot can recognize you?’ changed from ‘Robin the robot has not
+
+robot more human-like, children did not anthropomorphize the
+
+met me yet’ to ‘Robin the robot said my name every time we played’.
+
+robot more when it used iconic gestures than when it only used
+
+It is likely that children were less inclined to believe that the robot
+
+deictic gestures. This might be due to our design of the experiment,
+
+could recognize them at the pre-test, simply because they had not yet
+
+as the robot used the same repetitive gesture each time it used a
+
+played intensively with the robot in a one-on-one setting yet at that
+
+target word. This repetitive behaviour could have reduced the posi-
+
+time. The same shift was found in the explanations of children for the
+
+tive effect of the gestures in respect to human-likeness of the
+
+question whether the robot can remember something: children
+
+robot. As humans do not use the same gesture each time they use
+
+started with many different explanations before the interaction like
+
+a target word, variation in gesture use might increase the human-
+
+‘No, Robin the robot has small ears so cannot remember much’, ‘Yes,
+
+likeness of the robot again, which would be interesting to explore
+
+Robin the robot looks like a human so can also remember things’ and
+
+further. It is possible that in this study the iconic gestures did not
+
+changed their explanation after the interaction to ‘Yes because Robin
+
+convey the concepts as clearly as they were intended and as a con-
+
+the robot remembered where we played before’.
+
+sequence of that, the gestures did not impact anthropomorphism.
+
+Regarding negative emotional states, fewer children believed at
+
+The robot used iconic gestures for each target word and some
+
+the post-test that the robot ‘could be sad’, which can also be
+
+words were more difficult to act out, such as ‘more’, for which an
+
+explained by the design of the lessons. Even though the robot
+
+iconic gesture is not that iconic. This is supported by the lack of dif-
+
+expressed happiness (by changing the colours of its eyes) and also
+
+ferences in learning outcomes (Vogt et al., 2019), in contrast to a
+
+when it was not specifically happy (by not changing the colours of its
+
+different study (de Wit et al., 2018), where the iconic gestures
+
+eyes), it never expressed negative emotions, such as sadness or
+
+clearly portrayed the meaning of the word and in which differences
+
+anger. Again, this was supported by the children's open answers
+
+in word knowledge were found.
+
+where they mentioned the robot's coloured eyes during the
+post-test questionnaire.
+Most children anthropomorphized the robot either to the same
+
+4.2 | Change in anthropomorphism after tutoring
+sessions
+
+degree or to a lesser degree during the post-test as compared to the
+pre-test. Fewer children increased their anthropomorphism of the
+robot. Explorative analyses showed that age and gender had an influ-
+
+We investigated whether the degree to which children anthropomor-
+
+ence on the change in anthropomorphism: Boys and younger children
+
+phized the robot had changed after the L2 tutoring sessions. There
+
+had a larger decrease in anthropomorphism than girls and older
+
+were no significant differences in overall anthropomorphism, and, sim-
+
+children.
+
+ilar to the pre-test, children on average slightly more agreed than dis-
+
+It is possible that decreases in anthropomorphism were due to
+
+agreed with attributing human-like properties to the robot at the
+
+children initially having high expectations of the robot's interactive
+
+post-test. However, with regard to specific properties some major
+
+(human-like) qualities, which the robot could not meet (Dautenhahn &
+
+changes were observed. Fewer children answered ‘yes’ to questions
+
+Werry, 2004). This effect could have affected younger children more
+
+attributing biological properties and negative emotions to the robot at
+
+as older children seem to anthropomorphize robots less in general
+
+the post-test as compared to the pre-test. This concerned, for exam-
+
+(van Straten et al., 2019). Moreover, gender influenced the change in
+
+ple, questions asking whether the robot ‘could feel it when being tick-
+
+anthropomorphism. It is possible that girls were more forgiving of the
+
+led’ or ‘could feel pain’. This is in line with the study of Sciutti
+
+robot's flaws than boys were and that girls therefore did not change
+
+et al. (2014), who found that the robot's sensory and motor properties
+
+their perception as much as boys (Tung, 2011).
+
+became more salient to children after they had interacted with a
+
+The robot was largely autonomous during the tutoring sessions,
+
+robot. At the post-test, more children answered ‘yes’ to questions
+
+but did not engage in personalized conversations with the children.
+
+addressing cognitive abilities, such as whether the robot can remem-
+
+The robot kept to the preprogrammed script and did not answer chil-
+
+ber something, understand them when they say something, and is able
+
+dren's questions. For children with high expectations regarding the
+
+to recognize them.
+
+human-likeness of the robot, this could have led them to decrease
+
+These changes together indicate an interesting shift in the way in
+
+their attribution of human-like properties to the robot. Conversely,
+
+which the robot is seen by children after intensive experience, namely
+
+children who had a less human-like perception of the robot prior to
+
+as a basically mechanical being but with positive mental states,
+
+the tutoring sessions may have had low expectations of the robot's
+
+whereas initially children showed more confusion regarding the bio-
+
+interactive (human-like) qualities. Since the robot displayed at least
+
+logical aspects and were less strongly convinced of the cognitive capa-
+
+some human-like behaviours, such as mentioning the child by name
+
+bilities of the robot. We believe that this shift is due to the way in
+
+(suggesting that it recognized the child) or indicating that it liked the
+
+which the lessons were designed. At the start of each lesson, the
+
+sessions, this could have increased children's beliefs about the robot
+
+robot greeted the children personally while mentioning their names,
+
+as human-like over repeated interactions. Thus, the observed changes
+
+referred to the previous lessons and tracked the children's faces to
+
+in anthropomorphism may not only have been dependent on the
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+406
+
+robot's behaviours (in line with Tung, 2016), but also on whether this
+
+do not capture the type of human-like properties children attribute to
+
+behaviour matched children's prior expectations.
+
+robots. We based our questionnaire on previous work (Jipson &
+
+A final possibility is that the observed change in anthropomorphism
+
+Gelman, 2007) and the questionnaire was found to be reliable, show-
+
+merely reflects the phenomenon of regression to the mean, with ini-
+
+ing also moderate stability between pre-test and post-test. The pro-
+
+tially higher scores decreasing and initially lower scores increasing at
+
+posed questionnaire can therefore be seen as a first step towards a
+
+post-test due to random measurement error. While we cannot fully rule
+
+validated questionnaire to measure children's anthropomorphism of
+
+out this explanation, it should be noted that more children decreased
+
+robots.
+
+rather than increased in anthropomorphism, and the analysis at the
+
+Furthermore, we do not know how the introduction of the robot
+
+item level revealed a complex but interpretable pattern of changes that
+
+before the pre-test affected the degree to which children anthropo-
+
+pointed to a shift in how children perceived the robot within a similar
+
+morphized the robot. To ensure that children could establish a com-
+
+overall anthropomorphism score at the pre- and post-test.
+
+mon ground with the robot and to decrease any anxiety, the
+introduction contained several statements about the properties of the
+robot that related to, amongst others the robot being a peer, speaking
+
+4.3
+
+|
+
+Anthropomorphism and word knowledge
+
+as a human, and looking as a human. It is possible that these statements may have biased children's perception towards anthropomor-
+
+Finally, we investigated whether anthropomorphism and word knowl-
+
+phism at the pre-test. However, administering the anthropomorphism
+
+edge were related. We found two weak but significant correlations.
+
+questionnaire prior to the introduction would have had other disad-
+
+Children's anthropomorphism of the robot at pre-test was negatively
+
+vantages. For instance, it would not have been clear whether chil-
+
+related to their comprehension scores at the immediate post-test,
+
+dren's perceptions were based on actual interactions with similar
+
+though not at the delayed post-test. In contrast, a change in percep-
+
+robots, with different robots, or were based on cartoons, movies or
+
+tion towards more anthropomorphism was positively related to word
+
+television programs, or just on imagination. The large variation in
+
+knowledge at the delayed post-test, though not at the immediate
+
+scores indicates that children still formed their own opinions about
+
+post-test.
+
+the robot, but we do not know whether these opinions were biased
+
+Possibly, both correlations point again to the role of children's
+
+towards anthropomorphizing. Note that despite this possible bias, the
+
+expectations about the robot as a human-like being. If children had
+
+changes in anthropomorphism we observed, in particular at the item
+
+low expectations of the robot and the robot exceeded these expecta-
+
+level, can be considered genuine and likely to relate to the intensive
+
+tions, they may have become more engaged, which is beneficial for
+
+experience children had with the robot during the lessons.
+
+learning. In contrast, children with high expectations which the robot
+
+Moreover, we could only conduct correlational analyses to exam-
+
+could not meet, may have become disappointed while working with
+
+ine how anthropomorphism and word knowledge were related. In
+
+the robot over several tutoring sessions.
+
+addition, we could not rule out that other child-related factors under-
+
+There are two important caveats concerning this link between
+
+lie the relations that were observed between children's anthropomor-
+
+anthropomorphism and word knowledge. First, the correlations,
+
+phism and word knowledge. Future research with field experiments is
+
+though statistically significant, were rather weak. Moreover, we did
+
+needed to test whether framing the robot as a machine or as similar
+
+not include child characteristics such as age and cognitive ability that
+
+to a human affects children's learning differently. A high level of
+
+could possibly underlie the observed correlations. It is possible that
+
+anthropomorphism in itself may not be required for successful
+
+the correlations are spurious and caused by a shared third factor. Sec-
+
+tutoring sessions, as no positive main effects of anthropomorphism
+
+ond, the present design did not allow for testing the causal direction
+
+were found in our study. On the other hand, managing children's
+
+of the observed correlations. Thus, it is not clear whether children
+
+expectations of robots especially at first, may be important, as lower
+
+learn more from the robot because they come to perceive it more as
+
+initial levels, indicating more reserved expectations of the robot, relate
+
+human-like, or that they come to perceive the robot as more human-
+
+to more word knowledge than when expectations are (too) high.
+
+like because they have successful language-learning interactions
+
+Furthermore, it is difficult to translate these results to other fields
+in which technology is used to support learning, such as VR, AR, XR,
+
+with it.
+
+or serious games. These types of technology often use virtual avatars,
+which users may anthropomorphize and which may thus be subject to
+
+4.4
+
+|
+
+Limitations, strengths and future research
+
+similar relations between anthropomorphism and learning outcomes
+as in our study. It is possible that, since no differences could be found
+
+The current study has several limitations. First, we did not use a stan-
+
+between the two different robot conditions, interacting with a robot
+
+dardized questionnaire for anthropomorphism because of our young
+
+over a longer period of time is more important for children's anthropo-
+
+target group. Standardized tests, such as the Godspeed questionnaire
+
+morphism than specific behaviours the robot displays, such as ges-
+
+(Bartneck et al., 2009), often use Likert scales or semantic differen-
+
+tures. Such behaviours of the robot can still be important for
+
+tials, which are too difficult for young children. In contrast, other mea-
+
+anthropomorphism, but mainly in short interactions (Tung, 2016) and
+
+sures that are specifically designed for young children and are
+
+after multiple exposures, the interaction itself becomes more impor-
+
+therefore more appropriate to use (Kory-Westlund & Breazeal, 2019),
+
+tant (e.g., the conversations or type of activity that the child and robot
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+407
+
+van den BERGHE ET AL.
+
+van den BERGHE ET AL.
+
+engage in). This would give an indication that our results can also be
+
+AC KNOWLEDG EME NT S
+
+translated to other fields. However, as we only measured children's
+
+This study was carried out within the L2TOR project, funded by the
+
+perception with a robot, we will need to investigate more thoroughly
+
+European Union's Horizon 2020 research and innovation program
+
+to determine whether this is the case.
+
+under grant agreement no. 688014. We are grateful to all members of
+
+Lastly, there are studies suggesting that presenting robots as
+
+the L2TOR team who have helped us conduct this study. We would
+
+human-like to children is undesirable (Broadbent, 2017), as a robot
+
+like to thank the children, their parents, and the schools for their par-
+
+expressing simulated feelings as real feelings is deceptive. Moreover,
+
+ticipation. Furthermore, we would like to thank Laurette Gerts,
+
+children may form relationships with robots that may come at the cost
+
+Annabella Hermans, Esmee Kramer, Madee Kruijt, Marije Merckens,
+
+of relationships with people. It is important for developers to make
+
+David Mogendorff, Sam Muntjewerf, Reinjet Oostdijk, Laura Pijpers,
+
+sure that children realize that robots are different from human beings.
+
+Chani Savelberg, Robin Sonders, Sirkka van Straalen, Sabine Verdult,
+
+Repeated exposure may more easily reveal a robot's flaws and thus
+
+Esmee Verheem, Pieter Wolfert, Hugo Zijlstra, and Michelle Zomers
+
+lead to decreases in anthropomorphism, but a subset of the children
+
+for their help in collecting data.
+
+in our study were found to increase in anthropomorphism, despite our
+robot's flaws. This is in line with a study finding higher anthropomor-
+
+CONFLIC T OF INT ER E ST
+
+phism after repeated exposure (Michaelis & Mutlu, 2018). Thus, even
+
+The authors declare no conflict of interest.
+
+after engaging with a ‘flawed’ robot, children may continue to anthropomorphize a robot. Therefore, researchers may want to consider
+
+PE ER RE VIEW
+
+whether presenting the robot as a social entity and suggesting it has
+
+The peer review history for this article is available at https://publons.
+
+cognitive, emotional or social abilities is required for their study. After
+
+com/publon/10.1111/jcal.12497.
+
+all, even though transparency about the robot's lack of psychological
+abilities leads to lower anthropomorphism, children may feel as close
+
+DATA AVAILABILITY STAT EMEN T
+
+to the robot as when children's expectations about the robot's psy-
+
+The data that support the findings of this study are available from the
+
+chological abilities are managed (van Straten et al., 2020).
+
+corresponding author upon reasonable request.
+
+Our study also has several strengths. It is one of the first studies
+to investigate anthropomorphism and changes therein after children
+
+OR CID
+
+had multiple interactions with a robot, and to relate it to children's
+
+Mirjam de Haas
+
+https://orcid.org/0000-0002-1001-8103
+
+word knowledge. Furthermore, we included a large sample of young
+children. Lastly, the different robot properties presented in the ques-
+
+ENDNOTES
+
+tionnaire allowed for a more thorough and differentiated understand-
+
+1
+
+https://aspredicted.org/6k93k.pdf
+
+ing of the ways in which children perceive robots.
+
+2
+
+Video recordings of all gestures are available at https://tiu.nu/l2torgestures
+
+5
+
+|
+
+C O N CL U S I O N
+
+The study presented in this article explored the degree to which children anthropomorphize a social robot, whether this had changed after
+seven tutoring sessions, and whether anthropomorphism correlated
+with children's word knowledge after these sessions. We found that
+children generally anthropomorphized the robot, although there were
+large differences between children in the degree to which they did.
+Our results showed that children's overall tendency to anthropomorphize had not significantly changed after the tutoring sessions, but the
+analysis at the item level revealed a complex pattern of changes indicating a shift within this overall tendency towards seeing the robot as
+more mechanical while at the same time attributing more cognitive
+capabilities to the robot. As an exploration, we found a weak but significant correlation between children's increased anthropomorphism
+and their word knowledge. Children who came to perceive the robot
+more as a human knew more words after the tutoring sessions.
+Although the causal direction of this relation is not yet clear, the
+results underscore the importance of taking children's anthropomorphism into consideration when designing robot-assisted tutoring
+sessions.
+
+RE FE RE NCE S
+Alemi, M., Meghdari, A., Basiri, N. M., & Taheri, A. (2015). The effect of
+applying humanoid robots as teacher assistants to help Iranian autistic
+pupils learn English as a foreign language. In International conference
+on social robotics (pp. 1–10). Cham: Springer.
+Barsalou, L. W. (2008). Grounded cognition. Annual Review of Psychology,
+59, 617–645.
+Bartneck, C., Kulic, D., Croft, E., & Zoghbi, S. (2009). Measurement instruments for the anthropomorphism, animacy, likeability, perceived intelligence, and perceived safety of robots. International Journal of Social
+Robotics, 1(1), 71–81.
+Belpaeme, T., Kennedy, J., Ramachandran, A., Scassellati, B., & Tanaka, F.
+(2018). Social robots for education: A review. Science Robotics, 3(21),
+eaat5954.
+Belpaeme, T., Vogt, P., Van den Berghe, R., Bergmann, K., Göksun, T., De
+Haas, M., … Papadopoulos, F. (2018). Guidelines for designing social
+robots as second language tutors. International Journal of Social Robotics, 10(3), 325–341.
+Beran, T. N., Ramirez-Serrano, A., Kuzyk, R., Fior, M., & Nugent, S. (2011).
+Understanding how children understand robots: Perceived animism in
+child–robot interaction. International Journal of Human-Computer Studies, 69(7–8), 539–550.
+Bernstein, D., & Crowley, K. (2008). Searching for signs of intelligent life:
+An investigation of young children's beliefs about robot intelligence.
+The Journal of the Learning Sciences, 17(2), 225–247.
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+408
+
+Biocca, F. (1997). The cyborg's dilemma: Progressive embodiment in virtual environments. Journal of Computer-Mediated Communication, 3(2),
+JCMC324.
+Boerma, T., Chiat, S., Leseman, P., Timmermeister, M., Wijnen, F., &
+Blom, E. (2015). A quasi-universal nonword repetition task as a
+diagnostic tool for bilingual children learning Dutch as a second language. Journal of Speech, Language, and Hearing Research, 58(6),
+1747–1760.
+Breazeal, C., Kidd, C. D., Thomaz, A. L., Hoffman, G., & Berlin, M.
+(2005). Effects of nonverbal communication on efficiency and
+robustness in human-robot teamwork. In 2005 IEEE/RSJ International Conference on Intelligent Robots and Systems, Canada: Edmonton, Alta. (pp. 708–713).
+Broadbent, E. (2017). Interactions with robots: The truths we reveal about
+ourselves. Annual Review of Psychology, 68, 627–652.
+Caporael, L. R. (1986). Anthropomorphism and mechanomorphism: Two
+faces of the human machine. Computers in Human Behavior, 2(3),
+215–234.
+Chandra, S., Paradeda, R., Yin, H., Dillenbourg, P., Prada, R., & Paiva, A.
+(2018, March). Do children perceive whether a robotic peer is learning
+or not?. In Proceedings of the 2018 ACM/IEEE International Conference
+on Human-Robot Interactions, Chicago, IL, USA. (pp. 41–49).
+Dautenhahn, K. (2004, September). Robots we like to live with?! – A
+developmental perspective on a personalized, life-long robot companion. In RO-MAN 2004. 13th IEEE International Workshop on
+Robot and Human Interactive Communication, Gyeongju, Korea
+(South). (pp. 17–22).
+Dautenhahn, K., & Werry, I. (2004). Towards interactive robots in autism
+therapy: Background, motivation and challenges. Pragmatics & Cognition, 12(1), 1–35.
+de Nooijer, J. A., van Gog, T., Paas, F., & Zwaan, R. A. (2013). Effects of imitating gestures during encoding or during retrieval of novel verbs on
+children's test performance. Acta Psychologica, 144(1), 173–179.
+de Wit, J., Schodde, T., Willemsen, B., Bergmann, K., de Haas, M., Kopp, S.,
+… Vogt. (2018, March). The effect of a robot's gestures and adaptive
+tutoring on children's acquisition of second language vocabularies. In
+Proceedings of the 2018 ACM/IEEE International Conference on HumanRobot Interaction, Chicago, IL, USA. (pp. 50–58).
+DiSalvo, C. F., Gemperle, F., Forlizzi, J., & Kiesler, S. (2002, June). All robots
+are not created equal: the design and perception of humanoid
+robot heads. In Proceedings of the 4th Conference on Designing Interactive
+Systems: Processes, Practices, Methods, and Techniques, London, England.
+(pp. 321–326).
+Duffy, B. R. (2003). Anthropomorphism and the social robot. Robotics and
+Autonomous Systems, 42(3–4), 177–190.
+Dunn, L. M., Dunn, L. M., & Schlichting, L. (2005). Peabody Picture Vocabulary Test-III-NL, Dutch version by Liesbeth Schlichting. Amsterdam:
+Harcourt Assessment B.V.
+Epley, N., Waytz, A., Akalis, S., & Cacioppo, J. T. (2008). When we need a
+human: Motivational determinants of anthropomorphism. Social Cognition, 26(2), 143–155.
+Epley, N., Waytz, A., & Cacioppo, J. T. (2007). On seeing human: A threefactor theory of anthropomorphism. Psychological Review, 114(4),
+864–886.
+Eyssel, F., Kuchenbrandt, D., Hegel, F., & de Ruiter, L. (2012, September).
+Activating elicited agent knowledge: How robot and user features
+shape the perception of social robots. In Proceedings of the 2012 ROMAN, Paris, France. (pp. 851–857).
+Fink, J. (2012, October). Anthropomorphism and human likeness in the
+design of robots and human-robot interaction. In International Conference on Social Robotics, Chengdu, China. (pp. 199–208).
+Hegel, F., Krach, S., Kircher, T., Wrede, B., & Sagerer, G. (2008, August).
+Understanding social robots: A user study on anthropomorphism. In
+The 17th IEEE International Symposium on Robot and Human Interactive
+Communication, Munich, Germany. (pp. 574–579).
+
+409
+
+Hockema, S. A., & Smith, L. B. (2009). Learning your language, outside-in
+and inside-out. Linguistics, 47(2), 453–479.
+Iverson, J. M. (2010). Developing language in a developing body: The relationship between motor development and language development.
+Journal of Child Language, 37(2), 229–261.
+Jipson, J. L., & Gelman, S. A. (2007). Robots and rodents: Children's inferences about living and nonliving kinds. Child Development, 78(6),
+1675–1688.
+Kahn, P. H., Jr., Kanda, T., Ishiguro, H., Freier, N. G., Severson, R. L.,
+Gill, B. T., … Shen, S. (2012). “Robovie, you'll have to go into the closet
+now”: Children's social and moral relationships with a humanoid robot.
+Developmental Psychology, 48(2), 303–314.
+Kahn, P. H., Gary, H. E., & Shen, S. (2013). Children's social relationships
+with current and near-future robots. Child Developmental Perspectives,
+7(1), 32–37.
+Kanda, T., Hirano, T., Eaton, D., & Ishiguro, H. (2004). Interactive robots as
+social partners and peer tutors for children: A field trial. Human–
+Computer Interaction, 19(1–2), 61–84.
+Kanero, J., Geçkin, V., Oranç, C., Mamus, E., Küntay, A. C., & Göksun, T.
+(2018). Social robots for early language learning: Current evidence and
+future directions. Child Development Perspectives, 12(3), 146–151.
+Kelly, S. D., McDevitt, T., & Esch, M. (2009). Brief training with co-speech
+gesture lends a hand to word learning in a foreign language. Language
+and Cognitive Processes, 24(2), 313–334.
+Kennedy, J., Lemaignan, S., Montassier, C., Lavalade, P., Irfan, B.,
+Papadopoulos, F., … & Belpaeme, T. (2017, March). Child speech recognition in human-robot interaction: Evaluations and recommendations. In Proceedings of the 2017 ACM/IEEE International Conference on
+Human-Robot Interactions, Vienna, Austria. (pp. 82–90).
+Kidd, C. D. (2003). Sociable robots: The role of presence and task in humanrobot interaction (Doctoral dissertation), Cambridge, Massachusetts,
+USA: Massachusetts Institute of Technology.
+Kory-Westlund, J. M., & Breazeal, C. (2019, June). Assessing children's perceptions and acceptance of a social robot. In Proceedings of the 18th
+ACM International Conference on Interaction Design and Children, Boise
+ID, USA. (pp. 38–50).
+Kory-Westlund, J. M., Martinez, M., Archie, M., Das, M., & Breazeal, C.
+(2016, August). Effects of framing a robot as a social agent or as a
+machine on children's social behavior. In 2016 25th IEEE International
+Symposium on Robot and Human Interactive Communication, New York
+City, USA. (pp. 688–693).
+Leite, I., Martinho, C., & Paiva, A. (2013). Social robots for long-term interaction: A survey. International Journal of Social Robotics, 5(2), 291–308.
+Leite, I., Pereira, A., & Lehman, J.F. (2017). Persistent memory in repeated
+child–robot conversations. In Proceedings of the 16th International Conference on Interaction Design and Children, New York, USA.
+(pp 238–247).
+Lemaignan, S., Fink, J., & Dillenbourg, P. (2014, March). The dynamics of
+anthropomorphism in robotics. In 2014 9th ACM/IEEE International
+Conference on Human-Robot Interaction, Bielefeld, Germany.
+(pp. 226–227).
+Lemaignan, S., Fink, J., Dillenbourg, P., & Braboszcz, C. (2014). The cognitive correlates of anthropomorphism. In 2014 Human-Robot Interaction
+Conference, Workshop “HRI: A bridge between Robotics and Neuroscience”, Bielefeld, Germany.
+Lemaignan, S., Fink, J., Mondada, F., & Dillenbourg, P. (2015, October).
+You're doing it wrong! studying unexpected behaviors in child-robot
+interaction. In International Conference on Social Robotics, Paris, France.
+(pp. 390–400).
+Macedonia, M., Müller, K., & Friederici, A. D. (2011). The impact of iconic
+gestures on foreign language word learning and its neural substrate.
+Human Brain Mapping, 32(6), 982–998.
+Marulis, L. M., & Neuman, S. B. (2010). The effects of vocabulary intervention on young children's word learning: A meta-analysis. Review of Educational Research, 80(3), 300–335.
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+van den BERGHE ET AL.
+
+Michaelis, J. E., & Mutlu, B. (2018). Reading socially: Transforming the inhome reading experience with a learning-companion robot. Science
+Robotics, 3(21), eaat5999.
+Monaco, C., Mich, O., Ceol, T., & Potrich, A. (2018). Investigating mental
+representations about robots in preschool children. arXiv preprint
+arXiv:1806.03248, Trondheim, Norway.
+Moon, A., Troniak, D. M., Gleeson, B., Pan, M. K., Zheng, M., Blumer, B. A.,
+… & Croft, E.A. (2014, March). Meet me where I'm gazing: How shared
+attention gaze affects human-robot handover timing. In Proceedings of
+the 2014 ACM/IEEE International Conference on Human-Robot Interactions, Bielefeld, Germany. (pp. 334–341).
+Mulder, H., Hoofs, H., Verhagen, J., van der Veen, I., & Leseman, P. P.
+(2014). Psychometric properties and convergent and predictive validity of an executive function test battery for two-year-olds. Frontiers in
+Psychology, 5, 733.
+Obaid, M., Barendregt, W., Alves-Oliveira, P., Paiva, A., & Fjeld, M. (2015).
+Designing robotic teaching assistants: Interaction design students' and
+children's views. In International Conference on Social Robotics, Paris,
+France. (pp. 502–511).
+Oudgenoeg-Paz, O., Leseman, P. P., & Volman, M. C. J. M. (2015). Exploration as a mediator of the relation between the attainment of motor
+milestones and the development of spatial cognition and spatial language. Developmental Psychology, 51(9), 1241–1253.
+Pereira, A., Martinho, C., Leite, I., & Paiva, A. (2008, May). iCat, the chess
+player: The influence of embodiment in the enjoyment of a game. In
+Proceedings of the 7th International Joint Conference on Autonomous
+Agents and Multiagent Systems, Estoril Portugal. (Vol. 3, pp.
+1253–1256).
+Phillips, E., Zhao, X., Ullman, D., & Malle, B. F. (2018, March). What is humanlike? Decomposing robots' human-like appearance using the Anthropomorphic roBOT (ABOT) database. In Proceedings of the 2018 ACM/IEEE
+International Conference on Human-Robot Interactions, Chicago, IL, USA.
+(pp. 105–113).
+Pot, E., Monceaux, J., Gelin, R., & Maisonnier, B. (2009, September).
+Choregraphe: A graphical tool for humanoid robot programming. In
+RO-MAN 2009 - The 18th IEEE International Symposium on Robot and
+Human Interactive Communication, Toyama, Japan. (pp. 46–51).
+Riek, L. D., Rabinowitch, T. C., Chakrabarti, B., & Robinson, P. (2009,
+March). How anthropomorphism affects empathy toward robots. In
+Proceedings of the 4th ACM/IEEE International Conference on Human
+Robot Interactions, La Jolla, California, USA. (pp. 245–246).
+Salem, M., Eyssel, F., Rohlfing, K., Kopp, S., & Joublin, F. (2013). To err is
+human (-like): Effects of robot gesture on perceived anthropomorphism
+and likability. International Journal of Social Robotics, 5(3), 313–323.
+Sciutti, A., Rea, F., & Sandini, G. (2014). When you are young, (robot's)
+looks matter. Developmental changes in the desired properties of a
+robot friend. In 2014 RO-MAN: The 23rd IEEE International Symposium
+on Robot and Human Interactive Communication, Edinburgh, Scotland.
+(pp. 567–573).
+Tellier, M. (2008). The effect of gestures on second language
+memorisation by young children. Gesture, 8(2), 219–235.
+
+van den BERGHE ET AL.
+
+Topping, K. J. (2005). Trends in peer learning. Educational Psychology, 25
+(6), 631–645.
+Tung, F. W. (2011, July). Influence of gender and age on the attitudes of
+children towards humanoid robots. In International Conference on
+Human-Computer Interaction, Orlando, Florida, USA. (pp. 637–646).
+Tung, F. W. (2016). Child perception of humanoid robot appearance and behavior. International Journal of Human-Computer Interaction, 32(6), 493–502.
+van den Berghe, R., Verhagen, J., Oudgenoeg-Paz, O., van der Ven, S., &
+Leseman, P. (2019). Social robots for language learning: A review.
+Review of Educational Research, 89(2), 259–295.
+van Straten, C. L., Peter, J., & Kühne, R. (2019). Child-robot relationship
+formation: A narrative review of empirical research. International Journal of Social Robotics, 12, 325–344.
+van Straten, C. L., Peter, J., Kühne, R., & Barco, A. (2020). Transparency
+about a robot's lack of human psychological capacities: Effects on
+child-robot perception and relationship formation. ACM Transactions
+on Human-Robot Interaction (THRI), 9(2), 1–22.
+Verhagen, J., van den Berghe, R., Oudgenoeg-Paz, O., Küntay, A., &
+Leseman, P. (2019). Children's reliance on the non-verbal cues of a
+robot versus a human. PLoS One, 14(12), e0217833.
+Vogt, P., van den Berghe, R., de Haas, M., Hoffman, L., Kanero, J.,
+Mamus, E., … & Papadopoulos, F. (2019, March). Second language
+tutoring using social robots: a large-scale study. In 2019 14th ACM/IEEE International Conference on Human-Robot Interaction (HRI), Daegu,
+Korea: IEEE. (pp. 497–505).
+Vygotsky, L. (1978). Interaction between learning and development. In M.
+Cole, V. John-Steiner, S. Scriber, & E. Souberman (Eds.), Mind in society:
+The development of higher psychological processes (pp. 79–97). Cambridge, MA: Harvard University Press.
+Waytz, A., Morewedge, C. K., Epley, N., Monteleone, G., Gao, J. H., &
+Cacioppo, J. T. (2010). Making sense by making sentient: Effectance
+motivation increases anthropomorphism. Journal of Personality and
+Social Psychology, 99(3), 410–435.
+Wellsby, M., & Pexman, P. M. (2014). Developing embodied cognition:
+Insights from children's concepts and language processing. Frontiers in
+Psychology, 5, 506.
+Zaga, C., de Vries, R. A., Li, J., Truong, K. P., & Evers, V. (2017, May). A simple nod of the head: The effect of minimal robot movements on children's perception of a low-anthropomorphic robot. In Proceedings of
+the 2017 CHI Conference on Human Factors in Computing Systems, Denver, Colorado, USA. (pp. 336–341).
+
+How to cite this article: van den Berghe R, de Haas M,
+Oudgenoeg-Paz O, et al. A toy or a friend? Children's
+anthropomorphic beliefs about robots and how these relate to
+second-language word learning. J Comput Assist Learn. 2021;
+37:396–410. https://doi.org/10.1111/jcal.12497
+
+13652729, 2021, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jcal.12497 by Schweizerische Akademie Der, Wiley Online Library on [29/10/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+410
+
+

@@ -17,7 +17,7 @@
 
 
 ### 👩‍🏫 For Teachers
-- [Teachers Guide - to be updated ](BuildBot/Curricula-Material/Developped-curriculum/Teaching-materials/BuildBot/Teachers_Guide.md)
+- [Teachers Guide - to be updated ](https://github.com/OlgaMuss/BuildBot/blob/main/Teaching%20materials/Teachers_Guide.md)
 - **Week 1:** Slides Presentations [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
 - **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) | Machine Learning Types Worksheet [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30) | Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30)
 - **Week 3:** Slides Presentations [German](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) | AI or not AI Worksheet [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)

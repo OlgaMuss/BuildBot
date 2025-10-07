@@ -20,7 +20,7 @@
 - [Teachers Guide - to be updated ](BuildBot/Curricula-Material/Developped-curriculum/Teaching-materials/BuildBot/Teachers_Guide.md)
 - **Week 1:** Slides Presentations [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
 - **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) | Machine Learning Types Worksheet [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30) | Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30)
-- **Week 3:** Slides Presentations [Slides](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) | AI or not AI Worksheet [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
+- **Week 3:** Slides Presentations [German](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) | AI or not AI Worksheet [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
 - **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Week 5:** Slides Presentations [Slides](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Week 6:** Slides Presentations [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
@@ -31,12 +31,12 @@
 - [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
 - [Marty Programming Web Resources](Marty-programming/)
 - [Marty Online Coding App](https://codemarty.com)
+- [Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
 
 
 #### Support materials
 - [Marty Getting Started Guide](https://userguides.robotical.io/martyv2/quickstart)
 - [Marty Robotical Lessons Overview](BuildBot/Curricula-Material/Developped-curriculum/Prep-files/Marty-Robotical-lessons-overview.md)
-- [Week 1-6 Detailed Curricula (to be added)]
 
 
 ### 🎯 For LLM Framework

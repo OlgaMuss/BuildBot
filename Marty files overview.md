@@ -27,7 +27,7 @@
 
 
 #### 📚 Other teaching materials 
-- [Marty Building Instructions (to be updated)](BuildBot/Building-Marty/Marty-Robot-Building-Instructions.pdf)
+- [Marty Building Instructions ](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30)
 - [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
 - [Marty Programming Web Resources](Marty-programming/)
 - [Marty Online Coding App](https://codemarty.com)

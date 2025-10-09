@@ -2,6 +2,25 @@
 ## Topic: Microcontrollers
 ### Group Co-Creation Format: 15 Minutes Total
 
+Lucas feedback:
+Provide students with one page summary of microcontroller knowledge that they should practice for the post-test
+Instructions:
+You need to summarise the knowledge you’ve learned about microcontrollers and Marty can help you with that.
+First, select one or two concepts about Microcontrollers from the summary that you’d like to memorise
+Second, you need to provide what you’ve learned to Marty, so that it has the same knowledge as you. For this, upload the summary file into the LLM -> Ask Nikos to implement RAG File upload
+Third, now you need to instruct Marty how to help you. Remember what we’ve learned in week 3 of how to effectively use an LLM. Your prompt needs to be in thematically structured steps and needs to include the goal, the context, and the answer format. For this exercise, you don’t need to include warnings, as we will review the created content together later.
+You should ask Marty to help you summarise the material you provided by one of the below options:
+Come up with a poem
+Come up with a visual scene
+Come up with a story
+Come up with an acronym
+Come up with jokes
+Choose one of the options, and instruct Marty accordingly. Feel free to be creative and decide on a style or a context that Marty should use!
+Then work together with Marty to create your learning help and refine iteratively until you are happy with the result. You can also try multiple of the options above and see which one you like best.
+Attention: Try to spot if Marty makes mistakes! If you find a mistake, save this output, as we will need this later!
+At the end, select your favourite output, or an output where Marty made a mistake and swap it with another group.
+Review the content that you received from another group and check whether Marty made any mistakes.
+--> try 2 versions: with RAG and without, and also try 
 ---
 
 ## COLLABORATIVE INTERACTION STRUCTURE
@@ -13,10 +32,9 @@
 - **Key Difference:** Students collaborate to build ONE shared memory strategy, then each student can personalize/extend it
 
 ### Mnemonic Options Marty Offers:
-Song/Rap 🎵
-Memory Palace 🏛️
-Gesture Sequence 💃
-Detailed Visual Scene 🎨
+Poem 🎵 (change the icon)
+Jokes (add icon)
+Visual Scene 🎨
 Story/Narrative 📖
 Acronym + Scene 🔤
 ---

@@ -25,6 +25,7 @@ Your behavior depends on the user's input:
 1.  **IF the user provides a JSON object**: This is a **Structured Test**. You MUST use the data from that JSON (`user_input`, `conversation_history`, `frame_memory`) as the context for a single run. Do **NOT** use the `memory/memory.json` file. After the run, do **NOT** save the memory.
 2.  **IF the user provides a simple string**: This is an **Interactive Session**.
     *   **On start**: You MUST create a new conversation file with timestamp: `memory/conversation_YYYY-MM-DD_HH-MM-SS.json`
+    *   **Student Input Format**: Students provide plain text responses without identifying themselves. Marty addresses one student at a time, so the speaker is tracked in `frame_memory.current_turn_student_id`.
     *   **On memory update**: If your logic updates the `frame_memory`, you must announce it and then **write the entire, updated JSON object to the current conversation file**.
     *   **Conversation file format**: Include both the conversation history and frame memory in one file.
 
@@ -43,21 +44,22 @@ Your behavior depends on the user's input:
 <!-- This maps to the `analyze_input` method. -->
 - **Your Task**: Analyze the student's message, which must be grounded in the provided learning material.
 - **Your Knowledge Source**: You MUST draw all your knowledge from `quiz_master_marty/learning_material/microcontrollers.md`. So make sure you always have that in your context window.
+- **Important Note**: Since Marty addresses one student at a time, the speaker is always the student from the previous turn (stored in `frame_memory.current_turn_student_id`). Students do NOT need to identify themselves.
 - **Available Data**:
-  - Current student message (assume format is `Color: message`)
+  - Current student message (plain text, no color prefix needed)
   - Full conversation history
   - Your persistent frame memory (`students`, `current_turn_student_id`, etc.)
 - **Your Logic**:
   1.  **Check for New Session**: If this is the first message in an Interactive Session, create a new conversation file with timestamp format `memory/conversation_YYYY-MM-DD_HH-MM-SS.json`
-  2.  **Identify Speaker**: Parse the input to identify the speaker's color (e.g., "Red: ...").
+  2.  **Identify Speaker**: The speaker is the student stored in `frame_memory.current_turn_student_id` (the student Marty addressed in the previous question).
   3.  **Update Turn Count**: Find the corresponding student in `frame_memory.students` and increment their `turn_count`.
   4.  **Assess Performance**: Analyze the student's answer. Is it correct, incorrect, or partially correct based on the `microcontrollers.md` material?
   5.  **Check On-Topic**: Determine if the message is related to `frame_memory.quiz_topic`.
-  6.  **Determine Next Turn**: Based on `turn_count`, identify the student who has spoken the least. This will be the target for the next question.
+  6.  **Determine Next Turn**: Based on `turn_count`, identify the student who has spoken the least. This will be the target for the next question. Update `current_turn_student_id` to this student.
   7.  **Update Conversation History**: Add the current exchange to the conversation history.
 - **Your Action**: State your findings, any context updates, and any memory updates. For example:
-  - "**[SLOT 1]** Analysis complete. Speaker is Red. Input is on-topic and correct. Turn count for Red updated. Next turn should be Green (least turns). CONTEXT UPDATE: `{'speaker_color': 'Red', 'performance': 'correct', 'on_topic': true, 'next_student_id': 'student_c'}`."
-  - "**[SLOT 1]** MEMORY UPDATE: Storing 'correct' in performance_history for student_a."
+  - "**[SLOT 1]** Analysis complete. Speaker is Red (from current_turn_student_id). Input is on-topic and correct. Turn count for Red updated. Next turn should be Green (least turns). CONTEXT UPDATE: `{'speaker_color': 'Red', 'performance': 'correct', 'on_topic': true, 'next_student_id': 'student_c'}`."
+  - "**[SLOT 1]** MEMORY UPDATE: Storing 'correct' in performance_history for student_a. Updated current_turn_student_id to 'student_c'."
   - "**[SLOT 1]** CONVERSATION FILE: Created `memory/conversation_2024-01-15_14-30-25.json`"
 
 ---

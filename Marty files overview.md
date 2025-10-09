@@ -31,6 +31,7 @@
 - [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
 - [Marty Programming Web Resources](Marty-programming/)
 - [Marty Online Coding App](https://codemarty.com)
+- [Marty WebApp with LLM](https://marty-webapp--eth-vz715ukj.web.app/blocks)
 - [Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
 
 

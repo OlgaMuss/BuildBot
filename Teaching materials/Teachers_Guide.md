@@ -19,6 +19,7 @@
 - **Marty Building Instructions:** Building guide in development - will be provided before Week 1
 - **Marty Getting Started Guide:** [Robotical Quick Start](https://userguides.robotical.io/martyv2/quickstart)
 - **Marty Online Coding App:** [Code Marty](https://codemarty.com)
+- **Marty Dancing workbook:** [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Robotical Learning Portal:** [Marty v2 Learning Resources](https://learn.robotical.io/lessons/martyVersions/2)
 
 ---

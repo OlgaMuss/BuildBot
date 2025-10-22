@@ -27,7 +27,7 @@
 
 
 #### 📚 Other teaching materials 
-- [Marty Building Instructions ](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30)
+- Marty Building Instructions [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
 - [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
 - [Marty Programming Web Resources](Marty-programming/)
 - [Marty Online Coding App](https://codemarty.com)

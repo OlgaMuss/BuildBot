@@ -16,11 +16,18 @@
 
 ### Additional Resources
 
-- **Marty Building Instructions:** Building guide in development - will be provided before Week 1
+- **Marty Building Instructions:** [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
 - **Marty Getting Started Guide:** [Robotical Quick Start](https://userguides.robotical.io/martyv2/quickstart)
-- **Marty Online Coding App:** [Code Marty](https://codemarty.com)
+- **Marty Online Coding App:** [Code Marty](https://marty-webapp--eth-vz715ukj.web.app/blocks)
 - **Marty Dancing workbook:** [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Robotical Learning Portal:** [Marty v2 Learning Resources](https://learn.robotical.io/lessons/martyVersions/2)
+#### 📚 Other teaching materials 
+- Marty Building Instructions [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
+- [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
+- [Marty Programming Web Resources](Marty-programming/)
+- [Marty Online Coding App](https://codemarty.com)
+- [Marty WebApp with LLM](https://marty-webapp--eth-vz715ukj.web.app/blocks)
+- [Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
 
 ---
 

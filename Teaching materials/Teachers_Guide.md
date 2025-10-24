@@ -10,26 +10,25 @@
 - **Week 1:** Slides Presentations [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
 - **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) | Machine Learning Types Worksheet [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30) | Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30)
 - **Week 3:** Slides Presentations [German](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) | AI or not AI Worksheet [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
-- **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
-- **Week 5:** Slides Presentations [Slides](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ) | Marty Dancing workbook [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **Week 5:** Slides Presentations [English](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Week 6:** Slides Presentations [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 
-### Additional Resources
+### Student Guides 
+- **Marty Building Instructions:** [German](https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30)
+- **Marty Student Web Coding Guide** [German]  | [English](https://www.canva.com/design/DAG2roHNQZk/C2NIsftU8qNhHRvfkF_eYQ/edit)
+- **Marty Arduino Guide** [German]  | [English](https://www.canva.com/design/DAG2sWtLs_Q/aLaCZNpZA_F1RiKWTigYJA/edit)
 
-- **Marty Building Instructions:** [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
-- **Marty Getting Started Guide:** [Robotical Quick Start](https://userguides.robotical.io/martyv2/quickstart)
-- **Marty Online Coding App:** [Code Marty](https://marty-webapp--eth-vz715ukj.web.app/blocks)
-- **Marty Dancing workbook:** [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
-- **Robotical Learning Portal:** [Marty v2 Learning Resources](https://learn.robotical.io/lessons/martyVersions/2)
-#### 📚 Other teaching materials 
-- Marty Building Instructions [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
-- [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
-- [Marty Programming Web Resources](Marty-programming/)
-- [Marty Online Coding App](https://codemarty.com)
-- [Marty WebApp with LLM](https://marty-webapp--eth-vz715ukj.web.app/blocks)
-- [Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
+### Support materials
+- [**Marty Getting Started Guide** ](https://userguides.robotical.io/martyv2/quickstart)
+- [**Marty Online Coding Website with Speaking mode** ](https://marty-webapp--eth-vz715ukj.web.app/blocks)
+- [**Marty Programming Web Resources:**](Marty-programming/)
+- [**Robotical Learning Portal**](https://learn.robotical.io/lessons/martyVersions/2)
+- **Arduino links**
+  -[Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
+  - [Arduino Nano ESP32 Cheatsheet](https://docs.arduino.cc/tutorials/nano-esp32/cheat-sheet/)
 
----
+
 
 ## 📚 Overview
 
@@ -116,7 +115,7 @@ By the end of this curriculum, students will:
 
 #### Teaching Materials in W1
 - **Week 1 Slides Presentations:** [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
-- **Marty Building Guide:** Building guide in development - will be provided before Week 1
+- **Marty Building Instructions:** [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
 - **Marty Getting Started Guide:** [Quick Start](https://userguides.robotical.io/martyv2/quickstart)
 
 #### Overview of Assessments in W1

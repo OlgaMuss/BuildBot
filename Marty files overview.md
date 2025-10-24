@@ -25,19 +25,21 @@
 - **Week 5:** Slides Presentations [Slides](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Week 6:** Slides Presentations [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 
+### Student Guides 
+- **Marty Building Instructions:** [German](https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30)
+- **Marty Student Web Coding Guide** [German]  | [English](https://www.canva.com/design/DAG2roHNQZk/C2NIsftU8qNhHRvfkF_eYQ/edit)
+- **Marty Arduino Guide** [German]  | [English](https://www.canva.com/design/DAG2sWtLs_Q/aLaCZNpZA_F1RiKWTigYJA/edit)
 
-#### 📚 Other teaching materials 
-- Marty Building Instructions [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
+#### 📚 Support materials
+- [Marty Getting Started Guide](https://userguides.robotical.io/martyv2/quickstart)
+- [Marty Robotical Lessons Overview](BuildBot/Curricula-Material/Developped-curriculum/Prep-files/Marty-Robotical-lessons-overview.md)
 - [Marty User Guide](https://userguides.robotical.io/martyv2/userguides/start)
 - [Marty Programming Web Resources](Marty-programming/)
 - [Marty Online Coding App](https://codemarty.com)
 - [Marty WebApp with LLM](https://marty-webapp--eth-vz715ukj.web.app/blocks)
-- [Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
-
-
-#### Support materials
-- [Marty Getting Started Guide](https://userguides.robotical.io/martyv2/quickstart)
-- [Marty Robotical Lessons Overview](BuildBot/Curricula-Material/Developped-curriculum/Prep-files/Marty-Robotical-lessons-overview.md)
+- **Arduino links**
+  -[Arduino Nano ESP32 with Header](https://www.reichelt.de/de/de/shop/produkt/arduino_nano_esp32_mit_header_esp32-s3_usb-c-353087?q=%2Fapi%2Fuser%2FcountrySelect%2Fde%2Fhttps%3A%2F%2Fwww.reichelt.com%2Fch%2Fde%2Fshop%2Fprodukt%2Farduino_nano_esp32_mit_header_esp32-s3_usb-c-353087#open-modal-image-big-slider)
+  - [Arduino Nano ESP32 Cheatsheet](https://docs.arduino.cc/tutorials/nano-esp32/cheat-sheet/)
 
 
 ### 🎯 For LLM Framework
@@ -65,13 +67,7 @@
 
 ---
 
-
-### 🔧 Utility Scripts (lost)
-- [extract_pdf.py](extract_pdf.py) - PDF extraction utility
-- [extract_pdf_ocr.py](extract_pdf_ocr.py) - OCR PDF extraction
-- [extract_pptx.py](extract_pptx.py) - PowerPoint extraction
-
 ---
 
-*Last Updated: Oct 6th 2025*  
+*Last Updated: Oct 23th 2025*  
 

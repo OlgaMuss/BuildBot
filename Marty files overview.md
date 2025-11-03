@@ -30,10 +30,10 @@
 - **Marty Student Web Coding Guide** [German]  | [English](https://www.canva.com/design/DAG2roHNQZk/C2NIsftU8qNhHRvfkF_eYQ/edit)
 - **Marty Arduino Guide** [German]  | [English](https://www.canva.com/design/DAG2sWtLs_Q/aLaCZNpZA_F1RiKWTigYJA/edit)
 - **Social Robots Student Learning Guide** [German]  | [English](https://www.canva.com/design/DAG2sjJ5Ji0/kVAvPR0xPAAfVRRfY3GSsA/edit)
-- - **AI Literacy Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2sq3HcBs/Vyw4OhXq9Qpx2yQ_OUgrWA/edit)
-- - **Programming with Marty Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2su4XO8A/9hkRTwzNoWhKVEqB_1OZ3Q/edit)
-- - **Microcontrollers and Sensors Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2s8vFHBA/H19PcS_5IBMvqkNjtnLnZw/edit)
-- - **BuildBot Research Project Student Guide** [German](https://www.canva.com/design/DAG2tBenqxQ/Vl9wssH4Qtrq3gWU0R-S0Q/edit) | [English](https://www.canva.com/design/DAG2tKw6CBI/f3gsSMbm65-g7fFqoTccYA/edit)
+- **AI Literacy Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2sq3HcBs/Vyw4OhXq9Qpx2yQ_OUgrWA/edit)
+- **Programming with Marty Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2su4XO8A/9hkRTwzNoWhKVEqB_1OZ3Q/edit)
+- **Microcontrollers and Sensors Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2s8vFHBA/H19PcS_5IBMvqkNjtnLnZw/edit)
+- **BuildBot Research Project Student Guide** [German](https://www.canva.com/design/DAG2tBenqxQ/Vl9wssH4Qtrq3gWU0R-S0Q/edit) | [English](https://www.canva.com/design/DAG2tKw6CBI/f3gsSMbm65-g7fFqoTccYA/edit)
 
 ### 📚 Support materials
 - [Marty Getting Started Guide](https://userguides.robotical.io/martyv2/quickstart)

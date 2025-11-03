@@ -8,15 +8,19 @@
 
 ### Week-by-Week Teaching Materials
 - **Week 1:** Slides Presentations [German](https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
-- **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) | Machine Learning Types Worksheet [German](https://www.canva.com/design/DAG2-v5bUlM/LZOMoFgFysllnmFbO7R3cg/edit) | [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30) | Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30) | Answers [German](https://www.canva.com/design/DAG2ttYEEYM/F7YTPQScXD0cQ0ISrmoa8w/edit) | [English](https://www.canva.com/design/DAG2tlQUrMI/o0arzm-5hyYnBXTGtkEbIA/edit)
-- **Week 3:** Slides Presentations [German](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) | AI or not AI Worksheet [English & German](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
-- **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ) | Marty Dancing workbook [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+- **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) 
+  - Machine Learning Types Worksheet [German](https://www.canva.com/design/DAG2-v5bUlM/LZOMoFgFysllnmFbO7R3cg/edit) | [English & German](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30)
+  - Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30) | Answers [German](https://www.canva.com/design/DAG2ttYEEYM/F7YTPQScXD0cQ0ISrmoa8w/edit) | [English](https://www.canva.com/design/DAG2tlQUrMI/o0arzm-5hyYnBXTGtkEbIA/edit)
+- **Week 3:** Slides Presentations [German](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) 
+  - AI or not AI Worksheet [German without answers](https://www.canva.com/design/DAG3o9YxOu4/gyCMSoao8-pNoZ-0LbwsTA/edit) | [English & German with Answers](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
+- **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+  - Marty Dancing workbook [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Week 5:** Slides Presentations [English](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
 - **Week 6:** Slides Presentations [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 
 ### 📚 Student Guides 
 - **Marty Building Instructions:** [German](https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30)
-- **Marty Student Web Coding Guide** [German]  | [English](https://www.canva.com/design/DAG2roHNQZk/C2NIsftU8qNhHRvfkF_eYQ/edit)
+- **Marty Student Web Coding Guide** [German](https://www.canva.com/design/DAG3o8ZHR8E/7jyHFZYL7PelgtSAJriifw/edit)  | [English](https://www.canva.com/design/DAG2roHNQZk/C2NIsftU8qNhHRvfkF_eYQ/edit)
 - **Marty Arduino Guide** [German]  | [English](https://www.canva.com/design/DAG2sWtLs_Q/aLaCZNpZA_F1RiKWTigYJA/edit)
 - **Social Robots Student Learning Guide** [German]  | [English](https://www.canva.com/design/DAG2sjJ5Ji0/kVAvPR0xPAAfVRRfY3GSsA/edit)
 - **AI Literacy Student Learning Guide** [German] | [English](https://www.canva.com/design/DAG2sq3HcBs/Vyw4OhXq9Qpx2yQ_OUgrWA/edit)
@@ -120,7 +124,7 @@ By the end of this curriculum, students will:
 
 #### Teaching Materials in W1
 - **Week 1 Slides Presentations:** [German](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit) | [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
-- **Marty Building Instructions:** [German] (https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
+- **Marty Building Instructions:** [German](https://www.canva.com/design/DAG2fiKyBEM/3L70sacfyFoPoBU6P2TZLA/edit) | [English](https://www.canva.com/design/DAG1THZHwo0/Ijo6e7lTrCeGkAJ9S0K7sw/edit?ui=e30) 
 - **Marty Getting Started Guide:** [Quick Start](https://userguides.robotical.io/martyv2/quickstart)
 
 #### Overview of Assessments in W1

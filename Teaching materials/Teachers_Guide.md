@@ -283,3 +283,14 @@ By the end of this curriculum, students will:
 - Label each kit with group names
 - Keep partially assembled robots in safe location between sessions
 
+---
+
+## 📖 Additional Resources for Teachers
+
+### Background Reading on AI and Education
+
+**The Age of De-Skilling: Will AI stretch our minds—or stunt them?**
+- Appiah, K. A. (2025, October 26). The Age of De-Skilling. _The Atlantic_. https://www.theatlantic.com/ideas/archive/2025/10/ai-deskilling-automation-technology/684669/
+- **Why this matters:** This article explores the concern that AI tools like chatbots might erode critical thinking and learning capabilities in students. It discusses different types of de-skilling—from the loss of obsolete skills to the erosion of fundamental human capacities like judgment and imagination. Understanding these concepts helps teachers guide students to use AI as a tool that expands rather than replaces their thinking, which is central to this curriculum's approach to safe and thoughtful AI integration.
+- **Key takeaway for this curriculum:** Our approach emphasizes students building, programming, and critically evaluating AI interactions rather than passively consuming AI outputs—helping develop the "intellective skills" and judgment that prevent harmful de-skilling.
+

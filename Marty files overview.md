@@ -29,8 +29,8 @@
 - **Week 3:** Slides Presentations [German](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) 
   - AI or not AI Worksheet [German without answers](https://www.canva.com/design/DAG3o9YxOu4/gyCMSoao8-pNoZ-0LbwsTA/edit) | [English & German with Answers](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
 - **Week 4:** Slides Presentations [German](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English: Programming & sensors](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
-  - Marty Dancing workbook [Canva](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
-  - [English old : programming and microcontrollers:](https://www.canva.com/design/DAG38BgnR8Y/3RB8r-X_I9fWXoL9oDvJ-Q/edit) 
+  - Marty Dancing workbook [english](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+  -[English old : programming and microcontrollers:](https://www.canva.com/design/DAG38BgnR8Y/3RB8r-X_I9fWXoL9oDvJ-Q/edit) 
 - **Week 5:** Slides Presentations [English: Microcontrollers & AI Ethics](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ) | [English Old: Sensors & interaction](https://www.canva.com/design/DAG38K-ye2c/GXhqhsgkTCD-QzXbfSh1aQ/edit)
 - **Week 6:** Slides Presentations [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
 

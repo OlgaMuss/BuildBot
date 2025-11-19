@@ -1,0 +1,110 @@
+{
+    "session_id": "Microcontrollers_20251119_121005",
+    "final_frame_memory": {
+        "turn_count": 3,
+        "session_phase": 1,
+        "consecutive_off_topic_turns": 0,
+        "participation": {
+            "Red": {
+                "contribution_count": 1
+            },
+            "Green": {
+                "contribution_count": 0
+            },
+            "Blue": {
+                "contribution_count": 0
+            }
+        }
+    },
+    "conversation_log": [
+        {
+            "timestamp": "2025-11-19T12:40:04.901116",
+            "event": "New session started.",
+            "data": {}
+        },
+        {
+            "timestamp": "2025-11-19T12:40:05.704938",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 1,
+                "speaker": "Red",
+                "message": "I'm bill and I 'm with tom and ed and we need to create a story to remember stuff we learned about microcontrollers",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 1
+                    },
+                    "Green": {
+                        "contribution_count": 0
+                    },
+                    "Blue": {
+                        "contribution_count": 0
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": [],
+                "off_topic_duration": 0,
+                "contribution_type": "mnemonic_suggestion",
+                "understanding_level": "beginner",
+                "is_relevant": true,
+                "mnemonic_progress": "The group has just begun the mnemonic creation process.",
+                "summary": "The student is initiating the creation of a story to remember information about microcontrollers, introducing themselves and their collaborators."
+            }
+        },
+        {
+            "timestamp": "2025-11-19T14:23:58.565045",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 2,
+                "speaker": "Unknown",
+                "message": "Tom: That it is your brain, and we can program it and run a script in a loop.",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 1
+                    },
+                    "Green": {
+                        "contribution_count": 0
+                    },
+                    "Blue": {
+                        "contribution_count": 0
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": [],
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "intermediate",
+                "is_relevant": true,
+                "mnemonic_progress": "The group has identified a key characteristic of microcontrollers: they are programmable brains that can run scripts in a loop.",
+                "summary": "Tom states that a microcontroller is like a brain that can be programmed and run a script in a loop."
+            }
+        },
+        {
+            "timestamp": "2025-11-19T14:25:32.259856",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 3,
+                "speaker": "Unknown",
+                "message": "Tom: like turning off or on lights and make movements",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 1
+                    },
+                    "Green": {
+                        "contribution_count": 0
+                    },
+                    "Blue": {
+                        "contribution_count": 0
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": [],
+                "off_topic_duration": 0,
+                "contribution_type": "builds_on_idea",
+                "understanding_level": "beginner",
+                "is_relevant": true,
+                "mnemonic_progress": "The group is starting to define the microcontroller's function as a 'brain' that can be programmed to perform actions like controlling lights and movement.",
+                "summary": "The student provides examples of tasks that can be programmed into a microcontroller, such as controlling lights and movements."
+            }
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "session_id": "2025-11-19T10-00-00",
+  "start_time": "2025-11-19T10:00:00Z",
+  "mnemonic_type_chosen": "Story",
+  "students": [
+    {"name": "Bill", "contribution_count": 0},
+    {"name": "Tom", "contribution_count": 0},
+    {"name": "Ed", "contribution_count": 0}
+  ],
+  "frame_memory": {
+    "turn_count": 1,
+    "session_phase": 1,
+    "mnemonic_elements": [],
+    "participation_balanced": true,
+    "off_topic_duration": 0
+  },
+  "conversation_history": [
+    {
+      "speaker": "Marty",
+      "message": "Hey everyone! I'm Marty. I'm so excited to help you three create an awesome story about microcontrollers. To get started, what's the most surprising thing you learned about them from the material?",
+      "timestamp": "2025-11-19T10:00:00Z"
+    }
+  ]
+}

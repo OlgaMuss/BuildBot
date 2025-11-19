@@ -1,0 +1,26 @@
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "backend"
+version = "1.0.0"
+description = "Rodin Frame Engine Prototype"
+license = "Proprietary"
+authors = [
+    "Charles-Edouard Bardyn <cbardyn@a-i.swiss>",
+]
+readme = "README.md"
+packages = [
+    { include = "backend", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11.8,<3.12"
+PyYAML = "^6.0.1"
+langchain = "^0.2.1"
+langchain-google-genai = "^1.0.4"
+langgraph = "^0.0.62"
+pydantic = "^2.7.1"
+python-dotenv = "^1.0.1"
+streamlit = "^1.35.0"

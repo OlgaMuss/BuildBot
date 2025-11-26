@@ -56,3 +56,12 @@ Hello, we are tom, bill and ed and we need to create a story about microcontroll
 11:01:45
 Marty
 **[SLOT 1]** You’re co-creating a story mnemonic in Phase 2; the key ideas to weave in are: a microcontroller is a small computer on a single chip with a CPU, memory, and programmable inputs/outputs. Goal: link all of these in one short, vivid narrative. **[SLOT 2]** I’ll offer a simple seed line and then have each of you add a connecting line that keeps all concepts tied together. I’ll prompt collaboration and invite Red to close the scene. **[SLOT 3]** AI DRAFT: Seed: “In a tiny single chip lives a small computer; its CPU thinks, its memory remembers, and its programmable inputs/outputs act when told.” What scene makes that feel vivid to you? Tom, Bill, Ed—each add one linking line, and Red, please cap it off with a final tie-in. **[SLOT 4]** Validation: - Use only provided material: PASS (small computer on a single chip; CPU, memory, programmable inputs/outputs). - Link every key concept in a short narrative: PASS. - Invite Red in Slot 3: PASS. - Encourage student-to-student building with questions: PASS. - Keep Marty concise (1–3 sentences): PASS. - Phase and contribution type alignment: PASS. --- **🤖 MARTY SAYS:** Seed: “In a tiny single chip lives a small computer; its CPU thinks, its memory remembers, and its programmable inputs/outputs act when told.” What scene makes that feel vivid to you—Tom, Bill, Ed add one linking line, and Red, please cap it off with a final tie-in.
+
+# nov 25th notes
+
+i find naming frames confusing: I would call them input checks/analysis and output checks/analysis, and the frame is the combination of that for a certain usecase. 
+it seems that as the frame was built, all "frames" are executed in slot 1
+
+need to justify understanding level
+
+need to justify age appropiate language

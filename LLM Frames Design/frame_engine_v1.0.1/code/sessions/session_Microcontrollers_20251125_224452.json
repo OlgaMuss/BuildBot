@@ -1,0 +1,200 @@
+{
+    "session_id": "Microcontrollers_20251125_224452",
+    "final_frame_memory": {
+        "turn_count": 3,
+        "start_time": "2025-11-25T22:46:56.601345",
+        "session_phase": 1,
+        "session_language": "English",
+        "turn_queue": [
+            "Blue",
+            "Red",
+            "Green"
+        ],
+        "consecutive_off_topic_turns": 0,
+        "participation": {
+            "Red": {
+                "contribution_count": 1,
+                "understanding_history": [
+                    {
+                        "turn": 1,
+                        "level": "beginner",
+                        "justification": "The student identifies the core task but provides no specific knowledge or understanding of microcontrollers."
+                    }
+                ]
+            },
+            "Green": {
+                "contribution_count": 2,
+                "understanding_history": [
+                    {
+                        "turn": 2,
+                        "level": "beginner",
+                        "justification": "The student provides a basic, accurate analogy for a microcontroller's function and its ubiquity."
+                    },
+                    {
+                        "turn": 3,
+                        "level": "beginner",
+                        "justification": "The student provides relevant examples of where microcontrollers are used, demonstrating a basic understanding of their application."
+                    }
+                ]
+            },
+            "Blue": {
+                "contribution_count": 0,
+                "understanding_history": []
+            }
+        }
+    },
+    "conversation_log": [
+        {
+            "timestamp": "2025-11-25T22:46:56.601354",
+            "event": "New session started.",
+            "data": {}
+        },
+        {
+            "timestamp": "2025-11-25T22:46:58.594131",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 1,
+                "speaker": "Red",
+                "message": "Hi i'm bill i work with tom and ed and we need to create a poem on microcontroller",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student identifies the core task but provides no specific knowledge or understanding of microcontrollers."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic, accurate analogy for a microcontroller's function and its ubiquity."
+                            },
+                            {
+                                "turn": 3,
+                                "level": "beginner",
+                                "justification": "The student provides relevant examples of where microcontrollers are used, demonstrating a basic understanding of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 0,
+                        "understanding_history": []
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "beginner",
+                "understanding_justification": "The student identifies the core task but provides no specific knowledge or understanding of microcontrollers.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group has just begun, and no mnemonic elements have been established yet.",
+                "summary": "The student introduces themselves and states the group's goal to create a poem about microcontrollers."
+            }
+        },
+        {
+            "timestamp": "2025-11-25T22:47:44.476778",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 2,
+                "speaker": "Green",
+                "message": "well microcontrollers are like the brain of a device that controls what it does. they are everywhere.",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student identifies the core task but provides no specific knowledge or understanding of microcontrollers."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic, accurate analogy for a microcontroller's function and its ubiquity."
+                            },
+                            {
+                                "turn": 3,
+                                "level": "beginner",
+                                "justification": "The student provides relevant examples of where microcontrollers are used, demonstrating a basic understanding of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 0,
+                        "understanding_history": []
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "beginner",
+                "understanding_justification": "The student provides a basic, accurate analogy for a microcontroller's function and its ubiquity.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group has not yet started developing a mnemonic; this is an initial exploration of the topic.",
+                "summary": "The student explains that microcontrollers act as the 'brain' of devices and are found in many places."
+            }
+        },
+        {
+            "timestamp": "2025-11-25T22:48:12.647567",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 3,
+                "speaker": "Green",
+                "message": "yes like airbags and toasters",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student identifies the core task but provides no specific knowledge or understanding of microcontrollers."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic, accurate analogy for a microcontroller's function and its ubiquity."
+                            },
+                            {
+                                "turn": 3,
+                                "level": "beginner",
+                                "justification": "The student provides relevant examples of where microcontrollers are used, demonstrating a basic understanding of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 0,
+                        "understanding_history": []
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": "Blue",
+                "off_topic_duration": 0,
+                "contribution_type": "builds_on_idea",
+                "understanding_level": "beginner",
+                "understanding_justification": "The student provides relevant examples of where microcontrollers are used, demonstrating a basic understanding of their application.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group is still in the initial phase of understanding the core concept of a microcontroller, with the student providing examples of its application.",
+                "summary": "The student provides examples of devices that use microcontrollers, such as airbags and toasters."
+            }
+        }
+    ],
+    "summary": 

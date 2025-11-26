@@ -7,10 +7,14 @@ model_name: "gemini-2.5-flash-lite"
 # Logging level for the application console.
 # Determines the verbosity of the output.
 # Options: "DEBUG", "INFO", "WARNING", "ERROR"
-log_level: "INFO"
+log_level: "DEBUG"
 
 # Configuration for the Marty Frame's session structure.
-# Defines the turn boundaries for each phase of the conversation.
+# Defines the time boundaries in MINUTES for each phase of the conversation.
+# Phase 1: Identify knowledge gaps and what needs to be remembered
+# Phase 2: Create the mnemonic collaboratively
+# Phase 3: Practice and memorization
 phases:
-  phase_1_end: 5
-  phase_2_end: 20
+  phase_1_end_minutes: 2
+  phase_2_end_minutes: 8
+  phase_3_end_minutes: 10

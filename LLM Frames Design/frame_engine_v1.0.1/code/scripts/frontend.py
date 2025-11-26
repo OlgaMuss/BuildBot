@@ -16,9 +16,10 @@ import yaml
 
 # --- Environment Setup ---
 # This setup is a bit more robust for Streamlit, which runs from a different context.
-script_dir = Path(__file__).parent.resolve()
-project_root = script_dir.parent
-package_path = project_root / 'src'
+script_dir = Path(__file__).parent.resolve()  # .../code/scripts/
+code_dir = script_dir.parent  # .../code/
+project_root = code_dir.parent  # .../frame_engine_v1.0.1/
+package_path = code_dir / 'src'
 
 if str(package_path) not in sys.path:
     sys.path.insert(0, str(package_path))
@@ -86,15 +87,16 @@ with st.sidebar:
 
     with st.expander("Learning Experience", expanded=False):
         topic = st.text_input("Topic", "Microcontrollers")
+        # Load learning material from the Markdown file
+        try:
+            with open(project_root / "microcontrollers.md", "r") as f:
+                default_learning_material = f.read()
+        except FileNotFoundError:
+            default_learning_material = """A microcontroller is a compact integrated circuit designed to govern a specific operation in an embedded system.\nKey components include:\n1.  CPU (Central Processing Unit): The 'brain' that executes instructions.\n2.  Memory: Flash (Program Memory) and RAM (Data Memory).\n3.  Peripherals (I/O): GPIO, ADC, Communication Interfaces, Timers.\nAn example is the ESP32, which also includes built-in Wi-Fi and Bluetooth.\n"""
+
         learning_material = st.text_area(
             "Learning Material",
-            """A microcontroller is a compact integrated circuit designed to govern a specific operation in an embedded system.
-Key components include:
-1.  CPU (Central Processing Unit): The 'brain' that executes instructions.
-2.  Memory: Flash (Program Memory) and RAM (Data Memory).
-3.  Peripherals (I/O): GPIO, ADC, Communication Interfaces, Timers.
-An example is the ESP32, which also includes built-in Wi-Fi and Bluetooth.
-""",
+            default_learning_material,
             height=250
         )
         mnemonic_type = st.selectbox("Mnemonic Type", ["Story", "Acronym", "Song"])
@@ -134,16 +136,22 @@ An example is the ESP32, which also includes built-in Wi-Fi and Bluetooth.
 
     if st.button("End & Save Session"):
         if "engine" in st.session_state:
-            final_context = {
-                "frame_memory": st.session_state.frame_memory,
-            }
-            marty_frame = st.session_state.engine.frames[0]
-            marty_frame.save_session(final_context)
-            st.success("Session saved successfully!")
-            # Clear state after saving
-            for key in st.session_state.keys():
-                del st.session_state[key]
-            st.rerun()
+            if st.session_state.get("final_context") is None:
+                st.warning("No conversation turns to save. Please have at least one interaction before saving.")
+            else:
+                async def save_session_async():
+                    """Asynchronous wrapper to call the save_session method."""
+                    marty_frame = st.session_state.engine.get_frame("mnemonic_co_creator_marty")
+                    if marty_frame:
+                        final_context = st.session_state.final_context
+                        st.info("Saving session data...")
+                        await marty_frame.save_session(final_context)
+                        st.success("Session data saved.")
+                    else:
+                        st.error("Could not find Marty frame to save.")
+
+                # Run the async save function
+                asyncio.run(save_session_async())
         else:
             st.warning("No active session to save.")
 
@@ -197,6 +205,7 @@ if "engine" not in st.session_state:
         )
         st.session_state.frame_memory = {}
         st.session_state.conversation_history = []
+        st.session_state.final_context = None  # Initialize final_context
         st.session_state.messages = [{"role": "assistant", "content": "Hi! I'm Marty. Let's create a mnemonic together! What should we talk about first?"}]
         logging.info("New session initialized successfully.")
     except (ValueError, FileNotFoundError) as e:
@@ -211,50 +220,55 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # --- User Input Section ---
-student_names = [p["name"] for p in st.session_state.participants] if st.session_state.participants else ["User"]
+student_names = [p["name"] for p in st.session_state.participants]
 
-# Create a container for the input controls at the bottom
-input_container = st.container()
-with input_container:
-    col1, col2 = st.columns([1, 4])
-    with col1:
-        speaker = st.selectbox("Speaker", options=student_names, label_visibility="collapsed")
-    with col2:
-        user_input_text = st.chat_input("What would you like to say to Marty?", key="user_input")
+if student_names:
+    # Create a container for the input controls at the bottom
+    input_container = st.container()
+    with input_container:
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            speaker = st.selectbox("Speaker", options=student_names, label_visibility="collapsed")
+        with col2:
+            user_input_text = st.chat_input("What would you like to say to Marty?", key="user_input")
 
-# Accept user input
-if user_input_text and speaker:
-    # Prepend speaker to the message
-    formatted_input = f"{speaker}: {user_input_text}"
+    # Accept user input
+    if user_input_text and speaker:
+        # Prepend speaker to the message
+        formatted_input = f"{speaker}: {user_input_text}"
 
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": formatted_input})
-    with st.chat_message("user"):
-        st.markdown(formatted_input)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": formatted_input})
+        with st.chat_message("user"):
+            st.markdown(formatted_input)
 
-    # Get response from the Frame Engine
-    with st.chat_message("assistant"):
-        with st.spinner("Marty is thinking..."):
-            engine = st.session_state.engine
-            
-            # Bridge from synchronous Streamlit to our async engine
-            result = asyncio.run(engine.ainvoke(
-                user_input=formatted_input,
-                conversation_history=st.session_state.get("conversation_history", []),
-                frame_memory=st.session_state.get("frame_memory", {}),
-            ))
+        # Get response from the Frame Engine
+        with st.chat_message("assistant"):
+            with st.spinner("Marty is thinking..."):
+                engine = st.session_state.engine
+                
+                # Bridge from synchronous Streamlit to our async engine
+                result = asyncio.run(engine.ainvoke(
+                    user_input=formatted_input,
+                    conversation_history=st.session_state.get("conversation_history", []),
+                    frame_memory=st.session_state.get("frame_memory", {}),
+                ))
 
-            response = result["response"]
+                response = result["response"]
 
-            # Update state for the next turn
-            st.session_state.frame_memory = result["final_state"]["frame_memory"]
-            st.session_state.conversation_history = result["final_state"]["conversation_history"]
-            
-            st.markdown(response)
-    
-    # Add assistant response to chat history for display
-    st.session_state.messages.append({"role": "assistant", "content": response})
-    
-    # Rerun the script to immediately display the new messages and clear the
-    # input box. This is a standard pattern in Streamlit chat apps.
-    st.rerun()
+                # Update state for the next turn
+                st.session_state.frame_memory = result["final_state"]["frame_memory"]
+                st.session_state.conversation_history = result["final_state"]["conversation_history"]
+                # Store the complete final_state (FrameContext) for session saving
+                st.session_state.final_context = result["final_state"]
+                
+                st.markdown(response)
+        
+        # Add assistant response to chat history for display
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        # Rerun the script to immediately display the new messages and clear the
+        # input box. This is a standard pattern in Streamlit chat apps.
+        st.rerun()
+else:
+    st.warning("Session paused. Please add a participant in the sidebar to continue.")

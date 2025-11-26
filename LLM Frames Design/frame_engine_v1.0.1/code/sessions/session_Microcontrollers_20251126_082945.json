@@ -1,0 +1,369 @@
+{
+    "session_id": "Microcontrollers_20251126_082945",
+    "final_frame_memory": {
+        "turn_count": 5,
+        "start_time": "2025-11-26T08:29:59.332011",
+        "session_phase": 2,
+        "session_language": "English",
+        "turn_queue": [
+            "Red",
+            "Green",
+            "Blue"
+        ],
+        "consecutive_off_topic_turns": 0,
+        "participation": {
+            "Red": {
+                "contribution_count": 2,
+                "understanding_history": [
+                    {
+                        "turn": 1,
+                        "level": "beginner",
+                        "justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic."
+                    },
+                    {
+                        "turn": 2,
+                        "level": "beginner",
+                        "justification": "The student provides a basic but accurate analogy for a microcontroller's function."
+                    }
+                ]
+            },
+            "Green": {
+                "contribution_count": 1,
+                "understanding_history": [
+                    {
+                        "turn": 3,
+                        "level": "intermediate",
+                        "justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application."
+                    }
+                ]
+            },
+            "Blue": {
+                "contribution_count": 2,
+                "understanding_history": [
+                    {
+                        "turn": 4,
+                        "level": "intermediate",
+                        "justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects."
+                    },
+                    {
+                        "turn": 5,
+                        "level": "intermediate",
+                        "justification": "The student correctly identifies a core function of the CPU within a microcontroller."
+                    }
+                ]
+            }
+        }
+    },
+    "conversation_log": [
+        {
+            "timestamp": "2025-11-26T08:29:59.332021",
+            "event": "New session started.",
+            "data": {}
+        },
+        {
+            "timestamp": "2025-11-26T08:30:01.024530",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 1,
+                "speaker": "Red",
+                "message": "we need to create a poem on microcontroller",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic."
+                            },
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic but accurate analogy for a microcontroller's function."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 3,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 4,
+                                "level": "intermediate",
+                                "justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects."
+                            },
+                            {
+                                "turn": 5,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies a core function of the CPU within a microcontroller."
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "mnemonic_suggestion",
+                "understanding_level": "beginner",
+                "understanding_justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group is just beginning to brainstorm ideas for the mnemonic, with a suggestion for a poem about microcontrollers.",
+                "summary": "The student suggests creating a poem about microcontrollers."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T08:30:15.054774",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 2,
+                "speaker": "Red",
+                "message": "well microcontrollers are like the brain of a device that controls what it does.",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic."
+                            },
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic but accurate analogy for a microcontroller's function."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 3,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 4,
+                                "level": "intermediate",
+                                "justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects."
+                            },
+                            {
+                                "turn": 5,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies a core function of the CPU within a microcontroller."
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": "Green",
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "beginner",
+                "understanding_justification": "The student provides a basic but accurate analogy for a microcontroller's function.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group has just begun to define what a microcontroller is, which is foundational for the mnemonic.",
+                "summary": "The student explains that microcontrollers are like the brain of a device, controlling its actions."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T08:34:55.460184",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 3,
+                "speaker": "Green",
+                "message": "many devices, airbags, automatic doors, washing machines",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic."
+                            },
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic but accurate analogy for a microcontroller's function."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 3,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 4,
+                                "level": "intermediate",
+                                "justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects."
+                            },
+                            {
+                                "turn": 5,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies a core function of the CPU within a microcontroller."
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": "Blue",
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "intermediate",
+                "understanding_justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group is exploring examples of devices that contain microcontrollers to build upon the initial concept of a microcontroller as a 'brain'.",
+                "summary": "The student provides examples of devices that contain microcontrollers, such as airbags, automatic doors, and washing machines."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T08:35:47.068738",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 4,
+                "speaker": "Blue",
+                "message": "oh there is the chip, a memory and wifi unit, a usb",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic."
+                            },
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic but accurate analogy for a microcontroller's function."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 3,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 4,
+                                "level": "intermediate",
+                                "justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects."
+                            },
+                            {
+                                "turn": 5,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies a core function of the CPU within a microcontroller."
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "intermediate",
+                "understanding_justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group is identifying key components that could be incorporated into the mnemonic story about microcontrollers.",
+                "summary": "The student identifies the chip, memory, Wi-Fi unit, and USB as parts of a microcontroller."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T08:36:14.921486",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 5,
+                "speaker": "Blue",
+                "message": "it executes the code?",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 1,
+                                "level": "beginner",
+                                "justification": "The student is initiating the mnemonic creation process by suggesting a format (poem) related to the topic."
+                            },
+                            {
+                                "turn": 2,
+                                "level": "beginner",
+                                "justification": "The student provides a basic but accurate analogy for a microcontroller's function."
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 1,
+                        "understanding_history": [
+                            {
+                                "turn": 3,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies several common devices that utilize microcontrollers, demonstrating practical knowledge of their application."
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 2,
+                        "understanding_history": [
+                            {
+                                "turn": 4,
+                                "level": "intermediate",
+                                "justification": "The student lists some components that can be found in or connected to a microcontroller system, showing some understanding of its practical aspects."
+                            },
+                            {
+                                "turn": 5,
+                                "level": "intermediate",
+                                "justification": "The student correctly identifies a core function of the CPU within a microcontroller."
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "understanding_level": "intermediate",
+                "understanding_justification": "The student correctly identifies a core function of the CPU within a microcontroller.",
+                "is_relevant": true,
+                "mnemonic_progress": "The group is discussing the internal components of a microcontroller, specifically the CPU's role.",
+                "summary": "The student suggests that the CPU's function is to execute code."
+            }
+        }
+    ],
+    "summary": {
+        "Red": "Red contributed 2 times, beginning the session with a beginner's understanding by suggesting a mnemonic format and providing a basic analogy for microcontroller function.",
+        "Green": "Green contributed 1 time, demonstrating an intermediate understanding by correctly identifying common devices that utilize microcontrollers.",
+        "Blue": "Blue contributed 2 times, showing an intermediate understanding by listing microcontroller components and correctly identifying the CPU's core function."
+    }
+}

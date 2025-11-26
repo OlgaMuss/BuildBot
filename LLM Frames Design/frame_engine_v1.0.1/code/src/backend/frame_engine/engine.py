@@ -4,7 +4,7 @@ This module uses LangGraph to construct and execute a state machine that represe
 the four-slot frame pipeline.
 """
 import logging
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from langgraph.graph import StateGraph, END
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
@@ -75,6 +75,20 @@ class FrameEngine:
         )
 
         return builder.compile()
+
+    def get_frame(self, frame_name: str) -> Optional[Frame]:
+        """Retrieves a frame by its unique name.
+        
+        Args:
+            frame_name: The unique name of the frame to retrieve.
+            
+        Returns:
+            The Frame object with the given name, or None if not found.
+        """
+        for frame in self.frames:
+            if frame.name == frame_name:
+                return frame
+        return None
 
     # --- Node Implementations ---
 
@@ -222,12 +236,19 @@ class FrameEngine:
 
         if needs_regeneration:
             logging.info("  - Action: REVISE. Re-generating with feedback.")
-            feedback_prompt = (
-                "\n\nThe previous response was not suitable. Please revise it based on the following feedback:\n"
-                + "\n".join(feedback_for_llm)
-                + "\n\nPlease generate a new, corrected response."
+            
+            # Construct a forceful, direct instruction for the LLM.
+            # Prepending this to the system prompt is more effective than appending.
+            feedback_intro = (
+                "IMPERATIVE CORRECTION: The previous response had a critical error. "
+                "You MUST follow this instruction to fix it:\n"
             )
-            state["system_prompt"] += feedback_prompt
+            feedback_body = "\n".join(f"- {feedback}" for feedback in feedback_for_llm)
+            
+            correction_prompt = f"{feedback_intro}{feedback_body}\n\n---\n\n"
+            
+            # Prepend the correction to the original system prompt.
+            state["system_prompt"] = correction_prompt + state["system_prompt"]
 
         return state
 

@@ -2,7 +2,7 @@
 
 ## What is Marty's Brain?
 
-Marty's "Brain" is located on the **Robot Interface Controller (RIC)**. The main component of this brain is a microcontroller called the **ESP32 module**.
+Marty's "Brain" is located on the **Robot Interface Controller (RIC)**. The main component of this brain is a microcontroller called the **ESP32 module**. For programming and control, an **Arduino Nano** was connected to the RIC.
 
 ## What is a Microcontroller?
 

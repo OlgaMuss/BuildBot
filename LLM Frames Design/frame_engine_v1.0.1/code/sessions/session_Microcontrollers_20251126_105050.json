@@ -1,0 +1,1551 @@
+{
+    "session_id": "Microcontrollers_20251126_105050",
+    "final_frame_memory": {
+        "turn_count": 9,
+        "start_time": "2025-11-26T10:51:07.686760",
+        "phase_1_start": "2025-11-26T10:51:07.686764",
+        "session_phase": 2,
+        "session_language": "English",
+        "turn_queue": [
+            "Red",
+            "Blue",
+            "Green"
+        ],
+        "consecutive_off_topic_turns": 0,
+        "participation": {
+            "Red": {
+                "contribution_count": 3,
+                "concepts_understood": [
+                    "Location",
+                    "Definition",
+                    "Power"
+                ],
+                "concepts_confused": [],
+                "concepts_history": [
+                    {
+                        "turn": 1,
+                        "concepts_understood": [],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": [
+                            "Microcontroller"
+                        ]
+                    },
+                    {
+                        "turn": 2,
+                        "concepts_understood": [
+                            "Definition"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    },
+                    {
+                        "turn": 5,
+                        "concepts_understood": [
+                            "Location",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    }
+                ]
+            },
+            "Green": {
+                "contribution_count": 3,
+                "concepts_understood": [
+                    "HIGH and LOW States",
+                    "Definition",
+                    "Pins: The Microcontroller's Connectors",
+                    "Pins",
+                    "Power",
+                    "Ubiquity"
+                ],
+                "concepts_confused": [],
+                "concepts_history": [
+                    {
+                        "turn": 3,
+                        "concepts_understood": [
+                            "Definition",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    },
+                    {
+                        "turn": 6,
+                        "concepts_understood": [
+                            "Pins",
+                            "HIGH and LOW States",
+                            "Power"
+                        ],
+                        "concepts_confused": [
+                            "Power"
+                        ],
+                        "concepts_for_mnemonic": []
+                    },
+                    {
+                        "turn": 9,
+                        "concepts_understood": [
+                            "Pins: The Microcontroller's Connectors",
+                            "HIGH and LOW States"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    }
+                ]
+            },
+            "Blue": {
+                "contribution_count": 3,
+                "concepts_understood": [
+                    "Sensors",
+                    "HIGH and LOW States",
+                    "Programming",
+                    "Pins",
+                    "Control",
+                    "Motors"
+                ],
+                "concepts_confused": [],
+                "concepts_history": [
+                    {
+                        "turn": 4,
+                        "concepts_understood": [
+                            "Control",
+                            "Sensors",
+                            "Programming",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    },
+                    {
+                        "turn": 7,
+                        "concepts_understood": [
+                            "Pins",
+                            "Programming",
+                            "HIGH and LOW States"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    },
+                    {
+                        "turn": 8,
+                        "concepts_understood": [
+                            "HIGH and LOW States"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_for_mnemonic": []
+                    }
+                ]
+            }
+        },
+        "phase_2_start": "2025-11-26T10:54:01.404700"
+    },
+    "conversation_log": [
+        {
+            "timestamp": "2025-11-26T10:51:07.686772",
+            "event": "New session started.",
+            "data": {}
+        },
+        {
+            "timestamp": "2025-11-26T10:51:09.465331",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 1,
+                "speaker": "Red",
+                "message": "we need to create a poem on microcontroller",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "mnemonic_suggestion",
+                "concepts_understood": [],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [
+                    "Microcontroller"
+                ],
+                "is_relevant": true,
+                "mnemonic_progress": "The student suggests creating a poem about microcontrollers as a mnemonic.",
+                "summary": "The student suggests creating a poem about microcontrollers."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:51:19.188854",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 2,
+                "speaker": "Red",
+                "message": "well microcontrollers are like the brain of a device that controls what it does.",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": "Green",
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "concepts_understood": [
+                    "Definition"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The student is contributing a foundational idea for the mnemonic, comparing microcontrollers to the 'brain' of a device.",
+                "summary": "The student states that microcontrollers are like the 'brain' of a device and control its actions."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:52:19.195108",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 3,
+                "speaker": "Green",
+                "message": "yeah, it is also a chip that is present in many devices",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 1,
+                "underparticipating_students": "Blue",
+                "off_topic_duration": 0,
+                "contribution_type": "builds_on_idea",
+                "concepts_understood": [
+                    "Definition",
+                    "Ubiquity"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The group is building a story mnemonic for microcontrollers, starting with the idea that they are like a device's brain and also chips found in many devices.",
+                "summary": "The student agrees with the previous statement and adds that microcontrollers are also chips found in many devices."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:54:02.418707",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 4,
+                "speaker": "Blue",
+                "message": "well, we write a program on a computer that controls what the microcontroller should do, then we save it on the device and when we power it the microcontroller runs the program. the program can control sensors and motors.",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "concepts_understood": [
+                    "Programming",
+                    "Control",
+                    "Sensors",
+                    "Motors"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The group is discussing how programs are loaded onto the microcontroller and what they can control.",
+                "summary": "The student explains that programs are written on a computer, saved onto the device, and then executed by the microcontroller to control sensors and motors."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:54:53.002346",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 5,
+                "speaker": "Red",
+                "message": "I think it get power through marty which has the battery on its ric",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": "Green",
+                "off_topic_duration": 0,
+                "contribution_type": "builds_on_idea",
+                "concepts_understood": [
+                    "Location",
+                    "Power"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The students are discussing how the microcontroller gets its power, linking it to Marty's battery and RIC.",
+                "summary": "Red suggests that the microcontroller gets its power from Marty's battery, which is located on the RIC."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:56:00.790995",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 6,
+                "speaker": "Green",
+                "message": "there are pins that can get positive and negative current",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": "Blue",
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "concepts_understood": [
+                    "Pins",
+                    "HIGH and LOW States",
+                    "Power"
+                ],
+                "concepts_confused": [
+                    "Power"
+                ],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The group is discussing the electrical power requirements and how pins function.",
+                "summary": "The student states that pins can receive positive and negative current."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:57:03.358939",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 7,
+                "speaker": "Blue",
+                "message": "not sure i get your question... I think you are talking about setting the pins  on or off in the program?",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "question",
+                "concepts_understood": [
+                    "Pins",
+                    "HIGH and LOW States",
+                    "Programming"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The group is exploring how microcontrollers are powered and how their pins are controlled.",
+                "summary": "The student is unsure about the previous question and asks for clarification, suggesting the question might be about setting pins to ON or OFF states within the program."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:57:15.544130",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 8,
+                "speaker": "Blue",
+                "message": "low and high",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "concepts_understood": [
+                    "HIGH and LOW States"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The group is discussing the electrical states of microcontroller pins, leading towards the concept of HIGH and LOW.",
+                "summary": "The student correctly identifies 'low' and 'high' as the terms used for the states of microcontroller pins."
+            }
+        },
+        {
+            "timestamp": "2025-11-26T10:57:56.348366",
+            "event": "Analysis complete.",
+            "data": {
+                "turn_count": 9,
+                "speaker": "Green",
+                "message": "turns them on?",
+                "participation": {
+                    "Red": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Location",
+                            "Definition",
+                            "Power"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 1,
+                                "concepts_understood": [],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": [
+                                    "Microcontroller"
+                                ]
+                            },
+                            {
+                                "turn": 2,
+                                "concepts_understood": [
+                                    "Definition"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 5,
+                                "concepts_understood": [
+                                    "Location",
+                                    "Power"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Green": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "HIGH and LOW States",
+                            "Definition",
+                            "Pins: The Microcontroller's Connectors",
+                            "Pins",
+                            "Power",
+                            "Ubiquity"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 3,
+                                "concepts_understood": [
+                                    "Definition",
+                                    "Ubiquity"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 6,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "HIGH and LOW States",
+                                    "Power"
+                                ],
+                                "concepts_confused": [
+                                    "Power"
+                                ],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 9,
+                                "concepts_understood": [
+                                    "Pins: The Microcontroller's Connectors",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    },
+                    "Blue": {
+                        "contribution_count": 3,
+                        "concepts_understood": [
+                            "Sensors",
+                            "HIGH and LOW States",
+                            "Programming",
+                            "Pins",
+                            "Control",
+                            "Motors"
+                        ],
+                        "concepts_confused": [],
+                        "concepts_history": [
+                            {
+                                "turn": 4,
+                                "concepts_understood": [
+                                    "Control",
+                                    "Sensors",
+                                    "Programming",
+                                    "Motors"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 7,
+                                "concepts_understood": [
+                                    "Pins",
+                                    "Programming",
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            },
+                            {
+                                "turn": 8,
+                                "concepts_understood": [
+                                    "HIGH and LOW States"
+                                ],
+                                "concepts_confused": [],
+                                "concepts_for_mnemonic": []
+                            }
+                        ]
+                    }
+                },
+                "session_phase": 2,
+                "underparticipating_students": null,
+                "off_topic_duration": 0,
+                "contribution_type": "knowledge_statement",
+                "concepts_understood": [
+                    "Pins: The Microcontroller's Connectors",
+                    "HIGH and LOW States"
+                ],
+                "concepts_confused": [],
+                "concepts_mentioned_for_mnemonic": [],
+                "is_relevant": true,
+                "mnemonic_progress": "The group is discussing the function of microcontroller pins in relation to HIGH and LOW states.",
+                "summary": "The student states that the pins on a microcontroller can be turned on."
+            }
+        }
+    ],
+    "conversation_history": [
+        {
+            "role": "user",
+            "content": "we need to create a poem on microcontroller"
+        },
+        {
+            "role": "assistant",
+            "content": "That's a fantastic idea, Red! To make sure our poem is super helpful, what parts of microcontrollers do you think are the most important to remember?"
+        },
+        {
+            "role": "user",
+            "content": "well microcontrollers are like the brain of a device that controls what it does."
+        },
+        {
+            "role": "assistant",
+            "content": "I like that idea, Red! Green, what do you think about that description? Does it help you understand what a microcontroller is?"
+        },
+        {
+            "role": "user",
+            "content": "yeah, it is also a chip that is present in many devices"
+        },
+        {
+            "role": "assistant",
+            "content": "Great thinking, Green! Blue, can you tell us what you've learned so far about how a microcontroller actually works to control those devices?"
+        },
+        {
+            "role": "user",
+            "content": "well, we write a program on a computer that controls what the microcontroller should do, then we save it on the device and when we power it the microcontroller runs the program. the program can control sensors and motors."
+        },
+        {
+            "role": "assistant",
+            "content": "That's a fantastic summary, Blue! You've captured the essence of programming and control. Now, let's think about the electrical side of things. How does a microcontroller get the power it needs to run those programs and control things?"
+        },
+        {
+            "role": "user",
+            "content": "I think it get power through marty which has the battery on its ric"
+        },
+        {
+            "role": "assistant",
+            "content": "That's a great connection, Red! You're right that Marty's RIC has the microcontroller. Now, thinking more generally about how microcontrollers work, what do they need to be connected to in order to get power, similar to how a battery works?"
+        },
+        {
+            "role": "user",
+            "content": "there are pins that can get positive and negative current"
+        },
+        {
+            "role": "assistant",
+            "content": "Great thinking, Green! You're absolutely right that microcontrollers need positive and negative connections, just like a battery. Blue, what happens when a microcontroller is properly connected to power and its program tells it to do something with those pins?"
+        },
+        {
+            "role": "user",
+            "content": "not sure i get your question... I think you are talking about setting the pins  on or off in the program?"
+        },
+        {
+            "role": "assistant",
+            "content": "You're on the right track, Blue! When we talk about setting pins \"on\" or \"off\" in a program, what are the specific terms we use for those states?"
+        },
+        {
+            "role": "user",
+            "content": "low and high"
+        },
+        {
+            "role": "assistant",
+            "content": "Exactly, Blue! Those are the \"LOW\" and \"HIGH\" states. Now, let's weave these ideas together for our mnemonic. We've talked about microcontrollers being like a brain, being on a chip, controlling devices through programs, needing power, and using pins that can be HIGH or LOW. What's one of the most important things a microcontroller *does* with those pins?"
+        },
+        {
+            "role": "user",
+            "content": "turns them on?"
+        },
+        {
+            "role": "assistant",
+            "content": "It does turn them on, Red! And what does that turning \"on\" or \"off\" of the pins allow the microcontroller to do to other things?"
+        }
+    ],
+    "validation_history": {
+        "mnemonic_co_creator_marty": {
+            "action": 

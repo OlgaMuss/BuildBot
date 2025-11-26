@@ -49,6 +49,7 @@ Analyze the student's message and provide the following in a JSON object:
 5.  `is_relevant`: A boolean (`true` or `false`) indicating if the message is relevant to the topic or task.
 6.  `mnemonic_progress`: A brief, one-sentence summary of the current state of the co-created mnemonic.
 7.  `summary`: A one-sentence summary of the student's message.
+8.  `current_mnemonic_draft`: The exact text of the mnemonic (story, acronym, or poem) as it currently stands based on the conversation so far. If no mnemonic text has been proposed yet, use null or empty string.
 
 **JSON OUTPUT EXAMPLE:**
 {{
@@ -58,7 +59,8 @@ Analyze the student's message and provide the following in a JSON object:
   "concepts_mentioned_for_mnemonic": ["CPU", "memory"],
   "is_relevant": true,
   "mnemonic_progress": "The group is identifying which components to include in their story.",
-  "summary": "The student explains that microcontrollers have a CPU and memory."
+  "summary": "The student explains that microcontrollers have a CPU and memory.",
+  "current_mnemonic_draft": "Mister mean bought a drone..."
 }}
 """
 
@@ -111,6 +113,7 @@ class MnemonicCoCreatorFrame(Frame):
         frame_memory["session_language"] = "German"  # Default to German as per requirement
         frame_memory["turn_queue"] = list(self.students)  # Initialize the turn queue
         frame_memory["consecutive_off_topic_turns"] = 0
+        frame_memory["current_mnemonic"] = ""  # Initialize current mnemonic
         frame_memory["participation"] = {
             student: {
                 "contribution_count": 0,
@@ -250,6 +253,11 @@ class MnemonicCoCreatorFrame(Frame):
         else:
             frame_memory["consecutive_off_topic_turns"] = 0
 
+        # Update current mnemonic if a new draft is provided
+        current_draft = llm_analysis.get("current_mnemonic_draft")
+        if current_draft:
+            frame_memory["current_mnemonic"] = current_draft
+
         # Consolidate all findings for shared_context.
         analysis_output = {
             "turn_count": turn,
@@ -324,6 +332,7 @@ class MnemonicCoCreatorFrame(Frame):
                 "is_relevant": True,
                 "mnemonic_progress": "Analysis failed.",
                 "summary": "Analysis failed.",
+                "current_mnemonic_draft": ""
             }
 
     async def _detect_language(self, text: str) -> str:
@@ -794,6 +803,12 @@ DO NOT confuse these two students. DO NOT address your acknowledgment to {next_s
                     f.write(f"**Marty:** {turn['response']}\n\n")
                 
                 f.write("---\n\n")
+
+            # Final Mnemonic Section
+            final_mnemonic = frame_memory.get("current_mnemonic")
+            if final_mnemonic:
+                f.write("## Final Mnemonic\n\n")
+                f.write(f"{final_mnemonic}\n\n")
 
         logging.info("[Marty] Session Markdown log saved to %s", file_path)
 

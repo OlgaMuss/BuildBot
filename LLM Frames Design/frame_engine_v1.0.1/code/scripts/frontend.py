@@ -76,12 +76,17 @@ with st.sidebar:
     # Load .env variables
     try:
         from dotenv import load_dotenv
-        dotenv_path = script_dir / '.env'
-        if dotenv_path.is_file():
+
+        # Construct the path to the .env file located in the same directory as the script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        dotenv_path = os.path.join(script_dir, ".env")
+
+        if os.path.exists(dotenv_path):
             load_dotenv(dotenv_path=dotenv_path)
-            st.info("Loaded GOOGLE_API_KEY from .env file.")
-        if 'GOOGLE_API_KEY' not in os.environ:
-            st.error("GOOGLE_API_KEY not found. Please add it to scripts/.env")
+        else:
+            st.warning("'.env' file not found. Please make sure it exists in the 'scripts' directory.")
+
+        openai_api_key = os.getenv("OPENAI_API_KEY")
     except ImportError:
         st.warning("`python-dotenv` not installed. Cannot load .env file.")
 

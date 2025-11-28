@@ -82,3 +82,11 @@ This switching between HIGH and LOW doesn't happen randomly! It's controlled by 
 - Can you think of a device in your home that probably has a microcontroller?
 - How is a microcontroller different from the processor in a smartphone or computer?
 
+In german:
+Lerninhalte zu Mikrocontrollern:
+- Martys „Gehirn“ befindet sich auf dem Robot Interface Controller (RIC). Seine Hauptkomponente ist ein Mikrocontroller, das sogenannte ESP32-Modul.
+- Ein Mikrocontroller oder eine Mikrocontroller-Einheit ist ein kleiner Computer auf einem einzigen integrierten Schaltkreis, der eine oder mehrere CPUs (Prozessorkerne) sowie Speicher und programmierbare Ein-/Ausgabe-Peripheriegeräte enthält.
+- Sie stecken hinter fast jedem Tastendruck oder Touchscreen in unserem Alltag, beispielsweise in Maschinen, automatischen Türen und Airbags.
+- Ein Mikrocontroller ist in erster Linie ein elektrisches Gerät. Das bedeutet, dass er an einen Plus- und einen Minuspol angeschlossen werden muss, um zu funktionieren.
+- Um andere Geräte zu steuern, kann ein Mikrocontroller an seinen zahlreichen Anschlüssen, den sogenannten Pins, eine Spannung von 3 V ausgeben. Er kann diese Spannung für einen Pin, zwei oder drei Pins einschalten, für einzelne Pins ausschalten oder sogar für viele Pins gleichzeitig aktivieren. Wenn ein Pin eingeschaltet ist, sagen wir, er ist „HIGH“; wenn er ausgeschaltet ist, ist er „LOW“. Dieses Umschalten zwischen „HIGH“ und „LOW“ geschieht nicht zufällig – es wird durch ein Programm gesteuert, wie beispielsweise Blockly für Marty.
+- Mikrocontroller verwenden eine Programmiersprache namens C++.

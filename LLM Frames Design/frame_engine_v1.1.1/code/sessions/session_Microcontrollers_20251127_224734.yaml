@@ -1,0 +1,29 @@
+session_id: Microcontrollers_20251127_224734
+verbosity: normal
+saved_at: '2025-11-27T22:48:12.832895'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Story
+  students:
+  - Red
+  - Green
+  - Blue
+events:
+- timestamp: '2025-11-27T22:47:34.346227'
+  event: Session initialized
+  level: normal
+- timestamp: '2025-11-27T22:47:43.049548'
+  event: Turn 1
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Salut'
+    assistant: Hey Red! Ready to dive into the awesome world of microcontrollers? What comes to mind when you hear that word?
+- timestamp: '2025-11-27T22:48:04.454914'
+  event: Turn 2
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: What''s up'
+    assistant: Not much! Just getting ready to build some super cool mnemonics. Can you tell me one thing you already know
+      or imagine about microcontrollers?

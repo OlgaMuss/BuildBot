@@ -182,6 +182,18 @@ logging.basicConfig(
 )
 
 
+# --- Load external content ---
+def load_learning_material() -> str:
+    """Loads the learning material from the markdown file."""
+    # The markdown file is located at the parent of the 'code' directory
+    material_path = project_root.parent / 'microcontrollers.md'
+    try:
+        return material_path.read_text(encoding='utf-8')
+    except FileNotFoundError:
+        st.error(f'Learning material file not found at {material_path}')
+        return 'Error: Learning material not found.'
+
+
 # --- Page Configuration ---
 st.set_page_config(
     page_title='Marty Mnemonic Co-Creator',
@@ -210,30 +222,10 @@ with st.sidebar:
         topic = st.text_input('Topic', 'Microcontrollers')
         learning_material = st.text_area(
             'Learning Material',
-            'A microcontroller is a compact integrated circuit designed to govern '
-            'a specific operation in an embedded system.\n'
-            'Key components include:\n'
-            "1.  CPU (Central Processing Unit): The 'brain' that executes instructions.\n"
-            '2.  Memory: Flash (Program Memory) and RAM (Data Memory).\n'
-            '3.  Peripherals (I/O): GPIO, ADC, Communication Interfaces, Timers.\n'
-            'An example is the ESP32, which also includes built-in Wi-Fi and Bluetooth.',
-            height=250,
+            value=load_learning_material(),
+            height=300,
         )
         mnemonic_type = st.selectbox('Mnemonic Type', ['Story', 'Acronym', 'Song'])
-
-    with st.expander('Session Logging', expanded=False):
-        verbosity_options = {
-            'Minimal': SessionVerbosity.MINIMAL,
-            'Normal': SessionVerbosity.NORMAL,
-            'Verbose (debug)': SessionVerbosity.VERBOSE,
-        }
-        verbosity_label = st.selectbox(
-            'Log Verbosity',
-            options=list(verbosity_options.keys()),
-            index=1,  # Default to Normal
-            help='MINIMAL: summary only | NORMAL: turn logs | VERBOSE: full slot details',
-        )
-        selected_verbosity = verbosity_options[verbosity_label]
 
     st.subheader('Participants')
 
@@ -267,13 +259,18 @@ with st.sidebar:
         st.rerun()
 
     if st.button('End & Save Session'):
-        if 'session_logger' not in st.session_state:
+        if 'engine' not in st.session_state or 'frame_memory' not in st.session_state:
             st.warning('No active session to save.')
         else:
-            file_path = st.session_state.session_logger.save(
-                frame_memory=st.session_state.frame_memory
-            )
-            st.success(f'Session saved to {file_path}')
+            # Use the engine's end_session method to properly save all logs
+            final_state_for_saving = {
+                'frame_memory': st.session_state.get('frame_memory', {}),
+                # Add other necessary state components if needed by end_session
+            }
+            # Since end_session is async, we need to run it in an event loop
+            asyncio.run(st.session_state.engine.end_session(final_state_for_saving))
+
+            st.success('Session saved successfully.')
             _clear_session_state()
             st.rerun()
 
@@ -292,7 +289,7 @@ if 'engine' not in st.session_state:
             mnemonic_type=mnemonic_type,
             participants=st.session_state.participants,
             config=config,
-            verbosity=selected_verbosity,
+            verbosity=SessionVerbosity.NORMAL,  # Hardcoded to NORMAL
         )
         st.session_state.engine = engine
         st.session_state.session_logger = session_logger

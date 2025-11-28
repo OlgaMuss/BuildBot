@@ -13,12 +13,13 @@ import json
 import logging
 from enum import Enum
 from typing import Any, Optional, TypedDict
+import asyncio
 
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import HumanMessage
 
 from backend.frame_engine.core import Frame, FrameContext, PromptSection
-from backend.frames.marty import SPEAKER_KEY
+from backend.frames.marty import CLEANED_MESSAGE_KEY, SPEAKER_KEY
 
 
 # --- Comprehension Tracking Data Structures ---
@@ -27,6 +28,11 @@ from backend.frames.marty import SPEAKER_KEY
 # Structure: {student: {concept: {'level': ComprehensionLevel, 'justification': str, 'turn': int}}}
 CONCEPT_ASSESSMENTS_KEY = '_concept_assessments'
 
+# Key for the granular, per-turn analysis of concept understanding.
+# This captures what was understood/confused in the *current* message only.
+# Structure: {'understood': list[str], 'confused': list[str]}
+PER_TURN_COMPREHENSION_KEY = '_per_turn_comprehension'
+
 
 class ComprehensionLevel(Enum):
     """Defines the possible levels of student comprehension for a concept."""
@@ -34,6 +40,12 @@ class ComprehensionLevel(Enum):
     UNDERSTOOD = 'understood'        # Student demonstrates correct understanding.
     CONFUSED = 'confused'            # Student shows uncertainty or partial understanding.
     MISCONCEPTION = 'misconception'  # Student has an incorrect understanding.
+
+
+class PerTurnComprehension(TypedDict):
+    """Represents the concepts understood or confused in a single turn."""
+    understood: list[str]
+    confused: list[str]
 
 
 class ConceptAssessment(TypedDict):
@@ -58,8 +70,8 @@ LEARNING MATERIAL:
 Example output: ["CPU", "RAM", "GPIO", "Flash Memory"]
 """
 
-# Prompt to analyze student comprehension of concepts
-_COMPREHENSION_ANALYSIS_PROMPT = """
+# Prompt for the session-long comprehension analysis (existing prompt)
+_CUMULATIVE_COMPREHENSION_ANALYSIS_PROMPT = """
 You are an expert educator analyzing a student's understanding.
 Based on their message, assess their comprehension of the concepts they mention.
 
@@ -94,6 +106,35 @@ Example output:
     {{"concept": "CPU", "level": "UNDERSTOOD", "justification": "Correctly identifies CPU as the processor"}},
     {{"concept": "RAM", "level": "MISCONCEPTION", "justification": "Thinks RAM is permanent storage"}}
   ]
+}}
+"""
+
+# New prompt for granular, per-turn comprehension analysis
+_PER_TURN_COMPREHENSION_ANALYSIS_PROMPT = """
+You are an expert AI analyzing a student's message in a learning session.
+Your task is to identify which specific concepts the student understood or seemed confused about *in this single message*.
+Your output MUST be a valid JSON object with two keys: "understood" and "confused".
+
+**KNOWN CONCEPTS:**
+{concepts}
+
+**STUDENT MESSAGE:**
+"{speaker}: {message}"
+
+**ANALYSIS TASK:**
+1.  `understood`: Create a list of concept names the student correctly explains, uses, or applies in this message.
+2.  `confused`: Create a list of concept names the student asks about, uses incorrectly, or seems uncertain about in this message.
+
+**RULES:**
+- Only include concepts explicitly mentioned or clearly referenced in the message.
+- If the student shows both understanding and confusion about different aspects of the same concept, include it in the "confused" list as it requires clarification.
+- If the message is a simple question (e.g., "What is a CPU?"), list the concept under "confused".
+- If the student does not mention any known concepts, return empty lists for both.
+
+**JSON OUTPUT EXAMPLE:**
+{{
+  "understood": ["CPU", "Flash Memory"],
+  "confused": ["RAM"]
 }}
 """
 
@@ -164,13 +205,13 @@ class ComprehensionTrackerFrame(Frame):
             logging.error('[ComprehensionTracker] Failed to extract concepts: %s', e)
             return []
 
-    async def _analyze_comprehension(
+    async def _analyze_cumulative_comprehension(
         self,
         speaker: str,
         message: str,
         concepts: list[str],
     ) -> list[dict[str, Any]]:
-        """Analyzes a student message for concept comprehension.
+        """Analyzes a student message for concept comprehension to build a cumulative profile.
 
         Args:
             speaker: The name of the student who sent the message.
@@ -180,7 +221,7 @@ class ComprehensionTrackerFrame(Frame):
         Returns:
             A list of assessment dictionaries with concept, level, and justification.
         """
-        prompt = _COMPREHENSION_ANALYSIS_PROMPT.format(
+        prompt = _CUMULATIVE_COMPREHENSION_ANALYSIS_PROMPT.format(
             concepts=json.dumps(concepts),
             speaker=speaker,
             message=message,
@@ -192,8 +233,42 @@ class ComprehensionTrackerFrame(Frame):
             result = json.loads(content)
             return result.get('assessments', [])
         except (json.JSONDecodeError, Exception) as e:
-            logging.error('[ComprehensionTracker] Failed to analyze comprehension: %s', e)
+            logging.error('[ComprehensionTracker] Failed to analyze cumulative comprehension: %s', e)
             return []
+
+    async def _analyze_per_turn_comprehension(
+        self,
+        speaker: str,
+        message: str,
+        concepts: list[str],
+    ) -> PerTurnComprehension:
+        """Analyzes a student message to find concepts understood/confused in this turn.
+
+        Args:
+            speaker: The name of the student who sent the message.
+            message: The content of the student's message.
+            concepts: The list of known concepts.
+
+        Returns:
+            A dictionary with 'understood' and 'confused' concept lists.
+        """
+        prompt = _PER_TURN_COMPREHENSION_ANALYSIS_PROMPT.format(
+            concepts=json.dumps(concepts),
+            speaker=speaker,
+            message=message,
+        )
+        try:
+            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            content = getattr(response, 'content', '{}')
+            content = content.strip().replace('```json', '').replace('```', '')
+            result = json.loads(content)
+            return {
+                'understood': result.get('understood', []),
+                'confused': result.get('confused', []),
+            }
+        except (json.JSONDecodeError, Exception) as e:
+            logging.error('[ComprehensionTracker] Failed to analyze per-turn comprehension: %s', e)
+            return {'understood': [], 'confused': []}
 
     def _update_student_assessments(
         self,
@@ -274,27 +349,40 @@ class ComprehensionTrackerFrame(Frame):
         if not concepts or speaker not in self.students:
             return None
 
-        # Parse the user message (remove speaker prefix if present)
-        user_input = context['user_input']
-        message = user_input
-        if ':' in user_input:
-            _, message = user_input.split(':', 1)
-            message = message.strip()
+        # Get the cleaned message from shared_context, falling back to raw input.
+        # This is better than parsing it again here.
+        message = shared_context.get(CLEANED_MESSAGE_KEY, context['user_input'])
 
-        # Analyze the message for comprehension
-        assessments = await self._analyze_comprehension(speaker, message, concepts)
+        # --- Run Both Comprehension Analyses Concurrently ---
+        cumulative_assessments_task = self._analyze_cumulative_comprehension(
+            speaker, message, concepts
+        )
+        per_turn_comprehension_task = self._analyze_per_turn_comprehension(
+            speaker, message, concepts
+        )
 
-        # Update the student's assessments
-        if assessments:
-            self._update_student_assessments(frame_memory, speaker, assessments, turn)
+        cumulative_assessments, per_turn_comprehension = await asyncio.gather(
+            cumulative_assessments_task, per_turn_comprehension_task
+        )
 
-        # Store current assessments in shared_context for other frames
+        # Update the cumulative student assessments
+        if cumulative_assessments:
+            self._update_student_assessments(
+                frame_memory, speaker, cumulative_assessments, turn
+            )
+
+        # Store the granular, per-turn analysis in shared_context for other frames
+        context['shared_context'][PER_TURN_COMPREHENSION_KEY] = per_turn_comprehension
+
+        # Store current cumulative assessments in shared_context as well
         context['shared_context'][CONCEPT_ASSESSMENTS_KEY] = tracker['by_student']
 
+        # The frame's return value for logging/debugging
         return {
             'concepts': concepts,
-            'current_assessments': assessments,
-            'all_assessments': tracker['by_student'],
+            'per_turn_analysis': per_turn_comprehension,
+            'cumulative_assessments_updated': cumulative_assessments,
+            'all_student_profiles': tracker['by_student'],
         }
 
     async def get_prompt_sections(self, context: FrameContext) -> list[PromptSection]:

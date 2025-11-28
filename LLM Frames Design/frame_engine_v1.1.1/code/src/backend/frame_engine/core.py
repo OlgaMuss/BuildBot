@@ -254,6 +254,7 @@ class SessionLogger:
         speaker: str,
         user_message: str,
         assistant_response: str,
+        analysis_data: Optional[dict[str, Any]] = None,
     ) -> None:
         """Logs a complete dialogue turn (NORMAL level).
 
@@ -265,31 +266,66 @@ class SessionLogger:
             speaker: The name of the speaker (student).
             user_message: The user's message.
             assistant_response: The assistant's response.
+            analysis_data: Optional dict with per-turn analysis from frames.
         """
+        data = {
+            'speaker': speaker,
+            'user': user_message,
+            'assistant': assistant_response,
+        }
+        if analysis_data:
+            data['analysis'] = analysis_data
+
         self.log(
             event=f'Turn {turn_number}',
-            data={
-                'speaker': speaker,
-                'user': user_message,
-                'assistant': assistant_response,
-            },
+            data=data,
             level=SessionVerbosity.NORMAL,
         )
 
-    def save(self, frame_memory: Optional[dict[str, Any]] = None) -> Path:
-        """Saves the session to a YAML file.
+    def save(
+        self,
+        frame_memory: Optional[dict[str, Any]] = None,
+        generate_markdown_report: bool = False,
+    ) -> Path:
+        """Saves the session to a YAML file and optionally a Markdown report.
 
-        The output varies based on the verbosity level:
-        - MINIMAL: session_id, metadata, summary only
-        - NORMAL: + filtered event log (excludes VERBOSE entries)
-        - VERBOSE: + full event log with slot details + frame_memory
+        The content of the YAML file depends on the verbosity level selected
+        during session initialization.
 
         Args:
-            frame_memory: Optional frame memory to include (VERBOSE only).
+            frame_memory: Optional frame memory to include. This is used for
+                          the Markdown report and for the YAML log in VERBOSE mode.
+            generate_markdown_report: If True, a human-readable Markdown
+                                      report will be saved alongside the YAML file.
 
         Returns:
-            The path to the saved session file.
+            The path to the saved YAML session file.
         """
+        self.output_dir.mkdir(exist_ok=True)
+
+        # --- Part 1: Save the standard YAML log ---
+        session_data = self._build_yaml_data(frame_memory)
+        yaml_file_path = self.output_dir / f'session_{self.session_id}.yaml'
+        with yaml_file_path.open('w', encoding='utf-8') as f:
+            yaml.dump(
+                session_data,
+                f,
+                default_flow_style=False,
+                allow_unicode=True,
+                sort_keys=False,
+                width=120,
+            )
+
+        # --- Part 2: Optionally save the Markdown report ---
+        if generate_markdown_report:
+            self._save_markdown_report(session_data, frame_memory)
+
+        return yaml_file_path
+
+    def _build_yaml_data(
+        self, frame_memory: Optional[dict[str, Any]] = None
+    ) -> dict[str, Any]:
+        """Constructs the dictionary for YAML serialization based on verbosity."""
         session_data: dict[str, Any] = {
             'session_id': self.session_id,
             'verbosity': self.verbosity.value,
@@ -318,17 +354,70 @@ class SessionLogger:
                     for entry in self.entries
                     if entry.get('level') != SessionVerbosity.VERBOSE.value
                 ]
+        return session_data
 
-        # Write to file
-        self.output_dir.mkdir(exist_ok=True)
-        file_path = self.output_dir / f'session_{self.session_id}.yaml'
-        with file_path.open('w', encoding='utf-8') as f:
-            yaml.dump(
-                session_data,
-                f,
-                default_flow_style=False,
-                allow_unicode=True,
-                sort_keys=False,
-                width=120,
-            )
-        return file_path
+    def _save_markdown_report(
+        self,
+        session_data: dict[str, Any],
+        frame_memory: Optional[dict[str, Any]] = None,
+    ) -> None:
+        """Saves a human-readable summary of the session in Markdown format."""
+        md_file_path = self.output_dir / f'session_{self.session_id}.md'
+        with md_file_path.open('w', encoding='utf-8') as f:
+            # --- Header ---
+            f.write(f"# Session Report: {self.session_id}\n\n")
+            f.write(f"**Saved at:** {session_data['saved_at']}\n\n")
+
+            # --- Metadata ---
+            if self.metadata:
+                f.write("## Session Details\n\n")
+                for key, value in self.metadata.items():
+                    f.write(f"- **{key.replace('_', ' ').title()}:** {value}\n")
+                f.write("\n")
+
+            # --- Participant Summary (from frame_memory) ---
+            if frame_memory:
+                participation = frame_memory.get('mnemonic_co_creator_marty', {}).get(
+                    'participation'
+                )
+                if participation:
+                    f.write("## Participant Summary\n\n")
+                    for student, p_data in participation.items():
+                        f.write(f"### {student}\n")
+                        f.write(
+                            f"- **Total Contributions:** {p_data.get('contribution_count', 0)}\n\n"
+                        )
+
+            # --- Conversation Log ---
+            f.write("## Conversation Log\n\n")
+            turn_events = [
+                e for e in self.entries if e['event'].startswith('Turn')
+            ]
+            for event in sorted(turn_events, key=lambda x: x['event']):
+                data = event.get('data', {})
+                turn_str = event['event']
+                speaker = data.get('speaker', 'Unknown')
+                user_msg = data.get('user', '')
+                assistant_msg = data.get('assistant', '')
+
+                f.write(f"### {turn_str}\n\n")
+                f.write(f"**{speaker}:** {user_msg}\n\n")
+
+                # Display the per-turn comprehension analysis if it exists
+                # The key '_per_turn_comprehension' is a well-known key defined
+                # in the comprehension_tracker frame.
+                analysis = data.get('analysis', {})
+                per_turn_comp = analysis.get('_per_turn_comprehension', {})
+                understood = per_turn_comp.get('understood', [])
+                confused = per_turn_comp.get('confused', [])
+
+                if understood or confused:
+                    f.write("    *Turn Analysis:*\n")
+                    if understood:
+                        f.write(f"    - *Understood:* {', '.join(understood)}\n")
+                    if confused:
+                        f.write(f"    - *Confused:* {', '.join(confused)}\n")
+                    f.write("\n")
+
+                f.write(f"**Marty:** {assistant_msg}\n\n")
+                f.write("---\n\n")

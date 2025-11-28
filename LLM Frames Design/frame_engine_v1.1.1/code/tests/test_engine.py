@@ -6,6 +6,7 @@ These tests verify:
 - US3: Prompt section accumulation
 """
 import pytest
+from unittest.mock import MagicMock
 
 from backend.frame_engine.engine import FALLBACK_RESPONSE, FrameEngine
 
@@ -179,3 +180,38 @@ class TestPromptAccumulation:
         # The system prompt should include the label
         system_prompt = result['final_state']['system_prompt']
         assert '[labeled_frame Section]' in system_prompt
+
+
+class TestSessionLogging:
+    """Tests for session logging functionality."""
+
+    @pytest.mark.asyncio
+    async def test_end_session_saves_log_with_markdown(self, llm_client):
+        """Verifies that end_session calls the logger to save the report.
+
+        This test ensures the new Markdown reporting feature is triggered.
+        """
+        # Create a mock SessionLogger
+        mock_logger = MagicMock()
+        mock_logger.save = MagicMock()
+
+        engine = FrameEngine(
+            frames=[],
+            llm_client=llm_client,
+            session_logger=mock_logger,
+        )
+
+        # The final state would normally be built up over a conversation
+        final_state = {
+            'frame_memory': {'turn_count': 5, 'some_data': 'value'},
+            'conversation_history': [],
+        }
+
+        # Call the method to end the session
+        await engine.end_session(final_state)
+
+        # Verify that the logger's save method was called correctly
+        mock_logger.save.assert_called_once_with(
+            frame_memory=final_state['frame_memory'],
+            generate_markdown_report=True,
+        )

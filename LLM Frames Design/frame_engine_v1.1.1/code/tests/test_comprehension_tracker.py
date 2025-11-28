@@ -4,12 +4,14 @@ These tests verify:
 - US6: Per-Concept Comprehension Tracking
 """
 import pytest
+from unittest.mock import AsyncMock
 
 from backend.frame_engine.core import FrameContext
 from backend.frames.comprehension_tracker import (
     CONCEPT_ASSESSMENTS_KEY,
     ComprehensionLevel,
     ComprehensionTrackerFrame,
+    PER_TURN_COMPREHENSION_KEY,
 )
 from backend.frames.marty import SPEAKER_KEY
 
@@ -94,13 +96,29 @@ class TestComprehensionAssessment:
         context['frame_memory']['turn_count'] = 2
         context['user_input'] = 'Red: The CPU is like the brain of the microcontroller, right?'
 
+        # --- Mock the two analysis methods to isolate the test ---
+        comprehension_frame._analyze_cumulative_comprehension = AsyncMock(
+            return_value=[
+                {
+                    'concept': 'CPU',
+                    'level': 'UNDERSTOOD',
+                    'justification': 'Correctly analogized to a brain.',
+                }
+            ]
+        )
+        comprehension_frame._analyze_per_turn_comprehension = AsyncMock(
+            return_value={'understood': ['CPU'], 'confused': []}
+        )
+
         analysis = await comprehension_frame.analyze_input(context)
 
-        # Should return assessments for the current turn
+        # Should return assessments for the current turn in the analysis output
         assert analysis is not None
-        # The current_assessments may or may not be empty depending on LLM analysis
-        assert 'current_assessments' in analysis
-        assert 'all_assessments' in analysis
+        assert 'cumulative_assessments_updated' in analysis
+        assert 'all_student_profiles' in analysis
+
+        # The mock should have been called
+        comprehension_frame._analyze_cumulative_comprehension.assert_called_once()
 
     @pytest.mark.asyncio
     async def test_assessment_levels(self, comprehension_frame, context_with_speaker):
@@ -126,6 +144,58 @@ class TestComprehensionAssessment:
                     ComprehensionLevel.CONFUSED.value,
                     ComprehensionLevel.MISCONCEPTION.value,
                 ]
+
+
+class TestPerTurnComprehension:
+    """Tests for the new, granular per-turn comprehension analysis."""
+
+    @pytest.mark.asyncio
+    async def test_per_turn_analysis_is_called(
+        self, comprehension_frame, context_with_speaker
+    ):
+        """Verifies that the new per-turn analysis method is called during analyze_input."""
+        context = context_with_speaker
+        context['frame_memory']['turn_count'] = 1
+        context['user_input'] = 'Red: I get CPUs, but what is RAM?'
+
+        # Initialize by running once
+        await comprehension_frame.analyze_input(context)
+
+        # --- Mock the analysis methods for the actual test ---
+        comprehension_frame._analyze_cumulative_comprehension = AsyncMock(return_value=[])
+        comprehension_frame._analyze_per_turn_comprehension = AsyncMock(
+            return_value={'understood': ['CPU'], 'confused': ['RAM']}
+        )
+
+        # Run again with a new message
+        context['frame_memory']['turn_count'] = 2
+        await comprehension_frame.analyze_input(context)
+
+        # The new per-turn analysis method should have been called
+        comprehension_frame._analyze_per_turn_comprehension.assert_called_once()
+
+    @pytest.mark.asyncio
+    async def test_per_turn_analysis_in_shared_context(
+        self, comprehension_frame, context_with_speaker
+    ):
+        """Verifies the result of per-turn analysis is stored in shared_context."""
+        context = context_with_speaker
+        context['frame_memory']['turn_count'] = 1
+        context['user_input'] = 'Red: I get CPUs, but what is RAM?'
+
+        # Mock the LLM call to return a predictable result
+        comprehension_frame._analyze_per_turn_comprehension = AsyncMock(
+            return_value={'understood': ['CPU'], 'confused': ['RAM']}
+        )
+
+        # Run the analysis
+        await comprehension_frame.analyze_input(context)
+
+        # The result should be in shared_context under the correct key
+        assert PER_TURN_COMPREHENSION_KEY in context['shared_context']
+        per_turn_result = context['shared_context'][PER_TURN_COMPREHENSION_KEY]
+        assert per_turn_result['understood'] == ['CPU']
+        assert per_turn_result['confused'] == ['RAM']
 
 
 class TestPerStudentTracking:

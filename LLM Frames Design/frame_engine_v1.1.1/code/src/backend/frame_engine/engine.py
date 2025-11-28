@@ -18,6 +18,7 @@ from backend.frame_engine.core import (
     SessionLogger,
     ValidationAction,
 )
+from backend.frames.comprehension_tracker import PER_TURN_COMPREHENSION_KEY
 
 # Import from marty for the well-known shared context key
 CLEANED_MESSAGE_KEY = '_cleaned_message'
@@ -432,11 +433,21 @@ class FrameEngine:
             marty_analysis = shared_context.get('mnemonic_co_creator_marty', {})
             speaker = marty_analysis.get('speaker', shared_context.get('_speaker', 'Unknown'))
             turn_number = marty_analysis.get('turn_count', frame_memory.get('turn_count', 0))
+
+            # Extract per-turn analysis from the shared context to enrich the log
+            per_turn_analysis = shared_context.get(PER_TURN_COMPREHENSION_KEY)
+            analysis_data = (
+                {PER_TURN_COMPREHENSION_KEY: per_turn_analysis}
+                if per_turn_analysis
+                else None
+            )
+
             self.session_logger.log_turn(
                 turn_number=turn_number,
                 speaker=speaker,
                 user_message=clean_message,
                 assistant_response=final_response,
+                analysis_data=analysis_data,
             )
 
         # Construct the new history without modifying the original.
@@ -450,3 +461,24 @@ class FrameEngine:
             'response': final_response,
             'final_state': final_state
         }
+
+    async def end_session(self, final_state: FrameContext) -> None:
+        """Saves the session log with the final frame memory.
+
+        This should be called after the conversation loop is finished to ensure
+        the complete session is logged.
+
+        Args:
+            final_state: The very last state returned by the ainvoke method.
+        """
+        if self.session_logger:
+            logging.info('--- SESSION END ---')
+            self.session_logger.save(
+                frame_memory=final_state.get('frame_memory'),
+                generate_markdown_report=True,
+            )
+            logging.info(
+                'Session saved to: %s',
+                self.session_logger.output_dir
+                / f'session_{self.session_logger.session_id}.yaml',
+            )

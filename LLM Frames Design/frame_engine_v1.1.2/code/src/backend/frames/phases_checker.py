@@ -1,4 +1,6 @@
 """A generic frame that uses an LLM to check for adherence to conversational policies."""
+import logging
+
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import HumanMessage
 
@@ -70,6 +72,8 @@ class PhasesCheckerFrame(Frame):
             phase_goal=PHASE_GOALS.get(phase, 'Unknown'),
             response=llm_response,
         )
+
+        logging.info('[PhasesChecker] Validation prompt:\n--- PHASES_CHECKER PROMPT START ---\n%s\n--- PHASES_CHECKER PROMPT END ---', prompt)
 
         messages = [HumanMessage(content=prompt)]
         validation_response = await self.llm.ainvoke(messages)

@@ -1,4 +1,6 @@
 """A generic frame that uses an LLM to check for age-appropriate language."""
+import logging
+
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import HumanMessage
 
@@ -51,6 +53,8 @@ class LanguageCheckerFrame(Frame):
             target_age=self.target_age,
             response=llm_response,
         )
+
+        logging.info('[LanguageChecker] Validation prompt:\n--- LANGUAGE_CHECKER PROMPT START ---\n%s\n--- LANGUAGE_CHECKER PROMPT END ---', prompt)
 
         messages = [HumanMessage(content=prompt)]
 

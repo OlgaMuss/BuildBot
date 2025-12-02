@@ -79,9 +79,9 @@ def _create_azure_client(model_name: str, temperature: Optional[float]) -> BaseC
         'azure_deployment': os.getenv('AZURE_DEPLOYMENT') or model_name,
         'api_version': os.getenv('API_VERSION'),
     }
-    # The Azure model requires a temperature of 1.0. The langchain library
-    # defaults to 0.7, so we must override it here.
-    kwargs['temperature'] = 1.0
+    # Do not add temperature for Azure if the model does not support it.
+    # if temperature is not None:
+    #     kwargs['temperature'] = temperature
 
     return AzureChatOpenAI(**kwargs)
 

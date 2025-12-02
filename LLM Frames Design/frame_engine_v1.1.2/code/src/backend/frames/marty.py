@@ -4,8 +4,7 @@ Exports:
     CLEANED_MESSAGE_KEY: Shared context key for cleaned user message.
     SPEAKER_KEY: Shared context key for speaker name.
     SESSION_PHASE_KEY: Shared context key for session phase.
-    SUGGESTED_NEXT_SPEAKER_KEY: Shared context key for suggested next speaker.
-    CONSECUTIVE_SAME_SPEAKER_KEY: Shared context key for monopolization detection.
+
 """
 import json
 import logging
@@ -25,6 +24,7 @@ from backend.frame_engine.core import (
 )
 
 
+
 # --- Shared Context Keys (exported for use by other frames) ---
 # These keys define the data this frame writes to shared_context.
 
@@ -36,12 +36,6 @@ SPEAKER_KEY = '_speaker'
 
 # Key for session phase (1, 2, 3...) used by phase-aware frames.
 SESSION_PHASE_KEY = '_session_phase'
-
-# Key for suggested next speaker (for turn-taking management).
-SUGGESTED_NEXT_SPEAKER_KEY = '_suggested_next_speaker'
-
-# Key for consecutive same speaker count (for monopolization detection).
-CONSECUTIVE_SAME_SPEAKER_KEY = '_consecutive_same_speaker'
 
 # --- Frame Memory Keys ---
 # Key for storing mnemonic creation state (concepts, finalization status, etc.)
@@ -206,14 +200,18 @@ class MnemonicCoCreatorFrame(Frame):
             self._initialize_memory(frame_memory)
 
         # Calculate elapsed time for phase transitions.
-        # If an external runner (like a simulation) has already injected the time,
-        # we respect it. Otherwise, we calculate it based on real-world time.
-        if 'elapsed_time_minutes' not in frame_memory:
+        # If an external runner (like a simulation) has injected the time THIS turn,
+        # we respect it (marked by '_elapsed_time_injected' flag).
+        # Otherwise, we calculate it based on real-world time EVERY turn.
+        if not frame_memory.get('_elapsed_time_injected'):
             start_time_str = frame_memory.get('session_start_time')
             if start_time_str:
                 start_time = datetime.fromisoformat(start_time_str)
                 elapsed_seconds = (datetime.now() - start_time).total_seconds()
                 frame_memory['elapsed_time_minutes'] = elapsed_seconds / 60
+        else:
+            # Clear the injection flag so next turn recalculates unless injected again
+            frame_memory['_elapsed_time_injected'] = False
 
         # Update turn count and session phase
         frame_memory['turn_count'] += 1
@@ -233,9 +231,6 @@ class MnemonicCoCreatorFrame(Frame):
         context['shared_context'][CLEANED_MESSAGE_KEY] = message
         context['shared_context'][SPEAKER_KEY] = speaker
         context['shared_context'][SESSION_PHASE_KEY] = phase
-
-        # Get analysis from other frames that have already run
-        balanced_turns_analysis = context['shared_context'].get('balanced_turns_validator', {})
 
         # Perform the deep analysis using an LLM call.
         llm_analysis = await self._run_llm_analysis(
@@ -290,9 +285,8 @@ class MnemonicCoCreatorFrame(Frame):
             'message': message,
             'session_phase': phase,
             'off_topic_duration': frame_memory['consecutive_off_topic_turns'],
-            # Add analysis from balanced_turns_frame to this frame's output
-            'suggested_next_speaker': balanced_turns_analysis.get('suggested_next_speaker'),
-            'consecutive_same_speaker': balanced_turns_analysis.get('consecutive_same_speaker', 0),
+            'suggested_next_speaker': None,  # Set by balanced_turns frame later
+            'consecutive_same_speaker': 0,   # Set by balanced_turns frame later
             **llm_analysis,  # understanding_level, contribution_type, is_relevant, etc.
         }
 
@@ -319,10 +313,30 @@ class MnemonicCoCreatorFrame(Frame):
                 logging.warning('[Mnemonic State] No concepts detected, but Phase 1 is complete')
             frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
         
+        # When entering Phase 3, extract the finalized mnemonic from Marty's narrations
+        # Use a separate flag to track if we've done the Phase 3 extraction
+        if phase == 3 and not mnemonic_state.get('_phase3_extraction_done', False):
+            logging.info('[Mnemonic State] Entering Phase 3 - extracting mnemonic from narrations')
+            extracted_mnemonic = self._extract_from_last_narration(context['conversation_history'])
+            mnemonic_state['_phase3_extraction_done'] = True  # Mark extraction attempted
+            if extracted_mnemonic:
+                mnemonic_state['mnemonic_text'] = extracted_mnemonic
+                mnemonic_state['mnemonic_created'] = True
+                frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
+                logging.info(f'[Mnemonic State] Extracted mnemonic: {extracted_mnemonic[:100]}...')
+            else:
+                # Fallback: use whatever draft we have
+                logging.warning('[Mnemonic State] Could not extract mnemonic from narrations, using existing draft')
+                frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
+        
         # Log mnemonic state for debugging
         current_mnemonic = mnemonic_state.get('mnemonic_text', '')
         if phase == 3:
-            logging.info(f'[Mnemonic State] Phase 3 - mnemonic ready: {current_mnemonic}')
+            logging.info(f'[Mnemonic State] Phase 3 - mnemonic: {current_mnemonic}')
+            # Track Phase 3 turn count for intro detection
+            phase3_turns = frame_memory.get('_phase3_turn_count', 0) + 1
+            frame_memory['_phase3_turn_count'] = phase3_turns
+            logging.info(f'[Mnemonic State] Phase 3 turn: {phase3_turns}')
 
         self._log_event('Analysis complete.')
         return analysis_output
@@ -392,11 +406,31 @@ NEW DRAFT:"""
         and extracts the complete mnemonic text after it.
         """
         # Search backwards through conversation for Marty's narrations
-        narration_patterns = [
-            r'So far,? our (?:story|poem|jokes?) (?:goes?|is):\s*(.*)',
-            r'(?:Our|The) (?:Story|Poem|Jokes?) Mnemonic:\s*(.*)',
-            r'Here\'?s? (?:the|our) (?:story|poem|jokes?) so far:\s*(.*)',
-        ]
+        # Use type-specific patterns for better matching
+        mnemonic_type_lower = self.mnemonic_type.lower()
+        
+        if mnemonic_type_lower == 'story':
+            narration_patterns = [
+                r'So far,? our story (?:goes?|is):\s*(.*)',
+                r'(?:Our|The) story (?:now is|so far):\s*(.*)',
+                r'Here\'?s? (?:the|our) story so far:\s*(.*)',
+                r'story (?:now|goes):\s*["\']?(.*)',
+            ]
+        elif mnemonic_type_lower == 'poem':
+            narration_patterns = [
+                r'So far,? our poem (?:goes?|is):\s*(.*)',
+                r'(?:Our|The) poem (?:now is|lines now are|so far):\s*(.*)',
+                r'Our poem lines (?:now are|are):\s*(.*)',
+                r'Here\'?s? (?:the|our) poem so far:\s*(.*)',
+                r'poem (?:now|lines):\s*["\']?(.*)',
+            ]
+        else:  # jokes
+            narration_patterns = [
+                r'So far,? our jokes? (?:go|are|is):\s*(.*)',
+                r'(?:Our|The) jokes? (?:now are|so far):\s*(.*)',
+                r'Here\'?s? (?:the|our) jokes? so far:\s*(.*)',
+                r'jokes? (?:now|so far):\s*["\']?(.*)',
+            ]
         
         for message in reversed(conversation_history):
             if message.get('role') == 'assistant':  # Marty's messages
@@ -526,14 +560,18 @@ Example:
         """Constructs the prompt sections based on the current session phase."""
         analysis = context['shared_context'].get(self.name, {})
         phase = analysis.get('session_phase', 1)
-        suggested_next_speaker = analysis.get('suggested_next_speaker')
-        consecutive_same_speaker = analysis.get('consecutive_same_speaker', 0)
         off_topic_duration = analysis.get('off_topic_duration', 0)
         # Get the speaker of the turn being analyzed
         previous_speaker = analysis.get('speaker', 'a student')
         
+        # Get turn-taking info from balanced_turns frame
+        from backend.frames.balanced_turns import SUGGESTED_NEXT_SPEAKER_KEY, CONSECUTIVE_SAME_SPEAKER_KEY
+        suggested_next_speaker = context['shared_context'].get(SUGGESTED_NEXT_SPEAKER_KEY)
+        consecutive_same_speaker = context['shared_context'].get(CONSECUTIVE_SAME_SPEAKER_KEY, 0)
+
         # Get mnemonic state for phase-specific instructions
-        frame_memory = context['frame_memory'].get(self.name, {})
+        # Note: marty writes to root of frame_memory, not under self.name
+        frame_memory = context['frame_memory']
         mnemonic_state = frame_memory.get(MNEMONIC_STATE_KEY, {})
         
         sections: list[PromptSection] = []
@@ -642,9 +680,9 @@ Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
 The selected concepts are: **{concepts_str}**
 
 Your task is to help students BUILD their {self.mnemonic_type} using these concepts.
-ASK students to propose ideas:
-- "How should our {self.mnemonic_type} start?"
-- "How can we include [concept]?"
+ASK students to propose ideas BY NAME (always acknowledge who just spoke, then invite the next student):
+- "[Student who spoke], great idea! [Next student], how should our {self.mnemonic_type} start?"
+- "Nice, [Student]! [Next student], how can we include [concept]?"
 
 IF a student is stuck:
 1. FIRST, ask another student for their ideas (e.g., "[Other Student], how do you think we can continue the story?").
@@ -653,7 +691,9 @@ IF a student is stuck:
 IMPORTANT: Every 2-3 student contributions, NARRATE the {self.mnemonic_type} built so far.
 {repetition_guidance}
 This helps students remember and build on what they've already created.
-DO NOT create the {self.mnemonic_type} for them. Your role is to facilitate THEIR creativity."""
+DO NOT create the {self.mnemonic_type} for them. Your role is to facilitate THEIR creativity.
+
+TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
 
     def _get_phase_3_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
         """Returns the prompt instructions for Phase 3: Recall Practice."""
@@ -661,22 +701,69 @@ DO NOT create the {self.mnemonic_type} for them. Your role is to facilitate THEI
         # Recall tracking is now in marty's namespaced memory
         recall_tracking = frame_memory.get('recall_tracking', {})
         total_attempts = sum(student_data.get('attempts', 0) for student_data in recall_tracking.values())
+        
+        # Check if this is the first turn of Phase 3
+        phase3_turn_count = frame_memory.get('_phase3_turn_count', 1)
+        is_first_phase3_turn = phase3_turn_count == 1
+        
+        # Check if we have a valid mnemonic (at least 20 chars and doesn't look like incomplete input)
+        has_valid_mnemonic = (
+            mnemonic_text 
+            and len(mnemonic_text) > 20 
+            and ':' not in mnemonic_text[:30]  # Avoid "Blue: ..." student input fragments
+        )
+        
+        # Handle case where no proper mnemonic was created
+        if not has_valid_mnemonic:
+            return f"""🎯 PHASE 3 - WRAP UP
 
+⚠️ NO COMPLETE {self.mnemonic_type.upper()} WAS CREATED
+It looks like we ran out of time before finishing our {self.mnemonic_type}.
+
+YOUR TASK:
+1. Acknowledge this warmly: "[Student who spoke], it looks like we got a bit stuck on our {self.mnemonic_type}!"
+2. Summarize what was accomplished: "We did talk about some great concepts like [mention 1-2 concepts discussed]."
+3. Encourage them: "Sometimes the best ideas take time. What did you learn about microcontrollers today?"
+4. Invite reflection BY NAME: "[Next student], what was your favorite part of our discussion?"
+
+DO NOT pretend there's a poem to recite. Be honest and supportive.
+
+TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
+
+        # First turn of Phase 3: Marty should recite the poem first
+        if is_first_phase3_turn:
+            return f"""🎯 PHASE 3 - MEMORY RECALL TEST (Starting!)
+The {self.mnemonic_type} is COMPLETE!
+
+YOUR FIRST TASK: RECITE THE FULL {self.mnemonic_type.upper()} TO THE STUDENTS!
+Start your response with: "Great work everyone! Here's the {self.mnemonic_type} we created together:"
+Then recite it clearly:
+"{mnemonic_text}"
+
+After reciting, invite a student BY NAME to try: "[Student], do you want to try reciting it from memory? I'll help if you get stuck!"
+
+This gives students a clear reminder before asking them to recall.
+
+TURN-TAKING REMINDER: Address the student who just spoke by name AND invite a different student to try reciting."""
+
+        # Subsequent turns of Phase 3
         return f"""🎯 PHASE 3 - MEMORY RECALL TEST (Recall attempts: {total_attempts})
-The {self.mnemonic_type} is COMPLETE: "{mnemonic_text}"
+The {self.mnemonic_type} is: "{mnemonic_text}"
 
 ⚠️ RECALL ONLY MODE:
 Creation is OVER. Testing memory is the ONLY goal now.
 
 IF a student asks a question or tries to add to the mnemonic:
 → DO NOT ANSWER or ACCEPT IT.
-→ REDIRECT: "That's a great thought, but for now, let's focus on remembering our {self.mnemonic_type}! Who can recite it for us?"
+→ REDIRECT BY NAME: "[Student who spoke], that's a great thought! [Next student], can you try reciting our {self.mnemonic_type} for us?"
 
 IF a student is reciting and gets stuck:
-1. FIRST, ask another student if they can help them remember (e.g., "[Other Student], can you help them with the next part?").
+1. FIRST, ask another student BY NAME if they can help (e.g., "[Student], nice try! [Other Student], can you help with the next part?").
 2. ONLY if all students are stuck, GIVE HINTS: "What came after [last part]?" or "It starts with..."
 
-CELEBRATE their memory work! The ONLY goal: Can they RECITE the complete {self.mnemonic_type}?"""
+CELEBRATE their memory work! The ONLY goal: Can they RECITE the complete {self.mnemonic_type}?
+
+TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
 
     async def _detect_language(self, message: str) -> str:
         """Uses an LLM to detect the language of a given text."""
@@ -701,12 +788,7 @@ Language:'''
         suggested_next_speaker: Optional[str],
         consecutive_same_speaker: int,
     ) -> str:
-        """Generates instructions for managing turn-taking."""
-        if consecutive_same_speaker >= 2:
-            return (
-                f"{previous_speaker} has spoken {consecutive_same_speaker} times in a row. "
-                f"Ensure you invite someone else to speak to maintain balance."
-            )
+        """Generates turn-taking instructions using suggested_next_speaker from balanced_turns."""
         if suggested_next_speaker and suggested_next_speaker != previous_speaker:
             return (
                 f"To ensure balanced participation, after acknowledging {previous_speaker}, "

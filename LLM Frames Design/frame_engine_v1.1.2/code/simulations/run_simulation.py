@@ -282,6 +282,7 @@ class SimulationOrchestrator:
         # Inject realistic elapsed time into frame_memory for simulation
         estimated_time = self._estimate_elapsed_time(user_input)
         self.frame_memory['elapsed_time_minutes'] = estimated_time
+        self.frame_memory['_elapsed_time_injected'] = True  # Mark as externally injected
 
         result = await self.frame_engine.ainvoke(
             user_input=user_input,

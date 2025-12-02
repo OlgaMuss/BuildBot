@@ -15,6 +15,7 @@ from backend.frame_engine.core import (
     Frame,
     FrameContext,
     PromptSection,
+    SessionLogger,
     ValidationAction,
 )
 from backend.frames.comprehension_tracker import PER_TURN_COMPREHENSION_KEY
@@ -106,7 +107,9 @@ class FrameEngine:
         `shared_context`.
         """
         logging.info('--- SLOT 1: Analyze Input ---')
-        shared_context: dict[str, Any] = {}
+        # Use the existing shared_context from state, preserving any direct writes
+        # by frames (e.g., SUGGESTED_NEXT_SPEAKER_KEY from balanced_turns).
+        shared_context = state.setdefault('shared_context', {})
         for frame in self.frames:
             result = await frame.analyze_input(state)
             if result:
@@ -118,7 +121,6 @@ class FrameEngine:
                 shared_context[frame.name] = {}
                 if self.session_logger:
                     self.session_logger.log_slot('analyze_input', frame.name, details={'result': 'no_output'})
-        state['shared_context'] = shared_context
         return state
 
     async def _shape_prompt_node(self, state: FrameContext) -> FrameContext:
@@ -233,6 +235,17 @@ class FrameEngine:
         logging.info('  - LLM Draft: %s', draft)
         state['llm_draft_response'] = draft
         state.setdefault('repair_attempts', 0)
+        
+        # Log prompt + draft to JSON for debugging content filters
+        if self.session_logger:
+            turn_count = state.get('frame_memory', {}).get('turn_count', 0)
+            self.session_logger.log_prompt(
+                turn_number=turn_count,
+                system_prompt=state['system_prompt'],
+                llm_draft=draft,
+                conversation_history=state.get('conversation_history'),
+            )
+        
         return state
 
     async def _validate_output_node(self, state: FrameContext) -> FrameContext:

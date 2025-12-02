@@ -10,6 +10,7 @@ defined in their respective frame modules and exported from backend.frames.
 from abc import ABC, abstractmethod
 from datetime import datetime
 from enum import Enum
+import json
 from pathlib import Path
 from typing import Any, Optional, TypedDict
 
@@ -187,6 +188,7 @@ class SessionLogger:
         self.output_dir = output_dir
         self.entries: list[dict[str, Any]] = []
         self.metadata: dict[str, Any] = {}
+        self.prompts: list[dict[str, Any]] = []  # Store prompts for JSON export
 
     def set_metadata(self, key: str, value: Any) -> None:
         """Sets metadata that will be included in the session file header."""
@@ -261,6 +263,29 @@ class SessionLogger:
             data=data,
         )
 
+    def log_prompt(
+        self,
+        turn_number: int,
+        system_prompt: str,
+        llm_draft: str,
+        conversation_history: Optional[list[dict[str, Any]]] = None,
+    ) -> None:
+        """Logs prompts for JSON export (debugging content filters).
+
+        Args:
+            turn_number: The turn number.
+            system_prompt: The full system prompt sent to LLM.
+            llm_draft: The LLM's draft response.
+            conversation_history: The conversation history sent with the prompt.
+        """
+        self.prompts.append({
+            'timestamp': datetime.now().isoformat(),
+            'turn': turn_number,
+            'system_prompt': system_prompt,
+            'llm_draft': llm_draft,
+            'conversation_history': conversation_history or [],
+        })
+
     def save(
         self,
         frame_memory: Optional[dict[str, Any]] = None,
@@ -294,6 +319,21 @@ class SessionLogger:
         # --- Part 2: Optionally save the Markdown report ---
         if generate_markdown_report:
             self._save_markdown_report(session_data, frame_memory)
+
+        # --- Part 3: Save prompts JSON file (for debugging content filters) ---
+        if self.prompts:
+            json_file_path = self.output_dir / f'session_{self.session_id}_prompts.json'
+            with json_file_path.open('w', encoding='utf-8') as f:
+                json.dump(
+                    {
+                        'session_id': self.session_id,
+                        'saved_at': datetime.now().isoformat(),
+                        'prompts': self.prompts,
+                    },
+                    f,
+                    indent=2,
+                    ensure_ascii=False,
+                )
 
         return yaml_file_path
 
@@ -329,25 +369,86 @@ class SessionLogger:
             f.write(f"# Session Report: {self.session_id}\n\n")
             f.write(f"**Saved at:** {session_data['saved_at']}\n\n")
 
-            # --- Participant Summary (from frame_memory) ---
-            if frame_memory:
-                participation = frame_memory.get('mnemonic_co_creator_marty', {}).get(
-                    'participation'
-                )
-                if participation:
-                    f.write("## Participant Summary\n\n")
-                    for student, p_data in participation.items():
-                        f.write(f"### {student}\n")
-                        f.write(
-                            f"- **Total Contributions:** {p_data.get('contribution_count', 0)}\n\n"
-                        )
-
-            # --- Metadata ---
+            # --- Session Details (moved to top for better context) ---
             if self.metadata:
                 f.write("## Session Details\n\n")
                 for key, value in self.metadata.items():
                     f.write(f"- **{key.replace('_', ' ').title()}:** {value}\n")
                 f.write("\n")
+
+            # --- Mnemonic Type Section ---
+            mnemonic_type = self.metadata.get('mnemonic_type', 'Unknown')
+            type_descriptions = {
+                "Story": "A narrative that weaves concepts together",
+                "Poem": "Rhyming lines that capture key concepts",
+                "Jokes": "Humorous setups and punchlines about concepts",
+            }
+            type_desc = type_descriptions.get(mnemonic_type, "A creative mnemonic device")
+            f.write("## 🎨 Mnemonic Type\n\n")
+            f.write(f"**{mnemonic_type}** - {type_desc}\n\n")
+
+            # --- Participation Summary ---
+            if frame_memory:
+                balanced_turns_memory = frame_memory.get('balanced_turns_validator', {})
+                participation = balanced_turns_memory.get('participation', {})
+                if participation:
+                    f.write("## 📊 Participation Summary\n\n")
+                    f.write("| Student | Contributions | Speaking Time |\n")
+                    f.write("|---------|---------------|---------------|\n")
+                    for student, p_data in sorted(participation.items()):
+                        count = p_data.get('contribution_count', 0)
+                        time = p_data.get('total_speaking_time_seconds', 0)
+                        f.write(f"| **{student}** | {count} | {time:.1f}s |\n")
+                    f.write("\n")
+
+            # --- Comprehension Summary ---
+            if frame_memory:
+                comprehension_memory = frame_memory.get('comprehension_tracker', {})
+                by_student = comprehension_memory.get('by_student', {})
+                if by_student:
+                    f.write("## 🧠 Comprehension Summary\n\n")
+                    for student_name in sorted(by_student.keys()):
+                        student_concepts = by_student[student_name]
+                        understood = []
+                        confused = []
+                        for concept, data in student_concepts.items():
+                            level = data.get('level', 'not_seen')
+                            if level == 'understood':
+                                understood.append(concept)
+                            elif level == 'confused':
+                                confused.append(concept)
+                        if understood or confused:
+                            f.write(f"### {student_name}\n\n")
+                            if understood:
+                                f.write(f"**✅ Understood:** {', '.join(understood)}\n\n")
+                            if confused:
+                                f.write(f"**❓ Confused:** {', '.join(confused)}\n\n")
+
+            # --- Selected Concepts ---
+            if frame_memory:
+                mnemonic_state = frame_memory.get('mnemonic_state', {})
+                selected_concepts = mnemonic_state.get('selected_concepts', [])
+                concepts_finalized = mnemonic_state.get('concepts_finalized', False)
+                f.write("## 🎯 Selected Concepts\n\n")
+                if selected_concepts:
+                    f.write(f"**Status:** {'✅ Finalized' if concepts_finalized else '⏳ In Progress'}\n\n")
+                    for i, concept in enumerate(selected_concepts, 1):
+                        f.write(f"{i}. {concept}\n")
+                    f.write("\n")
+                else:
+                    f.write("**Status:** ❌ No concepts selected\n\n")
+
+            # --- Created Mnemonic ---
+            if frame_memory:
+                mnemonic_state = frame_memory.get('mnemonic_state', {})
+                mnemonic_text = mnemonic_state.get('mnemonic_text', '')
+                mnemonic_created = mnemonic_state.get('mnemonic_created', False)
+                f.write("## 📖 Created Mnemonic\n\n")
+                if mnemonic_text and mnemonic_created:
+                    f.write("**Status:** ✅ Complete\n\n")
+                    f.write(f"{mnemonic_text}\n\n")
+                else:
+                    f.write("**Status:** ❌ No mnemonic created\n\n")
 
             # --- Conversation Log ---
             f.write("## Conversation Log\n\n")
@@ -366,8 +467,6 @@ class SessionLogger:
                 f.write(f"**{speaker}:** {user_msg}\n\n")
 
                 # Display the per-turn comprehension analysis if it exists
-                # The key '_per_turn_comprehension' is a well-known key defined
-                # in the comprehension_tracker frame.
                 analysis = data.get('analysis', {})
                 per_turn_comp = analysis.get('_per_turn_comprehension', {})
                 understood = per_turn_comp.get('understood', [])

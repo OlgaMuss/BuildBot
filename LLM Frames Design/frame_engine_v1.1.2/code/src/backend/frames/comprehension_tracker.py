@@ -18,9 +18,14 @@ import asyncio
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import HumanMessage
 
-from backend.frame_engine.core import Frame, FrameContext, PromptSection
+from backend.frame_engine.core import (
+    Frame,
+    FrameContext,
+    PromptSection,
+    ValidationAction,
+    ValidationResult,
+)
 from backend.frames.marty import CLEANED_MESSAGE_KEY, SPEAKER_KEY
-
 
 # --- Comprehension Tracking Data Structures ---
 
@@ -94,11 +99,12 @@ Your output MUST be a valid JSON object with this structure:
 }}
 
 Rules:
-- Only include concepts the student actually mentions or relates to
-- UNDERSTOOD: Student shows correct understanding
-- CONFUSED: Student is uncertain or partially correct
-- MISCONCEPTION: Student has an incorrect belief about the concept
-- If student doesn't mention a concept, don't include it
+- ONLY include concepts where the student DEMONSTRATES something about their understanding
+- UNDERSTOOD: Student correctly explains, applies, or describes the concept
+- CONFUSED: Student explicitly expresses uncertainty, asks a question, or makes a partially correct statement
+- MISCONCEPTION: Student states something factually incorrect about the concept
+- Do NOT include concepts the student merely mentions without demonstrating understanding or confusion
+- Saying "we need to learn about X" or "our topic is X" does NOT count as confusion - it's just stating a task
 
 Example output:
 {{
@@ -126,10 +132,12 @@ Your output MUST be a valid JSON object with two keys: "understood" and "confuse
 2.  `confused`: Create a list of concept names the student asks about, uses incorrectly, or seems uncertain about in this message.
 
 **RULES:**
-- Only include concepts explicitly mentioned or clearly referenced in the message.
-- If the student shows both understanding and confusion about different aspects of the same concept, include it in the "confused" list as it requires clarification.
-- If the message is a simple question (e.g., "What is a CPU?"), list the concept under "confused".
-- If the student does not mention any known concepts, return empty lists for both.
+- Only include concepts where the student DEMONSTRATES understanding or confusion, not just mentions.
+- `understood`: Student correctly explains, applies, or describes the concept.
+- `confused`: Student explicitly expresses uncertainty, asks a question about the concept, or makes a partially correct statement.
+- If the student merely mentions a concept without demonstrating understanding or asking about it, do NOT include it.
+- Statements like "we need to create a poem on X" or "our topic is X" are NOT confusion - they are task statements.
+- If the student does not demonstrate any understanding or confusion, return empty lists for both.
 
 **JSON OUTPUT EXAMPLE:**
 {{

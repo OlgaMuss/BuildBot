@@ -16,7 +16,17 @@ from backend.frame_engine.core import (
 )
 
 # Import shared context keys from the Marty frame
-from backend.frames.marty import SUGGESTED_NEXT_SPEAKER_KEY, CONSECUTIVE_SAME_SPEAKER_KEY, SPEAKER_KEY, CLEANED_MESSAGE_KEY
+from backend.frames.marty import (
+    SPEAKER_KEY,
+    CLEANED_MESSAGE_KEY
+)
+
+# --- Shared Context Keys (exported for use by other frames) ---
+# Key for suggested next speaker (for turn-taking management).
+SUGGESTED_NEXT_SPEAKER_KEY = '_suggested_next_speaker'
+
+# Key for consecutive same speaker count (for monopolization detection).
+CONSECUTIVE_SAME_SPEAKER_KEY = '_consecutive_same_speaker'
 
 
 class BalancedTurnsFrame(Frame):
@@ -48,6 +58,7 @@ class BalancedTurnsFrame(Frame):
             for student in self.students
         }
         frame_memory['suggested_next_speaker'] = None
+        
 
     async def analyze_input(
         self, context: FrameContext
@@ -259,35 +270,33 @@ class BalancedTurnsFrame(Frame):
                 f"Please acknowledge {previous_speaker} briefly, then ask {suggested_next} a question."
             )
 
-        # Split response to check order (acknowledge first, then invite)
-        midpoint = len(response) // 2
-        first_half = response[:midpoint]
-        second_half = response[midpoint:]
+        # Find the first student name mentioned in the response.
+        # This should be the previous_speaker (being acknowledged), not the next speaker.
+        first_mention_idx = float('inf')
+        first_mentioned = None
+        for student in self.students:
+            idx = response.find(student)
+            if idx != -1 and idx < first_mention_idx:
+                first_mention_idx = idx
+                first_mentioned = student
 
-        prev_in_second = previous_speaker in second_half
-        next_in_first = suggested_next in first_half
-
-        # Check for swapped order
-        if prev_in_second and next_in_first:
+        # The first mentioned student MUST be the previous speaker (acknowledgment comes first)
+        if first_mentioned and first_mentioned != previous_speaker:
             return (
-                f"TURN-TAKING ERROR: You seem to have swapped the order. "
-                f"You must FIRST acknowledge {previous_speaker}, "
-                f"and THEN invite {suggested_next} to speak."
+                f"TURN-TAKING ERROR: You acknowledged {first_mentioned}, but {previous_speaker} "
+                f"was the one who just spoke. You must acknowledge {previous_speaker} first, "
+                f"then invite {suggested_next} to contribute."
             )
 
-        # Check for partial errors
-        if next_in_first and previous_speaker not in first_half:
-            return (
-                f"TURN-TAKING ERROR: The first part of your response should acknowledge "
-                f"{previous_speaker}, but you mentioned {suggested_next} instead. "
-                f"Structure: 1) Acknowledge {previous_speaker}. 2) Ask {suggested_next} a question."
-            )
+        # Also verify that the previous speaker appears BEFORE the suggested next speaker
+        prev_idx = response.find(previous_speaker)
+        next_idx = response.find(suggested_next)
 
-        if prev_in_second and suggested_next not in second_half:
+        if prev_idx != -1 and next_idx != -1 and next_idx < prev_idx:
             return (
-                f"TURN-TAKING ERROR: The second part of your response should invite "
-                f"{suggested_next}, but you mentioned {previous_speaker} instead. "
-                f"Structure: 1) Acknowledge {previous_speaker}. 2) Ask {suggested_next} a question."
+                f"TURN-TAKING ERROR: You mentioned {suggested_next} before {previous_speaker}. "
+                f"Structure: 1) First acknowledge {previous_speaker}. "
+                f"2) Then ask {suggested_next} a question."
             )
 
         # Validation passed
@@ -309,10 +318,17 @@ class BalancedTurnsFrame(Frame):
 
         # Get the suggested next speaker from the shared context (set by analyze_input)
         suggested_next = shared_context.get(SUGGESTED_NEXT_SPEAKER_KEY)
+        consecutive_same = shared_context.get(CONSECUTIVE_SAME_SPEAKER_KEY, 0)
         
         # Get the speaker of the turn being analyzed from the shared context
         marty_analysis = shared_context.get('mnemonic_co_creator_marty', {})
         previous_speaker = marty_analysis.get('speaker')
+
+        logging.info(
+            f"[Turn Balance Validation] Previous: {previous_speaker}, "
+            f"Suggested: {suggested_next}, Consecutive: {consecutive_same}, "
+            f"Response preview: {llm_response[:100]}..."
+        )
 
         # Skip validation if no data available
         if not previous_speaker:

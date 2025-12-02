@@ -140,7 +140,6 @@ def _initialize_engine(
         learning_material=learning_material,
         students=student_names,
         mnemonic_type=mnemonic_type,
-        phase_config=config.get('phases', {}),
         llm_client=llm_client,
     )
 

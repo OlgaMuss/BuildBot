@@ -15,7 +15,6 @@ from backend.frame_engine.core import (
     Frame,
     FrameContext,
     PromptSection,
-    SessionLogger,
     ValidationAction,
 )
 from backend.frames.comprehension_tracker import PER_TURN_COMPREHENSION_KEY

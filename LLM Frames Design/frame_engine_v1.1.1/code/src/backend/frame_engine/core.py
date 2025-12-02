@@ -368,13 +368,6 @@ class SessionLogger:
             f.write(f"# Session Report: {self.session_id}\n\n")
             f.write(f"**Saved at:** {session_data['saved_at']}\n\n")
 
-            # --- Metadata ---
-            if self.metadata:
-                f.write("## Session Details\n\n")
-                for key, value in self.metadata.items():
-                    f.write(f"- **{key.replace('_', ' ').title()}:** {value}\n")
-                f.write("\n")
-
             # --- Participant Summary (from frame_memory) ---
             if frame_memory:
                 participation = frame_memory.get('mnemonic_co_creator_marty', {}).get(
@@ -388,12 +381,20 @@ class SessionLogger:
                             f"- **Total Contributions:** {p_data.get('contribution_count', 0)}\n\n"
                         )
 
+            # --- Metadata ---
+            if self.metadata:
+                f.write("## Session Details\n\n")
+                for key, value in self.metadata.items():
+                    f.write(f"- **{key.replace('_', ' ').title()}:** {value}\n")
+                f.write("\n")
+
             # --- Conversation Log ---
             f.write("## Conversation Log\n\n")
             turn_events = [
                 e for e in self.entries if e['event'].startswith('Turn')
             ]
-            for event in sorted(turn_events, key=lambda x: x['event']):
+            # Sort numerically by extracting turn number, not alphabetically
+            for event in sorted(turn_events, key=lambda x: int(x['event'].split()[1])):
                 data = event.get('data', {})
                 turn_str = event['event']
                 speaker = data.get('speaker', 'Unknown')

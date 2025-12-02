@@ -244,6 +244,10 @@ class FrameEngine:
         """
         logging.info('--- SLOT 4: Validate Output ---')
 
+        # --- DEBUGGING: Print the draft response before validation ---
+        print(f"\n--- DRAFT TO VALIDATE ---\n{state['llm_draft_response']}\n-------------------------\n")
+        # ---------------------------------------------------------
+
         validation_tasks = [frame.validate_output(state) for frame in self.frames]
         results = await asyncio.gather(*validation_tasks)
 

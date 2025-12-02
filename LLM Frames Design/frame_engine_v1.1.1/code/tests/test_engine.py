@@ -46,7 +46,7 @@ class TestPipelineExecution:
 
         US1: Frame pipeline executes all slots in the correct order.
         """
-        from tests.conftest import PassThroughFrame
+        from conftest import PassThroughFrame
 
         frame_a = PassThroughFrame(name='frame_a')
         frame_b = PassThroughFrame(name='frame_b')
@@ -133,7 +133,7 @@ class TestPromptAccumulation:
 
         US3: Sections from multiple frames are joined correctly.
         """
-        from tests.conftest import PassThroughFrame
+        from conftest import PassThroughFrame
 
         frame_a = PassThroughFrame(name='alpha')
         frame_b = PassThroughFrame(name='beta')
@@ -161,7 +161,7 @@ class TestPromptAccumulation:
 
         US3: Section labels are optional (controlled by include_section_labels).
         """
-        from tests.conftest import PassThroughFrame
+        from conftest import PassThroughFrame
 
         frame = PassThroughFrame(name='labeled_frame')
 

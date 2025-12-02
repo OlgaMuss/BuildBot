@@ -86,14 +86,6 @@ class TestParticipationTracking:
         consecutive = analysis.get('consecutive_same_speaker', 0)
         assert consecutive >= 3
 
-        # Simulate what the engine does: store analysis in shared_context[frame.name]
-        context['shared_context'][marty_frame.name] = analysis
-
-        # Prompt sections should include turn management
-        sections = await marty_frame.get_prompt_sections(context)
-        section_labels = [s['label'] for s in sections]
-        assert 'Marty - Turn Management' in section_labels
-
     @pytest.mark.asyncio
     async def test_underparticipation_detection(self, marty_frame, empty_context):
         """Verifies that underparticipating students are identified.
@@ -204,6 +196,57 @@ class TestFocusManagement:
         redirection_section = next(s for s in sections if s['label'] == 'Marty - Redirection')
         assert 'off-topic' in redirection_section['content'].lower()
 
+
+class TestTurnTakingInstructions:
+    """Tests the logic of the _get_turn_taking_instructions method directly."""
+
+    def test_monopolization_instruction(self, marty_frame):
+        """Verifies CRITICAL TURN MANAGEMENT prompt for monopolization.
+
+        US4: After 2+ consecutive turns, the next speaker MUST be invited.
+        """
+        instruction = marty_frame._get_turn_taking_instructions(
+            underparticipating=[],
+            suggested_next='Green',  # System suggests Green
+            consecutive_same=3,      # Red has spoken 3 times
+            previous_speaker='Red',  # Red just spoke
+        )
+
+        assert 'CRITICAL TURN MANAGEMENT' in instruction
+        assert 'The student who JUST spoke is: Red' in instruction
+        assert 'The student you MUST INVITE to speak next is: Green' in instruction
+        assert 'FIRST: Briefly acknowledge what Red just said' in instruction
+        assert 'SECOND: Turn to invite Green by asking them a direct question' in instruction
+
+    def test_underparticipation_instruction(self, marty_frame):
+        """Verifies CRITICAL TURN MANAGEMENT prompt for underparticipation.
+
+        US4: If a student is underparticipating, they MUST be invited.
+        """
+        instruction = marty_frame._get_turn_taking_instructions(
+            underparticipating=['Green'],  # Green is underparticipating
+            suggested_next='Blue',       # Suggestion might be different
+            consecutive_same=1,          # Not a monopolization case
+            previous_speaker='Red',      # Red just spoke
+        )
+
+        assert 'CRITICAL TURN MANAGEMENT' in instruction
+        assert 'The student who JUST spoke is: Red' in instruction
+        assert 'The student you MUST INVITE to speak next is: Green' in instruction
+        assert 'FIRST: Briefly acknowledge what Red just said' in instruction
+        assert 'SECOND: Turn to invite Green by asking them a direct question' in instruction
+
+    def test_balanced_participation_instruction(self, marty_frame):
+        """Verifies a simple prompt is generated for balanced participation."""
+        instruction = marty_frame._get_turn_taking_instructions(
+            underparticipating=[],
+            suggested_next='Green',
+            consecutive_same=1,
+            previous_speaker='Red',
+        )
+
+        assert 'CRITICAL TURN MANAGEMENT' not in instruction
+        assert 'Your response should be addressed to Red' in instruction
 
 class TestSharedContextKeys:
     """Tests for Marty's shared context population."""

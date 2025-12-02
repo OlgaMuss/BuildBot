@@ -10,6 +10,12 @@ import pytest
 from backend.frame_engine.llm import LLMConfigError, get_llm_client
 
 
+@pytest.fixture(scope='session')
+def config(test_config):
+    """Provides the test configuration with a shorter name for convenience."""
+    return test_config
+
+
 class TestLLMProviderConfiguration:
     """Tests for US8: LLM Provider Configuration."""
 

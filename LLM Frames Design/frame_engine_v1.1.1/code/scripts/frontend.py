@@ -32,11 +32,11 @@ if str(package_path) not in sys.path:
 from backend.frame_engine.core import SessionLogger, SessionVerbosity  # noqa: E402
 from backend.frame_engine.engine import FrameEngine  # noqa: E402
 from backend.frame_engine.llm import LLMConfigError, get_llm_client  # noqa: E402
-from backend.frames.age_checker import AgeCheckerFrame  # noqa: E402
-from backend.frames.answer_checker import AnswerCheckerFrame  # noqa: E402
+from backend.frames.language_checker import LanguageCheckerFrame  # noqa: E402
+from backend.frames.balanced_turns import BalancedTurnsFrame  # noqa: E402
 from backend.frames.comprehension_tracker import ComprehensionTrackerFrame  # noqa: E402
 from backend.frames.marty import MnemonicCoCreatorFrame  # noqa: E402
-from backend.frames.policy_checker import PolicyCheckerFrame  # noqa: E402
+from backend.frames.phases_checker import PhasesCheckerFrame  # noqa: E402
 
 
 # --- Helper Functions ---
@@ -45,13 +45,6 @@ def _clear_session_state() -> None:
     """Clears all session state to start fresh."""
     for key in list(st.session_state.keys()):
         del st.session_state[key]
-
-
-def _calculate_average_age(participants: list[dict[str, Any]]) -> int:
-    """Calculates the average age of participants."""
-    if not participants:
-        return 14  # Default age
-    return int(sum(p['age'] for p in participants) / len(participants))
 
 
 def _load_and_display_env_status(config: dict[str, Any]) -> None:
@@ -89,6 +82,7 @@ def _initialize_engine(
     learning_material: str,
     mnemonic_type: str,
     participants: list[dict[str, Any]],
+    target_age: int,
     config: dict[str, Any],
     verbosity: SessionVerbosity = SessionVerbosity.NORMAL,
 ) -> tuple['FrameEngine', SessionLogger]:
@@ -98,7 +92,8 @@ def _initialize_engine(
         topic: The learning topic.
         learning_material: The source material for the mnemonic.
         mnemonic_type: The type of mnemonic (Story, Acronym, Song).
-        participants: List of participant dictionaries with name, color, age.
+        participants: List of participant dictionaries with name and color.
+        target_age: The target age for the session.
         config: The application configuration dictionary.
         verbosity: The verbosity level for session logging.
 
@@ -109,9 +104,8 @@ def _initialize_engine(
         LLMConfigError: If the LLM client cannot be initialized.
     """
     student_names = [p['name'] for p in participants]
-    average_age = _calculate_average_age(participants)
 
-    logging.info('Initializing session for students: %s (Avg. Age: %d)', student_names, average_age)
+    logging.info('Initializing session for students: %s (Target Age: %d)', student_names, target_age)
 
     # Get LLM client from config
     llm_config = config.get('llm', {})
@@ -128,6 +122,7 @@ def _initialize_engine(
     session_logger.set_metadata('topic', topic)
     session_logger.set_metadata('mnemonic_type', mnemonic_type)
     session_logger.set_metadata('students', student_names)
+    session_logger.set_metadata('target_age', target_age)
     session_logger.log('Session initialized')
 
     # Compose the frame pipeline
@@ -150,9 +145,9 @@ def _initialize_engine(
         frames=[
             marty_frame,
             comprehension_frame,
-            AnswerCheckerFrame(learning_material=learning_material, llm_client=llm_client),
-            AgeCheckerFrame(target_age=average_age, llm_client=llm_client),
-            PolicyCheckerFrame(llm_client=llm_client),
+            BalancedTurnsFrame(students=student_names),
+            LanguageCheckerFrame(target_age=target_age, llm_client=llm_client),
+            PhasesCheckerFrame(llm_client=llm_client),
         ],
         llm_client=llm_client,
         session_logger=session_logger,
@@ -206,9 +201,9 @@ st.title('🤖 Marty Mnemonic Co-Creator')
 if 'participants' not in st.session_state:
     # Default participants for the first run
     st.session_state.participants = [
-        {'name': 'Red', 'color': '#FF4B4B', 'age': 14},
-        {'name': 'Green', 'color': '#2BCB54', 'age': 15},
-        {'name': 'Blue', 'color': '#4B7EFF', 'age': 14},
+        {'name': 'Red', 'color': '#FF4B4B'},
+        {'name': 'Green', 'color': '#2BCB54'},
+        {'name': 'Blue', 'color': '#4B7EFF'},
     ]
 
 # --- Sidebar for Configuration ---
@@ -218,38 +213,37 @@ with st.sidebar:
     # Load .env variables and display provider status
     _load_and_display_env_status(config)
 
-    with st.expander('Learning Experience', expanded=False):
+    with st.expander('Learning Experience', expanded=True):
         topic = st.text_input('Topic', 'Microcontrollers')
+        target_age = st.number_input('Target Age for Session', min_value=5, max_value=99, value=14)
         learning_material = st.text_area(
             'Learning Material',
             value=load_learning_material(),
             height=300,
         )
-        mnemonic_type = st.selectbox('Mnemonic Type', ['Story', 'Acronym', 'Song'])
+        mnemonic_type = st.selectbox('Mnemonic Type', ['Poem', 'Story', 'Jokes'])
 
     st.subheader('Participants')
 
     # Display current participants and remove button
     for i, p in enumerate(st.session_state.participants):
-        cols = st.columns([0.5, 0.3, 0.2])
+        cols = st.columns([0.8, 0.2])
         cols[0].write(f"**{p['name']}**")
-        cols[1].write(f"Age: {p['age']}")
-        if cols[2].button('X', key=f'remove_{i}'):
+        if cols[1].button('X', key=f'remove_{i}'):
             st.session_state.participants.pop(i)
             st.rerun()
 
     # Form to add a new participant
     with st.form('new_participant_form'):
         st.write('Add New Participant:')
-        cols = st.columns([0.5, 0.3, 0.2])
+        cols = st.columns([0.7, 0.3])
         new_name = cols[0].text_input('Name', label_visibility='collapsed')
         new_color = cols[1].color_picker('Color', label_visibility='collapsed')
-        new_age = cols[2].number_input('Age', min_value=5, max_value=99, value=14, label_visibility='collapsed')
 
         if st.form_submit_button('Add'):
             if new_name:
                 st.session_state.participants.append(
-                    {'name': new_name, 'color': new_color, 'age': new_age}
+                    {'name': new_name, 'color': new_color}
                 )
                 st.rerun()
 
@@ -288,6 +282,7 @@ if 'engine' not in st.session_state:
             learning_material=learning_material,
             mnemonic_type=mnemonic_type,
             participants=st.session_state.participants,
+            target_age=target_age,
             config=config,
             verbosity=SessionVerbosity.NORMAL,  # Hardcoded to NORMAL
         )

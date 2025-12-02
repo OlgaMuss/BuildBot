@@ -7,120 +7,126 @@ To run tests:
 Make sure to create tests/.env with your API key:
     GOOGLE_API_KEY="your-key-here"
 """
-import logging
+import os
 import sys
 from pathlib import Path
 from typing import Any
 
+# --- Path Setup ---
+# Add the 'src' directory to the Python path to allow for absolute imports
+# of the backend modules (e.g., `from backend.frame_engine.core import ...`)
+# This is a standard practice for making test suites runnable from the command line.
+project_root = Path(__file__).parent.parent
+src_path = project_root / 'src'
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
+
+
 import pytest
 import yaml
-
-# Add the src directory to the path so we can import the backend package
-tests_dir = Path(__file__).parent
-project_root = tests_dir.parent
-src_path = project_root / 'src'
-sys.path.insert(0, str(src_path))
+from langchain_core.messages import AIMessage
 
 from backend.frame_engine.core import (  # noqa: E402
     Frame,
     FrameContext,
     PromptSection,
-    ValidationAction,
     ValidationResult,
+    ValidationAction,
 )
 from backend.frame_engine.llm import get_llm_client  # noqa: E402
-from backend.frames.comprehension_tracker import ComprehensionTrackerFrame  # noqa: E402
+from backend.frames.comprehension_tracker import ComprehensionTrackerFrame
 from backend.frames.marty import MnemonicCoCreatorFrame  # noqa: E402
 
+# --- Constants ---
+# Define a constant for the root of the project to make pathing easier.
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 
-def _load_env() -> None:
-    """Loads environment variables from .env file in tests directory."""
+
+# --- Helper Functions ---
+
+def _load_dotenv() -> None:
+    """Loads the .env file from the correct location (`scripts` directory)."""
     try:
         from dotenv import load_dotenv
-        env_path = tests_dir / '.env'
-        if env_path.is_file():
-            load_dotenv(dotenv_path=env_path)
+
+        # Path to the .env file in the `scripts` directory
+        dotenv_path = PROJECT_ROOT / 'code' / 'scripts' / '.env'
+        if dotenv_path.is_file():
+            load_dotenv(dotenv_path=dotenv_path)
+        else:
+            # Provide a helpful message if the .env file is missing
+            print(f"\nNote: .env file not found at {dotenv_path}. "
+                  "Tests requiring API keys may fail.")
+
     except ImportError:
-        pass  # dotenv not installed, rely on system env vars
+        # Warn if python-dotenv is not installed
+        print("\nWarning: `python-dotenv` is not installed. "
+              "Cannot load environment variables from .env file.")
 
 
-def _load_config() -> dict[str, Any]:
-    """Loads the test configuration from config.yaml."""
-    config_path = tests_dir / 'config.yaml'
+# --- Fixture Configuration ---
+
+# Load environment variables at the start of the test session
+_load_dotenv()
+
+
+def load_test_config() -> dict:
+    """Loads the test configuration from tests/config.yaml."""
+    config_path = Path(__file__).parent / 'config.yaml'
     with config_path.open('r') as f:
         return yaml.safe_load(f)
 
 
-# Load env and config at module level
-_load_env()
-_config = _load_config()
-
-# Configure logging based on config
-log_level = _config.get('log_level', 'WARNING').upper()
-logging.basicConfig(level=log_level, format='%(levelname)s - %(message)s')
+@pytest.fixture(scope='session')
+def test_config() -> dict:
+    """Provides the test configuration as a session-scoped fixture."""
+    return load_test_config()
 
 
 @pytest.fixture(scope='session')
-def config() -> dict[str, Any]:
-    """Returns the test configuration dictionary."""
-    return _config
+def test_learning_material(test_config) -> str:
+    """Provides the test learning material from the config."""
+    return test_config.get('test', {}).get('learning_material', 'Default learning material.')
 
 
 @pytest.fixture(scope='session')
-def llm_client():
-    """Creates an LLM client for the test session.
-
-    This is session-scoped to avoid creating multiple clients.
-    Uses actual LLM calls (no mocking).
-    """
-    llm_config = _config.get('llm', {})
-    return get_llm_client(
-        provider=llm_config.get('provider', 'google'),
-        model_name=llm_config.get('model_name', 'gemini-2.5-flash-lite'),
-        temperature=llm_config.get('temperature'),
-    )
+def test_students(test_config) -> list[str]:
+    """Provides the list of test students from the config."""
+    return test_config.get('test', {}).get('students', ['Red', 'Green', 'Blue'])
 
 
-@pytest.fixture
-def test_topic(config) -> str:
-    """Returns the test topic."""
-    return config.get('test', {}).get('topic', 'Microcontrollers')
+@pytest.fixture(scope='session')
+def llm_client(test_config):
+    """Provides an LLM client for testing, configured for Google."""
+    # Ensure the environment is loaded, which conftest does automatically
+    # by finding the .env file.
+    provider = 'google'
+    model_name = test_config.get('llm', {}).get(provider, {}).get('model_name', 'gemini-pro')
 
-
-@pytest.fixture
-def test_learning_material(config) -> str:
-    """Returns the test learning material."""
-    return config.get('test', {}).get('learning_material', 'Test material.')
-
-
-@pytest.fixture
-def test_students(config) -> list[str]:
-    """Returns the test student names."""
-    return config.get('test', {}).get('students', ['Red', 'Green', 'Blue'])
+    try:
+        return get_llm_client(
+            provider=provider,
+            model_name=model_name,
+            temperature=0.0,
+        )
+    except Exception as e:
+        pytest.fail(
+            f"Failed to initialize Google LLM client: {e}. "
+            f"Ensure your GOOGLE_API_KEY is set in a .env file in the 'scripts' directory."
+        )
 
 
 @pytest.fixture
-def phase_config(config) -> dict[str, int]:
-    """Returns the phase configuration for Marty."""
-    return config.get('phases', {'phase_1_end': 5, 'phase_2_end': 20})
-
-
-@pytest.fixture
-def marty_frame(
-    test_topic,
-    test_learning_material,
-    test_students,
-    phase_config,
-    llm_client,
-) -> MnemonicCoCreatorFrame:
+def marty_frame(test_config, llm_client) -> MnemonicCoCreatorFrame:
     """Creates a MnemonicCoCreatorFrame instance for testing."""
     return MnemonicCoCreatorFrame(
-        topic=test_topic,
-        learning_material=test_learning_material,
-        students=test_students,
+        topic=test_config.get('test', {}).get('topic', 'Microcontrollers'),
+        learning_material=test_config.get('test', {}).get('learning_material', 'Test material.'),
+        students=test_config.get('test', {}).get('students', ['Red', 'Green', 'Blue']),
         mnemonic_type='Story',
-        phase_config=phase_config,
+        phase_config=test_config.get('phases', {'phase_1_end': 5, 'phase_2_end': 20}),
         llm_client=llm_client,
+        target_age=14,  # Add a default age for consistency in tests
     )
 
 

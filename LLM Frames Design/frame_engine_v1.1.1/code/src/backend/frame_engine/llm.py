@@ -44,10 +44,12 @@ def get_llm_client(
         return _create_openai_client(model_name, temperature)
     elif provider == 'anthropic':
         return _create_anthropic_client(model_name, temperature)
+    elif provider == 'azure':
+        return _create_azure_client(model_name, temperature)
     else:
         raise LLMConfigError(
             f"Unsupported LLM provider: '{provider}'. "
-            "Supported providers: 'google', 'openai', 'anthropic'."
+            "Supported providers: 'google', 'openai', 'anthropic', 'azure'."
         )
 
 
@@ -62,6 +64,23 @@ def _create_google_client(model_name: str, temperature: Optional[float]) -> Base
         kwargs['temperature'] = temperature
 
     return ChatGoogleGenerativeAI(**kwargs)
+
+
+def _create_azure_client(model_name: str, temperature: Optional[float]) -> BaseChatModel:
+    """Creates an Azure OpenAI LLM client."""
+    _require_env_var('AZURE_API_KEY', 'Azure OpenAI')
+    _require_env_var('AZURE_ENDPOINT', 'Azure OpenAI')
+
+    from langchain_openai import AzureChatOpenAI
+
+    kwargs: dict[str, Any] = {
+        'azure_deployment': os.getenv('AZURE_DEPLOYMENT') or model_name,
+        'api_version': os.getenv('API_VERSION'),
+    }
+    if temperature is not None:
+        kwargs['temperature'] = temperature
+
+    return AzureChatOpenAI(**kwargs)
 
 
 def _create_openai_client(model_name: str, temperature: Optional[float]) -> BaseChatModel:

@@ -1,0 +1,781 @@
+session_id: quick_debug_20251201110406
+verbosity: verbose
+saved_at: '2025-12-01T11:04:27.471247'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Story
+  students:
+  - Red
+  - Blue
+  - Green
+  target_age: 14
+  scenario: quick_debug
+events:
+- timestamp: '2025-12-01T11:04:06.886942'
+  event: Simulation initialized
+  level: normal
+- timestamp: '2025-12-01T11:04:07.883244'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 1
+    speaker: Green
+    message: Hey Marty! I'm Green and I'm working with Red and Blue on microcontrollers and we need to create a story.
+    participation: &id001
+      Red:
+        contribution_count: 2
+        total_speaking_time_seconds: 21.2
+        last_contribution_time: '2025-12-01T11:04:23.358452'
+      Blue:
+        contribution_count: 1
+        total_speaking_time_seconds: 6.8
+        last_contribution_time: '2025-12-01T11:04:18.751999'
+      Green:
+        contribution_count: 2
+        total_speaking_time_seconds: 15.2
+        last_contribution_time: '2025-12-01T11:04:11.842665'
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: &id002
+    - Green
+    - Green
+    - Red
+    - Blue
+    - Red
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group has just begun and is establishing the premise for creating a mnemonic story.
+    summary: The student introduces themselves and states the group's goal to create a mnemonic story about microcontrollers.
+- timestamp: '2025-12-01T11:04:09.438286'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: &id003
+    - Microcontroller
+    - ESP32 module
+    - Arduino Nano
+    - CPU
+    - Memory
+    - Programmable input/output peripherals
+    - Pins
+    - 3 volts (3V)
+    - HIGH
+    - LOW
+    - Program
+    - Blockly
+    - C++
+    - Robot Interface Controller (RIC)
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student explicitly mentions 'microcontrollers', indicating they are aware of this general category
+        of device.
+    all_student_profiles: &id004
+      Red:
+        Microcontroller:
+          level: confused
+          justification: The student uses analogies like 'tiny computer' and 'super-smart LEGO brick' which are somewhat relatable
+            but don't demonstrate a precise understanding of what a microcontroller is. They are grasping at the idea of a
+            small, functional computing device.
+          turn: 5
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: understood
+          justification: The student correctly identifies the CPU as the 'brain' of the device, which aligns with its role
+            as the central processing unit.
+          turn: 5
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: not_seen
+          justification: null
+          turn: null
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+        Robot Interface Controller (RIC):
+          level: understood
+          justification: The student correctly identifies the RIC board as the 'brain' of the robot and understands its function
+            is to control actions like movement and speech.
+          turn: 3
+      Blue:
+        Microcontroller:
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: understood
+          justification: The student correctly identifies the CPU as the Central Processing Unit and accurately compares it
+            to the 'brain' of a regular computer.
+          turn: 4
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: not_seen
+          justification: null
+          turn: null
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+      Green:
+        Microcontroller:
+          level: understood
+          justification: The student explicitly mentions 'microcontrollers', indicating they are aware of this general category
+            of device.
+          turn: 1
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: not_seen
+          justification: null
+          turn: null
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: not_seen
+          justification: null
+          turn: null
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+        Robot Interface Controller (RIC):
+          level: confused
+          justification: The student is asking if 'Marty' (presumably a robot) is a 'smart home thing' and if it's 'inside
+            the robot body itself', indicating they are trying to understand the nature and function of the RIC in relation
+            to the robot's intelligence and operation. They are not explicitly naming the RIC but are inquiring about its
+            role.
+          turn: 2
+- timestamp: '2025-12-01T11:04:09.438310'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:09.438317'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:09.438323'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:09.440083'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T11:04:09.440152'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T11:04:10.949363'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:10.949385'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:10.949391'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:10.949395'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:10.949400'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:10.952178'
+  event: Turn 1
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hey Marty! I''m Green and I''m working with Red and Blue on microcontrollers and we need to create a story.'
+    assistant: 'Hey Green! Awesome, I''m Marty, your buddy robot for this mission! So, you''re building a story about microcontrollers?
+      That''s a super cool idea! Let''s get started!
+
+
+      First off, can you tell me where Marty''s "brain," the microcontroller, is located?'
+- timestamp: '2025-12-01T11:04:12.673371'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 2
+    speaker: Green
+    message: Oh! Is Marty like, one of those smart home things? Like, is it inside the robot body itself?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Blue
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 2
+    contribution_type: question
+    is_relevant: true
+    mnemonic_progress: The group has established the main character (Marty) and is beginning to define its physical location
+      within the context of the story.
+    summary: The student asks if Marty is a smart home device and if its microcontroller is located within its robot body.
+- timestamp: '2025-12-01T11:04:13.527000'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - Microcontroller
+    cumulative_assessments_updated:
+    - concept: Robot Interface Controller (RIC)
+      level: CONFUSED
+      justification: The student is asking if 'Marty' (presumably a robot) is a 'smart home thing' and if it's 'inside the
+        robot body itself', indicating they are trying to understand the nature and function of the RIC in relation to the
+        robot's intelligence and operation. They are not explicitly naming the RIC but are inquiring about its role.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T11:04:13.527011'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:13.527015'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:13.527018'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:13.528299'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T11:04:13.528338'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T11:04:14.456102'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:14.456120'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:14.456125'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:14.456130'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:14.456134'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:14.458370'
+  event: Turn 2
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Oh! Is Marty like, one of those smart home things? Like, is it inside the robot body itself?'
+    assistant: 'Great questions, Green! Marty''s brain, which is the microcontroller, is indeed right inside the robot''s
+      body, on a part called the Robot Interface Controller (RIC).
+
+
+      Red, what do you think is the main job of this RIC board and the microcontroller on it?'
+- timestamp: '2025-12-01T11:04:16.498282'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 3
+    speaker: Red
+    message: Ooh, so the RIC board is like where Marty's brain is? I guess its job is to make Marty actually *do* stuff, like
+      move or talk?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group has identified the microcontroller's location (RIC board inside the robot body) and is now
+      discussing its function.
+    summary: Red confirms the RIC board is Marty's brain and suggests its job is to control Marty's actions like movement
+      and speech.
+- timestamp: '2025-12-01T11:04:17.219110'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Robot Interface Controller (RIC)
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Robot Interface Controller (RIC)
+      level: UNDERSTOOD
+      justification: The student correctly identifies the RIC board as the 'brain' of the robot and understands its function
+        is to control actions like movement and speech.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T11:04:17.219134'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:17.219140'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:17.219145'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:17.220859'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T11:04:17.220919'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T11:04:18.151251'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:18.151276'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:18.151282'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:18.151287'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:18.151292'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:18.154096'
+  event: Turn 3
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh, so the RIC board is like where Marty''s brain is? I guess its job is to make Marty actually *do* stuff,
+      like move or talk?'
+    assistant: 'That''s exactly right, Red! The RIC board is where Marty''s brain lives, and it''s responsible for making
+      Marty do all sorts of things.
+
+
+      Blue, can you tell us what the main component on that RIC board is called?'
+- timestamp: '2025-12-01T11:04:20.080758'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 4
+    speaker: Blue
+    message: Is it the CPU? The Central Processing Unit? That's like the brain of a regular computer, right?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: question
+    is_relevant: true
+    mnemonic_progress: The group has identified that the microcontroller is the 'brain' of the robot (Marty) and is located
+      on the RIC board. The next step is to identify the main component on the RIC board.
+    summary: Blue asks if the main component on the RIC board is the CPU, comparing it to the brain of a regular computer.
+- timestamp: '2025-12-01T11:04:20.898587'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - CPU
+      confused: []
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly identifies the CPU as the Central Processing Unit and accurately compares it to
+        the 'brain' of a regular computer.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T11:04:20.898607'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:20.898612'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:20.898617'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:20.900141'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T11:04:20.900192'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T11:04:22.542855'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:22.542865'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:22.542868'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:22.542870'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:22.542873'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:22.544581'
+  event: Turn 4
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Is it the CPU? The Central Processing Unit? That''s like the brain of a regular computer, right?'
+    assistant: 'You''re super close, Blue! The CPU is definitely a part of the brain, but in Marty''s case, the main "brain"
+      on the RIC board is a specific type of tiny computer called a **microcontroller**. Think of it as a super-focused mini-computer!
+
+
+      Now, Red, can you remember what a microcontroller is made of? What are its main parts?'
+- timestamp: '2025-12-01T11:04:25.302111'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 5
+    speaker: Red
+    message: Ooh, tiny computer! Like a super-smart LEGO brick that does stuff? I think I remember hearing about a "CPU" thingy...
+      is that like the brain of it?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students: []
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group has established that the microcontroller is a tiny, focused computer and is now trying to
+      recall its components. Red is connecting the concept of a microcontroller to a LEGO brick and referencing the CPU.
+    summary: Red likens the microcontroller to a "super-smart LEGO brick" and asks if the CPU is its brain.
+- timestamp: '2025-12-01T11:04:26.237483'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - CPU
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: CONFUSED
+      justification: The student uses analogies like 'tiny computer' and 'super-smart LEGO brick' which are somewhat relatable
+        but don't demonstrate a precise understanding of what a microcontroller is. They are grasping at the idea of a small,
+        functional computing device.
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly identifies the CPU as the 'brain' of the device, which aligns with its role as
+        the central processing unit.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T11:04:26.237493'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:26.237496'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:26.237498'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T11:04:26.238465'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T11:04:26.238500'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T11:04:27.469054'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:27.469077'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:27.469081'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:27.469085'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:27.469089'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T11:04:27.471122'
+  event: Turn 5
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh, tiny computer! Like a super-smart LEGO brick that does stuff? I think I remember hearing about a "CPU"
+      thingy... is that like the brain of it?'
+    assistant: 'You got it, Red! A microcontroller is like a tiny, specialized computer. And yes, it has processing power,
+      kind of like a CPU, but it also has memory and special connectors called "pins" that let it interact with the world.
+
+
+      So, thinking about those pins, what do they do to control other things?'
+frame_memory:
+  elapsed_time_minutes: 3.2
+  turn_count: 5
+  session_phase: 2
+  consecutive_off_topic_turns: 0
+  session_start_time: '2025-12-01T11:04:06.890978'
+  last_turn_time: '2025-12-01T11:04:23.358452'
+  recent_speakers: *id002
+  participation: *id001
+  mnemonic_state:
+    selected_concepts: []
+    concepts_finalized: false
+    mnemonic_text: ''
+    mnemonic_created: false
+  comprehension_tracker:
+    concepts: *id003
+    by_student: *id004

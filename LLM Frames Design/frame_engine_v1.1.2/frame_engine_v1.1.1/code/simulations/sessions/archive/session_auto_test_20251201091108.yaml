@@ -1,0 +1,1398 @@
+session_id: auto_test_20251201091108
+verbosity: verbose
+saved_at: '2025-12-01T09:11:50.073671'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Story
+  students:
+  - Red
+  - Blue
+  - Green
+  target_age: 14
+  scenario: auto_test
+events:
+- timestamp: '2025-12-01T09:11:08.472163'
+  event: Simulation initialized
+  level: normal
+- timestamp: '2025-12-01T09:11:09.501757'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 1
+    speaker: Blue
+    message: Hey Marty! I'm Blue and I'm working with Red and Green on microcontrollers and we need to create a story.
+    participation: &id001
+      Red:
+        contribution_count: 2
+        total_speaking_time_seconds: 16.0
+        last_contribution_time: '2025-12-01T09:11:35.105271'
+      Blue:
+        contribution_count: 3
+        total_speaking_time_seconds: 30.799999999999997
+        last_contribution_time: '2025-12-01T09:11:46.881820'
+      Green:
+        contribution_count: 5
+        total_speaking_time_seconds: 56.8
+        last_contribution_time: '2025-12-01T09:11:43.141332'
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: &id002
+    - Green
+    - Red
+    - Green
+    - Green
+    - Blue
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The group has not started developing the mnemonic story yet.
+    summary: Blue introduces themselves, their collaborators Red and Green, and states their goal of creating a story about
+      microcontrollers.
+- timestamp: '2025-12-01T09:11:11.117568'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: &id003
+    - Microcontroller
+    - Robot Interface Controller (RIC)
+    - ESP32 module
+    - Arduino Nano
+    - CPU
+    - Memory
+    - Programmable input/output peripherals
+    - Electrical device
+    - Pins
+    - 3 volts (3V)
+    - HIGH
+    - LOW
+    - Program
+    - Blockly
+    - C++
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student explicitly mentions 'microcontrollers' as the topic they are working on, indicating they
+        are aware of this concept's existence.
+    all_student_profiles: &id004
+      Red:
+        Microcontroller:
+          level: confused
+          justification: The student relates microcontrollers to everyday devices like gaming controllers and smart lights,
+            implying they understand these devices have some form of control, but doesn't specify the microcontroller itself.
+          turn: 3
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: not_seen
+          justification: null
+          turn: null
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: understood
+          justification: The student correctly infers that these devices 'make all the buttons work,' which directly relates
+            to the input and output functionality of programmable peripherals.
+          turn: 3
+        Electrical device:
+          level: understood
+          justification: The student's reference to 'little wires sticking out to hook stuff up' implies an understanding
+            that the device is an electrical component that requires external connections.
+          turn: 7
+        Pins:
+          level: understood
+          justification: The student correctly identifies 'pins' as the 'little wires sticking out to hook stuff up', which
+            is an accurate description of how physical connections are made to microcontrollers and other electrical devices.
+          turn: 7
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+      Blue:
+        Microcontroller:
+          level: understood
+          justification: The student's question about 'controlling them independently' and performing 'different things at
+            once' implies an understanding that a central processing unit (microcontroller) can manage multiple operations
+            simultaneously through its interfaces (pins).
+          turn: 10
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: not_seen
+          justification: null
+          turn: null
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: understood
+          justification: The student correctly infers that different pins can perform independent actions, such as turning
+            on a light (output) and sensing something (input), which is a core function of programmable I/O peripherals.
+          turn: 10
+        Electrical device:
+          level: understood
+          justification: The student's description of microcontrollers as controlling 'other stuff' implies an understanding
+            that they are electrical devices that interact with and manage other components.
+          turn: 2
+        Pins:
+          level: understood
+          justification: The student explicitly mentions 'pin' and associates it with performing distinct tasks, demonstrating
+            an understanding that pins are the interface points for controlling external devices and reading sensor data.
+          turn: 10
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: confused
+          justification: While not explicitly mentioned, the concept of 'turning on a light' implies an output signal. The
+            student doesn't specify how this is achieved (e.g., HIGH/LOW voltage), suggesting a potential gap in understanding
+            the precise signaling mechanism.
+          turn: 10
+        LOW:
+          level: confused
+          justification: While not explicitly mentioned, the concept of 'turning on a light' implies an output signal. The
+            student doesn't specify how this is achieved (e.g., HIGH/LOW voltage), suggesting a potential gap in understanding
+            the precise signaling mechanism.
+          turn: 10
+        Program:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+      Green:
+        Microcontroller:
+          level: understood
+          justification: The student uses the analogy of 'hands and feet' for pins, directly relating them to the microcontroller's
+            interaction with the external world, implying an understanding of the microcontroller as a central control unit.
+          turn: 8
+        Robot Interface Controller (RIC):
+          level: understood
+          justification: The student's description of the 'brain' being the 'boss of the whole thing' directly relates to
+            the function of a Robot Interface Controller, which manages and directs the operations of a robot.
+          turn: 5
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: understood
+          justification: The student uses the analogy of a 'brain's job' and being the 'boss of the whole thing,' which accurately
+            reflects the role of a CPU as the central processing unit that controls other components.
+          turn: 5
+        Memory:
+          level: confused
+          justification: The student asks 'Does the memory just hold all that information?', indicating they understand memory's
+            role in storing data, but are uncertain about its specific function in relation to inputs and outputs, and whether
+            it's the sole component responsible for this.
+          turn: 6
+        Programmable input/output peripherals:
+          level: confused
+          justification: The student hints at the function of I/O peripherals by asking if the 'boss' (likely referring to
+            the microcontroller) needs to know if a button is pushed or if a light should be on. This demonstrates an awareness
+            of input and output, but the phrasing suggests uncertainty about how this information is handled.
+          turn: 6
+        Electrical device:
+          level: understood
+          justification: The analogy to a light switch implies an understanding that these concepts relate to the behavior
+            of an electrical device.
+          turn: 9
+        Pins:
+          level: understood
+          justification: The student uses the term 'pin' correctly in the context of electrical connections on a device.
+          turn: 9
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: understood
+          justification: The student correctly associates 'HIGH' with an 'on' state, drawing a parallel to a light switch.
+          turn: 9
+        LOW:
+          level: understood
+          justification: The student correctly associates 'LOW' with an 'off' state, drawing a parallel to a light switch.
+          turn: 9
+        Program:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+- timestamp: '2025-12-01T09:11:11.117577'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:11.117580'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:11.117583'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:11.118608'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:11.118644'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:12.596173'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:12.596191'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:12.596197'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:12.596201'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:12.596206'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:12.599625'
+  event: Turn 1
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Hey Marty! I''m Blue and I''m working with Red and Green on microcontrollers and we need to create a story.'
+    assistant: Hey Blue! That sounds like a super fun project!  So, we're going to build a story together to help us remember
+      all about microcontrollers. What's one thing you already know about microcontrollers that you think is pretty cool?
+- timestamp: '2025-12-01T09:11:14.066443'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 2
+    speaker: Blue
+    message: Oh, I remember learning they're like tiny computers that control other stuff! That's pretty cool, thinking about
+      how small they are but how much they do.
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Green
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 2
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The student has shared a foundational understanding of microcontrollers as 'tiny computers that control
+      other stuff', which can be incorporated into the story.
+    summary: The student recalls that microcontrollers are small computers that control other devices and finds this capability
+      impressive.
+- timestamp: '2025-12-01T09:11:15.218861'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student describes microcontrollers as 'tiny computers that control other stuff,' which accurately
+        reflects their core function and nature.
+    - concept: Electrical device
+      level: UNDERSTOOD
+      justification: The student's description of microcontrollers as controlling 'other stuff' implies an understanding that
+        they are electrical devices that interact with and manage other components.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:15.218893'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:15.218903'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:15.218911'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:15.221104'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:15.221171'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:16.483140'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:16.483206'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:16.483248'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:16.483258'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:16.483311'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:16.485701'
+  event: Turn 2
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Oh, I remember learning they''re like tiny computers that control other stuff! That''s pretty cool, thinking
+      about how small they are but how much they do.'
+    assistant: That's a fantastic start, Blue! You're totally right, they are like tiny computers. Red, what kind of everyday
+      devices have you seen that might have these tiny computers controlling them?
+- timestamp: '2025-12-01T09:11:17.886236'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 3
+    speaker: Red
+    message: Ooh! Like my gaming controller! And my smart lights probably have them too. They make all the buttons work, right?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group has established that microcontrollers are tiny computers that control other things, and they
+      are now brainstorming examples of devices that use them.
+    summary: The student identifies a gaming controller and smart lights as everyday devices likely controlled by microcontrollers
+      and asks if they make the buttons work.
+- timestamp: '2025-12-01T09:11:19.157600'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Electrical device
+      confused:
+      - Microcontroller
+      - Programmable input/output peripherals
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: CONFUSED
+      justification: The student relates microcontrollers to everyday devices like gaming controllers and smart lights, implying
+        they understand these devices have some form of control, but doesn't specify the microcontroller itself.
+    - concept: Programmable input/output peripherals
+      level: UNDERSTOOD
+      justification: The student correctly infers that these devices 'make all the buttons work,' which directly relates to
+        the input and output functionality of programmable peripherals.
+    - concept: Electrical device
+      level: UNDERSTOOD
+      justification: By mentioning gaming controllers and smart lights, the student implicitly understands that microcontrollers
+        are part of electrical devices.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:19.157643'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:19.157650'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:19.157697'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:19.160606'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:19.160681'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:20.532119'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:20.532136'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:20.532142'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:20.532147'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:20.532152'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:20.534521'
+  event: Turn 3
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh! Like my gaming controller! And my smart lights probably have them too. They make all the buttons work,
+      right?'
+    assistant: Great examples, Red! Those devices definitely need some smarts to work. Green, what do you think? How do you
+      imagine those buttons on a gaming controller or the lights turning on and off are actually controlled?
+- timestamp: '2025-12-01T09:11:22.045262'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 4
+    speaker: Green
+    message: Hmm, I'm still a bit fuzzy on what the "CPU" and "memory" actually *do* inside the chip. Like, is the CPU the
+      brain and memory is where it writes notes? What if it's like a really, really tiny chef in there?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: question
+    is_relevant: true
+    mnemonic_progress: The group is exploring the internal components of a microcontroller (CPU and memory) and how they function,
+      with the student proposing a 'tiny chef' analogy.
+    summary: The student is asking for clarification on the roles of the CPU and memory within a microcontroller, suggesting
+      a 'tiny chef' analogy to understand their functions.
+- timestamp: '2025-12-01T09:11:23.570193'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - CPU
+      - Memory
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: CONFUSED
+      justification: The student uses an analogy ('brain') which is conceptually related but expresses uncertainty about its
+        specific function ('what it actually *do* inside the chip'). The chef analogy also indicates a search for understanding
+        rather than a clear grasp.
+    - concept: Memory
+      level: CONFUSED
+      justification: The student uses an analogy ('where it writes notes') which hints at storage but is not precise and indicates
+        uncertainty about the actual role of memory within the chip. The chef analogy also reflects a lack of clear understanding.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:23.570215'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:23.570221'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:23.570226'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:23.572508'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:23.572583'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:24.566849'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:24.566864'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:24.566870'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:24.566875'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:24.566879'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:24.569264'
+  event: Turn 4
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hmm, I''m still a bit fuzzy on what the "CPU" and "memory" actually *do* inside the chip. Like, is the CPU
+      the brain and memory is where it writes notes? What if it''s like a really, really tiny chef in there?'
+    assistant: That's a great way to think about it, Green! You're right that the CPU is kind of like the "brain" of the microcontroller.
+      What do you think a brain's main job is in any computer, big or small?
+- timestamp: '2025-12-01T09:11:26.100651'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 5
+    speaker: Green
+    message: A brain's job... Hmm, I guess it tells everything else what to do? Like, it's the boss of the whole thing?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students: []
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 2
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is exploring analogies for the CPU's function within a microcontroller, with Green comparing
+      it to a chef and the assistant suggesting it's like a brain. Green is now elaborating on the brain analogy.
+    summary: Green elaborates on the brain analogy, suggesting the CPU acts as the boss that tells everything else what to
+      do.
+- timestamp: '2025-12-01T09:11:27.262650'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - CPU
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student uses the analogy of a 'brain's job' and being the 'boss of the whole thing,' which accurately
+        reflects the role of a CPU as the central processing unit that controls other components.
+    - concept: Microcontroller
+      level: CONFUSED
+      justification: While the student's description of a 'brain' controlling 'everything else' aligns with the function of
+        a microcontroller, they don't explicitly name it. The analogy is close but lacks the specific terminology.
+    - concept: Robot Interface Controller (RIC)
+      level: UNDERSTOOD
+      justification: The student's description of the 'brain' being the 'boss of the whole thing' directly relates to the
+        function of a Robot Interface Controller, which manages and directs the operations of a robot.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:27.262666'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:27.262671'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:27.262675'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:27.265009'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:27.265153'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:28.850293'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:28.850318'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:28.850324'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:28.850329'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:28.850334'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:28.853142'
+  event: Turn 5
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: A brain''s job... Hmm, I guess it tells everything else what to do? Like, it''s the boss of the whole thing?'
+    assistant: You got it, Green! The CPU is definitely the boss, telling all the other parts what to do. Now, thinking about
+      that, and how a microcontroller needs to control things like lights or buttons, what kind of information do you think
+      the CPU needs to have to do its job?
+- timestamp: '2025-12-01T09:11:30.308321'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 6
+    speaker: Green
+    message: Hmm, the boss needs to know stuff, right? Like, what if it needs to know if a button is pushed, or if a light
+      should be on? Does the memory just hold all that information?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 3
+    contribution_type: question
+    is_relevant: true
+    mnemonic_progress: The group is exploring the roles of the CPU and memory within a microcontroller, using the analogy
+      of a 'boss' and 'notes'. The student is questioning how the CPU receives information and how memory stores it.
+    summary: The student asks if the CPU needs to know specific information, like button states or light status, and if memory
+      is where this information is stored.
+- timestamp: '2025-12-01T09:11:32.696234'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - Memory
+    cumulative_assessments_updated:
+    - concept: Programmable input/output peripherals
+      level: CONFUSED
+      justification: The student hints at the function of I/O peripherals by asking if the 'boss' (likely referring to the
+        microcontroller) needs to know if a button is pushed or if a light should be on. This demonstrates an awareness of
+        input and output, but the phrasing suggests uncertainty about how this information is handled.
+    - concept: Memory
+      level: CONFUSED
+      justification: The student asks 'Does the memory just hold all that information?', indicating they understand memory's
+        role in storing data, but are uncertain about its specific function in relation to inputs and outputs, and whether
+        it's the sole component responsible for this.
+    - concept: Microcontroller
+      level: CONFUSED
+      justification: The student refers to 'the boss' needing to know stuff, which can be interpreted as a nascent understanding
+        of a central processing unit or microcontroller that manages information and actions. However, the term 'boss' is
+        informal and doesn't directly use the technical term, showing a lack of precise understanding.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:32.696254'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:32.696260'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:32.696265'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:32.699727'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:32.699805'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:34.412600'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:34.412628'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:34.412636'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:34.412641'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:34.412651'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:34.415393'
+  event: Turn 6
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hmm, the boss needs to know stuff, right? Like, what if it needs to know if a button is pushed, or if a
+      light should be on? Does the memory just hold all that information?'
+    assistant: That's a super insightful question, Green! You're spot on that the "boss" (the CPU) needs to know things like
+      whether a button is pushed. And yes, memory is definitely important for holding information! Red, thinking about how
+      the microcontroller can *know* if a button is pushed or *make* a light turn on, what parts do you think are important
+      for connecting the microcontroller to those outside things like buttons and lights?
+- timestamp: '2025-12-01T09:11:36.274054'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 7
+    speaker: Red
+    message: Ooh, yeah! Like, it needs little wires sticking out to hook stuff up, right? Those are the pins I think!
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students: []
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is discussing how a microcontroller interacts with external components, specifically focusing
+      on input/output mechanisms. The idea of 'pins' as connection points has been introduced.
+    summary: Red suggests that microcontrollers need 'pins' which are like wires sticking out to connect to external components
+      like buttons and lights.
+- timestamp: '2025-12-01T09:11:37.474709'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Pins
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student correctly identifies 'pins' as the 'little wires sticking out to hook stuff up', which is
+        an accurate description of how physical connections are made to microcontrollers and other electrical devices.
+    - concept: Electrical device
+      level: UNDERSTOOD
+      justification: The student's reference to 'little wires sticking out to hook stuff up' implies an understanding that
+        the device is an electrical component that requires external connections.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:37.474741'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:37.474771'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:37.474781'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:37.477458'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:37.477577'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:38.525819'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:38.525845'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:38.525852'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:38.525858'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:38.525864'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:38.529134'
+  event: Turn 7
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh, yeah! Like, it needs little wires sticking out to hook stuff up, right? Those are the pins I think!'
+    assistant: Exactly, Red! Those "little wires sticking out" are called **pins**, and they're super important. Green, thinking
+      about those pins, what do you think the microcontroller uses them for when it's interacting with the outside world,
+      like checking a button or turning on a light?
+- timestamp: '2025-12-01T09:11:40.211100'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 8
+    speaker: Green
+    message: What if the pins are like the microcontroller's hands and feet? They use them to grab stuff or move around?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: 'The students are developing analogies for microcontroller components: CPU as a ''boss'', memory holding
+      information, and now pins as ''hands and feet'' for interaction.'
+    summary: The student proposes that microcontroller pins can be thought of as the microcontroller's hands and feet for
+      interacting with the outside world.
+- timestamp: '2025-12-01T09:11:41.001336'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      - Pins
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student uses the analogy of 'hands and feet' for pins, directly relating them to the microcontroller's
+        interaction with the external world, implying an understanding of the microcontroller as a central control unit.
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student correctly identifies pins as interfaces that the microcontroller uses for interaction ('grab
+        stuff or move around'), which aligns with their function as input/output connections.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:41.001350'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:41.001354'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:41.001358'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:41.002880'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:41.002944'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:42.503808'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:42.503824'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:42.503830'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:42.503835'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:42.503841'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:42.506912'
+  event: Turn 8
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: What if the pins are like the microcontroller''s hands and feet? They use them to grab stuff or move around?'
+    assistant: That's a really creative way to put it, Green! The pins are definitely how the microcontroller interacts with
+      the outside world. Now, imagine those hands and feet can either be "on" or "off." What do we call those two states for
+      the pins?
+- timestamp: '2025-12-01T09:11:44.080886'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 9
+    speaker: Green
+    message: HIGH and LOW? Like a light switch? What if one pin is always "on" and another is always "off"? That would be
+      kinda useless, right?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 2
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group has established the microcontroller as a 'boss' with 'hands and feet' (pins) that can be
+      'on' or 'off'.
+    summary: The student suggests 'HIGH' and 'LOW' as the two states for the pins, comparing them to a light switch and questioning
+      the utility of pins that are always on or off.
+- timestamp: '2025-12-01T09:11:45.074605'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - HIGH
+      - LOW
+      - Pins
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student uses the term 'pin' correctly in the context of electrical connections on a device.
+    - concept: HIGH
+      level: UNDERSTOOD
+      justification: The student correctly associates 'HIGH' with an 'on' state, drawing a parallel to a light switch.
+    - concept: LOW
+      level: UNDERSTOOD
+      justification: The student correctly associates 'LOW' with an 'off' state, drawing a parallel to a light switch.
+    - concept: Electrical device
+      level: UNDERSTOOD
+      justification: The analogy to a light switch implies an understanding that these concepts relate to the behavior of
+        an electrical device.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:45.074625'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:45.074639'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:45.074650'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:45.076166'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:45.076235'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:46.093082'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:46.093093'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:46.093096'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:46.093099'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:46.093102'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:46.094802'
+  event: Turn 9
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: HIGH and LOW? Like a light switch? What if one pin is always "on" and another is always "off"? That would
+      be kinda useless, right?'
+    assistant: 'You''re absolutely right, Green, we call those states **HIGH** and **LOW**, just like a light switch! And
+      you''ve hit on a really important point: what if a pin was always on or always off? Blue, why do you think it''s so
+      important that we can control those pins to be HIGH or LOW *independently*?'
+- timestamp: '2025-12-01T09:11:47.551382'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 10
+    speaker: Blue
+    message: Oh! So, controlling them independently means it can do different things at once, right? Like, one pin could turn
+      on a light while another pin is sensing if something is there?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is discussing the states of microcontroller pins (HIGH/LOW) and the importance of independent
+      control.
+    summary: Blue suggests that independent pin control allows the microcontroller to perform multiple actions simultaneously,
+      such as controlling a light and sensing an input.
+- timestamp: '2025-12-01T09:11:49.010079'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Pins
+      - HIGH
+      - LOW
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Programmable input/output peripherals
+      level: UNDERSTOOD
+      justification: The student correctly infers that different pins can perform independent actions, such as turning on
+        a light (output) and sensing something (input), which is a core function of programmable I/O peripherals.
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student explicitly mentions 'pin' and associates it with performing distinct tasks, demonstrating
+        an understanding that pins are the interface points for controlling external devices and reading sensor data.
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student's question about 'controlling them independently' and performing 'different things at once'
+        implies an understanding that a central processing unit (microcontroller) can manage multiple operations simultaneously
+        through its interfaces (pins).
+    - concept: HIGH
+      level: CONFUSED
+      justification: While not explicitly mentioned, the concept of 'turning on a light' implies an output signal. The student
+        doesn't specify how this is achieved (e.g., HIGH/LOW voltage), suggesting a potential gap in understanding the precise
+        signaling mechanism.
+    - concept: LOW
+      level: CONFUSED
+      justification: While not explicitly mentioned, the concept of 'turning on a light' implies an output signal. The student
+        doesn't specify how this is achieved (e.g., HIGH/LOW voltage), suggesting a potential gap in understanding the precise
+        signaling mechanism.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T09:11:49.010092'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:49.010097'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:49.010100'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T09:11:49.011515'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T09:11:49.011582'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T09:11:50.070609'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:50.070624'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:50.070630'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:50.070635'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:50.070650'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T09:11:50.073419'
+  event: Turn 10
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Oh! So, controlling them independently means it can do different things at once, right? Like, one pin could
+      turn on a light while another pin is sensing if something is there?'
+    assistant: That's a fantastic connection, Blue! Being able to control pins independently is exactly how a microcontroller
+      can do multiple things at once, like turning on a light *and* sensing something. Red, thinking about this idea of the
+      microcontroller being able to do lots of things at once using its pins, what are some of the most important concepts
+      we've talked about so far that we should include in our story?
+frame_memory:
+  turn_count: 10
+  session_phase: 2
+  consecutive_off_topic_turns: 0
+  session_start_time: '2025-12-01T09:11:08.476412'
+  last_turn_time: '2025-12-01T09:11:46.881820'
+  recent_speakers: *id002
+  participation: *id001
+  comprehension_tracker:
+    concepts: *id003
+    by_student: *id004

@@ -1,0 +1,2136 @@
+session_id: sim019_phase3_poem_extraction_fix_20251201205126
+verbosity: verbose
+saved_at: '2025-12-01T20:53:17.262401'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Poem
+  students:
+  - Red
+  - Blue
+  - Green
+  target_age: 14
+  scenario: phase3_poem_extraction_fix
+events:
+- timestamp: '2025-12-01T20:51:26.043787'
+  event: Simulation initialized
+  level: normal
+- timestamp: '2025-12-01T20:51:28.978903'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 1
+    speaker: Green
+    message: Hey Marty! I'm Green and I'm working with Red and Blue on microcontrollers and we need to create a story.
+    participation: &id001
+      Red:
+        contribution_count: 5
+        total_speaking_time_seconds: 41.2
+        last_contribution_time: '2025-12-01T20:52:49.120633'
+      Blue:
+        contribution_count: 4
+        total_speaking_time_seconds: 46.8
+        last_contribution_time: '2025-12-01T20:52:21.546374'
+      Green:
+        contribution_count: 7
+        total_speaking_time_seconds: 67.60000000000001
+        last_contribution_time: '2025-12-01T20:53:12.281429'
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: &id002
+    - Red
+    - Green
+    - Green
+    - Green
+    - Green
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The student is initiating the mnemonic creation process by suggesting a story format.
+    summary: The student introduces themselves and their group, stating their goal to create a story about microcontrollers.
+- timestamp: '2025-12-01T20:51:31.977610'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: &id003
+    - Microcontroller
+    - Robot Interface Controller (RIC)
+    - ESP32 module
+    - Arduino Nano
+    - CPU
+    - Memory
+    - Programmable input/output peripherals
+    - Pins
+    - 3 volts (3V)
+    - HIGH
+    - LOW
+    - Program
+    - Blockly
+    - C++
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student explicitly mentions working with 'microcontrollers', indicating they are aware of this core
+        concept.
+    all_student_profiles: &id004
+      Red:
+        Microcontroller:
+          level: not_seen
+          justification: null
+          turn: null
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: understood
+          justification: The student associates 'actions' with the CPU, which aligns with the CPU's role in executing instructions
+            and performing operations.
+          turn: 11
+        Memory:
+          level: understood
+          justification: The student correctly inquires about where the 'brain thing' (CPU) 'keeps its instructions,' which
+            directly relates to the function of memory in storing program instructions.
+          turn: 5
+        Programmable input/output peripherals:
+          level: understood
+          justification: The student mentions 'do stuff with the pins,' which directly relates to the function of programmable
+            input/output peripherals that control pins for interaction.
+          turn: 3
+        Pins:
+          level: understood
+          justification: The student explicitly mentions 'pins' and implies they are a topic to be discussed, indicating awareness
+            of their existence and relevance.
+          turn: 12
+        3 volts (3V):
+          level: confused
+          justification: The student mentions 'how it gets power,' which is related to voltage, but doesn't specify '3 volts'
+            or demonstrate understanding of voltage levels or their significance. This suggests an awareness of power as a
+            concept but not the specific details.
+          turn: 12
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: understood
+          justification: The student's question about where instructions are kept directly implies an understanding that a
+            'program' consists of instructions that need to be stored.
+          turn: 5
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+      Blue:
+        Microcontroller:
+          level: confused
+          justification: The student refers to a 'tiny computer' and 'ingredients,' which hints at an understanding of a microcontroller
+            as a system with components, but the analogy is not fully developed or precise.
+          turn: 7
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: understood
+          justification: The student correctly associates the 'program' (recipe) with the 'CPU' (what mixes ingredients),
+            indicating an understanding that the CPU executes instructions.
+          turn: 8
+        Memory:
+          level: understood
+          justification: The student correctly describes memory as holding instructions for the CPU, using the analogy of
+            a 'recipe book'.
+          turn: 6
+        Programmable input/output peripherals:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: understood
+          justification: The student correctly understands that pins are used for communication with other components.
+          turn: 4
+        3 volts (3V):
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: understood
+          justification: The student uses the analogy of a 'recipe' to describe what a program does, which aligns with the
+            concept of a program being a set of instructions.
+          turn: 8
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+      Green:
+        Microcontroller:
+          level: understood
+          justification: The student uses the analogy of a 'secret recipe for the microcontroller to make things happen',
+            which accurately portrays a microcontroller as a device that executes instructions to perform tasks.
+          turn: 9
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: understood
+          justification: The student refers to the CPU as 'the boss', which is a common and generally accurate analogy for
+            its role as the central processing unit that directs operations.
+          turn: 14
+        Memory:
+          level: confused
+          justification: Similar to CPU, the student is 'a bit fuzzy on what the "memory" are for', signifying uncertainty
+            about its purpose.
+          turn: 2
+        Programmable input/output peripherals:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: confused
+          justification: The student uses an analogy of 'little hands trying to *catch* something' for pins, which implies
+            a receptive function but doesn't fully capture their bi-directional nature (input/output) or their role in connecting
+            to external components and signals.
+          turn: 14
+        3 volts (3V):
+          level: confused
+          justification: The student associates '3 volts' with 'electricity' and 'juice,' indicating a basic understanding
+            of voltage as a power source but lacking specificity on its role in powering electronic components.
+          turn: 15
+        HIGH:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW:
+          level: not_seen
+          justification: null
+          turn: null
+        Program:
+          level: confused
+          justification: The student uses the metaphor of a 'recipe' which implies a set of instructions, similar to a program,
+            but their phrasing 'specific kind of juice' suggests they are not yet grasping the abstract nature of a program
+            for a microcontroller.
+          turn: 15
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+- timestamp: '2025-12-01T20:51:31.977635'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:31.977640'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:31.977645'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:31.979262'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:51:31.979321'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:51:34.191178'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:34.191203'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:34.191225'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:34.191231'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:34.191237'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:34.194283'
+  event: Turn 1
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hey Marty! I''m Green and I''m working with Red and Blue on microcontrollers and we need to create a story.'
+    assistant: Hi Green! I'm excited to help you create a story about microcontrollers. What are the most important things
+      about microcontrollers that you want to remember for your story?
+- timestamp: '2025-12-01T20:51:37.619954'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 2
+    speaker: Green
+    message: I remember they're like tiny computers, right? And they have these "pins" that do stuff, but I'm a bit fuzzy
+      on what the "CPU" and "memory" are for.
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Blue
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 2
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The student is clarifying foundational concepts about microcontrollers, specifically identifying them
+      as tiny computers with pins and expressing uncertainty about the roles of CPU and memory.
+    summary: The student confirms their understanding of microcontrollers as tiny computers with pins and asks for clarification
+      on the CPU and memory functions.
+- timestamp: '2025-12-01T20:51:39.343795'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      - Pins
+      confused:
+      - CPU
+      - Memory
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student describes microcontrollers as 'tiny computers', which is a good analogy and reflects a basic
+        understanding of their function.
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student correctly identifies that 'pins' are components of microcontrollers that 'do stuff', indicating
+        an understanding of their role as interfaces for interaction.
+    - concept: CPU
+      level: CONFUSED
+      justification: The student explicitly states they are 'a bit fuzzy on what the "CPU" ... are for', indicating a lack
+        of clear understanding.
+    - concept: Memory
+      level: CONFUSED
+      justification: Similar to CPU, the student is 'a bit fuzzy on what the "memory" are for', signifying uncertainty about
+        its purpose.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:51:39.343807'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:39.343810'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:39.343812'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:39.344757'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:51:39.344786'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:51:41.118779'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:41.118802'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:41.118808'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:41.118812'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:41.118817'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:41.121495'
+  event: Turn 2
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: I remember they''re like tiny computers, right? And they have these "pins" that do stuff, but I''m a bit
+      fuzzy on what the "CPU" and "memory" are for.'
+    assistant: Great points, Green! You're right, they are like tiny computers with pins. Red, what do you think are some
+      other important things about microcontrollers that we should include in our story?
+- timestamp: '2025-12-01T20:51:45.398691'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 3
+    speaker: Red
+    message: Yeah! I remember they have like, a brain part and memory, right? And then they do stuff with the pins? Ooh, what
+      else do they do?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is still in the concept selection phase, identifying key microcontroller components like
+      CPU and memory, and their relation to pins.
+    summary: Red confirms the idea of a 'brain part' (CPU) and memory, and asks for more details about what microcontrollers
+      do.
+- timestamp: '2025-12-01T20:51:48.268533'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - CPU
+      - Memory
+      - Pins
+      confused: []
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student refers to a 'brain part,' which is a common and generally accurate analogy for a CPU's function
+        as the processing unit.
+    - concept: Memory
+      level: UNDERSTOOD
+      justification: The student explicitly mentions 'memory,' indicating they understand this is a component of the system.
+    - concept: Programmable input/output peripherals
+      level: UNDERSTOOD
+      justification: The student mentions 'do stuff with the pins,' which directly relates to the function of programmable
+        input/output peripherals that control pins for interaction.
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student explicitly mentions 'pins,' showing awareness of these connection points on a microcontroller.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:51:48.268550'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:48.268555'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:48.268559'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:48.270290'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:51:48.270353'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:51:50.325344'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:50.325393'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:50.325401'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:50.325406'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:50.325411'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:50.327601'
+  event: Turn 3
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Yeah! I remember they have like, a brain part and memory, right? And then they do stuff with the pins? Ooh,
+      what else do they do?'
+    assistant: That's a great start, Red! You're on the right track with the brain and pins. Blue, what stands out to you
+      from our learning material about microcontrollers that we should put in our story?
+- timestamp: '2025-12-01T20:51:54.302532'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 4
+    speaker: Blue
+    message: Oh yeah, the brain part is like the CPU, right? And the pins are how it talks to other stuff? What if we made
+      that into a little rhyme?
+    participation: *id001
+    session_phase: 1
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Blue
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The student confirms understanding of CPU and pins, and suggests turning these concepts into a rhyme,
+      moving towards mnemonic creation.
+    summary: The student confirms the CPU is the 'brain' and pins are for communication, then suggests creating a rhyme.
+- timestamp: '2025-12-01T20:51:55.241701'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - CPU
+      - Pins
+      confused: []
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly identifies the CPU as the 'brain part' of the microcontroller.
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student correctly understands that pins are used for communication with other components.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:51:55.241724'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:55.241729'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:55.241735'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:51:55.243762'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:51:55.243839'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:51:57.499224'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:57.499246'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:57.499252'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:57.499256'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:57.499261'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:51:57.501965'
+  event: Turn 4
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Oh yeah, the brain part is like the CPU, right? And the pins are how it talks to other stuff? What if we
+      made that into a little rhyme?'
+    assistant: 'That''s a fantastic idea, Blue! Focusing on the CPU as the "brain" and pins as the way it communicates is
+      a great angle for a rhyme. So far, we have:
+
+
+      *   CPU (the brain)
+
+      *   Pins (how it talks to other stuff)
+
+
+      Red, do you have any other concepts in mind that you''d like to add to our rhyme?'
+- timestamp: '2025-12-01T20:52:00.144851'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 5
+    speaker: Red
+    message: Ooh, yeah! Blue's brain thing is cool! What about the memory? Like where it keeps its instructions? And don't
+      we need to know how much power it uses?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group has identified the CPU as the 'brain' and pins as communication channels. Red suggests adding
+      memory (for instructions) and power usage to the mnemonic.
+    summary: Red suggests adding memory for instructions and power usage to the mnemonic, building on the CPU and pins concepts.
+- timestamp: '2025-12-01T20:52:01.438977'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - Memory
+      - Program
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: CONFUSED
+      justification: The student refers to 'Blue's brain thing' which is likely a reference to the CPU, but doesn't explicitly
+        name it. This indicates an awareness of a central processing unit but not a clear understanding of the term.
+    - concept: Memory
+      level: UNDERSTOOD
+      justification: The student correctly inquires about where the 'brain thing' (CPU) 'keeps its instructions,' which directly
+        relates to the function of memory in storing program instructions.
+    - concept: Program
+      level: UNDERSTOOD
+      justification: The student's question about where instructions are kept directly implies an understanding that a 'program'
+        consists of instructions that need to be stored.
+    - concept: Power
+      level: UNDERSTOOD
+      justification: The student asks about 'how much power it uses,' demonstrating an understanding that electronic devices,
+        including microcontrollers, require power to operate.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:01.439002'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:01.439007'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:01.439014'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:01.441293'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:01.441355'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:03.211019'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:03.211034'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:03.211039'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:03.211043'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:03.211047'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:03.213221'
+  event: Turn 5
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh, yeah! Blue''s brain thing is cool! What about the memory? Like where it keeps its instructions? And don''t
+      we need to know how much power it uses?'
+    assistant: You've got it, Red! The "brain part" is indeed the CPU, and memory is where it stores instructions. Power is
+      also a super important detail. Blue, how can we incorporate the idea of memory into our rhyme, maybe thinking about
+      what it holds?
+- timestamp: '2025-12-01T20:52:05.559983'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 6
+    speaker: Blue
+    message: So, the memory holds the instructions for the CPU, right? Like a recipe book for the tiny computer? What if we
+      said something about it keeping the 'recipe' safe?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students: []
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group has identified CPU as the 'brain' and pins as communication, and is now incorporating memory
+      and power usage into the mnemonic.
+    summary: Blue confirms the role of memory and suggests phrasing it as holding the CPU's 'recipe'.
+- timestamp: '2025-12-01T20:52:06.816115'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - CPU
+      - Memory
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Memory
+      level: UNDERSTOOD
+      justification: The student correctly describes memory as holding instructions for the CPU, using the analogy of a 'recipe
+        book'.
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly identifies the CPU as the entity that 'uses' the instructions from memory, implying
+        it's the processing unit.
+    - concept: Program
+      level: UNDERSTOOD
+      justification: The student implicitly understands that the 'instructions' or 'recipe' held in memory constitute a program
+        that the CPU executes.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:06.816137'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:06.816141'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:06.816145'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:06.817542'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:06.817592'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:10.083937'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:10.083962'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:10.083967'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:10.083972'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:10.083982'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:10.086473'
+  event: Turn 6
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: So, the memory holds the instructions for the CPU, right? Like a recipe book for the tiny computer? What
+      if we said something about it keeping the ''recipe'' safe?'
+    assistant: That's a perfect analogy, Blue! The memory is exactly like a recipe book for the CPU. How about we start our
+      poem with that idea? What do you think the first line could be, or what should it be about?
+- timestamp: '2025-12-01T20:52:14.169595'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 7
+    speaker: Blue
+    message: Oh, I like the recipe book idea! So, the program is like the recipe, and the CPU follows it? What if we started
+      with something about the tiny computer and its ingredients?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 2
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is developing a poem where memory is a recipe book for the CPU, and they are considering
+      the opening lines about ingredients.
+    summary: The student builds on the recipe book analogy by suggesting the program is the recipe and the CPU follows it,
+      proposing to start the rhyme with the computer and its ingredients.
+- timestamp: '2025-12-01T20:52:15.960353'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Program
+      confused:
+      - CPU
+    cumulative_assessments_updated:
+    - concept: Program
+      level: UNDERSTOOD
+      justification: The student correctly compares a program to a recipe, implying it's a set of instructions.
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly infers that the CPU 'follows' the program, which aligns with its role as the processing
+        unit.
+    - concept: Microcontroller
+      level: CONFUSED
+      justification: The student refers to a 'tiny computer' and 'ingredients,' which hints at an understanding of a microcontroller
+        as a system with components, but the analogy is not fully developed or precise.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:15.960367'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:15.960371'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:15.960375'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:15.962136'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:15.962218'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:20.017360'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:20.017379'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:20.017384'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:20.017388'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:20.017392'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:20.019558'
+  event: Turn 7
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Oh, I like the recipe book idea! So, the program is like the recipe, and the CPU follows it? What if we started
+      with something about the tiny computer and its ingredients?'
+    assistant: 'That''s a wonderful way to think about it, Blue! The program is indeed the recipe, and the CPU follows it.
+      Let''s try to start our poem with that core idea.
+
+
+      Green, building on Blue''s idea about "ingredients" and the program being the "recipe," what could be our first line?'
+- timestamp: '2025-12-01T20:52:23.301354'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 8
+    speaker: Blue
+    message: Oh, a recipe! So, the program tells the CPU what to mix together, like ingredients? What if the first line is
+      about the tiny computer needing instructions?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 3
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is developing the first line of the poem, focusing on the program as a recipe and the CPU
+      following it. The current suggestion is to start with the need for instructions.
+    summary: The student builds on the recipe analogy by suggesting the first line of the poem should focus on the tiny computer
+      needing instructions.
+- timestamp: '2025-12-01T20:52:24.410968'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Program
+      - CPU
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Program
+      level: UNDERSTOOD
+      justification: The student uses the analogy of a 'recipe' to describe what a program does, which aligns with the concept
+        of a program being a set of instructions.
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly associates the 'program' (recipe) with the 'CPU' (what mixes ingredients), indicating
+        an understanding that the CPU executes instructions.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:24.410988'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:24.410993'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:24.410998'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:24.412731'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:24.412799'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:27.377925'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:27.377947'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:27.377952'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:27.378027'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:27.378038'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:27.380889'
+  event: Turn 8
+  level: normal
+  data:
+    speaker: Blue
+    user: 'Blue: Oh, a recipe! So, the program tells the CPU what to mix together, like ingredients? What if the first line
+      is about the tiny computer needing instructions?'
+    assistant: 'That''s a great start, Blue! Focusing on the need for instructions is key.
+
+
+      Green, how can we turn that into a rhyming line? What could come after "the tiny computer needs instructions"?'
+- timestamp: '2025-12-01T20:52:30.453594'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 9
+    speaker: Green
+    message: What if the instructions are like a secret recipe for the microcontroller to make things happen? Like, it needs
+      the recipe to know what to cook!
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is developing the idea of the program as a recipe for the CPU, with the memory holding it,
+      and is now discussing how to incorporate the need for instructions into the first line of the poem.
+    summary: Green suggests that the instructions are like a secret recipe that the microcontroller needs to know what to
+      do.
+- timestamp: '2025-12-01T20:52:32.525184'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Microcontroller
+      - Program
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Microcontroller
+      level: UNDERSTOOD
+      justification: The student uses the analogy of a 'secret recipe for the microcontroller to make things happen', which
+        accurately portrays a microcontroller as a device that executes instructions to perform tasks.
+    - concept: Program
+      level: UNDERSTOOD
+      justification: The student's analogy of a 'secret recipe' directly relates to the concept of a program, which is a set
+        of instructions that a microcontroller follows to achieve a specific outcome.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:32.525267'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:32.525279'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:32.525298'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:32.529353'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:32.529461'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:35.289806'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:35.289843'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:35.289853'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:35.289861'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:35.289869'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:35.292850'
+  event: Turn 9
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: What if the instructions are like a secret recipe for the microcontroller to make things happen? Like, it
+      needs the recipe to know what to cook!'
+    assistant: 'That''s a fantastic image, Green! A secret recipe is a perfect way to describe the program.
+
+
+      So far, our poem goes:
+
+      The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.
+
+
+      What do you think should come next, Red? How can we bring in the CPU?'
+- timestamp: '2025-12-01T20:52:38.643634'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 10
+    speaker: Red
+    message: Ooh, a secret recipe is cool! For the CPU part... maybe it's like the chef? The boss of the recipe?
+    participation: *id001
+    session_phase: 2
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Red
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group has established the concepts of the program as a secret recipe and the CPU as the 'brain'.
+      The current focus is on defining the CPU's role within the recipe analogy.
+    summary: The student suggests that the CPU acts as the 'chef' or 'boss' of the secret recipe.
+- timestamp: '2025-12-01T20:52:40.111329'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - CPU
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student correctly uses the analogy of a chef or boss to describe the CPU's role as the central processing
+        unit that directs operations.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:40.111352'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:40.111358'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:40.111364'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:40.114024'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:40.114125'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:42.676717'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:42.676747'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:42.676754'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:42.676761'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:42.676772'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:42.680091'
+  event: Turn 10
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh, a secret recipe is cool! For the CPU part... maybe it''s like the chef? The boss of the recipe?'
+    assistant: 'That''s a brilliant way to think about the CPU, Red! It''s definitely the "chef" or the "boss" following the
+      recipe.
+
+
+      How can we put that into a rhyming line after our first two? What rhymes with "reactions"?'
+- timestamp: '2025-12-01T20:52:45.779712'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 11
+    speaker: Red
+    message: Ooh, rhymes with reactions... "actions"? Like, the CPU does actions? Yeah!
+    participation: *id001
+    session_phase: 3
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 2
+    contribution_type: recall_attempt
+    is_relevant: true
+    recall_progress: Student is trying to recall the rhyming line for the CPU and suggests 'actions' to rhyme with 'reactions'.
+    summary: The student suggests 'actions' as a rhyme for 'reactions' to describe what the CPU does.
+- timestamp: '2025-12-01T20:52:46.573611'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - CPU
+      confused: []
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student associates 'actions' with the CPU, which aligns with the CPU's role in executing instructions
+        and performing operations.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:46.573647'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:46.573657'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:46.573666'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:46.576911'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:46.577019'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:48.280834'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:48.280861'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:48.280868'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:48.280873'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:48.280879'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:48.283729'
+  event: Turn 11
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh, rhymes with reactions... "actions"? Like, the CPU does actions? Yeah!'
+    assistant: 'That''s a perfect rhyme, Red! So now we have:
+
+
+      The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.
+
+      The CPU, the boss, takes actions,
+
+
+      What''s next? What other key parts of the microcontroller haven''t we mentioned yet in our poem?'
+- timestamp: '2025-12-01T20:52:50.506398'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 12
+    speaker: Red
+    message: Ooh! Yeah! We need to talk about the pins and stuff, right? And like, how it gets power.
+    participation: *id001
+    session_phase: 3
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 3
+    contribution_type: recall_question
+    is_relevant: true
+    recall_progress: Student is asking about parts of the mnemonic that have not yet been incorporated, specifically 'pins'
+      and 'power'.
+    summary: The student is asking if the mnemonic should include details about pins and power.
+- timestamp: '2025-12-01T20:52:51.661582'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - Pins
+      confused:
+      - Power
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: The student explicitly mentions 'pins' and implies they are a topic to be discussed, indicating awareness
+        of their existence and relevance.
+    - concept: 3 volts (3V)
+      level: CONFUSED
+      justification: The student mentions 'how it gets power,' which is related to voltage, but doesn't specify '3 volts'
+        or demonstrate understanding of voltage levels or their significance. This suggests an awareness of power as a concept
+        but not the specific details.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:51.661615'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:51.661624'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:51.661633'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:51.664494'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:51.664596'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:54.398071'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:54.398094'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:54.398100'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:54.398105'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:54.398111'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:54.401209'
+  event: Turn 12
+  level: normal
+  data:
+    speaker: Red
+    user: 'Red: Ooh! Yeah! We need to talk about the pins and stuff, right? And like, how it gets power.'
+    assistant: 'You''re absolutely right, Red! We still need to include the pins and how it gets power.
+
+
+      Green, thinking about the pins, what do they do, and how can we describe that in a rhyming line? Remember, they help
+      the microcontroller control other things.'
+- timestamp: '2025-12-01T20:52:56.397313'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 13
+    speaker: Green
+    message: Hmm, pins are like little arms that can push or pull stuff, right? What if they're always reaching out to touch
+      things?
+    participation: *id001
+    session_phase: 3
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    - Green
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+    contribution_type: recall_question
+    is_relevant: true
+    recall_progress: Student is trying to recall the function of pins and is asking for confirmation/elaboration on how to
+      phrase it within the poem.
+    summary: The student asks if pins can be described as "little arms" that "reach out to touch things" to help the microcontroller
+      interact with its environment.
+- timestamp: '2025-12-01T20:52:57.486015'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - Pins
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: CONFUSED
+      justification: The student uses an analogy of 'little arms that can push or pull stuff' which is a creative but not
+        entirely accurate representation of what pins do on a microcontroller. While pins are used for interaction, the analogy
+        implies a direct physical manipulation rather than electrical signaling. The question 'What if they're always reaching
+        out to touch things?' suggests uncertainty about their function and state.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:52:57.486048'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:57.486058'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:57.486068'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:52:57.489092'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:52:57.489201'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:52:59.412857'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:59.412884'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:59.412892'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:59.412898'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:59.412904'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:52:59.416812'
+  event: Turn 13
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hmm, pins are like little arms that can push or pull stuff, right? What if they''re always reaching out
+      to touch things?'
+    assistant: 'That''s a creative way to think about the pins, Green! They are indeed how the microcontroller interacts with
+      the outside world.
+
+
+      So, we have:
+
+      The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.
+
+      The CPU, the boss, takes actions,
+
+
+      How can we describe those "little arms" or the pins reaching out to "touch things" in a rhyming line? What rhymes with
+      "actions"?'
+- timestamp: '2025-12-01T20:53:01.246743'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 14
+    speaker: Green
+    message: Hmm, "actions"... what if the pins are like little hands trying to *catch* something? Like, "The CPU, the boss,
+      takes actions, / Grabbing signals in their fractions!"
+    participation: *id001
+    session_phase: 3
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 2
+    contribution_type: recall_attempt
+    is_relevant: true
+    recall_progress: Student attempts to recall and extend the poem, suggesting a new line for the pins that rhymes with the
+      previous line.
+    summary: The student suggests a new rhyming line for the poem, describing the pins as 'grabbing signals in their fractions'.
+- timestamp: '2025-12-01T20:53:02.544800'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood:
+      - CPU
+      confused:
+      - Pins
+      - Program
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: The student refers to the CPU as 'the boss', which is a common and generally accurate analogy for its
+        role as the central processing unit that directs operations.
+    - concept: Pins
+      level: CONFUSED
+      justification: The student uses an analogy of 'little hands trying to *catch* something' for pins, which implies a receptive
+        function but doesn't fully capture their bi-directional nature (input/output) or their role in connecting to external
+        components and signals.
+    - concept: Program
+      level: UNDERSTOOD
+      justification: The student's poetic description of the CPU 'taking actions' and 'grabbing signals in their fractions'
+        alludes to the execution of a program, where the CPU performs a sequence of operations based on instructions.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:53:02.544833'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:02.544850'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:02.544860'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:02.547038'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:53:02.547126'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:53:04.916497'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:04.916526'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:04.916532'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:04.916538'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:04.916543'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:04.920517'
+  event: Turn 14
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hmm, "actions"... what if the pins are like little hands trying to *catch* something? Like, "The CPU, the
+      boss, takes actions, / Grabbing signals in their fractions!"'
+    assistant: 'That''s a very interesting idea, Green! Thinking about the pins "grabbing signals" is creative.
+
+
+      Let''s pause for a moment and think about the poem as a whole. We have:
+
+      The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.
+
+      The CPU, the boss, takes actions,
+
+
+      We''ve talked about instructions, recipes, the CPU, and now pins. What else is crucial for a microcontroller to work?
+      Think about what powers it.'
+- timestamp: '2025-12-01T20:53:07.657492'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 15
+    speaker: Green
+    message: Hmm, powers it... like electricity? Is that where the 3 volts comes in? What if the recipe needs a specific kind
+      of juice?
+    participation: *id001
+    session_phase: 3
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 3
+    contribution_type: recall_question
+    is_relevant: true
+    recall_progress: The student is asking about a missing element (power) for the poem, indicating they are trying to recall
+      all components of the mnemonic.
+    summary: The student asks if the microcontroller's power source, like 3 volts, can be incorporated into the poem as a
+      type of 'juice' for the recipe.
+- timestamp: '2025-12-01T20:53:08.919016'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused:
+      - 3 volts (3V)
+    cumulative_assessments_updated:
+    - concept: 3 volts (3V)
+      level: CONFUSED
+      justification: The student associates '3 volts' with 'electricity' and 'juice,' indicating a basic understanding of
+        voltage as a power source but lacking specificity on its role in powering electronic components.
+    - concept: Program
+      level: CONFUSED
+      justification: The student uses the metaphor of a 'recipe' which implies a set of instructions, similar to a program,
+        but their phrasing 'specific kind of juice' suggests they are not yet grasping the abstract nature of a program for
+        a microcontroller.
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:53:08.919028'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:08.919032'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:08.919035'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:08.920576'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:53:08.920636'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:53:10.608902'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:10.608924'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:10.608930'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:10.608934'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:10.608939'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:10.612132'
+  event: Turn 15
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Hmm, powers it... like electricity? Is that where the 3 volts comes in? What if the recipe needs a specific
+      kind of juice?'
+    assistant: 'That''s a brilliant connection, Green! The "specific kind of juice" is exactly right, and it relates to the
+      3 volts.
+
+
+      So, we have:
+
+      The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.
+
+      The CPU, the boss, takes actions,
+
+
+      How can we add a line about needing that specific "juice" or 3 volts to make the recipe work? What rhymes with "actions"?'
+- timestamp: '2025-12-01T20:53:14.106884'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    turn_count: 16
+    speaker: Green
+    message: Ooh, "contractions"? Like when the recipe gets all bunched up? Or maybe "distractions"? Like it gets bored if
+      it doesn't have its juice?
+    participation: *id001
+    session_phase: 3
+    off_topic_duration: 0
+    recent_speakers: *id002
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 4
+    contribution_type: recall_question
+    is_relevant: true
+    recall_progress: Student is trying to recall the rhyming word for 'actions' to incorporate the concept of power/electricity
+      into the poem.
+    summary: Green is suggesting potential rhyming words like 'contractions' or 'distractions' to describe how power affects
+      the microcontroller's function.
+- timestamp: '2025-12-01T20:53:14.913967'
+  event: '[analyze_input] comprehension_tracker_frame'
+  level: verbose
+  data:
+    concepts: *id003
+    per_turn_analysis:
+      understood: []
+      confused: []
+    cumulative_assessments_updated: []
+    all_student_profiles: *id004
+- timestamp: '2025-12-01T20:53:14.914001'
+  event: '[analyze_input] balanced_turns_validator'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:14.914008'
+  event: '[analyze_input] language_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:14.914015'
+  event: '[analyze_input] phases_checker_frame'
+  level: verbose
+  data:
+    result: no_output
+- timestamp: '2025-12-01T20:53:14.917697'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn Management
+- timestamp: '2025-12-01T20:53:14.917798'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  level: verbose
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-01T20:53:17.260060'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:17.260073'
+  event: '[validate_output] comprehension_tracker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:17.260078'
+  event: '[validate_output] balanced_turns_validator'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:17.260082'
+  event: '[validate_output] language_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:17.260086'
+  event: '[validate_output] phases_checker_frame'
+  level: verbose
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-01T20:53:17.262159'
+  event: Turn 16
+  level: normal
+  data:
+    speaker: Green
+    user: 'Green: Ooh, "contractions"? Like when the recipe gets all bunched up? Or maybe "distractions"? Like it gets bored
+      if it doesn''t have its juice?'
+    assistant: 'Those are creative ideas, Green! "Contractions" and "distractions" are interesting rhymes.
+
+
+      Let''s think about what the 3 volts *do*. They provide the necessary power for the microcontroller to operate.
+
+
+      So, we have:
+
+      The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.
+
+      The CPU, the boss, takes actions,
+
+
+      What rhymes with "actions" and can describe the need for that specific power, that 3 volts?'
+frame_memory:
+  elapsed_time_minutes: 10.4
+  turn_count: 16
+  session_phase: 3
+  consecutive_off_topic_turns: 0
+  session_start_time: '2025-12-01T20:51:26.048353'
+  last_turn_time: '2025-12-01T20:53:12.281429'
+  recent_speakers: *id002
+  participation: *id001
+  mnemonic_state:
+    selected_concepts:
+    - CPU (the brain)
+    - Pins (how it talks to other stuff)
+    - memory
+    concepts_finalized: true
+    mnemonic_text: 'The tiny computer needs instructions,
+
+      Like a secret recipe for reactions.'
+    mnemonic_created: true
+  recall_tracking:
+    Red:
+      attempts: 2
+      successful_parts: []
+      stuck_on: []
+      last_attempt: Ooh! Yeah! We need to talk about the pins and stuff, right? And like, how it gets power.
+    Blue:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+    Green:
+      attempts: 4
+      successful_parts: []
+      stuck_on: []
+      last_attempt: Ooh, "contractions"? Like when the recipe gets all bunched up? Or maybe "distractions"? Like it gets bored
+        if it doesn't have its juice?
+  comprehension_tracker:
+    concepts: *id003
+    by_student: *id004
+  _last_contribution_type: recall_question

@@ -1,0 +1,44 @@
+# Test Configuration for the Rodin Frame Engine
+# Copy .env.example to .env and add your API key to run tests
+
+llm:
+  # Provider used for running tests.
+  # Recommended to use a fast, low-cost model.
+  provider: "azure"
+  
+  # Model names for different providers, used for testing.
+  # The test suite will use the model corresponding to the provider above.
+  models:
+    google: "gemini-1.5-flash-latest"
+    openai: "gpt-4o-mini"
+    anthropic: "claude-3-haiku-20240307"
+    azure: "gpt-4.1-mini"
+
+# Logging level for tests (use DEBUG to see LLM calls)
+log_level: "WARNING"
+
+# Phase configuration for Marty tests
+phases:
+  phase_1_end: 5
+  phase_2_end: 20
+
+# Test-specific settings
+test:
+  # Sample learning material for tests
+  learning_material: |
+    A microcontroller is a compact integrated circuit designed to govern
+    a specific operation in an embedded system.
+    Key components include:
+    1. CPU (Central Processing Unit): The 'brain' that executes instructions.
+    2. Memory: Flash (Program Memory) and RAM (Data Memory).
+    3. Peripherals (I/O): GPIO, ADC, Communication Interfaces, Timers.
+  
+  # Sample topic
+  topic: "Microcontrollers"
+  
+  # Sample students
+  students:
+    - "Red"
+    - "Green"
+    - "Blue"
+

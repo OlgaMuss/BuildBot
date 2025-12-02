@@ -1,0 +1,12 @@
+# Requirements for Streamlit Cloud deployment
+# Generated from pyproject.toml
+
+PyYAML>=6.0.1
+langchain>=0.2.1
+langchain-google-genai>=1.0.4
+langchain-openai>=0.1.8
+langgraph>=0.0.62
+pydantic>=2.7.1
+python-dotenv>=1.0.1
+streamlit>=1.35.0
+

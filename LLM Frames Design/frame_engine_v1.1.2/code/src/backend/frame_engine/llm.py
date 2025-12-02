@@ -14,6 +14,29 @@ class LLMConfigError(ValueError):
     pass
 
 
+def _get_secret(key: str) -> Optional[str]:
+    """Gets a secret from environment variables or Streamlit secrets.
+    
+    Checks in order:
+    1. Environment variables (for local development with .env)
+    2. Streamlit secrets (for Streamlit Cloud deployment)
+    """
+    # First check environment variables
+    value = os.getenv(key)
+    if value:
+        return value
+    
+    # Then check Streamlit secrets (for cloud deployment)
+    try:
+        import streamlit as st
+        if hasattr(st, 'secrets') and key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    
+    return None
+
+
 def get_llm_client(
     provider: str,
     model_name: str,
@@ -55,7 +78,7 @@ def get_llm_client(
 
 def _create_google_client(model_name: str, temperature: Optional[float]) -> BaseChatModel:
     """Creates a Google Gemini LLM client."""
-    _require_env_var('GOOGLE_API_KEY', 'Google Gemini')
+    _require_secret('GOOGLE_API_KEY', 'Google Gemini')
 
     from langchain_google_genai import ChatGoogleGenerativeAI
 
@@ -68,16 +91,16 @@ def _create_google_client(model_name: str, temperature: Optional[float]) -> Base
 
 def _create_azure_client(model_name: str, temperature: Optional[float]) -> BaseChatModel:
     """Creates an Azure OpenAI LLM client."""
-    _require_env_var('AZURE_API_KEY', 'Azure OpenAI')
-    _require_env_var('AZURE_ENDPOINT', 'Azure OpenAI')
+    _require_secret('AZURE_API_KEY', 'Azure OpenAI')
+    _require_secret('AZURE_ENDPOINT', 'Azure OpenAI')
 
     from langchain_openai import AzureChatOpenAI
 
     kwargs: dict[str, Any] = {
-        'api_key': os.getenv('AZURE_API_KEY'),
-        'azure_endpoint': os.getenv('AZURE_ENDPOINT'),
-        'azure_deployment': os.getenv('AZURE_DEPLOYMENT') or model_name,
-        'api_version': os.getenv('API_VERSION'),
+        'api_key': _get_secret('AZURE_API_KEY'),
+        'azure_endpoint': _get_secret('AZURE_ENDPOINT'),
+        'azure_deployment': _get_secret('AZURE_DEPLOYMENT') or model_name,
+        'api_version': _get_secret('API_VERSION'),
     }
     # Do not add temperature for Azure if the model does not support it.
     # if temperature is not None:
@@ -88,7 +111,7 @@ def _create_azure_client(model_name: str, temperature: Optional[float]) -> BaseC
 
 def _create_openai_client(model_name: str, temperature: Optional[float]) -> BaseChatModel:
     """Creates an OpenAI LLM client."""
-    _require_env_var('OPENAI_API_KEY', 'OpenAI')
+    _require_secret('OPENAI_API_KEY', 'OpenAI')
 
     from langchain_openai import ChatOpenAI
 
@@ -101,7 +124,7 @@ def _create_openai_client(model_name: str, temperature: Optional[float]) -> Base
 
 def _create_anthropic_client(model_name: str, temperature: Optional[float]) -> BaseChatModel:
     """Creates an Anthropic Claude LLM client."""
-    _require_env_var('ANTHROPIC_API_KEY', 'Anthropic')
+    _require_secret('ANTHROPIC_API_KEY', 'Anthropic')
 
     from langchain_anthropic import ChatAnthropic
 
@@ -112,18 +135,18 @@ def _create_anthropic_client(model_name: str, temperature: Optional[float]) -> B
     return ChatAnthropic(**kwargs)
 
 
-def _require_env_var(var_name: str, provider_name: str) -> None:
-    """Checks that a required environment variable is set.
+def _require_secret(var_name: str, provider_name: str) -> None:
+    """Checks that a required secret is available (env var or Streamlit secrets).
 
     Args:
-        var_name: The name of the environment variable.
+        var_name: The name of the secret/environment variable.
         provider_name: The name of the provider (for error messages).
 
     Raises:
-        LLMConfigError: If the environment variable is not set.
+        LLMConfigError: If the secret is not set.
     """
-    if var_name not in os.environ:
+    if not _get_secret(var_name):
         raise LLMConfigError(
-            f"{var_name} environment variable not set. "
-            f"Please set it in scripts/.env to use {provider_name}."
+            f"{var_name} not set. "
+            f"Please set it in .env (local) or Streamlit secrets (cloud) to use {provider_name}."
         )

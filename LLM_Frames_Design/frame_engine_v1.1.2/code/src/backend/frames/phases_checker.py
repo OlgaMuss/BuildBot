@@ -30,6 +30,7 @@ Evaluate the RESPONSE against the PHASE INSTRUCTIONS and decide if it complies w
 {response}
 ----------------
 
+It is ok to validate concepts cited by the previous speaker.
 Summaries/recaps/narrations of the mnemonic are acceptable and encouraged, even if they are longer than 2 sentences, provided they end by inviting the next student to act. Do not mark such scaffolding as non-compliant.
 
 Return ONLY valid JSON with this structure:

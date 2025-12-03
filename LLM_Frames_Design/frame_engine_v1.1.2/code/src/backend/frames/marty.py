@@ -924,7 +924,7 @@ IF a student is stuck:
 1. FIRST, ask another student for their ideas (e.g., "[Other Student], how do you think we can continue the {type_label_lower}?").
 2. ONLY if all students are stuck, suggest one opening idea as an example.
 
-IMPORTANT: Every 2-3 student contributions, NARRATE the {type_label_lower} built so far.
+IMPORTANT: Every 1-3 student contributions, NARRATE the {type_label_lower} built so far.
 {repetition_guidance}
 This helps students remember and build on what they've already created.
 DO NOT create the {type_label_lower} for them. Your role is to facilitate THEIR creativity.

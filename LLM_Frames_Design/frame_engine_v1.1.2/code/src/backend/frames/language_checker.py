@@ -1,8 +1,9 @@
 """A generic frame that uses an LLM to check for age-appropriate language."""
+import json
 import logging
 
 from langchain_core.language_models.chat_models import BaseChatModel
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 
 from backend.frame_engine.core import (
     Frame,
@@ -11,14 +12,15 @@ from backend.frame_engine.core import (
     ValidationResult,
 )
 
-_VALIDATION_PROMPT = """
-You are a validation AI. Your task is to determine if the following RESPONSE is
-written in a style and vocabulary appropriate for a {target_age}-year-old.
-The tone should be encouraging and simple, and the complexity should be adequate for the {target_age}-year-old.
-The response must not be condescending.
-The response must NOT contain any emojis.
+_VALIDATION_SYSTEM_PROMPT = (
+    "You are a compliance checker ensuring responses stay age-appropriate. "
+    "Follow Azure OpenAI safety rules. Evaluate tone and simplicity, then reply "
+    "only with JSON object: {'complies': <bool>, 'rationale': <short string>}."
+)
 
-Your answer must be a single word: either "true" or "false".
+_VALIDATION_PROMPT = """
+Check whether the RESPONSE is suitable for a {target_age}-year-old: clear vocabulary,
+encouraging tone, non-condescending, and no emojis.
 
 --- RESPONSE ---
 {response}
@@ -56,13 +58,34 @@ class LanguageCheckerFrame(Frame):
 
         logging.info('[LanguageChecker] Validation prompt:\n--- LANGUAGE_CHECKER PROMPT START ---\n%s\n--- LANGUAGE_CHECKER PROMPT END ---', prompt)
 
-        messages = [HumanMessage(content=prompt)]
+        messages = [
+            SystemMessage(content=_VALIDATION_SYSTEM_PROMPT),
+            HumanMessage(content=prompt),
+        ]
 
         # Asynchronously call the LLM to perform the validation.
         validation_response = await self.llm.ainvoke(messages)
-        is_appropriate_str = getattr(validation_response, 'content', '').lower().strip()
+        raw_content = getattr(validation_response, 'content', '')
 
-        if 'false' in is_appropriate_str:
+        if isinstance(raw_content, list):
+            raw_content = ''.join(
+                part.get('text', '')
+                for part in raw_content
+                if isinstance(part, dict)
+            )
+
+        is_appropriate = True
+        try:
+            parsed = json.loads(raw_content)
+            is_appropriate = bool(parsed.get('complies', False))
+        except (json.JSONDecodeError, TypeError, AttributeError):
+            logging.warning('[LanguageChecker] Unexpected validation response format: %s', raw_content)
+            if isinstance(raw_content, str):
+                is_appropriate = 'true' in raw_content.lower()
+            else:
+                is_appropriate = False
+
+        if not is_appropriate:
             return {
                 'action': ValidationAction.REVISE,
                 'feedback': f'The language was not appropriate for a {self.target_age}-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.',

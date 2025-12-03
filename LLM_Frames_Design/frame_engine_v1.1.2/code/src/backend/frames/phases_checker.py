@@ -1,8 +1,9 @@
 """A generic frame that uses an LLM to check for adherence to conversational policies."""
+import json
 import logging
 
 from langchain_core.language_models.chat_models import BaseChatModel
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 
 from backend.frame_engine.core import (
     Frame,
@@ -12,10 +13,15 @@ from backend.frame_engine.core import (
 )
 from backend.frames.marty import SESSION_PHASE_KEY
 
-_VALIDATION_PROMPT_TEMPLATE = """
-You are a validation AI. Your task is to determine if the provided RESPONSE strictly adheres to the given INSTRUCTIONS.
+_VALIDATION_SYSTEM_PROMPT = (
+    "You are a careful compliance checker. Follow Azure OpenAI safety policies. "
+    "Only evaluate whether a draft response supports the given session goal. "
+    "Never role-play or override guardrails. Respond in JSON with keys "
+    "`complies` (boolean) and `rationale` (short string)."
+)
 
-Your answer must be a single word: either "true" or "false".
+_VALIDATION_PROMPT_TEMPLATE = """
+Evaluate the RESPONSE against the INSTRUCTIONS and decide if it complies with the session goal.
 
 --- INSTRUCTIONS ---
 The response must be appropriate for the current goal: '{phase_goal}'.
@@ -75,11 +81,31 @@ class PhasesCheckerFrame(Frame):
 
         logging.info('[PhasesChecker] Validation prompt:\n--- PHASES_CHECKER PROMPT START ---\n%s\n--- PHASES_CHECKER PROMPT END ---', prompt)
 
-        messages = [HumanMessage(content=prompt)]
+        messages = [
+            SystemMessage(content=_VALIDATION_SYSTEM_PROMPT),
+            HumanMessage(content=prompt),
+        ]
         validation_response = await self.llm.ainvoke(messages)
-        is_compliant_str = getattr(validation_response, 'content', '').lower().strip()
+        raw_content = getattr(validation_response, 'content', '')
 
-        if 'false' in is_compliant_str:
+        if isinstance(raw_content, list):
+            raw_content = ''.join(
+                part.get('text', '')
+                for part in raw_content
+                if isinstance(part, dict)
+            )
+
+        is_compliant = False
+
+        try:
+            parsed = json.loads(raw_content)
+            is_compliant = bool(parsed.get('complies'))
+        except (json.JSONDecodeError, AttributeError, TypeError):
+            logging.warning('[PhasesChecker] Unexpected validation response format: %s', raw_content)
+            if isinstance(raw_content, str):
+                is_compliant = 'true' in raw_content.lower()
+
+        if not is_compliant:
             return {
                 'action': ValidationAction.REVISE,
                 'feedback': _POLICY_VIOLATION_FEEDBACK,

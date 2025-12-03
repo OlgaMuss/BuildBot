@@ -91,6 +91,35 @@ class BalancedTurnsFrame(Frame):
         # The engine will automatically put this return value into shared_context[self.name]
         return participation_analysis
 
+    async def get_prompt_sections(self, context: FrameContext) -> list[PromptSection]:
+        """Provides explicit turn-taking instructions for Marty before generation."""
+        shared = context.get('shared_context', {})
+        previous_speaker = shared.get(SPEAKER_KEY)
+        suggested_next = shared.get(SUGGESTED_NEXT_SPEAKER_KEY)
+        if not previous_speaker or not suggested_next or suggested_next == previous_speaker:
+            return []
+
+        consecutive_same = shared.get(CONSECUTIVE_SAME_SPEAKER_KEY, 0)
+        extra_note = ""
+        if consecutive_same >= 2:
+            extra_note = (
+                f"\nNOTE: {previous_speaker} has spoken {consecutive_same} times in a row. "
+                "You must switch speakers now."
+            )
+
+        instructions = (
+            "TURN-TAKING REMINDER:\n"
+            f"- Begin by acknowledging {previous_speaker} by name.\n"
+            f"- End by explicitly inviting {suggested_next} to contribute next.\n"
+            "Follow both steps every turn to keep participation balanced."
+            f"{extra_note}"
+        )
+
+        return [{
+            'label': 'Balanced Turns Guidance',
+            'content': instructions,
+        }]
+
     def _update_participation(
         self,
         frame_memory: dict[str, Any],

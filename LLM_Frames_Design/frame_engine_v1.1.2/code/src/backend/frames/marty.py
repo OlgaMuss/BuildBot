@@ -37,6 +37,9 @@ SPEAKER_KEY = '_speaker'
 # Key for session phase (1, 2, 3...) used by phase-aware frames.
 SESSION_PHASE_KEY = '_session_phase'
 
+# Key for sharing the current phase instructions with other frames (e.g., validators).
+PHASE_INSTRUCTIONS_KEY = '_phase_instructions'
+
 # --- Frame Memory Keys ---
 # Key for storing mnemonic creation state (concepts, finalization status, etc.)
 MNEMONIC_STATE_KEY = 'mnemonic_state'
@@ -101,6 +104,12 @@ Phase 3:
 }}
 """
 
+_GERMAN_TYPE_MAP = {
+    'story': 'Geschichte',
+    'poem': 'Gedicht',
+    'jokes': 'Witz',
+}
+
 
 class MnemonicCoCreatorFrame(Frame):
     """A frame that guides students to collaboratively create a mnemonic."""
@@ -142,6 +151,29 @@ class MnemonicCoCreatorFrame(Frame):
     def name(self) -> str:
         """Returns the unique name of the frame."""
         return 'mnemonic_co_creator_marty'
+
+    def _is_german_session(self, frame_memory: dict[str, Any]) -> bool:
+        language = frame_memory.get('session_language', 'English')
+        return language.lower().startswith('de')
+
+    def _apply_case(self, term: str, style: str) -> str:
+        if style == 'lower':
+            return term.lower()
+        if style == 'upper':
+            return term.upper()
+        return term
+
+    def _localized_mnemonic_type(self, frame_memory: dict[str, Any], style: str = 'title') -> str:
+        term = self.mnemonic_type
+        if self._is_german_session(frame_memory):
+            term = _GERMAN_TYPE_MAP.get(self.mnemonic_type.lower(), term)
+        return self._apply_case(term, style)
+
+    def _localized_generic_mnemonic(self, frame_memory: dict[str, Any], style: str = 'title') -> str:
+        term = 'mnemonic'
+        if self._is_german_session(frame_memory):
+            term = 'Eselsbrücke'
+        return self._apply_case(term, style)
 
     # --- Helper Methods for Analyze Input (Single Responsibility) ---
 
@@ -265,6 +297,9 @@ class MnemonicCoCreatorFrame(Frame):
                 if new_draft and new_draft != current_draft:
                     mnemonic_state['mnemonic_text'] = new_draft
                     mnemonic_state['mnemonic_created'] = True
+                    mnemonic_state.pop('_quality_validated', None)
+                    mnemonic_state.pop('_quality_passed', None)
+                    mnemonic_state.pop('_quality_feedback', None)
                     frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
                     logging.info(f'[Mnemonic Building] Updated draft: {new_draft}')
         
@@ -332,12 +367,18 @@ class MnemonicCoCreatorFrame(Frame):
             if extracted_mnemonic:
                 mnemonic_state['mnemonic_text'] = extracted_mnemonic
                 mnemonic_state['mnemonic_created'] = True
+                mnemonic_state.pop('_quality_validated', None)
+                mnemonic_state.pop('_quality_passed', None)
+                mnemonic_state.pop('_quality_feedback', None)
                 frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
                 logging.info(f'[Mnemonic State] Extracted mnemonic: {extracted_mnemonic[:100]}...')
             else:
                 # Fallback: use whatever draft we have
                 logging.warning('[Mnemonic State] Could not extract mnemonic from narrations, using existing draft')
                 frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
+        
+        if phase >= 2:
+            await self._ensure_mnemonic_quality_checked(frame_memory)
         
         # Log mnemonic state for debugging
         current_mnemonic = mnemonic_state.get('mnemonic_text', '')
@@ -389,14 +430,9 @@ class MnemonicCoCreatorFrame(Frame):
 
     def _has_valid_mnemonic(self, mnemonic_state: dict[str, Any]) -> bool:
         """Checks if the current mnemonic draft is substantial enough for recall."""
-        text = (mnemonic_state.get('mnemonic_text') or '').strip()
         if not mnemonic_state.get('mnemonic_created'):
             return False
-        if len(text) < 80:
-            return False
-        if self.mnemonic_type == 'Jokes':
-            return 'joke' in text.lower() or text.count('Joke ') >= 1
-        return True
+        return bool(mnemonic_state.get('_quality_passed'))
     
     async def _update_mnemonic_draft(self, current_draft: str, message: str, speaker: str) -> str:
         """Uses an LLM to intelligently integrate a new idea into the mnemonic draft."""
@@ -458,11 +494,12 @@ UPDATED {self.mnemonic_type.upper()}:"""
         selected = mnemonic_state.get('selected_concepts') or []
         concept_summary = ', '.join(selected) if selected else 'the key ideas you discussed'
         mnemonic_text = (mnemonic_state.get('mnemonic_text') or '').strip()
+        type_label_lower = self._localized_mnemonic_type(frame_memory, 'lower')
         if mnemonic_text:
-            mnemonic_summary = f'The {self.mnemonic_type.lower()} you built:\n"{mnemonic_text}"'
+            mnemonic_summary = f'The {type_label_lower} you built:\n"{mnemonic_text}"'
         else:
             mnemonic_summary = (
-                f'You outlined how your {self.mnemonic_type.lower()} should work, even if it is not fully written out.'
+                f'You outlined how your {type_label_lower} should work, even if it is not fully written out.'
             )
 
         return f"""🎉 SESSION WRAP-UP (Time limit reached)
@@ -474,6 +511,103 @@ YOUR FINAL RESPONSE MUST:
 3. Encourage them to keep practicing or share their favorite part.
 4. Offer a friendly goodbye. Do NOT invite another student to speak.
 """
+
+    def _should_attempt_quality_check(self, mnemonic_state: dict[str, Any]) -> bool:
+        """Determines whether we should run the LLM quality validation."""
+        if mnemonic_state.get('_quality_validated'):
+            return False
+        text = (mnemonic_state.get('mnemonic_text') or '').strip()
+        if not text or len(text) < 60:
+            return False
+        if self.mnemonic_type == 'Poem':
+            lines = [line.strip() for line in text.splitlines() if line.strip()]
+            return len(lines) >= 4
+        if self.mnemonic_type == 'Jokes':
+            has_label = bool(re.search(r'joke\s*\d+', text, flags=re.IGNORECASE))
+            has_lines = bool(re.findall(r'^\s*[-*\d]', text, flags=re.MULTILINE))
+            return has_label or has_lines
+        # Story or other types
+        sentences = [s.strip() for s in re.split(r'(?<=[.!?])\s+', text) if s.strip()]
+        return len(sentences) >= 4
+
+    async def _ensure_mnemonic_quality_checked(self, frame_memory: dict[str, Any]) -> None:
+        """Runs the mnemonic quality validation once a viable draft exists."""
+        mnemonic_state = frame_memory.get(MNEMONIC_STATE_KEY, {})
+        if not mnemonic_state or not self._should_attempt_quality_check(mnemonic_state):
+            return
+        await self._run_mnemonic_quality_check(mnemonic_state, frame_memory)
+
+    def _build_mnemonic_quality_prompt(self, mnemonic_state: dict[str, Any]) -> str:
+        """Constructs the quality-check instructions tailored to the mnemonic type."""
+        mnemonic_text = (mnemonic_state.get('mnemonic_text') or '').strip()
+        concepts = mnemonic_state.get('selected_concepts') or []
+        concepts_summary = ', '.join(concepts) if concepts else 'the target concepts students selected'
+        
+        if self.mnemonic_type == 'Story':
+            criteria = (
+                "- 3-6 sentences forming a single, easy-to-follow narrative.\n"
+                "- References most of these concepts: "
+                f"{concepts_summary}.\n"
+                "- Uses vivid comparisons or imagery that make each concept memorable."
+            )
+        elif self.mnemonic_type == 'Poem':
+            criteria = (
+                "- 2-8 concise lines with a rhythmic or rhyming structure students can recite.\n"
+                "- Each line should highlight at least one of: "
+                f"{concepts_summary}.\n"
+                "- Tone must stay encouraging and classroom-appropriate."
+            )
+        else:  # Jokes or other playful mnemonic
+            criteria = (
+                "- At least two distinct jokes with a setup and punchline.\n"
+                "- Humor must explicitly involve the concepts: "
+                f"{concepts_summary}.\n"
+                "- Kid-friendly tone (no sarcasm or references 14-year-olds wouldn't get)."
+            )
+        
+        return f"""You are reviewing a collaboratively written {self.mnemonic_type.lower()} mnemonic.
+Evaluate whether it is READY for recall practice based on these criteria:
+{criteria}
+
+Instructions:
+- Only judge quality; do NOT rewrite the mnemonic.
+- Base your verdict strictly on the text below.
+- Respond with JSON: {{"passes": true|false, "feedback": "short explanation", "final_text": "final cleaned {self.mnemonic_type.lower()} ready to recite (empty string if fails)"}}.
+
+Mnemonic:
+\"\"\"{mnemonic_text}\"\"\"
+"""
+
+    async def _run_mnemonic_quality_check(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> None:
+        """Uses an LLM to decide if the mnemonic meets quality standards."""
+        prompt = self._build_mnemonic_quality_prompt(mnemonic_state)
+        try:
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
+            content = getattr(response, 'content', '{}')
+            content = content.strip().replace('```json', '').replace('```', '')
+            parsed = json.loads(content)
+            passes = bool(parsed.get('passes'))
+            feedback = parsed.get('feedback', '').strip() or 'Quality check complete.'
+            final_text = (parsed.get('final_text') or '').strip()
+        except (json.JSONDecodeError, Exception) as e:
+            logging.error('[Mnemonic Quality] Validation failed: %s', e)
+            passes = False
+            feedback = 'Quality check failed; keep refining the mnemonic.'
+            final_text = ''
+        mnemonic_state['_quality_validated'] = True
+        mnemonic_state['_quality_passed'] = passes
+        mnemonic_state['_quality_feedback'] = feedback
+        if passes and final_text:
+            mnemonic_state['mnemonic_text_clean'] = final_text
+            mnemonic_state['mnemonic_text'] = final_text
+        else:
+            mnemonic_state.pop('mnemonic_text_clean', None)
+        frame_memory[MNEMONIC_STATE_KEY] = mnemonic_state
+        status = 'PASSED' if passes else 'NEEDS WORK'
+        logging.info('[Mnemonic Quality] %s - %s', status, feedback)
     
     def _extract_from_last_narration(self, conversation_history: list[dict]) -> str:
         """Extracts the mnemonic from Marty's LAST narration in Phase 2.
@@ -643,13 +777,6 @@ Example:
         analysis = context['shared_context'].get(self.name, {})
         phase = analysis.get('session_phase', 1)
         off_topic_duration = analysis.get('off_topic_duration', 0)
-        # Get the speaker of the turn being analyzed
-        previous_speaker = analysis.get('speaker', 'a student')
-        
-        # Get turn-taking info from balanced_turns frame
-        from backend.frames.balanced_turns import SUGGESTED_NEXT_SPEAKER_KEY, CONSECUTIVE_SAME_SPEAKER_KEY
-        suggested_next_speaker = context['shared_context'].get(SUGGESTED_NEXT_SPEAKER_KEY)
-        consecutive_same_speaker = context['shared_context'].get(CONSECUTIVE_SAME_SPEAKER_KEY, 0)
 
         # Get mnemonic state for phase-specific instructions
         # Note: marty writes to root of frame_memory, not under self.name
@@ -665,22 +792,18 @@ Example:
         })
 
         # Section 2: Phase-specific instructions (with mnemonic state)
+        phase_instructions = self._get_phase_instructions(phase, mnemonic_state, frame_memory)
         sections.append({
             'label': f'Marty - Phase {phase} Instructions',
-            'content': self._get_phase_instructions(phase, mnemonic_state, frame_memory),
+            'content': phase_instructions,
         })
+        # Share the current instructions so validator frames can reference the exact guidance.
+        context['shared_context'][PHASE_INSTRUCTIONS_KEY] = {
+            'phase': phase,
+            'instructions': phase_instructions,
+        }
 
-        # Section 3: Turn-taking instructions
-        turn_taking_content = self._get_turn_taking_instructions(
-            previous_speaker, suggested_next_speaker, consecutive_same_speaker
-        )
-        if turn_taking_content:
-            sections.append({
-                'label': 'Marty - Turn-Taking',
-                'content': turn_taking_content,
-            })
-
-        # Section 4: Relevance management (if needed)
+        # Section 3: Relevance management (if needed)
         relevance_content = self._get_relevance_instructions(off_topic_duration)
         if relevance_content:
             sections.append({
@@ -693,9 +816,11 @@ Example:
     def _get_base_prompt(self, frame_memory: dict[str, Any]) -> str:
         """Returns the static, core part of the system prompt."""
         session_language = frame_memory.get('session_language', 'English')
-        
+        general_term = self._localized_generic_mnemonic(frame_memory)
+        type_term = self._localized_mnemonic_type(frame_memory)
+
         base_prompt = f"""You are 'Marty,' a friendly and encouraging buddy robot facilitating a session \\
-for students to create a mnemonic about '{self.topic}'.
+for students to co-create {general_term} in the form of {type_term} about '{self.topic}'.
 Your response must be concise (1-3 sentences) and focus on only 1-2 concepts per turn.
 CRITICAL: You MUST write all your responses in {session_language}.
 IMPORTANT: Do NOT use emojis in your responses."""
@@ -712,14 +837,15 @@ IMPORTANT: Do NOT use emojis in your responses."""
     def _get_phase_instructions(self, phase: int, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
         """Returns the instructional part of the prompt for the current phase."""
         if phase == 1:
-            return self._get_phase_1_instructions()
+            return self._get_phase_1_instructions(frame_memory)
         elif phase == 2:
             return self._get_phase_2_instructions(mnemonic_state, frame_memory)
         else:  # phase == 3
             return self._get_phase_3_instructions(mnemonic_state, frame_memory)
 
-    def _get_phase_1_instructions(self) -> str:
+    def _get_phase_1_instructions(self, frame_memory: dict[str, Any]) -> str:
         """Returns the prompt instructions for Phase 1: Concept Selection."""
+        type_label = self._localized_mnemonic_type(frame_memory)
         return f"""Current Goal: Select 3-5 Key Concepts (you have ~3 minutes for this phase).
 Your task is to help students SELECT which concepts they think are important to remember. Let THEM propose concepts.
 
@@ -731,7 +857,7 @@ CRITICAL RULES:
 GOOD Examples of what to ask:
 - "What are the most important things about microcontrollers that you want to remember?"
 - "Which concepts from our learning material seem trickiest to you?"
-- "What would you like your {self.mnemonic_type} to help you remember?"
+- "What would you like your {type_label} to help you remember?"
 
 BAD Examples (DO NOT DO THIS):
 - BAD Example 1: "Nice idea! Let's start with this concept: the ESP32 is Marty's brain."
@@ -743,20 +869,28 @@ IF a student is stuck OR explicitly says they do not understand a concept (e.g.,
 3. ONLY if everyone is struggling after both steps, you can then offer ONE small example to get them thinking.
 
 Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
-"Perfect! So our concepts are: [list the concepts]. Ready to start building our {self.mnemonic_type}?"""
+"Perfect! So our concepts are: [list the concepts]. Ready to start building our {type_label}?"""
 
     def _get_phase_2_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
         """Returns the prompt instructions for Phase 2: Mnemonic Creation."""
         selected_concepts = mnemonic_state.get('selected_concepts', [])
         concepts_str = ', '.join(selected_concepts) if selected_concepts else '[concepts from Phase 1]'
+        type_label = self._localized_mnemonic_type(frame_memory)
+        type_label_lower = self._localized_mnemonic_type(frame_memory, 'lower')
+        general_label = self._localized_generic_mnemonic(frame_memory)
         
         repetition_guidance = ""
         if self.mnemonic_type == 'Story':
-            repetition_guidance = 'Tell it as a narrative. "So far, our story goes: [narrate the draft]... What happens next?"'
+            repetition_guidance = f'Tell it as a narrative. "So far, our {type_label_lower} goes: [narrate the draft]... What happens next?"'
         elif self.mnemonic_type == 'Poem':
-            repetition_guidance = 'Recite the poem so far. "Our poem so far: [line 1] / [line 2]..." What\'s the next line?'
+            repetition_guidance = f'Recite the {type_label_lower} so far. "Our {type_label_lower} so far: [line 1] / [line 2]..." What\'s the next line?'
         elif self.mnemonic_type == 'Jokes':
-            repetition_guidance = 'Recite the jokes. "Our jokes so far: Joke 1: [...] Joke 2: [...]" What\'s the next joke?'
+            joke_plural = 'jokes' if not self._is_german_session(frame_memory) else 'Witze'
+            joke_single = 'joke' if not self._is_german_session(frame_memory) else 'Witz'
+            repetition_guidance = (
+                f'Recite the {joke_plural}. "Our {joke_plural} so far: {joke_single.capitalize()} 1: [...] {joke_single.capitalize()} 2: [...]" '
+                f'What\'s the next {joke_single}?'
+            )
 
         if frame_memory.get('_closure_ready') and not frame_memory.get('_closure_done'):
             frame_memory['_closure_done'] = True
@@ -767,30 +901,33 @@ Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
             extension_note = (
                 "\n\n⚠️ TIME CHECK (approx. 7 minutes in):\n"
                 "We should be moving to memory practice soon, but we still need a finished "
-                f"{self.mnemonic_type.lower()}. Refocus the students on stitching their ideas together immediately."
+                f"{type_label_lower}. Refocus the students on stitching their ideas together immediately."
             )
             if frame_memory.pop('_phase2_extension_needs_prompt', False):
                 extension_note += (
                     '\nExplicitly tell them: "We only have about three minutes left before recall mode, so let’s stay in '
-                    f'creation mode and finish our {self.mnemonic_type.lower()} right now."'
+                    f'creation mode and finish our {type_label_lower} right now."'
                 )
+            quality_feedback = mnemonic_state.get('_quality_feedback')
+            if quality_feedback and not mnemonic_state.get('_quality_passed'):
+                extension_note += f'\nQuality note: "{quality_feedback}"'
 
-        return f"""Current Goal: Create the {self.mnemonic_type} Mnemonic (you have ~6 minutes for this phase).
+        return f"""Current Goal: Create the {type_label} {general_label} (you have ~6 minutes for this phase).
 The selected concepts are: **{concepts_str}**
 
-Your task is to help students BUILD their {self.mnemonic_type} using these concepts.
+Your task is to help students BUILD their {type_label} using these concepts.
 ASK students to propose ideas BY NAME (always acknowledge who just spoke, then invite the next student):
-- "[Student who spoke], great idea! [Next student], how should our {self.mnemonic_type} start?"
+- "[Student who spoke], great idea! [Next student], how should our {type_label_lower} start?"
 - "Nice, [Student]! [Next student], how can we include [concept]?"
 
 IF a student is stuck:
-1. FIRST, ask another student for their ideas (e.g., "[Other Student], how do you think we can continue the story?").
+1. FIRST, ask another student for their ideas (e.g., "[Other Student], how do you think we can continue the {type_label_lower}?").
 2. ONLY if all students are stuck, suggest one opening idea as an example.
 
-IMPORTANT: Every 2-3 student contributions, NARRATE the {self.mnemonic_type} built so far.
+IMPORTANT: Every 2-3 student contributions, NARRATE the {type_label_lower} built so far.
 {repetition_guidance}
 This helps students remember and build on what they've already created.
-DO NOT create the {self.mnemonic_type} for them. Your role is to facilitate THEIR creativity.
+DO NOT create the {type_label_lower} for them. Your role is to facilitate THEIR creativity.
 
 TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next.{extension_note}"""
 
@@ -800,6 +937,10 @@ TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just s
         # Recall tracking is now in marty's namespaced memory
         recall_tracking = frame_memory.get('recall_tracking', {})
         total_attempts = sum(student_data.get('attempts', 0) for student_data in recall_tracking.values())
+        type_label = self._localized_mnemonic_type(frame_memory)
+        type_label_lower = self._localized_mnemonic_type(frame_memory, 'lower')
+        type_label_upper = self._localized_mnemonic_type(frame_memory, 'upper')
+        general_label_lower = self._localized_generic_mnemonic(frame_memory, 'lower')
         
         # Check if this is the first turn of Phase 3
         phase3_turn_count = frame_memory.get('_phase3_turn_count', 1)
@@ -821,26 +962,26 @@ TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just s
         if not has_valid_mnemonic:
             return f"""🎯 PHASE 3 - WRAP UP
 
-⚠️ NO COMPLETE {self.mnemonic_type.upper()} WAS CREATED
-It looks like we ran out of time before finishing our {self.mnemonic_type}.
+⚠️ NO COMPLETE {type_label_upper} WAS CREATED
+It looks like we ran out of time before finishing our {type_label_lower}.
 
 YOUR TASK:
-1. Acknowledge this warmly: "[Student who spoke], it looks like we got a bit stuck on our {self.mnemonic_type}!"
+1. Acknowledge this warmly: "[Student who spoke], it looks like we got a bit stuck on our {type_label_lower}!"
 2. Summarize what was accomplished: "We did talk about some great concepts like [mention 1-2 concepts discussed]."
 3. Encourage them: "Sometimes the best ideas take time. What did you learn about microcontrollers today?"
 4. Invite reflection BY NAME: "[Next student], what was your favorite part of our discussion?"
 
-DO NOT pretend there's a poem to recite. Be honest and supportive.
+DO NOT pretend there's a {type_label_lower} to recite. Be honest and supportive.
 
 TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
 
         # First turn of Phase 3: Marty should recite the poem first
         if is_first_phase3_turn:
             return f"""🎯 PHASE 3 - MEMORY RECALL TEST (Starting!)
-The {self.mnemonic_type} is COMPLETE!
+The {type_label} is COMPLETE!
 
-YOUR FIRST TASK: RECITE THE FULL {self.mnemonic_type.upper()} TO THE STUDENTS!
-Start your response with: "Great work everyone! Here's the {self.mnemonic_type} we created together:"
+YOUR FIRST TASK: RECITE THE FULL {type_label_upper} TO THE STUDENTS!
+Start your response with: "Great work everyone! Here's the {type_label_lower} we created together:"
 Then recite it clearly:
 "{mnemonic_text}"
 
@@ -852,20 +993,20 @@ TURN-TAKING REMINDER: Address the student who just spoke by name AND invite a di
 
         # Subsequent turns of Phase 3
         return f"""🎯 PHASE 3 - MEMORY RECALL TEST (Recall attempts: {total_attempts})
-The {self.mnemonic_type} is: "{mnemonic_text}"
+The {type_label_lower} is: "{mnemonic_text}"
 
 ⚠️ RECALL ONLY MODE:
 Creation is OVER. Testing memory is the ONLY goal now.
 
-IF a student asks a question or tries to add to the mnemonic:
+IF a student asks a question or tries to add to the {general_label_lower}:
 → DO NOT ANSWER or ACCEPT IT.
-→ REDIRECT BY NAME: "[Student who spoke], that's a great thought! [Next student], can you try reciting our {self.mnemonic_type} for us?"
+→ REDIRECT BY NAME: "[Student who spoke], that's a great thought! [Next student], can you try reciting our {type_label_lower} for us?"
 
 IF a student is reciting and gets stuck:
 1. FIRST, ask another student BY NAME if they can help (e.g., "[Student], nice try! [Other Student], can you help with the next part?").
 2. ONLY if all students are stuck, GIVE HINTS: "What came after [last part]?" or "It starts with..."
 
-CELEBRATE their memory work! The ONLY goal: Can they RECITE the complete {self.mnemonic_type}?
+CELEBRATE their memory work! The ONLY goal: Can they RECITE the complete {type_label_lower}?
 
 TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
 
@@ -888,20 +1029,6 @@ Language:'''
         except Exception as e:
             logging.error(f'[Language Detection] Failed to detect language: {e}')
         return 'English' # Default to English on failure
-
-    def _get_turn_taking_instructions(
-        self,
-        previous_speaker: str,
-        suggested_next_speaker: Optional[str],
-        consecutive_same_speaker: int,
-    ) -> str:
-        """Generates turn-taking instructions using suggested_next_speaker from balanced_turns."""
-        if suggested_next_speaker and suggested_next_speaker != previous_speaker:
-            return (
-                f"To ensure balanced participation, after acknowledging {previous_speaker}, "
-                f"please invite {suggested_next_speaker} to contribute next."
-            )
-        return ''
 
     def _get_relevance_instructions(self, off_topic_duration: int) -> str:
         """Generates an instruction to redirect if the conversation is off-topic."""

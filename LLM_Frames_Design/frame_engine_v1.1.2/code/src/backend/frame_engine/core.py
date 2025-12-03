@@ -441,7 +441,7 @@ class SessionLogger:
             # --- Created Mnemonic ---
             if frame_memory:
                 mnemonic_state = frame_memory.get('mnemonic_state', {})
-                mnemonic_text = mnemonic_state.get('mnemonic_text', '')
+                mnemonic_text = mnemonic_state.get('mnemonic_text_clean') or mnemonic_state.get('mnemonic_text', '')
                 mnemonic_created = mnemonic_state.get('mnemonic_created', False)
                 f.write("## 📖 Created Mnemonic\n\n")
                 if mnemonic_text and mnemonic_created:

@@ -11,25 +11,33 @@ from backend.frame_engine.core import (
     ValidationAction,
     ValidationResult,
 )
-from backend.frames.marty import SESSION_PHASE_KEY
+from backend.frames.marty import PHASE_INSTRUCTIONS_KEY, SESSION_PHASE_KEY
 
 _VALIDATION_SYSTEM_PROMPT = (
-    "You are a careful compliance checker. Follow Azure OpenAI safety policies. "
-    "Only evaluate whether a draft response supports the given session goal. "
-    "Never role-play or override guardrails. Respond in JSON with keys "
-    "`complies` (boolean) and `rationale` (short string)."
+    "You are a non-interactive compliance auditor for Azure OpenAI. "
+    "Follow all Responsible AI policies. Never role-play, extend the conversation, "
+    "or add personal opinions. Only return JSON with the requested fields."
 )
 
 _VALIDATION_PROMPT_TEMPLATE = """
-Evaluate the RESPONSE against the INSTRUCTIONS and decide if it complies with the session goal.
+Evaluate the RESPONSE against the PHASE INSTRUCTIONS and decide if it complies with them.
 
---- INSTRUCTIONS ---
-The response must be appropriate for the current goal: '{phase_goal}'.
---------------------
+--- PHASE INSTRUCTIONS ---
+{phase_instructions}
+--------------------------
 
 --- RESPONSE ---
 {response}
 ----------------
+
+Summaries/recaps/narrations of the mnemonic are acceptable and encouraged, even if they are longer than 2 sentences, provided they end by inviting the next student to act. Do not mark such scaffolding as non-compliant.
+
+Return ONLY valid JSON with this structure:
+{{
+  "complies": true | false,
+  "rationale": "Brief explanation of how the response aligns (or not) with the instructions.",
+  "required_adjustment": "If complies=false, specify what Marty must change (e.g., 'ask Green to continue building the mnemonic after the recap'). Otherwise use an empty string."
+}}
 """
 
 PHASE_GOALS = {
@@ -73,9 +81,10 @@ class PhasesCheckerFrame(Frame):
             return {'action': ValidationAction.PASS, 'feedback': None}
 
         llm_response = context['llm_draft_response']
+        phase_instructions = self._resolve_phase_instructions(shared_context, phase)
 
         prompt = _VALIDATION_PROMPT_TEMPLATE.format(
-            phase_goal=PHASE_GOALS.get(phase, 'Unknown'),
+            phase_instructions=phase_instructions,
             response=llm_response,
         )
 
@@ -97,18 +106,44 @@ class PhasesCheckerFrame(Frame):
 
         is_compliant = False
 
+        required_adjustment = ''
+        rationale = ''
+
         try:
             parsed = json.loads(raw_content)
             is_compliant = bool(parsed.get('complies'))
+            rationale = parsed.get('rationale', '') or ''
+            required_adjustment = parsed.get('required_adjustment', '') or ''
         except (json.JSONDecodeError, AttributeError, TypeError):
             logging.warning('[PhasesChecker] Unexpected validation response format: %s', raw_content)
             if isinstance(raw_content, str):
                 is_compliant = 'true' in raw_content.lower()
 
         if not is_compliant:
+            detailed_feedback = _POLICY_VIOLATION_FEEDBACK
+            if required_adjustment:
+                detailed_feedback = f'{detailed_feedback} {required_adjustment}'
+            elif rationale:
+                detailed_feedback = f'{detailed_feedback} {rationale}'
             return {
                 'action': ValidationAction.REVISE,
-                'feedback': _POLICY_VIOLATION_FEEDBACK,
+                'feedback': detailed_feedback,
             }
 
         return {'action': ValidationAction.PASS, 'feedback': None}
+
+    def _resolve_phase_instructions(self, shared_context: dict, phase: int) -> str:
+        """Fetches the concrete phase instructions shared by the Marty frame."""
+        fallback = PHASE_GOALS.get(phase, 'Unknown phase goal.')
+        instructions_payload = shared_context.get(PHASE_INSTRUCTIONS_KEY)
+
+        if isinstance(instructions_payload, dict):
+            payload_phase = instructions_payload.get('phase')
+            instructions_text = instructions_payload.get('instructions')
+            if instructions_text and (payload_phase is None or payload_phase == phase):
+                return instructions_text
+
+        if isinstance(instructions_payload, str) and instructions_payload.strip():
+            return instructions_payload
+
+        return fallback

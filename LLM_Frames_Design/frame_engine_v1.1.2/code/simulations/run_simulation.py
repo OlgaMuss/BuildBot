@@ -224,7 +224,8 @@ class SimulationOrchestrator:
         
         language_checker_frame = LanguageCheckerFrame(
             target_age=self.target_age,
-            llm_client=self.llm_client
+            llm_client=self.llm_client,
+            learning_material=LEARNING_MATERIAL,
         )
         
         phases_checker_frame = PhasesCheckerFrame(
@@ -307,11 +308,16 @@ class SimulationOrchestrator:
 
         persona = self.personas[student_color]
         
-        # Get Marty's last message to respond to.
-        last_marty_message = "No message yet."
-        if self.conversation_history and self.conversation_history[-1]['role'] == 'assistant':
-            last_marty_message = self.conversation_history[-1]['content']
-
+        # Format conversation history for the student
+        history_context = "NO PRIOR CONVERSATION HISTORY"
+        if self.conversation_history:
+            history_lines = []
+            for msg in self.conversation_history:  # Use full history
+                role_name = msg.get('role_name', msg['role'])
+                content = msg['content']
+                history_lines.append(f"{role_name}: {content}")
+            history_context = "\n".join(history_lines)
+        
         # Create a single, comprehensive prompt that is less likely to confuse the LLM
         full_prompt = f"""You are roleplaying as a 14-year-old student named {student_color}.
 Your persona and current knowledge are described below.
@@ -321,10 +327,11 @@ PERSONA AND KNOWLEDGE:
 {persona}
 ---
 
-Marty just said: "{last_marty_message}"
+CONVERSATION HISTORY (Last 10 messages):
+{history_context}
 
 It is now your turn to speak.
-Based on your persona and what Marty just said, provide a short, casual, 1-2 sentence response.
+Based on your persona and the conversation so far, provide a short, casual, 1-2 sentence response.
 Your response MUST start with "{student_color}: ".
 """
         try:
@@ -495,151 +502,6 @@ Your response MUST start with "{student_color}: ".
         await self.frame_engine.end_session(engine_result['final_state'])
         
         # Add participation summary to the MD file
-        self._add_participation_summary(engine_result['final_state'])
-    
-    def _add_participation_summary(self, final_state: dict):
-        """Add participation summary and mnemonic state to the markdown report."""
-        from pathlib import Path
-        
-        session_id = self.session_logger.session_id
-        output_dir = Path(self.session_logger.output_dir)
-        md_file_path = output_dir / f'session_{session_id}.md'
-        
-        # Read the existing MD file
-        if not md_file_path.exists():
-            return
-        
-        with md_file_path.open('r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Extract data from frame_memory
-        frame_memory = final_state.get('frame_memory', {})
-        marty_memory = self._resolve_marty_memory(frame_memory)
-        balanced_turns_memory = frame_memory.get('balanced_turns_validator', {})
-        comprehension_memory = frame_memory.get('comprehension_tracker', {})
-        
-        participation = balanced_turns_memory.get('participation')
-        mnemonic_state = marty_memory.get('mnemonic_state', {})
-        
-        # Build the mnemonic type section
-        type_descriptions = {
-            "Story": "A narrative that weaves concepts together",
-            "Poem": "Rhyming lines that capture key concepts",
-            "Jokes": "Humorous setups and punchlines about concepts",
-        }
-        type_desc = type_descriptions.get(self.mnemonic_type, "A creative mnemonic device")
-        mnemonic_type_section = "## 🎨 Mnemonic Type\n\n"
-        mnemonic_type_section += f"**{self.mnemonic_type}** - {type_desc}\n\n"
-        
-        # Build the phase transitions section
-        phase_transitions_section = ""
-        if self.phase_transitions:
-            phase_transitions_section = "## ⏱️ Phase Transitions\n\n"
-            phase_transitions_section += "| Phase | Turn | Elapsed Time |\n"
-            phase_transitions_section += "|-------|------|-------------|\n"
-            for transition in self.phase_transitions:
-                phase = transition['phase']
-                turn = transition['turn']
-                elapsed = transition['elapsed_time']
-                phase_name = f"Phase {phase}"
-                if phase == 1:
-                    phase_name += " (Knowledge Building)"
-                elif phase == 2:
-                    phase_name += " (Mnemonic Creation)"
-                elif phase == 3:
-                    phase_name += " (Recall Practice)"
-                phase_transitions_section += f"| {phase_name} | Turn {turn} | {elapsed:.1f} min |\n"
-            phase_transitions_section += "\n"
-        
-        # Build the participation table
-        participation_section = ""
-        if participation:
-            participation_section = "## 📊 Participation Summary\n\n"
-            participation_section += "| Student | Contributions | Speaking Time |\n"
-            participation_section += "|---------|---------------|---------------|\n"
-            for student, p_data in sorted(participation.items()):
-                count = p_data.get('contribution_count', 0)
-                time = p_data.get('total_speaking_time_seconds', 0)
-                participation_section += f"| **{student}** | {count} | {time:.1f}s |\n"
-            participation_section += "\n"
-        
-        # Build the comprehension tracker section
-        comprehension_sections = ""
-        by_student = comprehension_memory.get('by_student', {})
-        
-        if by_student:
-            comprehension_sections = "## 🧠 Comprehension Summary\n\n"
-            for student_name in sorted(by_student.keys()):
-                student_concepts = by_student[student_name]
-                understood = []
-                confused = []
-                
-                for concept, data in student_concepts.items():
-                    level = data.get('level', 'not_seen')
-                    if level == 'understood':
-                        understood.append(concept)
-                    elif level == 'confused':
-                        confused.append(concept)
-                
-                if understood or confused:
-                    comprehension_sections += f"### {student_name}\n\n"
-                    if understood:
-                        comprehension_sections += f"**✅ Understood:** {', '.join(understood)}\n\n"
-                    if confused:
-                        comprehension_sections += f"**❓ Confused:** {', '.join(confused)}\n\n"
-        
-        # Build the mnemonic state sections
-        mnemonic_sections = ""
-        
-        # Selected concepts section
-        selected_concepts = mnemonic_state.get('selected_concepts', [])
-        concepts_finalized = mnemonic_state.get('concepts_finalized', False)
-        if selected_concepts:
-            mnemonic_sections += "## 🎯 Selected Concepts\n\n"
-            mnemonic_sections += f"**Status:** {'✅ Finalized' if concepts_finalized else '⏳ In Progress'}\n\n"
-            for i, concept in enumerate(selected_concepts, 1):
-                mnemonic_sections += f"{i}. {concept}\n"
-            mnemonic_sections += "\n"
-        else:
-            mnemonic_sections += "## 🎯 Selected Concepts\n\n"
-            mnemonic_sections += "**Status:** ❌ No concepts selected\n\n"
-        
-        # Mnemonic created section
-        mnemonic_text = mnemonic_state.get('mnemonic_text', '')
-        mnemonic_created = mnemonic_state.get('mnemonic_created', False)
-        if mnemonic_text and mnemonic_created:
-            mnemonic_sections += "## 📖 Created Mnemonic\n\n"
-            mnemonic_sections += f"**Status:** ✅ Complete\n\n"
-            mnemonic_sections += f"{mnemonic_text}\n\n"
-        else:
-            mnemonic_sections += "## 📖 Created Mnemonic\n\n"
-            mnemonic_sections += "**Status:** ❌ No mnemonic created\n\n"
-        
-        # Insert sections after "**Saved at:**" line
-        lines = content.split('\n')
-        new_lines = []
-        
-        for line in lines:
-            new_lines.append(line)
-            if line.startswith('**Saved at:**'):
-                new_lines.append('')
-                # Add mnemonic type
-                new_lines.extend(mnemonic_type_section.split('\n'))
-                # Add phase transitions
-                if phase_transitions_section:
-                    new_lines.extend(phase_transitions_section.split('\n'))
-                # Add participation summary
-                if participation_section:
-                    new_lines.extend(participation_section.split('\n'))
-                # Add comprehension summary
-                if comprehension_sections:
-                    new_lines.extend(comprehension_sections.split('\n'))
-                # Add mnemonic state sections
-                new_lines.extend(mnemonic_sections.split('\n'))
-        
-        # Write back
-        with md_file_path.open('w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
 
 async def main():
     """Main entry point."""

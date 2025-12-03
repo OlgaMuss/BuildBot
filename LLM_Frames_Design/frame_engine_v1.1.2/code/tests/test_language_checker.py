@@ -24,7 +24,11 @@ def mock_llm_client() -> MagicMock:
 @pytest.fixture
 def language_checker_frame(mock_llm_client: MagicMock) -> LanguageCheckerFrame:
     """Creates a LanguageCheckerFrame instance with a target age of 10."""
-    return LanguageCheckerFrame(target_age=10, llm_client=mock_llm_client)
+    return LanguageCheckerFrame(
+        target_age=10,
+        llm_client=mock_llm_client,
+        learning_material="Microcontrollers use ESP32 modules and pins.",
+    )
 
 
 @pytest.fixture

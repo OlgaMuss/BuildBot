@@ -30,7 +30,7 @@ from backend.frame_engine.core import (
     ValidationAction,
     ValidationResult,
 )
-from backend.frames.marty import CLEANED_MESSAGE_KEY, SPEAKER_KEY
+from backend.frames.marty import CLEANED_MESSAGE_KEY, SPEAKER_KEY, MNEMONIC_STATE_KEY
 
 # --- Comprehension Tracking Data Structures ---
 
@@ -200,26 +200,16 @@ class ComprehensionTrackerFrame(Frame):
             len(self.students),
         )
 
-    async def _extract_concepts(self) -> list[str]:
-        """Extracts key concepts from the learning material using LLM.
-
-        Returns:
-            A list of concept names.
-        """
-        prompt = _CONCEPT_EXTRACTION_PROMPT.format(learning_material=self.learning_material)
-        try:
-            response = await self.llm.ainvoke([
-                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
-                HumanMessage(content=prompt),
-            ])
-            content = getattr(response, 'content', '[]')
-            content = content.strip().replace('```json', '').replace('```', '')
-            concepts = json.loads(content)
-            logging.info('[ComprehensionTracker] Extracted concepts: %s', concepts)
-            return concepts
-        except (json.JSONDecodeError, Exception) as e:
-            logging.error('[ComprehensionTracker] Failed to extract concepts: %s', e)
-            return []
+    async def _extract_concepts(self, context: FrameContext) -> list[str]:
+        """Returns the student-selected concepts once they exist."""
+        frame_memory = context.get('frame_memory', {})
+        mnemonic_state = frame_memory.get('mnemonic_state', {})
+        selected_concepts = mnemonic_state.get('selected_concepts') or []
+        if selected_concepts:
+            logging.info('[ComprehensionTracker] Using selected concepts: %s', selected_concepts)
+        else:
+            logging.info('[ComprehensionTracker] No selected concepts available yet.')
+        return selected_concepts
 
     async def _analyze_cumulative_comprehension(
         self,
@@ -237,6 +227,9 @@ class ComprehensionTrackerFrame(Frame):
         Returns:
             A list of assessment dictionaries with concept, level, and justification.
         """
+        if not concepts:
+            return []
+
         prompt = _CUMULATIVE_COMPREHENSION_ANALYSIS_PROMPT.format(
             concepts=json.dumps(concepts),
             speaker=speaker,
@@ -271,6 +264,9 @@ class ComprehensionTrackerFrame(Frame):
         Returns:
             A dictionary with 'understood' and 'confused' concept lists.
         """
+        if not concepts:
+            return {'understood': [], 'confused': []}
+
         prompt = _PER_TURN_COMPREHENSION_ANALYSIS_PROMPT.format(
             concepts=json.dumps(concepts),
             speaker=speaker,
@@ -353,7 +349,7 @@ class ComprehensionTrackerFrame(Frame):
 
         # Initialize on first turn
         if 'comprehension_tracker' not in frame_memory:
-            concepts = await self._extract_concepts()
+            concepts = await self._extract_concepts(context)
             if concepts:
                 self._initialize_memory(frame_memory, concepts)
             else:
@@ -366,6 +362,11 @@ class ComprehensionTrackerFrame(Frame):
 
         tracker = frame_memory['comprehension_tracker']
         concepts = tracker.get('concepts', [])
+        mnemo_memory = self._resolve_mnemonic_memory(frame_memory)
+        selected_concepts = mnemo_memory.get(MNEMONIC_STATE_KEY, {}).get('selected_concepts', [])
+        if selected_concepts and set(selected_concepts) != set(concepts):
+            tracker['concepts'] = selected_concepts
+            concepts = selected_concepts
 
         # Skip if no concepts or unknown speaker
         if not concepts or speaker not in self.students:
@@ -406,6 +407,13 @@ class ComprehensionTrackerFrame(Frame):
             'cumulative_assessments_updated': cumulative_assessments,
             'all_student_profiles': tracker['by_student'],
         }
+
+    def _resolve_mnemonic_memory(self, frame_memory: dict[str, Any]) -> dict[str, Any]:
+        """Returns the Mnemonic frame's memory regardless of namespacing."""
+        namespaced = frame_memory.get('mnemonic_co_creator_marty')
+        if isinstance(namespaced, dict) and MNEMONIC_STATE_KEY in namespaced:
+            return namespaced
+        return frame_memory
 
     async def get_prompt_sections(self, context: FrameContext) -> list[PromptSection]:
         """Adds guidance based on comprehension status.

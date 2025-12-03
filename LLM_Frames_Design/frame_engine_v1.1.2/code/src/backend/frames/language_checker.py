@@ -1,6 +1,7 @@
 """A generic frame that uses an LLM to check for age-appropriate language."""
 import json
 import logging
+from typing import Any, Optional
 
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -11,6 +12,7 @@ from backend.frame_engine.core import (
     ValidationAction,
     ValidationResult,
 )
+from backend.frames.marty import MNEMONIC_STATE_KEY
 
 _VALIDATION_SYSTEM_PROMPT = (
     "You are a compliance checker ensuring responses stay age-appropriate. "
@@ -18,9 +20,26 @@ _VALIDATION_SYSTEM_PROMPT = (
     "only with JSON object: {'complies': <bool>, 'rationale': <short string>}."
 )
 
-_VALIDATION_PROMPT = """
-Check whether the RESPONSE is suitable for a {target_age}-year-old: clear vocabulary,
-encouraging tone, non-condescending, and no emojis.
+_VALIDATION_PROMPT_TEMPLATE = """
+Check whether the RESPONSE is suitable for a {target_age}-year-old:
+keep sentences short (1-5 clauses), friendly, encouraging, and free of emojis.
+
+CONTEXT ABOUT TODAY'S LESSON (acceptable technical terms, do not flag them):
+{lesson_context}
+
+Currently selected lesson concepts (always allowed to mention):
+{selected_concepts}
+
+Examples of acceptable tone/simplicity:
+- "Great idea, [Student]! Can you describe it in your own words?"
+- "Nice thinking! Let's try adding one funny detail about the pins."
+- "Awesome! Want to help [Next Student] build on that?"
+
+Return ONLY JSON: {{"complies": <bool>, "rationale": "why it passes/fails"}}.
+Your rationale must quote the exact wording you're judging (e.g., '"Great idea, team—let's reflect on programming paradigms" is too advanced.').
+
+Focus on tone, simplicity, and clarity. Only flag if the writing is discouraging,
+condescending, or way too complex beyond the above concepts.
 
 --- RESPONSE ---
 {response}
@@ -31,7 +50,12 @@ encouraging tone, non-condescending, and no emojis.
 class LanguageCheckerFrame(Frame):
     """A frame that uses an LLM to validate age-appropriate language, tone, and complexity."""
 
-    def __init__(self, target_age: int, llm_client: BaseChatModel):
+    def __init__(
+        self,
+        target_age: int,
+        llm_client: BaseChatModel,
+        learning_material: Optional[str] = None,
+    ):
         """Initializes the LanguageCheckerFrame.
 
         Args:
@@ -41,6 +65,7 @@ class LanguageCheckerFrame(Frame):
         super().__init__()
         self.target_age = target_age
         self.llm = llm_client
+        self._lesson_excerpt = self._prepare_lesson_excerpt(learning_material)
 
     @property
     def name(self) -> str:
@@ -51,10 +76,7 @@ class LanguageCheckerFrame(Frame):
         """Uses an LLM to check if the draft response is age-appropriate."""
         llm_response = context['llm_draft_response']
 
-        prompt = _VALIDATION_PROMPT.format(
-            target_age=self.target_age,
-            response=llm_response,
-        )
+        prompt = self._build_validation_prompt(context, llm_response)
 
         logging.info('[LanguageChecker] Validation prompt:\n--- LANGUAGE_CHECKER PROMPT START ---\n%s\n--- LANGUAGE_CHECKER PROMPT END ---', prompt)
 
@@ -92,3 +114,38 @@ class LanguageCheckerFrame(Frame):
             }
 
         return {'action': ValidationAction.PASS, 'feedback': None}
+
+    def _build_validation_prompt(self, context: FrameContext, response: str) -> str:
+        """Constructs the validation prompt with lesson context."""
+        selected_concepts = self._get_selected_concepts(context.get('frame_memory', {}))
+        concepts_display = ', '.join(selected_concepts) if selected_concepts else 'No concepts finalized yet.'
+
+        return _VALIDATION_PROMPT_TEMPLATE.format(
+            target_age=self.target_age,
+            lesson_context=self._lesson_excerpt or 'Microcontrollers lesson overview unavailable.',
+            selected_concepts=concepts_display,
+            response=response,
+        )
+
+    def _prepare_lesson_excerpt(self, learning_material: Optional[str]) -> str:
+        """Prepares a lightweight excerpt from the learning material for the validator."""
+        if not learning_material:
+            return ''
+
+        normalized = ' '.join(learning_material.split())
+        # Limit excerpt to keep prompts manageable
+        return normalized[:800]
+
+    def _get_selected_concepts(self, frame_memory: dict[str, Any]) -> list[str]:
+        """Fetches the selected concepts from the mnemonic frame memory."""
+        mnemo_memory = self._resolve_mnemonic_memory(frame_memory)
+        mnemonic_state = mnemo_memory.get(MNEMONIC_STATE_KEY, {})
+        concepts = mnemonic_state.get('selected_concepts', [])
+        return concepts if isinstance(concepts, list) else []
+
+    def _resolve_mnemonic_memory(self, frame_memory: dict[str, Any]) -> dict[str, Any]:
+        """Returns the Mnemonic frame's memory regardless of namespacing."""
+        namespaced = frame_memory.get('mnemonic_co_creator_marty')
+        if isinstance(namespaced, dict) and MNEMONIC_STATE_KEY in namespaced:
+            return namespaced
+        return frame_memory

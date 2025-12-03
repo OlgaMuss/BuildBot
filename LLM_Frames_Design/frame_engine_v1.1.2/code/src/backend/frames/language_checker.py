@@ -46,7 +46,6 @@ condescending, or way too complex beyond the above concepts.
 ----------------
 """
 
-
 class LanguageCheckerFrame(Frame):
     """A frame that uses an LLM to validate age-appropriate language, tone, and complexity."""
 

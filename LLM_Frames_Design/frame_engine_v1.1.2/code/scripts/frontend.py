@@ -150,17 +150,18 @@ def _initialize_engine(
     )
 
     balanced_turns_frame = BalancedTurnsFrame(students=student_names)
+    language_checker_frame = LanguageCheckerFrame(
+        target_age=target_age,
+        llm_client=llm_client,
+        learning_material=learning_material,
+    )
 
     engine = FrameEngine(
         frames=[
             marty_frame,
             comprehension_frame,
             balanced_turns_frame,
-            LanguageCheckerFrame(
-                target_age=target_age,
-                llm_client=llm_client,
-                learning_material=learning_material,
-            ),
+            language_checker_frame,
             PhasesCheckerFrame(llm_client=llm_client),
         ],
         llm_client=llm_client,

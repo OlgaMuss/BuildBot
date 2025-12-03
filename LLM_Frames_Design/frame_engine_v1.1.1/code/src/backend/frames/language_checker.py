@@ -35,6 +35,7 @@ class LanguageCheckerFrame(Frame):
             llm_client: The LLM client to use for the validation call.
         """
         super().__init__()
+        self.learning_material = learning_material
         self.target_age = target_age
         self.llm = llm_client
 

@@ -275,6 +275,16 @@ class SimulationOrchestrator:
         
         return round(estimated_time, 1)
 
+    @staticmethod
+    def _resolve_marty_memory(memory: Dict) -> Dict:
+        """Returns the Mnemonic frame's memory regardless of namespace style."""
+        if not memory:
+            return {}
+        namespaced = memory.get('mnemonic_co_creator_marty')
+        if isinstance(namespaced, dict) and namespaced:
+            return namespaced
+        return memory
+
     async def call_marty_engine(self, user_input: str) -> Dict:
         """Calls the FrameEngine to get Marty's response."""
         print(f"\n[🤖 MARTY ENGINE]")
@@ -355,7 +365,7 @@ Your response MUST start with "{student_color}: ".
         # --- Fallback Logic (if frame fails for some reason) ---
         print("⚠️ WARN: BalancedTurnsFrame did not suggest a next speaker. Using fallback.")
         
-        marty_memory = self.frame_memory.get('mnemonic_co_creator_marty', {})
+        marty_memory = self._resolve_marty_memory(self.frame_memory)
         
         # 1. Check if Marty directly addressed a student
         for name in self.students:
@@ -378,7 +388,7 @@ Your response MUST start with "{student_color}: ".
     def _track_phase_transition(self, turn: int):
         """Track when phases transition for the markdown report."""
         # Use the marty_memory to get the session phase
-        marty_memory = self.frame_memory.get('mnemonic_co_creator_marty', {})
+        marty_memory = self._resolve_marty_memory(self.frame_memory)
         phase = marty_memory.get("session_phase", 1)
         elapsed_time = marty_memory.get("elapsed_time_minutes", 0)
         
@@ -394,8 +404,8 @@ Your response MUST start with "{student_color}: ".
     
     def _print_phase_tracker(self, turn: int):
         """Print the current phase, goal, and progress - READ ONLY from frame."""
-        # Frame memory is nested under frame names
-        marty_memory = self.frame_memory.get('mnemonic_co_creator_marty', {})
+        # Frame memory is nested under frame names in production; fall back to direct dict.
+        marty_memory = self._resolve_marty_memory(self.frame_memory)
         phase = marty_memory.get("session_phase", 1)
         elapsed_time = marty_memory.get("elapsed_time_minutes", 0)
         turn_count = marty_memory.get("turn_count", turn)
@@ -474,15 +484,12 @@ Your response MUST start with "{student_color}: ".
             self._print_phase_tracker(current_turn)
 
             # 3. Check for Completion
-            marty_memory = self.frame_memory.get('mnemonic_co_creator_marty', {})
+            marty_memory = self._resolve_marty_memory(self.frame_memory)
             phase = marty_memory.get("session_phase", 1)
             elapsed_time = marty_memory.get("elapsed_time_minutes", 0)
             
             # Allow Phase 3 to run for at least 2-3 turns for recall practice
             if phase == 3 and elapsed_time >= 10:
-                print(f"\n{'='*70}")
-                print("✓ SESSION COMPLETE - Phase 3 recall practice complete")
-                print(f"{'='*70}")
                 break
 
         await self.frame_engine.end_session(engine_result['final_state'])
@@ -507,7 +514,7 @@ Your response MUST start with "{student_color}: ".
         
         # Extract data from frame_memory
         frame_memory = final_state.get('frame_memory', {})
-        marty_memory = frame_memory.get('mnemonic_co_creator_marty', {})
+        marty_memory = self._resolve_marty_memory(frame_memory)
         balanced_turns_memory = frame_memory.get('balanced_turns_validator', {})
         comprehension_memory = frame_memory.get('comprehension_tracker', {})
         

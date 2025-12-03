@@ -219,6 +219,13 @@ class MnemonicCoCreatorFrame(Frame):
         phase = self._get_current_phase(turn, frame_memory)
         frame_memory['session_phase'] = phase
 
+        elapsed_minutes = frame_memory.get('elapsed_time_minutes', 0)
+        if phase == 3 and elapsed_minutes >= 10:
+            frame_memory['_closure_ready'] = True
+        elif phase < 3:
+            frame_memory.pop('_closure_ready', None)
+            frame_memory.pop('_closure_done', None)
+
         speaker, message = self._parse_user_input(user_input)
 
         # On the first turn, detect the language of the session
@@ -705,6 +712,28 @@ TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just s
         # Check if this is the first turn of Phase 3
         phase3_turn_count = frame_memory.get('_phase3_turn_count', 1)
         is_first_phase3_turn = phase3_turn_count == 1
+
+        closure_ready = frame_memory.get('_closure_ready', False)
+        closure_done = frame_memory.get('_closure_done', False)
+        elapsed_minutes = frame_memory.get('elapsed_time_minutes', 0)
+        selected_concepts = mnemonic_state.get('selected_concepts', [])
+
+        if closure_ready and not closure_done:
+            frame_memory['_closure_done'] = True
+            concepts_summary = ', '.join(selected_concepts) if selected_concepts else 'the key ideas you discussed'
+            if mnemonic_text:
+                mnemonic_summary = f'The {self.mnemonic_type.lower()} you built:\n"{mnemonic_text}"'
+            else:
+                mnemonic_summary = f'You outlined how your {self.mnemonic_type.lower()} should work, even if it is not fully written out.'
+            return f"""🎉 SESSION WRAP-UP (Time limit reached)
+Approximately {elapsed_minutes:.1f} minutes have passed, so it is time to close the session warmly.
+
+YOUR FINAL RESPONSE MUST:
+1. Acknowledge the student who just spoke and mention that our 10-minute session is over.
+2. Celebrate what the group accomplished (concepts chosen: {concepts_summary}; {mnemonic_summary}).
+3. Encourage them to keep practicing together or on their own.
+4. Offer a friendly goodbye (e.g., "Thanks for the great teamwork—see you next time!").
+5. Do NOT invite another student to speak; this is the closing message."""
         
         # Check if we have a valid mnemonic (at least 20 chars and doesn't look like incomplete input)
         has_valid_mnemonic = (

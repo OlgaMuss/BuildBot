@@ -1,13 +1,16 @@
-# Session Log – jokes scenario (2025-12-03)
+# Session Log – jokes scenario (2025-12-03, sim006)
 
 - **Run command**: `poetry run python simulations/run_simulation.py --scenario jokes --turns 20 --mnemonic_type Jokes`
 - **Models**: student `gemini-2.5-flash-lite`, engine `gpt-4.1-mini` (Azure)
-- **Status**: Failed at turn 15 during validation (language_checker)
-- **Failure**: Azure content filter flagged validator prompt as jailbreak attempt (`ResponsibleAIPolicyViolation`, `jailbreak.detected = True`)
-- **Relevant stack trace entry**:
-  - `backend/frames/language_checker.py:62 validate_output → openai.BadRequestError (content_filter)`
-
-Next step: inspect the language checker prompt + draft history to understand which phrasing tripped the filter and how to adjust validator instructions.
+- **Status**: Completed all 20 turns (Phase 1) without Azure content-filter failures
+- **Key observations**:
+  - Balanced turn validator still triggers frequently, often exhausting the three repair attempts before accepting a draft.
+  - `phases_checker_frame` and `language_checker_frame` now run to completion, but continue to return REVISE actions when the facilitator’s response drifts from the phase goal or 14yo tone.
+  - Phase never advanced beyond 1/3; mnemonic extraction repeatedly warned “No narration found”.
+- **Next steps**:
+  - Tune prompt/repair logic to reduce repeated validator REVISE loops (especially balanced turns).
+  - Investigate why the session never leaves Phase 1 and why mnemonic narration is missing.
+  - Consider summarising repeated validator feedback for debugging (turns 1‑20 in `terminals/8`).
 
 
 
@@ -28,26 +31,25 @@ Max Turns: 20
 Student Model: gemini-2.5-flash-lite
 ======================================================================
 
-[👤 GREEN - Turn 1]
-✓ Green: Hey Marty! I'm Green and I'm working with Red and Blue on microcontrollers and we need to create jokes.
+[👤 RED - Turn 1]
+✓ Red: Hey Marty! I'm Red and I'm working with Blue and Green on microcontrollers and we need to create jokes.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Hi Green! To make really good jokes, what are the most important things about microcontrollers that you want to remember?
+Hi Red! To create great jokes, first let's pick the most important things about microcontrollers. What are the most important things about microcontrollers that you want to remember? Blue, Green, feel free to share your ideas too!
 -------------------------
 
-WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: For balanced participation, you need to invite Red to speak next. They have participated less than others. Please acknowledge Green briefly, then ask Red a question.
-WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: For balanced participation, you need to invite Red to speak next. They have participated less than others. Please acknowledge Green briefly, then ask Red a question.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
 WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
-WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Hi Green! Great to hear you're working together. To make jokes that help remember microcontrollers, what do you think are the most important things about microcontrollers worth remembering? Red, what do you think?
+Hi Red! That sounds like a fun project. What are the most important things about microcontrollers that you want to remember for your jokes? Blue, I’d love to hear your ideas next!
 -------------------------
 
 [🤖 MARTY - Turn 1]
-✓ Marty: Hi Green! Great to hear you're working together. To make jokes that help remember microcontrollers, ...
+✓ Marty: Hi Red! That sounds like a fun project. What are the most important things about microcontrollers th...
 
 📊 PHASE TRACKER (Turn 1)
 ├─ Current Phase: 1/3
@@ -55,20 +57,20 @@ Hi Green! Great to hear you're working together. To make jokes that help remembe
 ├─ Turn Count: 1
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Red
-[👤 RED]
+✅ BalancedTurnsFrame suggested next speaker: Blue
+[👤 BLUE]
 
-[👤 RED - Turn 2]
-✓ Red: Ooh, okay! I remember they're like super tiny computers, right? And they have these things called pins that do stuff?
+[👤 BLUE - Turn 2]
+✓ Blue: Hi Red! I'm excited to make some jokes! I guess the most important thing for me is how they're like tiny computers with a brain and stuff, right? And how they do things based on what we tell them.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Nice start, Red! Can you say more about what you think pins do? Blue, what do you think about pins or any other important parts of microcontrollers?
+Great start, Blue! So, microcontrollers being tiny computers with a brain and following instructions is important to remember. Green, what do you think is key to include in our jokes?
 -------------------------
 
 [🤖 MARTY - Turn 2]
-✓ Marty: Nice start, Red! Can you say more about what you think pins do? Blue, what do you think about pins o...
+✓ Marty: Great start, Blue! So, microcontrollers being tiny computers with a brain and following instructions...
 
 📊 PHASE TRACKER (Turn 2)
 ├─ Current Phase: 1/3
@@ -76,36 +78,37 @@ Nice start, Red! Can you say more about what you think pins do? Blue, what do yo
 ├─ Turn Count: 2
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Blue
-[👤 BLUE]
+✅ BalancedTurnsFrame suggested next speaker: Green
+[👤 GREEN]
 
-[👤 BLUE - Turn 3]
-✓ Blue: Yeah, pins are like the microcontroller's hands and feet, right? They let it talk to other things. What about the memory part though? How does it *remember* what to do?
+[👤 GREEN - Turn 3]
+✓ Green: What if the joke is about how they're super small but do a lot, like a tiny brain that can do anything? I'm still a bit fuzzy on what the CPU and memory actually *do* though.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Good question, Blue! Red, can you help explain how the microcontroller might use memory to remember instructions or tasks? If that’s tricky, Blue, what part about memory is most confusing to you?
+Thanks for sharing, Green. Blue and Red, can one of you help explain what the CPU and memory do in a microcontroller in your own words? That might make it clearer for Green.
 -------------------------
 
-WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
-WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
 
 --- DRAFT TO VALIDATE ---
-Great question, Blue! Memory is where the microcontroller stores its instructions and information. Green, can you help explain how memory helps the microcontroller work?
+Thanks for sharing, Green! Blue and Red, can one of you help explain what the CPU and memory do in your own words? That might help Green understand better.
 -------------------------
 
-WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
 
 --- DRAFT TO VALIDATE ---
-Thanks for asking, Blue! Red, can you help explain how memory helps a microcontroller remember its tasks? If that’s tricky, no worries—we can break it down together! Green, what do you think about memory or any other part?
+Thanks for sharing, Green. Blue, can you help explain in your own words what the CPU does inside a microcontroller? That might help Green understand better.
 -------------------------
 
-WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
-WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
 WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 3]
-✓ Marty: Thanks for asking, Blue! Red, can you help explain how memory helps a microcontroller remember its t...
+✓ Marty: Thanks for sharing, Green. Blue, can you help explain in your own words what the CPU does inside a m...
 
 📊 PHASE TRACKER (Turn 3)
 ├─ Current Phase: 1/3
@@ -113,27 +116,27 @@ WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 ├─ Turn Count: 3
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Green
-[👤 GREEN]
+✅ BalancedTurnsFrame suggested next speaker: Red
+[👤 RED]
 
-[👤 GREEN - Turn 4]
-✓ Green: I'm not super sure what memory does, but I know it's like, the microcontroller's brain, right? Like, where it keeps all the instructions for whatever it's supposed to do.
+[👤 RED - Turn 4]
+✓ Red: Ooh, the CPU! Is that like the brain of the tiny computer thing? Like, it does all the thinking?
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Great job, Green! You’re right—memory stores the instructions the microcontroller follows. Blue, does that help with your question about memory? Anything else you want to add or ask?
+Exactly, Blue! The CPU is like the brain that does the thinking inside the microcontroller. Green, does that help you understand what the CPU does? If not, what part is still confusing?
 -------------------------
 
-WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
-WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Red (to acknowledge) and Green (to invite next). Please invite Green to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Red (to acknowledge) and Green (to invite next). Please invite Green to speak.)
 
 --- DRAFT TO VALIDATE ---
-Great explanation, Green! So, memory holds the instructions for the microcontroller. Red, do you want to add anything about memory or pins before we pick our key concepts?
+Exactly, Red! The CPU is like the brain that thinks and runs the programs. Green, does that help a bit with understanding the CPU? What part about memory feels unclear to you?
 -------------------------
 
 [🤖 MARTY - Turn 4]
-✓ Marty: Great explanation, Green! So, memory holds the instructions for the microcontroller. Red, do you wan...
+✓ Marty: Exactly, Red! The CPU is like the brain that thinks and runs the programs. Green, does that help a b...
 
 📊 PHASE TRACKER (Turn 4)
 ├─ Current Phase: 1/3
@@ -141,26 +144,39 @@ Great explanation, Green! So, memory holds the instructions for the microcontrol
 ├─ Turn Count: 4
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Red
-[👤 RED]
+✅ BalancedTurnsFrame suggested next speaker: Green
+[👤 GREEN]
 
-[👤 RED - Turn 5]
-✓ Red: Ooh, memory! So it's like the brain for the tiny computer? And pins... do they just stick out? I'm still a bit confused about those.
+[👤 GREEN - Turn 5]
+✓ Green: The brain part makes sense! But what's the memory then? Is it like... a brain for remembering things, or like a recipe book for the brain? I'm not sure how it's different from the CPU.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Good question, Red! Pins aren’t just sticking out for no reason—they’re like tiny hands and feet that the microcontroller uses to send or receive signals, turning things on or off. Blue, how can we include memory as the brain in our joke?
+Great question, Green! The memory is like the recipe book that the brain (CPU) reads to know what to do. Red, now that Green understands memory better, how can we include the idea of instructions or programs in our jokes?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Thanks for sharing, Red! Pins are like tiny connectors that stick out and help the microcontroller send signals to other devices, kind of like hands and feet. Blue, how can we include pins and memory in a funny way for our joke?
+Great question, Green! Memory is more like the recipe book that stores all the instructions the CPU follows. Red, how can we include this idea of the CPU as the brain and memory as the recipe book in a joke?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
+
+--- DRAFT TO VALIDATE ---
+Good question, Green! Yes, memory is like a recipe book where the CPU (the brain) looks to find what to do next. Red, how could we make a joke about the CPU and memory working together inside the tiny computer?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 5]
-✓ Marty: Thanks for sharing, Red! Pins are like tiny connectors that stick out and help the microcontroller s...
+✓ Marty: Good question, Green! Yes, memory is like a recipe book where the CPU (the brain) looks to find what...
 
 📊 PHASE TRACKER (Turn 5)
 ├─ Current Phase: 1/3
@@ -172,24 +188,33 @@ Thanks for sharing, Red! Pins are like tiny connectors that stick out and help t
 [👤 BLUE]
 
 [👤 BLUE - Turn 6]
-✓ Blue: Ooh, pins are like little arms and legs! So, if memory is like the brain, what would the pins be doing in a joke? Like reaching out for something?
+✓ Blue: Ooh, a recipe book! That makes sense. What if the joke is about the CPU being a super-fast chef trying to read the recipe?
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Nice idea, Blue! Green, how can we add the microcontroller itself, the tiny computer, to make the joke even funnier?
+Love that idea, Red! Blue, how can we include the idea of instructions or programs in our joke about the CPU as a chef reading the recipe book?
 -------------------------
 
-WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Blue (to acknowledge) and Red (to invite next). Please invite Red to speak.
-WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Blue (to acknowledge) and Red (to invite next). Please invite Red to speak.)
-WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You acknowledged Red, but Blue was the one who just spoke. You must acknowledge Blue first, then invite Red to contribute.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You acknowledged Red, but Blue was the one who just spoke. You must acknowledge Blue first, then invite Red to contribute.)
 
 --- DRAFT TO VALIDATE ---
-Nice idea, Blue! Pins as little arms and legs reaching out—that’s funny! Red, how can we make the microcontroller’s memory and pins do something silly or surprising in our joke?
+Love that idea, Red! Blue, how could we add the microcontroller being tiny and powerful into that chef-and-recipe joke?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You acknowledged Red, but Blue was the one who just spoke. You must acknowledge Blue first, then invite Red to contribute.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You acknowledged Red, but Blue was the one who just spoke. You must acknowledge Blue first, then invite Red to contribute.)
+
+--- DRAFT TO VALIDATE ---
+Nice idea, Red! Blue, how can we include the idea of the microcontroller as a tiny computer in that joke?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You acknowledged Red, but Blue was the one who just spoke. You must acknowledge Blue first, then invite Red to contribute.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You acknowledged Red, but Blue was the one who just spoke. You must acknowledge Blue first, then invite Red to contribute.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 6]
-✓ Marty: Nice idea, Blue! Pins as little arms and legs reaching out—that’s funny! Red, how can we make the mi...
+✓ Marty: Nice idea, Red! Blue, how can we include the idea of the microcontroller as a tiny computer in that ...
 
 📊 PHASE TRACKER (Turn 6)
 ├─ Current Phase: 1/3
@@ -201,16 +226,33 @@ Nice idea, Blue! Pins as little arms and legs reaching out—that’s funny! Red
 [👤 RED]
 
 [👤 RED - Turn 7]
-✓ Red: Ooh, memory! Maybe the pins are trying to *grab* the memory, like it's a snack? That'd be weird!
+✓ Red: Yeah! A tiny computer! Like, it's super small but it's still a computer, right? It's gotta do stuff.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Red, great idea! Pins trying to grab memory like a snack is pretty funny! Green, how should our jokes start? Maybe with the tiny computer waking up or the pins getting ready?
+Great, Blue! So our joke could be about a tiny chef (the CPU) reading a recipe book (memory) inside a tiny computer (the microcontroller). Green, how should our jokes start?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
+
+--- DRAFT TO VALIDATE ---
+Great, Blue! So, our jokes so far: Joke 1: The CPU is like a super-fast chef reading a recipe book (memory) to make things happen. Joke 2: The microcontroller is a tiny computer that gets big jobs done despite its size. Red, what’s a funny way to show how the CPU and memory work together?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You acknowledged Blue, but Red was the one who just spoke. You must acknowledge Red first, then invite Blue to contribute.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You acknowledged Blue, but Red was the one who just spoke. You must acknowledge Red first, then invite Blue to contribute.)
+
+--- DRAFT TO VALIDATE ---
+Great, Blue! So we have the CPU as a fast chef and the microcontroller as a tiny but powerful computer. Red, would you like to try adding a funny line about the programs or instructions the CPU follows?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You acknowledged Blue, but Red was the one who just spoke. You must acknowledge Red first, then invite Blue to contribute.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You acknowledged Blue, but Red was the one who just spoke. You must acknowledge Red first, then invite Blue to contribute.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 7]
-✓ Marty: Red, great idea! Pins trying to grab memory like a snack is pretty funny! Green, how should our joke...
+✓ Marty: Great, Blue! So we have the CPU as a fast chef and the microcontroller as a tiny but powerful comput...
 
 📊 PHASE TRACKER (Turn 7)
 ├─ Current Phase: 1/3
@@ -218,20 +260,40 @@ Red, great idea! Pins trying to grab memory like a snack is pretty funny! Green,
 ├─ Turn Count: 7
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Green
-[👤 GREEN]
+✅ BalancedTurnsFrame suggested next speaker: Blue
+[👤 BLUE]
 
-[👤 GREEN - Turn 8]
-✓ Green: Ooh, I like the "pins grabbing snacks" idea! What if the joke starts with a tiny computer that's super busy doing stuff, and the pins are like its arms trying to help?
+[👤 BLUE - Turn 8]
+✓ Blue: Ooh, programs! That's the part I get a little confused about. So, like, is the program the recipe the chef uses? Or is it more like a whole cookbook?
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Green, nice idea! A busy tiny computer with helpful pins sounds fun. Blue, how can we include the memory in this busy computer story to make it even funnier?
+Good question, Blue! The program is like one recipe the chef follows step by step. Green, can you think of a funny way to show the CPU following a recipe in our joke?
 -------------------------
 
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+That’s a good question, Red! Green, how do you think we can explain programs in a joke? Is it one recipe or many?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Good question, Red! Blue, what do you think? Is the program more like one recipe or a whole cookbook for the CPU?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 8]
-✓ Marty: Green, nice idea! A busy tiny computer with helpful pins sounds fun. Blue, how can we include the me...
+✓ Marty: Good question, Red! Blue, what do you think? Is the program more like one recipe or a whole cookbook...
 
 📊 PHASE TRACKER (Turn 8)
 ├─ Current Phase: 1/3
@@ -239,20 +301,39 @@ Green, nice idea! A busy tiny computer with helpful pins sounds fun. Blue, how c
 ├─ Turn Count: 8
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Blue
-[👤 BLUE]
+✅ BalancedTurnsFrame suggested next speaker: Green
+[👤 GREEN]
 
-[👤 BLUE - Turn 9]
-✓ Blue: Oh, memory! So, like, does it store the instructions for what to do? Or is it where it remembers what it's already done?
+[👤 GREEN - Turn 9]
+✓ Green: What if the program is like the instructions, but the memory is where all the recipes are stored for the CPU to pick from?
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Blue, great question! Memory stores the instructions for what the microcontroller needs to do next, like a to-do list. Red, how can we make that part funny—maybe the memory giving silly instructions to the pins?
+Great thinking, Blue! So programs are the instructions the CPU follows, and memory holds all the recipes. Green, can you help us add a funny twist about the CPU picking recipes from memory?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+
+--- DRAFT TO VALIDATE ---
+Nice explanation, Blue! So the program is like the instructions the chef follows, and memory is where the recipes are kept. Green, how could we add a funny twist about the CPU picking recipes from memory fast?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
+
+--- DRAFT TO VALIDATE ---
+Nice explanation, Blue! So programs are the instructions the CPU follows, and memory stores all the recipes. Green, how about you help us add a joke line about the program or instructions?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 9]
-✓ Marty: Blue, great question! Memory stores the instructions for what the microcontroller needs to do next, ...
+✓ Marty: Nice explanation, Blue! So programs are the instructions the CPU follows, and memory stores all the ...
 
 📊 PHASE TRACKER (Turn 9)
 ├─ Current Phase: 1/3
@@ -264,16 +345,33 @@ Blue, great question! Memory stores the instructions for what the microcontrolle
 [👤 RED]
 
 [👤 RED - Turn 10]
-✓ Red: Ooh, silly instructions! Like, "Go… uh… do something!" and it has no clue what to do? That's kinda funny!
+✓ Red: Ooh, programs! Like in video games? So the CPU is like the player, and the memory is the game cartridge? That's kinda cool.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Red, great joke idea! Pins getting silly or confusing instructions is funny. Green, what’s the next funny part? How do the pins react to those silly instructions?
+Interesting idea, Green! Red, how can we turn that comparison into a funny joke for our mnemonic?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
+
+--- DRAFT TO VALIDATE ---
+Great thinking, Green! Red, how can we use that video game idea to make a funny joke about programs and memory?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
+
+--- DRAFT TO VALIDATE ---
+Great comparison, Green! Red, how can we twist that idea into a funny joke about the CPU and memory playing a game?
+-------------------------
+
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to acknowledge) and Blue (to invite next). Please invite Blue to speak.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 10]
-✓ Marty: Red, great joke idea! Pins getting silly or confusing instructions is funny. Green, what’s the next ...
+✓ Marty: Great comparison, Green! Red, how can we twist that idea into a funny joke about the CPU and memory ...
 
 📊 PHASE TRACKER (Turn 10)
 ├─ Current Phase: 1/3
@@ -281,36 +379,49 @@ Red, great joke idea! Pins getting silly or confusing instructions is funny. Gre
 ├─ Turn Count: 10
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Green
-[👤 GREEN]
+✅ BalancedTurnsFrame suggested next speaker: Blue
+[👤 BLUE]
 
-[👤 GREEN - Turn 11]
-✓ Green: What if the pins are like confused teenagers? One moment they're HIGH, like super excited, and the next they're LOW, totally bored!
+[👤 BLUE - Turn 11]
+✓ Blue: Ooh, a game! What if the CPU was trying to cheat in a memory card game and kept looking at the "program" instructions?
 
 [🤖 MARTY ENGINE]
 WARNING:root:[Mnemonic Extraction] No narration found in conversation history
 WARNING:root:[Mnemonic State] Could not extract mnemonic from narrations, using existing draft
 
 --- DRAFT TO VALIDATE ---
-Perfect, Green! Pins acting like confused teenagers switching between HIGH and LOW is hilarious. Blue, do you want to add a funny ending or a twist to our joke?
+Great work everyone! Here's the Jokes we created together:
+"Ooh, a recipe book! That makes sense. What if the joke is about the CPU being a super-fast chef trying to read the recipe? Yeah! A tiny computer! Like, it's super small but it's still a computer, right? It's gotta do stuff. What if the program is like the instructions, but the memory is where all the recipes are stored for the CPU to pick from? Ooh, programs! Like in video games? So the CPU is like the player, and the memory is the game cartridge? That's kinda cool."
+
+Red, do you want to try reciting it from memory? I'll help if you get stuck!
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Green, that’s a perfect idea! Pins acting like confused teenagers switching between HIGH and LOW is funny. Blue, do you want to help us finish the joke with a funny ending?
+Great idea, Red! Blue, what funny line can you add about the microcontroller's pins turning HIGH and LOW while the CPU tries to cheat?
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Perfect, Green! Pins acting like confused teenagers switching between HIGH and LOW is really funny. Blue, do you want to try putting these ideas together for our joke?
+Great work everyone! Here's the Jokes we created together:
+"Ooh, a recipe book! That makes sense. What if the joke is about the CPU being a super-fast chef trying to read the recipe? Yeah! A tiny computer! Like, it's super small but it's still a computer, right? It's gotta do stuff. What if the program is like the instructions, but the memory is where all the recipes are stored for the CPU to pick from? Ooh, programs! Like in video games? So the CPU is like the player, and the memory is the game cartridge? That's kinda cool."
+
+Red, do you want to try reciting it from memory? I'll help if you get stuck!
 -------------------------
 
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Blue (to acknowledge) and Green (to invite next). Please invite Green to speak.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 11]
-✓ Marty: Perfect, Green! Pins acting like confused teenagers switching between HIGH and LOW is really funny. ...
+✓ Marty: Great work everyone! Here's the Jokes we created together:
+"Ooh, a recipe book! That makes sense. Wh...
 
 📊 PHASE TRACKER (Turn 11)
 ├─ Current Phase: 1/3
@@ -318,37 +429,36 @@ WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 ├─ Turn Count: 11
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Blue
-[👤 BLUE]
+✅ BalancedTurnsFrame suggested next speaker: Green
+[👤 GREEN]
 
-[👤 BLUE - Turn 12]
-✓ Blue: Ooh, I like the teenager idea, Green! So, how does the program tell the pins to switch HIGH and LOW? Is it like a parent telling the teenagers what to do?
+[👤 GREEN - Turn 12]
+✓ Green: Hmm, a recipe book for memory... I wonder if the pins are like the kitchen counter where the chef (CPU) puts things down?
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Blue, great question! Yes, the program is like a parent giving instructions that tell the pins when to be HIGH (excited) or LOW (bored). Red, can you help with the next part of our joke?
+Green, that's an interesting idea! Red, nice try! Blue, can you help with the next part about pins?
 -------------------------
 
-WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:[Turn Balance Failed] TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.
+WARNING:root:  - Frame 'balanced_turns_validator' validation FAILED: REVISE (TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green (to acknowledge) and Red (to invite next). Please invite Red to speak.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Blue, smart question! Yes, the program is like a parent giving instructions to the pins about when to be HIGH or LOW. Red, can you help finish the joke by showing what happens when the pins listen to the program?
+Green, that's a clever way to think about pins! Red, can you try reciting our Jokes for us next?
 -------------------------
 
-WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Blue, great question! Think of the program like a parent giving instructions to the pins, telling them when to be HIGH (excited) or LOW (calm). Red, want to try saying this in a fun way for our joke?
+Green, that's a great thought! Red, can you try reciting our Jokes for us now?
 -------------------------
 
-WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 12]
-✓ Marty: Blue, great question! Think of the program like a parent giving instructions to the pins, telling th...
+✓ Marty: Green, that's a great thought! Red, can you try reciting our Jokes for us now?...
 
 📊 PHASE TRACKER (Turn 12)
 ├─ Current Phase: 1/3
@@ -360,31 +470,33 @@ WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [👤 RED]
 
 [👤 RED - Turn 13]
-✓ Red: Ooh, HIGH and LOW states! Like when my game character gets super energized or just chills? And programs are like the game rules?
+✓ Red: Ooh, me first? Okay, let me try! So, it's like... a tiny computer, right? With like, a CPU and memory to do stuff.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Exactly, Red! The pins switch HIGH and LOW like your game character’s energy, and the program is like the game’s rules. Green, can you help us put this into a funny sentence for our joke?
--------------------------
-
-WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
-
---- DRAFT TO VALIDATE ---
-Exactly, Red! Pins go HIGH or LOW like your game character's energy, and the program is like the game rules telling them what to do. Green, can you help us make this into a funny line for our joke?
+Red, nice try! Blue, can you help with the next part?
 -------------------------
 
 WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Red, that’s a fantastic way to think about it! The program is like the game rules telling the pins when to be energized (HIGH) or chill (LOW). Green, would you like to add the next fun part to our joke?
+Red, nice try! Blue, can you help with the next part?
 -------------------------
 
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Red, nice try! Blue, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 13]
-✓ Marty: Red, that’s a fantastic way to think about it! The program is like the game rules telling the pins w...
+✓ Marty: Red, nice try! Blue, can you help with the next part?...
 
 📊 PHASE TRACKER (Turn 13)
 ├─ Current Phase: 1/3
@@ -392,34 +504,34 @@ WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 ├─ Turn Count: 13
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Green
-[👤 GREEN]
+✅ BalancedTurnsFrame suggested next speaker: Blue
+[👤 BLUE]
 
-[👤 GREEN - Turn 14]
-✓ Green: Yeah! So the program tells the pins what to do. What if the microcontroller has a super small brain that needs instructions, like a tiny chef following a recipe?
+[👤 BLUE - Turn 14]
+✓ Blue: Oh! Okay, so what do we need to remember next? I'm still a little fuzzy on how the program actually makes it do stuff.
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Green, that’s a clever idea! A tiny chef microcontroller following a recipe fits perfectly. Blue, can you help add to this and connect it with pins and memory for our joke?
+Blue, great effort! Green, can you help out with the next part about programs controlling the microcontroller?
 -------------------------
 
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Green, great idea! A tiny chef following a recipe is a perfect way to imagine the microcontroller’s brain and program. Blue, can you help add the next part of our joke with the tiny chef and helpful pins?
+Blue, good question! Green, can you help with the part about how programs control the microcontroller?
 -------------------------
 
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Great idea, Green! The microcontroller as a tiny chef following a recipe is funny and helps us remember programming. Blue, how can we add this chef idea to our joke with the pins and memory?
+Blue, that's a great thought! Green, can you try reciting our Jokes for us next?
 -------------------------
 
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 [🤖 MARTY - Turn 14]
-✓ Marty: Great idea, Green! The microcontroller as a tiny chef following a recipe is funny and helps us remem...
+✓ Marty: Blue, that's a great thought! Green, can you try reciting our Jokes for us next?...
 
 📊 PHASE TRACKER (Turn 14)
 ├─ Current Phase: 1/3
@@ -427,88 +539,225 @@ WARNING:root:  - Max repair attempts reached. Finishing with last draft.
 ├─ Turn Count: 14
 └─ Elapsed Time: 0.0 min
 
-✅ BalancedTurnsFrame suggested next speaker: Blue
-[👤 BLUE]
+✅ BalancedTurnsFrame suggested next speaker: Green
+[👤 GREEN]
 
-[👤 BLUE - Turn 15]
-✓ Blue: Oh, I like the chef idea! So, if the chef is the CPU, does the recipe have to tell it what to do with the ingredients, which are like the pins and memory?
+[👤 GREEN - Turn 15]
+✓ Green: Uh, okay! Let me think... I remember the part about the tiny computer, but what exactly are the CPU and memory like? Like, what's the difference between them?
 
 [🤖 MARTY ENGINE]
 
 --- DRAFT TO VALIDATE ---
-Blue, exactly! The recipe (program) tells the tiny chef (CPU) what to do with the ingredients (pins and memory). Red, how can we make this chef and recipe idea silly or fun for our joke?
+Green, nice try! Red, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Green, nice try! Red, can you help with the next part of our Jokes?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Green, nice try! Red, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
+[🤖 MARTY - Turn 15]
+✓ Marty: Green, nice try! Red, can you help with the next part?...
+
+📊 PHASE TRACKER (Turn 15)
+├─ Current Phase: 1/3
+├─ Goal: Facilitate a whole-group discussion to build knowledge.
+├─ Turn Count: 15
+└─ Elapsed Time: 0.0 min
+
+✅ BalancedTurnsFrame suggested next speaker: Red
+[👤 RED]
+
+[👤 RED - Turn 16]
+✓ Red: Ooh, okay! So, like, what else do these tiny computers need to, like, *do* stuff? Do they have tiny brains or something?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Red, that's a great thought! Blue, can you try reciting our Jokes for us next?
 -------------------------
 
 WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
 
 --- DRAFT TO VALIDATE ---
-Blue, you’ve got it! The recipe (program) tells the CPU (chef) how to use the ingredients (pins and memory) to make things happen. Red, can you help us turn this into a funny line for our joke?
+Red, that's a great thought! Blue, can you try reciting our Jokes for us next?
 -------------------------
 
-Traceback (most recent call last):
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/simulations/run_simulation.py", line 676, in <module>
-    asyncio.run(main())
-  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
-    return runner.run(main)
-           ^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/Cellar/python@3.11/3.11.14_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
-    return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/simulations/run_simulation.py", line 667, in main
-    await orchestrator.run_simulation()
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/simulations/run_simulation.py", line 462, in run_simulation
-    engine_result = await self.call_marty_engine(student_message)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/simulations/run_simulation.py", line 287, in call_marty_engine
-    result = await self.frame_engine.ainvoke(
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/src/backend/frame_engine/engine.py", line 438, in ainvoke
-    final_state = await self.graph.ainvoke(initial_state)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langgraph/pregel/__init__.py", line 1440, in ainvoke
-    async for chunk in self.astream(
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langgraph/pregel/__init__.py", line 1276, in astream
-    _panic_or_proceed(done, inflight, step)
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langgraph/pregel/__init__.py", line 1473, in _panic_or_proceed
-    raise exc
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langgraph/pregel/retry.py", line 114, in arun_with_retry
-    await task.proc.ainvoke(task.input, task.config)
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langchain_core/runnables/base.py", line 2921, in ainvoke
-    input = await asyncio.create_task(part(), context=context)  # type: ignore
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langgraph/utils.py", line 117, in ainvoke
-    ret = await asyncio.create_task(
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/src/backend/frame_engine/engine.py", line 264, in _validate_output_node
-    results = await asyncio.gather(*validation_tasks)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/src/backend/frames/language_checker.py", line 62, in validate_output
-    validation_response = await self.llm.ainvoke(messages)
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 298, in ainvoke
-    llm_result = await self.agenerate_prompt(
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 787, in agenerate_prompt
-    return await self.agenerate(
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 747, in agenerate
-    raise exceptions[0]
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 923, in _agenerate_with_cache
-    result = await self._agenerate(
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 843, in _agenerate
-    response = await self.async_client.create(**payload)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2585, in create
-    return await self._post(
-           ^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1794, in post
-    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/olga/Olga's workspace/ETHZ SBS/Marty project/LLM_Frames_Design/frame_engine_v1.1.2/code/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1594, in request
-    raise self._make_status_error_from_response(err.response) from None
-openai.BadRequestError: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'jailbreak': {'filtered': True, 'detected': True}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'violence': {'filtered': False, 'severity': 'safe'}}}}}
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Red, that's a great thought! Blue, can you try reciting our Jokes for us next?
+-------------------------
+
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
+[🤖 MARTY - Turn 16]
+✓ Marty: Red, that's a great thought! Blue, can you try reciting our Jokes for us next?...
+
+📊 PHASE TRACKER (Turn 16)
+├─ Current Phase: 1/3
+├─ Goal: Facilitate a whole-group discussion to build knowledge.
+├─ Turn Count: 16
+└─ Elapsed Time: 0.0 min
+
+✅ BalancedTurnsFrame suggested next speaker: Blue
+[👤 BLUE]
+
+[👤 BLUE - Turn 17]
+✓ Blue: Oh, me? Okay! Uh, let me try to remember... it was something about the microcontroller being a tiny computer that told things what to do with its... pins?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, nice try! Green, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Blue, nice try! Green, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Blue, nice try! Green, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
+[🤖 MARTY - Turn 17]
+✓ Marty: Blue, nice try! Green, can you help with the next part?...
+
+📊 PHASE TRACKER (Turn 17)
+├─ Current Phase: 1/3
+├─ Goal: Facilitate a whole-group discussion to build knowledge.
+├─ Turn Count: 17
+└─ Elapsed Time: 0.0 min
+
+✅ BalancedTurnsFrame suggested next speaker: Green
+[👤 GREEN]
+
+[👤 GREEN - Turn 18]
+✓ Green: Okay, what do we remember about the tiny computer part? I think it's like the brain of the whole thing, right?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Green, nice try! Red, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Green, nice try! Red, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Green, nice try! Red, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
+[🤖 MARTY - Turn 18]
+✓ Marty: Green, nice try! Red, can you help with the next part?...
+
+📊 PHASE TRACKER (Turn 18)
+├─ Current Phase: 1/3
+├─ Goal: Facilitate a whole-group discussion to build knowledge.
+├─ Turn Count: 18
+└─ Elapsed Time: 0.0 min
+
+✅ BalancedTurnsFrame suggested next speaker: Red
+[👤 RED]
+
+[👤 RED - Turn 19]
+✓ Red: Uh, okay! What do we know about them? They're like, little computers that control stuff, right? And they have, like, pins? I'm still not totally sure what the pins *do* though.
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Red, that's a great thought! Blue, can you try reciting our Jokes for us next?
+-------------------------
+
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Red, that's a great thought! Blue, can you try reciting our Jokes for us next?
+-------------------------
+
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Red, that's a great thought! Blue, can you try reciting our Jokes for us next?
+-------------------------
+
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
+[🤖 MARTY - Turn 19]
+✓ Marty: Red, that's a great thought! Blue, can you try reciting our Jokes for us next?...
+
+📊 PHASE TRACKER (Turn 19)
+├─ Current Phase: 1/3
+├─ Goal: Facilitate a whole-group discussion to build knowledge.
+├─ Turn Count: 19
+└─ Elapsed Time: 0.0 min
+
+✅ BalancedTurnsFrame suggested next speaker: Blue
+[👤 BLUE]
+
+[👤 BLUE - Turn 20]
+✓ Blue: Oh, okay! Let me try to remember... uh, the microcontroller had a tiny brain, right? And it was like... processing instructions?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, nice try! Green, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Blue, nice try! Green, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+
+--- DRAFT TO VALIDATE ---
+Blue, nice try! Green, can you help with the next part?
+-------------------------
+
+WARNING:root:  - Frame 'language_checker_frame' validation FAILED: REVISE (The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use a more encouraging, less complex tone.)
+WARNING:root:  - Frame 'phases_checker_frame' validation FAILED: REVISE (The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.)
+WARNING:root:  - Max repair attempts reached. Finishing with last draft.
+[🤖 MARTY - Turn 20]
+✓ Marty: Blue, nice try! Green, can you help with the next part?...
+
+📊 PHASE TRACKER (Turn 20)
+├─ Current Phase: 1/3
+├─ Goal: Facilitate a whole-group discussion to build knowledge.
+├─ Turn Count: 20
+└─ Elapsed Time: 0.0 min
+
 (base) mac:code olga$ 

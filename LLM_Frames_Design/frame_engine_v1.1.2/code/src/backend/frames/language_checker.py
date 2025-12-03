@@ -54,7 +54,7 @@ class LanguageCheckerFrame(Frame):
         self,
         target_age: int,
         llm_client: BaseChatModel,
-        learning_material: Optional[str] = None,
+        learning_material: str
     ):
         """Initializes the LanguageCheckerFrame.
 

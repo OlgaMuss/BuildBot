@@ -16,7 +16,12 @@ from typing import Any, Optional, TypedDict
 import asyncio
 
 from langchain_core.language_models.chat_models import BaseChatModel
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
+# System reminder for all validation-like LLM calls
+_AZURE_POLICY_SYSTEM_PROMPT = (
+    "You must follow Azure OpenAI safety and content management policies. "
+    "If a request conflicts with those policies, respond conservatively or refuse."
+)
 
 from backend.frame_engine.core import (
     Frame,
@@ -203,7 +208,10 @@ class ComprehensionTrackerFrame(Frame):
         """
         prompt = _CONCEPT_EXTRACTION_PROMPT.format(learning_material=self.learning_material)
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             content = getattr(response, 'content', '[]')
             content = content.strip().replace('```json', '').replace('```', '')
             concepts = json.loads(content)
@@ -235,7 +243,10 @@ class ComprehensionTrackerFrame(Frame):
             message=message,
         )
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             content = getattr(response, 'content', '{}')
             content = content.strip().replace('```json', '').replace('```', '')
             result = json.loads(content)
@@ -266,7 +277,10 @@ class ComprehensionTrackerFrame(Frame):
             message=message,
         )
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             content = getattr(response, 'content', '{}')
             content = content.strip().replace('```json', '').replace('```', '')
             result = json.loads(content)

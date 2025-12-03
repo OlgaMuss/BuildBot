@@ -17,8 +17,8 @@
 - [Pre-test link](https://descil.eu.qualtrics.com/jfe/form/SV_ehacrQaZqxbLv82?Q_CHL=qr)
 - Feedback link [Students](https://descil.eu.qualtrics.com/jfe/form/SV_en512DoS7TfRjp4?Q_CHL=qr) | [Teachers](https://descil.eu.qualtrics.com/jfe/form/SV_1FGHaiJwlJAzQNg?Q_CHL=qr)
 - [Pre-registration link](https://osf.io/k7ue2/overview)
-- [closed drive for slides](https://ethz-my.sharepoint.com/:f:/r/personal/lleisten_ethz_ch/Documents/PhD/2023/Projects/BuildBots/Deployment/Material/Curricula%20Material/Slides?csf=1&web=1&e=fCK14a)
-
+- [closed drive for slides](https://ethz-my.sharepoint.com/:f:/r/personal/lleisten_ethz_ch/Documents/PhD/2023/Projects/BuildBots/Deployment/Material/Curricula%20Material/Slides?csf=1&web=1&e=cCK14a)
+- [Frames Simulation App](https://buildbot-4tzkvoxzssupnzkb9e6va4.streamlit.app)
 
 ### 👩‍🏫 For Teachers
 - [Teachers Guide - to be updated ](https://github.com/OlgaMuss/BuildBot/blob/main/Teaching%20materials/Teachers_Guide.md)

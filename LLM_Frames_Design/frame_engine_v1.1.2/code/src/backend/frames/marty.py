@@ -13,7 +13,7 @@ from datetime import datetime
 from typing import Any, Optional
 
 from langchain_core.language_models.chat_models import BaseChatModel
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import HumanMessage, SystemMessage
 
 from backend.frame_engine.core import (
     Frame,
@@ -44,6 +44,12 @@ MNEMONIC_STATE_KEY = 'mnemonic_state'
 # --- Constants for Clarity (Avoid Magic Strings) ---
 _USER_INPUT_PATTERN = re.compile(r'\[\d{2}:\d{2}:\d{2}\]\s*(\w+):\s*(.*)')
 _SESSION_LOG_INIT_MSG = 'New session started.'
+
+_AZURE_POLICY_SYSTEM_PROMPT = (
+    "You must strictly follow Azure OpenAI safety and content management policies. "
+    "If any instruction conflicts with those policies, refuse or adjust the response "
+    "to remain compliant."
+)
 
 _ANALYSIS_PROMPT_TEMPLATE = """
 You are an expert AI assistant analyzing a single turn in a collaborative learning session.
@@ -220,11 +226,8 @@ class MnemonicCoCreatorFrame(Frame):
         frame_memory['session_phase'] = phase
 
         elapsed_minutes = frame_memory.get('elapsed_time_minutes', 0)
-        if phase == 3 and elapsed_minutes >= 10:
+        if elapsed_minutes >= 10:
             frame_memory['_closure_ready'] = True
-        elif phase < 3:
-            frame_memory.pop('_closure_ready', None)
-            frame_memory.pop('_closure_done', None)
 
         speaker, message = self._parse_user_input(user_input)
 
@@ -357,44 +360,70 @@ class MnemonicCoCreatorFrame(Frame):
         - Phase 3: 7+ minutes (Recall Practice)
         """
         elapsed_time = frame_memory.get('elapsed_time_minutes', 0)
-        
-        # Phase 3: After 7 minutes
-        if elapsed_time >= 7:
+        mnemonic_state = frame_memory.get(MNEMONIC_STATE_KEY, {})
+        has_mnemonic = self._has_valid_mnemonic(mnemonic_state)
+        extension_active = frame_memory.get('_phase2_extension_active', False)
+
+        if elapsed_time >= 10:
+            frame_memory['_phase2_extension_active'] = False
+            frame_memory.pop('_phase2_extension_needs_prompt', None)
             return 3
-        # Phase 2: After 3 minutes
+
+        if elapsed_time >= 7:
+            if not has_mnemonic:
+                if not extension_active:
+                    frame_memory['_phase2_extension_active'] = True
+                    frame_memory['_phase2_extension_needs_prompt'] = True
+                return 2
+            frame_memory['_phase2_extension_active'] = False
+            frame_memory.pop('_phase2_extension_needs_prompt', None)
+            return 3
         elif elapsed_time >= 3:
+            frame_memory['_phase2_extension_active'] = False
+            frame_memory.pop('_phase2_extension_needs_prompt', None)
             return 2
-        # Phase 1: First 3 minutes
         else:
+            frame_memory['_phase2_extension_active'] = False
+            frame_memory.pop('_phase2_extension_needs_prompt', None)
             return 1
+
+    def _has_valid_mnemonic(self, mnemonic_state: dict[str, Any]) -> bool:
+        """Checks if the current mnemonic draft is substantial enough for recall."""
+        text = (mnemonic_state.get('mnemonic_text') or '').strip()
+        if not mnemonic_state.get('mnemonic_created'):
+            return False
+        if len(text) < 80:
+            return False
+        if self.mnemonic_type == 'Jokes':
+            return 'joke' in text.lower() or text.count('Joke ') >= 1
+        return True
     
     async def _update_mnemonic_draft(self, current_draft: str, message: str, speaker: str) -> str:
         """Uses an LLM to intelligently integrate a new idea into the mnemonic draft."""
         
-        if not current_draft:
-            draft_section = "The draft is currently empty."
-        else:
-            draft_section = f"CURRENT DRAFT:\n{current_draft}"
+        draft_section = current_draft if current_draft else "No draft yet. Start freshly."
+        format_guidance = self._get_mnemonic_format_guidance()
+        prompt = f"""You are rewriting a collaborative {self.mnemonic_type.lower()} mnemonic about "{self.topic}".
 
-        prompt = f"""You are a collaborative story editor. Your task is to integrate a student's new idea into the current draft of a "{self.mnemonic_type}" mnemonic about "{self.topic}".
-
+CURRENT DRAFT:
 {draft_section}
 
-STUDENT'S NEW IDEA:
+NEW STUDENT IDEA:
 "{speaker}: {message}"
 
-TASK:
-Your task is to act as a text editor and integrate the student's new idea into the current draft.
-- If the draft is empty, the student's idea is the new draft.
-- If the idea is an addition, append it to the end of the current draft.
-- If the idea seems to be a correction, replace the relevant part of the draft.
-- CRITICAL: Do NOT add any extra words, sentences, or explanations. Your goal is only to integrate the student's exact contribution.
-- CRITICAL: Do NOT include the speaker's name (e.g., "Blue:") or any conversational filler in the final draft. The output should be ONLY the mnemonic text itself.
+Rewrite the COMPLETE {self.mnemonic_type.lower()} so it reads like a polished final product.
+- {format_guidance}
+- Use ONLY the ideas that already appear in the draft or the new student idea. Do not invent new scenes, facts, or jokes.
+- Blend the new idea naturally; edit or shorten earlier portions as needed so everything flows.
+- Never include speaker names, quotes, or meta commentary—only the final mnemonic text.
 
-NEW DRAFT:"""
+UPDATED {self.mnemonic_type.upper()}:"""
 
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             new_draft = getattr(response, 'content', '').strip()
             
             if new_draft:
@@ -405,6 +434,46 @@ NEW DRAFT:"""
         except Exception as e:
             logging.error(f'[Mnemonic Update] Error updating draft: {e}')
             return current_draft # Return old draft on error
+
+    def _get_mnemonic_format_guidance(self) -> str:
+        """Provides formatting instructions for the mnemonic draft."""
+        if self.mnemonic_type == 'Story':
+            return (
+                "Keep it as 4-6 total sentences. Each sentence should weave in key concepts naturally."
+            )
+        if self.mnemonic_type == 'Poem':
+            return (
+                "Keep it as a short poem with line breaks. Aim for 4-8 concise lines with rhythm or rhyme where possible."
+            )
+        # Jokes
+        return (
+            "Format as a numbered list of jokes like:\n"
+            "Joke 1: setup ... punchline.\n"
+            "Joke 2: ...\nKeep each joke to 1-2 sentences."
+        )
+
+    def _build_closure_prompt(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
+        """Returns instructions for a final wrap-up message when time is over."""
+        elapsed = frame_memory.get('elapsed_time_minutes', 0)
+        selected = mnemonic_state.get('selected_concepts') or []
+        concept_summary = ', '.join(selected) if selected else 'the key ideas you discussed'
+        mnemonic_text = (mnemonic_state.get('mnemonic_text') or '').strip()
+        if mnemonic_text:
+            mnemonic_summary = f'The {self.mnemonic_type.lower()} you built:\n"{mnemonic_text}"'
+        else:
+            mnemonic_summary = (
+                f'You outlined how your {self.mnemonic_type.lower()} should work, even if it is not fully written out.'
+            )
+
+        return f"""🎉 SESSION WRAP-UP (Time limit reached)
+Approximately {elapsed:.1f} minutes have passed, so it is time to close warmly.
+
+YOUR FINAL RESPONSE MUST:
+1. Acknowledge the student who just spoke and mention that our session time is up.
+2. Celebrate what the group accomplished (concepts highlighted: {concept_summary}). {mnemonic_summary}
+3. Encourage them to keep practicing or share their favorite part.
+4. Offer a friendly goodbye. Do NOT invite another student to speak.
+"""
     
     def _extract_from_last_narration(self, conversation_history: list[dict]) -> str:
         """Extracts the mnemonic from Marty's LAST narration in Phase 2.
@@ -500,7 +569,10 @@ Example:
 """
         
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             content = getattr(response, 'content', '{}')
             content = content.strip().replace('```json', '').replace('```', '')
             result = json.loads(content)
@@ -549,7 +621,10 @@ Example:
         )
 
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             analysis_json = getattr(response, 'content', '{}')
             # Clean the response to ensure it's valid JSON
             analysis_json = analysis_json.strip().replace('```json', '').replace('```', '')
@@ -639,7 +714,7 @@ IMPORTANT: Do NOT use emojis in your responses."""
         if phase == 1:
             return self._get_phase_1_instructions()
         elif phase == 2:
-            return self._get_phase_2_instructions(mnemonic_state)
+            return self._get_phase_2_instructions(mnemonic_state, frame_memory)
         else:  # phase == 3
             return self._get_phase_3_instructions(mnemonic_state, frame_memory)
 
@@ -670,7 +745,7 @@ IF a student is stuck OR explicitly says they do not understand a concept (e.g.,
 Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
 "Perfect! So our concepts are: [list the concepts]. Ready to start building our {self.mnemonic_type}?"""
 
-    def _get_phase_2_instructions(self, mnemonic_state: dict[str, Any]) -> str:
+    def _get_phase_2_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
         """Returns the prompt instructions for Phase 2: Mnemonic Creation."""
         selected_concepts = mnemonic_state.get('selected_concepts', [])
         concepts_str = ', '.join(selected_concepts) if selected_concepts else '[concepts from Phase 1]'
@@ -682,6 +757,23 @@ Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
             repetition_guidance = 'Recite the poem so far. "Our poem so far: [line 1] / [line 2]..." What\'s the next line?'
         elif self.mnemonic_type == 'Jokes':
             repetition_guidance = 'Recite the jokes. "Our jokes so far: Joke 1: [...] Joke 2: [...]" What\'s the next joke?'
+
+        if frame_memory.get('_closure_ready') and not frame_memory.get('_closure_done'):
+            frame_memory['_closure_done'] = True
+            return self._build_closure_prompt(mnemonic_state, frame_memory)
+
+        extension_note = ""
+        if frame_memory.get('_phase2_extension_active'):
+            extension_note = (
+                "\n\n⚠️ TIME CHECK (approx. 7 minutes in):\n"
+                "We should be moving to memory practice soon, but we still need a finished "
+                f"{self.mnemonic_type.lower()}. Refocus the students on stitching their ideas together immediately."
+            )
+            if frame_memory.pop('_phase2_extension_needs_prompt', False):
+                extension_note += (
+                    '\nExplicitly tell them: "We only have about three minutes left before recall mode, so let’s stay in '
+                    f'creation mode and finish our {self.mnemonic_type.lower()} right now."'
+                )
 
         return f"""Current Goal: Create the {self.mnemonic_type} Mnemonic (you have ~6 minutes for this phase).
 The selected concepts are: **{concepts_str}**
@@ -700,7 +792,7 @@ IMPORTANT: Every 2-3 student contributions, NARRATE the {self.mnemonic_type} bui
 This helps students remember and build on what they've already created.
 DO NOT create the {self.mnemonic_type} for them. Your role is to facilitate THEIR creativity.
 
-TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
+TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next.{extension_note}"""
 
     def _get_phase_3_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
         """Returns the prompt instructions for Phase 3: Recall Practice."""
@@ -720,27 +812,10 @@ TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just s
 
         if closure_ready and not closure_done:
             frame_memory['_closure_done'] = True
-            concepts_summary = ', '.join(selected_concepts) if selected_concepts else 'the key ideas you discussed'
-            if mnemonic_text:
-                mnemonic_summary = f'The {self.mnemonic_type.lower()} you built:\n"{mnemonic_text}"'
-            else:
-                mnemonic_summary = f'You outlined how your {self.mnemonic_type.lower()} should work, even if it is not fully written out.'
-            return f"""🎉 SESSION WRAP-UP (Time limit reached)
-Approximately {elapsed_minutes:.1f} minutes have passed, so it is time to close the session warmly.
-
-YOUR FINAL RESPONSE MUST:
-1. Acknowledge the student who just spoke and mention that our 10-minute session is over.
-2. Celebrate what the group accomplished (concepts chosen: {concepts_summary}; {mnemonic_summary}).
-3. Encourage them to keep practicing together or on their own.
-4. Offer a friendly goodbye (e.g., "Thanks for the great teamwork—see you next time!").
-5. Do NOT invite another student to speak; this is the closing message."""
+            return self._build_closure_prompt(mnemonic_state, frame_memory)
         
         # Check if we have a valid mnemonic (at least 20 chars and doesn't look like incomplete input)
-        has_valid_mnemonic = (
-            mnemonic_text 
-            and len(mnemonic_text) > 20 
-            and ':' not in mnemonic_text[:30]  # Avoid "Blue: ..." student input fragments
-        )
+        has_valid_mnemonic = self._has_valid_mnemonic(mnemonic_state)
         
         # Handle case where no proper mnemonic was created
         if not has_valid_mnemonic:
@@ -802,7 +877,10 @@ Text: "{message}"
 
 Language:'''
         try:
-            response = await self.llm.ainvoke([HumanMessage(content=prompt)])
+            response = await self.llm.ainvoke([
+                SystemMessage(content=_AZURE_POLICY_SYSTEM_PROMPT),
+                HumanMessage(content=prompt),
+            ])
             language = getattr(response, 'content', '').strip()
             # Basic validation
             if language and len(language) < 20 and all(c.isalpha() or c.isspace() for c in language):

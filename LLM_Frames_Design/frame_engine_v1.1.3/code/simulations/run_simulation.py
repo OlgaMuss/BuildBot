@@ -1,13 +1,13 @@
 """
-Automated Multi-Turn Simulation for Marty Frame Engine v1.1.2
-Using Azure OpenAI (SBS Marty deployment)
+Automated Multi-Turn Simulation for Marty Frame Engine v1.1.3
+Using Google Gemini 2.5 Flash Lite
 
 This script adapts the original azure_simulation.py to work with the
 FrameEngineV1 architecture. It is designed to be located in the
-`frame_engine_v1.1.2/simulations` directory.
+`frame_engine_v1.1.3/simulations` directory.
 
 Usage:
-    # From the `frame_engine_v1.1.2` directory:
+    # From the `frame_engine_v1.1.3` directory:
     # python simulations/run_simulation.py --scenario balanced_session --turns 25
 """
 import argparse
@@ -147,8 +147,8 @@ class SimulationOrchestrator:
             self.app_config = yaml.safe_load(f)
 
         llm_config = self.app_config.get('llm', {})
-        engine_provider = llm_config.get('provider', 'azure')
-        engine_model = llm_config.get('model_name', 'gpt-4.1-mini')
+        engine_provider = llm_config.get('provider', 'google')
+        engine_model = llm_config.get('model_name', 'gemini-2.5-flash-lite')
 
 
         # Initialize the LLM client for the Frame Engine (same logic as frontend)
@@ -283,7 +283,7 @@ class SimulationOrchestrator:
             llm_client=self.llm_client,
             session_logger=self.session_logger
         )
-        print("✅ FrameEngine V1.1.2 Initialized")
+        print("✅ FrameEngine V1.1.3 Initialized")
         return engine
 
     def _initialize_memory(self) -> Dict:
@@ -621,7 +621,7 @@ async def main():
 
 if __name__ == "__main__":
     print("="*70)
-    print("MARTY FRAME ENGINE V1.1.2 - AUTOMATED SIMULATION")
+    print("MARTY FRAME ENGINE V1.1.3 - AUTOMATED SIMULATION")
     print("="*70)
     
     if len(sys.argv) > 1:

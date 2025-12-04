@@ -1,0 +1,251 @@
+======================================================================
+MARTY FRAME ENGINE V1.1.1 - AUTOMATED SIMULATION
+======================================================================
+
+Running demo simulation (15 turns, age 14)...
+
+✅ Student simulation using Google AI model: gemini-2.5-flash-lite
+✅ Frame Engine using google: gemini-2.5-flash-lite
+✅ FrameEngine V1.1.1 Initialized with 5 frames (same config as frontend)
+
+======================================================================
+AUTOMATED SIMULATION: demo
+Max Turns: 15
+Student Model: gemini-2.5-flash-lite
+======================================================================
+
+[👤 GREEN - Turn 1]
+✓ Green: Hey Marty! I'm Green and I'm working with Red and Blue on microcontrollers and we need to create a story.
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Hey Green! That's awesome you're building a story about microcontrollers! To get us started, can you tell me what you already know about microcontrollers?
+-------------------------
+
+[🤖 MARTY - Turn 1]
+✓ Marty: Hey Green! That's awesome you're building a story about microcontrollers! To get us started, can you...
+✅ Marty asked a question to Green, giving them the turn.
+[👤 GREEN]
+
+[👤 GREEN - Turn 2]
+✓ Green: I think a microcontroller is like a tiny computer inside other things. And I remember seeing one called an ESP32?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Green, that's a great start! You're right, a microcontroller is like a tiny computer. Red, what do you think a microcontroller might be used for?
+-------------------------
+
+[🤖 MARTY - Turn 2]
+✓ Marty: Green, that's a great start! You're right, a microcontroller is like a tiny computer. Red, what do y...
+✅ Marty asked a question to Red, giving them the turn.
+[👤 RED]
+
+[👤 RED - Turn 3]
+✓ Red: Ooh, like in video games? Or maybe controlling the lights on my bike? They're everywhere, right?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Red, those are super cool ideas! You're definitely on the right track that they're everywhere. Blue, building on Red's ideas, how do you think a microcontroller actually *does* something, like controlling those bike lights?
+-------------------------
+
+[🤖 MARTY - Turn 3]
+✓ Marty: Red, those are super cool ideas! You're definitely on the right track that they're everywhere. Blue,...
+✅ Marty asked a question to Red, giving them the turn.
+[👤 RED]
+
+[👤 RED - Turn 4]
+✓ Red: Yeah! Like, do they have little hands or something to push buttons? Or maybe they just send a signal?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+That's a fantastic question, Red! Thinking about "little hands" or sending signals gets us closer. Blue, based on that, what do you think are the important parts a microcontroller needs to connect to things and send signals?
+-------------------------
+
+[🤖 MARTY - Turn 4]
+✓ Marty: That's a fantastic question, Red! Thinking about "little hands" or sending signals gets us closer. B...
+✅ Marty asked a question to Blue, giving them the turn.
+[👤 BLUE]
+
+[👤 BLUE - Turn 5]
+✓ Blue: So, like, it needs those "pins" we talked about to physically connect, right? And maybe something inside that *decides* what signal to send out?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, you nailed it! Those "pins" are super important for connecting, and you're also thinking about the part that makes decisions. Now, let's think about how these microcontrollers get their power. Green, what did we learn about how microcontrollers get the energy they need to work?
+-------------------------
+
+[🤖 MARTY - Turn 5]
+✓ Marty: Blue, you nailed it! Those "pins" are super important for connecting, and you're also thinking about...
+✅ Marty asked a question to Green, giving them the turn.
+[👤 GREEN]
+
+[👤 GREEN - Turn 6]
+✓ Green: Oh yeah, the energy! I remember something about... like, a specific voltage? Like 3 volts?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+That's right, Green! Microcontrollers need a specific **voltage**, and 3 volts is a common one. Red, thinking about how we get that voltage to the microcontroller, what are the basic electrical connections it needs?
+-------------------------
+
+[🤖 MARTY - Turn 6]
+✓ Marty: That's right, Green! Microcontrollers need a specific **voltage**, and 3 volts is a common one. Red,...
+✅ Marty asked a question to Red, giving them the turn.
+[👤 RED]
+
+[👤 RED - Turn 7]
+✓ Red: Yeah, Marty! I remember seeing those little metal things sticking out. Are those the pins? Do they like... plug into stuff?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+You're totally right, Red! Those metal things are indeed the **pins**, and they're how the microcontroller connects to other things. Blue, can you explain what happens when the microcontroller uses those pins to connect and send signals?
+-------------------------
+
+[🤖 MARTY - Turn 7]
+✓ Marty: You're totally right, Red! Those metal things are indeed the **pins**, and they're how the microcont...
+✅ Marty asked a question to Blue, giving them the turn.
+[👤 BLUE]
+
+[👤 BLUE - Turn 8]
+✓ Blue: So the pins are like little hands that can push buttons or turn things on and off? And when they send signals, is that when they're HIGH or LOW?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, you're getting so close! The pins don't exactly "push buttons" themselves, but they *do* control whether things are on or off using those **HIGH** and **LOW** signals. Red, you mentioned something about deciding what signal to send. What's the brainy part inside the microcontroller that does that deciding?
+-------------------------
+
+[🤖 MARTY - Turn 8]
+✓ Marty: Blue, you're getting so close! The pins don't exactly "push buttons" themselves, but they *do* contr...
+✅ Marty asked a question to Red, giving them the turn.
+[👤 RED]
+
+[👤 RED - Turn 9]
+✓ Red: Ooh, the brainy part! Is that the CPU thingy? Like the processor in my computer?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Yes, Red, that's exactly right! The **CPU** is like the brain making decisions. So, we've got the CPU deciding, and the **pins** sending signals that are either **HIGH** or **LOW**. Green, what do you remember about *how* the microcontroller knows whether to send a HIGH or LOW signal?
+-------------------------
+
+[🤖 MARTY - Turn 9]
+✓ Marty: Yes, Red, that's exactly right! The **CPU** is like the brain making decisions. So, we've got the CP...
+✅ Marty asked a question to Green, giving them the turn.
+[👤 GREEN]
+
+[👤 GREEN - Turn 10]
+✓ Green: So the CPU is like the brain, but what does memory do? Is it like the brain's notebook, or something else? And what if HIGH and LOW are like a light switch being on or off?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Green, that's a fantastic analogy! Memory is indeed like a notebook where the microcontroller stores information. And you're spot on about HIGH and LOW being like a light switch being on or off!
+
+Blue, thinking about those HIGH and LOW signals, how does the microcontroller know *when* to switch between them? What tells it what to do?
+-------------------------
+
+[🤖 MARTY - Turn 10]
+✓ Marty: Green, that's a fantastic analogy! Memory is indeed like a notebook where the microcontroller stores...
+✅ Marty asked a question to Blue, giving them the turn.
+[👤 BLUE]
+
+[👤 BLUE - Turn 11]
+✓ Blue: So, like, does the program tell it *when* to switch? Is that where the "program" part comes in?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, you've hit the nail on the head! The **program** is exactly what tells the microcontroller when to switch those pins HIGH or LOW. It's like giving the microcontroller instructions.
+
+Now, we've covered a lot of ground! Let's think about the most important ideas for our story mnemonic. From what we've discussed, what do you think are the 3-5 *most essential* concepts about microcontrollers that we absolutely need to include in our story?
+-------------------------
+
+[🤖 MARTY - Turn 11]
+✓ Marty: Blue, you've hit the nail on the head! The **program** is exactly what tells the microcontroller whe...
+✅ Marty asked a question to Blue, giving them the turn.
+[👤 BLUE]
+
+[👤 BLUE - Turn 12]
+✓ Blue: So, the program is like the recipe for the microcontroller to follow? And we need to remember what a microcontroller *is*, right? Like a tiny computer inside things?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, that's a perfect way to put it! A program is like a recipe, and remembering that a microcontroller is a tiny computer inside things is key. Red, what's another super important concept we've talked about that helps the microcontroller actually *do* things?
+-------------------------
+
+[🤖 MARTY - Turn 12]
+✓ Marty: Blue, that's a perfect way to put it! A program is like a recipe, and remembering that a microcontro...
+✅ Marty asked a question to Red, giving them the turn.
+[👤 RED]
+
+[👤 RED - Turn 13]
+✓ Red: Ooh, yeah! I remember we talked about how they have these little sticky-out bits, right? Like, pins? What do those even do?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Red, you're right, those "sticky-out bits" are the **pins**! They're how the microcontroller connects to the world and controls other things. So, we have:
+
+1.  **Microcontroller:** A tiny computer inside things.
+2.  **Program:** Like a recipe telling it what to do.
+3.  **Pins:** The connectors that let it interact.
+
+Green, what's one more crucial idea about how those pins work that we should include?
+-------------------------
+
+[🤖 MARTY - Turn 13]
+✓ Marty: Red, you're right, those "sticky-out bits" are the **pins**! They're how the microcontroller connect...
+✅ Marty asked a question to Green, giving them the turn.
+[👤 GREEN]
+
+[👤 GREEN - Turn 14]
+✓ Green: I remember something about pins being like on/off switches, right? Like HIGH or LOW? What if it's about them being really dramatic about it?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Green, you're absolutely right that pins are like on/off switches, being **HIGH** or **LOW**! They aren't really "dramatic," but they are very precise about being either on or off.
+
+So, our core concepts for the mnemonic are shaping up:
+
+1.  **Microcontroller:** A tiny computer inside things.
+2.  **Program:** The recipe it follows.
+3.  **Pins:** Connectors that interact with the world.
+4.  **HIGH/LOW:** The on/off states of the pins.
+
+Blue, is there anything else from our chat that feels super important for understanding what a microcontroller *is* and *does*?
+-------------------------
+
+[🤖 MARTY - Turn 14]
+✓ Marty: Green, you're absolutely right that pins are like on/off switches, being **HIGH** or **LOW**! They a...
+✅ Marty asked a question to Blue, giving them the turn.
+[👤 BLUE]
+
+[👤 BLUE - Turn 15]
+✓ Blue: Yeah, I think we should remember that it's like, super small but really powerful! And how does the "program" actually tell it what to do? Like, what's inside that?
+
+[🤖 MARTY ENGINE]
+
+--- DRAFT TO VALIDATE ---
+Blue, you're totally right! They are small but mighty! And that "what's inside the program" question is brilliant. While we won't get into the deep technical details of *how* the program tells it what to do for this mnemonic, we know it's controlled by code.
+
+So, let's lock in our top concepts for the story mnemonic:
+
+1.  **Microcontroller:** A tiny computer inside everyday things.
+2.  **Program:** The instructions or "recipe" it follows.
+3.  **Pins:** The connectors that send signals.
+4.  **HIGH/LOW:** The "on" and "off" states of the pins.
+
+These four ideas will make a great foundation for our story! Ready to start brainstorming how to weave them together?
+-------------------------
+
+[🤖 MARTY - Turn 15]
+✓ Marty: Blue, you're totally right! They are small but mighty! And that "what's inside the program" question...

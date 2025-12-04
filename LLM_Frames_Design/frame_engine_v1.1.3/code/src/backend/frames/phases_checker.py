@@ -10,6 +10,7 @@ from backend.frame_engine.core import (
     FrameContext,
     ValidationAction,
     ValidationResult,
+    clean_llm_json_output,
 )
 from backend.frames.marty import PHASE_INSTRUCTIONS_KEY, SESSION_PHASE_KEY
 
@@ -115,7 +116,9 @@ class PhasesCheckerFrame(Frame):
         rationale = ''
 
         try:
-            parsed = json.loads(raw_content)
+            # Clean the raw content before parsing
+            cleaned_content = clean_llm_json_output(raw_content)
+            parsed = json.loads(cleaned_content)
             is_compliant = bool(parsed.get('complies'))
             rationale = parsed.get('rationale', '') or ''
             required_adjustment = parsed.get('required_adjustment', '') or ''

@@ -1,0 +1,2083 @@
+session_id: Microcontrollers_20251202_224219
+saved_at: '2025-12-02T23:01:40.443054'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Poem
+  students:
+  - Red
+  - Green
+  - Blue
+  target_age: 14
+events:
+- timestamp: '2025-12-02T22:42:19.183963'
+  event: Session initialized
+- timestamp: '2025-12-02T22:53:23.981871'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 1
+    speaker: Blue
+    message: we need to create a poem on microcontroller
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The student proposes creating a poem as the mnemonic format for the microcontroller topic.
+    summary: The student suggests creating a poem on microcontrollers.
+- timestamp: '2025-12-02T22:53:25.432311'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: &id002
+    - Robot Interface Controller (RIC)
+    - ESP32 module
+    - Arduino Nano
+    - Microcontroller
+    - CPU
+    - Memory
+    - Programmable input/output peripherals
+    - Everyday device applications
+    - Electrical power connections
+    - Pins
+    - 3V output
+    - HIGH state
+    - LOW state
+    - Programming
+    - Blockly
+    - C++
+    - WiFi connectivity
+    - Bluetooth connectivity
+    - Energy efficiency
+    per_turn_analysis: &id001
+      understood: []
+      confused: []
+    cumulative_assessments_updated: []
+    all_student_profiles: &id003
+      Red:
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        Microcontroller:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: not_seen
+          justification: null
+          turn: null
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: understood
+          justification: Understands that connections can be used to control devices
+          turn: 4
+        Everyday device applications:
+          level: not_seen
+          justification: null
+          turn: null
+        Electrical power connections:
+          level: understood
+          justification: Correctly identifies that 'Red' wires are associated with power use
+          turn: 4
+        Pins:
+          level: misconception
+          justification: The phrase 'the chip chops the pins' is factually incorrect and nonsensical, indicating a misunderstanding
+            of the function or nature of pins.
+          turn: 10
+        3V output:
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH state:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW state:
+          level: not_seen
+          justification: null
+          turn: null
+        Programming:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+        WiFi connectivity:
+          level: not_seen
+          justification: null
+          turn: null
+        Bluetooth connectivity:
+          level: not_seen
+          justification: null
+          turn: null
+        Energy efficiency:
+          level: not_seen
+          justification: null
+          turn: null
+      Green:
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        Microcontroller:
+          level: misconception
+          justification: The student says 'chips use tins', which is unclear and factually incorrect regarding microcontrollers
+            or chips; chips do not 'use tins'—this suggests misunderstanding of the physical or functional nature of microcontroller
+            chips.
+          turn: 12
+        CPU:
+          level: understood
+          justification: Student correctly states that the chip executes the program, identifying the CPU's role as the processor.
+          turn: 8
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: understood
+          justification: Student correctly suggests that the devices (implied by 'Green') execute programs, indicating understanding
+            that these components run code.
+          turn: 3
+        Everyday device applications:
+          level: understood
+          justification: Student appreciates that devices using the technology are widespread and commonly found everywhere.
+          turn: 6
+        Electrical power connections:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: misconception
+          justification: The student states 'pins are cheep', which appears to be a misspelling of 'cheap' but does not provide
+            accurate information about pins; pins are physical connectors, not inherently cheap or expensive in a meaningful
+            technical sense.
+          turn: 12
+        3V output:
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH state:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW state:
+          level: not_seen
+          justification: null
+          turn: null
+        Programming:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+        WiFi connectivity:
+          level: not_seen
+          justification: null
+          turn: null
+        Bluetooth connectivity:
+          level: not_seen
+          justification: null
+          turn: null
+        Energy efficiency:
+          level: not_seen
+          justification: null
+          turn: null
+      Blue:
+        Robot Interface Controller (RIC):
+          level: not_seen
+          justification: null
+          turn: null
+        ESP32 module:
+          level: not_seen
+          justification: null
+          turn: null
+        Arduino Nano:
+          level: not_seen
+          justification: null
+          turn: null
+        Microcontroller:
+          level: not_seen
+          justification: null
+          turn: null
+        CPU:
+          level: not_seen
+          justification: null
+          turn: null
+        Memory:
+          level: not_seen
+          justification: null
+          turn: null
+        Programmable input/output peripherals:
+          level: not_seen
+          justification: null
+          turn: null
+        Everyday device applications:
+          level: understood
+          justification: Student correctly associates the concept of making devices autonomous with practical device applications.
+          turn: 5
+        Electrical power connections:
+          level: not_seen
+          justification: null
+          turn: null
+        Pins:
+          level: confused
+          justification: The student mentions 'pins' but refers to them in a confusing and unclear way, indicating uncertainty
+            or incomplete understanding.
+          turn: 16
+        3V output:
+          level: not_seen
+          justification: null
+          turn: null
+        HIGH state:
+          level: not_seen
+          justification: null
+          turn: null
+        LOW state:
+          level: not_seen
+          justification: null
+          turn: null
+        Programming:
+          level: not_seen
+          justification: null
+          turn: null
+        Blockly:
+          level: not_seen
+          justification: null
+          turn: null
+        C++:
+          level: not_seen
+          justification: null
+          turn: null
+        WiFi connectivity:
+          level: not_seen
+          justification: null
+          turn: null
+        Bluetooth connectivity:
+          level: not_seen
+          justification: null
+          turn: null
+        Energy efficiency:
+          level: not_seen
+          justification: null
+          turn: null
+- timestamp: '2025-12-02T22:53:25.432483'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:53:25.432493'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:53:25.432498'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:53:25.434303'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:53:26.412329'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:26.412348'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:26.412559'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Red to speak next. They have participated
+      less than others. Please acknowledge Blue briefly, then ask Red a question.'
+- timestamp: '2025-12-02T22:53:26.412571'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:26.412576'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:27.553664'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:27.553678'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:27.553684'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:27.553688'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:27.553692'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:27.555986'
+  event: Turn 1
+  data:
+    speaker: Blue
+    user: we need to create a poem on microcontroller
+    assistant: Blue, that's a great idea to create a poem about microcontrollers! Red, what are some important things about
+      microcontrollers that you think we should include in our poem?
+    analysis:
+      _per_turn_comprehension: *id001
+- timestamp: '2025-12-02T22:53:41.987153'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 2
+    speaker: Red
+    message: i guess how it works
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The student introduces the idea of including how a microcontroller works as a key concept to incorporate
+      into the poem.
+    summary: The student suggests including how microcontrollers work in the poem.
+- timestamp: '2025-12-02T22:53:42.767811'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id004
+      understood: []
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Red
+      level: CONFUSED
+      justification: The student expresses uncertainty with 'i guess how it works', indicating lack of clear understanding.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:53:42.767972'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:53:42.767985'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:53:42.767991'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:53:42.770771'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:53:43.629011'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:43.629083'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:43.629102'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:43.629108'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:43.629113'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:53:43.632157'
+  event: Turn 2
+  data:
+    speaker: Red
+    user: i guess how it works
+    assistant: Good start, Red! How about you, Green? Which part of how a microcontroller works do you find important to remember?
+    analysis:
+      _per_turn_comprehension: *id004
+- timestamp: '2025-12-02T22:54:11.654694'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 3
+    speaker: Green
+    message: maybe that they execute programs
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The group is identifying key functional aspects of microcontrollers to include in the poem, focusing
+      on how microcontrollers execute programs.
+    summary: The student highlights that microcontrollers execute programs as an important concept.
+- timestamp: '2025-12-02T22:54:12.601916'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id005
+      understood:
+      - Programming
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Programmable input/output peripherals
+      level: UNDERSTOOD
+      justification: Student correctly suggests that the devices (implied by 'Green') execute programs, indicating understanding
+        that these components run code.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:54:12.602081'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:54:12.602091'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:54:12.602096'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:54:12.604636'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:54:12.604717'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:54:13.575650'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:13.575668'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:13.575811'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Green
+      (to acknowledge) and Red (to invite next). Please invite Red to speak.'
+- timestamp: '2025-12-02T22:54:13.575820'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:13.575826'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:14.500378'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:14.500398'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:14.500407'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:14.500413'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:14.500418'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:14.504507'
+  event: Turn 3
+  data:
+    speaker: Green
+    user: maybe that they execute programs
+    assistant: Great point, Green! Red, what else do you think is important about how microcontrollers work or what they do?
+    analysis:
+      _per_turn_comprehension: *id005
+- timestamp: '2025-12-02T22:54:46.499494'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 4
+    speaker: Red
+    message: well they use power and they control devices
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The group is gathering key functional details about microcontrollers, focusing on how they execute
+      programs, use power, and control devices to include in the poem.
+    summary: The student states that microcontrollers use power and control devices.
+- timestamp: '2025-12-02T22:54:47.752694'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id006
+      understood:
+      - Electrical power connections
+      - Programmable input/output peripherals
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Electrical power connections
+      level: UNDERSTOOD
+      justification: Correctly identifies that 'Red' wires are associated with power use
+    - concept: Programmable input/output peripherals
+      level: UNDERSTOOD
+      justification: Understands that connections can be used to control devices
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:54:47.752867'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:54:47.752879'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:54:47.752883'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:54:47.755350'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:54:47.755426'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:54:48.780694'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:48.780715'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:48.780722'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:48.780728'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:48.780734'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:54:48.784475'
+  event: Turn 4
+  data:
+    speaker: Red
+    user: well they use power and they control devices
+    assistant: Nice additions, Red! Blue, do you want to add any other key ideas about microcontrollers for our poem?
+    analysis:
+      _per_turn_comprehension: *id006
+- timestamp: '2025-12-02T22:55:08.517611'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 5
+    speaker: Blue
+    message: that they make devices autonomous
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group is brainstorming key ideas about microcontrollers to include in the poem, focusing on their
+      functions and effects on devices.
+    summary: The student adds that microcontrollers make devices autonomous as a key idea for the poem.
+- timestamp: '2025-12-02T22:55:09.400310'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id007
+      understood: []
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Everyday device applications
+      level: UNDERSTOOD
+      justification: Student correctly associates the concept of making devices autonomous with practical device applications.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:55:09.400493'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:55:09.400506'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:55:09.400513'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:55:09.403367'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:55:09.403443'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:55:10.259712'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:10.259730'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:10.259738'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:10.259869'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: revise
+    feedback: The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use
+      a more encouraging, less complex tone.
+- timestamp: '2025-12-02T22:55:10.259914'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:11.284398'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:11.284416'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:11.284424'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:11.284429'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:11.284437'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:11.288660'
+  event: Turn 5
+  data:
+    speaker: Blue
+    user: that they make devices autonomous
+    assistant: Excellent idea, Blue! Green, do you have any other important concepts about microcontrollers to add before
+      we decide on our final list?
+    analysis:
+      _per_turn_comprehension: *id007
+- timestamp: '2025-12-02T22:55:37.817921'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 6
+    speaker: Green
+    message: i like the idea that they are everywhere
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group is gathering key ideas about microcontrollers, focusing on their functions and characteristics
+      to include in the poem.
+    summary: The student adds the idea that microcontrollers are widespread and found everywhere.
+- timestamp: '2025-12-02T22:55:38.638196'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id008
+      understood: []
+      confused: []
+    cumulative_assessments_updated:
+    - concept: Everyday device applications
+      level: UNDERSTOOD
+      justification: Student appreciates that devices using the technology are widespread and commonly found everywhere.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:55:38.638360'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:55:38.638371'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:55:38.638376'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:55:38.640454'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:55:38.640533'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:55:39.754106'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:39.754120'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:39.754216'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Red to speak next. They have participated
+      less than others. Please acknowledge Green briefly, then ask Red a question.'
+- timestamp: '2025-12-02T22:55:39.754222'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:39.754263'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: revise
+    feedback: The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.
+- timestamp: '2025-12-02T22:55:40.980954'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:40.980982'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:40.981171'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Red to speak next. They have participated
+      less than others. Please acknowledge Green briefly, then ask Red a question.'
+- timestamp: '2025-12-02T22:55:40.981248'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: revise
+    feedback: The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use
+      a more encouraging, less complex tone.
+- timestamp: '2025-12-02T22:55:40.981303'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: revise
+    feedback: The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.
+- timestamp: '2025-12-02T22:55:42.107582'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:42.107601'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:42.107609'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:42.107614'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:42.107619'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:55:42.111313'
+  event: Turn 6
+  data:
+    speaker: Green
+    user: i like the idea that they are everywhere
+    assistant: 'Great, Green! So far we have: microcontrollers execute programs, use power to control devices, make devices
+      autonomous, and are everywhere. Red, anything else you want to add?'
+    analysis:
+      _per_turn_comprehension: *id008
+- timestamp: '2025-12-02T22:56:20.663129'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 7
+    speaker: Red
+    message: should we say something about the chip and the pins?
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: question
+    is_relevant: true
+    mnemonic_progress: The group is compiling key microcontroller concepts such as execution of programs, power usage, device
+      control, autonomy, and ubiquity to include in their poem mnemonic.
+    summary: The student asks if the poem should include details about the chip and pins of a microcontroller.
+- timestamp: '2025-12-02T22:56:21.733754'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id009
+      understood: []
+      confused:
+      - Pins
+      - Microcontroller
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: CONFUSED
+      justification: The student is unsure about how to discuss the chip and its pins, indicated by the question 'should we
+        say something about the chip and the pins?'
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:56:21.733927'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    - Blue
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:56:21.733939'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:56:21.733945'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:56:21.737888'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:56:21.737971'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:56:22.773621'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:22.773636'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:22.773644'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:22.773650'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:22.773655'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:22.777336'
+  event: Turn 7
+  data:
+    speaker: Red
+    user: should we say something about the chip and the pins?
+    assistant: Red, that’s a good question! Green, can you help explain why the chip and its pins might be important to include
+      in our poem?
+    analysis:
+      _per_turn_comprehension: *id009
+- timestamp: '2025-12-02T22:56:53.773915'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 8
+    speaker: Green
+    message: well the chip executes the program and the pins connect to the sensors or motors
+    session_phase: 2
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: knowledge_statement
+    is_relevant: true
+    mnemonic_progress: The group is building a poem including key functions of microcontrollers such as program execution
+      and physical connections through pins to sensors and motors.
+    summary: The student explains that the chip executes programs and the pins connect to sensors or motors.
+- timestamp: '2025-12-02T22:56:54.937974'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id010
+      understood:
+      - CPU
+      - Pins
+      confused: []
+    cumulative_assessments_updated:
+    - concept: CPU
+      level: UNDERSTOOD
+      justification: Student correctly states that the chip executes the program, identifying the CPU's role as the processor.
+    - concept: Pins
+      level: UNDERSTOOD
+      justification: Student correctly explains that pins connect to sensors or motors, demonstrating understanding of their
+        function as interfaces.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:56:54.938144'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:56:54.938156'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:56:54.938162'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:56:54.940770'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:56:54.940851'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:56:55.938216'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:55.938233'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:55.938240'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:55.938246'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:55.938251'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:56:55.941359'
+  event: Turn 8
+  data:
+    speaker: Green
+    user: well the chip executes the program and the pins connect to the sensors or motors
+    assistant: Nice explanation, Green! Blue, how can we include the chip and pins in our poem in a creative way?
+    analysis:
+      _per_turn_comprehension: *id010
+- timestamp: '2025-12-02T22:57:23.916701'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 9
+    speaker: Blue
+    message: im thinking about chip chop
+    session_phase: 2
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group is brainstorming creative and catchy phrases to include the chip and pins concepts in the
+      poem.
+    summary: The student suggests the phrase 'chip chop' as a creative way to include chip-related ideas in the poem.
+- timestamp: '2025-12-02T22:57:24.508046'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id011
+      understood: []
+      confused: []
+    cumulative_assessments_updated: []
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:57:24.508223'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:57:24.508284'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:57:24.508296'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:57:24.511130'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:57:24.511213'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:57:25.427993'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:57:25.428009'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:57:25.428016'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:57:25.428021'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:57:25.428026'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:57:25.430828'
+  event: Turn 9
+  data:
+    speaker: Blue
+    user: im thinking about chip chop
+    assistant: Blue, great idea with "chip chop"! Red, how can we build on that to include how pins help the chip control
+      devices?
+    analysis:
+      _per_turn_comprehension: *id011
+- timestamp: '2025-12-02T22:58:03.790352'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 10
+    speaker: Red
+    message: the chip chops the pins, that doesnt make any sense
+    session_phase: 2
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: builds_on_idea
+    is_relevant: true
+    mnemonic_progress: The group is creatively trying to incorporate chip and pins into the poem using playful language like
+      'chip chop' and discussing how to connect these concepts meaningfully.
+    summary: The student critiques the phrase 'the chip chops the pins' as nonsensical, showing awareness of coherence in
+      the mnemonic.
+- timestamp: '2025-12-02T22:58:04.674787'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id012
+      understood: []
+      confused:
+      - Pins
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: MISCONCEPTION
+      justification: The phrase 'the chip chops the pins' is factually incorrect and nonsensical, indicating a misunderstanding
+        of the function or nature of pins.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:58:04.674955'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    - Blue
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:58:04.674966'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:58:04.674972'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:58:04.678010'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:58:04.678091'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:58:05.776719'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:05.776739'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:05.776875'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You mentioned Green, but for balanced participation, you should only interact with Red (to
+      acknowledge) and Blue (to invite next). Please invite Blue to speak.'
+- timestamp: '2025-12-02T22:58:05.776885'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:05.776890'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:06.831853'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:06.831874'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:06.831881'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:06.831887'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:06.831892'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:58:06.834981'
+  event: Turn 10
+  data:
+    speaker: Red
+    user: the chip chops the pins, that doesnt make any sense
+    assistant: Red, you're right—that phrase doesn’t quite fit because pins aren’t chopped; they connect the chip to other
+      parts. Blue, do you have another idea to describe how the chip and pins work together in our poem?
+    analysis:
+      _per_turn_comprehension: *id012
+- timestamp: '2025-12-02T22:58:58.556454'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 11
+    speaker: Blue
+    message: chip rhymes with cheep and pins with tins
+    session_phase: 2
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group is working on creative rhymes and word associations to incorporate chip and pins into the
+      poem.
+    summary: The student suggests rhyming 'chip' with 'cheep' and 'pins' with 'tins' to help build the poem.
+- timestamp: '2025-12-02T22:58:59.090916'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id013
+      understood: []
+      confused: []
+    cumulative_assessments_updated: []
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:58:59.091074'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:58:59.091086'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:58:59.091091'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:58:59.093676'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:58:59.093758'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:59:00.045061'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:00.045072'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:00.045078'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:00.045083'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:00.045087'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:00.047218'
+  event: Turn 11
+  data:
+    speaker: Blue
+    user: chip rhymes with cheep and pins with tins
+    assistant: Blue, great rhyming idea! Green, how can we use "chip" and "pins" with those rhymes to describe their role
+      in the microcontroller?
+    analysis:
+      _per_turn_comprehension: *id013
+- timestamp: '2025-12-02T22:59:35.276815'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 12
+    speaker: Green
+    message: pins are cheep and chips use tins
+    session_phase: 2
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group is developing rhyming pairs for 'chip' and 'pins' to creatively describe their roles in the
+      microcontroller poem.
+    summary: The student suggests a rhyming phrase 'pins are cheep and chips use tins' to incorporate chip and pins into the
+      poem.
+- timestamp: '2025-12-02T22:59:37.425300'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id014
+      understood: []
+      confused:
+      - Pins
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: MISCONCEPTION
+      justification: The student states 'pins are cheep', which appears to be a misspelling of 'cheap' but does not provide
+        accurate information about pins; pins are physical connectors, not inherently cheap or expensive in a meaningful technical
+        sense.
+    - concept: Microcontroller
+      level: MISCONCEPTION
+      justification: The student says 'chips use tins', which is unclear and factually incorrect regarding microcontrollers
+        or chips; chips do not 'use tins'—this suggests misunderstanding of the physical or functional nature of microcontroller
+        chips.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T22:59:37.425602'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T22:59:37.425611'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:59:37.425616'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T22:59:37.427450'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T22:59:37.427528'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T22:59:38.670118'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:38.670137'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:38.670283'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to
+      acknowledge) and Blue (to invite next). Please invite Blue to speak.'
+- timestamp: '2025-12-02T22:59:38.670346'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: revise
+    feedback: The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use
+      a more encouraging, less complex tone.
+- timestamp: '2025-12-02T22:59:38.670354'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:39.865923'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:39.865944'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:39.865951'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:39.866072'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: revise
+    feedback: The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use
+      a more encouraging, less complex tone.
+- timestamp: '2025-12-02T22:59:39.866078'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:41.112472'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:41.112488'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:41.112495'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T22:59:41.112616'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: revise
+    feedback: The language was not appropriate for a 14-year-old. Please simplify your wording, reduce complexity, and use
+      a more encouraging, less complex tone.
+- timestamp: '2025-12-02T22:59:41.112670'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: revise
+    feedback: The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.
+- timestamp: '2025-12-02T22:59:41.115515'
+  event: Turn 12
+  data:
+    speaker: Green
+    user: pins are cheep and chips use tins
+    assistant: 'Green, thanks for trying! Just a quick tip: pins aren’t really “cheap,” and chips don’t “use tins.” Pins are
+      connectors, and chips run programs. Blue, can you help us think of a clearer way to say this in the poem?'
+    analysis:
+      _per_turn_comprehension: *id014
+- timestamp: '2025-12-02T23:00:14.490919'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 13
+    speaker: Blue
+    message: chips are cheep and pins are like tins?
+    session_phase: 2
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The group is working on incorporating rhymes for 'chip' and 'pins' to creatively describe their roles
+      in the microcontroller poem.
+    summary: The student suggests a rhyming phrase linking 'chips' and 'pins' using 'cheep' and 'tins'.
+- timestamp: '2025-12-02T23:00:15.360949'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id015
+      understood: []
+      confused:
+      - Pins
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: MISCONCEPTION
+      justification: Refers to pins as 'like tins,' which is an incorrect analogy and suggests a misunderstanding of what
+        pins are on a microcontroller or module.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T23:00:15.361105'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Red
+    - Green
+    suggested_next_speaker: Red
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T23:00:15.361116'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:00:15.361121'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:00:15.364192'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 2 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T23:00:15.364277'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T23:00:16.542169'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:16.542185'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:16.542193'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:16.542198'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:16.542203'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:16.545774'
+  event: Turn 13
+  data:
+    speaker: Blue
+    user: chips are cheep and pins are like tins?
+    assistant: Blue, thanks for trying again! But pins aren’t actually like tins, and chips aren’t really “cheap” in a way
+      that fits our poem. Red, can you suggest a different way to describe pins and chips that fits what we know about microcontrollers?
+    analysis:
+      _per_turn_comprehension: *id015
+- timestamp: '2025-12-02T23:00:34.968791'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 14
+    speaker: Red
+    message: chips aren't cheap?
+    session_phase: 3
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: recall_attempt
+    is_relevant: true
+    recall_progress: Student is attempting to recall and question the rhyme involving 'chips' and 'cheap', indicating engagement
+      with the mnemonic phrasing.
+    summary: The student questions whether 'chips' are 'cheap' as part of the mnemonic rhyme.
+- timestamp: '2025-12-02T23:00:35.815365'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id016
+      understood: []
+      confused:
+      - Chips
+    cumulative_assessments_updated:
+    - concept: chips
+      level: CONFUSED
+      justification: The student questions the cost of chips, indicating uncertainty about their affordability.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T23:00:35.815615'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T23:00:35.815629'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:00:35.815634'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:00:35.817403'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T23:00:35.817479'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T23:00:36.905403'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:36.905423'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:36.905567'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Green to speak next. They have participated
+      less than others. Please acknowledge Red briefly, then ask Green a question.'
+- timestamp: '2025-12-02T23:00:36.905578'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:36.905584'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:38.174414'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:38.174422'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:38.174427'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:38.174430'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:38.174493'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: revise
+    feedback: The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.
+- timestamp: '2025-12-02T23:00:39.083859'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:39.083875'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:39.084011'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Green to speak next. They have participated
+      less than others. Please acknowledge Red briefly, then ask Green a question.'
+- timestamp: '2025-12-02T23:00:39.084021'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:39.084027'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:39.087520'
+  event: Turn 14
+  data:
+    speaker: Red
+    user: chips aren't cheap?
+    assistant: That's a great thought, but for now, let's focus on remembering our Poem! Who can recite it for us?
+    analysis:
+      _per_turn_comprehension: *id016
+- timestamp: '2025-12-02T23:00:57.397049'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 15
+    speaker: Red
+    message: what poem we got stuck
+    session_phase: 3
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: recall_question
+    is_relevant: true
+    recall_progress: Student is indicating difficulty or confusion about the poem, suggesting they are stuck and seeking clarification.
+    summary: The student asks what poem they have, indicating they are stuck and need help recalling it.
+- timestamp: '2025-12-02T23:00:57.983114'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis: &id017
+      understood: []
+      confused: []
+    cumulative_assessments_updated: []
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T23:00:57.983257'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 2
+- timestamp: '2025-12-02T23:00:57.983268'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:00:57.983273'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:00:57.986112'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T23:00:57.986205'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T23:00:59.065197'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:59.065215'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:59.065354'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Green to speak next. They have participated
+      less than others. Please acknowledge Red briefly, then ask Green a question.'
+- timestamp: '2025-12-02T23:00:59.065364'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:00:59.065433'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: revise
+    feedback: The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal.
+- timestamp: '2025-12-02T23:01:00.060681'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.060692'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.060775'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Green to speak next. They have participated
+      less than others. Please acknowledge Red briefly, then ask Green a question.'
+- timestamp: '2025-12-02T23:01:00.060780'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.060784'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.987353'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.987371'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.987500'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You mentioned Blue, but for balanced participation, you should only interact with Red (to
+      acknowledge) and Green (to invite next). Please invite Green to speak.'
+- timestamp: '2025-12-02T23:01:00.987506'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.987511'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:00.990340'
+  event: Turn 15
+  data:
+    speaker: Red
+    user: what poem we got stuck
+    assistant: No worries! Blue, can you help us remember the poem we started with? What came after "I'm thinking about chip
+      chop"?
+    analysis:
+      _per_turn_comprehension: *id017
+- timestamp: '2025-12-02T23:01:31.292413'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 16
+    speaker: Blue
+    message: well you didnt like our pins tins chip cheap idea so we dont actually have a poem to remember
+    session_phase: 3
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: recall_question
+    is_relevant: true
+    recall_progress: Student indicates the group has not yet finalized or successfully created a poem to recall.
+    summary: The student points out that they do not have a poem to remember because the previous ideas were rejected.
+- timestamp: '2025-12-02T23:01:32.315984'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    concepts: *id002
+    per_turn_analysis:
+      understood: []
+      confused:
+      - Pins
+    cumulative_assessments_updated:
+    - concept: Pins
+      level: CONFUSED
+      justification: The student mentions 'pins' but refers to them in a confusing and unclear way, indicating uncertainty
+        or incomplete understanding.
+    all_student_profiles: *id003
+- timestamp: '2025-12-02T23:01:32.316082'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students:
+    - Green
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-02T23:01:32.316091'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:01:32.316096'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-02T23:01:32.318159'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 3 Instructions
+    - Marty - Turn-Taking
+- timestamp: '2025-12-02T23:01:32.318250'
+  event: '[get_prompt_sections] comprehension_tracker_frame'
+  data:
+    sections:
+    - Comprehension Tracker - Concepts to Clarify
+    - Comprehension Tracker - Concepts Already Understood
+- timestamp: '2025-12-02T23:01:33.380257'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:33.380276'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:33.380408'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Green to speak next. They have participated
+      less than others. Please acknowledge Blue briefly, then ask Green a question.'
+- timestamp: '2025-12-02T23:01:33.380416'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:33.380422'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:34.367411'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:34.367428'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:34.367555'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: For balanced participation, you need to invite Green to speak next. They have participated
+      less than others. Please acknowledge Blue briefly, then ask Green a question.'
+- timestamp: '2025-12-02T23:01:34.367565'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-02T23:01:34.367571'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+frame_memory:
+  turn_count: 16
+  session_phase: 3
+  session_language: English
+  consecutive_off_topic_turns: 0
+  session_start_time: '2025-12-02T22:53:21.596017'
+  mnemonic_state:
+    selected_concepts:
+    - execute programs
+    - use power to control devices
+    - make devices autonomous
+    - are everywhere
+    - chip and the pins
+    concepts_finalized: true
+    mnemonic_text: 'im thinking about chip chop Blue: chips are cheep and pins are like tins'
+    mnemonic_created: true
+  recall_tracking:
+    Red:
+      attempts: 2
+      successful_parts: []
+      stuck_on:
+      - 'Turn 15: Student is indicating difficulty or confusion abou'
+      last_attempt: what poem we got stuck
+    Green:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+    Blue:
+      attempts: 1
+      successful_parts: []
+      stuck_on: []
+      last_attempt: well you didnt like our pins tins chip cheap idea so we dont actually have a poem to remember
+  elapsed_time_minutes: 8.129854783333334
+  comprehension_tracker:
+    concepts: *id002
+    by_student: *id003
+  balanced_turns_validator:
+    recent_speakers:
+    - Green
+    - Blue
+    - Red
+    - Red
+    - Blue
+    participation:
+      Red:
+        contribution_count: 6
+        total_speaking_time_seconds: 16.4
+        last_contribution_time: '2025-12-02T23:00:57.983140'
+      Green:
+        contribution_count: 4
+        total_speaking_time_seconds: 14.0
+        last_contribution_time: '2025-12-02T22:59:37.425403'
+      Blue:
+        contribution_count: 6
+        total_speaking_time_seconds: 21.200000000000003
+        last_contribution_time: '2025-12-02T23:01:32.316001'
+    suggested_next_speaker: Green
+    last_turn_time: '2025-12-02T23:01:32.316001'
+  _last_contribution_type: recall_question

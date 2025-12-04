@@ -11,11 +11,74 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 from enum import Enum
 import json
+import logging
+import re
 import sys
 from pathlib import Path
 from typing import Any, Optional, TypedDict
 
 import yaml
+
+
+def clean_llm_json_output(raw_content: str) -> str:
+    """
+    Cleans the raw output from an LLM to extract a valid JSON string.
+
+    This function handles cases where the LLM might return JSON wrapped in
+    markdown code fences (e.g., ```json...```) or with other surrounding text.
+
+    Args:
+        raw_content: The raw string content from the LLM response.
+
+    Returns:
+        A cleaned string that is likely to be a valid JSON object.
+    """
+    if not isinstance(raw_content, str):
+        return ""
+
+    # Use a regular expression to find content between ```json and ```
+    match = re.search(r'```json\s*(\{.*?\})\s*```', raw_content, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    # Fallback for simple cases where it might just be wrapped in ```
+    match = re.search(r'```\s*(\{.*?\})\s*```', raw_content, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    # If no markdown fences, assume the content is the JSON itself,
+    # but try to find the first '{' to handle potential leading text.
+    first_brace = raw_content.find('{')
+    if first_brace != -1:
+        # And find the last '}' to handle potential trailing text.
+        last_brace = raw_content.rfind('}')
+        if last_brace > first_brace:
+            return raw_content[first_brace : last_brace + 1].strip()
+
+    return raw_content.strip()
+
+
+def parse_cleaned_json(
+    cleaned_str: str, logger: Optional[logging.Logger] = None
+) -> Optional[dict[str, Any]]:
+    """
+    Parses a cleaned JSON string and logs errors.
+
+    Args:
+        cleaned_str: The string to parse.
+        logger: The logger to use for warnings.
+
+    Returns:
+        A dictionary if parsing is successful, otherwise None.
+    """
+    try:
+        return json.loads(cleaned_str)
+    except json.JSONDecodeError:
+        if logger:
+            logger.warning(
+                'Failed to parse cleaned JSON string: %s', cleaned_str
+            )
+        return None
 
 
 class TerminalLogger:

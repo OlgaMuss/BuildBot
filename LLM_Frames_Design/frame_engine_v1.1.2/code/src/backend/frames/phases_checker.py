@@ -75,8 +75,10 @@ class PhasesCheckerFrame(Frame):
         shared_context = context.get('shared_context', {})
         frame_memory = context.get('frame_memory', {})
 
-        # The check for closure mode has been removed from here to ensure
-        # that the closure prompt is validated correctly.
+        # Check if session is in closure mode - if so, pass validation
+        if frame_memory.get('_closure_ready'):
+            logging.info("[PhasesChecker] Closure mode detected - passing validation")
+            return {'action': ValidationAction.PASS, 'feedback': None}
 
         # Use generic keys instead of hardcoding a specific frame's name.
         phase = shared_context.get(SESSION_PHASE_KEY)

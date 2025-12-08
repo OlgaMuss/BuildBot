@@ -1,0 +1,164 @@
+session_id: Microcontrollers_20251208_143101
+saved_at: '2025-12-08T14:31:18.668619'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Poem
+  students:
+  - Red
+  - Green
+  - Blue
+  target_age: 14
+events:
+- timestamp: '2025-12-08T14:31:01.774209'
+  event: Session initialized
+- timestamp: '2025-12-08T14:31:09.180541'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 1
+    speaker: Red
+    message: we need to create a story on microcontroller
+    session_phase: 1
+    off_topic_duration: 0
+    _suggested_next_speaker: null
+    _consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The student proposes creating a story related to microcontrollers as a mnemonic device.
+    summary: The student suggests creating a story on microcontrollers as a mnemonic.
+- timestamp: '2025-12-08T14:31:09.180606'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T14:31:09.180678'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-08T14:31:09.180685'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T14:31:09.180690'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T14:31:09.182595'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+- timestamp: '2025-12-08T14:31:09.182607'
+  event: '[get_prompt_sections] balanced_turns_validator'
+  data:
+    sections:
+    - Balanced Turns Guidance
+- timestamp: '2025-12-08T14:31:10.979221'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:10.979226'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:10.979258'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You asked 2 questions. You should ask ONLY ONE question to Green. Structure: 1) Acknowledge
+      Red briefly. 2) Ask ONLY Green ONE question to invite them to contribute next.'
+- timestamp: '2025-12-08T14:31:10.979261'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:10.979263'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:13.025494'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:13.025503'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:13.025507'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:13.025510'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:13.025513'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T14:31:13.027167'
+  event: Turn 1
+  data:
+    speaker: Red
+    user: we need to create a story on microcontroller
+    assistant: Thanks for sharing, Red! Green, what are the most important things about microcontrollers that you want our
+      story to help remember?
+frame_memory:
+  turn_count: 1
+  session_phase: 1
+  session_language: English
+  consecutive_off_topic_turns: 0
+  session_start_time: '2025-12-08T14:31:07.765561'
+  mnemonic_state:
+    selected_concepts: []
+    concepts_finalized: false
+    mnemonic_text: ''
+    mnemonic_created: false
+  recall_tracking:
+    Red:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+    Green:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+    Blue:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+  elapsed_time_minutes: 4.833333333333333e-07
+  _phase2_extension_active: false
+  comprehension_tracker:
+    concepts: []
+    by_student: {}
+  balanced_turns_validator:
+    recent_speakers:
+    - Red
+    participation:
+      Red:
+        contribution_count: 1
+        total_speaking_time_seconds: 3.2
+        last_contribution_time: '2025-12-08T14:31:09.180620'
+      Green:
+        contribution_count: 0
+        total_speaking_time_seconds: 0.0
+        last_contribution_time: null
+      Blue:
+        contribution_count: 0
+        total_speaking_time_seconds: 0.0
+        last_contribution_time: null
+    suggested_next_speaker: Green
+    last_turn_time: '2025-12-08T14:31:09.180620'

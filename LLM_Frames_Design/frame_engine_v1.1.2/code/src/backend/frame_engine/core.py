@@ -235,6 +235,7 @@ class SessionLogger:
         self.entries: list[dict[str, Any]] = []
         self.metadata: dict[str, Any] = {}
         self.prompts: list[dict[str, Any]] = []  # Store prompts for JSON export
+        
 
     def set_metadata(self, key: str, value: Any) -> None:
         """Sets metadata that will be included in the session file header."""
@@ -558,3 +559,43 @@ class SessionLogger:
 
                 f.write(f"**Marty:** {assistant_msg}\n\n")
                 f.write("---\n\n")
+            
+            # --- Append Terminal Log Content ---
+            if hasattr(self, '_shared_log_file') and self._shared_log_file:
+                # Remove logging handler and flush/close the terminal log file
+                if hasattr(self, '_log_handler') and self._log_handler:
+                    try:
+                        self._log_handler.flush()
+                        logging.getLogger().removeHandler(self._log_handler)
+                        self._log_handler.close()
+                    except Exception:
+                        pass
+                
+                try:
+                    self._shared_log_file.flush()
+                    self._shared_log_file.close()
+                except Exception:
+                    pass
+                
+                # Read the terminal log content
+                terminal_log_path = self.output_dir / f"session_{self.session_id}_terminal_log.md"
+                if terminal_log_path.exists():
+                    terminal_content = terminal_log_path.read_text(encoding='utf-8')
+                    if terminal_content.strip():
+                        f.write("## 🖥️ System Log\n\n")
+                        f.write("```\n")
+                        f.write(terminal_content)
+                        f.write("```\n\n")
+                    
+                    # Delete the separate terminal log file
+                    try:
+                        terminal_log_path.unlink()
+                    except Exception:
+                        pass
+                    
+                    # Also clean up any orphan terminal log files from incomplete sessions
+                    for orphan_log in self.output_dir.glob('*_terminal_log.md'):
+                        try:
+                            orphan_log.unlink()
+                        except Exception:
+                            pass

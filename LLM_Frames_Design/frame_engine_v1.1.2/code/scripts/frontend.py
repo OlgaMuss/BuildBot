@@ -29,7 +29,7 @@ if str(package_path) not in sys.path:
     sys.path.insert(0, str(package_path))
 
 # Imports after sys.path modification (required for Streamlit context)
-from backend.frame_engine.core import SessionLogger
+from backend.frame_engine.core import SessionLogger, TerminalLogger
 from backend.frame_engine.engine import FrameEngine
 from backend.frame_engine.llm import LLMConfigError, get_llm_client
 from backend.frames.language_checker import LanguageCheckerFrame
@@ -133,6 +133,37 @@ def _initialize_engine(
     session_logger.set_metadata('students', student_names)
     session_logger.set_metadata('target_age', target_age)
     session_logger.log('Session initialized')
+    
+    # Setup terminal logging to capture Python logging output
+    sessions_dir = project_root / 'sessions'
+    sessions_dir.mkdir(exist_ok=True)
+    
+    # Clean up any leftover terminal log files from previous sessions
+    for old_log in sessions_dir.glob('*_terminal_log.md'):
+        try:
+            old_log.unlink()
+        except Exception:
+            pass
+    
+    terminal_log_path = sessions_dir / f"session_{session_id}_terminal_log.md"
+    shared_log_file = open(terminal_log_path, 'w', encoding='utf-8')
+    sys.stdout = TerminalLogger(str(terminal_log_path), stream=sys.stdout, shared_file=shared_log_file)
+    sys.stderr = TerminalLogger(str(terminal_log_path), stream=sys.stderr, shared_file=shared_log_file)
+    
+    # Remove any old FileHandlers to prevent duplicate logging
+    root_logger = logging.getLogger()
+    for handler in root_logger.handlers[:]:
+        if isinstance(handler, logging.FileHandler):
+            handler.close()
+            root_logger.removeHandler(handler)
+    
+    # Capture Python logging module output to same file
+    log_handler = logging.FileHandler(terminal_log_path, mode='a')
+    log_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    root_logger.addHandler(log_handler)
+    
+    session_logger._shared_log_file = shared_log_file
+    session_logger._log_handler = log_handler
 
     # Compose the frame pipeline
     marty_frame = MnemonicCoCreatorFrame(
@@ -271,12 +302,10 @@ with st.sidebar:
         if 'engine' not in st.session_state or 'frame_memory' not in st.session_state:
             st.warning('No active session to save.')
         else:
-            # Use the engine's end_session method to properly save all logs
+            # Save session (automatically cleans up terminal logging)
             final_state_for_saving = {
                 'frame_memory': st.session_state.get('frame_memory', {}),
-                # Add other necessary state components if needed by end_session
             }
-            # Since end_session is async, we need to run it in an event loop
             asyncio.run(st.session_state.engine.end_session(final_state_for_saving))
 
             st.success('Session saved successfully.')

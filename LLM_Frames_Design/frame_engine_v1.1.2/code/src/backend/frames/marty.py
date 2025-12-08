@@ -336,8 +336,8 @@ class MnemonicCoCreatorFrame(Frame):
             'message': message,
             'session_phase': phase,
             'off_topic_duration': frame_memory['consecutive_off_topic_turns'],
-            'suggested_next_speaker': None,  # Set by balanced_turns frame later
-            'consecutive_same_speaker': 0,   # Set by balanced_turns frame later
+            '_suggested_next_speaker': None,  # Set by balanced_turns frame later
+            '_consecutive_same_speaker': 0,   # Set by balanced_turns frame later
             **llm_analysis,  # understanding_level, contribution_type, is_relevant, etc.
         }
 
@@ -806,7 +806,7 @@ Example:
         })
 
         # Section 2: Phase-specific instructions (with mnemonic state)
-        phase_instructions = self._get_phase_instructions(phase, mnemonic_state, frame_memory)
+        phase_instructions = self._get_phase_instructions(phase, mnemonic_state, frame_memory, context)
         sections.append({
             'label': f'Marty - Phase {phase} Instructions',
             'content': phase_instructions,
@@ -848,18 +848,22 @@ IMPORTANT: Do NOT use emojis in your responses."""
 -------------------------"""
         return base_prompt
 
-    def _get_phase_instructions(self, phase: int, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
+    def _get_phase_instructions(self, phase: int, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any], context: FrameContext) -> str:
         """Returns the instructional part of the prompt for the current phase."""
         if phase == 1:
-            return self._get_phase_1_instructions(frame_memory)
+            return self._get_phase_1_instructions(frame_memory, context)
         elif phase == 2:
-            return self._get_phase_2_instructions(mnemonic_state, frame_memory)
+            return self._get_phase_2_instructions(mnemonic_state, frame_memory, context)
         else:  # phase == 3
-            return self._get_phase_3_instructions(mnemonic_state, frame_memory)
+            return self._get_phase_3_instructions(mnemonic_state, frame_memory, context)
 
-    def _get_phase_1_instructions(self, frame_memory: dict[str, Any]) -> str:
+    def _get_phase_1_instructions(self, frame_memory: dict[str, Any], context: FrameContext) -> str:
         """Returns the prompt instructions for Phase 1: Concept Selection."""
         type_label = self._localized_mnemonic_type(frame_memory)
+        shared = context.get('shared_context', {})
+        current_speaker = shared.get(SPEAKER_KEY, '[Student who spoke]')
+        suggested_next = shared.get('_suggested_next_speaker', '[Next student]')
+        
         return f"""Current Goal: Select 3-5 Key Concepts (you have ~3 minutes for this phase).
 Your task is to help students SELECT which concepts they think are important to remember. Let THEM propose concepts.
 
@@ -878,7 +882,7 @@ BAD Examples (DO NOT DO THIS):
 - BAD Example 2: "That’s a great start! Which concepts feel trickiest: (a) what a microcontroller is, or (b) how pins work?"
 
 IF a student is stuck OR explicitly says they do not understand a concept (e.g., "I don't get it" or "Ich verstehe nicht"):
-1. FIRST, ask another student if they can help (e.g., "[Other Student], can you try to explain it in your own words?").
+1. FIRST, ask another student if they can help (e.g., "{suggested_next}, can you try to explain it in your own words?").
 2. IF that doesn't work, then YOU can ask a focused, diagnostic question to break down their confusion (e.g., "Thanks for letting me know. To help, what specific part about it is most confusing?").
 3. ONLY if everyone is struggling after both steps, you can then offer ONE small example to get them thinking.
 
@@ -926,16 +930,20 @@ Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
             if quality_feedback and not mnemonic_state.get('_quality_passed'):
                 extension_note += f'\nQuality note: "{quality_feedback}"'
 
+        shared = context.get('shared_context', {})
+        current_speaker = shared.get(SPEAKER_KEY, '[Student who spoke]')
+        suggested_next = shared.get('_suggested_next_speaker', '[Next student]')
+        
         return f"""Current Goal: Create the {type_label} {general_label} (you have ~6 minutes for this phase).
 The selected concepts are: **{concepts_str}**
 
 Your task is to help students BUILD their {type_label} using these concepts.
 ASK students to propose ideas BY NAME (always acknowledge who just spoke, then invite the next student):
-- "[Student who spoke], great idea! [Next student], how should our {type_label_lower} start?"
-- "Nice, [Student]! [Next student], how can we include [concept]?"
+- "{current_speaker}, great idea! {suggested_next}, how should our {type_label_lower} start?"
+- "Nice, {current_speaker}! {suggested_next}, how can we include [concept]?"
 
 IF a student is stuck:
-1. FIRST, ask another student for their ideas (e.g., "[Other Student], how do you think we can continue the {type_label_lower}?").
+1. FIRST, ask another student for their ideas (e.g., "{suggested_next}, how do you think we can continue the {type_label_lower}?").
 2. ONLY if all students are stuck, suggest one opening idea as an example.
 
 IMPORTANT: Every 1-3 student contributions, NARRATE the {type_label_lower} built so far.
@@ -943,9 +951,9 @@ IMPORTANT: Every 1-3 student contributions, NARRATE the {type_label_lower} built
 This helps students remember and build on what they've already created.
 DO NOT create the {type_label_lower} for them. Your role is to facilitate THEIR creativity.
 
-TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next.{extension_note}"""
+TURN-TAKING REMINDER: In EVERY response, you MUST address {current_speaker} (who just spoke) by name AND invite {suggested_next} to contribute next.{extension_note}"""
 
-    def _get_phase_3_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
+    def _get_phase_3_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any], context: FrameContext) -> str:
         """Returns the prompt instructions for Phase 3: Recall Practice."""
         mnemonic_text = mnemonic_state.get('mnemonic_text', '')
         # Recall tracking is now in marty's namespaced memory
@@ -972,6 +980,10 @@ TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just s
         # Check if we have a valid mnemonic (at least 20 chars and doesn't look like incomplete input)
         has_valid_mnemonic = self._has_valid_mnemonic(mnemonic_state)
         
+        shared = context.get('shared_context', {})
+        current_speaker = shared.get(SPEAKER_KEY, '[Student who spoke]')
+        suggested_next = shared.get('_suggested_next_speaker', '[Next student]')
+        
         # Handle case where no proper mnemonic was created
         if not has_valid_mnemonic:
             return f"""🎯 PHASE 3 - WRAP UP
@@ -980,14 +992,14 @@ TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just s
 It looks like we ran out of time before finishing our {type_label_lower}.
 
 YOUR TASK:
-1. Acknowledge this warmly: "[Student who spoke], it looks like we got a bit stuck on our {type_label_lower}!"
+1. Acknowledge this warmly: "{current_speaker}, it looks like we got a bit stuck on our {type_label_lower}!"
 2. Summarize what was accomplished: "We did talk about some great concepts like [mention 1-2 concepts discussed]."
 3. Encourage them: "Sometimes the best ideas take time. What did you learn about microcontrollers today?"
-4. Invite reflection BY NAME: "[Next student], what was your favorite part of our discussion?"
+4. Invite reflection BY NAME: "{suggested_next}, what was your favorite part of our discussion?"
 
 DO NOT pretend there's a {type_label_lower} to recite. Be honest and supportive.
 
-TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
+TURN-TAKING REMINDER: In EVERY response, you MUST address {current_speaker} (who just spoke) by name AND invite {suggested_next} to contribute next."""
 
         # First turn of Phase 3: Marty should recite the poem first
         if is_first_phase3_turn:
@@ -999,11 +1011,11 @@ Start your response with: "Great work everyone! Here's the {type_label_lower} we
 Then recite it clearly:
 "{mnemonic_text}"
 
-After reciting, invite a student BY NAME to try: "[Student], do you want to try reciting it from memory? I'll help if you get stuck!"
+After reciting, invite a student BY NAME to try: "{suggested_next}, do you want to try reciting it from memory? I'll help if you get stuck!"
 
 This gives students a clear reminder before asking them to recall.
 
-TURN-TAKING REMINDER: Address the student who just spoke by name AND invite a different student to try reciting."""
+TURN-TAKING REMINDER: Address {current_speaker} (who just spoke) by name AND invite {suggested_next} to try reciting."""
 
         # Subsequent turns of Phase 3
         return f"""🎯 PHASE 3 - MEMORY RECALL TEST (Recall attempts: {total_attempts})
@@ -1014,15 +1026,15 @@ Creation is OVER. Testing memory is the ONLY goal now.
 
 IF a student asks a question or tries to add to the {general_label_lower}:
 → DO NOT ANSWER or ACCEPT IT.
-→ REDIRECT BY NAME: "[Student who spoke], that's a great thought! [Next student], can you try reciting our {type_label_lower} for us?"
+→ REDIRECT BY NAME: "{current_speaker}, that's a great thought! {suggested_next}, can you try reciting our {type_label_lower} for us?"
 
 IF a student is reciting and gets stuck:
-1. FIRST, ask another student BY NAME if they can help (e.g., "[Student], nice try! [Other Student], can you help with the next part?").
+1. FIRST, ask another student BY NAME if they can help (e.g., "{current_speaker}, nice try! {suggested_next}, can you help with the next part?").
 2. ONLY if all students are stuck, GIVE HINTS: "What came after [last part]?" or "It starts with..."
 
 CELEBRATE their memory work! The ONLY goal: Can they RECITE the complete {type_label_lower}?
 
-TURN-TAKING REMINDER: In EVERY response, you MUST address the student who just spoke by name AND invite a different student to contribute next."""
+TURN-TAKING REMINDER: In EVERY response, you MUST address {current_speaker} (who just spoke) by name AND invite {suggested_next} to contribute next."""
 
     async def _detect_language(self, message: str) -> str:
         """Uses an LLM to detect the language of a given text."""

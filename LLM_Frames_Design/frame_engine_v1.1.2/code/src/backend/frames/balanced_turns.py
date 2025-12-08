@@ -15,11 +15,6 @@ from backend.frame_engine.core import (
     ValidationResult,
 )
 
-# Import shared context keys from the Marty frame
-from backend.frames.marty import (
-    SPEAKER_KEY,
-    CLEANED_MESSAGE_KEY
-)
 
 # --- Shared Context Keys (exported for use by other frames) ---
 # Key for suggested next speaker (for turn-taking management).
@@ -71,8 +66,8 @@ class BalancedTurnsFrame(Frame):
         if 'participation' not in my_memory:
             self._initialize_memory(my_memory)
 
-        speaker = context['shared_context'].get(SPEAKER_KEY, 'Unknown')
-        message = context['shared_context'].get(CLEANED_MESSAGE_KEY, '')
+        speaker = context['shared_context'].get('_speaker', 'Unknown')
+        message = context['shared_context'].get('_cleaned_message', '')
 
         # Track participation using this frame's own namespaced memory
         participation_analysis = self._update_participation(my_memory, speaker, message)
@@ -94,7 +89,7 @@ class BalancedTurnsFrame(Frame):
     async def get_prompt_sections(self, context: FrameContext) -> list[PromptSection]:
         """Provides explicit turn-taking instructions for Marty before generation."""
         shared = context.get('shared_context', {})
-        previous_speaker = shared.get(SPEAKER_KEY)
+        previous_speaker = shared.get('_speaker')
         suggested_next = shared.get(SUGGESTED_NEXT_SPEAKER_KEY)
         if not previous_speaker or not suggested_next or suggested_next == previous_speaker:
             return []
@@ -112,6 +107,7 @@ class BalancedTurnsFrame(Frame):
             f"- Begin by acknowledging {previous_speaker} by name.\n"
             f"- End by explicitly inviting {suggested_next} to contribute next.\n"
             "Follow both steps every turn to keep participation balanced."
+            f"CRITICAL: Ask only ONE question total"
             f"{extra_note}"
         )
 
@@ -324,8 +320,18 @@ class BalancedTurnsFrame(Frame):
         if prev_idx != -1 and next_idx != -1 and next_idx < prev_idx:
             return (
                 f"TURN-TAKING ERROR: You mentioned {suggested_next} before {previous_speaker}. "
-                f"Structure: 1) First acknowledge {previous_speaker}. "
-                f"2) Then ask {suggested_next} a question."
+                f"Structure your response as: 1) First acknowledge {previous_speaker} briefly. "
+                f"2) Then ask ONLY {suggested_next} ONE question to invite them to contribute next."
+            )
+        
+        # Check for multiple questions being asked (count question marks)
+        question_count = response.count('?')
+        if question_count > 1:
+            return (
+                f"TURN-TAKING ERROR: You asked {question_count} questions. "
+                f"You should ask ONLY ONE question to {suggested_next}. "
+                f"Structure: 1) Acknowledge {previous_speaker} briefly. "
+                f"2) Ask ONLY {suggested_next} ONE question to invite them to contribute next."
             )
 
         # Validation passed

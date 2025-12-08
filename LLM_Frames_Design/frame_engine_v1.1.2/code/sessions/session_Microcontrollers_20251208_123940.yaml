@@ -1,0 +1,269 @@
+session_id: Microcontrollers_20251208_123940
+saved_at: '2025-12-08T12:41:24.824125'
+metadata:
+  topic: Microcontrollers
+  mnemonic_type: Poem
+  students:
+  - Red
+  - Green
+  - Blue
+  target_age: 14
+events:
+- timestamp: '2025-12-08T12:39:40.887063'
+  event: Session initialized
+- timestamp: '2025-12-08T12:39:52.948628'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 1
+    speaker: Red
+    message: we need to create a poem on microcontroller
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: mnemonic_suggestion
+    is_relevant: true
+    mnemonic_progress: The student proposes creating a poem as a mnemonic device for the microcontroller topic, indicating
+      the initial step in mnemonic creation.
+    summary: The student suggests creating a poem about microcontrollers.
+- timestamp: '2025-12-08T12:39:52.948697'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T12:39:52.948787'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Green
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-08T12:39:52.948801'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T12:39:52.948810'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T12:39:52.950990'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+- timestamp: '2025-12-08T12:39:52.951005'
+  event: '[get_prompt_sections] balanced_turns_validator'
+  data:
+    sections:
+    - Balanced Turns Guidance
+- timestamp: '2025-12-08T12:39:54.787000'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:39:54.787010'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:39:54.787014'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:39:54.787017'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:39:54.787020'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:39:54.788814'
+  event: Turn 1
+  data:
+    speaker: Red
+    user: we need to create a poem on microcontroller
+    assistant: Thanks for sharing, Red! To make a great poem, what are the most important things about microcontrollers that
+      you want to remember? Green, what do you think?
+- timestamp: '2025-12-08T12:40:24.387946'
+  event: '[analyze_input] mnemonic_co_creator_marty'
+  data:
+    turn_count: 2
+    speaker: Green
+    message: like what it is and how it works?
+    session_phase: 1
+    off_topic_duration: 0
+    suggested_next_speaker: null
+    consecutive_same_speaker: 0
+    contribution_type: question
+    is_relevant: true
+    mnemonic_progress: The student seeks clarification on the key concepts to include in the mnemonic poem, focusing on the
+      definition and functionality of microcontrollers.
+    summary: The student asks if the poem should cover what a microcontroller is and how it works.
+- timestamp: '2025-12-08T12:40:24.387973'
+  event: '[analyze_input] comprehension_tracker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T12:40:24.388118'
+  event: '[analyze_input] balanced_turns_validator'
+  data:
+    underparticipating_students: []
+    suggested_next_speaker: Blue
+    consecutive_same_speaker: 1
+- timestamp: '2025-12-08T12:40:24.388129'
+  event: '[analyze_input] language_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T12:40:24.388136'
+  event: '[analyze_input] phases_checker_frame'
+  data:
+    result: no_output
+- timestamp: '2025-12-08T12:40:24.391867'
+  event: '[get_prompt_sections] mnemonic_co_creator_marty'
+  data:
+    sections:
+    - Marty - Persona & Knowledge
+    - Marty - Phase 1 Instructions
+- timestamp: '2025-12-08T12:40:24.391887'
+  event: '[get_prompt_sections] balanced_turns_validator'
+  data:
+    sections:
+    - Balanced Turns Guidance
+- timestamp: '2025-12-08T12:40:26.406493'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:26.406512'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:26.406651'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to
+      acknowledge) and Blue (to invite next). Please invite Blue to speak.'
+- timestamp: '2025-12-08T12:40:26.406660'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:26.406666'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:28.552891'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:28.552901'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:28.552906'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:28.552909'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:28.552963'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: revise
+    feedback: The response did not adhere to the Phase Goal. Please regenerate it to better match the session goal. Remove
+      any mention of specific concepts and instead ask an open-ended question to let students propose key concepts themselves.
+- timestamp: '2025-12-08T12:40:30.545900'
+  event: '[validate_output] mnemonic_co_creator_marty'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:30.545912'
+  event: '[validate_output] comprehension_tracker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:30.545995'
+  event: '[validate_output] balanced_turns_validator'
+  data:
+    action: revise
+    feedback: 'TURN-TAKING ERROR: You mentioned Red, but for balanced participation, you should only interact with Green (to
+      acknowledge) and Blue (to invite next). Please invite Blue to speak.'
+- timestamp: '2025-12-08T12:40:30.546001'
+  event: '[validate_output] language_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:30.546005'
+  event: '[validate_output] phases_checker_frame'
+  data:
+    action: pass
+    feedback: null
+- timestamp: '2025-12-08T12:40:30.548497'
+  event: Turn 2
+  data:
+    speaker: Green
+    user: like what it is and how it works?
+    assistant: Great start, Green! Can you and Red share more about what parts of "what it is" and "how it works" you find
+      most important or interesting? Blue, what are your thoughts?
+frame_memory:
+  turn_count: 2
+  session_phase: 1
+  session_language: English
+  consecutive_off_topic_turns: 0
+  session_start_time: '2025-12-08T12:39:51.571306'
+  mnemonic_state:
+    selected_concepts: []
+    concepts_finalized: false
+    mnemonic_text: ''
+    mnemonic_created: false
+  recall_tracking:
+    Red:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+    Green:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+    Blue:
+      attempts: 0
+      successful_parts: []
+      stuck_on: []
+      last_attempt: null
+  elapsed_time_minutes: 0.5158334
+  _phase2_extension_active: false
+  comprehension_tracker:
+    concepts: []
+    by_student: {}
+  balanced_turns_validator:
+    recent_speakers:
+    - Red
+    - Green
+    participation:
+      Red:
+        contribution_count: 1
+        total_speaking_time_seconds: 3.2
+        last_contribution_time: '2025-12-08T12:39:52.948724'
+      Green:
+        contribution_count: 1
+        total_speaking_time_seconds: 3.2
+        last_contribution_time: '2025-12-08T12:40:24.387986'
+      Blue:
+        contribution_count: 0
+        total_speaking_time_seconds: 0.0
+        last_contribution_time: null
+    suggested_next_speaker: Blue
+    last_turn_time: '2025-12-08T12:40:24.387986'

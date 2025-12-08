@@ -47,7 +47,7 @@ from backend.frames.phases_checker import PhasesCheckerFrame, PHASE_GOALS
 from backend.frames.comprehension_tracker import ComprehensionTrackerFrame
 from backend.frames.marty import MnemonicCoCreatorFrame
 from backend.frames.balanced_turns import BalancedTurnsFrame
-from backend.frame_engine.core import SessionLogger, TerminalLogger
+from backend.frame_engine.core import SessionLogger
 from backend.frame_engine.llm import get_llm_client
 
 
@@ -167,15 +167,7 @@ class SimulationOrchestrator:
             output_dir=sessions_dir
         )
         
-        # Setup terminal logger to capture output (both stdout and stderr)
-        # Open the file once and share it between both loggers
-        terminal_log_path = sessions_dir / f"session_{self.session_id}_terminal_log.md"
-        shared_log_file = open(terminal_log_path, 'w', encoding='utf-8')
-        self.terminal_logger_stdout = TerminalLogger(str(terminal_log_path), stream=sys.stdout, shared_file=shared_log_file)
-        self.terminal_logger_stderr = TerminalLogger(str(terminal_log_path), stream=sys.stderr, shared_file=shared_log_file)
-        self._shared_log_file = shared_log_file  # Keep reference to close it later
-        
-        # Set session metadata (same as frontend lines 122-126)
+        # Set session metadata
         self.session_logger.set_metadata('topic', 'Microcontrollers')
         self.session_logger.set_metadata('mnemonic_type', self.mnemonic_type)
         self.session_logger.set_metadata('students', self.students)
@@ -567,14 +559,6 @@ Your response MUST start with "{student_color}: ".
         final_state['frame_memory']['_phase_transitions'] = self.phase_transitions
         
         await self.frame_engine.end_session(final_state)
-        
-        # Restore original stdout/stderr and close terminal loggers
-        sys.stdout = original_stdout
-        sys.stderr = original_stderr
-        self.terminal_logger_stdout.close()
-        self.terminal_logger_stderr.close()
-        # Close the shared file handle
-        self._shared_log_file.close()
         
         print(f"\n✅ Terminal log saved to: session_{self.session_id}_terminal_log.md")
 

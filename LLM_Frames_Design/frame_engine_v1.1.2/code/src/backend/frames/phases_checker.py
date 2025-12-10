@@ -75,11 +75,6 @@ class PhasesCheckerFrame(Frame):
         shared_context = context.get('shared_context', {})
         frame_memory = context.get('frame_memory', {})
 
-        # Check if session is in closure mode - if so, pass validation
-        if frame_memory.get('_closure_ready'):
-            logging.info("[PhasesChecker] Closure mode detected - passing validation")
-            return {'action': ValidationAction.PASS, 'feedback': None}
-
         # Use generic keys instead of hardcoding a specific frame's name.
         phase = shared_context.get(SESSION_PHASE_KEY)
 
@@ -127,11 +122,27 @@ class PhasesCheckerFrame(Frame):
                 is_compliant = 'true' in raw_content.lower()
 
         if not is_compliant:
-            detailed_feedback = _POLICY_VIOLATION_FEEDBACK
-            if required_adjustment:
-                detailed_feedback = f'{detailed_feedback} {required_adjustment}'
-            elif rationale:
-                detailed_feedback = f'{detailed_feedback} {rationale}'
+            if frame_memory.get('_closure_ready'):
+                detailed_feedback = (
+                    "The session is ending. Your response was not a valid closing message. "
+                    "YOUR FINAL RESPONSE MUST:\\n"
+                    "1. Thank ALL students by name for their contributions and mention that our session time is up.\\n"
+                    "2. Celebrate what the group accomplished together.\\n"
+                    "3. Encourage them to keep practicing or share their favorite part.\\n"
+                    "4. Offer a friendly goodbye to everyone. Do NOT invite another student to speak."
+                )
+                logging.warning(
+                    "[PhasesChecker] Closure validation failed. "
+                    "Response: '%s'. Rationale: %s",
+                    context['llm_draft_response'],
+                    rationale
+                )
+            else:
+                detailed_feedback = _POLICY_VIOLATION_FEEDBACK
+                if required_adjustment:
+                    detailed_feedback = f'{detailed_feedback} {required_adjustment}'
+                elif rationale:
+                    detailed_feedback = f'{detailed_feedback} {rationale}'
             return {
                 'action': ValidationAction.REVISE,
                 'feedback': detailed_feedback,

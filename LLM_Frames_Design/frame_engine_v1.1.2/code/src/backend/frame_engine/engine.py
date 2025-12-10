@@ -450,6 +450,17 @@ class FrameEngine:
             speaker = marty_analysis.get('speaker', shared_context.get('_speaker', 'Unknown'))
             turn_number = marty_analysis.get('turn_count', frame_memory.get('turn_count', 0))
 
+            # --- Capture Phase Information for Logging ---
+            # Get memory from the correct namespace
+            marty_memory = final_state.get('frame_memory', {}).get('mnemonic_co_creator_marty', final_state.get('frame_memory', {}))
+            phase = marty_memory.get("session_phase", 1)
+            elapsed_time = marty_memory.get("elapsed_time_minutes", 0)
+            
+            turn_metadata = {
+                'session_phase': phase,
+                'elapsed_time_minutes': elapsed_time
+            }
+
             # Extract per-turn analysis from the shared context to enrich the log
             per_turn_analysis = shared_context.get(PER_TURN_COMPREHENSION_KEY)
             analysis_data = (
@@ -464,6 +475,7 @@ class FrameEngine:
                 user_message=clean_message,
                 assistant_response=final_response,
                 analysis_data=analysis_data,
+                metadata=turn_metadata,
             )
 
         # Construct the new history without modifying the original.

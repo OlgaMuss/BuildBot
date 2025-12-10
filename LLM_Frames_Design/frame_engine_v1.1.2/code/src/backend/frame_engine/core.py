@@ -463,7 +463,7 @@ class SessionLogger:
                         time = p_data.get('total_speaking_time_seconds', 0)
                         f.write(f"| **{student}** | {count} | {time:.1f}s |\n")
                     f.write("\n")
-
+            
             # --- Comprehension Summary ---
             if frame_memory:
                 comprehension_memory = frame_memory.get('comprehension_tracker', {})
@@ -532,7 +532,16 @@ class SessionLogger:
                 if timestamp:
                     f.write(f" ({timestamp})")
                 f.write("\n\n")
-                
+
+                # --- Add Phase Tracker metadata to each turn ---
+                metadata = data.get('metadata', {})
+                if metadata:
+                    phase = metadata.get('session_phase')
+                    elapsed = metadata.get('elapsed_time_minutes')
+                    if phase is not None and elapsed is not None:
+                        f.write(f"**Phase:** {phase}/3\n")
+                        f.write(f"**Elapsed Time:** {elapsed:.1f} min\n\n")
+
                 f.write(f"**{speaker}:** {user_msg}\n\n")
 
                 # Display the per-turn comprehension analysis if it exists

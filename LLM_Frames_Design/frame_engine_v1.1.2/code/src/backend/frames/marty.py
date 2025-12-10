@@ -889,7 +889,7 @@ IF a student is stuck OR explicitly says they do not understand a concept (e.g.,
 Once students have proposed and agreed on 3-5 concepts, CONFIRM the final list:
 "Perfect! So our concepts are: [list the concepts]. Ready to start building our {type_label}?"""
 
-    def _get_phase_2_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any]) -> str:
+    def _get_phase_2_instructions(self, mnemonic_state: dict[str, Any], frame_memory: dict[str, Any], context: FrameContext) -> str:
         """Returns the prompt instructions for Phase 2: Mnemonic Creation."""
         selected_concepts = mnemonic_state.get('selected_concepts', [])
         concepts_str = ', '.join(selected_concepts) if selected_concepts else '[concepts from Phase 1]'
@@ -1023,6 +1023,9 @@ The {type_label_lower} is: "{mnemonic_text}"
 
 ⚠️ RECALL ONLY MODE:
 Creation is OVER. Testing memory is the ONLY goal now.
+
+IF a student asks to be reminded of the {general_label_lower} (e.g., "what do we have so far?", "remind me"):
+→ RECITE the full {type_label_lower} and ask another student to continue.
 
 IF a student asks a question or tries to add to the {general_label_lower}:
 → DO NOT ANSWER or ACCEPT IT.

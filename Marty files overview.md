@@ -26,7 +26,7 @@
 - **Week 1:** Slides Presentations
   - Experimental Group [German-presented](https://www.canva.com/design/DAG7kQNCFPY/Y3PBVzO7LkyKz5tkYZaPdA/edit)|  [German old](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit)
 |  [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
-  - Control Group [English]
+  - Control Group [English & German: from german version presented in class](https://www.canva.com/design/DAG7kVWGSBE/I87PvtySZ-pIAm9t18JAFQ/edit)
 - **Week 2:** Slides Presentations [German](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit) 
   -  Machine Learning Types Worksheet [German & English with answers](https://www.canva.com/design/DAG2-v5bUlM/LZOMoFgFysllnmFbO7R3cg/edit) | [German no answers](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30)  | [Additional 5 questions German and English with answers](https://www.canva.com/design/DAG4eLGxFd0/tL8zXvDtibzVAtDnOA0_dA/edit)
   - Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30) | Anwers in one page [German](https://www.canva.com/design/DAG3pgaEbIM/1K64sb-MJhr68GC5AYGjEA/edit?ui=e30) | Answers in ppt [German](https://www.canva.com/design/DAG2ttYEEYM/F7YTPQScXD0cQ0ISrmoa8w/edit) | [English](https://www.canva.com/design/DAG2tlQUrMI/o0arzm-5hyYnBXTGtkEbIA/edit)

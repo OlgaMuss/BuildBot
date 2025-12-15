@@ -24,27 +24,28 @@
 ### 👩‍🏫 For Teachers
 - [Teachers Guide - to be updated ](https://github.com/OlgaMuss/BuildBot/blob/main/Teaching%20materials/Teachers_Guide.md)
 - **Week 1:** Slides Presentations
-  - Experimental Group [German-presented](https://www.canva.com/design/DAG7kQNCFPY/Y3PBVzO7LkyKz5tkYZaPdA/edit) | [German old](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit)
+  - Experimental group: [German-presented](https://www.canva.com/design/DAG7kQNCFPY/Y3PBVzO7LkyKz5tkYZaPdA/edit) | [German old](https://www.canva.com/design/DAGyeqpZgxA/Ju8sagkVLwxr_TR8OGWuPw/edit)
 |  [English](https://www.canva.com/design/DAG0jPbN3_o/Ybk8dkxdWXKkv7qqOdJScg/edit)
-  - Control Group [English & German: from german version presented in class](https://www.canva.com/design/DAG7kVWGSBE/I87PvtySZ-pIAm9t18JAFQ/edit)
+  - Control group: [English & German: from german version presented in class](https://www.canva.com/design/DAG7kVWGSBE/I87PvtySZ-pIAm9t18JAFQ/edit)
 - **Week 2:** Slides Presentations
     - Experimental group: [German presented](https://www.canva.com/design/DAG7lNTJ88A/bE07JWutftyHgj-161KA6A/edit) | [German Old](https://www.canva.com/design/DAG0oml8bvs/S4bO1e6tQq-D67hHPJr2mg/edit) | [English](https://www.canva.com/design/DAGygIveXRg/YE7B9XMih-8w_Sh-r9VVCg/edit)
     - Control group: [German & English](https://www.canva.com/design/DAG7lGGoBvA/laaX-Z564YcQdXRz9CDCXA/edit) 
   -  Machine Learning Types Worksheet [German & English with answers](https://www.canva.com/design/DAG2-v5bUlM/LZOMoFgFysllnmFbO7R3cg/edit) | [German no answers](https://www.canva.com/design/DAG0vPYf6jo/QlmoYdqQYnRTNAQZvWkOxQ/edit?ui=e30)  | [Additional 5 questions German and English with answers](https://www.canva.com/design/DAG4eLGxFd0/tL8zXvDtibzVAtDnOA0_dA/edit)
   - Classifier or Generator Worksheet [English & German](https://www.canva.com/design/DAG1AFs7X2E/x7EwMh5sRx1L2RL8FoAnAw/edit?ui=e30) | Anwers in one page [German](https://www.canva.com/design/DAG3pgaEbIM/1K64sb-MJhr68GC5AYGjEA/edit?ui=e30) | Answers in ppt [German](https://www.canva.com/design/DAG2ttYEEYM/F7YTPQScXD0cQ0ISrmoa8w/edit) | [English](https://www.canva.com/design/DAG2tlQUrMI/o0arzm-5hyYnBXTGtkEbIA/edit)
 - **Week 3:** Slides Presentations
-    - Experimental [German presented](https://www.canva.com/design/DAG7lOKRCKw/Rn1U1pWQZ9-SFq_PQaZ6nA/edit) | [German Old](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit) 
+    - Experimental group: [German presented](https://www.canva.com/design/DAG7lOKRCKw/Rn1U1pWQZ9-SFq_PQaZ6nA/edit) | [German Old](https://www.canva.com/design/DAG1CXy0cKE/7UcQzBhCyUA9uFUa8RbCjw/edit) | [English](https://www.canva.com/design/DAGzr1D4dic/w41-aNB96C_Y1eb4vQjcXg/edit)
+    - Control group:
   - AI or not AI Worksheet [German without answers](https://www.canva.com/design/DAG3o9YxOu4/gyCMSoao8-pNoZ-0LbwsTA/edit) | [English & German with Answers](https://www.canva.com/design/DAG1ALp0bfU/ylc7shozeNSzFceJ6l1qAA/edit?ui=e30)
 - **Week 4:**
-    -  Experimental Group: [German presented](https://www.canva.com/design/DAG7lHaq_WQ/AHewNLz7vfNx21psZnXnzA/edit)
-    -  Control Group :
+    -  Experimental group: [German presented](https://www.canva.com/design/DAG7lHaq_WQ/AHewNLz7vfNx21psZnXnzA/edit)
+    -  Control group:
 - **Week 5 (old week 4):** Slides Presentations
     - Experimental group: [German presented](https://www.canva.com/design/DAG7lFB19uI/Ai7R6iNvoSkxLsMOQCw2Sg/edit) | [German_old](https://www.canva.com/design/DAG0vTM_bEM/-7wtKKNAuK_Fi_ExK9nPAg/edit) | [English: Programming & sensors](https://www.canva.com/design/DAGwzK4EBGc/h-wcpo9iNVxaaaBuP7DU_g/edit?ui=eyJIIjp7IkEiOnRydWV9fQ) | [English old : programming and microcontrollers:](https://www.canva.com/design/DAG38BgnR8Y/3RB8r-X_I9fWXoL9oDvJ-Q/edit)
     - Control group:
   - Marty Dancing workbook [english](https://www.canva.com/design/DAGzHtcIZpA/_-8amhlaKFU7s3dRXY1oRg/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
-
 - **Week 6 (old week 5):** Slides Presentations
     - Experimental Group: [German presented](https://www.canva.com/design/DAG7lCf-Oak/19uK6aPRLi4fb0nRw0icuA/edit) | [German Old](https://www.canva.com/design/DAG5DG98F24/bqANJxODa6N24iWLDQqNbA/edit) | [English: Microcontrollers & AI Ethics](https://www.canva.com/design/DAGyXllLEgE/sPPvjM_U8EATg3dmXckrBQ/edit?ui=eyJIIjp7IkEiOnRydWV9fQ) | [English Old: Sensors & interaction](https://www.canva.com/design/DAG38K-ye2c/GXhqhsgkTCD-QzXbfSh1aQ/edit)
+    - Control group:
 - **Week 7 (old week 6):** Slides Presentations
     - Experimental group: [German presented](https://www.canva.com/design/DAG7lCWAAts/jnw8T1kFAQtrbyksJ0k2XA/edit) | [English](https://www.canva.com/design/DAG0tvHI9-E/kzXQa0pFUlJ86P2f9nL19w/edit?ui=e30)
     - Control group:

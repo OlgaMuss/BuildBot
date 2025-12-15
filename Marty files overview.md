@@ -20,6 +20,7 @@
 - [closed drive for slides](https://ethz-my.sharepoint.com/:f:/r/personal/lleisten_ethz_ch/Documents/PhD/2023/Projects/BuildBots/Deployment/Material/Curricula%20Material/Slides?csf=1&web=1&e=cCK14a)
 - [Frames Simulation App](https://buildbot-4tzkvoxzssupnzkb9e6va4.streamlit.app)
 - [Frame pre-registered analysis](https://docs.google.com/document/d/1sdn2sn_PteTQBy_gOU_INdYqD7jRjtSLx9kjz3OvR7Q/edit?pli=1&tab=t.0#heading=h.wu9s885ncbu7)
+- [Frame slides](https://www.canva.com/design/DAGyv90q0uA/TEQ9J5xEBm9JXcIeb_1tuw/edit)
 
 ### 👩‍🏫 For Teachers
 - [Teachers Guide - to be updated ](https://github.com/OlgaMuss/BuildBot/blob/main/Teaching%20materials/Teachers_Guide.md)

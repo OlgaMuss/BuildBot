@@ -1,0 +1,216 @@
+[[ header.html | Neurális hálózatok ]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+    NN: Neurális hálózatok
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Module 7</h1>
+            <h2>Neurális hálózatok</h2>
+            <p><cite>"Minden neuron rendelkezik egy úgynevezett receptív mezővel, amely a beidegződések azon csoportja, amelyek aktiválására érzékeny."</cite></p>
+        </div>
+        <img src="{{images}}/NeuralNetworks.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>A modulról</h1>
+
+    <p>Ez a modul alapvető bevezetés a neurális hálózatok (NN) témakörébe. A lecke célja, hogy bemutassa az idegi hálózatokat, és ne csak azt mutassa meg, hogy mire képesek és hogyan használják őket, hanem betekintést nyújtson a belső működésükbe is.</p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek:</p>
+        <ul>
+            <li>elmagyarázni a neurális hálózatok alapvető felépítését, és felsorolni a neurális hálózatok alapvető elemeit (1. rész)</li>
+            <li>elmagyarázni a neurális hálózatok alapvető felépítését, és felsorolni a neurális hálózatok alapvető elemeit (1. rész)</li>
+            <li>elmagyarázni, hogyan áramlanak az adatok egy neurális hálózaton keresztül. (1. rész)</li>
+            <li>megérteni, hogy a különböző rétegek megfelelnek a feldolgozási lépéseknek. (1. rész)</li>
+            <li>elmagyarázni, hogyan lehet kiolvasni a feldolgozási művelet eredményét. (1. rész)</li>
+            <li>elmagyarázni, hol „tárolódik” a neurális hálózat tudása. (1. rész)</li>
+            <li>elmagyarázni, milyen változások történnek a tanulási folyamat során. (1. rész)</li>
+            <li>kiszámítani egy neurális hálózat szabadságfokát. (1. rész)</li>
+            <li>tudni, hogy a neurális hálózatoknak a feed-forward architektúrán kívül rengeteg más hálózati architektúrája is létezik.</li>
+            <li>elmagyarázni, hogyan működnek a neuronok. (2. rész)</li>
+            <li>elmagyarázni az aktiváló függvény működését. (2. rész)</li>
+            <li>elmagyarázni, hogy miért kell az aktiválási függvényt korlátozni, és hogyan valósul meg ez. (1. és 2. rész)</li>
+            <li>tudni, hogy különböző rétegtípusokban különböző aktiválási függvények használhatók. (2. rész)</li>
+            <li>elmagyarázni a receptív mező fogalmát. (2. rész)</li>
+            <li>megérteni, hogy egy neurális hálózat csak olyan eredményeket tud szolgáltatni, amelyek az adatbázisból kikövetkeztethetők. (3. rész)</li>
+            <li>megérteni, hogy a kisebb neurális hálózatok viszonylag könnyen alkalmazhatóak a rendelkezésre álló technológiák és kezelhető erőfeszítések mellett. (3. rész)</li>
+            <li>megérteni, hogy a neurális hálózatok nem feltétlenül igénylik speciális könyvtárak vagy egyéb eszközök használatát. (3. rész)</li>
+            <li>elmagyarázni, hogy a neuronok hogyan használhatók grafikus vagy numerikus feladatokra. (1-3. rész)</li>
+        </ul>
+    </div>
+
+
+    <h2>Időbeosztás</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Tananyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>50 perc</td>
+                <td><a href="#part1">Elmélet - 1. rész - Alapok</a></td>
+                <td><a href="Slides/Neural_Networks_I_-_Basics.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>30 perc</td>
+                <td><a href="#part2">Elmélet - 2. rész - Receptív mezők</a></td>
+                <td><a href="Slides/Neural_Networks_II_-_receptive_Fields.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#simulator2">Gyakorlat - szimulátor a kézi és automatikus változatban</a></td>
+                <td><a href="Exercises/NN_ii_simulator.zip">Szimulátor</a></td>
+            </tr>
+            <tr>
+                <td>25 perc</td>
+                <td><a href="#part3">Elmélet - 3. rész - gyakorlati minipélda</a></td>
+                <td><a href="Slides/Neural_Networks_III_-_practical_Example.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>10 perc</td>
+                <td><a href="#simulator3">Gyakorlat - szimulátor</a></td>
+                <td><a href="Exercises/NN_iii_simulator.zip">Szimulátor</a></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#exercise">Gyakorlat - gyakorlati feladatok</a></td>
+                <td><a href="Exercises/NN_exercise.zip">Fájlok</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="part1">1. rész - Alapok</h1>
+
+    <p>Ez a rész elmagyarázza a neurális hálózatok alapfogalmait és felépítését, és bemutatja működésüket a karakterfelismerés példáján keresztül egy egyszerű feed-forward hálózat segítségével.</p>
+
+    <h2>A feed-forward hálózat bevezetése és bemutatása <span class="slides">2 - 5. dia</span></h2>
+    <p>A neurális hálózatok valójában minden gondolkodási folyamat feltételezett kiindulópontját jelentik, a mesterséges neurális hálózatok pedig egy nagyszabású kísérlet arra, hogy ezt a folyamatot elvben, de nem részletesen reprodukálják. A neurális hálózatok alapvetően másképp működnek, mint a hagyományos számítógépek a szokásos Neumann-architektúrával (aritmetikai logikai egység, vezérlőegység, memória, I/O egység). A "Feed-Forward-Network" kifejezés bevezetése.</p>
+
+    <h2>A számjegy- és karakterfelismerés probléma leírása <span class="slides">2 - 5. dia</span></h2>
+    <p>Miért jelent kihívást a számjegy- és karakterfelismerés? Mitől olyan nehéz a hagyományos programozás?</p>
+
+    <h2>Bemeneti adatok <span class="slides">7 - 9. dia</span></h2>
+    <p>Hogyan kerülnek a bemeneti adatok, azaz esetünkben a grafikusan megjelenített számjegyek és számok a hálózatba? A képpontok fényerejét az első réteg (= bemeneti réteg) neuronjainak aktivációjaként értelmezzük.</p>
+
+    <h2>Réteges szerkezet <span class="slides">11 - 14. dia</span></h2>
+    <p>A feed-forward architektúrában az első réteg a bemeneti réteg, az utolsó a kimeneti réteg, a közte lévő rétegeket pedig rejtett rétegeknek nevezzük.</p>
+
+    <h2>Az adatok áramlása a hálózaton keresztül <span class="slides">19 - 22. dia</span></h2>
+    <p>A diák az adatáramlást mutatják a hálózaton keresztül. Az aktiválások átkerülnek a kapcsolatokon, és a következő réteg aktivációivá válnak.</p>
+
+    <h2>Feldolgozási lépések <span class="slides">11 - 14. dia</span></h2>
+    <p>A karakterek felismerése lépésről lépésre úgy képzelhető el, hogy először a karakter egyszerűbb, alaposabb egységeit ismerjük fel, majd a nagyobb, összefüggőbb egységeket. Ezek az egységek minden esetben színnel vannak kiemelve. A neurális hálózatok működésének egyik magyarázata, hogy egy sikeresen betanított hálózatban munkamegosztás van a rétegek között, így a feljebb lévő rétegek (bal oldal) az alapvető egységekre, a lejjebb lévő rétegek (jobb oldal) pedig inkább a nagyobb egységekre reagálnak.</p>
+
+    <h2>A megvalósítás és a receptív mező részletei <span class="slides">23 - 25. dia</span></h2>
+    <p>Az aktivációk és a súlyok közötti kapcsolatot itt magyarázzuk el, és bevezetjük a receptív mező fogalmát. Minden neuron rendelkezik egy úgynevezett receptív mezővel, amely a neuronok azon csoportja, amelyek aktiválására érzékeny. Ez fontos fogalom a neurális hálózatok működésének megértéséhez.</p>
+
+    <h2>Korlátozó funkció <span class="slides">26 - 27. dia</span></h2>
+    <p>Annak érdekében, hogy a neuronok értékei ne növekedjenek a végtelenségig a pozitív vagy negatív irányba (a háló egy kis része elegendő lenne ahhoz, hogy a teljes eredményt használhatatlanná tegye), mindig korlátozó függvényt használunk. Ez az aktiválási függvény elemi összetevőjévé válik.</p>
+
+    <h2>Előingerlés/előfeszítés és teljes aktiválási képlet <span class="slides">28 - 31. dia</span></h2>
+    <p>Annak magyarázata, hogy a torzítás milyen szerepet játszik a működésben, és a teljes aktiválási képlet feltüntetése, amely a kényszerfüggvényből, az aktiválásokból, a súlyokból és az előingerlésből áll.</p>
+
+    <h2>Feladatok és megoldások <span class="slides">32 - 33. dia</span></h2>
+    <p>Három kérdés segítségével összefoglaljuk a neurális hálózatok néhány alapvető tulajdonságát.</p>
+
+    <h2>Hivatkozás más hálózati architektúrákra és kapcsolatokra <span class="slides">26 - 27. dia</span></h2>
+    <p>A feed-forward hálózati architektúrát azért mutattuk be, mert ez egy nagyon egyszerű és gyakran használt architektúra. A grafikon csak azt hivatott jelezni, hogy számos más architektúrát is használnak és tesztelnek.</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_I_-_Basics.pdf">Neural_Networks_I_-_Basics.pdf</a> <a href="Slides/Neural_Networks_I_-_Basics.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1 id="part2">2. rész - Receptív mezők</h1>
+
+    <p>Ez a rész elmélyíti az 1. részben már bemutatott receptív mező fogalmát egy 2x2 pixeles kamerával történő tárgyfelismerés interaktív példáján keresztül. A lecke ezen része lehetővé teszi a neurális hálózat működésének interaktív megértését a szimulátor segítségével.</p>
+
+    <h2>Kamera  <span class="slides">2 - 5. dia</span></h2>
+    <p>Egy egyszerű neurális hálózat segítségével egy 2x2 pixeles érzékelővel felszerelt kamera négy különböző mintát képes felismerni. Mint korábban a karakterfelismerés esetében, a probléma nagyobb kihívást jelent, mint amilyennek elsőre hangzik. Az azonos kategóriájú mintáknak nem biztos, hogy vannak közös pixeleik. Mint korábban, itt is a pixelek fényereje lesz a bemeneti réteg neuronjainak aktiválásának forrása.</p>
+
+    <h2>Az idegsejtek működése <span class="slides">6 - 13. dia</span></h2>
+    <p>Ezeken a diákon ismét részletesen bemutatjuk, hogyan működnek az idegsejtek: A bemenetek súlyozott összegének képzése és az értékek korlátozása. A szigmoid függvény részletei egy bővített tartalmat képeznek a haladóbb tanulók számára.</p>
+
+    <h2>A hálózat kiteljesítése <span class="slides">14 - 16. diák</span></h2>
+    <p>A megkezdett réteg befejeződik, egy további, ugyanolyan típusú réteg kerül hozzáadásra, végül pedig egy másik réteg alternatív aktiválási függvénnyel. Az aktiválásokhoz és súlyokhoz csak 0, 1, -1 értékeket használunk egymás után. Ez drasztikus korlátozás, és csak azért működik, mert ez egy nagyon egyszerű felhasználási lehetőség. A számítást azonban sokkal egyszerűbbé teszi. Lehetővé válik számunkra, hogy az egyszerű neurális hálózaton keresztül kövessük a számítási folyamatot, vagy akár magunk is elvégezzük azt. A gyakorlatban nem lenne jó ötlet, ha csak 0, 1, -1-et használnánk. Ez csak erre az egyszerű példára működik.</p>
+
+    <h2>Alternatív aktiválási függvény <span class="slides">17. dia</span></h2>
+    <p>Ennek az aktiválási függvénynek a részletei ismét bővített tartalomként tekinthetők meg. Mindkettő a függvények fogalmának és a függvények grafikus ábrázolásának alapos ismeretét igényli. A példánkban szereplő ReLU függvény legfontosabb tulajdonsága, hogy nem ad át negatív értékeket. Ezt a tulajdonságot használjuk fel az utolsó lépésben az eredmény sikeres kiszámításához.<br>
+        A két aktiválási függvény alkalmazását jelentősen leegyszerűsíti az a trükk, hogy csak a 0, 1, -1 értékeket használjuk. A főként használt aktiválási függvény (Sigmoid) legfontosabb tulajdonsága, hogy az 1-nél nagyobb értékeket 1-re, a -1-nél kisebb értékeket pedig -1-re redukálja. Az alternatív aktiválási függvények (ReLU és szivárgó ReLU) legfontosabb tulajdonsága, hogy a negatív értékek 0-ra (vagy nullához közeli értékre) redukálódnak.</p>
+
+    <h2>A hálózat és a használatban lévő kamera <span class="slides">18. dia</span></h2>
+    <p>Ez a dia a kész rendszert mutatja. A függőleges mintát hozzáadtuk, és helyesen felismerhető. Minden egyes neuronhoz fel van tüntetve a receptív mező. Ez minden neuron esetében azoknak a bemeneti neuronoknak a halmaza, amelyektől közvetlenül vagy közvetve jeleket tud fogadni. A receptív mezők balról jobbra haladva az 1-es mérettől a 4-es méretig nőnek. Minden esetben az is lényeges, hogy a neuron a receptív mezőjében pozitív (fehér mező) vagy negatív (fekete mező) aktivációra reagál.</p>
+
+    <div id="simulator2" class="exercise">
+        <h2>Szimulátor</h2>
+        <p>A szimulátor a hálózat feldolgozási lépéseinek szimulálására használható. A szimulátor kézi és automatikus változatban is elérhető. A manuális változatban az összes aktivációt a felhasználó határozza meg és állítja be a bemeneti adatok (=aktivációk 0,1,-1) és a kapcsolatok (0,1,-1) alapján. A szimulátor automatikus változata a bemeneti adatokból kiszámítja az összes szükséges aktivációt és kimenetet, és természetesen sokkal kényelmesebb a kezelése. A kézi szimulátorral sokkal nagyobb kihívást jelent a kezelő számára, de a tanulási hatás is sokkal nagyobb. A tehetséges vagy haladó tanulóknak először a kézi szimulátorral kell megismerkedniük.</p>
+    </div>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_II_-_receptive_Fields.pdf">Neural_Networks_II_-_receptive_Fields.pdf</a> <a href="Slides/Neural_Networks_II_-_receptive_Fields.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NN_ii_simulator.zip">NN_ii_simulator.zip</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1 id="part3">3. rész - Gyakorlati mintapélda</h1>
+
+    <p>Ez a rész egy interaktív gyakorlati példát mutat be egy mindössze 5 neuronból álló neurális hálózatra. A lecke e részének különlegessége, hogy egy minimális, de minden fázisban önálló kis projektről van szó. Nem használunk külső könyvtárakat vagy egyéb eszközöket. A képzési adatok, a számítási folyamat, a tréning kezelhető, egyértelműen dokumentált és azonnal érthető a Python forráskódban. A projekt nagyon jól szolgálja azt a célt, hogy demisztifikálja a mesterséges intelligencia területét. A projekt további projektek alapjául is szolgálhat, például lehet más adatbázist használni, vagy a hálózatot strukturálisan is bővíteni: további be- és kimeneti lehetőségek, további rétegek... A szerkezeti változtatás azonban a képzési folyamat megváltoztatását is megköveteli.</p>
+
+    <h2>A neurális hálózat bemutatása <span class="slides">2 - 3. dia</span></h2>
+    <p>Bevezetés, grafikus ábrázolás és a neurális hálózat szerkezetének magyarázata.</p>
+
+    <h2>Adatbázis és kimenet <span class="slides">4 - 5. dia</span></h2>
+    <p>A testsúly, a testmagasság és a nemek közötti kapcsolat grafikus ábrázolása. Csak az említett változók közötti kapcsolat szemléltetésére szolgál. Ez azonban nem a képzési adat. A hálózatot csak 4 adatmintával képezzük (lásd a Python programot).<br>
+        A két csoport átfedése miatt nem mindig várhatóak egyértelmű eredmények. Magyarázat arra, hogyan kell értelmezni a kimeneti réteg aktiválásának eredményét.</p>
+
+    <h2>Számítási tanfolyam <span class="slides">6. dia</span></h2>
+    <p>Itt ismertetjük a hálózaton keresztüli pontos adatáramlást és a számítási folyamatot.</p>
+
+    <h2>Korlátozó funkció <span class="slides">7. dia</span></h2>
+    <p>Itt kerül kifejtésre a kényszerfüggvény szükségessége.</p>
+
+    <h2>Hivatkozás a képzésre és a szimulátorra <span class="slides">8. dia</span></h2>
+    <p>A képzés magasabb szintű tartalmat képvisel. A haladók számára azonban az iii_training.pptx jó áttekintést nyújt a példa befejezéséhez. A Python forráskódja szintén információt szolgáltat a képzés részleteiről.<br>
+        A szimulátor lehetővé teszi minden diák számára, hogy interaktívan mintavételezzen értékeket és leolvassa az eredményt.<br>
+        A bemenetek 2 csúszkán keresztül történnek. A neuronok aktivációja numerikusan kerül kimenetre a neuronon, és ezen felül szürke skálákkal vizualizálható. A fekete itt a 0 aktivációt, a fehér az 1 aktivációt jelöli. A súlyozott kapcsolat erősségét a vonalszélességgel szimbolizáljuk. A pozitív kapcsolatok fekete színűek, a negatív kapcsolatok piros színűek.</p>
+
+    <div id="exercise" class="exercise">
+        <h2>Gyakorlati feladatok</h2>
+        <p>A résztvevők a megszerzett ismereteket most már felhasználhatják saját példájuk kiszámításához. A hálózat minimális, egyszerű felépítésének köszönhetően a kézi számítás könnyen elvégezhető.<br>
+            3 értékpár van megadva, amelyekre a résztvevők kiszámíthatják az eredményeket. Az alsó sorban saját értékek használhatók.</p>
+    </div>
+
+    <h2>Források és hivatkozások a programra <span class="slides">9. dia</span></h2>
+    <p>Az alapjául szolgáló Python program két változatban áll rendelkezésre, amelyekben különböző aktiválási függvényeket használnak.</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_III_-_practical_Example.pdf">Neural_Networks_III_-_practical_Example.pdf</a> <a href="Slides/Neural_Networks_III_-_practical_Example.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NN_iii_simulator.zip">NN_iii_simulator.zip</a></li>
+        <li><a href="Exercises/NN_exercise.zip">NN_exercise.zip</a></li>
+        <li><a href="Exercises/NN_additional_content.zip">NN_additional_content.zip</a></li>
+    </ul>
+</section>
+
+
+[[ footer.html ]]

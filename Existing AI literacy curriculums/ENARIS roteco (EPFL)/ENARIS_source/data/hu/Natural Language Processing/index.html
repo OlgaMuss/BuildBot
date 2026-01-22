@@ -1,0 +1,357 @@
+[[ header.html | Chatbotok - Természetes nyelvfeldolgozás]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+    NLP: Natural Language Processing
+    NLU: Natural Language Understanding
+    NLG: Natural Language Generation
+]}
+
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Module 3</h1>
+            <h2>Chatbotok - Természetes nyelvfeldolgozás</h2>
+            <p><cite> "Már nem az embereket tanítjuk arra, hogyan kommunikáljanak a <strong>rendszerekkel, a rendszereket tanítjuk az emberekkel való kommunikációra.</strong>"</cite></p>
+        </div>
+        <img src="{{images}}/natural_language_processing.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>A modulról</h1>
+
+    <p>Ebben a modulban különböző típusú chatbotokat mutatunk be alkalmazásokon keresztül. A tanulók megtanulják, mik azok a chatbotok, és hogyan működnek. A modulban olyan kérdések is felmerülnek például, hogy: hogyan érik el a programozók, hogy a chatbotok "emberinek" vagy "intelligensnek" tűnjenek, vagy hogy miért olyan nehézkes az emberi nyelv megértése.</p>
+    
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek:</p>
+        <ul>
+            <li>elmagyarázni, mik azok a chatbotok és hogyan működnek</li>
+            <li>megnevezni chatbotot hasznosító alkalmazásokat</li>
+            <li>ismertetni, hogy időnként miért sülnek el rosszul a chatbotokkal folytatott beszélgetések</li>
+            <li>leírni, mi a Turing-teszt, és képesek azt "kicsiben" maguk is kipróbálni</li>
+            <li>áttekintő leírást adni a természetes nyelvfeldolgozásról és annak működéséről</li>
+        </ul>
+    </div>
+
+
+    <h2>Napirend</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Anyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10 min</td>
+                <td><a href="#activation">Elhibázott chatbot-beszélgetések elemzése</a></td>
+                <td><a href="Slides/NLP - Introduction.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>10 min</td>
+                <td><a href="#introduction">Bevezetés a chatbotokba</a></td>
+                <td><a href="Slides/NLP - Introduction.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#analizechatbots">Egy chatbot határainak a tesztelése</a></td>
+                <td><a href="Slides/NLP - Talk to a Chatbot.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#paperbot">"Kattintgatós" chatbot készítése</a></td>
+                <td><a href="Slides/NLP - Chatbot with Click-Structure.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#nlpbot">Papíralapú NLP-chatbot készítése</a></td>
+                <td><a href="Slides/NLP - Chatbot.pdf">Diák</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="activation">Mi az a chatbot?</h1>
+
+    <p>Ebben a modulban a tanulók rögtön belecsöppenek a témába. Elsőként olyan emberi felhasználó és chatbot között lezajlott beszélgetéseket mutatunk be, amelyekben a társalgás sikertelen volt.</p>
+    <p>Az első ilyen bemutató felkelti a tanulók figyelmét a téma iránt, és nagyjából kialakul bennük egy kép arról is, hogy mit takar a "chatbot" kifejezés.</p>
+    <p>A legtöbb példabeszélgetésben az előre meghatározott szavakat a chatbot nem ismerte fel elég jól ahhoz, hogy megfelelő választ adjon a felhasználónak. Az folytonos félreértelmezés frusztrálja a felhasználókat, ami ahhoz vezet, hogy a chatbotot kevésbé fogadják el az emberek.</p>
+    <p>Az első néhány példa segítségével a tanulók megérthetik, mennyire összetett az emberi nyelv, és milyen sok dolgot kell figyelembe venni egy chatbot fejlesztése során.</p>
+   
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Slides/NLP - Introduction.pdf">NLP - Introduction.pdf</a> <a href="Slides/NLP - Introduction.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+</section>
+
+<section class="cols">
+    <h1 id="introduction">Bevezető</h1>
+
+    <p>Az első rövid benyomás és az ember-chatbot párbeszéd megvitatását követően a tanulók közösen dolgoznak tovább a kérdéseken. Ennek során a legfontosabb a személyes tapasztalat és a chatbotokhoz való személyes hozzáférés. A tanulóknak össze kell gyűjteniük, melyik chatbotokat ismerik és melyeket használják maguk is (használnak-e egyáltalán chatbotot?). A foglalkozásvezető kiindulásként különböző területekről mutat be chatbotokat. A modul során továbbá sor kerül a chatbotokkal kapcsolatos fontos kérdések tisztázására is: pontosan mik azok a chatbotok, és milyen problémák merülhetnek fel velük kapcsolatban?</p>
+    <p>Ha mélyebbre szeretnénk ásni, olyan további társadalmi és etikai értelemben érdekes kérdéseken is lehet dolgozni, amelyek akörül forognak, hogy a chatbotok jó alternatívát jelentenek-e magányos és depressziós emberek számára, valamint, hogy ennek során szükséges-e nyilvánvalóvá  tenni, hogy a beszélgetőpartner nem élő személy.</p>
+   
+    <h2>Mi a chatbot?</h2>
+    <p>A "chatbot" kifejezés a beszélgetni, chatelni (csevegni) és a robot szóból származik, azaz egy olyan robotot jelöl, amely képes beszélgetni valakivel. Egy chatbot további emberi beavatkozás nélkül, automatikusan képes kérdésekre válaszolni,  képes információt keresni az interneten, és még sorolhatnánk. Ahhoz, hogy a chatbotok ne tűnjenek annyira "mesterségesnek", a cégek olykor ún. avatarokat, azaz kis képeket vagy animációkat használnak arra, hogy megjelenést kölcsönözzenek a chatbotok számára. Manapság sok chatbot különböző mesterséges intelligencián (AI) alapuló alkalmazást használ a beszélgetések minél gördülékenyebbé tételéhez. Ennek révén a chatbotok információt tárolhatnak, amit felhasználhatnak önmaguk tanításához is. Ugyanakkor, ha a chatbotok nem tudják, mit tegyenek, felhasználót élő személynek adhatják át.</p>
+   
+    <h2>Milyen chatbotok vannak?</h2>
+    <p>A chatbotoknak számos típusa van. A chatbotokat elsősorban hatékonyság és gyors információszerzés elősegítésére fejlesztenek (pl. Mikor lesznek elérhetők az Ikea új konyhabútorai? Lekérdezhetem a telefonom egyenlegét?). Némelyik képes pénzügyek intézésére (pl. utalások), mások időpontot egyeztetnek az orvoshoz, vagy éppen az ételrendelés intézik. Az újabbnál újabb funkciók pedig folyamatosan bővülnek. Néhány további példa chatbotokra:</p>
+    <dl>
+        <dt>Kereskedelmi chatbotok</dt>
+        <dd>A chatbotok helyettesítik az emberi interakciókat, különösen, ha ügyfélszolgálatokról van szó. Az ilyen chatbotok célja az ügyfelek segítése az online vásárlások során. A kereskedelmi chatbotok éjjel-nappali elérhetőségüknek és gyors reakcióiknak köszönhetően különösen jól alkalmazhatók ezen a területen. Segíthetnek megfelelő ajándékötleteket javasolni, vagy ellenőrzik, hogy bizonyos tételek elérhetők-e még a raktárból.</dd>
+        <dt>Terápiás chatbotok</dt>
+        <dd>Például a Woe-Bot vagy ELIZA. A Woe-Bot egy segítségnyújtó chatbot, amit olyan egyetemi és főiskolai hallgatók támogatására fejlesztettek ki, akiknél fennáll a depresszió vagy szorongásos zavarok kialakulásának kockázata. Jó példa még ELIZA (1966), az egyik elsőnek tekintett chatbot a számítógépes tudomány történetében, amely egy pszichoterapeutát imitált.</dd>
+        <dt>Közösségi chatbotok</dt>
+        <dd>Más chatbotokat közösségi interakciókhoz fejlesztettek ki. Az olyan chatbotok, mint a Mitsuku és a Xiaolce célja az emberek szórakoztatásra és társas kapcsolatokra való igényének kielégítése. Éppen ezen a területen azonban számtalan kihívás jelenik meg: a valós személyközi kapcsolatok kialakulásához az emberek és az AI közötti párbeszédeknek nyelvtanilag helyesnek, a témába vágónak, személyre szabottnak kell lenniük, reagálniuk kell a hangulatra (boldog, szomorú, unatkozik), tükrözniük kell a hangszínt (kérdő, sürgető, kijelentő), sőt akár humorosnak kell lenniük, hogy csak néhány követelményt említsünk. 
+        <em>"Ha valaki egy szomorú eseményről mesél egy chatbotnak - mint például a szomszéd csípőtörése -, annak együttérzéssel, szomorúsággal és talán meglepődéssel kell reagálnia, véletlenül sem örömmel."</em>
+        Mindazonáltal, a fejlesztők fontosnak tartják azt a tényt is, hogy a felhasználók továbbra is tisztában legyenek azzal, hogy egy mesterséges intelligenciával kommunikálnak, nem pedig egy élő személlyel. (Ez miért lehet fontos?)</dd>
+        <dt>Közösségi média chatbotok (pl. az Instagramon vagy a Twitteren)</dt>
+        <dd>Ezek a chatbotok lehetővé teszik a követők és like-ok számának gyors növekedését az előzetesen beállított paraméterekre való automatikus megjegyzések vagy like-ok által (pl. bizonyos hashtagek, bizonyos helyszínek, más fiókok követői). Bár ez a típusú chatbot nagyon elterjedt, a más chatbotoknál megszokott interakciókra nem kerül sor. Különösen a Twitteren található néhány érdekes közösségi média chatbot. Jól ismert Twitter-bot például a @DearAssistant, amely egyszerű kérdésekre válaszol, a @DeepDrumpf, amely üzeneteiben Donald Trump stílusát igyekszik imitálni, vagy a @Pentametron, amely megosztja (re-tweeteli) a véletlenül jambikus pentameterben íródott bejegyzéseket (tweeteket).</dd>
+       
+    </dl>
+
+    <h2>Veszélyesek a chatbotok?</h2>
+    <p>A chatbotok magukban ártalmatlanok, még ha ez némely sci-fi filmben másképpen is jelenik meg (lsd. keskeny vs. általános MI). Ugyanakkor nagy mennyiségű tárolt adat esetén mindig fennáll annak a kockázata, hogy valaki ellopja és bűncselekmények elkövetéséhez használja fel a megszerzett információkat. A nem megfelelő adatok felhasználása szintén eredményezhet rasszista vagy diszkriminatív chatbotokat, mint például a "Twitterbot Tay" volt (vö. elfogultsági hibák az etikai modulban).</p>
+
+    <div class="info">
+        <h2>A közösségi chatbotokról</h2>
+        <p>Manapság egyre gyakoribb jelenségnek tűnik a magány. Egyre több ember részesíti előnyben a digitális kommunikációt a személyes beszélgetéssel szemben. A chatbotok kiemelkedő példaként említhetők. Egy olyan chatbot, mint a Mitsuku vagy a Xiaolce felhasználók millióival beszélget, és képes a korábbi beszélgetésekből származó információk hasznosítására is. De ne csak a negatív oldalára koncentráljunk a chatbotokkal folytatott kommunikációnak! A chatbotokba kerülő új technológiák segíthetnek az embereknek kiutat találni a magányból. Különösen igaz ez a járványhelyzetek idejére, amikor az ember újra és újra karanténban találta magát, de ott vannak az idősek vagy az olyan személyek is, akik nem tudják kihez forduljanak problémáikkal és aggodalmaikkal. A chatbotok viszont segíthetnek ezeknek a csoportoknak kiutat találni a magányból, és felvenni a harcot az olyan mentális egészséget érintő problémákkal, mint a depresszió vagy a szorongás. De valóban képesek ezek a technológiák helyettesíteni az emberi kapcsolatot? </p>
+        <p>"A Mitsuku nem tetteti, hogy helyettesíthet egy valódi személyt, de mindig rendelkezésre áll, ha valakinek szüksége van rá ahelyett, hogy a falhoz beszélne," - mondja Steve Worswick, a Mitsuku fejlesztője. Ezek a chatbotok abban különböznek az olyan asszisztensektől, mint a Siri és az Alexa, hogy barátságosan és empatikusan válaszolnak a felhasználók számára.</p>
+        <p>Az egyik jól ismert példa a világszerte több, mint 660 millió felhasználóval rendelkező kínai chatbot, a Xiaolce, amely az üzenetekre szenzitív, szinte emberi módon reagál. A Xiaolce felhasználói hagyják, hogy a program felvidítsa őket, viccet mondatnak vele, vagy kiírják magukból aggodalmaikat, miközben a chatbot figyelmesen hallgatja őket.</p>
+        <p>Egy másik rendkívül izgalmas projekt a Replika alkalmazás. A Replika egy mesterséges intelligencia, amely igyekszik digitális másolatot készíteni az ember személyiségéről - azaz épp úgy próbál chatelni, mint a felhasználó.
+        <cite>"Replika írásban kommunikál Önnel. Kérdéseket tesz fel, figyel Önre, és olyan barátja kíván lenni, akire mindig is vágyott."</cite></p>
+    </div>
+
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Slides/NLP - Introduction.pdf">NLP - Introduction.pdf</a> <a href="Slides/NLP - Introduction.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a href="https://blog.replika.com/">Replika</a></li>
+        <li><a href="https://sampi.co/chinese-chatbot-xiaoice-vs-tay/">Xiaoice Vs. Tay: Two A.I. Chatbotok, két különböző eredmény</a></li>
+        <li><a href="https://woebothealth.com/">Woebot Health</a></li>
+    </ol>
+</section>
+
+
+<section class="exercise">
+    <h1>Beszéljünk a Chatbotokról!</h1>
+
+    <p><strong>Miért használunk chatbotokat?</strong> Milyen előnyeik vannak? Vitassák meg csoportokban! </p>
+    <p><strong>Kapcsolatba lépett már chatbotokkal?</strong> Ha igen, milyen célból?</p>
+    <p><strong>Milyen problémák vagy veszélyek merülhetnek fel a chatbotokkal kapcsolatban?</strong></p>
+    <p><strong>További lehetséges kérdések:</strong></p>
+    <p>Használhatnak chatbotot magányos emberek, illetve mentális egészségügyi problémákkal küzdők is. Ön szerint van ennek értelme, és jól fogadják az érintettek? Milyen problémák merülhetnek fel, ha magányos emberek többet lépnek kapcsolatba chatbotokkal (vagy csak azokkal lépnek kapcsolatba)?</p>
+    <p>Némely beszélgetéseknél nem lehet pontosan megállapítani, hogy valós személlyel vagy egy chatbottal beszélget valaki. Fontos a chatbotok és a valós személyek egyértelmű elkülönítése?</p>
+</section>
+
+
+<section class="cols">
+    <h1 id="analizechatbots">Chatbotok nyelvi határainak tesztelése </h1>
+
+    <p>A modul ezen szakaszában a tanulók közvetlenül beszélgetnek egy chatbottal és saját maguk tapasztalják meg, mire képesek a chatbotok, és mik a korlátaik.</p>
+    <p><a href="https://chat.kuki.ai">Mitsuku (becenevén "Kuki")</a> különösen érdekessé teheti a feladatot. Ez az alkalmazás ugyanis már öt alkalommal elnyerte a Loebner-díjat, így jól teljesít hiteles válaszok adásában.</p>
+    <p>Kuki használatához ugyanakkor létre kell hozni egy ingyenes fiókot, így a beszélgetések elmenthetők későbbi használatra is. Ráadásul a chatbot sajnos csak angol nyelven érhető el és más nyelveken pedig nagyon nehézkesen válaszol, így nincs értelme, hogy a tanulók más nyelveken végezzenek vele teljes tesztet (de persze izgalmas lehet a tanulók számára kipróbálni ezt is).</p>
+    <p>Ha a foglalkozás nem indokolja felhasználói fiók létrehozását, vagy ha nincs lehetőség a Mitsuku tesztelésére, egy papíron végezhető feladat is jó alternatíva lehet, amely során a tanulók önállóan értékelhetik a Loebner-díjért folyó tesztbeszélgetések kivonatait. A zsűri értékelése később ismertethető, és a tanulók eredményeit meg lehet vitatni.</p>
+   
+    <div class="info">
+        <h2>A Loebner-díjról</h2>
+        <p>A Loebner-díjat a Turing-tesztet teljesítő programoknak ítélik oda. A díjnak három kategóriája van: az évente odaítélt bronzérem, amelyet a leginkább emberszerű program kap, az ezüstérem, amelyért a programnak már az írásbeli Turing-tesztet is teljesítenie kell; és az aranyérem, amely a teljes Turing-teszt teljesítéséért jár. A teljes teszt részeként olyan multimédiás tartalmakat is fel kell dolgozni, mint például zene, beszéd, képek és videófelvételek. Ezidáig egyetlen program sem teljesítette a teljes Turing-tesztet, így csak a bronzérmet ítéltek oda.</p>
+    </div> 
+    
+    <div class="info">
+        <h2>A Turing-tesztről</h2>
+        <p>A tanulók és a Mitsuku között lezajló párbeszéddel valójában a Turing-teszt nagymértékben leegyszerűsített változata végezhető el.</p>
+        <p>A tesztet Alan Turing dolgozta ki 1950-ben azért, hogy meghatározza, hogy milyen pontosan tudja egy program utánozni az emberi nyelvet. A Turing-teszt során egy személynek többször, hiba nélkül meg kell tudnia állapítani, hogy egy kérdésre adott a válasz egy számítógéptől vagy embertől származik-e. Ha a személy erre nem képes, a számítógép "átment" a teszten.</p>
+        <p>A mi esetünkben a tanulók már tudják, hogy egy chatbottal fognak beszélni, így ezzel a tudással a birtokukban próbálják meg kideríteni, hogy a chatbot milyen mértékben képes emberszerű válaszokat adni, előzetesen pedig azt is megbecsülhetik, hogy mennyire fogja "érteni" a megfogalmazott kérdéseket és válaszokat.</p>
+    </div>
+
+    
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Slides/NLP - Loebner Prize.pdf">NLP - Loebner Prize.pdf</a> <a href="Slides/NLP - Loebner Prize.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NLP - Worksheet Chatbots Introduction.pdf">NLP - Worksheet Chatbots Introduction.pdf</a> <a href="Exercises/NLP - Worksheet Chatbots Introduction.docx" class="alt">(.docx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a href="https://chat.kuki.ai/chat"> https://chat.kuki.ai/chat</a></li>
+    </ol>
+</section>
+
+<section class="exercise">
+    <h1>Beszélgessen egy Chatbottal!</h1>
+
+    <p>A feladat során ismerje meg közelebbről <strong>Mitsuku chatbotot (becenév: Kuki)</strong>: <a href="https://chat.kuki.ai">https://chat.kuki.ai</a></p>
+    <p>Állítsa meg az órát!</p>
+    <p>Mennyi idő után jött rá, hogy nem emberrel beszélget? Miből jött rá, hogy egy számítógépes rendszerrel kommunikál?</p>
+
+    <ul>
+        <li>Mi történik az állítások megismétlésekor?</li>
+        <li>Mi történik, ha ugyanazt a kérdést átfogalmazva teszi fel?</li>
+        <li>Miből vehető észre, hogy géppel beszélget?</li>
+        <li>A chatbot mindig logikus választ ad a kérdésekre? Hogyan reagál a chatbot, ha nem ért valamit?</li>
+        <li>Egész mondatokat kell leírnia vagy néhány szó is elegendő a chatbot számára? A különálló szavakat megfelelően értelmezi?</li>
+        <li>Adjon meg konkrét példákat/idézeteket a chatbottal folytatott beszélgetésből! Min lehetne javítani, hogy még emberszerűbbnek tűnjön? Kell egyáltalán még emberszerűbbnek tűnnie?</li>
+    </ul>
+
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Exercises/NLP - Worksheet Talk to a Chatbot.pdf">NLP - Worksheet Talk to a Chatbot.pdf</a> <a href="Exercises/NLP - Worksheet Talk to a Chatbot.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="exercise">
+    <h1>Mitsuku és a Loebner-díj </h1>
+    <p>Ebben a rövidített feladatban a tanulók olyan állításokkal dolgozhatnak, amelyeket a Loebner-díj zsűrije használt a Mitsuku-val végzett Turing-teszt során. A feladatot a résztvevők egyszerűen kinyomtathatják és kitölthetik, végül pedig a zsűri értékelése is megjeleníthető PowerPointban vagy egy táblára felírva.</p>
+    <p>Steve Worswick Mitsuku nevű chatbotja egy 20 évesnek tűnő chatbot, amit egy verseny során Turing-tesztnek vetettek alá.</p>
+    <p>20 kérdést tettek fel Mitsukunak, ebből néhány megtalálható az alábbi táblázatban.</p>
+
+    <p><strong>Olvassa el figyelmesen a kérdéseket és a válaszokat! Páros munkában vitassák meg, önök szerint mennyire "emberiek" a különböző válaszok, majd minden választ pontozzanak a következők szerint:</strong></p>
+
+    <ul>
+        <li>0 pont - teljesen helytelen, nem emberi válasz</li>
+        <li>1 pont - bizonytalan válasz, például "nem tudom", vagy hasonló</li>
+        <li>2 pont - embertől elvárható válasz</li>
+    </ul>
+
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Exercises/NLP - Worksheet Mitsuku.pdf">NLP - Worksheet Mitsuku.pdf</a> <a href="Exercises/NLP - Worksheet Mitsuku.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="paperbot">Papíralapú chatbotok</h1>
+
+    <p>Ebben az utolsó nagyobb lélegzetvételű szakaszban a tanulók maguk próbálják megtervezni egy chatbot elméleti alapjait. Egy tényleges chatbot programozása nem célja a modulnak, mivel az egyrészt meghaladná az időkeretet, másrészt pedig túlmutatna a chatbotok alapvető felépítésének a megértésén.</p>
+    <p>Ebben a modulban a chatbotok felépítésére vonatkozóan két különböző megközelítést vizsgálunk részletesen. Elméletben mindkét rész elvégezhető, de ha kevés az idő, vagy szeretné meghatározni a nehézség szintjét, a két papíralapú chatbotos feladatból végrehajtható csak az egyik feladat is.</p>
+
+    <p>Alapvetően két különböző kivitelezési lehetőséggel van dolgunk:</p>
+    <ol>
+        <li>A szabályalapú chatbotok fix kattintás-szerkezetet használnak, így a felhasználó nem írhat be szabadon szöveget, csak "végigkattintja a beszélgetést" gombok segítségével.</li>
+        <li>A chatbotok szabad szövegbevitelt tesznek lehetővé, és általában a természetes nyelvfeldolgozáson alapulnak.</li>
+    </ol>
+
+    <p>Ebben a két feladatban a tanulók felismerik, hogy a folyékony, hiteles beszélgetéshez számos eshetőséget kell számba venni.</p>
+</section>
+
+<section class="exercise">
+    <h1>Folyamatábra-alapú Chatbot készítése</h1>
+
+    <p>Ebben a feladatban a tanulók egy folyamatábrán alapuló chatbotot készítenek plakátpapír (nagyméretű rajzlap), toll és jelölőcímkék (post-it) használatával. Lehetséges digitális gondolattérképek készítése olyan eszközök vagy weboldalak segítségével, mint a <a href="https://www.canva.com/graphs/decision-trees">Canva</a> vagy a <a href="https://miro.com/">Miro</a>.</p>
+    <p>A döntési fán alapuló chatbotok a legkevésbé beszélgetős chatbot-fajták, amelyek egy előre programozott folyamatot követnek, ami lehet nagyon egyszerű vagy összetett is. Az ilyen chatbotok előre kiválasztott widgeteket használnak a feleletválasztás különböző módjait felkínálva. Ez a mód lehetőséget nyújt ugyan a chatbot szövegeinek és a megjelenítési lehetőségek kreatív megoldására, de a felhasználónak az előre meghatározott lehetőségek közül kell választania. Azért használják ezeket a cégek, mert olcsóbb létrehozni őket, gyorsabb a működésbe állításuk, ugyanakkor hasznosak, szórakoztatóak és edukatív jellegűek.</p>
+    <p>A feladat elején a tanulóknak ki kell találniuk a chatbot célját (pl. lehessen vele a fodrásznál időpontot foglalni, az időjárásról érdeklődni, vagy pizzát rendelni...).</p>
+
+    <ul>
+        <li>Keressen egy területet, amire a <strong>chatbot specializálódhat</strong>. Szeretné egy fodrászatnál időpontegyeztetésre használni? Pizzát kíván rendelni vele? Vagy öltse magára egy terapeuta szerepét? Előzetes diagnózist állítson fel beteg emberekről? Vagy a költségvetését kívánja kiszámítani és kezelni a segítségével?</li>
+        <li>Miután kiválasztotta a chatbot típusát, át kell gondolnia, milyen <strong>feladatokat végezzen el a chatbot</strong>. Tegyük fel, hogy egy fodrászüzlet chatbotját időpontok foglalására készítették. Milyen információkra kérdezzen rá a chatbot, hogy az időpontfoglalás végrehajtható legyen? Pontos dátum, személyes adatok, - mint a név és telefonszám - a fodrászati szolgáltatás fajtája stb.. Továbbá, számba kell venni olyan funkciókat is, mint az időpont törlése vagy élő személlyel való kapcsolatba lépés.</li>
+        <li>A következő lépésben fel kell építeni egy folyamatábrát, amelyen minden információra vonatkozó kérdés szerepel. Az ilyen chatbotok épp olyanok, mint az interaktív folyamatábrák.</li>
+    </ul>
+
+    <h2>Folyamatábra készítése</h2>
+    <ol>
+        <li>Kezdjen hozzá egy toll és papír segítségével a folyamatábra megrajzolásához. Használhat öntapadós jegyzettömböt a táblán, vagy ceruzával is megrajzolhatja az ábrákat egy nagy lapra. Ezzel az egyes pontok áthelyezhetők vagy kicserélhetők.</li>
+        <li>Gondoskodjon arról, hogy a döntéshozatali folyamatnak minden lépésének legyen értelme, valamint, hogy a felhasználó ne kerülhessen olyan (végtelen) ciklusba, amiből nem tud kijutni.</li>
+        <li>Kerülje a folyamatábrán a zsákutcákat! A felhasználónak végül el kell jutnia egy befejező ponthoz.</li>
+        <li>Legyen a folyamatábra a lehető legegyszerűbb, ám egyúttal adjon elég értelmes választási lehetőséget a felhasználónak.</li>
+        <li>Ne feledkezzen meg egy zárómondat beillesztéséről sem, hogy a felhasználó ne kerülhessen zsákutcába. A zárásnak ugyanakkor eléggé nyitottnak kell lennie ahhoz, hogy a felhasználó tudja, bármikor tehet fel kérdést. Egy lehetséges példa: "Itt vagyok, ha szükséged van rám. Ne légy szégyenlős!" vagy "Most elmegyek, de csak szólj, ha szükséged van valamire. :)"</li>
+    </ol>
+
+    <img src="{{images}}/flowchart_chatbot.png">
+
+    <p>Ha több idő van a chatbot felépítésére, figyelmet fordíthat a chatbot személyiségére is. A chatbot jellemének nem kell túl összetettnek lennie. Egy hiteles, humoros chatbot erősítheti a felhasználók bizalmát, és jobb móka használni is. A chatbotja gyors felfogású, középkorú hölgy, vagy inkább egy alacsony, szégyenlős fiú, esetleg egy komoly idősebb úr? Ne feledje, hogy a chatbot kit képvisel (pl. cég), hogy a chatbot lényegileg illeszkedhessen a kitalált márkájához.</p>
+    <p><strong>Amikor elkészült a chatbot, kérje ki másik csoport véleményét és játssza végig a chatbot összes lehetőségét! Minden rendben megy vagy előfordulnak problémák?</strong></p>
+
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Slides/NLP - Chatbot with Click-Structure.pdf">NLP - Chatbot with Click-Structure.pdf</a> <a href="Slides/NLP - Chatbot with Click-Structure.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NLP - Worksheet Flowchartchatbot.pdf">NLP - Worksheet Flowchartchatbot.pdf</a> <a href="Exercises/NLP - Worksheet Flowchartchatbot.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="exercise" id="nlpbot">
+    <h1>NLP-alapú Chatbot készítése</h1>
+    <p>Ebben a feladatban a tanulók egy papíralapú chatbotot fejlesztenek, amely úgy reagál a kulcsszavakra, mint az NLP-modellek, így helyes válaszokat is ad. A tanulók kapnak egy táblázatot a lehetséges bemeneti és kimeneti szavakkal, amely alapján az adott bemenetnek megfelelően kell válaszolniuk. A tanulók hamar felismerik, hogy a lehetőségek széles skáláját kell lefedni és a tartalék kulcsoknak is játékba kell kerülniük, hogy a beszélgetés simán folyjon.</p>
+
+    <div class="info">
+        <h2>Hogyan működik egy NLP-Chatbot?</h2>
+        <p>Egy természetes nyelvfeldolgozáson (NLP) alapuló chatbot használatához verbális bemenetre van szükség billentyűzet vagy hangos beszéd által. A chatbot elemzi a kapott szavakat és információvá alakítja azokat. Mindez a természetes nyelv megértéséből (Natural Language Understanding, NLU) és a természetes nyelv létrehozásából (Natural Language Generation, NLG) áll.</p>
+        <p>Egy chatbot ugyan látja a beírt betűket, de <strong>nem ismeri a szavak jelentését</strong>. nem ismeri a szavak jelentését. Az "Időpontot szeretnék foglalni" mondat jelentése teljesen világos egy ember számára, de a számítógép részére csupán egy sor betű. Elsőre ez pontosan annyi jelentéssel bír számára, mint az értelmetlen "mis sdaijhw wek“ szöveg.</p>
+        <p>Tegyük fel, hogy van egy chatbotunk, amely képes egy fodrászatnál az időpontok foglalására és törlésére. A chatbot megkérdi "Miben segíthetek fodrászatunkban?" a felhasználó pedig válaszol: "Időpontot szeretnék foglalni.". Így ez a válasz lesz a bemenet a chatbot számára. Ekkor a chatbot elkezdi <strong>lépésről lépésre haladó folyamatát</strong> (amit csővezetéknek - pipeline - is hívnak) az ahhoz <strong>szükséges szövegbeli szerkezeti elemek </strong> felismeréséhez, hogy a program helyes választ adhasson.</p>
+
+        <dl>
+            <dt>Tokenizálás</dt>
+            <dd>Az első felismert szerkezeti elem <strong>a mondatok és szavak kezdete és vége</strong>. Számunkra mindig világos, mik a szavak, de a számítógép számára nem. A külön szavakra választás a <strong>tokenizálás</strong>. A chatbotnak "tudnia" kell, hogy az írásjelek nem képezik a szó részét, tehát az "időpont" a szó, és nem az "időpont.". Ugyanígy tudnia kell azt is, hogy nem minden pont jelöl mondatvéget, szükség esetén pedig fel kell oldania a rövidítéseket.</dd>
+            <dt>Lemmatizálás</dt>
+            <dd>A második lépés <strong>a szavak szótári alakjának</strong> megtalálása. Nekünk, embereknek nem kell minden szó szótári alakját megkeresnünk ahhoz, hogy megértsük azt. Azonban, a számítógép számára nagyon hasznos a különböző szóalakok számának csökkentése. Ez ugyanis azt jelenti, hogy a program rájön, hogy az "időpont" és az "időpontok" szavakat sok esetben egyformán kezelheti. Például a "Lehet most időpontokat foglalni?" mondatban a legtöbb fontos szó esetében ugyanazok a szótári alakok szerepelnek, mint a fenti példamondatunkban. Ennek megfelelően, a számítógép felismeri, hogy ez a 2 mondat valószínűleg ugyanúgy kezelendő. A szótári alak meghatározása a <strong>lemmatizálás</strong>.</dd>
+            <dt>Szófaj (pozíció) címkézése</dt>
+            <dd>A harmadik szerkezeti elem a szófaj. Emberként nem foglalkozunk a szófajokkal túl sokat. Azonban ez a számítógép számára nagy segítség, mivel a főnevek és az igék általában fontosabbak egy mondat elnagyolt jelentésének megállapításához, mint a többi szófaj. A szófaj meghatározása segít a következő lépésben is. A szófaj meghatározását <strong>szófaj (pozíció) címkézésként</strong> is használjuk.</dd>
+            <dt>Szintaktikai elemzés</dt>
+            <dd>Az alany, tárgy és az ige, valamint egyéb <strong>mondatrészek felismerése</strong> az utolsó előtti fontos szerkezeti elem. A számítógép egy szintaktikus elemző segítségével végzi el a <strong>mondatelemzést</strong>. A már létrehozott három szerkezeti elem segítségével létrehoz egy modellt, amely elemzi a mondaton belül <strong>a szavak függőségi viszonyait</strong>. A legegyszerűbb esetben meghatározásra kerül az alany, tárgy és a jelentéssel bíró ige a mondat legfontosabb részeinek felismeréséhez.</dd>
+            <dt>Szemantikai elemzés</dt>
+            <dd>Az utolsó szerkezeti elem a <strong>bemenet jelentésére vonatkozik</strong>. Amint már említettem, a számítógép nem tudja, mit jelent az "időpont", vagy a "foglalni" szó. De a helyes válasz megadásához csak az alábbi információ szükséges: Foglalni vagy töröltetni kíván egy időpontot, vagy valami mást szeretne? (Szándék) Mit szükséges foglalni? (Paraméter/Entitás) Számunkra ez hordozza a jelentést. A <strong>szemantikai elemzéshez</strong> a chatbotnak a lehetséges elemek listájára van szüksége (pl. időpont) arra vonatkozóan, amire válaszolni tudunk, valamint az egyes szándékokra vonatkozóan egy-egy példára (foglalni, törölni).<br>
+            A kulcsszavakat összehasonlításra kerülnek a listával, a chatbot pedig a kulcsszavakhoz illeszkedő helyes választ ad.</dd>
+        </dl>
+        <p>Az olyan nyelvi asszisztensek, mint az Alexa vagy a Google Assistant is így működnek. Ezek esetében a beszédfelismerés az első végrehajtott lépés. Ez alakítja a mikrofon bemeneti jelét karaktersorozattá. Ezt követően az egyes szerkezeti elemek (struktúrák) létrehozása ugyanígy történik.</p>
+
+        <!-- <h2>What happens when AIs book hairdressing appointments?</h2>
+        <p>In 2018, Google's "Duplex" application was the first to authentically arrange appointments at the hairdresser's or in a restaurant. Duplex's voice sounds so convincingly human that many initially thought the videos of these conversations were fake. </p>
+        <p>Google boss Sundar Pichai explained that these recordings were real but only the very least conversations went so perfectly like these. Most conversations with the AI still fail miserably. </p>
+        <p> A video of one of the successful phone calls can be found in the references.</p> -->
+    </div>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a href="https://paixon.ch/blog/chatbot-einfach-erklaert/natural-language-processing-nlp-chatbot/"> (DE) Wie funktioniert Natural Language Processing in Chatbots?</a></li>
+        <!-- <li><a href="https://www.youtube.com/watch?v=pKVppdt_-B4&t=4s&ab_channel=HaViK/"> (ENG) Google Assistant making a phone call</a></li> -->
+    </ol>
+    </div>
+
+    <h2>Papír-ceruza feladat egy chatbot készítéséhez és teszteléséhez</h2>
+
+    <p><strong>Beszélgessen egy papíralapú chatbottal!</strong></p>
+    <p>Amint már korábban hallhatta, egy állítás jelentésének megértéséhez sok olyan lépésre van szükség, melyet mi emberek természetesnek veszünk.</p>
+    <ol>
+        <li>Az egyik tanuló a felhasználó, a másik tanuló a chatbot szerepét tölti be.</li>
+        <li>Az élő felhasználó szerepét játszó tanuló időpontot kíván lefoglalni a fodrásznál, kérését pedig leírja egy darab papírra.</li>
+        <li>Az ember-chatbot ekkor átfutja a mondatot, és a táblázata alapján kiválogatja a fontos kulcsszavakat.</li>
+        <li>Az ember-chatbot a táblázatban található kulcsszavak felhasználásával válaszolhat.</li>
+        <li>Ha az emberi chatbot nem talál egyetlen kulcsszót sem a táblázatban, ki kell választani egy megfelelő választ.</li>
+    </ol>
+
+    <p><strong>Próbálja megoldani a következő feladatokat:</strong></p>
+    <ul>
+        <li>Próbáljon meg időpontot foglalni a fodrásznál ennek a táblázatnak a használatával! Sikerül vagy problémákba ütközik? Hogyan kellene kitölteni a táblázatot ahhoz, hogy gördülékeny legyen a beszélgetés?</li>
+        <li>Mi történik, ha az ügyfél tagadást alkalmaz? (pl.: <strong>nem</strong> akarok több időpontot)</li>
+        <li>Képzeljen el egy olyan ügyfelet, aki panaszt tesz, mert elveszett az időpontja, vagy zaklatott, amiért rosszul vágták le a haját. Mi alapján állapíthatja meg a chatbot, hogy az ügyfél zaklatott? Hogyan reagáljon a chatbot az esetleges sértegetésekre?</li>
+        <li>Mit kellene tenni ahhoz, hogy a chatbot hitelesebb legyen? Mit gondol, átmenne a Turing-teszten?</li>
+    </ul>
+
+    <h2 class="material">Anyag</h2>
+    <ul>
+        <li><a href="Slides/NLP - Chatbot.pdf">NLP - Chatbot.pdf</a> <a href="Slides/NLP - Chatbot.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NLP - Worksheet Chatbot.pdf">NLP - Worksheet Chatbot.pdf</a> <a href="Exercises/NLP - Worksheet Chatbot.docx" class="alt">(.docx)</a></li>
+    </ul>
+
+</section>
+
+<section class="cols">
+    <h1>Konklúzió</h1>
+
+    <p>A modul befejezéseként ismét általánosságban a nyelvről lesz szó. Meglévő alkalmazások felfedezésével és saját papíralapú chatbotjaik fejlesztésével a tanulók megértették, mennyire összetett lehet a nyelv, miközben egy olyan programot is fejlesztettek, amely képes reagálni erre az összetettségre. Az emberi nyelv bizonyosan nagy kihívás a mesterséges intelligencia számára. <cite>"Minden kettősségével, apróságával és félreérthetőségével, valószínűleg a leginkább összetett rendszer, amit az ember valaha kifejlesztett."</cite> Ezért nem sikerült még senkinek olyan gépet építeni, amely hitelesen szimulálja egy ember beszélgetőpartnerét.</p>
+    <p>Azonban, amint a modul prezentációjának utolsó képe is mutatja, a nyelv szerkezete gyakran még emberek között sem működik tökéletesen. Az olyan modellek, mint például Schulz von Thun négyoldalas modellje szintén beágyazhatók a foglalkozásokba annak bemutatására, hogy mennyire összetett lehet a nyelv az emberek számára, s hogy a küldő és a vevő elképzelései sokszor jelentősen eltérnek egymástól.</p>
+
+    <img src="{{images}}/human_language.png">
+</section>
+
+[[ footer.html ]]

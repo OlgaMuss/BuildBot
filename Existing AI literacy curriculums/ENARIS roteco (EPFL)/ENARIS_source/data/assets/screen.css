@@ -1,0 +1,444 @@
+/******************************************************************************
+* S C R E E N   L a y o u t
+******************************************************************************/
+html, body{
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    scroll-padding-top: 3rem;
+}
+
+body{
+    color: var(--color-black);
+    background: var(--color-grey);
+}
+
+/* header */
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-size: 1.5rem;
+    height: 2rem;
+    margin-top: 2rem;
+    background: var(--color-grey);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header .wrapper{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.header .title {
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    line-height: 2rem;
+}
+.header .title > img{
+    width: 4rem;
+    margin-top: -2rem;
+}
+
+
+/* nav */
+.header nav {
+    margin-left: auto;
+    height: 2rem;
+}
+.header nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.header nav > ul > li, .header nav > ul > li > a{
+    width: 2.5rem;
+    height: 100%;
+}
+.header nav > ul > li > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header nav > ul > li > a:hover{
+    text-decoration: none;
+}
+
+.header nav img.lang{
+    height: 1.4rem;
+    margin: 0;
+}
+
+
+/* dynamic menu */
+.menu {
+    position: relative;
+}
+.menu img{
+    max-width: max-content;
+}
+.menu > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: stretch;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+    font-size: 1rem;
+    list-style: none;
+    overflow: hidden;
+    background: var(--color-grey);
+    border: 1px solid var(--color-border);
+    border-top: none;
+}
+.menu > ul > li {
+    flex: 1;
+    text-align: center;
+}
+.menu li.sep{
+    border-bottom: 1px solid var(--color-border);
+}
+  
+.menu li a {
+    display: block;
+    padding: 0.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+  
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.menu > ul {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+  
+.menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 1.5rem;
+}
+  
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.menu-icon .navicon:before {
+    top: 0.5rem;
+}
+  
+.menu-icon .navicon:after {
+    top: -0.5rem;
+}
+
+.menu-btn {
+    display: none;
+}
+  
+.menu .menu-btn:checked ~ ul {
+    display: flex;
+}
+  
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.menu.languages ul{
+    right: -0.5rem;
+    left: -0.5rem;
+}
+.menu.languages a{
+    height: 1.5rem;
+    /* padding: 0; */
+}
+.menu.modules ul{
+    border-right: none;
+}
+
+/* footer */
+.footer{
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.footer > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer > div > a{
+    display: flex;
+}
+.footer img{
+    object-fit: contain;
+    max-width: 10rem;
+    max-height: 6rem;
+    margin: 1rem;
+}
+.footer div:not(:first-child) a:first-child img{
+    max-width: 11rem;
+    max-height: 7rem;
+}
+
+/* reflinks */
+.reflink:not(.empty){
+    display: none;
+}
+
+/* sections and headings */
+main{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+main > section{
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    padding: 6rem 1rem 2rem;
+    max-width: 58rem;
+    width: 100vw;
+}
+main > section:nth-of-type(odd){
+    background: var(--color-white);
+}
+main > section:nth-of-type(odd)::before{
+    content: '';
+    position:absolute;
+    left: -50vw;
+    right: -50vw;
+    top: 0;
+    bottom: 0;
+    background: var(--color-white);
+    z-index: -2;
+}
+
+main > section.back{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+main > section.modules {
+    padding: 10rem 1rem 0rem;
+}
+main > section.modules > div{
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+/* main > section.modules > div > img{
+    width: 50%;
+} */
+main > section.modules > div:nth-last-of-type(odd){
+    background: var(--color-grey);
+}
+main > section.modules > div:nth-last-of-type(odd)::before{
+    content: '';
+    position:absolute;
+    left: -50vw;
+    right: -50vw;
+    top: 0;
+    bottom: 0;
+    background: var(--color-grey);
+    z-index: -1;
+}
+
+
+/* title section */
+main > section.title{
+    padding-top: 2rem;
+}
+main > section.title h1{
+    text-align: end;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    z-index: 0;
+}
+main > section.title h1::before{
+    position: absolute;
+    top: 0.2rem;
+    left: 5rem;
+    right: -1rem;
+    padding-left: 0;
+    z-index: -1;
+    height: 0.75rem;
+    content: "";
+    background: var(--color-secondary);
+}
+main > section.title h2{
+    text-align: end;
+    margin-top: 0;
+}
+.exercise{
+    padding: 1rem;
+    border: 0.4rem dotted var(--color-border);
+}
+main > section.exercise{
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+main > section.exercise > h1{
+    top: -6rem;
+}
+main > section.exercise:nth-of-type(odd)::before{
+    content: '';
+    position:absolute;
+    left: -50vw;
+    right: -50vw;
+    top: -6rem;
+    bottom: -1.5rem;
+    background: var(--color-white);
+    z-index: -2;
+}
+main > section > h1{
+    position: absolute;
+    display: inline-block;
+    top: 1rem;
+    font-size: 1.2rem;
+    z-index: 0;
+}
+main > section > h1::before{
+    position: absolute;
+    left: calc(-50vw + 50% + 0.5rem);
+    right: -1rem;
+    top: 0.75em;
+    height: 1.5rem;
+    content: "";
+    z-index: -1;
+    max-width: calc(100vw - 2rem);
+    background: var(--color-secondary-light);
+}
+h1.title{
+    font-size: 1.5rem;
+}
+h2{
+    color: var(--color-primary);
+    font-size: 1.35rem;
+}
+section.ol h2{
+    position: relative;
+    top: 1rem;
+}
+h2.material, h2.references{
+    color:var(--color-black);
+    background: none;
+    font-size: 1.2rem;
+}
+section.ol h2.material, section.ol h2.references{
+    display: block;
+    margin: 2rem 0 0 0;
+    top: 0;
+}
+h2.material + ul, h2.references + ol{
+    margin-top: 0;
+}
+section.ol h2.material::before, section.ol h2.references::before{
+    content: '';
+}
+.toplink{
+    font-weight: 600;
+    margin-left: 1rem;
+    font-size: 0.5em;
+    vertical-align: middle;
+}
+
+/* text decoration */
+abbr{
+    text-decoration: underline dotted 5%;
+}
+
+/* description lists */
+dt{
+    margin-top: 2rem;
+    display: inline-block;
+    color: var(--color-primary);
+}
+dt:first-of-type{
+    margin-top: 1rem;
+}
+
+/* objectives */
+.objectives ul{
+    list-style-type: none;
+    margin-top: 0;
+}
+.objectives li{
+    padding: 0.2rem 0 0.2rem 2rem;
+    background-image: url("icon/arrow_primary.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1.5rem;
+}
+.objectives li:nth-of-type(even){
+    background-image: url("icon/arrow_secondary.png");
+}
+.objectives p:after{
+    content: ':';
+}
+.objectives p{
+    margin-bottom: 0;
+}
+
+/* general stuff */
+.spaced{
+    margin: 3rem 0;
+}
+.space-top{
+    margin-top: 3rem;
+}
+.space-bottom{
+    margin-bottom: 3rem;
+}

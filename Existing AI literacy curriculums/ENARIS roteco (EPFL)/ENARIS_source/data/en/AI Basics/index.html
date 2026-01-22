@@ -1,0 +1,211 @@
+[[ header.html | AI Basics ]]
+{[ abbreviations
+    AI: Artificial Intelligence
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Module 1</h1>
+            <h2>AI Basics</h2>
+            <p><cite>"The <em>first thing</em> anyone has to know about <strong>AI</strong> is that there is <strong>no uniform definition</strong> of <strong>artificial intelligence</strong>!"</cite></p>
+        </div>
+        <img src="{{images}}/ai_basics.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>About the Module</h1>
+
+    <p>This module serves as a basic introduction to the topic of <em>Artificial Intelligence</em> (AI). The goal of this lesson is to introduce basic AI terminology, that will be used inside the other modules as well as in AI science in general. More in-depth look at the methods and how they work will then take place in later modules.</p>
+    <p>While it is not strictly required, it is <em>recommended</em> to <strong>start with this module</strong> before introducing the other ones, as it not only helps with the basic terminology, but also provides a good overview of the vast field of AI.</p>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>independently define intelligence for themselves</li>
+            <li>reflect to what extent AI is built into everyday objects</li>
+            <li>understand the concept of algorithms and data</li>
+            <li>know different areas of AI</li>
+            <li>understand possibilities and limitations of AI</li>
+        </ul>
+    </div>
+
+
+    <h2>Agenda</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Content</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#definition">Theory & Quiz - What is AI?</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#map">Theory & Quiz - Map of AI</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Slides</a>, <a href="Exercises/AI Basics - Voting Cards.pdf">Cards</a></td>
+            </tr>
+            <tr>
+                <td>15 min</td>
+                <td><a href="#possibilities">Theory - Possibilities and Limitations</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#algorithms">Theory & Exercise - Algorithms</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Slides</a>, <a href="Exercises/Bubble Sort/index.html">Bubble Sort</a>, <a href="Exercises/Tic-Tac-Toe/index.html">Tic-Tac-Toe</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="definition">What is AI?</h1>
+
+    <p>This module is all about getting a <em>basic understanding</em> of intelligence and <strong>artificial intelligence</strong>. It introduces this topic in a reflective way, so students first have to come up with some <em>definition</em>, which will then be tested and refined on examples and during discussion. It is based on <a href="Slides/AI Basics - What is AI.pdf">slides</a> and discussions.</p>
+
+    <h2>Definition <span class="slides">Slides 2 - 19</span></h2>
+    <p>An important thing everyone has to know about AI is that there is <strong>no uniform definition</strong> of <em>artificial intelligence</em>! The definition can vary widely, depending of the field of research, therefore there are many definitions<a href="#definition_ref_1" class="ref">1</a> available. The first thing students are encouraged to do is create their <em>own</em> definition of what AI (or intelligent behavior) is. Depending on the students this can be either be approached in a discussive way, like using the <a href="../methods.html#think-pair-share">think-pair-share</a> method to help with brainstorming, or in a personal way, where students have to write their own definition down which then will be discussed after looking at some examples. It is also possible to rephrase the question for younger students, so that they should find things a machine should be able to do to be seen as 'intelligent'.</p>
+    <p>After everyone (or every group) has found a definition, <strong>eight examples</strong> of algorithms / machines are shown and the student have to rate them from 0 (not intelligent) to 5 (very intelligent) using <em>their definition</em>. It is ok, even encouraged, for students to <strong>adapt</strong> their definition during or after the exercise. In a final discussion, students can share their definitions and classifications of each example. While, depending on the definition, each of the examples can be more or less intelligent, here are some ideas of how someone could categorize them:</p>
+    <dl>
+        <dt>Toaster: 0-1</dt>
+        <dd>While it can be argued, that in more modern toasters some decision making is going on, is usually uses just some temporal / time switches.</dd>
+        <dt>Calculator: 1</dt>
+        <dd>Good at a very specific task, relying on very specific input.</dd>
+        <dt>Chess playing robot: 3</dt>
+        <dd>While more classical approaches mainly focus on calculation many turns in advanced, modern engines use machine learning to evaluate board positions and learn good moves from human players or using trial and error.</dd>
+        <dt>Chatbot: 2-4</dt>
+        <dd>Understanding human language an interacting in a meaningful manner can range from simple keyword-based helpline answers to complex digital assistants.</dd>
+        <dt>Self driving car: 4</dt>
+        <dd>Having a vehicle navigate through human populated spaces requires a lot of understanding of the surrounding environment, still the machines are not really aware of what is going on around them.</dd>
+        <dt>Cleaning robot: 2-3</dt>
+        <dd>Depending on the model the cleaning logic can range from just driving in random directions to creating a map and evenly drive around everywhere, while reacting to the environment.</dd>
+        <dt>Navigation App: 2</dt>
+        <dd>Finding the shortest path on a map might be difficult for a person, but using modern search algorithms computers can easily provide a excellent solution even factoring in traffic conditions, using well established search algorithms.</dd>
+        <dt>Earth-cleaning robot: 5</dt>
+        <dd>Later in this chapter it will become clear, that these capabilities, that are often depicted for intelligent machines in movies, are far more advanced than anything we can create today.</dd>
+    </dl>
+    <p>Finally different AI definition are shown to provide an idea how other definitions can look like.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="definition_ref_1" href="http://agisi.org/Defs_intelligence.html">http://agisi.org/Defs_intelligence.html</a></li>
+    </ol>
+</section>
+
+<section class="cols">
+    <h1 id="map">Map of AI</h1>
+
+    <p>After the first chapter, where students had to find their own definition, this chapter explores the vast field of AI and the many different algorithms and approaches that are connected to it. Therefore, a <strong>Map of AI</strong> is introduced to help understanding that AI is comprised of different areas. It is important to note, that this is <em>just one way</em> to differentiate between areas in the field of AI, not the only one. The relevant part is not these exact five areas, but that students understand, that there simply are a lot of different fields in AI.</p>
+
+    <h2>Map of AI <span class="slides">Slides 20 - 39</span></h2>
+    <p>The map introduces the following areas:</p>
+    <dl>
+        <dt>Think</dt>
+        <dd><em>Think</em> is about logic, reaching conclusions, calculating and searching. It includes algorithms for navigation or calculating (searching for) the best action to take next in a game.</dd>
+        <dt>Know</dt>
+        <dd><em>Know</em> is all about data and storing data in a useful way. It includes databases as well as general ways to describe things in an orderly manner, like ontologies.</dd>
+        <dt>Learn</dt>
+        <dd><em>Learn</em> is about algorithms that are able to modify themselves to better solve specific tasks. This includes learning by trial and error (reinforcement learning) and as learning from examples (supervised learning).</dd>
+        <dt>Sense</dt>
+        <dd><em>Sense</em> is about perceiving the environment (objects, temperature, images, …) as well as understanding measurements and correcting errors.</dd>
+        <dt>Act</dt>
+        <dd><em>Act</em> includes everything to interact with the environment. It includes motion as well as presenting information in visual or auditorial form (like text and voice generation).</dd>
+    </dl>
+    <p>Now that the basic idea of the map is clear, five of the examples from the previous chapter are reintroduced, this time with the intention to find corresponding fields inside the <em>Map of AI</em>. Therefore, students have to decide which areas are used for the system to work. This exercise works well as a guided discussion, but also methods like <a href="../methods.html#think-pair-share">think-pair-share</a> or group discussions work fine.</p>
+    <p>It is important to note, that the given solutions are only suggestions, most areas can be argued to be connected to any device, depending on the assumptions about the inner workings of the device. For example, a calculator could store formulas internally and therefore be connected to the know-area. The yellow arrows suggest that these areas might be connected, depending on the system. For instance, a chess algorithm can use <a href="../Reinforcement Learning/index.html">reinforcement learning</a> (especially many newer algorithms make more use of machine learning), but many classical algorithms don't require it.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/AI Basics - Voting Cards.pdf">AI Basics - Voting Cards.pdf</a> <a href="Exercises/AI Basics - Voting Cards.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="cols">
+    <h1 id="possibilities">Possibilities and Limitations</h1>
+
+    <p>The next chapter starts by introducing a <a href="https://youtu.be/alIq_wG9FNk">video</a>, the trailer of the movie Wall-E. Student then have to decide, which areas of AI are present in this fictional machine. The difference between most fictional and real-world AIs is that fictional ones are usually depicted <em>very human like</em>, with the ability to freely adapt to <strong>unknown situations</strong> and <strong>self-reflect</strong> on own actions, while our actual AI Systems are far away from such capabilities.</p>
+
+    <h2>Possibilities and Limitations <span class="slides">Slides 40 - 51</span></h2>
+    <p>In general, AI systems can be grouped in two categories: <em>narrow AIs</em> and <em>general AIs</em>.</p>
+    <dl>
+        <dt>Narrow AI</dt>
+        <dd>An intelligent system that is able to efficiently solve a <strong>specific task</strong>. This includes <em>all</em> our current AI systems!</dd>
+        <dt>General AI</dt>
+        <dd>An intelligent system that can understand, reason, reflect and act successfully in unknown environments.</dd>
+    </dl>
+    <p>The big takeaway from this last section is, that we currently only have <em>narrow AIs</em>. Therefore, all our systems, as complex as they might seem from the outside, are only good at solving <strong>specific tasks</strong>. No system currently has a form of awareness or understanding of its own doing. While in the last decades big improvements in <em>narrow AIs</em>, like image recognition, text translation, self-driving vehicles were seen, improvements for <em>general AIs</em> were very sparse. The final point in this module is that yes, AI improved a lot the last decades, but no it is not nearly as complex as suggested in many movies (like Wall-E).</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+        <li><a id="possibilities_ref_1" href="https://youtu.be/alIq_wG9FNk">https://youtu.be/alIq_wG9FNk</a> (Wall-E)</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="algorithms">Algorithms</h1>
+
+    <p>The final chapter introduces the concepts of <strong>algorithms</strong> and <strong>data</strong>, as these terms will occur all over the other modules.</p>
+
+    <h2>Algorithms <span class="slides">Slides 52 - 61</span></h2>
+    <p>An <em>algorithm</em> is just a <strong>list of instructions</strong> that are required to solve a given task. In its basic form, it can be something like a cooking recipe or an assembly guide for a cupboard. More specific in computer science, algorithms often describe methods to modify <em>data</em>, like how to efficiently sort a list of names or how to calculate the shortest path through a map.</p>
+    <div class="exercise">
+        <p>To demonstrate, that algorithms are just lists of instruction that, when followed correctly, lead to the desired result, one of the following two exercises can be used.</p>
+        <div class="horizontal">
+            <div><div class="horizontal">
+                <div>
+                    <h3>Bubble Sort</h3>
+                    <p>In this exercise the classical <strong>Bubble Sort</strong> algorithm is used to sort a line of students by height.</p>
+                    <a href="Exercises/Bubble Sort/index.html">Exercises / Bubble Sort</a>
+                </div>
+                <img src="{{images}}/sort.png">
+            </div></div>
+            <div><div class="horizontal">
+                <div>
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>This exercise introduces a simple algorithm for playing <strong>Tic-Tac-Toe</strong> which the students can try to beat.</p>
+                    <a href="Exercises/Tic-Tac-Toe/index.html">Exercises / Tic-Tac-Toe</a>
+                </div>
+                <img src="{{images}}/tic_tac_toe.jpg">
+            </div></div>
+        </div>
+    </div>
+    <p>After trying out one or two of the algorithms above, it is time to let the students create their own.</p>
+    <div class="exercise">
+        <h3>Create your own algorithm</h3>
+        <p>In this exercise, each student has to create his or her <em>own</em> algorithm on how to solve a simple/mundane task like making breakfast, taking out the garbage or even opening a door.</p>
+        <p>When it comes to algorithms for computers, it is important to be as <em>specific as possible</em>. For instance, the simple algorithm: "move forward adn then turn right", conveys no information of how far or with which speed one should move or how far to rotate.</p>
+        <ol>
+            <li>Every student needs a piece of paper and something to write</li>
+            <li>Let everyone decide on a <em>simple</em> task to write an algorithm about</li>
+            <li>After ten to fifteen minutes let the students <em>present</em> their algorithm</li>
+            <li>Discuss how detailed the algorithm was and what could be improved (e.g. can you put something in the trash can when the lid might be closed?)</li>
+        </ol>
+    </div>
+    <p>In the last few slides the concept of <strong>data</strong> is introduced. As data will become very important in the areas of machine learning (<a href="../Supervised Learning/index.html">Supervised Learning</a>, <a href="../Reinforcement Learning/index.html">Reinforcement Learning</a>), it is crucial to understand, that data is just a representation of any kind of information, stored on a digital device. While we <em>can't</em> take a person and squish it on a storage device, we <em>can</em> store other information, like the height or an image of the person. The <em>choice of</em> which <em>information</em> we use as data can have a <em>huge impact</em> in the final result. Looking at the sorting example, if we had used the pitch of the voice instead of the height of students, they probably would have been much harder to sort, as the pitch is not as easily distinguishable as the height.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+</section>
+
+[[ footer.html ]]

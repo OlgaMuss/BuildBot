@@ -1,0 +1,39 @@
+[[ header.html | Game Controller ]]
+{[ abbreviations
+    KI: Künstliche Intelligenz
+    SL: Supervised Learning
+]}
+
+<section class="ol">
+    <h1>Game Controller</h1>
+
+    <h2>Vorstellen von "Teachable Machine"</h2>
+    <p>Stell den Schüler*innen die Website <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> vor und wie sie ein <em>Bild</em>-Projekt erstellen können. Obwohl die Website recht einfach zu bedienen ist, kann es notwendig sein, die Schritte zum Erstellen einiger Klassen zu zeigen, indem man <a href="https://youtu.be/DFBbSTvtpy4">einige Beispielbilder aufzeichnet</a > und schließlich, wie man <a href="https://youtu.be/CO67EQ0ZWgA">das Netzwerk trainiert</a>.</p>
+    <p>Eine gute erste Übung für die Schüler*innen könnte sein, z.B. zwischen einzelnen Personen oder zwischen Gesichtsausdrücken zu unterscheiden, was entweder alleine oder in kleinen Gruppen gut funktioniert.</p>
+
+    <h2>Zeige, wie man ein Modell exportiert</h2>
+    <p>Sobald ein Modell trainiert wurde, kann es zur Verwendung in andere Anwendungen exportiert werden. Zeige deinen Schüler*innen, wie ein Modell mithilfe der Schaltfläche <a href="https://youtu.be/n-zeeRLBgd0">"Modell exportieren"</a> als ZIP-Datei heruntergeladen werden kann. Dies unterscheidet sich vom Exportieren des gesamten Projekts, da es nur das trainierte Netzwerk und nicht die Bilddaten enthält.</p>
+
+    <h2>Vorstellen von "Snake"</h2>
+    <p>Um sein Modell in Aktion zu sehen, kann das Snake-Spiel auf der Website <a href="https://snake.c4f.wtf">snake.c4f.wtf</a> verwendet werden. Es ermöglicht Benutzer*innen, eine <em>zip</em>-Datei (kein Entpacken erforderlich) eines Modells hochzuladen und damit die Richtung der Schlange zu steuern. Damit ein Modell verwendet werden kann, muss es <strong>ein</strong> <em>image</em>-Modell sein und die Klassen <strong>up, down, left, right</strong> und <strong> none</strong> enthalten, sonst wird ein Fehler angezeigt. Dann kann das Spiel durch das Trainingsset gesteuert werden (zum Beispiel: Handgesten, Mimik, ...).</p>
+
+    <h2>Lass die Schüler*innen experimentieren</h2>
+    <p>Lass die Schüler*innen ihr eigenes Kontrollmodell erstellen und es auf der Website testen. Sie müssen es wahrscheinlich mehrmals anpassen, bis es wie erwartet funktioniert.</p>
+
+    <h2>Modelle tauschen</h2>
+    <p>Lass die Schüler*innen ihr Modell <strong>mit anderen Teams teilen</strong> und testet, wie gut ihre Modelle in dieser anderen Umgebung funktionieren. Funktioniert es noch?</p>
+
+    <h2>Optimieren des Modells</h2>
+    <p>Schließlich können die Schüler*innen versuchen, ihr Modell <em>allgemeiner</em> zu machen, indem sie die Vielfalt ihrer Trainingsdaten erhöhen. Bei einigen Schüler*innen funktioniert ein kleiner Wettbewerb gut, bei dem die Schüler*innen Punkte für jede Person erhalten, deren Input an Daten erkannt wird.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="https://teachablemachine.withgoogle.com">https://teachablemachine.withgoogle.com</a></li>
+        <li><a href="https://youtu.be/DFBbSTvtpy4">https://youtu.be/DFBbSTvtpy4</a> (aufnehmen)</li>
+        <li><a href="https://youtu.be/CO67EQ0ZWgA">https://youtu.be/CO67EQ0ZWgA</a> (trainieren)</li>
+        <li><a href="https://youtu.be/n-zeeRLBgd0">https://youtu.be/n-zeeRLBgd0</a> (exportieren)</li>
+        <li><a href="https://snake.c4f.wtf">https://snake.c4f.wtf</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

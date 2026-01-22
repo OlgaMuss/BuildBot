@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>{{arg1}}</title>
+    <link rel="stylesheet" href="{{root}}/assets/fontawesome.min.css" media="all">
+    <link rel="stylesheet" href="{{root}}/assets/fontawesome-solid.min.css" media="all">
+    <link rel="stylesheet" href="{{root}}/assets/enaris.css" media="all">
+    <link rel="stylesheet" href="{{root}}/assets/screen.css" media="screen">
+    <link rel="stylesheet" href="{{root}}/assets/desktop.css" media="screen">
+    <link rel="stylesheet" href="{{root}}/assets/print.css" media="print">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="title">
+                <img src="{{root}}/assets/img/logo_eu.jpg" alt="European Union">
+                <img src="{{root}}/assets/img/logo_small.png" alt="Education and Awareness for Intelligent Systems">
+                <span>{{arg1}}</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{root}}/{{lang}}/index.html" title="Home"><i class="fa-solid fa-home" aria-hidden="true"></i></a></li>
+                    <li><a href="#top" title="{{en:Up}}{{de:Rauf}}{{hu:Fel}}"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a></li>
+                    <li>
+                        <a href="mailto:contact@enaris.org" title="{{en:Contact}}{{de:Kontakt}}{{hu:Kapcsolat}}"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="{{pdf}}" title="{{en:Print}}{{de:Drucken}}{{hu:Nyomtat}}"><i class="fa-solid fa-print" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="menu languages">
+                        <input class="menu-btn" type="checkbox" id="lang-btn">
+                        <label class="menu-icon" for="lang-btn"><img src="{{root}}/assets/icon/{{lang}}.png" class="lang" title="{{lname}}"></label>
+                        <ul>{{switch_en}}{{switch_de}}{{switch_hu}}</ul>
+                    </li>
+                    <li class="menu modules">
+                        <input class="menu-btn" type="checkbox" id="modules-btn">
+                        <label class="menu-icon" for="modules-btn"><span class="navicon"></span></label>
+                        <ul>
+                            {{de:<li class="sep"><a href="{{root}}/de/education.html">Digitale Grundbildung</a></li>}}
+                            <li class="sep"><strong>{{en:Modules}}{{de:Module}}{{hu:Modulok}}</strong></li>
+                            <li><a href="{{root}}/{{lang}}/AI Basics/index.html">{{en:AI Basics}}{{de:AI Basics}}{{hu:Az MI alapjai}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Ethics/index.html">{{en:Ethics}}{{de:Ethik}}{{hu:Etika}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Natural Language Processing/index.html">{{en:Chatbots}}{{de:Chatbots}}{{hu:Chatbots}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Supervised Learning/index.html">{{en:Supervised Learning}}{{de:Supervised Learning}}{{hu:A felügyelt tanulás}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Reinforcement Learning/index.html">{{en:Reinforcement Learning}}{{de:Reinforcement Learning}}{{hu:Megerősítéses tanulás}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Computer Vision/index.html">{{en:Computer Vision}}{{de:Computer Vision}}{{hu:Számítógépes képalkotás}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Neural Networks/index.html">{{en:Neural Networks}}{{de:Neural Networks}}{{hu:Neurális hálózatok}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Arts/index.html">{{en:AI and Arts}}{{de:KI und Kunst}}{{hu:Művészet és MI}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Social Media/index.html">{{en:Social Media}}{{de:Social Media}}{{hu:Közösségi média és MI}}</a></li>
+                            <li><a href="{{root}}/{{lang}}/Environment/index.html">{{en:AI and Environment}}{{de:KI und Umwelt}}{{hu:MI és környezet}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="content">

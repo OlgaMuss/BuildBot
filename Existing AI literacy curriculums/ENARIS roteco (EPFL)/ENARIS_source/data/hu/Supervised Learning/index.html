@@ -1,0 +1,324 @@
+[[ header.html | Felügyelt Tanulásról]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+    FT: Felügyelt Tanulásról
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>4. modul</h1>
+            <h2>Felügyelt tanulás</h2>
+            <p><cite>"A <em>modell</em> olyan <em>paraméterekből</em> áll, amelyeket nem a programozó választ ki, hanem az algoritmus alakítja ki egy <em>tréningnek/tanításnak</em> nevezett folyamat során."</cite></p>
+        </div>
+        <img src="{{images}}/supervised_learning.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>A modulról</h1>
+
+    <p>Ez a modul a <em>felügyelt tanulásról</em> (FT) szól. Célja, hogy a tanulók alapszinten megértsék, mi az FT, mire jó és mire nem, valamint hogyan hozhatók létre felügyelt tanulási algoritmusok. A modul inkább a gyakorlatra összpontosít, ezért a tanulók
+        saját algoritmusokat fognak betanítani, így első kézből tapasztalhatják meg a felmerülő lehetőségeket és nehézségeket. Az eljárás alapjául szolgáló technikai jellegű rész itt most nagyrészt kimarad, mivel vannak más modulok a konkrét módszerek,
+        például <a href="../Neural Networks/index.html">neurális hálózatok</a> megismerésére - ez a tudás pedig nem szükséges az FT működésének és hasznosíthatóságának alapvető megértéséhez.</p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek:</p>
+        <ul>
+            <li>elmagyarázni a felügyelt tanulást, mint leképezőfüggvényt</li>
+            <li>megnevezni a tréningadatok jelentőségét és követelményeit</li>
+            <li>megtippelni, hogy egy alkalmazás felügyelt tanulást alkalmaz-e</li>
+            <li>megnevezni a felügyelt tanulás problémáit és korlátait</li>
+            <li>saját felügyelt tanuló-modell tanítani, és egy alkalmazásban hasznosítani</li>
+        </ul>
+    </div>
+
+
+    <h2>Beosztás</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Anyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>30 perc</td>
+                <td><a href="#introduction">Bevezetés</a></td>
+                <td><a href="Slides/SL - Introduction.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>30 perc</td>
+                <td><a href="#train">Feladat - Tanítsd be az első modelled</a></td>
+                <td><a href="Exercises/Classification Game/index.html">Papír&toll</a>, <a href="Exercises/AI for Oceans/index.html">Online</a></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#reliance">Elmélet - Adatokra való támaszkodás</a></td>
+                <td><a href="Slides/SL - Reliance on data.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>30-60 perc</td>
+                <td><a href="#game">Feladat - Játékvezérlő</a></td>
+                <td><a href="Exercises/Game Controller/index.html">Online</a></td>
+            </tr>
+            <tr>
+                <td>30 perc</td>
+                <td><a href="#possibilities">Vita + Kvíz - Lehetőségek és korlátok</a></td>
+                <td><a href="Slides/SL - Quiz.pdf">Diák</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="introduction">Bevezetés</h1>
+
+    <p>A bevezető rész célja, hogy a hallgatók megismerkedjenek a <em>felügyelt tanulás</em> (FT) alapfogalmaival és kifejezéseivel. A modul a kapcsolódó <a href="Slides/SL - Introduction.pdf">diákra</a> épül, amelyek nemcsak az FT bevett alkalmazási példáit
+        mutatják be, hanem képet nyújtanak arról is, általánosságban mit csinál egy FT-algoritmus, és hogyan lehet tanítani.</p>
+
+    <h2>Valós példák<span class="slides">2 - 8. dia</span></h2>
+    <p>Az első diákon az FT algoritmusok számos alkalmazási példája kerül bemutatásra, amiből egyértelműen látszik, milyen sok területen használják.</p>
+    <p>Az FT legkiemelkedőbb példái közé tartozik a <em>képosztályozás</em>, és a képek részleteire vonatkozó lévő <em>objektumfelismerés</em>. Az arcfelismerés például használható a fényképezőgép/kamera fókuszának automatikus beállításában vagy a közösségi
+        média oldalak esetében automatikus névcímkék létrehozására. Az objektumfelismerés célja a képen szereplő különböző tárgyak felismerése és azonosítása. Ezért általában az első lépés a szegmentálás, ahol a képet különböző területekre osztják, amelyeket
+        aztán a rendelkezésre álló címkék valamelyikével látnak el (osztályoznak). A felsorolt lépéseket manapság többnyire FT és <a href="../Neural Networks/index.html">mély neurális hálózatok (DNN)</a> segítségével végzik. Még a gyártóiparban is használják
+        az FT-t és a képosztályozást, például a sérülések vagy szerelési hibák automatikus felismerésére. Ez az egyik olyan terület, ahol a mesterséges intelligencia egyre több emberi munkaerőt vált ki az alacsonyabb költségek - és olykor az alacsonyabb
+        hibaarány - miatt. Az olyan területeken azonban, mint az orvostudomány, a betegségek felismerésére szolgáló algoritmusokat az orvosi felügyelettel együtt használják, segítve őket a helyes következtetés levonásában. Például úgy, hogy a vizsgálatok
+        során rámutatnak a potenciálisan rákos megbetegedést jelző foltokra, amelyek esetleg elkerülhették az orvosok figyelmét.</p>
+    <p>A következő alkalmazási példa a beszédfelismerés és a <a href="../Natural Language Processing/index.html">természetes nyelvfeldolgozás (NLP)</a>. Az ilyen példákban képek helyett hanghullámokat használnak az elhangzott szavak és más hangok megkülönböztetésére.
+        A szavak felismerésük után rögzíthetők, ami például automatikus feliratgenerálásban használható fel. A mondatokat továbbá elemezni lehet jelentésük szempontjából, így egyes alkalmazások, köztük a digitális asszisztensek (Alexa, Siri, Google Now,
+        ...) összetett parancsokat és utasításokat érthetnek meg, melyekre értelmes módon reagálhatnak is válaszokkal vagy cselekedetekkel. A mondatok/szövegek elemzésének ezt a módját a spamszűrők is használják a kéretlen levelek megkülönböztetésére.</p>
+    <p>Az FT algoritmusok másik felhasználási területe az olyan értékek előrejelzése, mint például egy ház költsége vagy egy tervezett film bevétele, olyan különböző információk alapján, mint például a ház mérete vagy a filmben szereplő színészek listája.
+        Ebben az esetben egy FT-algoritmust hasonló házakra és azok költségeire vonatkozó adatok alapján tanítanak be/tréningelnek, majd új házak értékének becslésére használják.</p>
+    <p>Végezetül pedig, az FT algoritmusokat arra is használják, hogy a felhasználókat különböző profilokba sorolják, így kínálva számukra személyre szabott hirdetéseket. Mivel a hirdetés jobban megfelel a felhasználó érdeklődési körének, nagyobb valószínűséggel
+        kattint rá a hirdetésre, így a termékeladás esélye is megnő.</p>
+
+    <h2>Mit csinálnak a felügyelt tanulás algoritmusok valójában?<span class="slides">9 - 13. dia</span></h2>
+    <p>A bemutatott példák után a felügyelt tanulási algoritmusokat, mint leképezőfüggvényeket mutatjuk be. Fontos, hogy valójában egyetlen nagyon egyszerű dolgot csinálnak: adott bemenet esetén adott kimenetet állítanak elő. Nem történik semmilyen mágikus
+        mesterséges intelligencia döntéshozatal, csupán egy matematikai képletről van szó, amely egyértelmű eredményt produkál. Érdemes áttekinteni az előző példákat, és beszélni arról, hogy mi lehet a bemenet és mi a kimenet. Például, ha a bemenet egy
+        kép, a kimenet lehet a különböző, képen szereplő tárgyak helye és címkéje, vagy csak egy egyszerű címke "sérülés" vagy "rendben" felirattal. Ha a bemenet egy hangminta, a kimenet lehet a megfelelő szöveg, ha pedig a bemenet egy filmgyártással
+        kapcsolatos általános információ, a kimenet lehet a produkció várható bevétele. Az ilyen típusú problémákat <em>osztályozásnak</em> (adatok címkézése) és <em>regressziónak</em> (értékek előrejelzése) nevezzük.</p>
+
+    <div class="info">
+        <p>Fontos megemlíteni, hogy a kimenet általában nem bináris (pl. „A képen 0/100%-os bizonyossággal egy macska szerepel”), hanem fokozatszerű. Például egy macska képe esetén az algoritmus 99,5%-os bizonyossággal állapíthatja meg, hogy macska, 0,4%-os
+            bizonyossággal, hogy kutya, és 0,1%-os bizonyossággal, hogy hal szerepel a képen.</p>
+    </div>
+
+    <h2>Hogyan kell betanítani egy felügyelt tanulási algoritmust?<span class="slides">14 - 26. dia</span></h2>
+    <p>Az utolsó szakaszban a <em>tanítás/tréning</em> folyamatát mutatjuk be. Ez azon az elven alapul, hogy a fejlesztő példákat ad az algoritmusnak - pl. ezen a képen (bemenet) egy kutya látható (kimenet), a felügyelt tanulási algoritmus úgy módosítja
+        belső <em>modelljét</em> (pl. egy képlet változóit), hogy helyes kimenetet adjon (azaz a kép láttán önállóan is a „kutya” címkét produkálja). Emellett bevezetésre kerül a <em>tréning-</em> és <em>tesztadatok</em> fogalma.</p>
+    <p>Öt fontos meghatározás tartozik ide:</p>
+    <dl>
+        <dt>Felügyelt tanulás algoritmus</dt>
+        <dd>Egy <em>algoritmus</em> egy adott feladat lépésről lépésre történő leírása. Ebben az esetben pontosan meghatározott, hogyan működik az FT-folyamat: hogyan tanul, milyen <em>paramétereket</em> használ, és azok hogyan befolyásolják az eredményt.
+            Gyakran hasonlítják egy ételrecepthez, ahol részletes utasítások vannak, amelyek helyes követése esetén ízletes eredményt kapunk.</dd>
+        <dt>Paraméterek</dt>
+        <dd>A paraméterek olyan adatok, amelyekkel módosítható egy algoritmus eredménye vagy munkafolyamata. A főzős példára visszatérve: egy sütemény paramétere lehet az, hogy mennyire legyen édes. A szakács tehát eldönti a cukor mennyiségét, és ennek megfelelően
+            követi a receptet. Az FT-ben a paramétereket a betanítási szakaszban használják, ahol a programozónak kell eldöntenie, hogy az algoritmus milyen módon (hány ismétlés, belső struktúra, mire összpontosítson, ...) tanuljon.</dd>
+        <dt>Felügyelt tanulási modell</dt>
+        <dd>A modell olyan paraméterekből áll, amelyeket nem a programozó választ ki, hanem az algoritmus alakítja ki a <em>tanulásnak/tréningnek</em> nevezett folyamat során. A főzős példában ez lehet a hozzávalók listája a megfelelő mennyiségekkel, amelyeket
+            az algoritmusnak a képzés során optimalizálnia kell a kívánt (ízletes) eredmény eléréséhez. A képosztályozásban különösen gyakran használnak <a href="../Neural Networks/index.html">neurális hálózatokat</a> alapmodellként, ezért az ilyen modelleket
+            gyakran csak <em>hálózatoknak</em> nevezik.</dd>
+        <dt>Címkézett adatok</dt>
+        <dd>Olyan adathalmaz, amely nemcsak a bemenetet, hanem az FT algoritmus kimenetét is tartalmazza. Ez lehet például néhány száz macskákról és kutyákról készült kép a hozzájuk tartozó "macska" és "kutya" címkékkel.</dd>
+        <dt>Tréning- és tesztadatok</dt>
+        <dd>Általában nagy mennyiségű <em>címkézett adat</em> összegyűjtésével kezdünk, amelyeket aztán két halmazra osztunk, a tréning- és a teszthalmazra. A tréningadatokat a modell betanítására, míg a tesztadatokat a modell pontosságának tesztelésére használják.
+            Fontos, hogy ezek <em>különböző</em> adatok legyenek (azaz más-más macskákról és kutyákról készült képek), hogy a modell elég általános legyen, és ne csak a tréningadatokban szereplő kutyákat/macskákat osztályozza helyesen.</dd>
+    </dl>
+
+    <p>Ha ezek a feltételek adottak, a modell betanítási folyamata meglehetősen egyszerű:</p>
+    <ol>
+        <li>Gyűjtsünk össze egy <em>címkézett adathalmazt</em>, és osszuk fel két halmazra (tréning és teszt).</li>
+        <li><em>Inicializáljuk a modellt</em> tetszőleges (gyakran véletlenszerű) értékekkel, és válasszuk meg a <em>tréning paramétereket</em>.</li>
+        <li><em>Ismételjük meg</em> ugyanezt a tréningadatokkal (a paraméterek által meghatározott gyakorisággal).
+            <ul>
+                <li>Ha a bemenet már adott, <em>módosítsuk</em> a modellen belül értékeket úgy, hogy azok jobban előre jelezhessék az adott kimenetet.</li>
+            </ul>
+        </li>
+        <li><em>Teszteljük a modellt</em> tesztadatok segítségével, hogy ellenőrizzük a pontosságát.</li>
+        <li><em>Addig ismételjük a folyamatot elölről</em>, a címkézett adatok vagy a tanulási paraméterek módosításával, amíg elégedettek nem leszünk a modell pontosságával.</li>
+    </ol>
+
+    <h2>Kérdések, és ami még ezután következik<span class="slides">26. dia</span></h2>
+    <p>Ezen a ponton a tanulóknak ismerniük kell az FT algoritmusok működésének alapjait. A következő gyakorlatokon keresztül maguk is kipróbálhatják ezt a folyamatot, és megtapasztalhatják, hogy milyen <em>problémák</em> merülhetnek fel, és mennyire érzékenyek
+        ezek az algoritmusok a tréningadatokra.</p>
+
+    <p class="info">Bár ez a tanfolyam nem merül el a technikai részletekben, érdemes megemlíteni, hogy a feladattól függően többféle algoritmus is használható az FT-hez. A legtöbben hallottak már a (mély) neurális hálózatokról, amelyeket legkülönbözőbb problémák megoldására
+        használnak, különösen akkor, ha az adatok meglehetősen összetettek, mondjuk a kép- vagy hangfelismerés esetén. De sok más algoritmus is létezik, mint például a döntési fák, a regressziós görbék, a legközelebbi szomszéd - módszer, és még sok más.
+        <a href="#introduction_ref_1" class="ref">1</a>
+    </p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/SL - Introduction.pdf">SL - Introduction.pdf</a> <a href="Slides/SL - Introduction.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="introduction_ref_1" href="https://builtin.com/data-science/supervised-machine-learning-classification">https://builtin.com/data-science/supervised-machine-learning-classification</a></li>
+    </ol>
+</section>
+
+<section class="exercise">
+    <h1 id="train">Tanítsd be az első modelled</h1>
+
+
+    <p>A feladat célja, hogy a tanulókban kialakuljon egy első benyomás arról, hogyan működik egy FT algoritmus betanítása, és milyen nehézségek merülhetnek fel. A fő tanulságnak annak kell lennie, hogy a tanulás/tréning nagymértékben függ a tréningadatoktól,
+        illetve, hogy ez általában egy olyan folyamat, amely sok ismétlést igényel ahhoz, hogy használható eredménnyel járjon.</p>
+
+    <p>Két lehetséges feladat van:<br>
+        <a href="Exercises/AI for Oceans/index.html">Az MI óceán</a>, amely egy online eszköz, és a <a href="Exercises/Classification Game/index.html">Kategorizálós játék</a> , amely egy „kézzel fogható”, offline feladat.
+    </p>
+
+    <div class="horizontal">
+        <div>
+            <h3>MI óceán</h3>
+            <div class="horizontal">
+                <div>
+                    <p>Ez a feladat az „MI óceán” című kurzus egy gyakorlatát hasznosítja. A tanulóknak egy <em>böngészőben futtatható program</em> segítségével egy robotot kell betanítaniuk arra, hogy különbséget tegyen a halak és a szemét, valamint a különböző
+                        vízi állatok között.</p>
+                    <a href="Exercises/AI for Oceans/index.html">Exercises / AI for Oceans</a>
+                </div>
+                <img src="{{images}}/ai_for_oceans.png">
+            </div>
+        </div>
+        <div>
+            <h3>Kategorizálós játék</h3>
+            <div class="horizontal">
+                <div>
+                    <p>Ebben a mindössze <em>papír-ceruzát igénylő</em> gyakorlatban a diákok egy FT bőrébe bújhatnak, így megtapasztalhatják, milyen nehézségek adódnak a macskák és kutyák képeinek osztályozásakor.</p>
+                    <a href="Exercises/Classification Game/index.html">Exercises / Classification Game</a>
+                </div>
+                <img src="{{images}}/classification_game.png">
+            </div>
+        </div>
+    </div>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek</p>
+        <ul>
+            <li>elmagyarázni egy FT algoritmus tanításának/tréningének folyamatát</li>
+            <li>elmagyarázni, hogyan működnek az algoritmusok a különböző jellemzőkre összpontosítás révén</li>
+            <li>elmagyarázni, hogy a rendszer milyen mértékben függ a tréningadatoktól.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="cols">
+
+    <h1 id="reliance">Adatokra utaltság</h1>
+
+    <p>Ez a fejezet a <em>tréningadatokról</em>, illetve ezen adatok <em>minőségének</em> hatásáról és fontosságáról szól. Bár a fejezet példái a képfelismerésre összpontosítanak, a tárgyalt problémák a felügyelt tanulás valamennyi formájára vonatkoznak.
+        A fejezet <a href="Slides/SL - Reliance on data.pdf">ezeken a diákon</a> alapul.</p>
+
+    <h2>Túlillesztés és alulillesztés<span class="slides">2-14.dia</span></h2>
+    <p>Az FT algortimusok tanítása/tréningje esetében a két legnagyobb problémát a <em>túlillesztés</em> és az <em>alulillesztés</em> esete jelenti.</p>
+    <p><em>Túlillesztés</em> problémája áll fenn, ha a modell jól működik a <em>tanítás/tréning során</em>, de <em>más adatokkal</em> rossz eredményeket ad. Ez akkor fordul elő, ha a tanítóhalmaz túl specifikus, vagy a hangsúlyos jellemzők félrevezetőek.</p>
+    <p><em>Alulillesztésről</em> pedig akkor beszélünk, ha a modell egyáltalán nem tanul semmi hasznosat. Ez akkor fordul elő, ha a bemeneti adatok mennyisége <em>nem elegendő</em> vagy azok <em>túl általánosak</em>, és nem azonosíthatók kapcsolódó jellemzők.
+        Nézzünk néhány példát! </p>
+    <p><cite>Képzeld el, hogy egy olyan modellt szeretnél létrehozni, amely portréfotók alapján különbözteti meg az egyes embereket. Megkéred a barátaidat, hogy adjanak neked néhány száz, a webkamerájukkal rögzített portréképet, és ezeket használod az algoritmusod tanításához. Bár a tesztek eredményei nagyon ígéretesek, amikor meghívod a barátaidat az otthonodba, alig ismer fel valakit helyesen.</cite></p>
+    <p>Ez egy klasszikus példája a <em>túlillesztésnek</em>, amikor a modell bizonyos körülmények között jól működik, de a környezet megváltoztatásával csúnyán megbukik. A kudarc oka lehet, hogy a modell nem az arcok jellemzőit tanulta meg a várt módon,
+        hanem a háttérben lévő növényekre vagy polcokra koncentrált. A hátterek jellemzői elég egyediek lehetnek, ami akár ahhoz is vezethet, hogy az algoritmus figyelmen kívül hagyja az arcokat, és csak a hátteret ismeri fel - tehát a bemeneti adatok
+        túl specifikusak voltak.</p>
+    <p>A probléma mérséklésének egy egyszerű módja, ha <em>változatosabb adathalmazt</em> biztosítunk (különböző környezet, megvilágítás, kameraszög, fejpozíciók, zoom-szintek, frizurák, több kép, ...), hogy bizonyos nemkívánatos jellemzők csak ritkán forduljanak
+        elő. Ez a probléma tovább csökkenthető az <em>adatok feldolgozásával</em>, mellyel csökkenthetők a felesleges jellemzők. Ha mindent szürkeárnyalatos képekké alakítunk át, csökkenthetjük a színek befolyását, ahogyan az összes kép telítettségének
+        normalizálása révén is. Az olyan geometriai átalakítások, mint a képek méretezése, elforgatása vagy megfordítása szintén jóval nagyobb és általánosabb adathalmazt eredményezhet. Fontos azonban, hogy <em>szem előtt tartsuk az adatok jellegét</em>:
+        ha különböző színű tollak azonosításával foglalkozunk, nem biztos, hogy jó ötlet szürkeárnyalatos képekre váltani, ha pedig bizonyos gesztusokat szeretnénk osztályozni, a kép megfordítása lehet kedvezőtlen.</p>
+    <p>Az <em>alulillesztésre</em> nézzük meg a filmbevételek előrejelzésének példáját.</p>
+    <p><cite>Képzeld el, hogy több ezer filmről gyűjtöttél adatokat a műfajra, a színészekre és a bevételre vonatkozóan. Majd ezek alapján betanítod a modellt, de rájössz, hogy bármilyen tesztadatot is választasz, a becslés az esetek többségében jócskán mellélő.</cite></p>
+    <p>Vagyis a modelled alapvetően semmit sem tanult. Ez az <em>alulillesztés</em> példája, mivel vagy a tréningadatok nem tartalmaztak elegendő (vagy releváns) információt (jellemzőket) ahhoz, hogy a modelled bármi hasznosat megjósoljon, vagy a hibásak
+        a tanulás során beállított paraméterek.</p>
+    <p>Ebben a példában <em>további jellemzők</em> bevonása, mint például a megjelenés éve, a költségvetés és annak felosztása, vagy a reklámok mennyisége megoldhatná a problémát, és pontosabb előrejelzéshez vezethet. <em>Alulillesztés</em> akkor is előfordul,
+        ha egyszerűen nincs elég adat, és ezért túl kevés információ áll rendelkezésre, amely felhasználható az előrejelzés vagy az osztályozás során.</p>
+    <p>Az alul- és túlillesztés egyaránt szembetűnő, és általában könnyű felismerni (de nem feltétlenül könnyű kijavítani...). A továbbiakban a <em>torzítások</em> árnyaltabb problémájáról fogunk beszélni.</p>
+
+    <h2>Előítéletek és méltányosság<span class="slides">15-19.dia</span></h2>
+    <p>Míg az <em>alul-</em> és <em>túlillesztés</em> technikai és egyértelműen mérhető problémák, a <em>torzításokat</em> sokkal nehezebb felismerni. Kezdjük egy valós példával!</p>
+    <p><cite>2014-ben az Amazon, sok más nagyvállalathoz hasonlóan, megpróbálta automatizálni a munkaerő-felvételi folyamatot egy mesterséges intelligencia létrehozásával, amely megvizsgálja az álláspályázatokat, és megtalálja a legtehetségesebb/legalkalmasabb munkavállalókat. Egy év fejlesztés után azonban rájöttek egy nagy hibára: az algoritmusuk diszkriminálta a nőket! Kiderült, hogy bár ebben nem volt rossz szándék, a korábban felvett munkavállalókról szóló tréningadatok rendkívüli módon torzítottak a férfiak javára, mivel akkoriban a legtöbb alkalmazott férfi volt. Bár ezt a problémát a tanításhoz használt program gondos megválasztásával sikerült orvosolni, nem lehetett garantálni, hogy az algoritmusnak nincsenek más, jelenleg nem látható torzításai, így a projektet 2018-ban leállították.<a href="#reliance_ref_1" class="ref">1</a></cite></p>
+    <p><cite>Egy másik példa a Microsoft chatbotja, Tay2, amely a felhasználók uszító és rasszista nyelvezetét sajátította el a Twitteren, és amelyet mindössze 16 óra elteltével le kellett kapcsolni.<a href="#reliance_ref_2" class="ref">2</a></cite></p>
+    <p>Elvileg lehetséges olyan modelleket létrehozni, amelyek méltányosak, de a témától függően ez <em>nagyon nehéz</em> is lehet. A probléma kiterjedt, kezdve attól, hogy a szolgáltatók chatbotjai nem ismerik fel egyes kisebbségek dialektusát, egészen
+        odáig, hogy az osztályozó algoritmusok a korlátozott vagy egyeseket kizáró tréningadatok miatt nem ismerik fel a színesbőrű embereket emberként. Ezek a problémák nem csak technikai, hanem etikai jellegűek is, mivel felvetik a kérdést, hogy milyen
+        döntéseket bízzunk a gépekre. Az <a href="../Ethics/index.html">etika modul</a> ezt a kérdést vizsgálja meg részletesebben, de jó forrás <a href="https://youtu.be/CampJppwgWU">ez a videó</a> is.</p>
+    <p>Az előítéletesség és a méltányosság jelenleg széles körben kutatott terület, a felmerülő nehézségekre pedig nincs könnyű megoldás. Mindössze annyit tehetünk, hogy óvatosak vagyunk, összeállítjuk a modellünk tanításához használt tréningadatokat. Ezt
+        tükrözi az informatikában elterjedt mondás is: "az algoritmus csak annyira jó, mint az adatok", vagy egyszerűbben fogalmazva: "szemét be, szemét ki"[angolul: garbage in, garbage out].</p>
+
+    <h2>A tanítás ideje és az áttanítás (transfer learning)<span class="slides">20-23.dia</span></h2>
+    <p>Amint azt a fenti témák során körbejártuk, a modell minősége nagymértékben függ a kiválasztott adatoktól és ebből fakadóan az <em>adatok méretétől</em> is. Egy olyan torzításmentes képosztályozó modell létrehozásához, amely különböző helyzetekben
+        is pontosan észleli a tárgyakat, több ezer vagy akár millió képet kell felhasználni, ami a modell tanításához szükséges időt órákról hetekre is megnövelheti.</p>
+    <p>Ezen probléma ellensúlyozására a <em>áttanítás (angolul transfer learning)</em><a class="ref" href="#reliance_ref_3">3</a>alkalmazható, amivel a már korábban jól tanított (<em>előre betanított</em>) modellek tapasztalatanyaga felhasználható. Ezek a modellek többnyire általánosabb feladatokra összpontosítanak, mint például a képeken található jellemzők megtalálása, amelyek aztán vagy a tréning <em>kiindulópontjaként</em>, vagy a bemeneti adatok összetettségét csökkentő <em>előfeldolgozáshoz</em> használhatók fel. Az első esetben egy képosztályozásra már felhasznált (mély neurális) hálózatot alapként lehet felhasználni egy olyan hálózat betanításához, amely egy másik képhalmaz osztályozására szolgál (például az erdőtüzek műholdas képeken
+való felismerésétől a röntgenfelvételeken található törések azonosításáig). A második esetben első lépésként egy olyan hálózatot lehet használni, amely már képes adott jellemzők - például élek vagy geometriai minták - felismerésére, így az új hálózat tanítását a nyers képadatok helyett ezen jellemzők ismeretében lehet megkezdeni. Ezekkel nemcsak a tanítás ideje csökkenthető drasztikusan, hanem az eredmény minősége is növelhető, különösen akkor, ha nagyon kisszámú mintával, mondjuk 50 képpel dolgozunk.</p>
+    <p>A következő gyakorlat során ilyen előre betanított hálózatokat használunk, mely révén néhány perc alatt, a böngészőnkön keresztül taníthatunk be képosztályozó algoritmusokat úgy, hogy néhány száz kép már elegendő lesz a jó eredményhez.</p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/SL - Reliance on data.pdf">SL - Reliance on data.pdf</a> <a href="Slides/SL - Reliance on data.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="reliance_ref_1" href="https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine">https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine</a></li>
+        <li><a id="reliance_ref_2" href="https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter">https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter</a></li>
+        <li><a id="reliance_ref_3" href="https://machinelearningmastery.com/transfer-learning-for-deep-learning/">https://machinelearningmastery.com/transfer-learning-for-deep-learning/</a></li>
+    </ol>
+
+</section>
+
+
+<section class="exercise">
+    <h1 id="game">Játékvezérlő</h1>
+
+    <img src="{{images}}/game_controller.png" class="right">
+
+    <p>Ebben a gyakorlatban a tanulók egy valós képosztályozó modellt fognak betanítani különböző irányjelző utasítások felismerésére. A modellt ezután a Snake nevű játék irányítására fogják használni.</p>
+    <p>A gyakorlat célja, hogy a diákok betaníthassák saját, valós idejű képosztályozó modelljüket. A folyamat során számos, korábban tárgyalt probléma fog felmerülni, és a tanulóknak meg kell próbálniuk a modelljüket a lehető legjobbá tenni. A valós használat
+        során jelentkező nehézségek demonstrálása érdekében egy ponton érdemes a felhasznált kamera irányát/helyzetét megváltoztatni, így kiemelve a tanítóhalmazok révén jelentkező problémákat (pl. háttérben lévő objektumok). A feladat végén a tanulóknak
+        lesz egy működő modelljük, amely irányokat jelöl ki, és amelyet a Snake játék vezérlésére használhatnak (vagy a már haladó tanulók a <a href="https://www.tensorflow.org">TensorFlow</a> felhasználásával bármilyen más alkalmazásban is).
+    </p>
+    <p>Az ehhez a feladathoz szükséges idő nagyon eltérő lehet, a 30 perces rövid teszttől akár a több órán át tartó kísérletezésig, ha a diákok egy jól működő (általános) modellt szeretnének létrehozni.</p>
+    <p><a href="Exercises/Game Controller/index.html">Exercises / Game Controller</a></p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek:</p>
+        <ul>
+            <li>egy valós képosztályozó FT modell betanítására</li>
+            <li>alkalmazni a megfelelő adatok alkalmazásával kapcsolatos ismereteiket</li>
+            <li>felismerni, hogy a FT egyik legfőbb nehézsége azt elérni, hogy a modell azt tegye, amit szeretnénk</li>
+        </ul>
+    </div>
+</section>
+
+
+<section>
+    <h1 id="possibilities">Lehetőségek és korlátok</h1>
+
+    <p>Most, hogy a diákok már jól értik, hogyan működik a felügyelt tanulás, és mik a főbb nehézségek, itt az ideje összefoglalni a tanultakat, és vetni egy pillantást a valós alkalmazásokra. Bár a különböző gépi tanulási módszerek közötti határvonal manapság
+        kissé elmosódott (egy klasszikus felügyelt tanulási modell is továbbfejleszthető megerősítéses tanulással), a fejezetben az FT különböző alkalmazásokban való használatának azonosításáról és ennek korlátairól szól.</p>
+    <p>A fejezetet egy kvíz formájában tekintjük át, amelyben javarészt igaz vagy <em>hamis</em> kérdések szerepelnek, <a href="Slides/SL - Quiz.pdf">diákon</a>. A tanulók személyes jelenlét mellett, kézjelek vagy színes/számozott kártyák segítségével is
+        tudnak válaszolni. A kvíznek nem csak a helyes válaszokról kell szólnia, hanem a problémák <em>megértéséről</em>, illetve annak <em>megvitatásáról</em> is, hogy miért lehetnek esetleg más válaszok is helyesek. Ezért nem csak a válaszok megmutatása
+        célszerű, hanem az is, hogy röviden beszélgessünk róluk a tanulókkal. Néhány kérdés korábban még nem tárgyalt témákhoz kapcsolódik, hogy a diákok megmutathassák, hogy milyen jól tudják megszerzett tudásukat átültetni más, ismeretlen területekre.
+    </p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek:</p>
+        <ul>
+            <li>elmagyarázni mire jó és mire nem jó a felügyelt tanulás </li>
+            <li>felismerni, hogy mely alkalmazások hasznosítják a felügyelt tanulást</li>
+        </ul>
+    </div>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/SL - Quiz.pdf">SL - Quiz.pdf</a> <a href="Slides/SL - Quiz.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

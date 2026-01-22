@@ -1,0 +1,292 @@
+[[ header.html | Reinforcement Learning]]
+{[ abbreviations
+    AI: Artificial Intelligence
+    RL: Reinforcement Learning
+    Lc0: Leela Chess Zero
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Module 5</h1>
+            <h2>Reinforcement Learning</h2>
+            <p><cite>"By using a <strong>maze</strong> in which a <strong>robot</strong> is rewarded by finding a <strong>battery</strong>, this exercise demonstrates that RL is not as straight forward as one might think."</cite></p>
+        </div>
+        <img src="{{images}}/reinforcement_learning.png" />
+    </div>
+</section>
+
+<section>
+    <h1>About the Module</h1>
+
+    <p>This module is about <strong>Reinforcement Learning</strong> (RL). The goal is to provide the students with a basic understanding of what RL is, how it works and what common problems and pitfalls are. The focus lies more on practical exercises, therefore students will on the one hand take the role of self learning algorithms and experience how the training process works, and on the other hand play against and train learning AIs.</p>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>explain the basic idea of RL</li>
+            <li>understand the core RL-loop and decisions based on Q-values</li>
+            <li>estimate if an application is using RL</li>
+            <li>name problems and limitations of RL</li>
+        </ul>
+    </div>
+
+
+    <h2>Agenda</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Content</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#introduction">Introduction</a></td>
+                <td><a href="Slides/RL - Introduction.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>20 min</td>
+                <td><a href="#coin_game">Exercise - Coin Game</a></td>
+                <td><a href="Slides/RL - Coin Game.pdf">Slides</a>, <a href="Exercises/RL - Coin Game Board.pdf">Board</a>, <a href="Exercises/RL - Coin Game Actions.pdf">Actions</a></td>
+            </tr>
+            <tr>
+                <td>20 min</td>
+                <td><a href="#hexapawn">Exercise - Hexapawn</a></td>
+                <td><a href="https://www.stefanseegerer.de/schlag-das-krokodil/">Online</a></td>
+            </tr>
+            <tr>
+                <td>20 min</td>
+                <td><a href="#menace">Exercise - Menace</a></td>
+                <td><a href="https://www.mscroggs.co.uk/menace/">Online</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#maze">Exercise - Maze</a></td>
+                <td><a href="Slides/RL - Maze.pdf">Slides</a>, <a href="Exercises/RL - Maze Basic.pdf">Basic Maze</a>, <a href="Exercises/RL - Maze Advanced.pdf">Advanced Maze</a></td>
+            </tr>
+            <tr>
+                <td>15 min</td>
+                <td><a href="#quiz">Quiz - True or False?</a></td>
+                <td><a href="Slides/RL - Quiz.pdf">Slides</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="cols">
+    <h1 id="introduction">Introduction</h1>
+
+    <p>The Introduction is all about students becoming familiar with basic concepts and terms used in <em>Reinforcement Learning</em> (RL). It is based on the <a href="Slides/RL - Introduction.pdf">slides</a>, which introduce not only common applications but the general idea of how an AI can <strong>learn by itself</strong> by performing and evaluating actions.</p>
+
+    <h2>Real World Examples <span class="slides">Slides 2 - 6</span></h2>
+    <p>The <a href="Slides/RL - Introduction.pdf">slides</a> start by introducing RL using a short <a href="https://openai.com/blog/emergent-tool-use/">video</a> about a self learning <strong>hide and seek</strong> AI of <a href="https://openai.com/">OpenAI</a>. If the students don't understand english well enough, either auto translated subtitles can be used or the teacher can take care of translating/explaining what happens.<br>
+    The main point to bring across is that in RL the AI learns by itself, without direct guidance of the programmers. The agents in the video where never told <strong>how</strong> to do things, only <strong>what</strong> they can do and what their goal is.</p>
+    <p>After the video, the next example is <a href="https://lczero.org">Leela Chess Zero</a> (Lc0), a modern chess AI, trained using reinforcement learning. While traditional chess AIs had static functions to evaluate board positions (like getting fixed points for material differences and piece positions), Lc0 learned what good positions are by playing millions of games against itself and other players, and therefore can make better decisions on what actions to take. It is important to state that modern chess engines are far superior to human players, even the best grandmaster players can be beaten using a smartphone.<br>
+    The reason why games are quite popular in RL research is, that there are well defined rules which makes it easier to define concrete actions and goals, which are needed for RL to work. This will be explained in more detail after the example slides.</p>
+    <p>As chess engines still mostly calculate moves in a similar way they did in the late 90s, when they started to beat human players consistently<a href="introduction_ref_3" class="ref">3</a>, they sometimes are downplayed due to the 'simplicity' of the game. Still RL algorithms evolved and nowadays can go toe to toe to human players in much more complex scenarios. Therefore, the third example is about <strong>AlphaStar</strong>, an AI from Google's <a href="https://www.deepmind.com">Deepmind</a> research department, which has learned to play a complex modern computer game up to a level comparable to the best human players.<a href="introduction_ref_4" class="ref">4</a> Given that there are roughly 10<sup>26</sup> legal actions at every point in time (compared to chess with an average of less than 40), it is astounding that the AI can choose the best ones while adhering to the same limitations a human player has (limited vision, reaction time).</p>
+    <p>The final example is a more practical one about custom advertisement (Ad). It demonstrates, that RL can be used in many different ways, in this case as a revenue optimization by learning which Ads are most clicked (or hovered over) and adapting future ads displayed to maximize the chance the user will klick on an Ad.</p>
+    <p>There are many more examples of use cases for RL, like training self driving cars using simulations, but these examples are a good enough starting point to now tackle the question, how an algorithm can actually learn by itself.</p>
+
+    <h2>RL Basics <span class="slides">Slides 7 - 20</span></h2>
+    <p>To be able to understand the basics of RL, one must know at least some definitions, which are introduced in the first few slides. Then the game TicTacToe is used as an example </p>
+    <dl>
+        <dt>Agent</dt>
+        <dd>An agent describes the intelligent entity that interacts with the environment and has to make sensible decisions. This is the part of a program that incorporates all the AIs logic and knowledge.<br>
+        In TicTacToe the agent would be the AI player.</dd>
+        <dt>Environment</dt>
+        <dd>For an agent to learn it needs a clearly defined environment. Usually the environment is some kind of simulation of a real environment (like a simulated street for a car to learn driving) or a game.<br>
+        In TicTacToe the environment is the game board with the drawings (X,O) on it.</dd>
+        <dt>Action</dt>
+        <dd>At each point in time, the agent has to decide which action to take. The available actions must be known at any time, the AI then has to learn to choose the best one.<br>
+        In TicTacToe every empty tile corresponds to an action of drawing ones symbol (X,O) on the tile.</dd>
+        <dt>State</dt>
+        <dd>A state is a numerical representation of meaningful parts of the environment. As computers only work with numbers, critical parts of the environment can be abstracted to be understandable to the AI.<br>
+        In TicTacToe the state could be a number for each of the nine tiles (e.g. 0 = empty, 1 = X, 2 = O) and maybe also a number of whose turn it is (1 or 2). In another example, the coin game, which will be used in the following exercise, the state is simply the number of coins on the table.<br>
+        This is usually the most abstract of the definitions, it will become clearer for most people during the next exercise.</dd>
+        <dt>Reward</dt>
+        <dd>The reward is generally a numeric value that depict the quality or outcome of a state. Usually it is positive in case of a good result and negative in case of a bad result.<br>
+        In TicTacToe the reward could be +1 for winning, -1 for losing and 0 for everything else.</dd>
+    </dl>
+    <p>Finally, the students have to think about what agents, states, actions and rewards are in the following examples. This can be approached in multiple ways ranging from a simple group discussion, to presentations in small groups, the <a href="../methods.html">methods page</a> contains more ideas.</p>
+    <dl>
+        <dt>Leela Chess Zero</dt>
+        <dd>The <strong>agent</strong> is the chess AI, the <strong>state</strong> consists of numerical values representing the pieces on the board. <strong>Actions</strong> are the possible chess moves and the <strong>reward</strong> can be a very high/low number for winning/losing and some numbers in between for how 'good' the position is for the AI.</dd>
+        <dt>OpenAI Hide and Seek</dt>
+        <dd>The <strong>agents</strong> are the hiders and seekers, the <strong>state</strong> includes the position of the agents as well as of all objects and if they are locked or not. <strong>Actions</strong> include moving in different directions, rotating and grabbing/releasing as well as locking objects. The <strong>reward</strong> can be the number of seconds the hiders were not found which can also be used as a negative number for the seekers.</dd>
+        <dt>Custom Advertisement</dt>
+        <dd>The <strong>agents</strong> could be individual advertising spots, the <strong>state</strong> information about the type of advertising and if the user clicked on it or not. <strong>Actions</strong> could include switching to specific topics or to advertise or types of advertisements. The <strong>reward</strong> could be a number indicating if the user clicked on the add or not.</dd>
+    </dl>
+    <div class="info">In reality finding a good representation for the state and available actions is not an easy task, but a very important one. Choosing badly can result in increased training time and poorer performance, or even stop the agent from learning all together as crucial information might be missing. This is not too relevant in the upcoming exercises however, as there the <strong>states</strong> and <strong>actions</strong> are clearly defined already.</div>
+
+    <h2>Q-Learning <span class="slides">Slides 21 - 30</span></h2>
+    <p>The final slides introduce the concept of <strong>Q-learning</strong>, as well as the <strong>RL interaction loop</strong>. It is based around the concept of action and reaction, where the agent interacts with the environment by choosing an action to perform. This action changes the environment and as a result the agent receives the representation of the new state as well as a reward indicating how good the action was. Given this new information the agent then might update its behavior and then chooses a new action to perform. This cycle continues until a goal is reached.</p>
+    <p><strong>Q-learning</strong> is based on the RL interaction loop and stores a <strong>quality value</strong> (Q-value) for each pair of <strong>state</strong> and <strong>action</strong>. This value indicates how 'good' the action is given the current state. Therefore, whenever a state is reached, the action with the highest <strong>Q-value</strong> can be chosen for optimal behavior. As the <strong>Q-value</strong> might not be correct at the beginning (in fact, quite often it is set to a random value for each action at the beginning), it can be adapted by increasing/decreasing it in regards to the reward received for performing the action. When this process is repeated often enough, the <strong>Q-values</strong> will reach a point, where always the correct action will be performed.</p>
+    <p>As long as there are not too many state-action-pairs, this values can be stored in a table where each row consists of a <strong>state</strong> and the <strong>Q-values</strong> of all available actions.</p>
+    <p>The table on slide 29 shows a small section og such a Q-table for an exemplary jump-n-run game. Reaching a diamond is rewarded with +1 and falling into the water with -1. The next table on slide 30 shows the same situation, but with a more advanced table which includes future rewards into their action. This means an action that might result in falling into the water one action later will also get a small penalty.</p>
+    <p>This process of adapting the <strong>Q-values</strong> is called <strong>training</strong>. While it sometimes is feasible to train an AI during normal use, quite often the training process is independent from the final use, as it can take millions of iterations to create meaningful values.</p>
+    <p>After all this theory it is time to test the knowledge on real examples, which leads to the next three exercises, which build on each other.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/RL - Introduction.pdf">RL - Introduction.pdf</a> <a href="Slides/RL - Introduction.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="introduction_ref_1" href="https://openai.com/blog/emergent-tool-use/">https://openai.com/blog/emergent-tool-use/</a></li>
+        <li><a id="introduction_ref_2" href="https://lczero.org">https://lczero.org</a></li>
+        <li><a id="introduction_ref_3" href="https://www.chess.com/article/view/deep-blue-kasparov-chess">https://www.chess.com/article/view/deep-blue-kasparov-chess</a></li>
+        <li><a id="introduction_ref_4" href="https://www.deepmind.com/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii">https://www.deepmind.com/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii</a></li>
+    </ol>
+</section>
+
+<section class="exercise ol">
+    <h1 id="coin_game">Coin Game</h1>
+    <img src="{{images}}/coin_game.png" alt="image of coin game" class="right small">
+    <p>This exercise provides an introduction into RL learning using the <strong>coin game</strong>. To help understand the basic concept, <a href="Slides/RL - Coin Game.pdf">slides</a> can be used as an introduction. The game requires some kind of tokens like coins, cones, treats, ... in a large quantity, so every pair of students has access to at least 5 of them. The game starts by having 5 coins on a table and the players alternately taking one or two of them away. The player taking the last token loses.</p>
+
+    <h2>Introduce the game</h2>
+    <p>Introduce the game using the <a href="Slides/RL - Coin Game.pdf">slides</a> 1-8 and let the students play a few matches in pairs.</p>
+
+    <h2>Introduce the AI</h2>
+    <p>Introduce the AI using the <a href="Slides/RL - Coin Game.pdf">slides</a> 9-35. It is recommended to provide the material (<a href="Exercises/RL - Coin Game Board.pdf">board</a> and <a href="Exercises/RL - Coin Game Actions.pdf">actions</a>) beforehand, so the students can see how everything looks like in reality and also are able to actively play along with the examples.</p>
+
+    <h2>Let them play</h2>
+    <p>Then let the pairs of student play, with one taking the role of the AI, and the other playing normally. As the games continue more and more actions will be removed from the AI until nothing but the winning actions are left.</p>
+
+    <h2>Key takeaways</h2>
+    <p>Finally talk about the following key takeaways:</p>
+    <dl>
+        <dt>What happens, if some states are never reached (e.g. the player always chooses the same actions)?</dt>
+        <dd>Only states that are reached are learnt from. When the AI does not encounter a situation during training, it might not find the correct move.</dd>
+        <dt>In this example, where does de AI learn more, by winning or by losing?</dt>
+        <dd>By losing, in this example the AI is only punished for losing, never rewarded for winning, therefore winning has no effect.</dd>
+        <dt>Could you change the game so that a win also provides some kind of reward?</dt>
+        <dd>Yes, for example by adding new action-stones when the AI wins. Then the AI will more likely select one of the more successful actions. This will be demonstrated in the next exercise.</dd>
+    </dl>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/RL - Coin Game.pdf">RL - Coin Game.pdf</a> <a href="Slides/RL - Coin Game.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Coin Game Board.pdf">RL - Coin Game Board.pdf</a> <a href="Exercises/RL - Coin Game Board.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Coin Game Actions.pdf">RL - Coin Game Actions.pdf</a> <a href="Exercises/RL - Coin Game Actions.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+<section class="exercise ol">
+    <h1 id="hexapawn">Hexapawn</h1>
+    <img src="{{images}}/hexapawn.png" alt="image of Hexapawn game" class="right small">
+    <p>This exercise build on the knowledge of the previous one (<a href="#coin_game">coin game</a>) and is based on the website <a href="https://www.stefanseegerer.de/schlag-das-krokodil/">https://www.stefanseegerer.de/schlag-das-krokodil/</a> and the game <strong>Hexapawn</strong>. In <strong>Hexapawn</strong> two players play against each other on a 3 by 3 board using only pawns from chess, which can either move one field straight forward or capture an enemy pawn diagonally. A player wins by either reaching the opposite side with one pawn or by preventing the enemy to make a move (blocking all pawns).</p>
+
+    <h2>Demonstrate the website</h2>
+    <p>First, demonstrate the capabilities of the website and explain the rules of the game. Especially the settings <strong>Response Time</strong> and <strong>Only possible moves</strong> should be explained, as they help in the following tasks. Furthermore it is vital that students understand the meaning of the coloured points (correspond to same coloured action) and see that these points can be removed or added.</p>
+
+    <h2>Let them play</h2>
+    <p>Now it is time to let the students play on their own. The goal is to win as often as possible, before the AI cannot be beaten. This seems like a simple task, but soon students will realize they need a good understanding of the inner workings to achieve over 10 or even over 20 wins. <strong>Be careful, when the site is reloaded, the wins will also reset!</strong></p>
+
+    <h2>Key takeaways</h2>
+    <p>The key takeaways are similar to the <a href="#coin_game">coin game</a>, but more pronounced, as students have to explicitly take actions they have not been used before, to force the AI into unknown territory. It can also be seen, that the number of possible states increases quite fast with the number of available actions. It can easily be envisioned, that on a bigger board (like a chessboard), there are so many possible states (roughly 10<sup>44</sup>)<a href="#hexapawn_ref_1" class="ref">1</a> that it is not feasible to train an AI by hand, or even include all possible states.</p>
+    <div class="info">When the number of possible states becomes too big, other methods have to be used like reducing the number of states by using evaluation functions<a href="#hexapawn_ref_2" class="ref">2</a> to exclude actions that lead to undesirable states or approximating Q-values using <a href="../Neural Networks/index.html">neural networks</a><a href="#hexapawn_ref_3" class="ref">3</a>.</div>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="https://www.stefanseegerer.de/schlag-das-krokodil/">https://www.stefanseegerer.de/schlag-das-krokodil/</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="hexapawn_ref_1" href="https://tromp.github.io/chess/chess.html">https://tromp.github.io/chess/chess.html</a></li>
+        <li><a id="hexapawn_ref_2" href="https://www.chessprogramming.org/Evaluation">https://www.chessprogramming.org/Evaluation</a></li>
+        <li><a id="hexapawn_ref_3" href="https://www.turing.com/kb/how-are-neural-networks-used-in-deep-q-learning">https://www.turing.com/kb/how-are-neural-networks-used-in-deep-q-learning</a></li>
+    </ol>
+</section>
+
+<section class="exercise ol">
+    <h1 id="menace">MENACE</h1>
+    <img src="{{images}}/menace.png" alt="image of menace simulator" class="right small">
+    <p>This exercise again builds on the previous one (<a href="#hexapawn">Hexapawn</a>) and introduces a game with even more states, TicTacToe. As a good introduction the first part of this <a href="https://youtu.be/R9c-_neaxeU">video from Matt Parker about MENACE</a> can be used. It explains the basic idea of MENACE, which is similar to the Hexapawn example from before, but instead of working digitally, they store coloured beads inside physical match boxes.</p>
+    <p>While it might be an interesting idea to create such a system with the class, it will probably take quite some time, not only to create, but also to train to get meaningful results. Therefore, in this exercise an <a href="https://www.mscroggs.co.uk/menace/">online simulator</a> of the system will be used.</p>
+
+    <h2>Introduce MENACE</h2>
+    <p>First, introduce the MENACE system, a RL TicTacToe machine, either by using the first ~2:20min (or more) this  <a href="https://youtu.be/R9c-_neaxeU">video from Matt Parker</a> or by discussing (or group work) how the previous example could be modified to fit the game of TicTacToe.</p>
+
+    <h2>Demonstrate the website</h2>
+    <p>Then demonstrate how to use the simulator on the website <a href="https://www.mscroggs.co.uk/menace/">https://www.mscroggs.co.uk/menace/</a>, explain especially the meaning of the numbers and systems to the right (states and q-value of actions, higher = more likely to be chosen, mirrored states are excluded) and how you can play games yourself or let the AI play against other AIs (like the random playing AI or a perfectly playing AI).</p>
+
+    <h2>Let them train their own AI</h2>
+    <p>Given the knowledge of how to use the website, the students now have to train their own AI, which should be as good as possible.</p>
+
+    <h2>Talk about the Problems</h2>
+    <p>Soon the students will realize, that even if this sounds like an easy exercise, probably none of the approaches will lead to a perfectly playing AI. The main reasons why this occurs are:</p>
+    <ul>
+        <li>The AI simply doesn't encounter some states during training, so that it doesn't know what a good move is when it encounters them. This happens for instance if it is only trained against a perfectly playing AI, where it never learns that it can actually win, so it will not know how to exploit mistakes when they are made.</li>
+        <li>The AI learns wrong moves, because the enemy didn't respond properly. For example it might have learned that a move usually leads to victory, because the enemy did only bad (or random) moves, but when the enemy plays correctly, the AI will lose.</li>
+    </ul>
+    <p>The technical problem behind this is exploration vs exploitation<a href="#menace_ref_1" class="ref">1</a>, which will be explored more in the next exercise.</p>
+    
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="https://youtu.be/R9c-_neaxeU">https://youtu.be/R9c-_neaxeU</a></li>
+        <li><a href="https://www.mscroggs.co.uk/menace/">https://www.mscroggs.co.uk/menace/</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="menace_ref_1" href="https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/">https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/</a></li>
+    </ol>
+</section>
+
+<section class="exercise ol">
+    <h1 id="maze">Maze</h1>
+    <img src="{{images}}/maze.png" alt="image of maze game" class="right small">
+    <p>By using a <strong>maze</strong> in which a <strong>robot</strong> is rewarded by finding a <strong>battery</strong>, this exercise demonstrates that RL is not as straight forward as one might think. The exercise starts with <a href="Slides/RL - Maze.pdf">this slides</a>, explaining the scenario of a robot inside a maze which has to find a battery. In the beginning the robot will take random turns and over time it will learn the correct path to its goal. In the second exercise, the maze has multiple batteries with different values, which will lead to sub-optimal results, as explained in the last few <a href="Slides/RL - Maze.pdf">slides</a>.</p>
+
+    <h2>Introduce the game</h2>
+    <p>First, introduce the students to the game using the <a href="Slides/RL - Maze.pdf">slides 1-18</a>. Then provide each student (or pair of students) with a copy of the <a href="Exercises/RL - Maze Basic.pdf">RL Maze Basic</a>, a dice and a pen.</p>
+
+    <h2>Let them play</h2>
+    <p>Then the students have to play multiple rounds, until the path to the battery is clearly defined. To update values, one can simply cross it out and write the new value close to it. Some students will be 'lucky' and the path will form very fast, while with other the robot will go into every dead end before it reaches its goal. If some students are way too fast, they can try again with a new sheet of the same maze and see how it behaves differently the second time.</p>
+
+    <h2>Introduce the advanced maze</h2>
+    <p>Provide each student (or pair of students) with a copy of the <a href="Exercises/RL - Maze Advanced.pdf">RL Maze Advanced</a> and again let them train their robot. Even if there are multiple batteries this time, the robot still goes back to the beginning whenever it reaches a battery. The game is over again, if the robot has a clear path to one of the batteries, even if it is not the one with the highest value.</p>
+
+    <h2>Find out the problem and propose solutions</h2>
+    <p>When everyone is finished, different robots will have reached different scores. Now create groups of around 4 students and let them discuss why some robots scored better than others and work out a possible solution. It might help to group students with different robot scores together, so they have a better visualization of the problem. Then each group has to present their findings and solutions.</p>
+
+    <h2>Explain the problem</h2>
+    <p>Finally, use <a href="Slides/RL - Maze.pdf">slides 19-26</a> to discuss the exploration vs exploitation trade-off<a href="#maze_ref_1" class="ref">1</a> and possible solutions for this exercise.</p>
+
+    <h2>Optional: Test various solutions</h2>
+    <p>Provide new copies of the <a href="Exercises/RL - Maze Advanced.pdf">RL Maze Advanced</a> so that the groups can test various new approaches (like different exploration rates).</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/RL - Maze.pdf">RL - Maze.pdf</a> <a href="Slides/RL - Maze.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Maze Basic.pdf">RL - Maze Basic.pdf</a> <a href="Exercises/RL - Maze Basic.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Maze Advanced.pdf">RL - Maze Advanced.pdf</a> <a href="Exercises/RL - Maze Advanced.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="maze_ref_1" href="https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/">https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/</a></li>
+    </ol>
+</section>
+
+<section class="cols">
+    <h1 id="quiz">True or False?</h1>
+
+    <p>This last chapter acts as a <strong>recapitulation</strong> of the whole module. It is based on a <strong>quiz with ten true or false questions</strong> and encourages students to think about all the aspects they have learned.</p>
+    <p>The quiz itself consists of <a href="Slides/RL - Quiz.pdf">slides</a>, showing one question after another before showing the correct answers. Therefore, students can write down their responses and then calculate their score in the end. It is highly encouraged to pause after revealing the answer for every questions to discuss briefly <strong>why</strong> it is correct or wrong. Alternatively, this exercise can also be done in groups to further encourage discussion between students.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/RL - Quiz.pdf">RL - Quiz.pdf</a> <a href="Slides/RL - Quiz.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

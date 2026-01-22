@@ -1,0 +1,400 @@
+---
+title: "Analysis_Experimentalgroup"
+output: html_document
+date: "2025-12-16"
+---
+
+```{r}
+library(tidyverse)
+library(patchwork)
+
+# --- 1. Load Data and Pre-processing ---
+
+# Read the CSV file
+df <- read_csv("/Users/olga/Olga\'s\ workspace/ETHZ\ SBS/Marty\ project/Data_analysis/BuildBots_children_T1T4T7.csv")
+
+# /Users/olga/Olga\'s\ workspace/ETHZ\ SBS/Marty\ project/Data_analysis/BuildBots_children_T1T4T7.csv
+# /Users/lleisten/Library/CloudStorage/OneDrive-ETHZurich/PhD/2023/Projects/BuildBots/Deployment/Analysis/BuildBots_children_T1_November+7,+2025_03.13.csv
+
+# Set Timepoint as an ordered factor
+df$Timepoint <- factor(df$Timepoint, levels = c("T1", "T4", "T7"))
+
+summary(df)
+
+# Define a function to calculate the Standard Error
+calculate_se <- function(x) {
+  sd(x, na.rm = TRUE) / sqrt(sum(!is.na(x)))
+}
+```
+
+```{r}
+# --- Define Column Lists ---
+
+# MAILS (AQ-AZ: MAILS_1 to MAILS_10)
+mails_cols <- paste0("MAILS_", 1:10)
+
+# Digital Literacy
+dl_cols <- c(
+  "robotparts_1", "robotparts_2", "sensors_1", "sensors_2",
+  "microcontrollers_1", "microcontrollers_2", "AI_DA09", "CA12", "CI29", "CI31",
+  "UA19", "GA10", "LLMdesign_1", "GA13", "EA05", "GA04",
+  "PR1", "PR2", "PR3", "PR4", "GA17", "GA16", "EA11"
+)
+
+composite_cols_list <- c(
+    "NAO_Warmth", "NAO_Competence", "NAO_Uncomfortable", "NAO_Safe",
+    "Blossom_Warmth", "Blossom_Competence", "Blossom_Uncomfortable", "Blossom_Safe",
+    "Marty_Warmth", "Marty_Competence", "Marty_Uncomfortable", "Marty_Safe"
+)
+
+soas_cols <- paste0("SOAS_", 1:7)
+attachment_cols <- c("attachment_1", "attachment_2", "attachment_3", "attachment_4r", "attachment_5r")
+intention_cols <- paste0("intention_", 1:4)
+perception_cols <- c(
+    "NAO_Warmth", "NAO_Competence", "NAO_Uncomfortable", "NAO_Safe",
+    "Blossom_Warmth", "Blossom_Competence", "Blossom_Uncomfortable", "Blossom_Safe",
+    "Marty_Warmth", "Marty_Competence", "Marty_Uncomfortable", "Marty_Safe"
+) # added by olga, there was a mismatch with all_scale_cols using perception_cols and composite_cols_list def defined before
+```
+
+```{r}
+all_scale_cols <- c(mails_cols, dl_cols, perception_cols)
+df_recode <- df %>%
+  # Ensure all scale columns are numeric (coercing non-numeric to NA first)
+  mutate(across(all_of(all_scale_cols), ~ as.numeric(as.character(.)))) %>%
+  # Recode 99 to 0 for all scale items
+  mutate(across(all_of(all_scale_cols), ~ ifelse(. == 99, 0, .)))
+```
+
+```{r}
+# --- 2. MAILS Mean Plot (99s treated as NA for mean calculation) ---
+mails_mean_data <- df_recode %>%
+  # Convert 99 to NA for mean calculation only
+  mutate(across(all_of(mails_cols), ~ na_if(., 99))) %>%
+  # Calculate the mean MAILS score for each participant at each timepoint
+  mutate(MAILS_Average = rowMeans(select(., all_of(mails_cols)), na.rm = TRUE)) %>%
+  # Summarize for plotting
+  group_by(Timepoint) %>%
+  summarise(
+    Mean_MAILS = mean(MAILS_Average, na.rm = TRUE),
+    SEM_MAILS = calculate_se(MAILS_Average),
+    .groups = 'drop'
+  )
+
+plot_mails_mean <- ggplot(mails_mean_data, aes(x = Timepoint, y = Mean_MAILS, group = 1)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "blue", size = 3) +
+  geom_errorbar(aes(ymin = Mean_MAILS - SEM_MAILS, ymax = Mean_MAILS + SEM_MAILS),
+                width = 0.2, color = "blue") + scale_y_continuous(limits = c(0,11))+
+  labs(
+    title = "Subjective AI Literacy Over Time",
+    x = "Timepoint",
+    y = "Mean MAILS Score") +
+  theme_minimal()
+
+plot_mails_mean
+```
+
+```{r}
+# --- 3. Digital Literacy Mean Plot (99s treated as NA for mean calculation) ---
+dl_sum_data <- df_recode %>%
+  # Calculate the SUM DL score for each participant
+  mutate(DL_Sum = rowSums(select(., all_of(dl_cols)), na.rm = TRUE)) %>%
+  # Summarize for plotting (taking the mean of the Sum Scores to plot the line/SEM)
+  group_by(Timepoint) %>%
+  summarise(
+    Score = mean(DL_Sum, na.rm = TRUE),
+    SEM = calculate_se(DL_Sum), # SEM on the Sum score
+    .groups = 'drop'
+  )
+
+plot_dl_sum <- ggplot(dl_sum_data, aes(x = Timepoint, y = Score, group = 1)) +
+  geom_line(color = "darkgreen", size = 1) +
+  geom_point(color = "darkgreen", size = 3) +
+  geom_errorbar(aes(ymin = Score - SEM, ymax = Score + SEM),
+                width = 0.2, color = "darkgreen") + scale_y_continuous(limits = c(0,23))+
+  labs(
+    title = "Digital Literacy Over Time",
+    x = "Timepoint",
+    y = "Digital Literacy Sum Score"
+  ) +
+  theme_minimal()
+
+plot_dl_sum
+
+combined_learning <- plot_dl_sum + plot_mails_mean
+combined_learning
+
+ggsave("buildbots_learning_combined.png", combined_learning, width = 10, height = 5)
+```
+
+```{r}
+perception_composite_data <- df_recode %>%
+  # --- 3. Calculate Composite Scores (Mean of items) ---
+  mutate(
+    # NAO Composites
+    NAO_Warmth = rowMeans(select(., NAO_empathetic, NAO_social), na.rm = TRUE),
+    NAO_Competence = rowMeans(select(., NAO_competence, NAO_reliable), na.rm = TRUE),
+    NAO_Uncomfortable = rowMeans(select(., NAO_scary, NAO_uncomfortable), na.rm = TRUE), 
+    NAO_Safe = NAO_safe, 
+
+    # Blossom Composites
+    Blossom_Warmth = rowMeans(select(., Blossom_empathetic, Blossom_social), na.rm = TRUE),
+    Blossom_Competence = rowMeans(select(., Blossom_competent, Blossom_reliable), na.rm = TRUE),
+    Blossom_Uncomfortable = rowMeans(select(., Blossom_scary, Blossom_uncomfortable), na.rm = TRUE),
+    Blossom_Safe = Blossom_safe, 
+
+    # Marty Composites
+    Marty_Warmth = rowMeans(select(., Marty_empathetic, Marty_social), na.rm = TRUE),
+    Marty_Competence = rowMeans(select(., Marty_competent, Marty_reliable), na.rm = TRUE),
+    Marty_Uncomfortable = rowMeans(select(., Marty_scary, Marty_uncomfortable), na.rm = TRUE),
+    Marty_Safe = Marty_safe 
+  ) %>%
+  
+  # --- 4. Select *only* the Timepoint and the 12 explicit composite columns (THE FIX) ---
+  # This prevents unwanted columns (like "Gender" or residual "NA" columns) from entering the pivot
+  select(Timepoint, all_of(composite_cols_list)) %>%
+  
+  # --- 5. Convert to Long Format ---
+  pivot_longer(
+    cols = -Timepoint,
+    names_to = "Metric",
+    values_to = "Score"
+  ) %>%
+  # Separate the robot and the composite name
+  separate(Metric, into = c("Robot", "Composite"), sep = "_", extra = "merge") %>%
+  
+  # --- 6. Summarize for Plotting ---
+  group_by(Timepoint, Robot, Composite) %>%
+  summarise(
+    Mean_Score = mean(Score, na.rm = TRUE),
+    SEM_Score = calculate_se(Score),
+    .groups = 'drop'
+  ) %>%
+  
+  # --- 7. Set Composite order for clean plotting ---
+  mutate(
+      Composite = factor(Composite, levels = c("Warmth", "Competence", "Uncomfortable", "Safe"))
+  )
+
+plot_nao <- perception_composite_data %>%
+  filter(Robot == "NAO") %>%
+  ggplot(aes(x = Timepoint, y = Mean_Score, group = Composite, color = Composite)) +
+  geom_line(size = 1) + 
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = Mean_Score - SEM_Score, ymax = Mean_Score + SEM_Score),
+                width = 0.2) +
+  
+  # Facet by composite score for NAO
+  facet_wrap(~ Composite, ncol = 2) + 
+  
+  labs(
+    title = "NAO Perception",
+    x = "Timepoint",
+    y = "Mean Composite Score",
+    color = "Composite Score",
+  ) +
+  scale_color_brewer(palette = "Set1") + # Use a color palette for the composites
+  theme_minimal() +
+  theme(
+    strip.background = element_rect(fill = "#FEE0D2", color = NA), # Light red background
+    strip.text = element_text(face = "bold"),
+    plot.title = element_text(color = "#E41A1C"),
+    legend.position = "none" # Remove redundant legend as facets provide the label
+  ) + scale_y_continuous(limits = c(1,7))
+
+plot_nao
+```
+
+```{r}
+# =========================================================================
+# -------------------- PLOT 3B: Blossom Perception (Faceted by Composite) ---------
+# =========================================================================
+
+plot_blossom <- perception_composite_data %>%
+  filter(Robot == "Blossom") %>%
+  ggplot(aes(x = Timepoint, y = Mean_Score, group = Composite, color = Composite)) +
+  geom_line(size = 1) + 
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = Mean_Score - SEM_Score, ymax = Mean_Score + SEM_Score),
+                width = 0.2) +
+  
+  # Facet by composite score for Blossom
+  facet_wrap(~ Composite, ncol = 2) + 
+  
+  labs(
+    title = "Blossom Perception",
+    x = "Timepoint",
+    y = "Mean Composite Score",
+    color = "Composite Score"
+  ) +
+  scale_color_brewer(palette = "Set1") +
+  theme_minimal() +
+  theme(
+    strip.background = element_rect(fill = "#DEEBF7", color = NA), # Light blue background
+    strip.text = element_text(face = "bold"),
+    plot.title = element_text(color = "#377EB8"),
+    legend.position = "none"
+  ) + scale_y_continuous(limits = c(1,7))
+
+plot_blossom
+```
+
+```{r}
+# =========================================================================
+# -------------------- PLOT 3C: Marty Perception (Faceted by Composite) ---------
+# =========================================================================
+
+plot_marty <- perception_composite_data %>%
+  filter(Robot == "Marty") %>%
+  ggplot(aes(x = Timepoint, y = Mean_Score, group = Composite, color = Composite)) +
+  geom_line(size = 1) + 
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = Mean_Score - SEM_Score, ymax = Mean_Score + SEM_Score),
+                width = 0.2) +
+  
+  # Facet by composite score for Marty
+  facet_wrap(~ Composite, ncol = 2) + 
+  
+  labs(
+    title = "Marty Perception",
+    x = "Timepoint",
+    y = "Mean Composite Score",
+    color = "Composite Score"
+  ) +
+  scale_color_brewer(palette = "Set1") +
+  theme_minimal() +
+  theme(
+    strip.background = element_rect(fill = "#E5F5E0", color = NA), # Light green background
+    strip.text = element_text(face = "bold"),
+    plot.title = element_text(color = "#4DAF4A"),
+    legend.position = "none"
+  ) + scale_y_continuous(limits = c(1,7))
+
+plot_marty 
+
+
+# Use patchwork to display all three robot plots together (optional, but clean presentation)
+combined_perception_plots <- plot_nao + plot_blossom + plot_marty
+
+ggsave("buildbots_perception_combined.png", combined_perception_plots, width = 10, height = 5)
+
+```
+
+```{r}
+# Attachment
+
+df_recode <- df_recode %>%
+  mutate(
+    # Reverse code attachment_4r and attachment_5r
+    attachment_4r_rc = 6 - attachment_4r,
+    attachment_5r_rc = 6 - attachment_5r,
+    
+    # Use the non-reversed items (already cleaned in step 2)
+    attachment_1 = attachment_1,
+    attachment_2 = attachment_2,
+    attachment_3 = attachment_3
+  )
+
+attachment_cols_rc = c("attachment_1", "attachment_2", "attachment_3", "attachment_4r_rc", "attachment_5r_rc")
+
+# =========================================================================
+# -------------------- PLOT 5: Attachment Mean Score (RC) -----------------
+# =========================================================================
+
+attachment_mean_data <- df_recode %>%
+  # Calculate the mean Attachment score using the reversed items
+  mutate(Attachment_Average = rowMeans(select(., all_of(attachment_cols_rc)), na.rm = TRUE)) %>%
+  # Summarize for plotting
+  group_by(Timepoint) %>%
+  summarise(
+    Score = mean(Attachment_Average, na.rm = TRUE),
+    SEM = calculate_se(Attachment_Average),
+    .groups = 'drop'
+  )
+
+plot_attachment <- ggplot(attachment_mean_data, aes(x = Timepoint, y = Score, group = 1)) +
+  geom_line(color = "orange", size = 1) +
+  geom_point(color = "orange", size = 3) +
+  geom_errorbar(aes(ymin = Score - SEM, ymax = Score + SEM),
+                width = 0.2, color = "orange") +
+  labs(
+    title = "Attachment",
+    x = "Timepoint",
+    y = "Mean Attachment Score"
+  ) +
+  theme_minimal() + scale_y_continuous(limits = c(1,5))
+
+plot_attachment
+```
+
+```{r}
+# =========================================================================
+# -------------------- PLOT 4: SOAS Mean Score ----------------------------
+# =========================================================================
+
+soas_mean_data <- df_recode %>%
+  mutate(SOAS_Average = rowMeans(select(., all_of(soas_cols)), na.rm = TRUE)) %>%
+  group_by(Timepoint) %>%
+  summarise(
+    Score = mean(SOAS_Average, na.rm = TRUE),
+    SEM = calculate_se(SOAS_Average),
+    .groups = 'drop'
+  )
+
+plot_soas <- ggplot(soas_mean_data, aes(x = Timepoint, y = Score, group = 1)) +
+  geom_line(color = "purple", size = 1) +
+  geom_point(color = "purple", size = 3) +
+  geom_errorbar(aes(ymin = Score - SEM, ymax = Score + SEM),
+                width = 0.2, color = "purple") +
+  labs(
+    title = "Specific object anthropomorphism",
+    x = "Timepoint",
+    y = "Mean SOAS Score"
+  ) +
+  theme_minimal() + scale_y_continuous(limits = c(0,2.1))
+
+plot_soas
+```
+
+```{r}
+# =========================================================================
+# -------------------- PLOT 6: Intention Mean Score -----------------------
+# =========================================================================
+
+intention_mean_data <- df_recode %>%
+  # Calculate the mean Intention score for each participant
+  mutate(Intention_Average = rowMeans(select(., all_of(intention_cols)), na.rm = TRUE)) %>%
+  # Summarize for plotting
+  group_by(Timepoint) %>%
+  summarise(
+    Score = mean(Intention_Average, na.rm = TRUE),
+    SEM = calculate_se(Intention_Average),
+    .groups = 'drop'
+  )
+
+plot_intention <- ggplot(intention_mean_data, aes(x = Timepoint, y = Score, group = 1)) +
+  geom_line(color = "brown", size = 1) +
+  geom_point(color = "brown", size = 3) +
+  geom_errorbar(aes(ymin = Score - SEM, ymax = Score + SEM),
+                width = 0.2, color = "brown") +
+  labs(
+    title = "Intention to use",
+    x = "Timepoint",
+    y = "Mean Intention Score")+
+  theme_minimal() + scale_y_continuous(limits = c(1,5))
+
+plot_intention
+```
+
+```{r}
+# =========================================================================
+# -------------------- COMBINED PLOT (New Scales) -------------------------
+# =========================================================================
+
+combined_attachment_plots <- plot_soas + plot_attachment + plot_intention
+
+ggsave("buildbots_attachment_combined.png", combined_attachment_plots, width = 10, height = 5)
+
+
+```

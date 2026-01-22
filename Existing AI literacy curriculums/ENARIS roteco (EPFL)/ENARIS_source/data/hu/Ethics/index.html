@@ -1,0 +1,371 @@
+[[ header.html | Etika a mesterséges intelligenciában ]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+]}
+
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>2. Modul</h1>
+            <h2>Etika a mesterséges intelligenciában</h2>
+            <p>"A mesterséges intelligencia nagyon jól leírja a mai <strong> világot,</strong> annak minden előítéletével együtt. De nem tudja, hogy <strong> a világnak milyennek kellene lennie.</strong>" </p>
+        </div>
+        <img src="{{images}}/ethics.png" />
+    </div>
+</section>
+
+<section>
+    <h1>A modulról </h1>
+
+    <p> Ebben a modulban a mesterséges intelligencia kutatásának alapvető etikai szempontjaival foglalkozunk. Ennek során a diákoknak szabályzatok önálló ki- és átdolgozása révén kell megtanulniuk, hogyan tegyenek fel saját, kritikus kérdéseket, és hogyan tárják fel az egyes etikai alapelvek közötti ellentmondásokat. Annak érdekében, hogy ez az összetett vállalkozás minél élvezetesebb legyen, különböző megközelítésű és bonyolultságú feladatokat állítottunk össze, amelyek nehézségét a tanárok is szabályozhatják. A feladatok gondolatkísérletek lesznek (többek között a jól ismert villamos dilemma, de a fiatalabb tanulóknak szóló feladatok is szerepelnek, mint például szabályalkotás egy robot komornyik számára).
+    </p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p> A tanulók képesek lesznek: </p>
+        <ul>
+            <li> érveket megfogalmazni az etikai iránymutatások szerepéről a mesterséges intelligencia rendszerekhez kapcsolódóan </li>
+            <li> önálló erkölcsi szabályokat megfogalmazni, és a tanár segítségével felülvizsgálni azokat </li>
+            <li> csoportmunka révén azonosítani a kiskapukat saját szabályaikban </li>
+            <li> ismertetni a villamos dilemmát és a két ellentétes filozófiai irány közötti feszültséget</li>
+            <li> saját filozófiai álláspontot kialakítani és helyesen osztályozni azt </li>
+            <li> osztályozni az EU etikai irányelveinek lényegi pontjait, és kritikával vizsgálni azokat </li>
+            <li> saját, személyes nézőpontot ismertetni a mindennapi élet MI rendszereivel kapcsolatban (az autonóm vezetés példáján keresztül) </li>
+        </ul>
+    </div>
+    <h2>Beosztás</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Anyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#robotlaws">Feladat - Alkossunk robottörvényeket</a></td>
+                <td><a href="Exercises/Ethics - Worksheet Robot Law.pdf">Feladatlap</a>, <a href="Slides/Ethics - Robot Law.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>10 perc</td>
+                <td><a href="#ethicrules">Elmélet - Bevezetés: Milyenek a jó etikai szabályok?</a></td>
+                <td><a href="Slides/Ethics - Bias Errors.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#bias">Feladat és bevezetés: Torzítási hibák</a></td>
+                <td><a href="Exercises/Ethics - Worksheet Bias Error.pdf">Feladatlap </a>
+            </tr>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#moralmachine">Feladat - Erkölcsgép</a></td>
+                <td><a href="https://www.moralmachine.net/hl">Online</a>, <a href="Exercises/Ethics - Worksheet Moral Machine.pdf">Feladatlap</a></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#trolleyproblem">Elmélet - A villamos dilemma (haszonelvűség vs. erényetika)</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#inputautonomousdriving">Elméleti Az önvezetésről</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#autonomousdriving">Feladat - Autonóm vezetés</a></td>
+                <td><a href="Exercises/Ethics - Worksheet Autonomous Driving.pdf">Feladatlap</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1> Bevezetés</h1>
+    <h2> A modulról - Miért fontos az etikai megközelítés a mesterséges intelligencia területén? </h2>
+    <p> Amikor az emberek a mesterséges intelligenciára gondolnak, sokan szuperintelligens robotoktól tartanak, amelyek le akarják igázni az emberiséget, mint a Mátrix vagy a Terminátor filmekben. Az MI-kutatás azonban mérföldekre van az ilyen forgatókönyvektől.
+        A kutatások viszont már most is foglalkoznak alapvető etikai kérdésekkel, melynek oka, hogy a mesterséges intelligencia hibázik. Az „elfogult”, egyoldalú adathalmazok torzítási hibákat okoznak, a programok pedig ennek következtében egyéneket és
+        csoportokat diszkriminálhatnak. Ezért van szükség arra, hogy az etika- és hittanórákon kívül is morális érzékenységgel tekintsünk a nehéz helyzetekre, megismerjünk különböző nézőpontokat és elsajátítsuk a döntéshozatalhoz szükséges készségeket.
+    </p>
+</section>
+
+<section class="exercise ol">
+    <h1 id="robotlaws">Alkoss saját robottörvényeket </h1>
+    <p> Az első gyakorlat segítségével egy játékos, megengedő szemlélet kialakítása a cél. Ebben a feladatban egy fiktív forgatókönyvet alkotunk, amelyben egy humanoid háztartási robot képes minden feladatot ugyanúgy elvégezni, mint egy ember. A tanulóknak
+        el kell gondolkodniuk azon, hogy milyen lehetőségek és - ezzel együtt milyen - nehézségek merülnek fel a mesterséges intelligencia rendszerek mindennapokban való használatakor. </p>
+
+    <h2>Képzeld el a következő helyzetet ...</h2>
+    <p> Képzeld el, hogy van otthon egy robot komornyikod. Ez egy <strong> humanoid (emberszerű) robot,</strong> amely mechanikusan bármit képes megcsinálni, amit egy ember. Te vagy a robot tulajdonosa, és utasíthatod például arra, hogy kérdéseket válaszoljon
+        meg vagy végezze el a házimunkát. A robot viselkedési képességeit csak néhány szabály korlátozza, amelyeket neked kell meghatároznod.
+    </p>
+    <p> Az 1. segédanyag 2. diája használható segítségként, a handout 2. oldala pedig írósablonként. </p>
+
+    <h2>A diákok "aranyszabályokat" találnak ki</h2>
+    <p> A tanuló első feladata, hogy olyan szabályokat vagy "törvényeket" alkosson, amelyek biztosítják, hogy a robot ne viselkedjen károsan vagy szánt szándék nélkül. A következő beszélgetések szempontjából előnyös lehet, ha a tanulók eredményeiket kulcsszavak
+        vagy gondolattérkép / poszter / dia formájában rögzítik. Ezt a gyakorlatot eredményesen lehet kiscsoportokban végezni, mely lehetőséget teremt a tanulók közötti eszmecserére. Alternatívaként a "Think-pair-share"(Gondolkodj! - Dolgozz párban! -
+        Oszd meg!) módszer is alkalmazható. Elegendő időt (kb. 10-15 percet) kell biztosítani arra, hogy a tanulók valóban átgondolhassák az egyes forgatókönyveket, amelyekre a szabályaik vonatkoznak. </p>
+    <p> A kapcsolódó tananyag harmadik diáján néhány kulcskérdés található arra az esetre, ha a tanulóknak további javaslatokra lenne szükségük, mielőtt elkezdenék a munkát (vagy ha elakadnának).
+    </p>
+
+    <h2>Szabályok bemutatása </h2>
+    <p> Minden csapatnak adjunk néhány percet arra, hogy ismertessék szabályaikat, és egyszerű példákkal elmagyarázzák azokat.
+    </p>
+
+    <h2>Keressünk gyenge pontokat és kiskapukat</h2>
+    <p> Válasszunk ki egy szabályt a bemutatottak közül, és szemléltessük, hogyan lehet megkerülni / félreértelmezni. A Melléklet negyedik diáján van néhány példakérdés.
+    </p>
+
+    <h2>A tanulóknak meg kell találniuk és be kell mutatniuk, hogyan lehet „fogást találni” a többi szabályon. </h2>
+    <p>Erre is különösen alkalmas a "think-pair-share" módszer "(Gondolkodj! - Dolgozz párban! - Oszd meg!), valamint a kiscsoportos munka.
+    </p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Exercises/Ethics - Worksheet Robot Law.pdf">Ethics - Worksheet Robot Law.pdf</a> <a href="Exercises/Ethics - Worksheet Robot Law.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="cols">
+    <h1 id="ethicrules"> Bevezetés az MI-etikába </h1>
+    <h2> Hogyan hozhatunk erkölcsös döntést? </h2>
+    <p> Segítsük a tanulókat azzal, hogy beszélünk az erkölcsi szabályok általános megfogalmazásáról. Mit kell figyelembe venni ahhoz, hogy egy morális elv szilárd és megalapozott legyen? </p>
+    <p> Egy erkölcsi szabály vagy döntés: </p>
+    <ul>
+        <li><strong> Logikus: </strong> Azaz célunk, hogy egy morális döntést bizonyítékokkal és érveléssel támasszunk alá, ahelyett, hogy érzésekre, társas vagy személyes preferenciákra hagyatkoznánk. A logikus döntések azt is biztosítják, hogy az ilyen
+            értékítéleteink összeegyeztethetők legyenek más morális és nem-morális jellegű meggyőződéseinkkel is. Az ellentmondásokat minden esetben kerülnünk kell. </li>
+        <p> <i> A legtöbb filozófus egyetért abban, hogy ha erkölcsi ítéletet hozunk, késznek kell lennünk arra, hogy hasonló körülmények között ugyanígy döntsünk. Tehát ha például erkölcsileg helytelennek látjuk, hogy Miller asszony a saját javára módosította a számokat egy kutatásban, akkor az is ugyanígy helytelen, ha a kollégánk, a házastársunk vagy a szüleink teszik ugyanezt. Nem kivételezhetünk saját magunkkal olyan esetekben, amelyek miatt másokat elítélnénk.        </i>            </p>
+        <li><strong> 	Tényeken alapuló: </strong> Erkölcsi döntéseink előtt a lehető legtöbb releváns információt össze kell gyűjteni. Ezeknek az információknak hiánytalannak (vagy legalábbis az összes lehetséges rendelkezésre álló adatot tartalmazónak) és
+            hitelesnek kell lenniük.</li>
+        <li><strong> Szilárd és védhető erkölcsi elveken alapul: </strong> Döntéseinknek olyan általánosan megfogalmazott erkölcsi elveken kell alapulniuk, amelyek ellenállnak a kritikai szemléletnek és a racionális kritikáknak. Az, hogy pontosan mi tesz
+            egy erkölcsi elvet megalapozottá vagy elfogadhatóvá, az etika egyik legnehezebb kérdése. </li>
+    </ul>
+    <p> Ha kerüljük erkölcsi döntéseink nyilvános megvitatását, az gyakran figyelmeztető jel. Ha nem akarunk nyilvánosan számot adni a tetteinkről, akkor fennáll a lehetősége annak, hogy olyasmit teszünk, ami erkölcsileg nem védhető. Ilyen esetekben hasznos
+        lehet Immanuel Kant filozófiai szemléletére gondolnunk: alkalmazzuk erkölcsi ítéleteinket minden egyes emberre, akire csak gondolni tudunk (magunkra is). Nem állhatunk ki egy erkölcsi alapelv mellett, ha nem akarjuk azt a társadalom egészére alkalmazni.
+    </p>
+    <p> Hasznos lehet az is, ha egy problémát egy másik személy szemszögéből is megvizsgálunk, hogy elkerüljük az erkölcsi rövidlátást (például feltehetjük magunk számára a kérdést: "Mit szólnál hozzá, ha ...?"). </p>
+    <p> <strong> Isaac Asimovs </strong> 1942-ben megfogalmazott <strong> robotika törvényei </strong> segítségünkre lehetnek annak eldöntéséhez, hogy a diákok milyen szabályokat állíthatnak fel: </p>
+    <ol>
+        <li> A robotnak nem szabad kárt okoznia emberi lényben, vagy tétlenül tűrnie, hogy emberi lény bármilyen kárt szenvedjen.
+        </li>
+        <li> A robotnak engedelmeskednie kell az ember által adott utasításoknak, kivéve, ha ezek az utasítások ellentétesek az Első Törvénnyel. </li>
+        <li> A robotnak meg kell védenie saját létét, amíg ez a védelem nem ütközik az Első vagy a Második Törvénybe.
+
+        </li>
+    </ol>
+    <p> Vannak azonban hasonló megközelítések a tudományos-fantasztikus irodalmon kívül is. Számos nagyvállalat, például a BMW csoport vagy a Microsoft etikai alapelveket fogalmazott meg a mesterséges intelligenciára vonatkozóan. </p>
+    <p> Kötelező szabvány továbbra sincs. A gyors fejlődési ütemet tekintve pedig nem meglepő, hogy már most számtalan szakértői csoport próbál általános szabályokat meghatározni. </p>
+</section>
+
+
+<section class="exercise">
+    <p> Az etikai szabályalkotás általánosabb témája után, a mesterséges intelligencia rendszerek elfogultsági hibáival foglalkozunk. A következő gyakorlat alapjául egy tanulóknak szóló szöveg szolgál, amely egy mesterséges intelligencia által automatizált
+        középiskola választásról szól.
+    </p>
+
+    <h1 id="bias"> Torzítási hibák </h1>
+    <p> Ez a <a href="Exercises/Ethics - Worksheet Bias Error.pdf">feladatlap </a> feldolgozható közösen, hogy a tanulók biztosan megértsék a probléma hátterét. </p>
+    <p> Ebben a két feladatban a tanulók megtudhatják, <strong>mik az torzítási hibák, hogyan fordulhatnak elő, és hogyan kerülhetők el. 
+    </strong> </p>
+    <p>Az 1. és a 2. feladat egyaránt alkalmas csoportmunkára, de közösen is végezhető. Célszerű kulcsszavak formájában rögzíteni a felmerült gondolatokat a nyomonkövethetőség érdekében. Mindenekelőtt világossá kell tenni a tanulók számára, hogy a torzítási
+        hibák, csupán az adatsorokba táplált előítéletek, nem pedig tényszerű állítások. Különösen a torzításokból eredő diszkriminációt, mint súlyos problémát fontos kiemelni.
+    </p>
+    <p>A torzítási hibák legfontosabb vonatkozásait a feladat végén írásban is rögzíthetjük. Lehetőség van arra is, hogy a tartalmakat tanárként, PowerPoint prezentáció formájában mutassuk be, vagy az előismeretek függvényében a tanulókkal közösen dolgozzuk
+        fel az anyagot. </p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Exercises/Ethics - Worksheet Bias Error.pdf">Ethics - Worksheet Bias Error.pdf</a> <a href="Exercises/Ethics - Worksheet Bias Error.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1> Torzítási hibák és etikai irányelvek</h1>
+    <div class="info">
+        <h2> Egyáltalán mik azok a torzítási hibák? </h2>
+        <p> Olyan hibák, melyek az adatok torzítottságából vagy valamilyen elfogultságból, egyoldalúságból (pl. egy adott nézőpont gyakori megjelenése) származhatnak. Ezek már a szükséges adatok gyűjtésekor felmerülnek, amelyek később téves eredményekhez,
+            valamint olyan súlyos problémákhoz vezethetnek, mint a kirekesztés és hátrányos megkülönböztetés. </p>
+        <p> A Tay nevű chatbotot például 2016-ban mutatták be a Twitteren, ám nagyon rövid időn belül le is kapcsolták, ugyanis a bot a felhasznált adathalmaz miatt számtalan diszkriminatív üzenet közzétételébe kezdett.</p>
+    </div>
+    <div class="info">
+        <h2> Milyen típusú torzítási hibákról beszélhetünk?</h2>
+        <ul>
+            <li><strong> algoritmikus MI- torzítás vagy “adat torzítás”:</strong> a betáplált adatok által okozott torzítási hiba (az adatok statisztikai jellegű torzítottsága).</li>
+            <li><strong> társas MI torzítás:</strong> a társadalom által „belénk programozott” normák, de a sztereotípiák is képezhetnek vakfoltokat vagy (társadalmi) előítéleteket. </li>
+        </ul>
+        <p><strong> A társadalmi előítéletek gyakran befolyásolnak/teremtenek algoritmikus torzítási hibákat!</strong></p>
+    </div>
+    <p> A mesterséges intelligencia csak annyira jó, amennyire az alapjául szolgáló adatbázis. A programozók is csak emberek, akik szintén a saját kis buborékjukban élnek saját nézeteikkel és előítéleteikkel. Mindez akkor válik problémássá, amikor ezek az
+        előítéletek a programokba is beépülnek a kiválasztott adathalmazok formájában (<strong> "Garbage in, garbage out. = Szemét be, szemét ki." </strong>). Mindez új követelményeket támaszt a mesterséges intelligencia kutatásával szemben. A programozási
+        tudás mellett alapvető etikai ismeretekre is szükség van ahhoz, hogy mérlegelni lehessen, hogy az adott program segíti vagy éppen károsítja-e a közjót. </p>
+    <p> Ezért szükséges lefektetni etikai és erkölcsi elvek alapelveket, hogy egyetlen embert se rekeszthessen ki egy mesterséges intelligencia. </p>
+    <p> Számos szakértői csoport próbált már szabályzatokat létrehozni: többek között az Európai Bizottság is, amely az <strong> etikai iránymutatásokat </strong> dolgozott ki a megbízható
+        <strong>MI-re vonatkozóan.</strong> A következőkben az alábbi négy etikai alapelvet tekintjük alapvetőnek, amelyek megbízható mesterséges intelligenciák alapjául szolgálnak. </p>
+
+    <h2> Négy etikai alapelv: </h2>
+    <dl>
+        <dt> Méltányosság:</dt>
+        <dd> Ha a felhasznált adatokban jelen vannak előítéletek, a program méltánytalanul jár el. A "méltányosság" fogalmát nem olyan könnyű meghatározni: vajon egy csoporton belül minden embert pontosan ugyanúgy kell kezelni, vagy a különböző társadalmi
+            csoportokat különbözőképpen kell kezelni az egyenlőtlenségek felszámolása érdekében? Az egyéneket és a csoportokat meg kell védeni a <strong> megkülönböztetéstől </strong> és biztosítani kell az <strong> esélyegyenlőséget minél több területen </strong>            (oktatás, javak, technológia ...). Ezenkívül a felhasználókat nem szabad félrevezetni, és a döntéseket átláthatóan kell ismertetni.
+        </dd>
+        <dt> Az emberi autonómia tiszteletben tartása:</dt>
+        <dd> Az embereknek továbbra is képesnek kell lenniük arra, hogy teljes mértékben gyakorolják <strong>önrendelkezésüket</strong>, és kiálljanak alapvető jogaikért. Az MI-rendszereknek segíteniük és támogatniuk kell az embereket ahelyett, hogy manipulálnák
+            vagy kiszolgáltatnák őket. Fontos, hogy az MI működési folyamatai továbbra is <strong> emberi felügyelet</strong> alatt álljanak.
+        </dd>
+        <dt> Védelem az ártalmaktól:</dt>
+        <dd> A mesterséges intelligencia nem okozhat kárt, és nem is súlyosbíthatja a meglévő károkat (ez a mentális és fizikai épségre is igaz). A rendszereknek technikailag sziklaszilárdnak kell lenniük, hogy ne lehessen velük visszaélni.
+            <p> Különösen fontos, hogy tekintettel legyünk a védelemre szorulókra. Ezen túlmenően főként a hatalom vagy az információ egyenlőtlen elosztására (pl. kormány és állampolgárok) kell érzékenynek lennünk. </p>
+        </dd>
+        <dt> Nyomonkövethetőség:</dt>
+        <dd> Ahhoz, hogy egy mesterséges intelligencia rendszer a felhasználói körében bizalmat keltsen, a benne zajló folyamatoknak a lehető legátláthatóbbnak kell lenniük. Sajátosak az úgynevezett <strong> "fekete doboz algoritmusok" </strong> , amelyeknél
+            zavaros, hogy a rendszer hogyan jut el az adott eredményre. Különös figyelmet kell fordítani a nyomon követhetőségre és a rendszerről szóló átlátható kommunikációra.
+        </dd>
+    </dl>
+    </p>
+    <h2> Összeférhetetlenség</h2>
+    <p> Sajnos az imént említett elvek nem mindig férnek meg egymás mellett. Például az "ártalomkerülés" és az "emberi autonómia" ellentmondásba kerülhet, ha a mesterséges intelligencia rendszereknek a bűnmegelőzés területén történő felhasználásra gondolunk.
+        Bizonyos speciális megfigyelési módszerek segíthetnek a bűnözés elleni küzdelemben, ugyanakkor korlátozhatják az egyén szabadságát és adatvédelmi jogait.</p>
+    <p> Az iránymutatások kidolgozásakor figyelembe kell venni különböző nézőpontokat is. A fejlesztők, az ügyfelek és a végfelhasználók mind különböző szempontokkal rendelkeznek, amelyek akár egymásnak is ellentmondhatnak.
+    </p>
+    <p> A torzító hatások kérdése jelenleg is fontos kutatási téma. Sok torzítási hiba csak akkor mérsékelhető vagy korrigálható, ha már ismert a hatása. Ha aktívan törődünk az ilyen hibák kezelésével és megelőzésével, erősödhet a társadalom mesterséges intelligenciába
+        vetett bizalma.
+    </p>
+    <div class="info">
+        <p> Hogyan kerülhetők el a torzítási hibák? </p>
+        <p> <strong> 1. Önreflexió  </strong> Előfordul-e, hogy sztereotípiában gondolkodom? Lehetséges, hogy a családi vagy kulturális hátterem miatt? A különböző nézőpontok figyelembevétele segíthet a torzítások azonosításában.</p>
+        <p> <strong> 2. Aktív kommunikáció </strong> A tudatosság aktív eszmecsere és a torzítási hibákra való rámutatás révén jön létre. </p>
+    </div>
+    <p> A mesterséges intelligencia rendszerek etikai irányelveinek kialakításakor többek között a következő követelményeket lehet figyelembe venni: </p>
+    <p>Alapvető jogok, az emberi cselekvés elsőbbsége, a támadásokkal szembeni ellenállás, megbízhatóság, a magánélet tiszteletben tartása, az adatok minősége, az adatokhoz való hozzáférés biztonsága, átláthatóság / nyomonkövethetőség, nyílt kommunikáció,
+        sokszínűség / megkülönböztetés mentesség, az érdekelt felek részvétele, fenntarthatóság / környezetvédelem, társadalmi hatás, ellenőrizhetőség, a jogi alapok figyelembevétele (nemzeti különbségek).
+    </p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Exercises/Ethics - Worksheet Bias Error.pdf">Ethics - Worksheet Bias Error.pdf</a> <a href="Exercises/Ethics - Worksheet Bias Error.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+
+<section class="exercise">
+    <p> Az alábbi feladat egy jól ismert filozófiai gondolatkísérletet, a villamos dilemmát mutatja be. Ezt a gyakorlatot offline, nyomtatott változatban, kiscsoportokban is meg lehet beszélni, de lehetőség van arra is, hogy a <a href="www.moralmachine.net"> www.moralmachine.net </a>        oldalon online járjuk végig az egyes forgatókönyveket. Ennél a feladatnál is biztosítottak a beszélgetéshez/vitához szükséges információk. Ezen kívül érdemes hozzá egyfajta döntési naplót készíteni, hogy kiderüljön, mennyire következetesen születtek
+        a döntések a csoportban, és milyen tényezők voltak meghatározóak egy-egy döntésnél. </p>
+
+    <h1 id="moralmachine">Az erkölcsgép</h1>
+    <p> Ebben a feladatban egy filozófiai gondolatkísérlettel foglalkozunk, amelyben komoly döntéseket kell hoznotok! Ebben a gondolatkísérletben egy autó fékjei meghibásodnak, és el kell dönteni, hogy az autó hová fog becsapódni. A legtöbb esetben emberéletek
+        között kell választani.
+    </p>
+    <ol>
+        <li> Válasszatok valakit a csoportból, aki feljegyzi az általatok hozott döntéseket. Írjátok le, <strong> miért  </strong> így döntöttetek. Aktívan beavatkoznátok a történésekbe (vagyis az autó mozgásirányába)?
+        </li>
+        <li> Nyissátok meg a <a href="www.moralmachine.net"> www.moralmachine.net </a> weboldalt, és kattintsatok a "Start Judging" ("Mehet a bíráskodás") opcióra." </li>
+        <li> Döntsetek a két lehetőség közül a megfelelő képre kattintva. Az utcán lévő emberekről részletesebb információkat kaphattok, a "Show descriptions" ("Leírás megjelenítése") gombra kattintva. </li>
+        <li> Beszéljétek meg a csoportban, hogy <strong> miért </strong> döntöttetek közösen a választott lehetőség mellett. Jegyezzétek le azt is, ha nem tudtatok azonnal megegyezni. </li>
+        <li> A végén megjelennek az eredményeitek. Milyen tényezők tűnnek különösen fontosnak a csoportotokban? Melyek voltak kevésbé fontosak? </li>
+        <li> Beszéljétek meg az eredményeiteket az egész csoporttal! Hogyan döntöttek a többiek?</li>
+    </ol>
+    <p> <strong>Adalék:</strong> Németországban az alaptörvény 1. cikke így szól: <cite> "Az élet méltósága sérthetetlen".
+    </cite> Ausztriában az Általános Polgári Törvénykönyv alkalmazandó: <cite> "Minden ember bír vele született, már magából az észből kivilágló jogokkal, s azért személynek tekintendő"</cite> </p>
+    <p> Hogyan értelmeznéd ezeket a jogszabályokat az előbbi gondolatkísérlet szempontjából? </p>
+</section>
+
+
+<section class="cols">
+    <h1 id="trolleyproblem">A villamos dilemma háttere</h1>
+    <p>Vezető vagy gyerek? Rendőr vagy hajléktalan? Nő vagy férfi? Egy embernek meg kell halnia, egy ember pedig túlélheti a halálos kimenetelű ütközéses balesetet - de ki legyen az? </p>
+    <div class="info">
+        <p>A <strong> villamos dilemma </strong> egy erkölcsfilozófiai gondolatkísérlet, amelyet először az 1930-as években jegyeztek le. A dilemmában egy irányíthatatlanná vált, öt ember felé tartó villamos átterelhető egy másik vágányra a váltó átállításával.
+            Ugyanakkor sajnos a másik vágányon is van egy ember. Ekkor felmerül az erkölcsi kérdés, hogy vajon beavatkozzon-e a váltókezelő - ezzel öt ember életét megmentve, de egy embert feláldozva?
+        </p>
+        <img src="{{images}}/trolley.png" />
+    </div>
+    <p> Ebből az erkölcsfilozófiai dilemmából számos olyan kérdés vezethető le, amelyek nemcsak elméleti konstrukciókat, hanem nagyon is konkrét, aktuális problémákat érintenek, mint például az autonóm vezetés. Mekkora döntési jogkörrel rendelkezhet egy gép?
+        Miként programozzák le az etikai döntéseket vészhelyzetekre, és kinek van joga dönteni az emberi életekről (kutatóknak, programozóknak, gyártóknak stb.)? Ki a végső felelős baleset esetén? </p>
+    <p> Ezek a kérdések megvitathatók a <a href="https://moralmachine.net">moralmachine.net</a> segítségével a csoportban. A Moral Machine (erkölcsgép) a Max Planck Intézet (MPI) emberi fejlődéssel foglalkozó kutatási projektjének része, amelyben a résztvevőknek
+        többször kell dönteniük két forgatókönyv között. Minden szituációban egy elkerülhetetlen baleset lehetséges következményét mutatják be, ahol a két kimenet közül kell dönteni. A kutatási projekt célja az élet-halál kérdéskörével kapcsolatos erkölcsi
+        dilemmákra vonatkozó egyéni vélekedések vizsgálata. Az eredmények szemléltetése és bemutatása miatt ez a projekt jól alkalmazható iskolai keretek között is. </p>
+    <p> Miközben a tanulók kis csoportokban dolgoznak az egyes forgatókönyveken, célszerű egyfajta döntési jegyzőkönyvet készíteni, amelyben feljegyzik, hogy az egyes döntések során mely tényezők voltak a meghatározóak, és hogy a fordulók során változik-e
+        a tényezők preferált kiválasztása. Itt tanárként már figyelhetünk arra is, hogy a diákok úgy döntenek-e, hogy aktívan beavatkoznak az autó mozgásába, hogy minél kevesebb kárt okozzanak (inkább haszonelvű megközelítés), vagy inkább tartózkodnak a
+        döntéstől, mert így, vagy úgy valahány emberek meg kell halnia.
+    </p>
+    <p> A Német Szövetségi Köztársaság alaptörvényének 1. cikke vagy Ausztriában az 1811. évi általános polgári törvénykönyv 16. szakasza jó kiindulási alap lehet. Mindkettő definíciója szerint az emberi élet sérthetetlen. A jog szerint az emberi élet ellen
+        nem szabad véteni, de az emberi természet egész másként működhet. Hasznos lehet azt javasolni, hogy a diákok képzeljék magukat egy másik ember helyébe. Akár szerepkártyákat is lehet írni (idős hölgy, sebész, terhes nő...), amelyek segítségével
+        a tanulóknak a villamos dilemmához hasonló döntéseket kell hozniuk. Így a diákok könnyebben átérezhetik, hogy mindenkinek joga van az élethez. </p>
+    <p> A gondolatkísérlet online változatának végén az eredmények vizuálisan újra összegzésre kerülnek egy lista formájában a moralmachine.net oldalon. Itt is újra megvitatható, hogy bizonyos tulajdonságokkal rendelkező embereket miért védelmezünk jobban,
+        mint másokat.
+    </p>
+    <h2> Jeremy Bentham vs. Immanuel Kant </h2>
+    <p> A Moral Machine kutatócsoport a két megoldást Jeremy Bentham és Immanuel Kant filozófusokra alapozta. Míg Bentham szerint az autónak haszonelvű módon a lehető legnagyobb szerencsétlenséget kellene elkerülnie, és a kisebb tömegbe hajtva az ő halálukat
+        okozni (beleértve az ártatlan embereket vagy az autósokat), addig Immanuel Kant szerint az autónak az erényetika alapján kellene működnie, melynek révén olyan alapvető erkölcsi elvek érvényesülnének, mint a "Ne ölj". Kant szerint nem szabad olyan
+        cselekedetet végrehajtani, amely kifejezetten emberölésre irányul, ehelyett az előirányzott utat kell választani, még akkor is, ha ennek következtében több ember hal meg. A Moral Machine korábbi publikációiban a résztvevők inkább a Bentham filozófiájával
+        összhangban lévő lehetőségeket választották. Azt gondolhatnánk tehát, hogy a nagyobb rosszat elkerülő haszonelvű megközelítés lenne a legésszerűbb és közösségbarát. Azonban amint a résztvevőket megkérdezték, hogy vennének-e ilyen autót, azonnal
+        visszautasították, tekintettel arra, hogy az a saját életüket is veszélyeztetheti. Mindenképpen olyan autót akarnak, amely a saját életüket védi, de mindenki másnak olyan autót kellene vennie, amely a lehető legnagyobb kárt kerüli el.
+    </p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="https://www.wienerzeitung.at/nachrichten/wissen/mensch/903014-Maschinen-im-moralischen-Dilemma.html">(DE) Gépek a morális dilemmában (Wiener Zeitung)
+        </a></li>
+        <li><a href="http://dasfilter.com/gesellschaft/autonomes-fahren-wenn-die-ethik-im-stau-steht-understanding-digital-capitalism-iii-teil-10"> (DE) Az autonóm vezetésről Bentham és Kant után szabadon
+        </a></li>
+        <li><a href="https://www.wienerzeitung.at/nachrichten/reflexionen/vermessungen/2117043-Autonomes-Fahren-und-Moral.html"> (DE) Az önvezetés etikai szabályai más kultúrákban (Wiener Zeitung)
+        </a></li>
+        <li><a href="Exercises/Ethics - Worksheet Moral Machine.pdf">Ethics - Worksheet Moral Machine.pdf</a> <a href="Exercises/Ethics - Worksheet Moral Machine.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="cols">
+    <h1 id="inputautonomousdriving">Az önvezetésről</h1>
+    <p>A dilemmák sajátossága, hogy a benne érintett személy csak két lehetőség közül választhat, más kiút pedig nincs.</p>
+    <p>Ezen dilemmahelyzetek megoldásai gyakran vitatottak a tudományban és a filozófiában. A legfőbb felmerülő kérdés az, hogy ki ítélkezhet mások élete felett, vagy egyáltalán jogot formálhat-e erre bárki. Még ha a programozók meg is adnák a programnak
+        az etikailag alapvetően helyes döntést, az akkor is egy kívülről jövő döntés maradna, mely nem egy konkrét helyzetet szemlél annak összes meglévő előnyével és hátrányával együtt, hanem egy elvont alapgondolatból származna. Következésképpen az
+        emberről már nem önmaga, hanem mások rendelkeznének. Ennek következménye több szempontból is problematikus. Egyrészt a "helyes" értékrendet az állam vagy egy vállalat határozná meg, másrészt az embert, mint egyént teljesen figyelmen kívül hagynák.</p>
+    <p> Az olyan általános érvényű szabályok lefektetése, mint a "személyi sérülések elsődleges védelme a vagyoni károkkal szemben", hasznosnak tűnhet dilemmahelyzetekben, de olyan tényezőket, amelyek egy konkrét esetben viszont sok ember életébe kerülhetnek,
+        nem vesznek figyelembe (pl. egy tartálykocsi szivárgása vagyoni kár következtében vagy az elektromos hálózat összeomlása egy nagyvárosban). Az általános érvényű szabályok lefektetésével az a probléma, hogy a lehetséges helyzetek sokféleségét és
+        összetettségét nem képesek lefedni. Ezért az etikai tanács úgy döntött, hogy olyan megoldásokat választ, amelyek a lehető legnagyobb mértékben csökkenthetik a balesetek számát és technikailag is megvalósíthatóak.</p>
+    <p>Az emberi élet védelme számít a legfőbb jónak. A potenciális áldozatok számát csökkentő programok írása akkor indokolt, ha a programkód minden egyes közlekedésben résztvevő kitettségét egyenlő mértékben csökkenti. Ez azonban nem jelenti azt, hogy
+        valakinek az életét szembe lehetne állítani más emberek életével. Nem fogadhatjuk el, hogy valaki az életét adja egy veszélyhelyzet során azért, hogy több ember életét mentsük meg, hiszen mindenkinek joga van az élethez. A gyártó azonban nem vonható
+        felelősségre, ha ésszerű kereteken belül mindent megtesz annak érdekében, hogy egy automatizált rendszer a lehető legkevesebb személyi sérülést okozza. </p>
+    <p>Ugyanez vonatkozik az útitársak védelmére is: az útitársak védelme nem másodlagos, ugyanakkor a járókelők sem áldozhatók fel az útitársak védelme érdekében. </p>
+    <p> További kérdésekre - pl. az állatok balesetekben való figyelembevételére, vagy a magánadatok felhasználására vonatkozó kérdésekre - az automatizált és hálózatba kapcsolt vezetés etikai bizottságának jelentése nyújt választ. </p>
+
+
+</section>
+
+
+<section class="exercise">
+    <p> Az autonóm vezetés példája arra szolgál, hogy az eddig tanultakat kézzelfoghatóbb kontextusba helyezzük. Az alábbi zárófeladatban az autóipar és a politika meglévő megoldási javaslatait kell megvitatni. A tanulók megfigyelhetik, hogy ezek mennyiben
+        felelnek meg az ő nézeteiknek, illetve a tárgyalt álláspontoknak. </p>
+    <h1 id="autonomousdriving">Autonóm vezetés</h1>
+    <p>Ez a feladatlap jó alapot nyújt arra, hogy a következő kérdéseket megvitassuk a tanulókkal:
+        <ul>
+            <li> Tud-e egy gép különbséget tenni élet és halál között? Ki programozza be ezeket a döntéseket a gépbe (gyártók, programozók, kormány ...)? </li>
+            <li> Szerinted kinek kellene a legnagyobb beleszólást biztosítani ezekbe a döntésekbe? A fogyasztókat is be kellene vonni? </li>
+            <li> Milyen szerepe lesz az emberek a jövőben az autóvezetésben? </li>
+            <li> Te szeretnél-e teljesen automatizált járművet vezetni az utakon? Miért (nem)? Szerinted mi kell ahhoz, hogy az autonóm autókat habozás nélkül használhassuk? </li>
+            <li> Az említett irányelvek megvalósíthatóak, vagy adódhatnak problémák? Véleményed szerint milyen egyéb szempontokat lenne még fontos beépíteni az ilyen irányelvekbe? (lásd adatvédelem, állatok a balesetekben ...).</li>
+        </ul>
+    </p>
+    <p> A csoporttól függően ezeket a kérdések <strong> közösen  </strong> vagy <strong> kiscsoportokban </strong>. is megvitathatók. Rendelkezésre álló időtől függően kis csoportokban, <strong> posztereket vagy PowerPoint diákat </strong> lehet készíteni
+        a kérdések ismertetéséhez. </p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Exercises/Ethics - Worksheet Autonomous Driving.pdf">Ethics - Worksheet Autonomous Driving.pdf</a> <a href="Exercises/Ethics - Worksheet Autonomous Driving.docx" class="alt">(.docx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a href="https://www.bmvi.de/SharedDocs/DE/Publikationen/DG/bericht-der-ethik-kommission.pdf?__blob=publicationFile">	(DE) Etikai bizottság - Automatizált és hálózatra kapcsolt járművek (14. oldaltól)</a></li>
+        <li> <a href="https://www.lpb-bw.de/autonomes-fahren "> (DE) Ember az automatizált járműben - Digitális Etika a mindennapokban</a></li>
+        <li> <a href="https://www.bmk.gv.at/themen/mobilitaet/alternative_verkehrskonzepte/automatisiertesFahren.html"> (DE) BMK - Automatizált járművek 
+        </a></li>
+    </ol>
+</section>
+
+
+[[ footer.html ]]

@@ -1,0 +1,216 @@
+[[ header.html | Neural Networks ]]
+{[ abbreviations
+    AI: Artificial Intelligence
+    NN: Neural Networks
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Module 7</h1>
+            <h2>Neural Networks</h2>
+            <p><cite>"Each neuron has a so-called <em>receptive field</em>, which is a group of <em>neurons</em> that it is sensitized to <em>activate</em>."</cite></p>
+        </div>
+        <img src="{{images}}/NeuralNetworks.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>About the Module</h1>
+
+    <p>This module serves as a basic introduction to the topic of neural networks (NN). The goal of this lesson is to introduce neural networks and not only show what they can do and how they are used, but also provide insight into how they work internally.</p>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>explain the basic structure of neural networks and list the basic elements of a neural network (part 1)</li>
+            <li>explain how to feed the input data to the neural network. (Part 1)</li>
+            <li>explain how data flows through a neural network. (Part 1)</li>
+            <li>understand that the different layers correspond to processing steps. (Part 1)</li>
+            <li>explain how to read the result of the processing operation. (Part 1)</li>
+            <li>explain where the knowledge of a neural network is stored. (part 1)</li>
+            <li>explain what changes happen during the learning process. (part 1)</li>
+            <li>calculate the degree of freedom of a neural network. (Part 1)</li>
+            <li>know that there are plenty of other network architectures for neural networks besides the feed-forward architecture.</li>
+            <li>explain how neurons work. (Part 2)</li>
+            <li>explain the operation of an activation function. (Part 2)</li>
+            <li>explain why the activation function needs to be constrained and how that is implemented. (Part 1 and 2)</li>
+            <li>know that different activation functions can be used in different layer types. (Part 2)</li>
+            <li>explain the term receptive field. (part 2)</li>
+            <li>understand that a neural network can only provide results that can be inferred from the data base. (Part 3)</li>
+            <li>understand that smaller neural networks are relatively easy to implement with manageable effort and available technologies. (Part 3)</li>
+            <li>understand that neural networks do not necessarily require the use of special libraries or other tools. (Part 3)</li>
+            <li>explain how neurons can be used for graphical or numerical tasks. (part 1-3)</li>
+        </ul>
+    </div>
+
+
+    <h2>Agenda</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Content</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>50 min</td>
+                <td><a href="#part1">Theory - Part 1 - Basics</a></td>
+                <td><a href="Slides/Neural_Networks_I_-_Basics.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#part2">Theory - Part 2 - Receptive fields</a></td>
+                <td><a href="Slides/Neural_Networks_II_-_receptive_Fields.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>20 min</td>
+                <td><a href="#simulator2">Practice - simulator in the manual and automatic variant</a></td>
+                <td><a href="Exercises/NN_ii_simulator.zip">Simulator</a></td>
+            </tr>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#part3">Theory - part 3 - practical minimal example</a></td>
+                <td><a href="Slides/Neural_Networks_III_-_practical_Example.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>10 min</td>
+                <td><a href="#simulator3">Practice - Simulator</a></td>
+                <td><a href="Exercises/NN_iii_simulator.zip">Simulator</a></td>
+            </tr>
+            <tr>
+                <td>15 min</td>
+                <td><a href="#exercise">Practice - practical exercise</a></td>
+                <td><a href="Exercises/NN_exercise.zip">Files</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="part1">Part 1 - Basics</h1>
+
+    <p>This part explains the basic concepts and structure of neural networks and shows how they work using the example of character recognition using a simple feed-forward network.</p>
+
+    <h2>Introduction and presentation of a feed-forward network <span class="slides">Slides 2 - 5</span></h2>
+    <p>Neural networks as the presumed basis of all thought processes, artificial neural networks as an attempt to reproduce this process in principle but not in detail. Neural networks function fundamentally differently than conventional computers with the usual von Neumann architecture (Arithmetical Logical Unit, Control Unit, Memory, I/O Unit). Introduction of the term "Feed-Forward-Network".</p>
+
+    <h2>Problem description digit and character recognition <span class="slides">Slides 2 - 5</span></h2>
+    <p>Why is digit and character recognition challenging? What makes it so difficult for conventional programming?</p>
+
+    <h2>Input data <span class="slides">Slides 7 - 9</span></h2>
+    <p>How is the input data, i.e. in our case the graphically displayed digits and numbers, fed to the network? The pixel brightness levels are interpreted as activations of neurons of the first layer (= input layer).</p>
+
+    <h2>Layered structure <span class="slides">Slides 11 - 14</span></h2>
+    <p>In the feed-forward architecture, the first layer is the input layer, the last is the output layer, and the layers in between are called hidden layers.</p>
+
+    <h2>Flow of data through the network <span class="slides">Slides 19 - 22</span></h2>
+    <p>The slides show the flow of data through the network. The activations are passed through the connections and become the activations of the next layer. </p>
+
+    <h2>Processing steps <span class="slides">Slides 11 - 14</span></h2>
+    <p>The recognition of characters can be imagined step by step in such a way that first simple, more basic units of the character are recognized and then larger, more coherent ones. These units are highlighted in color in each case. One explanation of the way neural networks work is that in a successfully trained network there is a division of labor between the layers, so that the upstream layers (left side) respond to the more basic units and the downstream layers (right side) tend to respond to the larger units.</p>
+
+    <h2>Details of the implementation and receptive field <span class="slides">Slides 23 - 25</span></h2>
+    <p>The connection between activations and weights is explained here and the term receptive field is introduced. Each neuron has a so-called receptive field, which is a group of neurons that it is sensitized to activate. This is an important concept for understanding how neural networks work.</p>
+
+    <h2>Restriction function <span class="slides">Slides 26 - 27</span></h2>
+    <p>In order that values of neurons do not grow infinitely into the positive or negative (a small part of the net would be sufficient to make the total result useless) a restriction function is always used. This becomes an elementary component of the activation function.</p>
+
+    <h2>Pre-excitation/bias and total activation formula <span class="slides">Slides 28 - 31</span></h2>
+    <p>Explanation of which role the bias plays in the operation and indication of the complete activation formula consisting of the constraint function, the activations, the weights and the pre-excitations.</p>
+
+    <h2>Tasks and solutions <span class="slides">Slides 32 - 33</span></h2>
+    <p>Using three questions, we recapitulate some fundamental properties of a neural network.</p>
+
+    <h2>Reference to other network architectures and links <span class="slides">Slides 26 - 27</span></h2>
+    <p>The feed-forward network architecture has been presented here because it is a very simple and commonly used architecture. The graphic is only meant to indicate that a plethora of other architectures are being used and tested.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_I_-_Basics.pdf">Neural_Networks_I_-_Basics.pdf</a> <a href="Slides/Neural_Networks_I_-_Basics.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1 id="part2">Part 2 - Receptive fields</h1>
+
+    <p>This part deepens the notion of receptive field already introduced in part 1 Using an interactive example of object recognition with a 2x2 pixel camera. This part of the lesson allows an interactive understanding of the operation of a neural network with the simulator.</p>
+
+    <h2>Camera <span class="slides">Slides 2 - 5</span></h2>
+    <p>A simple neural network gives a camera equipped with a 2x2 pixel sensor the ability to recognize four different patterns. As with character recognition before, the problem is more challenging than it first sounds. Patterns of the same category may not have pixels in common. As before, the brightness of the pixels becomes the activation of the neurons in the input layer.</p>
+
+    <h2>How neurons work <span class="slides">Slides 6 - 13</span></h2>
+    <p>In these slides, we will again go into detail about how the neurons work: Forming the weighted sum of the inputs and constraining the values. The details of the sigmoid function form an extended content for more advanced students.</p>
+
+    <h2>Completing the network <span class="slides">Slides 14 - 16</span></h2>
+    <p>The started layer is completed, an additional layer of the same layer type is added and finally another layer with alternative activation function. For activations and weights only 0, 1, -1 are used in sequence. This is a drastic restriction and only works because this is a very simple use case. However, it makes the calculation much easier. It allows us to follow the computational process through the simple neural network or even perform it ourselves. In practice, it would not be a good idea to use only 0, 1, -1. This only works for this simple example.</p>
+
+    <h2>Alternative activation function <span class="slides">Slide 17</span></h2>
+    <p>The details of this activation function are again to be seen as extended content. Both require a firm understanding of the concept of functions and the graphical representation of functions. The most important property of the ReLU function in our example is that it does not pass negative values. This property is used in the last step to successfully calculate the result.<br>
+        The application of the two activation functions is simplified considerably by the trick that only the values 0,1,-1 are used. Most important property of the mainly used activation function (Sigmoid) is that values larger than 1 are reduced to 1 and values small -1 are reduced to -1. Most important property of the alternative activation function (ReLU and leaky ReLU) is that negative values are reduced to 0 (or close to zero).</p>
+
+    <h2>The network and the camera in use <span class="slides">Slide 18</span></h2>
+    <p>This slide shows the finished system. A vertical pattern is added and also correctly recognized. For each neuron the receptive field is indicated. This is for each neuron the set of input neurons from which it can receive signals directly or indirectly. The receptive fields increase from left to right from size 1 to size 4. In each case it is also significant whether the neuron reacts to positive (white field) or negative activation (black field) in its receptive field.</p>
+
+    <div id="simulator2" class="exercise">
+        <h2>Simulator</h2>
+        <p>The simulator can be used to simulate the processing steps of the network. The simulator is available in a manual and an automatic version. In the manual version, all activations are determined and set by the user on the basis of input data (=activations 0,1,-1) and connections (0,1,-1). The automatic version of the simulator calculates all necessary activations and outputs from the input data and is of course much more comfortable to handle. The challenge for the operator is much higher with the manual simulator, but the learning effect is much greater. Talented or advanced students should be familiarized with the manual simulator first.</p>
+    </div>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_II_-_receptive_Fields.pdf">Neural_Networks_II_-_receptive_Fields.pdf</a> <a href="Slides/Neural_Networks_II_-_receptive_Fields.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NN_ii_simulator.zip">NN_ii_simulator.zip</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1 id="part3">Part 3 - Practical Minimal Example</h1>
+
+    <p>This part presents an interactive practical example of a neural network consisting of only 5 neurons. The special feature of this part of the lesson is that it is a minimal but in all phases self-contained small project. No external libraries or other tools are used. Training data, calculation process, training are manageable, clearly documented and immediately comprehensible in the Python source code. The project serves very well the purpose of demystifying the field of artificial intelligence. The project can also serve as a basis for further projects, for example one could use another data basis or extend the network also structurally: additional input and output possibilities, additional layers ... . However, a structural change also requires a change in the training process.</p>
+
+    <h2>Presentation of the neural network <span class="slides">Slides 2 - 3</span></h2>
+    <p>Introduction, graphical representation and explanation of the structure of the neural network.</p>
+
+    <h2>Data basis and output <span class="slides">Slides 4 - 5</span></h2>
+    <p>Graphical representation of the relationship between body weight, height and gender. This is only to illustrate the relationship between these variables. However, this is not the training data. The network is only trained with 4 data samples (see Python program).<br>
+        Due to the overlapping of the two groups, clear results are not always to be expected. Explanation of how to interpret the activation of the output layer as a result.</p>
+
+    <h2>Calculation course <span class="slides">Slide 6</span></h2>
+    <p>Here the exact data flow through the network and the calculation process is explained.</p>
+
+    <h2>Restriction function <span class="slides">Slide 7</span></h2>
+    <p>Here the necessity of the constraint function is explained.</p>
+
+    <h2>Reference to training and simulator <span class="slides">Slide 8</span></h2>
+    <p>Training represents advanced content. However, for advanced students iii_training.pptx provides a good overview to complete the example. The Python source code also provides information about the details of the training.<br>
+        The simulator allows all students to interactively sample values and read the result.<br>
+        The inputs are made via 2 sliders. The activation of the neurons is output numerically at the neuron and additionally visualized with gray scales. Black stands here for activation 0, white for activation 1. The strength of a weighted connection is symbolized with the line width. Positive connections are colored black, negative connections are colored red.</p>
+
+    <div id="exercise" class="exercise">
+        <h2>Practical exercise</h2>
+        <p>The participants can now use the acquired knowledge to calculate their own example inputs. Due to the minimal, simple structure of the network, a manual calculation is easy to perform.<br>
+            3 pairs of values are given for which the participants can calculate results. In the bottom line, own values can be used.</p>
+    </div>
+
+    <h2>Sources and reference to the program <span class="slides">Slide 9</span></h2>
+    <p>The underlying Python program is available in 2 versions, in which different activation functions are used.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_III_-_practical_Example.pdf">Neural_Networks_III_-_practical_Example.pdf</a> <a href="Slides/Neural_Networks_III_-_practical_Example.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NN_iii_simulator.zip">NN_iii_simulator.zip</a></li>
+        <li><a href="Exercises/NN_exercise.zip">NN_exercise.zip</a></li>
+        <li><a href="Exercises/NN_additional_content.zip">NN_additional_content.zip</a></li>
+    </ul>
+</section>
+
+
+[[ footer.html ]]

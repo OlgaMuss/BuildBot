@@ -1,0 +1,39 @@
+[[ header.html | Game Controller ]]
+{[ abbreviations
+    AI: Artificial Intelligence
+    SL: Supervised Learning
+]}
+
+<section class="ol">
+    <h1>Game Controller</h1>
+
+    <h2>Introduce Teachable Machine</h2>
+    <p>Introduce the students to the <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> website and how they can create a <em>image</em>-project. While the website is quite easy to use, it can be necessary to show the steps of how to create a few classes, how to <a href="https://youtu.be/DFBbSTvtpy4">record some sample images</a> and finally how to <a href="https://youtu.be/CO67EQ0ZWgA">train the network</a>.</p>
+    <p>A good first exercise for the students could be to either differentiate between persons or between facial expressions, which works well either alone or in small groups.</p>
+
+    <h2>Demonstrate how to export a model</h2>
+    <p>Once a model is trained, it can be exported to use in other applications. Show your students, how a model can be downloaded as a zip-file using the <a href="https://youtu.be/n-zeeRLBgd0">export model button</a>. This is different to exporting the whole project, as it only includes the trained network and not the image data.</p>
+
+    <h2>Introduce Snake</h2>
+    <p>To see ones model in action, the Snake game on the website <a href="https://snake.c4f.wtf">snake.c4f.wtf</a> can be used. It allows users to upload a <em>zip</em>-file (no unpacking required) of a model and use it to control the direction of the snake. For a model to be used, it <strong>has to</strong> be an <em>image</em>-model and include the classes <strong>up, down, left, right</strong> and <strong>none</strong>, otherwise an error will be shown. Then the game can be controlled by whatever the training set was (for instance: hand gestures, facial expressions, ...).</p>
+
+    <h2>Let the students experiment</h2>
+    <p>Let the students create their own control model and test it on the website. They will probably have to adapt it multiple times, until it works as expected.</p>
+
+    <h2>Switch models</h2>
+    <p>Let the students <strong>share</strong> their model with other teams and test how well they work in this different environment. Does it still work?</p>
+
+    <h2>Optimize the model</h2>
+    <p>Finally the students can try to make their model <em>more general</em>, by increasing the variety in their training data. With some students a small competition works well, where the students are rewarded points for each person whose input is recognized.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="https://teachablemachine.withgoogle.com">https://teachablemachine.withgoogle.com</a></li>
+        <li><a href="https://youtu.be/DFBbSTvtpy4">https://youtu.be/DFBbSTvtpy4</a> (record)</li>
+        <li><a href="https://youtu.be/CO67EQ0ZWgA">https://youtu.be/CO67EQ0ZWgA</a> (train)</li>
+        <li><a href="https://youtu.be/n-zeeRLBgd0">https://youtu.be/n-zeeRLBgd0</a> (export)</li>
+        <li><a href="https://snake.c4f.wtf">https://snake.c4f.wtf</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

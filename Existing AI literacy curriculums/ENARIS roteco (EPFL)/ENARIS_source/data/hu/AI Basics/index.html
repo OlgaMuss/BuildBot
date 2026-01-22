@@ -1,0 +1,214 @@
+[[ header.html | Az MI alapjai ]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>1. Modul</h1>
+            <h2>Az MI alapjai</h2>
+            <p><cite>"Az első dolog, amit tudni kell a <em>mesterséges intelligenciáról, hogy nincs egységes meghatározása!</em>"</cite></p>
+        </div>
+        <img src="{{images}}/ai_basics.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>A modulról</h1>
+
+    <p>Ez a modul bevezetésül szolgál a <em>mesterséges intelligencia</em> (MI) témakörébe. A lecke célja az MI alapvető fogalmainak a bemutatása, amelyeket más modulokban és általánosságban az MI tudományos világában is használni fogunk. A módszerek és működésük mélyebb megértésére a további modulokban kerül sor.</p>
+    <p>Bár nem kötelező, <em>ajánlott ezzel a modullal kezdeni</em> a többi megismerése előtt, hiszen nemcsak az alapvető terminológiában segít eligazodni, hanem jó áttekintést nyújt az MI kiterjedt területéről is.</p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek</p>
+        <ul>
+            <li>önállóan, saját nyelvükön meghatározni az intelligencia fogalmát</li>
+            <li>mérlegelni, hogy az MI milyen mértékben épült be hétköznapi tárgyakba</li>
+            <li>megérteni az algoritmus és adat fogalmát</li>
+            <li>megismerni az MI különböző területeit</li>
+            <li>felismerni az MI lehetőségeit és korlátait</li>
+        </ul>
+    </div>
+
+
+    <h2>Beosztás</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Tananyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>25 perc</td>
+                <td><a href="#definition">Elmélet & kvíz - Mi az MI?</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>25 perc</td>
+                <td><a href="#map">Elmélet & kvíz - Az MI térképe</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Diák</a>, <a href="Exercises/AI Basics - Voting Cards.pdf">Kártyák</a></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#possibilities">Elmélet - Lehetőségek és korlátok</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Diák</a></td>
+            </tr>
+            <tr>
+                <td>25 perc</td>
+                <td><a href="#algorithms">Elmélet & feladat - Algoritmusok</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Diák</a>, <a href="Exercises/Bubble Sort/index.html">Bubble Sort</a>, <a href="Exercises/Tic-Tac-Toe/index.html">Tic-Tac-Toe</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="definition">Mi az MI?</h1>
+
+    <p>Ez a modul az intelligencia és a <em>mesterséges intelligencia</em> <em>alapvető megértéséről</em> szól. A témát reflektív módon tárgyalja: a tanulóknak először meg kell alkotniuk valamilyen <em>definíciót</em>, amely aztán tesztelésre és finomításra kerül a példák és a beszélgetések során. A modul <a href="Slides/AI Basics - What is AI.pdf">diákra</a> és beszélgetésekre épül.</p>
+
+    <h2>Definíciós <span class="slides">diák 2 - 19</span></h2>
+    <p>Egy fontos dolog, amit mindenkinek tudnia kell a <em>mesterséges intelligenciáról</em>, hogy <em>nincs egységes meghatározása</em>! A definíció a kutatási területtől függően nagyon eltérő lehet, ezért számos meghatározás<a href="#definition_ref_1" class="ref">1</a> áll rendelkezésre. Elsőként arra bátorítjuk a diákokat, hogy alkossák meg <em>saját</em> definíciójukat az MI (vagy az intelligens viselkedés) fogalmára vonatkozóan. A hallgatóságtól függően, ez történhet beszélgetés kezdeményezése révén - mint az ötletelést segítő <a href="../methods.html#think-pair-share">think-pair-share</a> (Gondolkodj! - Dolgozz párban! - Oszd meg!) módszerrel- vagy egyéni módon úgy, hogy minden diáknak le kell írnia a saját definícióját, amely néhány példa megtekintését követően kerül megvitatásra. A kérdést a fiatalabb tanulók számára is át lehet fogalmazni: ekkor olyan dolgokat kell keresniük, amelyekre egy gépnek képesnek kell lennie ahhoz, hogy ’intelligensnek’ tekinthessük.</p>
+
+    <p>Miután mindenki (vagy minden csoport) megalkotta saját meghatározását, <em>nyolc példát</em> mutatunk különböző algoritmusokra/gépekre, amelyeket a tanulóknak 0-tól (nem intelligens) 5-ig (nagyon intelligens) kell értékelniük definíciójuk alapján. Engedjük, sőt bátorítsuk a tanulókat, hogy a feladat során, vagy annak végeztével <em>módosítsák</em> ezt <em>definíciót</em>. Az utolsó beszélgetés során a tanulók megoszthatják egymással definíciójukat, illetve, hogy hová sorolnák az egyes példákat. Bár a meghatározástól függően mindegyik példa lehet többé-kevésbé intelligens, íme néhány ötlet, hogyan lehetne kategorizálni őket:</p>
+    
+    <dl>
+        <dt>Kenyérpirító: 0-1</dt>
+        <dd>Bár lehet azzal érvelni, hogy a modernebb kenyérpirítókban történik valami döntéshozás-szerű, általában csak időkapcsolókról van szó.</dd>
+        <dt>Számológép: 1</dt>
+        <dd>Egy nagyon specifikus feladatban jó, ám ehhez nagyon specifikus bemenetre (számjegyek, műveleti jelek) van szükség.</dd>
+        <dt>Sakkrobot: 3</dt>
+        <dd>Míg a hagyományosabb megközelítések főként arra koncentrálnak, hogy több lépéssel előre számoljanak, a modern eszközök gépi tanulást használnak a táblán előállt pozíciók értékelésére, emellett megtanulják a jó lépéseket az emberi játékosoktól vagy próba-szerencse módszerrel.</dd>
+        <dt>Chatbot: 2-4</dt>
+        <dd>Az emberi nyelv megértésére és az értelmes interakcióra való képesség az egyszerű kulcsszó-alapú telefonos ügyfélszolgálat válaszaitól az összetett digitális asszisztensekig terjedhet.</dd>
+        <dt>Önvezető autó: 4</dt>
+        <dd>Ahhoz, hogy egy jármű emberlakta területen közlekedjen, a körülötte lévő környezet mély megértésére van szükség, ám a gépek még mindig nincsenek igazán tisztában azzal, hogy mi történik körülöttük.</dd>
+        <dt>Takarító robot: 2-3</dt>
+        <dd>Modelltől függően a takarítás logikája a véletlenszerű irányokba való haladástól egészen addig terjedhet, hogy a gép térképet hoz létre és egyenletesen, a környezetére reagálva járja be az egész területet.</dd>
+        <dt>Navigációs alkalmazás: 2</dt>
+        <dd>Egy ember számára nehéz lehet a legrövidebb útvonal megtalálása a térképen, de a modern keresőalgoritmusok használatával a számítógépek könnyen, kiváló megoldást tudnak nyújtani a forgalmi viszonyok figyelembevételével, jól bevált keresőalgoritmusok révén.</dd>
+        <dt>Földtisztító robot: 5</dt>
+        <dd>A fejezet későbbi részében világossá válik, hogy ezek a képességek, amelyeket a filmekben gyakran ábrázolnak intelligens gépként, sokkal fejlettebbek, mint bármi, amit ma meg tudunk alkotni.</dd>
+    </dl>
+    <p>Végül két egymással ellentétes definíciót mutatunk be, hogy szemléltessük, milyen sokfélék lehetnek a különböző meghatározások.</p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="definition_ref_1" href="http://agisi.org/Defs_intelligence.html">http://agisi.org/Defs_intelligence.html</a></li>
+    </ol>
+</section>
+
+<section class="cols">
+    <h1 id="map">Az MI térképe</h1>
+
+    <p>Az első fejezetben a diákoknak saját definíciót kellett megfogalmazniuk, ez a fejezet pedig a mesterséges intelligencia hatalmas területével és a hozzá kapcsolódó számos különböző algoritmussal és megközelítéssel foglalkozik. Így a következőkben bemutatjuk az <em>MI térképét</em>, amely segít annak megértésében, hogy a mesterséges intelligencia különböző területekből áll. Fontos megjegyezni, hogy ez <em>korántsem az egyetlen módja</em> annak, hogy különbséget tegyünk a mesterséges intelligencia területei között, csak egy a lehetőségek közül. Valójában nem ez az öt terület az igazán lényeges, hanem az, hogy a diákok megértsék, hogy az MI-nek rengeteg különböző területe van.</p>
+
+    <h2>Az MI térképe <span class="slides">20 - 39. dia</span></h2>
+    <p>A térkép a következő területeket vezeti be:</p>
+    <dl>
+        <dt>Gondolkodás</dt>
+        <dd>A <em>gondolkodás</em> a logikáról, a következtetések levonásáról, a kalkulációról és a keresésről szól. Ide tartoznak a navigációs, illetve egy játékban a legjobb következő lépést kiszámító (megkereső) algoritmusok is.</dd>
+        <dt>Tudás</dt>
+        <dd>A <em>tudás</em> az adatokról és az adatok hasznos tárolásáról szól. Ide tartoznak az adatbázisok, valamint a dolgok rendezett leírásának általános módjai, például az ontológiák.</dd>
+        <dt>Tanulás</dt>
+        <dd>A <em>tanulás</em> olyan algoritmusokról szól, amelyek képesek módosítani önmagukat annak érdekében, hogy jobban oldjanak meg bizonyos feladatokat. Ez magában foglalja a próba-szerencse típusú tanulást (megerősítéses tanulás) és a példákból való tanulást (felügyelt tanulást) is.</dd>
+        <dt>Érzékelés</dt>
+        <dd>Az <em>érzékelés</em> a környezet (tárgyak, hőmérséklet, képek stb.) érzékelését, valamint a mérések értelmezését és a hibák felismerését/korrekcióját szolgálja.</dd>
+        <dt>Cselekvés</dt>
+        <dd>A <em>cselekvés</em> magában foglal mindent, ami a környezettel való interakciót szolgálja. Ide tartozik a mozgás, valamint az információ vizuális vagy auditív formában való reprezentálása (például szöveg és hanggenerálás).</dd>
+    </dl>
+    <p>Most, hogy a térkép alapgondolata világossá vált, az előző fejezet öt példáját újra végigjárjuk, azzal a szándékkal, hogy ezúttal azonosítsuk a példáknak megfelelő területeket az <em>MI térképén</em> belül. Ennek során a diákoknak el kell dönteniük, hogy mely területek hasznosítása révén működik az adott rendszer. Ez a gyakorlat jól működik irányított beszélgetésként, de az olyan módszerek is eredményesek, mint a <a href="../methods.html#think-pair-share">think-pair-share</a> (Gondolkodj! - Dolgozz párban! - Oszd meg!) vagy a csoportos megbeszélés.</p>
+    <p>Fontos megjegyezni, hogy a megadott megoldások csak javaslatok: a legtöbb területről elmondható, hogy bármilyen eszközhöz kapcsolódhatnak, attól függően, hogy mit feltételezünk az eszköz belső működéséről (pl. egy számológép tárolhat képleteket, így csatlakozhat a tudás területéhez). A sárga nyilak azt jelzik, hogy ezek a területek az aktuális rendszertől függően kapcsolódhatnak egymáshoz. Például egy sakkalgoritmus használhat <a href="../Reinforcement Learning/index.html">megerősítéses tanulást</a> (főként a sok, újabb algoritmus használja nagyobb mértékben gépi tanulást), de sok klasszikus programnál erre nincs igény.</p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/AI Basics - Voting Cards.pdf">AI Basics - Voting Cards.pdf</a> <a href="Exercises/AI Basics - Voting Cards.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="cols">
+    <h1 id="possibilities">Lehetőségek és korlátok</h1>
+
+    <p>A következő fejezet egy <a href="https://youtu.be/alIq_wG9FNk">videó</a>, a Wall-E című film előzetesének bemutatásával kezdődik. Ezután a tanulóknak el kell dönteniük, hogy a mesterséges intelligencia mely területei jelennek meg a képzeletbeli gépezetben. A legtöbb fiktív és a valós mesterséges intelligencia között az a különbség, hogy előbbieket általában <em>nagyon emberszerűnek</em> ábrázolják, úgy, hogy azok képesek szabadon <em>alkalmazkodni</em> ismeretlen helyzetekhez és <em>önreflexióval</em> reagálni saját cselekedeteikre, míg a mi valós MI-rendszereink messze vannak az ilyen képességektől.</p>
+
+    <h2>Lehetőségek és korlátok<span class="slides">40 - 51.dia</span></h2>
+    <p>Általánosságban az MI-rendszerek két kategóriába sorolhatók: <em>szűk MI</em> és <em>általános MI</em>.</p>
+    <dl>
+        <dt>Szűk MI</dt>
+        <dd>Olyan intelligens rendszer, amely képes <em>egy adott feladat</em> hatékony megoldására. Ide tartozik az <em>összes</em> jelenlegi mesterséges intelligencia rendszerünk!</dd>
+        <dt>Általános MI</dt>
+        <dd>Olyan intelligens rendszer, amely képes értelmezni, következtetni, mérlegelni és sikeresen cselekedni ismeretlen környezetben.</dd>
+    </dl>
+    <p>Az utolsó szakasz nagy tanulsága, hogy jelenleg csak <em>szűk mesterséges intelligenciával</em> rendelkezünk. Ezért minden rendszerünk, bármennyire is komplexnek tűnik kívülről, csak <em>adott feladatok</em> megoldására alkalmas. Jelenleg egyetlen rendszer sincs tudatában saját tevékenységének vagy érti meg azt. Míg az elmúlt évtizedekben nagy előrelépések történtek a <em>szűk</em> MI-k terén - mint a képfelismerés, a szövegfordítás, az önvezető járművek -, addig az <em>általános</em> MI-k esetében nem láthattunk nagy fejlődést. A modul utolsó pontja így fogalmazható meg: "Igen, a mesterséges intelligencia sokat fejlődött az elmúlt évtizedekben, de közel sem olyan összetett, mint ahogy azt sok film (például a Wall-E) sugallja”.</p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+        <li><a id="possibilities_ref_1" href="https://youtu.be/alIq_wG9FNk">https://youtu.be/alIq_wG9FNk</a> (Wall-E)</li>
+    </ul>
+    </div>
+</section>
+
+<section>
+    <h1 id="algorithms">Algoritmusok</h1>
+
+    <p>Az utolsó fejezet az <em>algoritmusok</em> és az <em>adatok</em> fogalmába vezet be, mely kifejezések a többi modulban is előfordulnak majd.</p>
+
+    <h2>Algoritmus <span class="slides">52 - 61.dia</span></h2>
+    <p>Az algoritmus nem más, mint <em>egy adott feladat</em> megoldásához szükséges <em>utasítások listája</em>. Alapvető formájában olyasmi, mint egy ételrecept vagy egy szekrény összeszerelési útmutatója. Az informatikában ez kicsit specifikusabb: az algoritmusok gyakran leírják az <em>adatok</em> módosításának módszereit, például azt, hogy miként lehet hatékonyan rendezni egy névlistát, vagy számítható ki a legrövidebb út egy térképen.</p>
+    <div class="exercise">
+        <p>Annak szemléltetésére, hogy az algoritmusok csak követhető utasításlisták, a következő két feladat bármelyike használható.</p>
+        <div class="horizontal">
+            <div><div class="horizontal">
+                <div>
+                    <h3>Buborékrendezés (Bubble Sort)</h3>
+                    <p>Ebben a feladatban a klasszikus <em>buborékrendezés</em> algoritmust használjuk egy tanulók alkotta sor magasság szerinti rendezésére.</p>
+                    <a href="Exercises/Bubble Sort/index.html">Exercises / Bubble Sort</a>
+                </div>
+                <img src="{{images}}/sort.png">
+            </div></div>
+            <div><div class="horizontal">
+                <div>
+                    <h3>Amőba (Tic-Tac-Toe)</h3>
+                    <p>Ez a feladat az <em>amőba</em> játékhoz mutat be egyszerű algoritmust, amelyet a tanulók megpróbálhatnak legyőzni.</p>
+                    <a href="Exercises/Tic-Tac-Toe/index.html">Exercises / Tic-Tac-Toe</a>
+                </div>
+                <img src="{{images}}/tic_tac_toe.jpg">
+            </div></div>
+        </div>
+    </div>
+    <p>Miután egyet-kettőt kipróbáltak a fenti algoritmusok közül, itt az ideje, hogy a tanulók sajátot alkossanak.</p>
+    <div class="exercise">
+        <h3>Alkosd meg a saját algoritmusodat</h3>
+        <p>Ebben a feladatban minden diáknak <em>saját</em> algoritmust kell készítenie egy olyan egyszerű/szokványos feladat megoldására, mint például a reggeli elkészítése, a szemét kivitele vagy akár egy ajtó kinyitása.</p>
+        <p>Amikor számítógépek algoritmusairól van szó, fontos, hogy a <em>lehető legvilágosabban</em> fogalmazzunk. Például az az egyszerű algoritmus, hogy „<em>mozogj előre, amíg el nem találsz egy tárgyat</em>”, nem tartalmaz információt arról, hogy a robotnak milyen gyorsan kell mozognia, vagy hogyan érzékelje, hogy van ott egy tárgy.</p>
+        <ol>
+            <li>Minden diáknak szüksége van egy darab papírra és íróeszközre.</li>
+            <li>Mindenki válasszon egy <em>egyszerű</em> feladatot, amelyet lejegyezhet egy algoritmus formájában.</li>
+            <li>Tíz-tizenöt perc elteltével a tanulók <em>mutassák</em> be az algoritmusukat.</li>
+            <li>Beszéljétek meg, hogy mennyire volt részletes az algoritmus, és min lehetne javítani! (pl. ki lehet-e dobni valamit a szemetesbe úgy, hogy a fedelét nem nyitottuk ki?)</li>
+        </ol>
+    </div>
+    <p>Az utolsó néhány dián bevezetjük az <em>adat</em> fogalmát. Mivel az adatok nagyon fontosak lesznek a gépi tanulás (<a href="../Supervised Learning/index.html">felügyelt tanulás</a>, <a href="../Reinforcement Learning/index.html">megerősítéses tanulás</a>) területein, fontos megérteni, hogy az adat nem más, mint bármely információ reprezentációja, melyet digitális eszközön tárolunk. Míg arra <em>képtelenek</em> vagyunk, hogy fogjunk valakit, és egy tárolóeszközbe gyömöszöljünk, arra <em>képesek vagyunk</em>, hogy más információkat, például a magasságát vagy a személy képét eltároljuk. Az, hogy milyen <em>információt választunk</em> adatként, <em>nagy hatással</em> lehet a végeredményre. Vegyük például a buborékválogatást: ha a diákok testmagassága helyett a hangmagasságot használtuk volna, valószínűleg sokkal nehezebb lett volna őket szétválogatni, mivel a hangmagasság nem olyan könnyen megkülönböztethető, mint a testmagasság.</p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+</section>
+
+[[ footer.html ]]

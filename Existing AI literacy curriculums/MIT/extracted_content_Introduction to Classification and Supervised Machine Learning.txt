@@ -1,0 +1,35 @@
+Intro to
+supervised
+Machine
+Learning!
+
+Classification &
+Regression
+
+5
+
+Can you name some
+examples of
+classification?
+
+6
+
+Examples of classiﬁcation in techn
+
+ology: handwriting detection
+
+ology: spam ﬁltering
+Examples of classiﬁcation in techn
+
+ology: face detection
+Examples of classiﬁcation in techn
+
+Your turn...
+× Go to
+https://teachablemachine.withgoogle.
+com/ (it should be bookmarked)
+× In partners follow the tutorial
+× Answer the questions on your activity
+sheet
+
+

@@ -1,0 +1,235 @@
+[[ header.html | KI-Grundlagen ]]
+{[ abbreviations 
+    KI: Künstliche Intelligenz
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Modul 1</h1>
+            <h2>KI-Grundlagen</h2>
+            <p><cite>"Das <em>erste</em>, was jeder über <strong>KI</strong> wissen muss ist, dass es <strong>keine einheitliche Definition</strong> von <strong>Künstlicher Intelligenz</strong> gibt!"</cite></p>
+        </div>
+        <img src="{{images}}/ai_basics.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>Über das Modul</h1>
+
+    <p>Dieses Modul dient als grundlegender Einstieg in das Thema <em>Künstliche Intelligenz</em> (KI). Das Ziel dieser Lektion ist es, grundlegende KI-Terminologie einzuführen, welche in den anderen Modulen, sowie in der KI-Forschung verwendet werden. Eine vertiefte Auseinandersetzung mit den Methoden und ihrer Funktionsweise erfolgt dann in späteren Modulen.</p>
+    <p>Obwohl es nicht unbedingt erforderlich ist, <em>empfehlen</em> wir <strong>mit diesem Modul zu beginnen</strong>, da es nicht nur bei der grundlegenden Terminologie hilft, sondern auch einen guten Überblick über das weite Feld der KI bietet.</p>
+
+    <h2>Ziele</h2>
+    <div class="objectives">
+        <p>Die Schüler*innen sind in der Lage</p>
+        <ul>
+            <li>den Begriff Intelligenz für sich zu definieren</li>
+            <li>zu reflektieren, inwieweit KI in Alltagsgegenständen Verwendung findet</li>
+            <li>das Konzept von Algorithmen und Daten verstehen</li>
+            <li>verschiedene Bereiche der KI zu erklären</li>
+            <li>die Möglichkeiten und Grenzen von KI einzuschätzen</li>
+        </ul>
+    </div>
+
+
+    <h2>Agenda</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Zeit</th>
+                <th>Inhalt</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#definition">Theorie & Quiz - Was ist KI?</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Folien</a></td>
+            </tr>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#map">Theorie & Quiz - Karte der KI</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Folien</a>, <a href="Exercises/AI Basics - Voting Cards.pdf">Karten</a></td>
+            </tr>
+            <tr>
+                <td>15 min</td>
+                <td><a href="#possibilities">	Theorie - Möglichkeiten und Grenzen</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Folien</a></td>
+            </tr>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#algorithms">Theorie & Übung - Algorithmen</a></td>
+                <td><a href="Slides/AI Basics - What is AI.pdf">Folien</a>, <a href="Exercises/Bubble Sort/index.html">Bubblesort</a>, <a href="Exercises/Tic-Tac-Toe/index.html">Tic-Tac-Toe</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="definition">Was ist KI?</h1>
+
+    <p>In diesem Modul geht es darum, ein <em>grundlegendes Verständnis</em> von Intelligenz und <strong>künstlicher Intelligenz</strong> zu erlangen. Es führt auf reflektierende Weise in dieses Thema ein, so dass die Schüler*innen zunächst eine <em>Definition</em>finden müssen, die dann an Beispielen und in der Diskussion getestet und verfeinert wird. Es basiert auf <a href="Slides/AI Basics - What is AI.pdf">Folien</a> und Diskussionen.</p>
+
+    <h2>Definition <span class="slides">Folien 2 - 19</span></h2>
+    <p>Eine wichtige Sache, die jeder über KI wissen muss, ist, dass es <strong>keine einheitliche Definition</strong> von <em>künstlicher Intelligenz</em> gibt! Die Definition kann je nach Forschungsgebiet sehr unterschiedlich sein, weshalb es viele verschiedene Definitionen<a href="#definition_ref_1" class="ref">1</a>gibt. Gleich zu Beginn, werden die Schüler ermutigt, ihre <em>eigene</em> Definition von KI (oder intelligentem Verhalten) zu erstellen. Abhängig von den Schüler*innen kann dies entweder auf eine diskussionsorientierte Weise angegangen werden, wie z. B. durch das <a href="../methods.html#think-pair-share">Think-Pair-Share-Methode</a> um beim Brainstorming zu helfen, oder auf persönliche Weise, bei der die Schüler*innen ihre eigene Definition aufschreiben müssen, welche dann nach dem Betrachten einiger Beispiele diskutiert werden. Es ist auch möglich, die Frage für jüngere Schüler*innen so umzuformulieren, dass sie Dinge finden sollten, die eine Maschine können sollte, um als "intelligent" angesehen zu werden.</p>
+    <p>Nachdem jede/r (oder jede Gruppe) eine Definition gefunden hat, werden <strong>acht Beispiele</strong> von Algorithmen/Maschinen gezeigt und die Schüler*innen müssen sie anhand ihrer Definition von 0 (nicht intelligent) bis 5 (sehr intelligent) bewerten.
+        Die Schüler*innen dürfen dabei ihre Definition jederzeit während oder nach der Übung anpassen. In einer abschließenden Diskussion können die Schüler*innen dann ihre Definitionen und Klassifizierungen der einzelnen Beispiele austauschen. Während
+        jedes der Beispiele, je nach Definition, mehr oder weniger intelligent sein kann, hier einige Ideen, wie sie kategorisiert werden können:</p>
+    <dl>
+        <dt>Toaster: 0-1</dt>
+        <dd>Während argumentiert werden kann, dass in moderneren Toastern einige Entscheidungen getroffen werden, werden normalerweise nur Zeitschalter verwendet.</dd>
+        <dt>Rechner: 1</dt>
+        <dd>Gut in einer sehr speziellen Aufgabe aber abhängig von sehr genauem Input.</dd>
+        <dt>Schachspielender Roboter: 3</dt>
+        <dd>Während sich klassischere Ansätze hauptsächlich auf die Berechnung möglichst vieler Züge konzentrieren, verwenden moderne Engines maschinelles Lernen, um Brettpositionen zu bewerten und gute Züge von menschlichen Spielern oder durch Versuch und
+            Irrtum zu lernen.</dd>
+        <dt>Chatbot: 2-4</dt>
+        <dd>Das Verständnis der menschlichen Sprache und sinnvolle Interaktion kann von einfachen schlüsselwortbasierten Helpline-Antworten bis hin zu komplexen digitalen Assistenten reichen.</dd>
+        <dt>Selbstfahrendes Auto: 4</dt>
+        <dd>Ein Fahrzeug selbstständig durch von Menschen besiedelte Räume navigieren zu lassen, erfordert viel Verständnis für die Umgebung. Dennoch wissen die Maschinen nicht wirklich, was um sie herum vor sich geht.</dd>
+        <dt>Reinigungsroboter: 2-3</dt>
+        <dd>Je nach Modell kann die Reinigungslogik vom einfachen Fahren in zufällige Richtungen bis zum Erstellen einer Karte und dem gleichmäßigen abfahren von allen Bereichen, während nebenbei noch auf die Umgebung reagiert wird, reichen.</dd>
+        <dt>Navigations-App: 2</dt>
+        <dd>Den kürzesten Weg auf einer Karte zu finden, mag für eine Person schwierig sein, aber mit modernen Suchalgorithmen können Computer mit gut etablierten Algorithmen leicht eine hervorragende Lösung bieten in der selbst aktuelle Verkehrsbedingungen
+            berücksichtigt werden.</dd>
+        <dt>Welt-Aufräumender-Roboter: 5</dt>
+        <dd>Später in diesem Kapitel wird deutlich werden, dass diese Fähigkeiten, die oft in Filmen für intelligente Maschinen dargestellt werden, weitaus fortschrittlicher sind als alles, was wir heute schaffen können.</dd>
+    </dl>
+    <p>Abschließend werden ein paar allgemeine Definitionen gezeigt, um eine Vorstellung davon zu geben, wie unterschiedliche KI-Definitionen aussehen können.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Referenzen</h2>
+    <ol>
+        <li><a id="definition_ref_1" href="http://agisi.org/Defs_intelligence.html">http://agisi.org/Defs_intelligence.html</a></li>
+    </ol>
+</section>
+
+<section class="cols">
+    <h1 id="map">KI Landkarte</h1>
+
+    <p>Nach dem ersten Kapitel, in dem die Schüler*innen ihre eigene Definition finden mussten, wird in diesem Kapitel eine <strong>KI Landkarte</strong> vorgestellt, die einen Überblick über die vielen verschiedenen Algorithmen und Ansätze in der KI-Forschung schafft. Es ist wichtig klar zu stellen, dass es sich dabei nur um <em>eine</em> Möglichkeit handelt die verschiedenen Bereiche aufzuteilen, nicht um die einzige. Dabei geht es nicht darum, dass sich KI genau aus diesen Bereichen zusammen
+        setzt, sondern dass Schüler*innen verstehen, dass sich KI generell aus vielen verschiedenen Bereichen zusammensetzt.</p>
+
+    <h2>KI Landkarte <span class="slides">Folien 20 - 39</span></h2>
+    <p>Die Karte stellt die folgenden Bereiche vor:</p>
+    <dl>
+        <dt>Denken</dt>
+        <dd>Im Bereich <em>Denken</em> geht es um Logik, Schlussfolgerungen, Rechnen und Suchen. Es enthält Algorithmen für die Navigation oder die Berechnung (Suche nach) der besten nächsten Aktion in einem Spiel.</dd>
+        <dt>Wissen</dt>
+        <dd>Im Bereich <em>Wissen</em> dreht es sich um das Aufbereiten und sinnvolle Speichern von Daten. Es umfasst Datenbanken sowie allgemeine Möglichkeiten, Dinge auf strukturierte Weise zu beschreiben, wie z.B. Ontologien.</dd>
+        <dt>Lernen</dt>
+        <dd>Im Bereich <em>Lernen</em> geht es um Algorithmen, die sich selbst anpassen können, um bestimmte Aufgaben besser zu lösen. Dazu gehören das Lernen durch Versuch und Irrtum (reinforcement learning) und das Lernen an Beispielen (supervised learning).</dd>
+        <dt>Wahrnehmen</dt>
+        <dd>Beim <em>Wahrnehmen</em> geht es um die Wahrnehmung der Umgebung (Objekte, Temperatur, Bilder, …) sowie um das Verstehen von Messungen und das Korrigieren von Fehlern.</dd>
+        <dt>Handeln</dt>
+        <dd><em>Handeln</em> beinhaltet alles, um mit der Umwelt zu interagieren. Es umfasst Bewegung sowie die Präsentation von Informationen in visueller oder auditiver Form (z.B. Text- und Sprachgenerierung).</dd>
+    </dl>
+    <p>Nachdem nun die Grundidee der Landkarte klar ist, werden fünf der Beispiele aus dem vorherigen Kapitel wieder eingeführt, diesmal mit der Absicht, entsprechende Felder innerhalb der <em>KI Landkarte</em> zu finden. Dabei müssen die Schüler*innen entscheiden,
+        welche Bereiche bei welchem System Verwendung finden. Diese Übung eignet sich gut als geführte Diskussion, aber auch Methoden wie <a href="../methods.html#think-pair-share">Think-Pair-Share</a> oder Gruppendiskussionen funktionieren gut.</p>
+    <p>Es ist wichtig zu beachten, dass die angegebenen Lösungen nur Vorschläge sind. Die meisten Bereiche können,abhängig von den Annahmen über das Innenleben des Geräts, mit jedem Beispiel in Verbindung gebracht werden. Beispielsweise könnte ein Taschenrechner
+        Formeln intern speichern und daher mit dem Know-Bereich verbunden sein. Die gelben Pfeile deuten darauf hin, dass diese Bereiche je nach System verbunden sein könnten. Beispielsweise kann ein Schachalgorithmus <a href="../Reinforcement Learning/index.html">Reinforcement Learning</a> verwenden (insbesondere viele neuere Algorithmen nutzen maschinelles Lernen stärker), aber viele klassische Algorithmen erfordern dies nicht.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/AI Basics - Voting Cards.pdf">AI Basics - Voting Cards.pdf</a> <a href="Exercises/AI Basics - Voting Cards.docx" class="alt">(.docx)</a></li>
+    </ul>
+</section>
+
+<section class="cols">
+    <h1 id="possibilities">Möglichkeiten und Grenzen</h1>
+
+    <p>Der nächste Abschnitt beginnt mit einem <a href="https://youtu.be/alIq_wG9FNk">Video</a>, dem Trailer des Films Wall-E. Die Schüler*innen müssen dann entscheiden, welche Bereiche der KI in der fiktiven Filmfigur des Robotors Wall-E repräsentiert werden. Der Unterschied zwischen den meisten
+        fiktiven und realen KIs besteht darin, dass fiktive KIs normalerweise <em>sehr menschlich</em> dargestellt werden, mit der Fähigkeit, sich <strong>frei an unbekannte Situationen anzupassen</strong> und <strong>selbst über das eigene Handeln reflektieren</strong>,
+        während unsere eigentlichen KI-Systeme von solchen Fähigkeiten weit entfernt sind.</p>
+
+    <h2>Möglichkeiten und Grenzen <span class="slides">Folien 40 - 51</span></h2>
+    <p>Im Allgemeinen können KI-Systeme in zwei Kategorien eingeteilt werden: <strong>schwache KIs</strong> und <strong>starke KIs</strong>.</p>
+    <dl>
+        <dt>Schwache KI</dt>
+        <dd>Ein intelligentes System, das in der Lage ist, eine <strong>bestimmte Aufgabe</strong> effizient zu lösen. Dazu gehören <em>alle</em> unsere aktuellen KI-Systeme!</dd>
+        <dt>Starke AI</dt>
+        <dd>Ein intelligentes System, das wie ein Mensch in unbekannten Umgebungen verstehen, argumentieren, reflektieren und erfolgreich agieren kann.</dd>
+    </dl>
+    <p>Der Fazit aus diesem letzten Abschnitt ist, dass wir derzeit nur <em>schwache KIs</em> haben. Daher sind alle KI-Systeme, so komplex sie von außen erscheinen mögen, nur gut darin, <strong>bestimmte Aufgaben</strong> zu lösen. Kein System hat derzeit
+        eine Form von Bewusstsein oder Verständnis seines eigenes Tuns zu reflektieren. Während in den letzten Jahrzehnten große Verbesserungen bei <em>schwachen KIs</em>, wie Bilderkennung, Textübersetzung, selbstfahrende Fahrzeuge, zu erkennen sind,
+        sind Fortschritte bei <em>starken KIs</em> sehr spärlich. Der letzte, wichtige Punkt in diesem Modul ist, dass sich die KI in den letzten Jahrzehnten zwar stark verbessert hat, aber sie ist nicht annähernd so komplex, wie in vielen Filmen (wie
+        Wall-E) suggeriert wird.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+        <li><a id="possibilities_ref_1" href="https://youtu.be/alIq_wG9FNk">https://youtu.be/alIq_wG9FNk</a> (Wall-E)</li>
+    </ul>
+</section>
+
+<section>
+    <h1 id="algorithms">Algorithmen</h1>
+
+    <p>Das letzte Kapitel führt in die grundlegenden Konzepte von <strong>Algorithmen</strong> und <strong>Daten</strong> ein, da diese Begriffe in allen anderen Modulen vorkommen. </p>
+
+    <h2>Algorithmen <span class="slides">Folien 52 - 61</span></h2>
+    <p>Ein <em>Algorithmus</em> ist nur eine <strong>Liste von Befehlen</strong>, die erforderlich sind, um eine bestimmte Aufgabe zu lösen. In seiner einfachsten Form kann es so etwas wie ein Kochrezept oder eine Bauanleitung für einen Schrank sein. Genauer
+        gesagt, beschreiben Algorithmen in der Informatik oft Methoden zum Modifizieren von <em>Daten</em>, wie z. B. das effiziente Sortieren einer Namensliste oder das Berechnen des kürzesten Weges.</p>
+
+    <div class="exercise">
+        <p>Um das Konzept, dass Algorithmen nur Listen von Anweisungen sind, die befolgt werden können, zu veranschaulichen, kann eine der folgenden zwei Übungen im Unterricht umgesetzt werden werden.</p>
+        <div class="horizontal">
+            <div>
+                <div class="horizontal">
+                    <div>
+                        <h3>Bubblesort</h3>
+                        <p>In dieser Übung wird der klassische <strong>Bubblesort</strong>-Algorithmus verwendet, um Schülern*innen, die in einer Reihe stehen, der Größe nach zu sortieren.</p>
+                        <a href="Exercises/Bubble Sort/index.html">Exercises / Bubble Sort</a>
+                    </div>
+                    <img src="{{images}}/sort.png">
+                </div>
+            </div>
+            <div>
+                <div class="horizontal">
+                    <div>
+                        <h3>Tic-Tac-Toe</h3>
+                        <p>Diese Übung stellt einen einfachen Algorithmus zum Spielen von <strong>Tic-Tac-Toe</strong> vor, gegen den die Schüler*innen spielen können.</p>
+                        <a href="Exercises/Tic-Tac-Toe/index.html">Exercises / Tic-Tac-Toe</a>
+                    </div>
+                    <img src="{{images}}/tic_tac_toe.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Nachdem die Schüler*innen einen oder beide der oben genannten Algorithmen ausprobiert haben, ist es an der Zeit, die Schüler*innen selbst Algorithmen entwickeln zu lassen.</p>
+    <div class="exercise">
+        <h3>Entwickle deinen eigenen Algorithmus</h3>
+        <p>In dieser Übung muss jede*r Schüler*in seinen oder ihren <em>eigenen</em> Algorithmus erstellen, um eine einfache/alltägliche Aufgabe zu lösen, wie Frühstück machen, den Müll rausbringen oder das Öffnen einer Tür.</p>
+        <p>Wenn es um Algorithmen geht, ist es wichtig, so <em>konkret wie möglich</em> beim Formulieren der Befehle zu sein. Der einfache Algorithmus „bewege dich vorwärts, bis du auf ein Objekt triffst“ gibt beispielsweise keine Auskunft darüber, wie schnell
+            sich der Roboter bewegen soll oder wie er ein Objekt erkennen kann.</p>
+
+        <ol>
+            <li>Alle Schüler*innen brauchen ein Blatt Papier und etwas zum Schreiben</li>
+            <li>Alle Schüler*innen sollen sich für eine <em>einfache</em> Aufgabe entscheiden, um einen Algorithmus zu schreiben</li>
+            <li>Nach zehn bis fünfzehn Minuten sollen die Schüler*innen ihren Algorithmus <em>präsentieren</em></li>
+            <li>Schließlich soll im Plenum besprochen werden, wie detailliert der Algorithmus war und was verbessert werden könnte (z. B. können Sie etwas in den Mülleimer werfen, wenn der Deckel geschlossen ist?)</li>
+        </ol>
+    </div>
+    <p>Auf den letzten Folien wird das Konzept der <strong>Daten</strong> erläutert. Da Daten im Bereich des maschinellen Lernens eine zentrale Rolle spielen, (<a href="../Supervised Learning/index.html">Supervised Learning</a>, <a href="../Reinforcement Learning/index.html ">Reinforcement Learning</a>),
+        ist es wichtig zu verstehen, dass Daten nur eine Darstellung jeglicher Art von Informationen sind, welche auf einem digitalen Gerät gespeichert werden können. Während wir <em>nicht</em> eine Person nehmen und sie auf ein Speichergerät quetschen
+        können, können wir andere <em>Informationen</em> speichern, wie die Größe oder ein Bild der Person. Die <em>Wahl</em>, welche <em>Informationen</em> wir als Daten verwenden, kann einen <em>großen Einfluss</em> auf das Endergebnis haben. Wenn wir
+        das Sortierbeispiel betrachten und die Tonhöhe der Stimme anstelle der Größe der Schüler verwendet hätten, wäre es wahrscheinlich viel schwieriger gewesen, sie zu sortieren, da die Tonhöhe am ersten Blick nicht so leicht zu unterscheiden ist wie
+        die Größe.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/AI Basics - What is AI.pdf">AI Basics - What is AI.pdf</a> <a href="Slides/AI Basics - What is AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+</section>
+
+[[ footer.html ]]

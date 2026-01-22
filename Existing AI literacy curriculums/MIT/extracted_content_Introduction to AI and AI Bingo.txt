@@ -1,0 +1,259 @@
+Intro To
+artificial
+Intelligence!
+
+What does
+
+“Artificial Intelligence”
+make you think of?
+
+2
+
+AI has three parts
+
+dataset
+
+learning
+algorithm
+
+prediction!
+
+5
+
+AI has three parts
+
+dataset
+
+6
+
+What is a
+
+“dataset”?
+
+7
+
+Datasets
+A dataset is a collection
+of curated data
+× Images
+× Measurements (time,
+views, inches, etc)
+× Text
+× Video recordings!
+8
+
+AI has three parts
+
+dataset
+
+9
+
+AI has three parts
+
+dataset
+
+learning
+algorithm
+
+10
+
+What is an
+
+“algorithm”?
+
+11
+
+Algorithm
+
+input
+
+Steps to
+change
+input
+
+output
+
+12
+
+Adding a contact to your pho
+
+ne
+
+Input:
+● Contact’s
+name
+● Phone
+number
+
+1.
+2.
+3.
+4.
+5.
+
+Open address
+book app
+Fill out ﬁrst
+name
+Fill out last
+name
+Add phone
+number
+Save!
+
+Output:
+A new
+contact in
+your phone
+
+13
+
+AI has three parts
+
+dataset
+
+learning
+algorithm
+
+14
+
+Algorithm
+
+dataset
+
+learning
+algorithm
+
+prediction!
+
+15
+
+Let’s try some
+examples
+
+16
+
+Instagram advertisement
+
+prediction?
+
+17
+
+Instagram advertisement
+
+What you
+will click on
+
+18
+
+Instagram advertisement
+
+learning
+algorithm
+
+What you
+will click on
+
+19
+
+Instagram advertisement
+
+dataset?
+
+learning
+algorithm
+
+What you
+will click on
+
+20
+
+Instagram advertisement
+Past clicks
+Brands you
+follow and
+people like you
+● Text in
+captions
+
+●
+●
+
+learning
+algorithm
+
+What you
+will click on
+
+21
+
+EMAIL SpAM filter
+
+dataset
+
+learning
+algorithm
+
+prediction!
+
+22
+
+EMAIL SpAM filter
+
+prediction?
+
+23
+
+EMAIL SpAM filter
+If email is
+spam or
+not
+
+24
+
+EMAIL SpAM filter
+
+learning
+algorithm
+
+If email is
+spam or
+not
+
+25
+
+Email Spam Filter
+
+dataset?
+
+learning
+algorithm
+
+If email is
+spam or
+not
+
+26
+
+Email spam Filter
+● Past emails
+you have
+labeled as
+spam
+● Text of
+emails
+
+learning
+algorithm
+
+If email is
+spam or
+not
+
+27
+
+Time for AI Bingo!
+
+28
+
+

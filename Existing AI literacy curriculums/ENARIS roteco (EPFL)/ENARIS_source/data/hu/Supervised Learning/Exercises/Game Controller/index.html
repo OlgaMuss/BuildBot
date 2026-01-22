@@ -1,0 +1,66 @@
+[[ header.html | Game Controller ]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+    FT: Felügyelt Tanulás
+]}
+
+<section class="ol">
+    <h1>Játékvezérlő</h1>
+
+    <h2>A Teachable Machine bemutatása</h2>
+    <p>Mutassuk be a tanulóknak a <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> (magyarul: tanítható gép) weboldalt, és azt, hogyan tudnak <em>kép</em>-projektet készíteni. Bár a weboldal használata meglehetősen egyszerű, szükség
+        lehet arra, hogy megmutassuk, hogyan kell létrehozni néhány kategóriát, <a href="https://youtu.be/DFBbSTvtpy4">rögzíteni néhány mintaképet</a>, és hogyan kell <a href="https://youtu.be/CO67EQ0ZWgA">betanítani a hálózatot</a>.</p>
+    <p>A tanulók számára jó első feladat lehet személyek vagy arckifejezések megkülönböztetése, ami önállóan vagy kis csoportokban is jól elvégezhető. </p>
+
+    <h2>Modell exportálásának szemléltetése </h2>
+    <p>Ha a modell betanítása megtörtént, exportálhatjuk, hogy más alkalmazásokban is felhasználható legyen. Mutassuk meg a tanulóknak, hogyan tölthető le egy modell ZIP-fájlként az <a href="https://youtu.be/n-zeeRLBgd0">export modell gomb</a>. segítségével.
+        Ez különbözik a teljes projekt exportálásától, mivel csak a betanított hálózatot tartalmazza, a képadatokat nem. </p>
+
+    <h2>A Snake bemutatása </h2>
+    <p>A <a href="https://snake.c4f.wtf">snake.c4f.wtf</a> weboldalon található Snake játék segítségével megnézhetjük a modellt működés közben. Ez ugyanis lehetővé teszi a felhasználók számára, hogy feltöltsenek egy <em>zip</em>fájlt (kicsomagolás nélkül) egy modellről, és ezzel irányítsák a kígyó mozgási irányát. A modellnek <em>kép</em>-modellnek kell lennie, és tartalmaznia kell a <strong>up, down, left, right</strong> és <strong>none</strong> kategóriákat, különben hibaüzenetet kapunk. Ezután a játék irányítható a tanítóhalmaz tartalmától függetlenül (például: kézmozdulatok, arckifejezések, ...).</p>
+
+    <h2>Tanulói kísérletek </h2>
+    <p>Hagyjuk, hogy a diákok elkészítsék saját játékvezérlő modelljüket, és teszteljék azt a weboldalon. Valószínűleg többször is át kell majd alakítaniuk a modellt, amíg az elvárásoknak megfelelően működik.</p>
+
+    <h2>Modellcsere</h2>
+    <p>A diákok hadd <strong>osszák meg</strong> modelljüket más csapatokkal, tesztelve, hogy az eltérő környezetben milyen eredményeket produkálnak. Egyáltalán működnek még?
+    </p>
+
+    <h2>A modell optimalizálása</h2>
+    <p>Végezetül a tanulók megpróbálhatják <em>általánosabbá </em> tenni a modelljüket a tanításhoz/tréninghez használt adatok változatosságának növelésével. Bizonyos diákok jól ösztönözhetők egy kis versennyel, amelyben a diákok pontokat kapnak minden egyes
+        személyért, akinek a gesztusát/kézmozdulatát a modelljük jól ismeri fel.
+    </p>
+    <p>Mutassuk be a tanulóknak a <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a> (magyarul: tanítható gép) weboldalt, és azt, hogyan tudnak <em>kép</em>-projektet készíteni. Bár a weboldal használata meglehetősen egyszerű, szükség
+        lehet arra, hogy megmutassuk, hogyan kell létrehozni néhány kategóriát, <a href="https://youtu.be/DFBbSTvtpy4">rögzíteni néhány mintaképet</a>, és hogyan kell <a href="https://youtu.be/CO67EQ0ZWgA">betanítani a hálózatot</a>.</p>
+    <p>A tanulók számára jó első feladat lehet személyek vagy arckifejezések megkülönböztetése, ami önállóan vagy kis csoportokban is jól elvégezhető.</p>
+
+    <h2>Modell exportálásának szemléltetése</h2>
+    <p>Ha a modell betanítása megtörtént, exportálhatjuk, hogy más alkalmazásokban is felhasználható legyen. Mutassuk meg a tanulóknak, hogyan tölthető le egy modell ZIP-fájlként az <a href="https://youtu.be/n-zeeRLBgd0">export modell gomb</a> segítségével.
+        Ez különbözik a teljes projekt exportálásától, mivel csak a betanított hálózatot tartalmazza, a képadatokat nem.</p>
+
+    <h2>A Snake bemutatása</h2>
+    <p>A <a href="https://snake.c4f.wtf">snake.c4f.wtf</a> weboldalon található Snake játék segítségével megnézhetjük a modellt működés közben. Ez ugyanis lehetővé teszi a felhasználók számára, hogy feltöltsenek egy ZIP-fájlt (kicsomagolás nélkül) egy modellről,
+        és ezzel irányítsák a kígyó mozgási irányát. A modellnek kép-modellnek kell lennie és tartalmaznia kell a <em>fel, le, balra, jobbra</em> és <em>üres</em> kategóriákat, különben hibaüzenetet kapunk. Ezután a játékot irányítható a tanítóhalmaz
+        tartalmától függetlenül (például: kézmozdulatok, arckifejezések, ...).</p>
+
+    <h2>Tanulói kísérletek</h2>
+    <p>Hagyjuk, hogy a diákok elkészítsék saját játékvezérlő modelljüket, és teszteljék azt a weboldalon. Valószínűleg többször is át kell majd alakítaniuk a modellt, amíg az elvárásoknak megfelelően működik.</p>
+
+    <h2>Modellcsere</h2>
+    <p>A diákok hadd <em>osszák meg</em> modelljüket más csapatokkal, tesztelve, hogy az eltérő környezetben milyen eredményeket produkálnak. Egyáltalán működnek még?</p>
+
+    <h2>A modell optimalizálása</h2>
+    <p>Végezetül a tanulók megpróbálhatják <em>általánosabbá</em> tenni a modelljüket a tanításhoz/tréninghez használt adatok változatosságának növelésével. Bizonyos diákok jól ösztönözhetők egy kis versennyel, amelyben a diákok pontokat kapnak minden egyes
+        személyért, akinek a gesztusát/kézmozdulatát a modelljük jól ismeri fel.</p>
+
+    <h2 class="material">Tananyag - magyar nyelven</h2>
+    <ul>
+        <li><a href="https://teachablemachine.withgoogle.com">https://teachablemachine.withgoogle.com</a></li>
+        <li><a href="https://youtu.be/DFBbSTvtpy4">https://youtu.be/DFBbSTvtpy4</a> (felvétel készítése)</li>
+        <li><a href="https://youtu.be/CO67EQ0ZWgA">https://youtu.be/CO67EQ0ZWgA</a> (betanítás)</li>
+        <li><a href="https://youtu.be/n-zeeRLBgd0">https://youtu.be/n-zeeRLBgd0</a> (exportálás)</li>
+        <li><a href="https://snake.c4f.wtf">https://snake.c4f.wtf</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

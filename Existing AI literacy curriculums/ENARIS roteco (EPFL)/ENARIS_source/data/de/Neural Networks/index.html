@@ -1,0 +1,216 @@
+[[ header.html | Neuronale Netze ]]
+{[ abbreviations
+    KI: Künstliche Intelligenz
+    NN: Neuronale Netze
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Modul 7</h1>
+            <h2>Neuronale Netze</h2>
+            <p><cite>"Jedes Neuron verfügt über ein sogenanntes <em>rezeptives Feld</em>, das ist eine Gruppe von <em>Neuronen</em> für deren <em>Aktivierung</em> es sensibilisiert ist."</cite></p>
+        </div>
+        <img src="{{images}}/NeuralNetworks.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>Über das Modul</h1>
+
+    <p>Dieses Modul dient als grundlegende Einführung in das Thema Neuronale Netze (NN). Das Ziel dieser Lektion ist es, neuronale Netze vorzustellen und nicht nur zu zeigen, was sie können und wie sie verwendet werden, sondern auch einen Einblick zu geben, wie sie intern funktionieren.</p>
+
+    <h2>Ziele</h2>
+    <div class="objectives">
+        <p>Die Schüler*innen können:</p>
+        <ul>
+            <li>den grundlegenden Aufbau von Neuronalen Netzen erklären und die grundlegenden Elemente eines Neuronalen Netzes aufzählen (Teil 1)</li>
+            <li>erklären wie die Eingabedaten dem Neuronalen Netz zugeführt werden können. (Teil 1)</li>
+            <li>erklären, wie die Daten durch ein Neuronales Netzwerk fließen. (Teil 1)</li>
+            <li>verstehen, dass die verschiedenen Schichten Verarbeitungsschritten entsprechen. (Teil 1)</li>
+            <li>erklären, wie das Ergebnis des Verarbeitungsvorganges abgelesen werden kann. (Teil 1)</li>
+            <li>erklären wo das Wissen eines Neuronalen Netzes gespeichert ist. (Teil 1)</li>
+            <li>erklären welche Änderungen beim Lernvorgang passieren. (Teil 1)</li>
+            <li>den Freiheitsgrad eines Neuronalen Netzwerks berechnen. (Teil 1)</li>
+            <li>verstehen, dass es neben der Feed-Forward-Architektur eine Fülle weiterer Netzwerkarchitekturen für Neuronale Netze gibt.</li>
+            <li>die Funktionsweise von Neuronen erklären. (Teil 2)</li>
+            <li>die Funktionsweise einer Aktivierungsfunktion erklären. (Teil 2)</li>
+            <li>erklären warum die Aktivierungsfunktion beschränkt werden muss und wie das umgesetzt wird. (Teil 1 und 2)</li>
+            <li>verstehen, dass in verschiedenen Schichttypen verschiedene Aktivierungsfunktionen zum Einsatz kommen können. (Teil 2)</li>
+            <li>den Begriff rezeptives Feld erklären. (Teil 2)</li>
+            <li>verstehen, dass ein Neuronales Netz nur Ergebnisse liefern können, die aus der Datengrundlage ableitbar sind. (Teil 3)</li>
+            <li>verstehen, dass kleinere Neuronale Netze mit überschaubarem Aufwand und mit verfügbaren Technologien relativ leicht umsetzbar sind. (Teil 3)</li>
+            <li>verstehen, dass man für Neuronale Netze nicht unbedingt spezielle Bibliotheken oder andere Hilfsmittel einsetzen muss. (Teil 3)</li>
+            <li>erklären wie Neuronale für grafische oder numerische Aufgaben eingesetzt werden können. (Teil 1-3)</li>
+        </ul>
+    </div>
+
+
+    <h2>Agenda</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Zeit</th>
+                <th>Inhalt</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>50 min</td>
+                <td><a href="#part1">Theorie - Teil 1 - Grundlagen</a></td>
+                <td><a href="Slides/Neural_Networks_I_-_Basics.pdf">Folien</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#part2">Theorie - Teil 2 - Rezeptive Felder</a></td>
+                <td><a href="Slides/Neural_Networks_II_-_receptive_Fields.pdf">Folien</a></td>
+            </tr>
+            <tr>
+                <td>20 min</td>
+                <td><a href="#simulator2">Praxis - Simulator in der manuellen und automatischen Variante</a></td>
+                <td><a href="Exercises/NN_ii_simulator.zip">Simulator</a></td>
+            </tr>
+            <tr>
+                <td>25 min</td>
+                <td><a href="#part3">Theorie - Teil 3 - praktisches minimales Beispiel</a></td>
+                <td><a href="Slides/Neural_Networks_III_-_practical_Example.pdf">Folien</a></td>
+            </tr>
+            <tr>
+                <td>10 min</td>
+                <td><a href="#simulator3">Praxis - Simulator</a></td>
+                <td><a href="Exercises/NN_iii_simulator.zip">Simulator</a></td>
+            </tr>
+            <tr>
+                <td>15 min</td>
+                <td><a href="#exercise">Praxis - praktische Übung</a></td>
+                <td><a href="Exercises/NN_exercise.zip">Dateien</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="part1">Teil 1 - Grundlagen</h1>
+
+    <p>Dieser Teil erklärt die Grundkonzepte und den Aufbau von neuronalen Netzen und zeigt die Funktionsweise am Beispiel einer Zeichenerkennung mithilfe eines einfachen Feed-Forward-Netzwerks.</p>
+
+    <h2>Einleitung und Vorstellung eines Feed-Forward-Netzwerkes <span class="slides">Folien 2 - 5</span></h2>
+    <p>Neuronale Netze als vermutliche Grundlage aller Denkprozesse, künstliche Neuronale Netze als Versuch diesen Vorgang prinzipiell aber nicht im Detail nachzubilden. Neuronale Netze funktionieren grundsätzlich anders als herkömmliche Computer mit der üblichen von Neumann Architektur (Recheneinheit [Arithmetical Logical Unit], Steuereinheit [Control Unit], Speicher [Memory], Ein-/Ausgabeeinheit [I/O-Unit]). Begriffseinführung „Feed-Forward-Network“.</p>
+
+    <h2>Problembeschreibung Ziffern- und Zeichenerkennung <span class="slides">Folien 2 - 5</span></h2>
+    <p>Warum ist Ziffern- und Zeichenerkennung anspruchsvoll? Was macht es so schwierig für herkömmliche Programmierung?</p>
+
+    <h2>Eingabedaten <span class="slides">Folien 7 - 9</span></h2>
+    <p>Wie werden die Eingabedaten, also in unserem Fall die grafisch dargestellten Ziffern und Zahlen dem Netzwerk zugeführt? Die Pixelhelligkeiten werden als Aktivierungen von Neuronen der ersten Schicht (= Eingabeschicht) interpretiert.</p>
+
+    <h2>Schichtenaufbau <span class="slides">Folien 11 - 14</span></h2>
+    <p>In der Feed-Forward-Architektur ist die erste Schicht die Eingabeschicht, die letzte ist die Ausgabeschicht und die Schichten dazwischen werden verborgene Schichten genannt.</p>
+
+    <h2>Datenfluss durch das Netzwerk <span class="slides">Folien 19 - 22</span></h2>
+    <p>Die Folien zeigen den Fluss der Daten durch das Netzwerk. Die Aktivierungen werden durch die Verbindungen weitergeleitet und werden zu den Aktivierungen der nächsten Schicht.</p>
+
+    <h2>Verarbeitungsschritte <span class="slides">Folien 11 - 14</span></h2>
+    <p>Die Erkennung von Zeichen kann man sich schrittweise so vorstellen, dass zuerst einfache, grundlegendere Einheiten des Zeichens erkannt werden und dann größere, zusammenhängendere. Diese Einheiten werden jeweils farblich hervorgehoben. Ein Erklärungsansatz der Arbeitsweise von Neuronalen Netzen ist, dass es in einem erfolgreich trainierten Netz zu Arbeitsteilungen zwischen den Schichten kommt, sodaß die vorgeschalteten Schichten (linke Seite) auf die grundlegenderen Einheiten und die nachgeschalteten Schichten (rechts) eher auf die größeren Einheiten reagieren.</p>
+
+    <h2>Details der Durchführung und rezeptives Feld <span class="slides">Folien 23 - 25</span></h2>
+    <p>Der Zusammenhang zwischen Aktivierungen und Gewichtungen wird hier erklärt und der Begriff rezeptives Feld wird eingeführt. Jedes Neuron verfügt über ein sogenanntes rezeptives Feld, das ist eine Gruppe von Neuronen für deren Aktivierung es sensibilisiert ist. Das ist ein wichtiges Konzept zum Verständnis der Arbeitsweise von Neuronalen Netzen.</p>
+
+    <h2>Beschränkungsfunktion <span class="slides">Folien 26 - 27</span></h2>
+    <p>Damit Werte von Neuronen nicht uferlos ins positive oder negative anwachsen (ein kleiner Bereich des Netzes würde genügen um das Gesamtergebnis unbrauchbar zu machen) kommt immer eine Beschränkungsfunktion zum Einsatz. Diese wird elementarer Bestandteil der Aktivierungsfunktion.</p>
+
+    <h2>Vorerregung/Bias und gesamte Aktivierungsformel <span class="slides">Folien 28 - 31</span></h2>
+    <p>Erklärung welche Rolle der Bias in der Funktionsweise spielt und Angabe der vollständigen Aktivierungsformel bestehend aus der Beschränkungsfunktion, den Aktivierungen, den Gewichtungen und den Vorerregungen.</p>
+
+    <h2>Aufgaben und Lösungen <span class="slides">Folien 32 - 33</span></h2>
+    <p>Anhand dreier Fragen werden noch einmal einige fundamentale Eigenschaften eines Neuronalen Netzwerks rekapituliert.</p>
+
+    <h2>Verweis auf andere Netzwerkarchitekturen und Links <span class="slides">Folien 26 - 27</span></h2>
+    <p>Die Feed-Forward-Netzwerk-Architektur wurde hier vorgestellt weil sie eine sehr einfache und häufig verwendete Architektur ist. Die Grafik soll nur andeuten, dass eine Fülle anderer Architekturen eingesetzt und erprobt werden.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_I_-_Basics.pdf">Neural_Networks_I_-_Basics.pdf</a> <a href="Slides/Neural_Networks_I_-_Basics.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1 id="part2">Teil 2 - Rezeptive Felder</h1>
+
+    <p>Dieser Teil vertieft den schon im Teil 1 eingeführten Begriff des rezeptiven Felds Anhand eines interaktiven Beispiels der Objekterkennung mit einer 2x2-Pixel-Kamera. Dieser Teil der Lektion ermöglicht mit dem Simulator ein interaktives Nachvollziehen der Arbeitsweise eines Neuronalen Netzerks.</p>
+
+    <h2>Kamera <span class="slides">Folien 2 - 5</span></h2>
+    <p>Ein einfaches Neuronales Netz verleiht einer Kamera, die über einen 2x2-Pixel-Sensor verfügt die Fähigkeit vier verschiedene Muster zu erkennen. Wie schon zuvor bei der Zeichenerkennung ist das Problem anspruchsvoller als es zuerst klingt. Muster der gleichen Kategorie haben unter Umständen keine gemeinsamen Pixel. Wie schon zuvor wird die Helligkeit der Pixel zur Aktivierung der Neuronen in der Eingabeschicht.</p>
+
+    <h2>Arbeitsweise der Neuronen <span class="slides">Folien 6 - 13</span></h2>
+    <p>In diesen Folien wird nochmals genau auf die Arbeitsweise der Neuronen eingegangen: Bildung der gewichteten Summe der Eingaben und Beschränkung der Werte. Die Details der Sigmoidfunktion bilden einen erweiterten Inhalt für fortgeschrittenere Schüler.</p>
+
+    <h2>Vervollständigung des Netzes <span class="slides">Folien 14 - 16</span></h2>
+    <p>Die begonnene Schicht wird vervollständigt, eine zusätzliche Schicht vom gleichen Schichttyp wird hinzugefügt und schließlich eine weitere Schicht mit alternativer Aktivierungsfunktion. Für Aktivierungen und Gewichte werden in Folge nur 0, 1, -1 verwendet. Das ist eine drastische Einschränkung und funktioniert nur, weil das ein sehr einfacher Anwendungsfall ist. Es erleichtert aber das Rechnen sehr. Es ermöglicht uns den Rechengang durch das einfache Neuronale Netz zu verfolgen oder sogar selbst durchzuführen. In der Praxis wäre es keine gute Idee nur 0, 1, -1 zu verwenden. Das funktioniert nur bei diesem einfachen Beispiel.</p>
+
+    <h2>Alternative Aktivierungsfunktion <span class="slides">Folie 17</span></h2>
+    <p>Die Details dieser Aktivierungsfunktion sind wieder als erweiterter Inhalt zu sehen. Beide benötigen ein sattelfestes Verständnis des Funktionsbegriffs und der grafischen Funktionsdarstellung. Wichtigste Eigenschaft der ReLU-Funktion in unserem Beispiel ist, dass sie keine negativen Werte durchlässt. Diese Eigenschaft wird im letzten Schritt zur erfolgreichen Ergebnisberechnung verwendet.<br>
+        Die Anwendung der beiden Aktivierungsfunktionen vereinfacht sich erheblich durch den Trick, dass nur die Werte 0,1,-1 verwendet werden. Wichtigste Eigenschaft der hauptsächlich verwendeten Aktivierungsfunktion (Sigmoid) ist, dass Werte größer 1 auf 1 reduziert werden und Werte kleine -1 auf -1. Wichtigste Eigenschaft der alternativen Aktivierungsfunktion (ReLU und leaky ReLU) ist, dass negative Werte auf 0 (oder nahe Null) reduziert werden.</p>
+
+    <h2>Das Netzwerk und die Kamera im Einsatz <span class="slides">Folie 18</span></h2>
+    <p>Diese Folie zeigt das fertige System. Zugeführt und auch richtig erkannt wird ein vertikales Muster. Bei jedem Neuron ist das rezeptive Feld angeführt. Das ist für jedes Neuron die Menge der Eingabeneuronen von denen es direkt oder indirekt Signale erhalten kann. Die rezeptiven Felder wachsen von links nach rechts von der Größe 1 bis zur Größe 4 an. Jeweils ist auch von Bedeutung ob das Neuron auf positive (weißes Feld) oder negative Aktivierung (schwarzes Feld) in seinem rezeptiven Feld reagiert.</p>
+
+    <div id="simulator2" class="exercise">
+        <h2>Simulator</h2>
+        <p>Im Simulator kann die Abarbeitung durch das Netzwerk durchgespielt werden. Den Simulator gibt es einmal in der manuellen und einmal in der automatischen Version. In der manuellen Version ermittelt und setzt man alle Aktivierungen selbst auf Grundlage der Eingabedaten (=Aktivierungen 0,1,-1) und Verbindungen (0,1,-1). Der automatisch arbeitende Simulator errechnet alle nötigen Aktivierungen und Ausgaben automatisch aus den Eingaben und ist in der Bedienung damit natürlich wesentlich bequemer handzuhaben. Die Herausforderung an den Bedienenden ist beim manuellen Simulator deutlich höher aber der Lerneffekt ist wesentlich größer. Begabte oder fortgeschrittene Schüler sollten zuerst mit dem manuellen Simulator vertraut gemacht werden.</p>
+    </div>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_II_-_receptive_Fields.pdf">Neural_Networks_II_-_receptive_Fields.pdf</a> <a href="Slides/Neural_Networks_II_-_receptive_Fields.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NN_ii_simulator.zip">NN_ii_simulator.zip</a></li>
+    </ul>
+</section>
+
+
+<section class="cols">
+    <h1 id="part3">Teil 3 - praktisches minimales Beispiel</h1>
+
+    <p>Dieser Teil stellt ein interaktives praktisches Beispiel eines aus nur 5 Neuronen bestehenden Neuronalen Netzes vor. Das Besondere an diesem Teil der Lektion ist, dass es sich zwar um ein minimales aber in allen Phasen in sich geschlossenes kleines Projekt handelt. Es werden keine externen Bibliotheken oder sonstige Hilfsmittel herangezogen. Trainingsdaten, Berechnungsvorgang, Training sind überschaubar, klar dokumentiert und im Pythonquellcode unmittelbar nachvollziehbar. Das Projekt dient sehr gut dem Zweck den Bereich der Künstlichen Intelligenz zu demystifizieren. Das Projekt kann auch als Grundlage für weitere Projekte dienen, zum Beispiel könnte man eine andere Datengrundlage verwenden oder das Netzwerk auch strukturell erweitern: zusätzliche Eingabe- und Ausgabemöglichkeiten, zusätzliche Schichten … . Eine strukturelle Änderung bedingt aber auch eine Änderung des Trainingsvorgangs.</p>
+
+    <h2>Vorstellung des Neuronalen Netzwerks <span class="slides">Folien 2 - 3</span></h2>
+    <p>Einleitung, grafische Darstellung und Erklärung des Aufbaus des Neuronalen Netzes.</p>
+
+    <h2>Datengrundlage und Ausgabe <span class="slides">Folien 4 - 5</span></h2>
+    <p>Grafische Darstellung der Beziehung zwischen Körpergewicht, Körpergröße und Geschlecht. Damit soll nur der Zusammenhang dieser Größen verdeutlicht werden. Es handelt sich dabei aber nicht um die Trainingsdaten. Trainiert wird das Netzwerk lediglich mit 4 Datensätzen (siehe Python-Programm).<br>
+        Durch die Überlappung der beiden Gruppen sind nicht immer eindeutige Resultate zu erwarten. Erklärung wie die Aktivierung der Ausgabeschicht als Ergebnis zu interpretieren sind.</p>
+
+    <h2>Rechengang <span class="slides">Folie 6</span></h2>
+    <p>Hier wird der genaue Datenfluss durchs Netzwerk und der Rechengang erklärt.</p>
+
+    <h2>Beschränkungsfunktion <span class="slides">Folie 7</span></h2>
+    <p>Hier wird die Notwendigkeit der Beschränkungsfunktion erklärt.</p>
+
+    <h2>Verweis auf Training und Simulator <span class="slides">Folie 8</span></h2>
+    <p>Training stellt erweiterten Inhalt dar. Für fortgeschrittene Schüler stellt iii_training.pptx aber einen guten Überblick dar um das Beispiel zu vervollständigen. Auch der Pythonquellcode gibt Aufschluss über die Details des Trainings.<br>
+        Der Simulator ermöglicht es allen Schülern interaktiv Werte zu probieren und das Ergebnis abzulesen.<br>
+        Über 2 Schieberegler werden die Eingaben vorgenommen. Die Aktivierung der Neuronen wird numerisch beim Neuron ausgegeben und zusätzlich mit Graustufen visualisiert. Schwarz steht hier für Aktivierung 0, weiß für Aktivierung 1. Die Stärke einer gewichteten Verbindung wird mit der Strichbreite symbolisiert. Positive Verbindungen sind schwarz, negative sind rot gefärbt.</p>
+
+    <div id="exercise" class="exercise">
+        <h2>Praktische Übung</h2>
+        <p>Die Teilnehmenden können mit dem erworbenen Wissen nun selbst eigene Beispieleingaben durchrechnen. Durch den minimalen, einfachen Aufbau des Netzwerkes ist eine manuelle Berechnung einfach durchführbar.<br>
+            3 Wertepaare sind vorgegeben, für die die Teilnehmenden Ergebnisse berechnen können. In der untersten Zeile können eigene Werte verwendet werden.</p>
+    </div>
+
+    <h2>Quellenangaben und Verweis auf das Programm <span class="slides">Folie 9</span></h2>
+    <p>Das zugrundeliegende Pythonprogramm liegt in 2 Versionen vor, in denen verschiedene Aktivierungsfunktionen zum Einsatz kommen.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/Neural_Networks_III_-_practical_Example.pdf">Neural_Networks_III_-_practical_Example.pdf</a> <a href="Slides/Neural_Networks_III_-_practical_Example.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/NN_iii_simulator.zip">NN_iii_simulator.zip</a></li>
+        <li><a href="Exercises/NN_exercise.zip">NN_exercise.zip</a></li>
+        <li><a href="Exercises/NN_additional_content.zip">NN_additional_content.zip</a></li>
+    </ul>
+</section>
+
+
+[[ footer.html ]]

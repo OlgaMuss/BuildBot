@@ -1,0 +1,277 @@
+[[ header.html | Supervised Learning]]
+{[ abbreviations
+    AI: Artificial Intelligence
+    SL: Supervised Learning
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>Module 4</h1>
+            <h2>Supervised Learning</h2>
+            <p><cite>"The <strong>model</strong> consists of <strong>parameters</strong> that are not chosen by the programmer but <em>adapted by the algorithm</em> in a process called <strong>training</strong>."</cite></p>
+        </div>
+        <img src="{{images}}/supervised_learning.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>About the Module</h1>
+
+    <p>This module is about <strong>Supervised Learning</strong> (SL). The goal is to provide the students with a
+        basic understanding of what SL is, what it can and cannot do as well as how one can train
+        SL-algorithms. It focuses more on the practical side, therefore students will train their
+        own algorithms and experience the possibilities and problems first-hand. The underlying
+        technical part will be skipped for the most part, as there are other modules for
+        understanding specific methods like <a href="../Neural Networks/index.html">Neural Networks</a>, and this knowledge is not required for
+        a basic understanding of how SL works or how it can be used.</p>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>explain SL as a mapping function</li>
+            <li>name the value and requirements of training data</li>
+            <li>estimate if an application is using SL</li>
+            <li>name problems and limitations of SL</li>
+            <li>train their own SL model and use it inside an application</li>
+        </ul>
+    </div>
+
+
+    <h2>Agenda</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Content</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#introduction">Introduction</a></td>
+                <td><a href="Slides/SL - Introduction.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#train">Exercise - Train your first model</a></td>
+                <td><a href="Exercises/Classification Game/index.html">Pen&Paper</a>, <a href="Exercises/AI for Oceans/index.html">Online</a></td>
+            </tr>
+            <tr>
+                <td>15 min</td>
+                <td><a href="#reliance">Theory - Reliance on data</a></td>
+                <td><a href="Slides/SL - Reliance on data.pdf">Slides</a></td>
+            </tr>
+            <tr>
+                <td>30-60 min</td>
+                <td><a href="#game">Exercise - Game controller</a></td>
+                <td><a href="Exercises/Game Controller/index.html">Online</a></td>
+            </tr>
+            <tr>
+                <td>30 min</td>
+                <td><a href="#possibilities">Discussion + Quiz - Possibilities and limitations</a></td>
+                <td><a href="Slides/SL - Quiz.pdf">Slides</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="introduction">Introduction</h1>
+
+    <p>The Introduction is all about students becoming familiar with basic concepts and terms used in <em>Supervised Learning</em> (SL). It is based on the <a href="Slides/SL - Introduction.pdf">slides</a>, which introduce not only common applications but the general idea of what a SL algorithm does and how a SL algorithm can be trained.</p>
+
+    <h2>Real World Examples <span class="slides">Slides 2 - 8</span></h2>
+    <p>In the first slides several applications for SL algorithms are introduced, which should make it clear that it is used in a lot of differ-ent applications.</p>
+    <p>Prime examples for SL are <strong>classifying</strong> images and <strong>detecting</strong> objects in images. Face detection for instance, can be used to auto-focus a camera or create automatic labels with names in case of social media sites. The goal of object recognition is to detect and identify different objects inside an image. Therefore, usually the first step is segmentation, where the image is clustered into different areas, which then are classified with one of the available labels. All these steps nowadays are mostly done using SL and <a href="../Neural Networks/index.html">Deep Neural Networks (DNN)</a>. Even in production industries SL and image classification are used, for instance to detect defects or assembly mistakes automatically. This is one of the areas where AI is replacing more and more human workers due to lower costs and sometimes even due to making less errors. In areas like medicine however, algorithms for detecting illnesses are used in conjunction with doctors, to help them to come to the correct conclusion. This is done for instance by pointing out potential cancer spots on scans, which might have been overlooked otherwise.</p>
+    <p>The next example is speech recognition and <a href="../Natural Language Processing/index.html">Natural Language Processing (NLP)</a>. Instead of an image, sound waves are used to distinguish between spoken words and other sounds. Once words are recognized, they can be transcribed, which is used for instance for automatic subtitle generation. Furthermore, sentences can be analysed for their meaning, so that applications like digital assistants (Alexa, Siri, Google Now, …) can understand complex commands and queries and answer/act in a meaningful way. This way of analyzing sentences/texts is also used in spam filters to distinguish between normal mail and spam mail.</p>
+    <p>Another usage of SL algorithms is predicting values like the cost of a house or the revenue of a planned movie, based on various information like size of the house or actors in the movie. In this case a SL algorithm is trained using data on similar houses and their costs and then used to predict the value of new homes.</p>
+    <p>Finally, SL algorithms are also used to classify users into different profiles, to provide customized advertisements. As the advertisement corresponds more to the interests of the user, there is a higher chance he or she will click on the link which results in a higher chance of selling the product.</p>
+
+    <h2>What Supervised Learning Algorithms really do <span class="slides">Slides 9 - 13</span></h2>
+    <p>After all the examples, Supervised Learning algorithms are introduced as mapping functions. The main point here is that they do a very simple thing, given an input they produce an output. There is no magic AI decision making going on, it is just a mathematical formula that produces a clear result. It is a good idea to look at the examples from before and talk about what could be the input, and what would be the output. For example, when the input is an image, the output could be positions and labels of different objects, or just a label like 'defect' or 'ok'. When the input is a sound sample, the output could be the corresponding words and when the input is general information about a movie production, the output could be the expected revenue. These types of problems are called <strong>classification</strong> (labelling data) and <strong>regression</strong> (predicting values).</p>
+    <div class="info">
+        <p>It is important to mention that the output is usually not binary, but gradually. For instance, given an image of a cat, the algorithm would be 99.5% certain that it is a cat, 0.4% certain that it is a dog and 0.1% certain that it is a fish.</p>
+    </div>
+
+    <h2>How to train Supervised Learning Algorithms <span class="slides">Slides 14 - 26</span></h2>
+    <p>In the last section the process of <strong>training</strong> is introduced. It is based on the idea that the developer provides the algorithm with examples (e.g., this is a dog) and the Supervised Learning program adapts its internal <strong>model</strong> (e.g., variables in a formula) to produce the correct output. Additionally, the concept of <em>trainings-</em> and <em>test-data</em> is introduced.</p>
+    <p>There are five important definitions here:</p>
+    <dl>
+        <dt>Supervised Learning Algorithm</dt>
+        <dd>An <strong>algorithm</strong> is a step-by-step description of a task. In this case it defines exactly how the SL process works, how it learns as well as what <strong>parameters</strong> are used and how they influence the result. It is often compared to a cooking recipe, where there are detailed instructions which, when followed correctly, lead to a tasty result.</dd>
+        <dt>Parameters</dt>
+        <dd>Parameters are data that can be used to modify the result or working process of an algorithm. To continue with the cooking example, a parameter of a cake could be how sweet it should be. The cook then decides for the amount of sugar and follows the recipe accordingly. In SL parameters are used in the training process, where the programmer has to decide in which way (how many iterations, internal structure, what to focus on, …) the algorithm has to learn.</dd>
+        <dt>Supervised Learning Model</dt>
+        <dd>The model consists of parameters that are not chosen by the programmer but <em>adapted by the algorithm</em> in a process called <strong>training</strong>. In the cooking example, these could be a list of ingredients with their corresponding amount, which the algorithm then has to optimize during training to get the desired (e.g., tasty) result. Especially in image classification <a href="../Neural Networks/index.html">Neural Networks</a> are often used as the underlying model, therefore models are often just called <em>networks</em>.</dd>
+        <dt>Labelled Data</dt>
+        <dd>A set of data that contains not only the input but also the output of the SL algorithm. For example, this can be a few hundred images of cats and dogs with their corresponding labels 'cat' and 'dog'.</dd>
+        <dt>Trainings- and Test-Data</dt>
+        <dd>Usually, one starts by collecting a lot of <em>labelled data</em>, which then is split into two sets, the trainings-data and the test-data. The trainings-data is used to train the model while the test-data is used to test its accuracy. It is important that this is <em>different</em> data, to ensure that the model is general enough and not fixated on the specifics of the trainings-data.</dd>
+    </dl>
+
+    <p>Once these terms are clear, the process of training a model is quite simple:</p>
+    <ol>
+        <li>Collect a set of <em>labelled data</em> and split it into two sets (training and test)</li>
+        <li><em>Initialize your model</em> with any values (often random) and select a set of <em>training parameters</em></li>
+        <li><em>Repeat</em> with the training-data (as often as defined by the parameters)
+            <ul>
+                <li>Given an input, <em>adapt</em> the values inside the model to more closely match the given output</li>
+            </ul>
+        </li>
+        <li><em>Test your model</em> by using test-data to check its accuracy</li>
+        <li><em>Repeat from the beginning</em>, modifying the labelled data or training parameters, until you are satisfied with your model</li>
+    </ol>
+
+    <h2>Questions and What's next <span class="slides">Slide 26</span></h2>
+    <p>At this point the students should know the basics of how SL algorithms work. In the upcoming exercises they will then try this process themselves and experience the <em>problems</em> that can occur and how sensitive these algorithms are to their trainings-data.</p>
+
+    <p class="info">While this course does not go into the technical details, it is worth mentioning that depending on the problem, there are multiple algorithms that can be used for SL. Most people have heard about (deep) neural networks, which are used for many problems, especially when the data is quite complex, like in image or voice recognition. But there are many more algorithms like decision-trees, regression curves, nearest neighbor and more.<a href="#introduction_ref_1" class="ref">1</a></p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/SL - Introduction.pdf">SL - Introduction.pdf</a> <a href="Slides/SL - Introduction.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="introduction_ref_1" href="https://builtin.com/data-science/supervised-machine-learning-classification">https://builtin.com/data-science/supervised-machine-learning-classification</a></li>
+    </ol>
+</section>
+
+<section class="exercise">
+    <h1 id="train">Train your first model</h1>
+
+    <p>The goal of this exercise is to give the students a first impression of how the <strong>training</strong> of a SL algorithm works and what <strong>difficulties</strong> can occur. The main takeaway should be that training is heavily dependent on the <em>trainings-data</em> and that it is generally a process that needs many iterations to lead to a useful result.</p>
+
+    <p>There are two possible exercises:<br>
+        <a href="Exercises/AI for Oceans/index.html">AI for Oceans</a> which is an online tool and the <a href="Exercises/Classification Game/index.html">Classification Game</a> which is a hands-on activity.
+    </p>
+
+    <div class="horizontal">
+        <div>
+            <h3>AI for Oceans</h3>
+            <div class="horizontal">
+                <div>
+                    <p>This exercise uses the ocean scanning exercise from the course AI for Oceans. Using a <em>web browser</em>, students have to train a robot to differentiate between fish and garbage as well as between different kinds of aquatic animals.</p>
+                    <a href="Exercises/AI for Oceans/index.html">Exercises / AI for Oceans</a>
+                </div>
+                <img src="{{images}}/ai_for_oceans.png">
+            </div>
+        </div>
+        <div>
+            <h3>Classification Game</h3>
+            <div class="horizontal">
+                <div>
+                    <p>This exercise puts the students in the shoes of an SL algorithm so that they can experience the difficulties of classifying images of cats and dogs in this <em>pen-and-paper</em> exercise.</p>
+                    <a href="Exercises/Classification Game/index.html">Exercises / Classification Game</a>
+                </div>
+                <img src="{{images}}/classification_game.png">
+            </div>
+        </div>
+    </div>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>explain the process of training a SL algorithm</li>
+            <li>explain how the algorithms work by focusing on various features</li>
+            <li>explain how the system is very dependent on its trainings-data</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="cols">
+    <h1 id="reliance">Reliance on data</h1>
+
+    <p>This chapter is about <em>trainings-data</em> and the impact and importance of the <strong>quality</strong> of this data. While the examples in this chapter will focus on image recognition, all the discussed problems still apply to all forms of Supervised Learning. The chapter is based on <a href="Slides/SL - Reliance on data.pdf">these slides</a>.</p>
+
+    <h2>Overfitting and Underfitting <span class="slides">Slides 2-14</span></h2>
+    <p>The two biggest problems when training a SL algorithm are <strong>overfitting</strong> and <strong>underfitting</strong>.</p>
+    <p><em>Overfitting</em> is the problem that a model works well <em>during training</em> but provides poor results on <em>different data</em>. It occurs when the training set is either too specific or provides prominent misleading features.</p>
+    <p><em>Underfitting</em> on the other hand means that the model is not learning anything useful at all. It occurs when the input data is <em>insufficient</em> in number or <em>too general</em> and no related features can be found. Let's look at some examples.</p>
+    <p><cite>Imagine you want to create a model that differentiates between different people by looking at portrait pictures. You ask your friends to give you a few hundreds of portrait images, recorded with their webcam and use them to train your algorithm. While the test results are very promising, you realise that when you test your model by inviting your friends to your home, it barely detects anyone correctly.</cite></p>
+    <p>This is a classic example of <em>overfitting</em>, where under specific circumstances the model works fine, but it fails horribly once one changes the surrounding environment. A reason for failing could be that the model did not learn the features of faces as expected, but focused on plants or shelves in the background. These background features are often quite distinct and can even lead to the algorithm ignoring the face and only recognizing the background, therefore the input data was too specific.</p>
+    <p>An easy way to reduce the problem is to provide a <em>more diverse dataset</em> (different scenery, lighting, camera angles, head positions, zoom levels, haircuts, more images, …), so that specific unwanted features occur only rarely. This problem can be further reduced by <em>processing the data</em> to reduce unnecessary features. Transforming everything to grayscale images can reduce the reliance on colours, as can normalizing the saturation of all images. Geometric transformations like scaling, rotating or flipping images can also provide a much bigger dataset that is more general. It is important though, to <strong>keep your data in mind</strong>, if you want to detect different coloured pens it might be a bad idea to switch to grayscale images, and if you want to detect certain gestures, flipping an image can be detrimental.</p>
+    <p>For <em>underfitting</em> let's look at the example of predicting movie revenue.</p>
+    <p><cite>Imagine you have gathered data on thousands of movies about the genre, actors and revenue. You then train your model based on this data but realize, no matter what test data you select, the prediction is quite off most of the time.</cite></p>
+    <p>This means your model has basically learned nothing. This is an example of <em>underfitting</em>, as either your training data did not have enough (or relevant) information (features) to predict anything useful or your training parameters are way off.</p>
+    <p>In this example the inclusion of <em>more features</em> like the release year, the budget and budget allocation or the amount of advertisement could overcome this problem and lead to a more accurate prediction. <em>Underfitting</em> also occurs when you just don't have enough data and therefore too little information that can be used for prediction or classification.</p>
+    <p>Underfitting and overfitting are both prominent and usually easy to detect (but not necessarily easy to fix…). Next, we will talk about the more subtle problem of <strong>biases</strong>.</p>
+
+    <h2>Biases and Fairness <span class="slides">Slides 15-19</span></h2>
+    <p>While <em>underfitting</em> and <em>overfitting</em> are technical and clearly measurable problems, <em>biases</em> are much harder to detect. Let's start with a real example.</p>
+    <p><cite>In 2014 Amazon, like many other big companies, tried to automate their recruitment process by creating an AI to review job applications and find the most talented / suitable workers. After one year of development however, they realized a big flaw: their algorithm <em>discriminated against women</em>! It turned out that there was no evil intention, but the trainings-data of previously hired workers was hugely biased for men, as most employees were male at this time. While this problem was fixed by carefully selecting the applications used for training, it could not be guaranteed that the algorithm didn't have any other, currently not visible biases, so the project was disbanded in 2018.<a href="#reliance_ref_1" class="ref">1</a></cite></p>
+    <p><cite>Another example is Microsoft's chatbot Tay2, which adapted <em>inflammatory and racist speech</em> from users on Twitter and had to be taken down after only 16 hours.<a href="#reliance_ref_2" class="ref">2</a></cite></p>
+    <p>In principle it is possible to create models that are fair, but depending on the subject it can be a <em>very hard problem</em>. The problem ranges from service bots not recognizing dialects of some minorities of people to classification algorithms not detecting people of colour as humans due to limited or exclusive training data. These problems are not only technical but ethical as they raise the question what decisions we should let machines decide. The <a href="../Ethics/index.html">Ethics module</a> investigates this question in more detail. Another good resource is <a href="https://youtu.be/CampJppwgWU">this video</a>.</p>
+    <p>Biases and fairness are currently widely researched fields and no easy solution can be given. All you can do is to be careful when creating training-data for your model to train on. This is also reflected in a common saying in computer science: "the algorithm is only as good as it's data" or in simpler words: "garbage in, garbage out".</p>
+
+    <h2>Training Time and Transfer Learning <span class="slides">Slides 20-23</span></h2>
+    <p>As demonstrated in the topics above, the quality of the model is highly dependent on its chosen data and therefore also of the <em>size of its data</em>. To create an unbiased image classification model that accurately detects objects in various situations thousands or even millions of images have to be used, which also increases the time needed for training the model from hours to weeks.</p>
+    <p>To counteract this problem <strong>transfer learning</strong><a class="ref" href="#reliance_ref_3">3</a> can be used to benefit from the experience of already well trained (<em>pre-trained</em>) models. These models usually focus on more generic tasks, like finding features in images, which can then be used either as a <em>starting point</em> for training, or as a <em>pre-process step</em> to reduce the complexity of the input data. In the first case, a network that is already used in image classification can sometimes be used as a base to train a network to classify a different set of images (like from detecting forest fires in satellite images to detecting fractures in X-ray images). In the second case, a network that can detect features like edges or geometric patterns can be used as a first step and the new network can be trained on these features instead of the raw image data. In both cases not only the training time can be drastically reduced, but also the quality of the result increased, especially when working with very small sample sizes like 50 pictures.</p>
+    <p>The next exercise uses such pre-trained networks to be able to train image classification networks inside the browser in a matter of seconds to minutes while only requiring a few hundred images for good results.</p>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/SL - Reliance on data.pdf">SL - Reliance on data.pdf</a> <a href="Slides/SL - Reliance on data.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">References</h2>
+    <ol>
+        <li><a id="reliance_ref_1" href="https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine">https://www.theguardian.com/technology/2018/oct/10/amazon-hiring-ai-gender-bias-recruiting-engine</a></li>
+        <li><a id="reliance_ref_2" href="https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter">https://www.theguardian.com/technology/2016/mar/24/tay-microsofts-ai-chatbot-gets-a-crash-course-in-racism-from-twitter</a></li>
+        <li><a id="reliance_ref_3" href="https://machinelearningmastery.com/transfer-learning-for-deep-learning/">https://machinelearningmastery.com/transfer-learning-for-deep-learning/</a></li>
+    </ol>
+
+</section>
+
+
+<section class="exercise">
+    <h1 id="game">Game controller</h1>
+
+    <img src="{{images}}/game_controller.png" class="right">
+    <p>In this exercise, students will train a real image classification model to detect different directional commands. This model will then be used to control and play the game Snake.</p>
+    <p>The goal of this exercise is to let the students train their own real time image classification model. During this process, many of the previously discussed problems will occur and students have to try to make their model as robust as possible. To demonstrate further the difficulties in real applications the used camera should be changing direction/position to highlight problems in their training sets (like background objects). In the end the students will have a working model that provides directions and can be used to control the game Snake (or, for very advanced students, in any other application they use <a href="https://www.tensorflow.org">TensorFlow</a> in).</p>
+    <p>The time required for this exercise can vary wildly, from 30 minutes for a short test to up to multiple hours, when students want to create a good working (general) model.</p>
+    <p><a href="Exercises/Game Controller/index.html">Exercises / Game Controller</a></p>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>train a real SL image classification model</li>
+            <li>apply their knowledge about how to get the correct data</li>
+            <li>realize that teaching the model doing 'the right thing' is one of the main difficulties in SL</li>
+        </ul>
+    </div>
+</section>
+
+
+<section>
+    <h1 id="possibilities">Possibilities and limitations</h1>
+
+    <p>Now that the students have a good understanding of how Supervised Learning works and what its problems are, it is time to summarize everything and look at real world applications. While the line between different machine learning methods can be quite fuzzy nowadays (as for example classical SL can be improved using reinforcement learning), this chapter is about detecting the use of SL in different applications and its limitations.</p>
+    <p>This chapter takes the form of a quiz using (mostly) <em>true or false</em> questions on <a href="Slides/SL - Quiz.pdf">slides</a>. Students can participate live using for hand signs or coloured/numbered cards. The quiz should not only be about getting the right answers but <strong>understanding</strong> the problems and also <strong>arguing</strong> why other answers might be correct too. Therefore, it is encouraged to not just show the answers but to talk about them in a short discussion. Some questions contain topics not previously discussed, to provide the possibility for students to show how well they can transfer their knowledge to unknown domains.</p>
+
+    <h2>Objectives</h2>
+    <div class="objectives">
+        <p>Students will be able to</p>
+        <ul>
+            <li>explain what SL learning can and cannot do</li>
+            <li>recognize which applications can make use of SL</li>
+        </ul>
+    </div>
+
+    <h2 class="material">Material</h2>
+    <ul>
+        <li><a href="Slides/SL - Quiz.pdf">SL - Quiz.pdf</a> <a href="Slides/SL - Quiz.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

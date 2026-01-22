@@ -1,0 +1,91 @@
+Intro to
+Algorithms As
+Opinions!
+
+What is an
+
+“algorithm”?
+
+2
+
+Algorithm
+
+input
+
+Steps to
+change
+input
+
+output
+
+3
+
+Cake Algorithm
+1.
+2.
+3.
+4.
+5.
+
+Preheat oven
+Mix dry
+ingredients
+Mix wet
+ingredients
+Mix wet
+ingredients into
+dry
+Blah blah blah
+
+4
+
+Write an Algorithm for the bes
+
+t PB&J sandwich
+
+input
+
+Steps to
+change
+input
+
+output
+
+5
+
+Write an
+algorithm for
+the BEST PB&J
+
+Share
+
+7
+
+an a lot
+
+The “best” PB&J sandwich could me
+
+8
+
+results are optimized for?
+ch
+ar
+Se
+le
+og
+Go
+ink
+th
+u
+yo
+do
+at
+Wh
+9
+
+How do we decide
+what an
+algorithm should
+optimize for?
+
+

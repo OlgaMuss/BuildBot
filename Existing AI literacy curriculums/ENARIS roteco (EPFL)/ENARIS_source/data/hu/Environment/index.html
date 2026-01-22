@@ -1,0 +1,274 @@
+[[ header.html | Mesterséges intelligencia és környezet ]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>9. Modul</h1>
+            <h2>Mesterséges intelligencia és környezet</h2>
+            <p><cite>"<strong>A mesterséges intelligencia sem nem jó, sem nem rossz.</strong> Ez egy eszköz. Egy technológia, amit használhatunk" - Oren Etzioni</cite></p>
+        </div>
+        <img src="{{images}}/AIEnvironment.png" />
+    </div>
+</section>
+
+
+<section>
+    <h1>A modulról</h1>
+
+    <p>Ebben a modulban a hallgatók önállóan dolgozzák ki <strong>a környezetvédelmi szempontokat a számítástechnikában</strong> egy <strong>"zöld" portfólió</strong> segítségével. Célszerű már a témablokk elején kiscsoportokat alakítani, mivel a feladatokat és a megbeszéléseket a csoportban kell újra és újra elvégezni, még az elméleti bemenetek során is. A portfólió első fele a saját technológiahasználatra és <strong>az egyéni energiafogyasztásra összpontosít</strong>. A diákoknak tudatosítaniuk kell, hogy mennyi CO2-t bocsátunk ki az okostelefonok, számítógépek stb. használata révén, és ez milyen hatással van a környezetünkre. A második részben a diákok maguk válnak <strong>fejlesztőkké</strong>. A tanárok által mutatott példákon felbuzdulva olyan alkalmazást kell kitalálniuk, amellyel megvédhetik a környezetet. Ez a gyakorlat azonban inkább egyfajta <strong>ötletlaboratórium</strong>, amelyben a diákok ötleteket cserélnek, vázlatokat készítenek és vitakörökben felülvizsgálják ötleteiket, mint a tényleges programozás és a projektek megvalósítása. E modul segítségével rá kell mutatni az informatikai problémákra, és a diákoknak el kell gondolkodniuk digitális fogyasztói magatartásukon. Ugyanakkor a tervezési és problémamegoldó készségeket is gyakorolják, amelyek segítségével "zöld" alkalmazásuk formájában újragondolhatják az aktuális környezeti és éghajlati problémákat, és megpróbálhatnak megfelelő megoldásokat találni rájuk.</p>
+    
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A diákok képesek:</p>
+        <ul>
+            <li>elgondolkodni saját digitális fogyasztásukon és a hozzá kapcsolódó szénlábnyomukon</li>
+            <li>a kíméletesebb használatra vonatkozó intézkedéseket fel tudnak sorolni, de képesek azokat önállóan is megfogalmazni</li>
+            <li>felismerik a digitális "klímagyilkosokat", és néhányat már ismernek is (pl. kriptobányászat és videostreaming)</li>
+            <li>leírni azokat a technikai alkalmazásokat, amelyek már most is pozitív hatást gyakorolnak az éghajlatra</li>
+            <li>csapatban kidolgozni és finomítani saját ötleteiket</li>
+        </ul>
+    </div>
+
+    <h2>Időbeosztás</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Tananyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#climatekiller">Elmélet gyakorlatokkal - klímagyilkos mesterséges intelligencia?</a></td>
+                <td><a href="Slides/Environment - Green Portfolio.pdf">Diasor 1</a></td>
+            </tr>
+            <tr>
+                <td>40 perc</td>
+                <td><a href="#portfolio">Elmélet - Portfólió 4 munkalap</a></td>
+                <td><a href="Exercises/Environment - Portfolio.pdf">Táblázat</a></td>
+            </tr>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#savior">Elmélet - klímavédő mesterséges intelligencia?</a></td>
+                <td><a href="Slides/Environment - Climate Savior AI.pdf">Diasor 2</a></td>
+            </tr>
+            <tr>
+                <td>70 perc</td>
+                <td><a href="#idealab">Gyakorlat - Zöld mesterséges intelligencia ötletlabor</a></td>
+                <td><a href="Exercises/Environment - Idealab.pdf">SDiasor 3</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section class="cols">
+    <h1 id="introduction">Bevezetés</h1>
+
+    <p>A digitalizáció mindennapi életünk szerves részévé vált, a világ lakosságának több mint fele már online van (63,1%, 2022-ben). 2022-ben már 5,03 milliárd ember használja az internetet, ami azt jelenti, hogy az online tevékenységek, például a felhőalapú számítástechnika, a streaming szolgáltatások és a készpénzmentes fizetési rendszerek miatt az energiaigény évről évre tovább fog nőni (lásd a We Are Social digitális ügynökség jelentését).<a href="#environment_ref_4" class="ref">4</a></p>
+    <p>BAmit azonban sokan nem tudnak, hogy az okostelefonok manapság több energiát igényelnek, mint a hűtőszekrények; nem az akkumulátorok gyakori töltése miatt, hanem a használatból eredő adatforgalom miatt.<a href="#environment_ref_5" class="ref">5</a></p>
+    <p>A digitális megoldások nemcsak a magánéletünkben játszanak szerepet, hanem az iparban és a mezőgazdaságban is, valamint új lehetőségeket kínálnak a környezet- és klímavédelemben is. A digitalizáció folyamatos növekedésével azonban egyre nagyobb teljesítményű szerverekre, adatközpontokra és készülékekre van szükség. A digitalizáció egyrészt megoldásokat kínálhat, másrészt azonban hatalmas problémát is jelent a magas energiafogyasztás, a kizsákmányoló és környezetkárosító gyártási folyamatok, valamint sok eszköz rövid élettartama miatt. </p>
+</section>
+
+<section class="cols">
+    <h1 id="climatekiller">Klímagyilkos mesterséges intelligencia?</h1>
+
+    <h2>Feladat: találgatós játék</h2>
+    <p>A diákok látják, hogy a Földön 7,98 milliárd ember él. Kérjük meg őket, hogy becsüljék meg, hányan rendelkeznek mobiltelefonnal, hányan használják az internetet, és hányan használják aktívan a közösségi médiát. Ehhez a tippjátékhoz vagy a közösségből gyűjthetünk egyéni szavazatokat, vagy a tanulók egy számsorba rendeződhetnek az osztályteremben, vagy egyszerűen felrajzolhatjuk ezt a számsort a táblára, és a tanulóknak minden becsléshez egy-egy strigulát kell megadniuk.
+    <br>Minden forduló után a mindenkori eredményt közzétesszük.</p>
+
+    <h2>Zöld IT</h2>
+    <p>Ma már mindenki tudja, hogy az autóvezetés és a világ körüli repülés káros a környezetre. Az elektronikus eszközök legtöbb felhasználója azonban nincs is tisztában azzal, hogy az információs technológia használata szintén nagy hatással van a környezetünkre. A számítógépek, az okostelefonok és az internet is igazi "klímagyilkosok" lehetnek. A ritka fémek és földfémek, például a kobalt és a tantál túlzott bányászata miatt az erőforrások szűkösek, a sok elektronikus eszköz miatt növekvő energiafogyasztás miatt pedig mi emberek hatalmas lábnyomot hagyunk a környezetünkben. Ezért még fontosabb, hogy mindenki hozzájáruljon a környezet- és klímavédelemhez. A "zöld IT" kifejezés ezért az informatikai eszközök és programok energiahatékonyságát és környezetbarát jellegét vizsgálja közelebbről.</p>
+    <p>Az információs és kommunikációs technológia (IKT) területén a kibocsátás mértéke időközben megelőzte a légi közlekedését! Az IKT-ágazat globális CO2-kibocsátása 2013 és 2020 között 2,5 százalékról 3,2 százalékra növelte részesedését a globális CO2-kibocsátásból. Az IKT ágazat jelenlegi CO2-kibocsátása már összemérhető az egész Közel-Kelet 2017-es CO2-kibocsátásával! (lásd: The Shift Project)! (cf. The Shift Project) <a href="#environment_ref_3" class="ref">3</a></p>
+    <p>Az IKT kényszerhelyzetben van: egyrészt a kibocsátást a lehető legnagyobb mértékben csökkenteni kell, másrészt a felhasználók jobb teljesítményt várnak el technikai eszközeik használatakor.</p>
+    <p>Miközben a megújuló energiaforrások használata egyre elterjedtebbé válik, takarékoskodnak az elektromos árammal és visszafogják a felesleges forgalmat, az internethasználat és az e technológiákon belüli teljesítmény továbbra is meredeken növekszik. Az olyan streamingszolgáltatások, mint a YouTube, a Netflix és a Spotify nagy adatforgalmat bonyolítanak, és gyorsan növekednek, de a hétköznapi weboldalak is adatigényessé válnak. A <a href="HTTPArchive.org">HTTPArchive.org</a> weboldal szerint az átlagos weboldalméret ma már csaknem négyszerese a 2010-esnek, és még tovább növekszik. Az információs technológia használata magasabb CO2-kibocsátáshoz vezet az olyan eszközök, mint a számítógépek, mobiltelefonok, nyomtatók, routerek, de a szerverek és a hozzájuk kapcsolódó hűtés miatt is. Ugyanakkor ezeknek az eszközöknek a használata a (üzleti) utazásokból származó kibocsátásokhoz vezethet, azonban a teherszállítás is minimalizálható, és a folyamatok javíthatók.</p>
+
+    <h2>Mobiltelefon használat</h2>
+    <p>Eközben <strong>több mint 5,5 milliárd mobiltelefon</strong> van forgalomban (2020-tól), de 2017-ben "csak" 4 milliárd volt. De nem csak az a tény, hogy több készüléket használnak, károsítja a környezetet, a különböző alkalmazások <strong>fokozott használata</strong> növeli az okostelefonok energiafogyasztását. Mert bár az akkumulátorok teljesítménye az elmúlt években 50%-kal nőtt, az okostelefonokat ugyanolyan gyakran töltik, mint korábban. <a href="#environment_ref_4" class="ref">4</a></p>
+
+    <h2>Zene- és videostreaming</h2>
+    <p>A zene- és videostreaming ma már az egyik legnagyobb áramfogyasztó, mivel a német internet adatforgalmának több mint 75%-át a videók teszik ki. Világviszonylatban az átlag több mint 60%. Ezek főként olyan online videók, amelyek előzetes letöltés nélkül játszhatók le a készüléken. A nagy adatmennyiség egyik oka a különösen nagy felbontású technológiák, például a "4K". A TikTok-on percenként 167 millió videót néznek meg, a YouTube-on pedig 694 ezer órányi videót streamelnek. De a zenei streaming is nagy CO2-kibocsátással jár. A zenei streaming szolgáltatások 2015-ben és 2016-ban 200-350 millió kilogramm üvegházhatású gázkibocsátást okoztak, és így károsabb, mint a CD-k és bakelitlemezek előállítása és ártalmatlanítása.<a href="#environment_ref_2" class="ref">2</a></p>
+
+    <div class="info">
+         <h2>internetlivestats.com</h2>
+         <p>A <a href="https://www.internetlivestats.com">www.internetlivestats.com</a> weboldalon keresztül valós időben megjeleníthetők az olyan adatok, mint a weboldalak, az elküldött e-mailek vagy a megtekintett YouTube-videók száma.</p>
+    </div>
+
+    <h2>Milyen lépéseket lehet most tenni?</h2>
+    <ul>
+        <li>A fizikai szerverek virtualizálhatók: Mivel a fizikai szerverek gyakran csak 15-30%-ban vannak kihasználva, több virtuális szerverre oszthatók, hogy a lehető legjobban ki lehessen őket használni. Ez mind a működés, mind a hűtés során áramot takarít meg.</li>
+        <li>A szerverek hűtőrendszerei felülvizsgálhatók vagy lecserélhetők</li>
+        <li>"Zöld", energiatakarékos hardverek használata, a kritikus fémek számának csökkentése az épületkomponensekben</li>
+        <li>A saját felhasználói magatartás újragondolása (tudatosságnövelés energiamérésekkel és energiatakarékosság, például a nem szükséges eszközök kikapcsolásával)</li>
+        <li>Megújuló energiaforrások (szél, nap, víz stb.) használata</li>
+        <li>A kulcsfontosságú nyersanyagok újrahasznosítása</li>
+    </ul>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/Environment - Green Portfolio.pdf">Environment - Green Portfolio.pdf</a> <a href="Slides/Environment - Green Portfolio.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+<section class="exercise">
+    <h1>Feladat</h1>
+    <p>Gondolkodjatok együtt az osztályban: milyen egyéb intézkedések jutnak spontán eszetekbe a saját fogyasztásotokkal kapcsolatban?</p>
+
+    <h2>Milyen lépéseket tehetsz te?</h2>
+    <ul>
+        <li>Csak akkor vásárolj eszközöket, ha valóban szükséged van rájuk. Ha egy készülék elromlik, próbáld megjavíttatni, vagy vásárold meg használtan.</li>
+        <li>Az okostelefont, laptopot vagy televíziót csak takarékosan használd. Összpontosíts egy eszközre, és ne hagyd, hogy a többi párhuzamosan fusson.</li>
+        <li>Takaríts meg áramot kikapcsolható konnektorokkal.</li>
+        <li>A kis képernyők kevesebb energiát fogyasztanak, mint a nagyok.</li>
+        <li>Böngéssz tudatosan: Kapcsold ki az automatikus lejátszás funkciót, és csak azokat a tartalmakat nézd, amelyek valóban érdekelnek.</li>
+        <li>Csökkentsd a képfelbontást. Oka: A legnagyobb felbontásnál óránként 23-szor annyi adatot használunk fel, mint alacsonyabb felbontásnál.</li>
+        <li>A hanghívások gazdaságosabbak, mint a videohívások.</li>
+        <li>Takarítsd ki a postaládádat és a felhőtárolódat: töröld azokat az e-maileket, amelyekre nincs szükséged. A felhőben vagy online tárolt egyéb fájlokat is áthelyezheted merevlemezre, vagy törölheted őket, ha már nincs rájuk szükséged.</li>
+        <li>...</li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="environment_ref_1" href="https://www.domo.com/learn/infographic/data-never-sleeps-9">Adathasználat 2021</a> </li>
+        <li><a id="environment_ref_2" href="https://reset.org/the-digital-footprint/?gclid=CjwKCAjwpqCZBhAbEiwAa7pXeZah4zg_tm6ov39bGgpht4GpLlI-yzQao4q7723MAXZSrrRO8Oj1JxoCAp0QAvD_BwE">A zenei streamingből származó kibocsátás</a></li>
+        <li><a id="environment_ref_3" href="https://theshiftproject.org/wp-content/uploads/2019/03/Lean-ICT-Report_The-Shift-Project_2019.pdf">A Shift projekt</a></li>
+        <li><a id="environment_ref_4" href="https://wearesocial.com/de/blog/2022/07/digital-2022-statshot-juli-teil-1/">Társadalmi jelentés</a></li>
+        <li><a id="environment_ref_5" href="https://www.lernen-wie-maschinen.ai/ki-commerce/ist-kuenstliche-intelligenz-ein-klimakiller/">A mesterséges intelligencia klímagyilkos?</a></li>
+    </ol>
+</section>
+
+<section class="exercise">
+    <h1>Feladat</h1>
+    <p>Becsüljétek meg csoportokban, hogy egy átlagember hány órát használja az internetet (okostelefonon, számítógépen, okostévén, játékkonzolokon stb. keresztül).</p>
+
+    <img src="{{images}}/mediaspend.png" />
+    <p>Ausztriában napi 05:55, Németországban 05:32 (a We Are Social nem rendelkezik magyarországi adatokkal).</p>
+</section>
+
+<section class="exercise">
+    <h1 id="portfolio">Zöld Portfólió</h1>
+    <p>Nehéz javítani a dolgokon, ha nem vagyunk tisztában a hatásukkal. Ezért a diákoknak el kell végezniük néhány (vagy az összes) feladatot a javaslataink közül, hogy lássák, mennyi energiát igényelnek digitális mindennapi segítőik. Az okostelefonon található funkcióknak, az olyan alkalmazásoknak vagy weboldalaknak köszönhetően, mint például a WebsiteCarbon.com, amely az oldal megtekintésenkénti CO2-kibocsátást méri, a saját fogyasztás már néhány kattintással nyomon követhető.</p>
+
+    <ul>
+        <li>
+            <strong>Mennyi időt töltök az okostelefonomon?</strong> A tanulóknak fel kell írniuk, hogy az elmúlt három napban mennyi ideig használták az okostelefonjukat. Az összesített kijelző alatt az egyes alkalmazások használati idejét lebontva láthatjuk, ami szintén érdekes lehet néhány diák számára.
+            <br>Az Android felhasználók a beállítások között találják a "Digitális jólét" funkciót, az iPhone felhasználók pedig a "Képernyőidő" funkciót. Mindkét operációs rendszer esetében lehetőség van időzítő beállítására is, amely bizonyos idő után szünetelteti az alkalmazásokat. Az ilyen típusú beavatkozásokkal közös megbeszéléseken is lehet foglalkozni, és reflektálni rájuk.
+        </li>
+        <li>
+            <strong>Mennyi adatot használok?</strong> Az adatforgalom vagy adatfogyasztás minden mobiltelefonon ellenőrizhető. A tanulóknak dokumentálniuk kell az elmúlt három nap adatfogyasztását, és ha lehetséges, írják fel az általuk leggyakrabban használt alkalmazások nevét és adatfogyasztását.
+            <br>- Gigabájtonként 140 g CO2 keletkezik.
+        </li>
+        <li>
+            <strong>CO2-mérések a kedvenc weboldalaimról</strong>: A diákok a <a href="https://www.websitecarbon.com">https://www.websitecarbon.com</a> weboldal segítségével meghatározhatják a különböző weboldalak CO2-kibocsátását. Mindössze annyit kell tenniük, hogy beillesztik a megfelelő linket a weboldal keresősávjába, és a "számítás" gombra kattintanak. Mivel az oldal csak angol nyelven érhető el, és ezért az eredmény alatti összehasonlítások nehezebben érthetőek, célszerű, ha a tanulók kis csoportokban kutatnak.
+            <br>A tanulóknak legalább három weboldal CO2-kibocsátását kell rögzíteniük, és mindegyikről összehasonlítást kell végezniük. Az utolsó két összehasonlítás talán a legérdekesebb, amelyben a CO2-kibocsátást a fák újbóli lebontásához szükséges fák számával és egy autó működtetéséhez szükséges elektromos energiával hasonlítják össze.
+            <br>Egy kis összehasonlítás: egy átlagos weboldalnak körülbelül 6,8 gramm CO2-re van szüksége egy oldalmegtekintésenként, a leghatékonyabb weboldal Elon és Kimbal Muské (<a href="http://www.muskfoundation.org">www.muskfoundation.org</a>), és csak 0,009 gramm CO2-re van szüksége. Az azonban még kérdéses, hogy minden weboldalnak ennyire minimalistának kell-e lennie.
+        </li>
+        <li>
+            <strong>Mennyi energiára van szüksége a keresőmotoroknak?</strong>
+            A Google felfedett egy szigorúan őrzött titkot: adatközpontjainak energiaigényét. A New York Times beszámolója szerint a vállalat folyamatosan 260 millió wattot használ - ez körülbelül egy atomerőmű teljesítményének negyede, és elég egy 200 ezer lakást számláló város áramellátásához. A gigantikus szám ellenére az embereknek figyelembe kell venniük, hogy a Google ajánlatával mennyi energiát lehetne megtakarítani - mondta a lapnak Urs Hoelzle, a cég alelnöke. Ha valaki például a keresőmotort használja, nem kell a könyvtárba autózni, ami üzemanyagot takarít meg. <a href="#environment_ref_9" class="ref">9</a>
+            Kutatás: Milyen "zöld", alternatív keresőmotorok vannak? Milyen előnyei és hátrányai vannak? Valóban környezetbarátabbak ezek a keresőmotorok, mint a Google?
+        </li>
+        <li>
+            •	Az én szénlábnyomom: A saját szénlábnyomunk meghatározásához ma már számos online eszköz áll rendelkezésre. A kérdőívek rendkívül részletesek, ezért elegendő időt kell rájuk szánni. A Klima Arena kalkulátort kifejezetten az iskolások számára fejlesztették ki, és németül is elérhető: <a href="https://klima-arena-jugend.co2-rechner.de/de_DE/start#panel-calc">https://klima-arena-jugend.co2-rechner.de/de_DE/start#panel-calc</a>
+            <br>Alternatívaként a WWF kalkulátora is használható, amely német és angol nyelven is elérhető: <a href="https://www.wwf.de/themen-projekte/klima-energie/wwf-klimarechner">a német kérdőív</a>,
+            <a href="https://footprint.wwf.org.uk/#/questionnaire">az angol kérdőív</a>
+            <br>A kérdőív végén nem csak a CO2-fogyasztás látható, hanem tippek is, hogyan lehet azt még tovább csökkenteni. Itt lehetne felírni és összegyűjteni azokat a tippeket, amelyeket a diákok a legnagyobb valószínűséggel meg tudnak vagy meg akarnak valósítani.
+        </li>
+        <li>
+            Miután a tanulók már foglalkoztak a saját fogyasztásukkal, és már megtanultak néhány tippet, e fázis végén újra át kell gondolniuk, hogy személy szerint mely pontok fontosak számukra, és hogyan tudnak energiát megtakarítani. Ezek a pontok kiindulópontként szolgálhatnak a második munkafázis további lépéseihez, a mesterséges intelligencia alkalmazás kifejlesztéséhez.
+        </li>
+    </ul>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Exercises/Environment - Portfolio.pdf">Environment - Portfolio.pdf</a> <a href="Exercises/Environment - Portfolio.docx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol start="6">
+        <li><a id="environment_ref_6" href="https://klima-arena-jugend.co2-rechner.de/de_DE/start#panel-calc">Climate calculator Klima Arena Questionnaire</a> </li>
+        <li><a id="environment_ref_7" href="https://www.wwf.de/themen-projekte/klima-energie/wwf-klimarechner">Climate calculator WWF questionnaire</a></li>
+        <li><a id="environment_ref_8" href="https://footprint.wwf.org.uk/#/questionnaire">Emissions Footprint Questionaire</a></li>
+        <li><a id="environment_ref_9" href="https://www.spiegel.de/wirtschaft/unternehmen/suchmaschinenriese-google-consuming-so-much-strom-wie-eine-bigstadt-a-785217.html">Spiegel: Sun Google uses a lot of power</a></li>
+        <li><a id="environment_ref_10" href="https://www.websitecarbon.com/">CO2 measurements from websites</a></li>
+    </ol>
+</section>
+
+<section id="savior">
+    <h1>Klímavédő mesterséges intelligencia?</h1>
+    <p>A digitalizációt nem csak energiafalónak és klímagyilkosnak kell tekinteni, ahogyan azt számos nyilvános és politikai vitában ábrázolják. Ahogy a tanítási modul első részében említettük, a vádak középpontjában a növekvő energia- és erőforrás-fogyasztás áll. A mesterséges intelligencia programok képzése itt is példaként szolgálhat. Az OpenAI szöveggenerálásra kifejlesztett GPT-3 modelljének több ezer napra volt szüksége ahhoz, hogy egy körülbelül 500 millió szót tartalmazó adathalmazt feldolgozzon a képzéshez. Ez mintegy 313 tonna CO2 kibocsátását eredményezte. <a href="#environment_ref_13" class="ref">13</a> Ez körülbelül ötször annyi, mint amennyit egy amerikai autó a teljes életciklusa során (mind a gyártás, mind az üzemanyag-fogyasztás) elhasznál. Az adatközpontok már ma is a mai globális energiafogyasztás 2%-át teszik ki, ami azt jelenti, hogy ugyanannyi CO2 keletkezik, mint a légi közlekedésben. <a href="#environment_ref_12" class="ref">12</a>
+    <p>A digitalizáció valójában a valós idejű adatok és számtalan eszköz összekapcsolásával (lásd "A dolgok internete") pozitív hatással lehet a környezet- és éghajlatvédelemre.</p>
+
+    <h2>A mesterséges intelligencia csökkenti a kibocsátást</h2>
+    <p>A tudósok azzal érvelnek, hogy bár a <strong>mesterséges intelligencia rendszerek képzése energiaigényes</strong>, a mesterséges intelligencia rendszerek <strong>hosszabb távon csökkenthetik a kibocsátást</strong>: például <strong>az intelligens otthonban lévő termosztát</strong>, amely tanul a lakók szokásaiból, és a fűtési időszakokat a jelenlétükhöz és távollétükhöz igazítja. Az időjárási adatok, az előrejelzési modellek és a tényleges fűtési adatok intelligens összekapcsolása is lehetséges lenne az épületek minél hatékonyabb fűtése érdekében.</p>
+    <p>Autóvezetéskor elegendő egy <strong>sávtartó asszisztens</strong>, amelynek programozásához energetikailag kompenzálják az adott jármű építéséhez szükséges energiát, ha ez a sávtartó asszisztens megelőzhet egy balesetet.</p>
+    <p>A CO2-kibocsátás <strong>intelligens forgalomirányítással</strong> is csökkenthető. A cellás adatok felhasználásával mérhető a forgalomáramlás, így sokkal pontosabbá válnak a forgalmi állapotról szóló jelentések, amelyeket az érintett járművezetőknek elküldenek. De a <strong>közlekedési lámpák és a sebességszabályozás is vezérelhető</strong> lenne mesterséges intelligencia alapú rendszerekkel az energiatakarékosság érdekében. <a href="#environment_ref_13" class="ref">13</a></p>
+    <p>"A Google például <strong>intelligens vezérlőrendszert</strong> fejlesztett ki leányvállalatában, a Deepmindban, amely állítása szerint 40 százalékkal csökkentette adatközpontjainak energiafogyasztását. A felhőalapú mesterséges intelligencia ötpercenként elemzi a hűtőrendszereket, hogy a szenzorok adatai alapján megjósolja a következő óra légnyomását vagy hőmérsékletét. Az emberi vezérlők ezután a lehető legtakarékosabb működés érdekében el tudják forgatni a csavarokat". <a href="#environment_ref_11" class="ref">11</a></p>
+    <p>Időközben kialakult az <strong>"intelligens gazdálkodás"</strong> ágazata, ahol például a műtrágyákat és a növényvédő szereket mesterséges intelligenciaprogramok segítségével hajszálpontosan lehet használni, hogy az az erőforrásokkal hatékonyabban lehessen dolgozni. Az IoT (Internet of Things, a dolgok internete) segítségével a szántóföldi munkák folyamatai hatékonyabbá tehetők, és a betakarítás során a lehető legjobb eredményeket lehet elérni. A digitalizáció alkalmazásával nemcsak hatékonyabb munkavégzésre van lehetőség, hanem klímabarátabb és környezetkímélőbb módon is lehet dolgozni (kevesebb növényvédőszer, a mezőgazdasági gépek pontosabb használata). <a href="#environment_ref_13" class="ref">13</a></p>
+
+    <div class="info">
+        <h2>„Átlátható emberek” és adatok torzítása</h2>
+        <p>A projektek és felhasználási lehetőségek bemutatásakor nagy mennyiségű <strong>adatot</strong> használnak fel. Hogy pontosan milyen adatokról van szó, azt az alapmodulban lehet megnézni, vagy annak segítségével közölni. Ha ezekben a programokban személyes adatokat használnak fel, például az "okos otthonban" vagy az intelligens forgalomirányításban, akkor az <strong>adatvédelem</strong> fontos szerepet játszik. Talán találkoztunk már az <strong>"átlátható személy"</strong> kifejezéssel, amelyet az adatvédelem (negatív) metaforájaként használnak. Ez azt jelenti, hogy a személyes adatokat önkéntesen, de akaratlanul is továbbítják, ami az embereket "átlátszóvá" teszi. Sok minden kiderül ma már nagyon egyszerűen, amikor valakinek a közösségi média profiljára kattintunk, de a programok a háttérben az adatokat akaratlanul is gyűjtik. Így tudja a Google egy idő után, hogy hol dolgozik vagy lakik valaki.</p>
+        <p>Az <strong>datok torzításai</strong> viszont hibás adatok bevitelével és/vagy feldolgozásával jönnek létre. Ez bizonyos embercsoportok diszkriminációját eredményezheti. Az Amazonnál például egy álláspályázatban főleg fehér férfiakat javasoltak egy pozícióra, mivel az adatok szerint korábban főleg fehér férfiak dolgoztak a vállalatnál. Erről a témáról többet olvashat etikai modulunkban.</p>
+    </div>
+    
+    <p>A jelenlegi tudásszint mellett még nem lehet választ adni arra, hogy a digitalizáció egésze hozzájárul-e a klíma megterheléséhez, és ezáltal a klímaváltozás felgyorsításához, vagy inkább a rendszer tehermentesítéséhez. Bár számos tanulmány foglalkozik a digitális változás lehetőségeivel és kihívásaival, ezek nem tükröznek egyértelmű véleményt, sőt, egymásnak is ellentmondanak. Ráadásul a jelenlegi tanulmányok csak nagyon egyoldalúan foglalkoznak a témával, és csak a digitalizáció energiafelhasználására koncentrálnak, holott a digitalizáció számos más hatásterületét is figyelembe kell venni (pl. nyersanyagfelhasználás, földhasználat, talaj- és vízszennyezés...).</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/Environment - Climate Savior AI.pdf">Environment - Climate Savior AI.pdf</a> <a href="Slides/Environment - Climate Savior AI.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol start="11">
+        <li><a id="environment_ref_11" href="https://www.derstandard.de/story/2000109723757/wie-klimaschaedlich-ist-das-internet">derStandard: How harmful is the internet to the climate?</a></li>
+        <li><a id="environment_ref_12" href="https://www.pektrum.de/news/kuenstliche-intelligenz-consuming-for-den-learning-process-unimaginable-a lot-of-energy/1660246#:~:text= The%20results%2C%20the%20the%20scientists%20lifecycle%20(including%20fuel)%20consumes.">Spectrum: AI is anything but green</a></li>
+        <li><a id="environment_ref_13" href="https://ecoaustria.ac.at/wp-content/uploads/2021/05/Studie-Digitalisierung- Emissions.pdf">Final report on digitization and climate change</a></li>
+    </ol>
+</section>
+ 
+<section class="exercise">
+    <h1 id="idealab">"Zöld mesterséges intelligencia" ötletlabor</h1>
+    <p>A feladat során a tanulócsoportok egy nagy (lehetőleg A2-es) papírlapot kapnak, hogy rögzítsék és vizualizálják az összes lépésüket. A diákok <strong>írhatnak és ragaszthatnak szövegeket, tervezhetnek logókat és készíthetnek vázlatokat.</strong></p>
+    
+    <h2>Ötletelés</h2>
+    <p>Az első lépésben a diákok leülnek kiscsoportjaikban, és megbeszélik a portfóliójukból összegyűjtött környezetbarát intézkedéseket és a környezetbarát mesterséges intelligencia alkalmazások gyakorlati példáit.
+    <br>Ezután össze kell állítaniuk egy top 3 ötletlistát, és végül dönteniük kell a felsorolt területek vagy problémák közül egy olyanról, amelyre saját maguk szeretnének programot/alkalmazást fejleszteni.</p>
+    
+    <h2>Specifikáció</h2>
+    <p>A következő fázisban kezdődik a specifikáció: a diákoknak át kell gondolniuk, hogy pontosan mi legyen az alkalmazásuk célja, és milyen funkciókat kell tudnia. Minden megfontolandó pontot le kell írni.</p>
+    <p>A következő kérdések hasznosak lehetnek:</p>
+    <ul>
+        <li>Mi a célja az alkalmazásodnak? Pontosan mit kell tennie? Hogyan működhet az ötlet?</li>
+        <li>Hogyan fogja az alkalmazást vonzóvá tenni a felhasználók számára?</li>
+        <li>Mit tervezel tenni? Milyen probléma megoldásához szeretne segítséget nyújtani az alkalmazásod?</li>
+    </ul>
+
+    <h2>Megjelenés</h2>
+    <p>A következő lépés az alkalmazás konkrét megjelenéséről szól. A diákok kitalálnak egy projektnevet, ha akarnak, logót is tervezhetnek, és egyfajta drótvázat alakítanak ki, hogy vizualizálják, hogyan nézhet ki és működhet a program. Az applikáció egyes ablakainak megtervezésekor a diákok azt is megérthetik, hogy van-e értelme magának a struktúrának, vagy esetleg kihagytak fontos szempontokat.</p>
+
+    <h2>Prezentáció a World Caféban</h2>
+    <p>Az első fejlesztési fázis végén a <strong>World Café</strong> módszer lehetőséget biztosít a tapasztalatcserére és a visszajelzésre. Mivel ez a módszer legalább egy órát vesz igénybe, az eredmények közvetlenül a kollektív ülésen is bemutathatók anélkül, hogy felülvizsgálati szakaszra kerülne sor.</p>
+    <p>Ennél a módszernél egy csoporttag mindig az asztalnál marad moderátorként, míg a többi tag más asztalokhoz megy, és a többiek projektjeit ismertetik velük, hogy visszajelzést adhassanak.</p>
+    <p>A tanulóknak lehetőségük van arra, hogy egy nagyméretű, asztalterítőként funkcionáló papírlapra kulcsszavakat, kérdéseket vagy vázlatokat rögzítsenek, így a csoportok később az írásos visszajelzéssel folytathatják a munkát.
+    <br>Körülbelül 10 perc elteltével a csoportok asztalt cserélnek, és a következő projekthez lépnek, hogy azt megvitassák.</p>
+
+    <h2>Ellenőrzés</h2>
+    <p>Visszatérve az eredeti kiscsoportokba, az összegyűjtött <strong>visszajelzéseket</strong> a papírtáblákon megbeszélhetik, és átgondolhatják, hogy mit és hogyan szeretnének beépíteni.</p>
+
+    <h2>Végső prezentáció</h2>
+    <p>A diákok röviden újra bemutatják az ötletüket, és elmagyarázzák, hol voltak nehézségek, milyenek voltak a visszajelzések, mit vettek bele, mit nem és miért.
+    <br>A végén a végleges plakátot ki lehet akasztani például az osztályteremben.</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Exercises/Environment - Idealab.pdf">Environment - Idealab.pdf</a> <a href="Exercises/Environment - Idealab.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

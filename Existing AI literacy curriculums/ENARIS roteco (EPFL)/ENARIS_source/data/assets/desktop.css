@@ -1,0 +1,46 @@
+/******************************************************************************
+* D E S K T O P   L a y o u t
+******************************************************************************/
+
+@media screen and (min-width: 43rem){
+    main > section.modules > div:nth-last-of-type(odd) > *:last-child{
+        grid-row: 1;
+    }
+    section.cols{
+        columns: 2;
+    }
+    .horizontal{
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    }
+    .horizontal > img{
+        max-width: 100%;
+    }
+    main > section, main > section.modules {
+        padding-top: 10rem;
+    }
+    main > section > h1{
+        top: 2rem;
+        font-size: 1.5rem;
+    }
+    main > section > h1::before{
+        height: 2.5rem;
+    }
+    main > section.exercise{
+        margin-top: 10rem;
+    }
+    main > section.exercise > h1{
+        top: -8rem;
+    }
+    main > section.exercise:nth-of-type(odd)::before{
+        top: -10rem;
+    }
+    .agenda th:nth-child(3), .agenda td:nth-child(3){
+        display: table-cell;
+    }
+}
+@media screen and (hover: hover) {
+    .menu:hover > .menu-btn ~ ul {
+        display: flex;
+    }
+}

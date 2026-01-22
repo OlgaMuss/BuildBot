@@ -1,0 +1,32 @@
+    <div class="footer">
+        <div>
+            <a href="https://enaris.org"><img src="{{assets}}/img/logo_big.png" alt="Logo ENARIS"></a>
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="{{assets}}/img/cc_by_sa.png" alt="CC 4.0 BY SA"></a>
+        </div>
+        <div>
+            <a href="https://www.interreg-athu.eu/en/"><img src="{{assets}}/img/logo_eu.jpg" alt="Logo EU"></a>
+            <a href="https://www.interreg-athu.eu/en/"><img src="{{assets}}/img/logo_interreg.png" alt="Logo Interreg"></a>
+            <a href="https://www.tugraz.at/institute/ist/institute/"><img src="{{assets}}/img/logo_tugraz.png" alt="Logo TU Graz"></a>
+            <a href="https://mobilis-gyor.hu"><img src="{{assets}}/img/logo_mobilis.jpg" alt="Logo Mobilis"></a>
+            <a href="https://www.ocg.at"><img src="{{assets}}/img/logo_ocg.png" alt="Logo OCG"></a>
+        </div>
+    </div>
+    <script>
+        function scrollTo(id, block = 'center', behavior = 'auto'){
+            document.getElementById(id)?.scrollIntoView({ behavior, block });
+        }
+        onload = () => {
+            /* top link */
+            const top = document.querySelector('main > section:not(.title) h1');
+            top?.setAttribute('id', 'top');
+            /* refs */
+            const refs = document.querySelectorAll('a.ref');
+            for(const ref of refs){
+                const id = ref.getAttribute('href');
+                ref.setAttribute('href', `javascript:scrollTo('${id.replace(/^#/, '')}');`);
+            }
+        }
+    </script>
+</body>
+
+</html>

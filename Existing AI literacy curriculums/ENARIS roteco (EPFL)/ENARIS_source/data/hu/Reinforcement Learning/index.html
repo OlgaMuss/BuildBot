@@ -1,0 +1,290 @@
+[[ header.html | Megerősítéses tanulás]]
+{[ abbreviations
+    MI: Mesterséges Intelligencia
+    RL: Megerősítéses tanulás
+    Lc0: Leela Chess Zero
+]}
+
+<section class="title">
+    <div class="horizontal">
+        <div class="center">
+            <h1>5. Modul</h1>
+            <h2>Megerősítéses tanulás</h2>
+            <p><cite>"Egy olyan útvesztőben, amelyben a robotot egy elem megtalálásáért jutalmazzák, megmutatja, hogy az RL nem olyan egyszerű, mint gondolnánk."</cite></p>
+        </div>
+        <img src="{{images}}/reinforcement_learning.png" />
+    </div>
+</section>
+
+<section>
+    <h1>A modulról</h1>
+
+    <p>Ez a modul a megerősítéses tanulásról (RL) szól. A cél az, hogy a hallgatók alapvető ismereteket szerezzenek arról, hogy mi az RL, hogyan működik, és melyek a gyakori problémák és buktatók. A hangsúly inkább a gyakorlati feladatokon van, ezért a hallgatók egyrészt az önállóan tanuló algoritmusok szerepét veszik át, és megtapasztalják, hogyan működik a betanítási folyamat, másrészt pedig játszanak ellene, és tanulják képezni a mesterséges intelligenciát.</p>
+
+    <h2>Célok</h2>
+    <div class="objectives">
+        <p>A tanulók képesek lesznek</p>
+        <ul>
+            <li>elmagyarázni az RL alapgondolatát</li>
+            <li>megértik az RL-csomó lényegét és a Q-értékeken alapuló döntéseket</li>
+            <li>megbecsülni, hogy egy alkalmazás használ-e RL-t</li>
+            <li>megnevezni az RL problémáit és korlátait</li>
+        </ul>
+    </div>
+
+
+    <h2>Időbeosztás</h2>
+    <table class="agenda">
+        <thead>
+            <tr>
+                <th>Idő</th>
+                <th>Tartalom</th>
+                <th>Tananyag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>30 perc</td>
+                <td><a href="#introduction">Bevezetés</a></td>
+                <td><a href="Slides/RL - Introduction.pdf">Prezentáció</a></td>
+            </tr>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#coin_game">Gyakorlat - Érmejáték</a></td>
+                <td><a href="Slides/RL - Coin Game.pdf">Prezentáció</a>, <a href="Exercises/RL - Coin Game Board.pdf">tábla</a>, <a href="Exercises/RL - Coin Game Actions.pdf">műveletek</a></td>
+            </tr>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#hexapawn">Gyakorlat - Hexapawn</a></td>
+                <td><a href="https://www.stefanseegerer.de/schlag-das-krokodil/">Internet</a></td>
+            </tr>
+            <tr>
+                <td>20 perc</td>
+                <td><a href="#menace">Gyakorlat - Menace</a></td>
+                <td><a href="https://www.mscroggs.co.uk/menace/">Internet</a></td>
+            </tr>
+            <tr>
+                <td>30 perc</td>
+                <td><a href="#maze">Gyakorlat - Labirintus</a></td>
+                <td><a href="Slides/RL - Maze.pdf">Prezentáció</a>, <a href="Exercises/RL - Maze Basic.pdf">alap labirintus</a>, <a href="Exercises/RL - Maze Advanced.pdf">haladó labirintus</a></td>
+            </tr>
+            <tr>
+                <td>15 perc</td>
+                <td><a href="#quiz">Kvíz - Igaz vagy hamis?</a></td>
+                <td><a href="Slides/RL - Quiz.pdf">Prezentáció</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="cols">
+    <h1 id="introduction">Bevezetés</h1>
+
+    <p>A modul célja, hogy a diákok megismerkedjenek a megerősítő tanulás (RL) alapfogalmaival és kifejezéseivel. A diákra épül, amelyek nemcsak a gyakori alkalmazásokat mutatják be, hanem azt az általános elképzelést is, hogy egy mesterséges intelligencia hogyan tanulhat önmagától, cselekvések végrehajtásával és kiértékelésével.</p>
+
+    <h2>Valós világbeli példák <span class="slides">2 - 6. dia</span></h2>
+    <p>A <a href="Slides/RL - Introduction.pdf">prezentáció</a> az RL alapjaival kezdődik, és egy rövid <a href="https://openai.com/blog/emergent-tool-use/">videó</a> segítségével az OpenAI önállóan tanuló bújócskázó mesterséges intelligenciáját mutatja be. Ha a diákok nem értenek elég jól angolul, akkor vagy automatikus feliratokat használhatunk, vagy a tanár fordíthatja/magyarázhatja a történéseket. A legfontosabb, hogy az RL-ben a mesterséges intelligencia magától tanul, a programozók közvetlen irányítása nélkül. </p>
+    <p>A videó után a következő példa a <a href="https://lczero.org">Leela Chess Zero</a> (Lc0), egy modern sakk mesterséges intelligencia, amelyet megerősített tanulással képeztek ki. Míg a hagyományos sakk-mesterséges intelligenciák statikus funkciókkal értékelték a táblaállásokat (például fix pontokat kaptak az alapvető különbségekért és a bábuállásokért), addig az Lc0 több millió játszmát játszva megtanulta, hogy milyenek a jó pozíciók saját maga számára, és más játékosok ellen, és így jobb döntéseket tud hozni arról, hogy milyen lépéseket tegyen. Fontos leszögezni, hogy a modern sakkmotorok messze felülmúlják az emberi játékosokat, még a legjobb nagymestereket is meg lehet verni egy okostelefon segítségével.<br>
+    A játékok azért elég népszerűek az RL-kutatásban, mert jól megfogalmazott szabályok vannak, ami megkönnyíti a konkrét akciók és célok meghatározását, amelyek az RL működéséhez szükségesek. Ezt a példafóliák után részletesebben is kifejtjük.</p>
+    <p>Mivel a sakkmotorok még mindig többnyire hasonló módon számítják ki a lépéseket, mint a 90-es évek végén<a href="introduction_ref_3" class="ref">3</a>, amikor elkezdték az emberi játékosokat következetesen legyőzni, a játék "egyszerűsége" miatt néha lebecsülik őket. Az RL algoritmusok mégis fejlődtek, és ma már sokkal összetettebb forgatókönyvekben is képesek felvenni a versenyt az emberi játékosokkal. Ezért a harmadik példa a Google Deepmind kutatási részlegének mesterséges intelligenciájáról, az <strong>AlphaStar</strong>szól, amely megtanult egy komplex modern számítógépes játékot játszani a legjobb emberi játékosokhoz hasonló szinten.<a href="introduction_ref_4" class="ref">4</a> Tekintettel arra, hogy minden időpontban nagyjából 1026 lehetséges lépés létezik (szemben a sakkal, ahol az átlag kevesebb mint 40), megdöbbentő, hogy az AI képes kiválasztani a legjobbakat, miközben betartja ugyanazokat a korlátokat, mint az emberi játékos (korlátozott látás, reakcióidő).</p>
+    <p>Az utolsó egy gyakorlatiasabb példa az egyéni hirdetésekről (Ad). Bemutatja, hogy az RL sokféleképpen használható, ebben az esetben a bevételek optimalizálására azáltal, hogy megtanulja, mely hirdetésekre kattintanak a legtöbben (vagy húzzák fölé az egeret), és a jövőben megjelenő hirdetéseket úgy igazítja, hogy maximalizálja annak esélyét, hogy a felhasználó rákattintson egy hirdetésre.</p>
+    <p>Az RL felhasználási eseteire még sok más példa is van, mint például az önvezető autók képzése szimulációk segítségével, de ezek a példák elég jó kiindulópontot jelentenek ahhoz, hogy most azzal a kérdéssel foglalkozzunk, hogyan tanulhat egy algoritmus ténylegesen magától.</p>
+
+    <h2>RL alapjai <span class="slides">7 - 20. dia</span></h2>
+    <p>Ahhoz, hogy az RL alapjait megértsük, ismernünk kell legalább néhány definíciót, amelyeket az első néhány dián mutatunk be. Ezután a TicTacToe játékot használjuk példaként.</p>
+    <dl>
+        <dt>Ügynök</dt>
+        <dd>Az ügynök olyan intelligens valóságot ír le, amely kölcsönhatásba lép a környezettel, és ésszerű döntéseket kell hoznia. Ez a programnak az a része, amely magában foglalja a mesterséges intelligencia összes logikáját és tudását.<br>
+        A TicTacToe-ban az ügynök az AI játékos lenne.</dd>
+        <dt>Környezet</dt>
+        <dd>Ahhoz, hogy egy ügynök tanulni tudjon, világosan meghatározott környezetre van szüksége. A környezet általában egy valós környezet valamilyen szimulációja (például egy szimulált utca egy autó számára, hogy megtanuljon vezetni) vagy egy játék.<br>
+        A TicTacToe esetében a környezet a játéktábla, rajta a rajzokkal (X, O).</dd>
+        <dt>Akció</dt>
+        <dd>Az ügynöknek minden egyes időpontban el kell döntenie, hogy milyen cselekvést hajtson végre. A rendelkezésre álló cselekvéseket minden időpontban ismerni kell, az AI-nak ezután meg kell tanulnia kiválasztani a legjobbat.<br>
+        A TicTacToe-ban minden üres lapkának megfelel egy olyan lépés, amely a lapkára egy (X, O) szimbólumot rajzol.</dd>
+        <dt>Állapot</dt>
+        <dd>Az állapot a környezet értelmes részeinek numerikus reprezentációja. Mivel a számítógépek csak számokkal dolgoznak, a környezet kritikus részei elvonatkoztathatók, hogy a mesterséges intelligencia számára érthetőek legyenek.<br>
+        A TicTacToe-ban az állapot lehet egy szám a kilenc lapka mindegyikéhez (pl. 0 = üres, 1 = X, 2 = O), és esetleg annak száma, hogy ki van soron (1 vagy 2). Egy másik példában, az érmejátékban, amelyet a következő feladatban fogunk használni, az állapot egyszerűen az asztalon lévő érmék száma. Ez általában a legabsztraktabb definíció, a legtöbb ember számára a következő gyakorlat során válik majd érthetőbbé.</dd>
+        <dt>Jutalom</dt>
+        <dd>A jutalom általában egy numerikus érték, amely egy állapot minőségét vagy eredményét mutatja. Általában jó eredmény esetén pozitív, rossz eredmény esetén negatív.<br>
+        A TicTacToe-ban a jutalom +1 lehet a győzelemért, -1 a vereségért és 0 minden másért.</dd>
+    </dl>
+    <p>Végül a tanulóknak át kell gondolniuk, hogy a következő példákban milyen ügynökök, állapotok, lépések és jutalmak szerepelnek. Ezt többféleképpen is meg lehet közelíteni, az egyszerű csoportos megbeszéléstől kezdve a kiscsoportos prezentációkig, a módszerek oldal további ötleteket tartalmaz.</p>
+    <dl>
+        <dt>Sakk</dt>
+        <dd>Az <strong>ügynök</strong> a sakkozó mesterséges intelligencia, az <strong>állapot</strong> a táblán lévő bábukat jelképező számértékekből áll. Az <strong>akció</strong> a lehetséges sakklépések, a <strong>jutalom</strong> pedig lehet egy nagyon magas/alacsony szám a győzelemért/veszteségért, és néhány szám a kettő között, ami azt jelzi, hogy az AI számára mennyire "jó" az állás.</dd>
+        <dt>Bújócska</dt>
+        <dd>Az <strong>ügynökök</strong> a rejtőzködők és a keresők, az <strong>állapot</strong> tartalmazza az ügynökök helyzetét, valamint az összes objektum helyzetét és azt, hogy azok le vannak-e zárva vagy sem. A <strong>cselekvések</strong> közé tartozik a különböző irányokba történő mozgás, a forgás és a tárgyak megragadása/elengedése, valamint a tárgyak rögzítése. A <strong>jutalom</strong> lehet az a másodpercek száma, ameddig a rejtőzködőket nem találták meg, ami a keresők esetében negatív számként is használható.</dd>
+        <dt>Egyedi hirdetés</dt>
+        <dd>Az <strong>ügynökök</strong> lehetnek egyedi reklámspotok, az <strong>aktuális</strong> információk a reklám típusáról és arról, hogy a felhasználó rákattintott-e vagy sem. A <strong>cselekvések</strong> közé tartozhatna a konkrét témákra való váltás vagy a reklámok vagy reklámtípusok hirdetése. A <strong>jutalom</strong> lehet egy szám, amely jelzi, hogy a felhasználó rákattintott-e a hirdetésre vagy sem.</dd>
+    </dl>
+    <div class="info">A valóságban nem könnyű, de nagyon fontos feladat megtalálni az állam és a rendelkezésre álló intézkedések megfelelő képviseletét. A rossz választás megnövekedett képzési időt és rosszabb teljesítményt eredményezhet, vagy akár meg is akadályozhatja az ügynök tanulását, mivel kulcsfontosságú információk hiányozhatnak. Ez azonban a következő feladatokban nem túl lényeges, mivel ott az állapotok és a cselekvések már egyértelműen definiálva vannak.</div>
+
+    <h2>Q-Tanulás <span class="slides">21 - 30. dia</span></h2>
+    <p>Az utolsó diák bemutatják a Q-tanulás fogalmát, valamint az RL interakciós hurkot. Ez az akció és reakció fogalmán alapul, ahol az ágens a környezetével kölcsönhatásba lép azáltal, hogy kiválaszt egy végrehajtandó akciót. Ez a cselekvés megváltoztatja a környezetet, és ennek eredményeként az ügynök megkapja az új állapot reprezentációját, valamint egy jutalmat, amely jelzi, hogy mennyire volt jó a cselekvés. Ezen új információ birtokában az ügynök ezután frissítheti viselkedését, majd új cselekvést választ a végrehajtáshoz. Ez a ciklus a cél eléréséig folytatódik.</p>
+    <p><strong>Q-learning</strong> az RL interakciós hurkon alapul, és minden egyes <strong>állapot</strong> és állapotpárhoz tárol egy <strong>minőségi értéket</strong> (Q-érték). <strong>művelet</strong>. Ez az érték azt jelzi, hogy a műveletnek mennyire „jó” az aktuális állapota. Ezért egy állapot elérésekor a legmagasabb <strong>Q-értékű</strong> művelet választható az optimális viselkedéshez. Mivel a <strong>Q-érték</strong> nem biztos, hogy az elején helyes (sőt, gyakran minden művelethez véletlenszerű értékre van beállítva az elején), módosítható úgy, hogy növeli/csökkenti. a cselekvés végrehajtásáért kapott jutalomra tekintettel. Ha ezt a folyamatot elég gyakran megismétlik, a <strong>Q-értékek</strong> elérnek egy pontot, ahol mindig a megfelelő műveletet hajtják végre.</p>
+    <p>Amíg nincs túl sok állapot-akció páros, ezeket az értékeket egy táblázatban lehet tárolni, ahol minden sor egy állapotból és az összes rendelkezésre álló akció Q-értékéből áll.</p>
+    <p>A 29. dián látható táblázat egy ilyen Q-táblázat egy kis részét mutatja be egy példaértékű jump-n-run játékhoz. A gyémánt elérését +1, a vízbe esést -1 jutalmazza. A következő, 30. dián látható táblázat ugyanezt a helyzetet mutatja, de egy fejlettebb táblázattal, amely a jövőbeni jutalmakat is beleveszi a cselekvésükbe. Ez azt jelenti, hogy egy olyan akció, amely egy akcióval később a vízbe esést eredményezheti, egy kis büntetést is kap.</p>
+    <p>A Q-értékek adaptálásának ezt a folyamatát nevezzük tréningnek. Bár néha megvalósítható, hogy egy mesterséges intelligenciát normál használat során képezzenek ki, a képzési folyamat gyakran független a végső felhasználástól, mivel több millió ismétlésre lehet szükség az értelmes értékek létrehozásához.</p>
+    <p>Mindezen elmélet után itt az ideje, hogy a tudást valós példákon teszteljük, ami a következő három, egymásra épülő feladathoz vezet.</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/RL - Introduction.pdf">RL - Introduction.pdf</a> <a href="Slides/RL - Introduction.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="introduction_ref_1" href="https://openai.com/blog/emergent-tool-use/">https://openai.com/blog/emergent-tool-use/</a></li>
+        <li><a id="introduction_ref_2" href="https://lczero.org">https://lczero.org</a></li>
+        <li><a id="introduction_ref_3" href="https://www.chess.com/article/view/deep-blue-kasparov-chess">https://www.chess.com/article/view/deep-blue-kasparov-chess</a></li>
+        <li><a id="introduction_ref_4" href="https://www.deepmind.com/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii">https://www.deepmind.com/blog/alphastar-mastering-the-real-time-strategy-game-starcraft-ii</a></li>
+    </ol>
+</section>
+
+<section class="exercise ol">
+    <h1 id="coin_game">Érme játék</h1>
+    <img src="{{images}}/coin_game.png" alt="image of coin game" class="right small">
+    <p>Ez a gyakorlat bevezetést nyújt az RL tanulásba az érmejáték segítségével. Az alapkoncepció megértéséhez a <a href="Slides/RL - Coin Game.pdf">diák</a> bevezetésként használhatók. A játékhoz valamilyen zsetonra, például érmékre, bábukra, jutalomfalatokra, ... van szükség, mégpedig nagy mennyiségben, hogy minden tanulópár legalább 5 darabhoz jusson. A játék úgy kezdődik, hogy 5 érme van az asztalon, és a játékosok felváltva elvesznek belőle egyet vagy kettőt. Az utolsó érmét elvevő játékos veszít.</p>
+
+    <h2>A játék bemutatása</h2>
+    <p>Mutasd be a játékot az 1-8. dia segítségével, és hagyd, hogy a tanulók párban játsszanak néhány mérkőzést.</p>
+
+    <h2>Az AI bemutatása</h2>
+    <p>Mutassuk be a mesterséges intelligenciát a 9-35. dia segítségével. Javasoljuk, hogy az anyagot (táblát és akciókat) előzetesen adjuk át, hogy a tanulók láthassák, hogyan néz ki minden a valóságban, és aktívan játszhassanak a példákkal.</p>
+
+    <h2>Hagyjuk őket játszani</h2>
+    <p>Ezután hagyjuk, hogy a diákpárok úgy játsszanak, hogy az egyikük az AI szerepét veszi át, a másikuk pedig normálisan játszik. Ahogy a játék folytatódik, egyre több és több akciót távolítanak el a mesterséges intelligenciától, amíg a győztes akciókon kívül más nem marad.</p>
+
+    <h2>A legfontosabb tudnivalók</h2>
+    <p>Végezetül beszéljünk a következő legfontosabb tudnivalókról:</p>
+    <dl>
+        <dt>Mi történik, ha bizonyos állapotokat soha nem érünk el (pl. a játékos mindig ugyanazokat az akciókat választja)?</dt>
+        <dd>Csak az elért állapotokból tanulunk. Ha a mesterséges intelligencia nem találkozik egy helyzettel a képzés során, előfordulhat, hogy nem találja meg a helyes lépést.</dd>
+        <dt>Ebben a példában az AI hol tanul többet, a győzelem vagy a vereség által?</dt>
+        <dd>Vesztéssel, ebben a példában a mesterséges intelligencia csak a vesztésért kap büntetést, a győzelemért soha nem kap jutalmat, ezért a győzelemnek nincs hatása.</dd>
+        <dt>Megváltoztathatnád a játékot úgy, hogy a győzelem is adjon valamilyen jutalmat?</dt>
+        <dd>Igen, például új akciókövek hozzáadásával, ha a mesterséges intelligencia nyer. Akkor a mesterséges intelligencia nagyobb valószínűséggel választja majd a sikeresebb akciók egyikét. Ezt a következő feladatban fogjuk bemutatni.</dd>
+    </dl>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/RL - Coin Game.pdf">RL - Coin Game.pdf</a> <a href="Slides/RL - Coin Game.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Coin Game Board.pdf">RL - Coin Game Board.pdf</a> <a href="Exercises/RL - Coin Game Board.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Coin Game Actions.pdf">RL - Coin Game Actions.pdf</a> <a href="Exercises/RL - Coin Game Actions.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+<section class="exercise ol">
+    <h1 id="hexapawn">Hexapawn</h1>
+    <img src="{{images}}/hexapawn.png" alt="image of Hexapawn game" class="right small">
+    <p>Ez a feladat az előző (<a href="#coin_game">érmejáték</a>) ismereteire épül, és a <a href="https://www.stefanseegerer.de/schlag-das-krokodil/">https://www.stefanseegerer.de/schlag-das-krokodil/</a> weboldalon és a <strong>Hexapawn</strong> játékon alapul. A <strong>Hexapawn</strong> két játékos játszik egymás ellen egy 3x3-as táblán, kizárólag a sakkból ismert gyalogokat használva, amelyek vagy egy mezőt léphetnek egyenesen előre, vagy átlósan üthetnek le egy ellenséges gyalogot. A játékos akkor nyer, ha vagy egy gyaloggal eléri az ellenkező oldalt, vagy ha megakadályozza az ellenfél lépését (blokkolja az összes gyalogot).</p>
+
+    <h2>A weboldal bemutatása</h2>
+    <p>Először is mutassa be a weboldal képességeit, és ismertesse a játékszabályokat. Különösen a <strong>Válaszidő</strong> és a <strong>Csak lehetséges lépések</strong> beállításait kell elmagyarázni, mivel ezek segítenek a következő feladatokban. Továbbá elengedhetetlen, hogy a tanulók megértsék a színes pontok jelentését (azonos színű akciónak felelnek meg), és lássák, hogy ezek a pontok eltávolíthatók vagy hozzáadhatók.</p>
+
+    <h2>Hagyjuk őket játszani</h2>
+    <p>Most itt az ideje, hogy a diákok egyedül játsszanak. A cél az, hogy minél többször nyerjenek, mielőtt az AI, annyira tapasztalt nem lesz, hogy nem lehet legyőzni. Ez egyszerű feladatnak tűnik, de a diákok hamarosan rájönnek, hogy a 10 vagy akár 20 győzelem feletti eredmény eléréséhez jól meg kell érteniük a belső működését. <strong>Vigyázz, ha az oldal újratöltődik, a győzelmek is törlődnek!</strong></p>
+
+    <h2>A legfontosabb tudnivalók</h2>
+    <p>A legfontosabb tanulságok hasonlóak az érmejátékhoz, de hangsúlyosabbak, mivel a tanulóknak kifejezetten olyan cselekvéseket kell végrehajtaniuk, amelyeket korábban nem használtak, hogy az AI-t ismeretlen területre kényszerítsék. Az is látható, hogy a lehetséges állapotok száma elég gyorsan növekszik a rendelkezésre álló akciók számával. Könnyen elképzelhető, hogy egy nagyobb táblán (mint például egy sakktáblán) annyi lehetséges állapot van (nagyjából 10<sup>44</sup>)<a href="#hexapawn_ref_1" class="ref">1</a>, hogy nem kivitelezhető egy mesterséges intelligencia kézzel történő betanítása, vagy akár az összes lehetséges állapot figyelembevétele.</p>
+    <div class="info">Ha a lehetséges állapotok száma túl nagy lesz, más módszereket kell alkalmazni, például az állapotok számának csökkentését értékelő függvények használatával, hogy kizárjuk a nemkívánatos állapotokhoz vezető műveleteket, vagy a Q-értékek <a href="../Neural Networks/index.html">neurális hálózatok</a> segítségével történő közelítését.<a href="#hexapawn_ref_2" class="ref">2</a><a href="#hexapawn_ref_3" class="ref">3</a>.</div>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="https://www.stefanseegerer.de/schlag-das-krokodil/">https://www.stefanseegerer.de/schlag-das-krokodil/</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="hexapawn_ref_1" href="https://tromp.github.io/chess/chess.html">https://tromp.github.io/chess/chess.html</a></li>
+        <li><a id="hexapawn_ref_2" href="https://www.chessprogramming.org/Evaluation">https://www.chessprogramming.org/Evaluation</a></li>
+        <li><a id="hexapawn_ref_3" href="https://www.turing.com/kb/how-are-neural-networks-used-in-deep-q-learning">https://www.turing.com/kb/how-are-neural-networks-used-in-deep-q-learning</a></li>
+    </ol>
+</section>
+
+<section class="exercise ol">
+    <h1 id="menace">MENACE</h1>
+    <img src="{{images}}/menace.png" alt="image of menace simulator" class="right small">
+    <p>Ez a gyakorlat ismét az előzőre (<a href="#hexapawn">Hexapawn</a>) épül, és egy még több állapotot tartalmazó játékot mutat be, mint a TicTacToe-t. Jó bevezetésként használható ennek a videónak az első része, <a href="https://youtu.be/R9c-_neaxeU">video from Matt Parker about MENACE</a>. Ez elmagyarázza a MENACE alapötletét, amely hasonló a korábbi Hexapawn példához, de ahelyett, hogy digitálisan dolgoznának, fizikai gyufásdobozokban tárolják a színes gyöngyöket.</p>
+    <p>Bár érdekes ötlet lehet egy ilyen rendszer létrehozása az osztállyal, valószínűleg elég sok időbe fog telni, nem csak a létrehozása, hanem a betanítása is, hogy értelmes eredményeket kapjunk. Ezért ebben a gyakorlatban a rendszer <a href="https://www.mscroggs.co.uk/menace/">online simulator</a> fogjuk használni.</p>
+
+    <h2>A MENACE bemutatása</h2>
+    <p>Először mutassuk be a MENACE rendszert, egy RL TicTacToe gépet, ehhez felhasználva <a href="https://youtu.be/R9c-_neaxeU">video from Matt Parker</a> első ~2:20 percét (vagy több), vagy azzal, hogy megbeszéljük (akár csoportmunkában), hogyan lehetne az előző példát módosítani a TicTacToe játékhoz.</p>
+
+    <h2>A weboldal bemutatása</h2>
+    <p>Ezután mutassuk be, hogyan kell használni a szimulátort a <a href="https://www.mscroggs.co.uk/menace/">https://www.mscroggs.co.uk/menace/</a>weboldalon, magyarázzuk el különösen a jobb oldali számok és rendszerek jelentését (állapotok és az akciók q-értéke, magasabb = nagyobb valószínűséggel választják, a tükrözött állapotok ki vannak zárva), és hogyan játszhatunk saját magunk, vagy hogyan engedhetjük az AI-t más AI-k ellen játszani (például a véletlenszerűen játszó AI vagy egy tökéletesen játszó AI ellen).</p>
+
+    <h2>Hagyjuk, hogy a saját AI-t képezzék ki</h2>
+    <p>A honlap használatára vonatkozó ismeretek birtokában a diákoknak most a saját mesterséges intelligenciájukat kell kiképezniük, amelynek a lehető legjobbnak kell lennie.</p>
+
+    <h2>Beszéljük meg a problémákat</h2>
+    <p>A diákok hamarosan rájönnek, hogy még ha ez könnyű feladatnak is hangzik, valószínűleg egyik megközelítés sem vezet tökéletesen játszó mesterséges intelligenciához. Ennek fő okai a következők:</p>
+    <ul>
+        <li>Az AI egyszerűen nem találkozik bizonyos állapotokkal a gyakorlás során, így nem tudja, hogy mi a jó lépés, amikor találkozik ezekkel. Ez történik például akkor, ha egy tökéletesen játszó AI ellen képezzük ki, ahol soha nem tanulja meg, hogyan nyerhet valójában, így nem fogja tudni, hogyan használja ki a hibákat, amikor azok elkövetésre kerülnek.</li>
+        <li>Az AI megtanulja a rossz lépéseket, mert az ellenfél nem reagált megfelelően. Például megtanulhatta, hogy egy lépés általában győzelemhez vezet, mert az ellenség csak rossz (vagy véletlenszerű) lépéseket tett, de ha az ellenség helyesen játszik, az AI veszíteni fog.</li>
+    </ul>
+    <p>A technikai probléma e mögött a feltárás és a kiaknázás között áll, amelyet a következő feladatban részletesebben is megvizsgálunk.<a href="#menace_ref_1" class="ref">1</a></p>
+    
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="https://youtu.be/R9c-_neaxeU">https://youtu.be/R9c-_neaxeU</a></li>
+        <li><a href="https://www.mscroggs.co.uk/menace/">https://www.mscroggs.co.uk/menace/</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="menace_ref_1" href="https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/">https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/</a></li>
+    </ol>
+</section>
+
+<section class="exercise ol">
+    <h1 id="maze">Útvesztő</h1>
+    <img src="{{images}}/maze.png" alt="image of maze game" class="right small">
+    <p>Egy olyan <strong>útvesztőben</strong>, amelyben a <strong>robotot</strong> egy <strong>elem</strong> megtalálásáért jutalmazzák, megmutatja, hogy az RL nem olyan egyszerű, mint gondolnánk. A gyakorlat ezzel a <a href="Slides/RL - Maze.pdf">diával</a> kezdődik, amely egy labirintusban lévő robotot mutat be, amelynek egy elemet kell megtalálnia. Kezdetben a robot véletlenszerű fordulatokat tesz, majd idővel megtanulja a céljához vezető helyes utat. A második gyakorlatban a labirintusban több különböző értékű elem van, ami nem vezet optimális eredményekhez, ahogyan azt az utolsó néhány dián elmagyarázzuk.</p>
+
+    <h2>A játék bemutatása</h2>
+    <p>Először mutassuk be a diákoknak a játékot az <a href="Slides/RL - Maze.pdf"></a>1-18. dia</a>segítségével. Ezután adjunk minden diáknak (vagy diákpárnak) egy példányt az <a href="Exercises/RL - Maze Basic.pdf">RL Maze Basicből</a>, egy kockát és egy tollat.</p></a>
+
+    <h2>Hagyjuk őket játszani</h2>
+    <p>Ezután a tanulóknak több kört kell játszaniuk, amíg az akkumulátorhoz vezető út világosan ki nem rajzolódik. Az értékek frissítéséhez egyszerűen áthúzhatjuk, és a közelébe írhatjuk az új értéket. Néhány diáknak "szerencséje" lesz, és az útvonal nagyon gyorsan kialakul, míg másoknál a robot minden zsákutcába belemegy, mielőtt elérné a célját. Ha néhány tanuló túl gyorsan halad, akkor megpróbálhatják újra ugyanannak az útvesztőnek egy új lapjával, és megnézhetik, hogy másodszorra hogyan viselkedik másképp.</p>
+
+    <h2>A haladó útvesztő bemutatása</h2>
+    <p>Adjunk minden diáknak (vagy diákpárnak) egy példányt az <a href="Exercises/RL - Maze Advanced.pdf">RL Labirintus haladó</a> változatából, és ismét hagyjuk, hogy betanítsák a robotjukat. Még ha ezúttal több elem is van, a robot akkor is visszamegy az elejére, amikor egy elemhez ér. A játéknak ismét vége, ha a robotnak szabad útja van az egyik elemhez, még akkor is, ha az nem a legmagasabb értékkel rendelkező elem.</p>
+
+    <h2>A probléma feltárása és megoldási javaslatok megbeszélése</h2>
+    <p>Amikor mindenki végez, a különböző robotok különböző pontszámokat érnek el. Most hozzunk létre kb. 4 fős csoportokat, és hagyjuk, hogy megvitassák, az egyes robotok miért értek el jobb eredményt, mint mások, és dolgozzanak ki egy lehetséges megoldást. Segíthet, ha a különböző pontszámú robotokkal rendelkező tanulókat egy csoportba soroljuk, így jobban szemléltethetik a problémát. Ezután minden csoportnak be kell mutatnia a megállapításait és a megoldásokat.</p>
+
+    <h2>A probléma kifejtése</h2>
+    <p>Végezetül a <a href="Slides/RL - Maze.pdf">19-26. dia</a> segítségével vitassuk meg a feltárt problémákat, és a felhasználás lehetséges megoldásait.</p>
+
+    <h2>Választható: Különböző megoldások tesztelése</h2>
+    <p>Adjunk új példányokat az <a href="Exercises/RL - Maze Advanced.pdf">RL Maze Advanced</a> labirintusból, hogy a csoportok kipróbálhassák a különböző új megközelítéseket (például a különböző felfedezési sebességeket).</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/RL - Maze.pdf">RL - Maze.pdf</a> <a href="Slides/RL - Maze.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Maze Basic.pdf">RL - Maze Basic.pdf</a> <a href="Exercises/RL - Maze Basic.pptx" class="alt">(.pptx)</a></li>
+        <li><a href="Exercises/RL - Maze Advanced.pdf">RL - Maze Advanced.pdf</a> <a href="Exercises/RL - Maze Advanced.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+
+    <h2 class="references">Hivatkozások</h2>
+    <ol>
+        <li><a id="maze_ref_1" href="https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/">https://ai-ml-analytics.com/reinforcement-learning-exploration-vs-exploitation-tradeoff/</a></li>
+    </ol>
+</section>
+
+<section class="cols">
+    <h1 id="quiz">Igaz vagy hamis?</h1>
+
+    <p>Ez az utolsó fejezet az egész modul összefoglalójaként szolgál. Tíz igaz vagy hamis kérdésből álló kvízre épül, és arra ösztönzi a tanulókat, hogy gondolják át a tanultakat.</p>
+    <p>Maga a <a href="Slides/RL - Quiz.pdf">kvíz diákból áll</a>, amelyek egymás után mutatják be a kérdéseket, majd a helyes válaszokat. Ezért a diákok leírhatják válaszaikat, majd a végén kiszámíthatják pontszámukat. Erősen ajánlott minden kérdésnél a válaszok felfedése után szünetet tartani, hogy röviden megbeszéljük, miért helyes vagy helytelen a válasz. Alternatívaként ez a feladat csoportokban is elvégezhető, hogy tovább ösztönözzük a tanulók közötti vitát.</p>
+
+    <h2 class="material">Tananyag</h2>
+    <ul>
+        <li><a href="Slides/RL - Quiz.pdf">RL - Quiz.pdf</a> <a href="Slides/RL - Quiz.pptx" class="alt">(.pptx)</a></li>
+    </ul>
+</section>
+
+[[ footer.html ]]

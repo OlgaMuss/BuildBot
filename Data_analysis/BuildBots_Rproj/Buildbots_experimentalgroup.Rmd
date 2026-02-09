@@ -62,16 +62,15 @@ all_scale_cols <- c(mails_cols, dl_cols, perception_cols)
 df_recode <- df %>%
   # Ensure all scale columns are numeric (coercing non-numeric to NA first)
   mutate(across(all_of(all_scale_cols), ~ as.numeric(as.character(.)))) %>%
-  # Recode 99 to 0 for all scale items
-  mutate(across(all_of(all_scale_cols), ~ ifelse(. == 99, 0, .)))
+  # Recode 99 (Don't Know) to NA so these responses are excluded from calculations
+  mutate(across(all_of(all_scale_cols), ~ na_if(., 99)))
 ```
 
 ```{r}
-# --- 2. MAILS Mean Plot (99s treated as NA for mean calculation) ---
+# --- 2. MAILS Mean Plot (99s already converted to NA in df_recode) ---
 mails_mean_data <- df_recode %>%
-  # Convert 99 to NA for mean calculation only
-  mutate(across(all_of(mails_cols), ~ na_if(., 99))) %>%
   # Calculate the mean MAILS score for each participant at each timepoint
+  # na.rm = TRUE excludes Don't Know responses (99s now NA) from the mean
   mutate(MAILS_Average = rowMeans(select(., all_of(mails_cols)), na.rm = TRUE)) %>%
   # Summarize for plotting
   group_by(Timepoint) %>%
@@ -96,9 +95,10 @@ plot_mails_mean
 ```
 
 ```{r}
-# --- 3. Digital Literacy Mean Plot (99s treated as NA for mean calculation) ---
+# --- 3. Digital Literacy Mean Plot (99s already converted to NA in df_recode) ---
 dl_sum_data <- df_recode %>%
   # Calculate the SUM DL score for each participant
+  # na.rm = TRUE excludes Don't Know responses (99s now NA) from the sum
   mutate(DL_Sum = rowSums(select(., all_of(dl_cols)), na.rm = TRUE)) %>%
   # Summarize for plotting (taking the mean of the Sum Scores to plot the line/SEM)
   group_by(Timepoint) %>%

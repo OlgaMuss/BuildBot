@@ -58,7 +58,8 @@ perception_cols <- c(
 ```
 
 ```{r}
-all_scale_cols <- c(mails_cols, dl_cols, perception_cols)
+# Include ALL scale columns that need 99 -> NA conversion
+all_scale_cols <- c(mails_cols, dl_cols, perception_cols, soas_cols, attachment_cols, intention_cols)
 df_recode <- df %>%
   # Ensure all scale columns are numeric (coercing non-numeric to NA first)
   mutate(across(all_of(all_scale_cols), ~ as.numeric(as.character(.)))) %>%
@@ -287,6 +288,8 @@ ggsave("buildbots_perception_combined.png", combined_perception_plots, width = 1
 df_recode <- df_recode %>%
   mutate(
     # Reverse code attachment_4r and attachment_5r
+    # Note: 99 (Don't Know) already converted to NA in df_recode, so NAs are preserved
+    # Formula: 6 - x for a 1-5 scale (so 1 becomes 5, 2 becomes 4, etc.)
     attachment_4r_rc = 6 - attachment_4r,
     attachment_5r_rc = 6 - attachment_5r,
     
